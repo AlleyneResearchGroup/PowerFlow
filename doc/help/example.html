@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>TXV Model (THERMOSYS 4)</title>
+
+<link rel="stylesheet" href="docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+</head>
+<body>
+<a name="TopPage"></a>
+<h1 class="title"><font color="#800000">Thermostatic
+Expansion Valve (TXV) Model</font></h1>
+<table class="pagenavtable" border="0" cellpadding="4" cellspacing="0">
+<tbody>
+<tr>
+<td> <a href="#Overview">Model Overview</a>
+<p><a href="#BlockIO">TXV Block I/O</a></p>
+<p><a href="#Mask">Mask Inputs</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr> <a name="Overview"></a>
+<p><font color="#990000"><b>Model Overview</b></font><br class="hdr">
+</p>
+<ul>
+</ul>
+<p style="text-align: justify;">This block implements a
+simple thermostatic expansion valve
+(TXV). &nbsp;It calculates the massflow that occurs as a result of
+applying
+a pressure difference across the valve's inlet and exit ports, as well
+as control signals from equalizer port pressure and a temperature bulb
+filled with a sealed refrigerant charge. &nbsp;The purpose of a TXV
+is to
+control superheat at the outlet of the evaporator and the physical
+mechanism by which a TXV achieves this is shown schematically below in
+Figure 1. &nbsp;The valve stroke is determined from a difference
+between the
+"saturation" pressure associated with the bulb temperature located
+downstream of the evaporator and the summation of the manually
+controlled spring pressure and the saturation pressure at the
+evaporator inlet.</p>
+<p style="text-align: center;"><img style="width: 368px; height: 383px;" alt="" src="example.gif"><br>
+<span style="font-weight: bold;">Figure 1: TXV Schematic
+with Example Calculations</span></p>
+<p style="color: black; text-align: justify;">In
+the model, the spring pressure is a user inputted parameter in the
+mask and the bulb temperature is filtered with a first order dynamic
+response to
+simulate the delay between what the actual evaporator outlet
+temperature is and what the TXV diaphragm sees. &nbsp;The time
+constant
+of the response is a user adjustable parameter. Instead of calculating
+a full stroke, the model calculates a stroke fraction based off the
+quotient of the aforementioned
+pressure differential depicted in Figure 1 and a user adjustable
+maximum differential pressure required to get the valve to maximum
+stroke. &nbsp;A
+user adjustable bleed stroke fraction parameter is available to set a
+minimum boundary on the stroke fraction that is greater than zero from
+pressure equalization purposes during periods of system shutdown.
+&nbsp;The model then
+calculates a flow coefficient fraction based off a curve between
+stroke fraction and flow coefficient fraction. The default curve takes
+the shape of a y = 2x-x<sup>2</sup>
+function where y is the flow coefficient fraction and x is the stroke
+fraction, but it is user adjustable. &nbsp;The model then
+multiplies the
+valve coefficient fraction by the user inputted maximum flow
+coefficient, which is the valve's flow coefficient with pure liquid at
+the inlet, two-phase mixture at the outlet, and maximum stroke. This
+coefficient can be obtained from specification sheets of most
+commercial valves or from experimental data. &nbsp;The model can
+then
+calculate massflow from a standard valve equation assuming an
+isenthalpic expansion process. &nbsp;The TXV model has custom
+on/off
+switching control for simulations in which other upstream devices would
+restrict flow to one or more parallel low pressure loops.&nbsp; In
+thermal system simulations the TXV is used as a massflow calculating
+device.</p>
+<p><a href="#TopPage">Top of Page</a></p>
+<hr>
+<a name="BlockIO"></a>
+<p><font color="#990000"><b>TXV Block I/O</b></font><br class="hdr">
+</p>
+<p>Inputs to the model are:</p>
+<ul>
+<li>Manual On/Off Control Switch (1 if on, 0 if off) [-]</li>
+<li>Inlet Pressure [kPa]</li>
+<li>Outlet Pressure [kPa]</li>
+<li>Refrigerant Inlet Enthalpy [kJ/kg]</li>
+<li>Equalizer Pressure (Often equal to outlet pressure) [kPa]</li>
+<li>Evaporator Outlet Temperature [°C]</li>
+</ul>
+<p>Outputs from the model are:</p>
+<ul>
+<li>Massflow [kg/s]</li>
+<li>Refrigerant Outlet Enthalpy (Assumed isenthalpic) [kJ/kg]</li>
+</ul>
+<p> <a href="#TopPage">Top of Page</a></p>
+<hr>
+<a name="Mask"></a>
+<p><font color="#990000"><b>Mask Inputs</b></font></p>
+<p>The TXV mask has two tabs. The first (<span style="color: rgb(0, 153, 51);" class="style1"><strong>Valve</strong></span>)
+tab contains inputs for valve sizing parameters. The second (<span style="color: rgb(0, 153, 51);" class="style1"><strong>Bulb</strong></span>)&nbsp;<span style="color: rgb(51, 204, 0);" class="style1"><strong></strong></span>tab
+contains inputs for the properties of the bulb.</p>
+The values in the <span style="color: rgb(0, 153, 51);" class="style1"><strong>Valve</strong></span>
+tab are:&nbsp;
+<br>
+<ul>
+<li>Spring Pressure [kPa]</li>
+<li>Maximum Differential Pressure [kPa]</li>
+<li>Wide Open Flow Coefficient [(kg/s)/(kPa-kg/m<sup>3</sup>)<sup>1/2</sup>]</li>
+<li>Bleed Stroke Fraction (Minimum) [-]</li>
+<li>Vector of Stroke Fractions (Must contain values between 0
+and 1) [-]</li>
+<li>Vector of Flow Coefficient Fractions (Must contain values
+between 0 and 1) [-]</li>
+</ul>
+<p>
+The values in the <span style="color: rgb(0, 153, 51);" class="style1"><strong>Bulb</strong></span>
+tab are:&nbsp;
+</p>
+<ul>
+<li>Bulb Temperature Offset [°C]</li>
+<li>Bulb Rising Time Constant [s]</li>
+<li>Bulb Falling Time Constant [s]</li>
+<li>Bulb Refrigerant Saturation Pressure&nbsp;Vector* [-]</li>
+<li>Bulb Refrigerant Saturation Temperature Vector* [-]</li>
+<li>Initial Bulb Temperature [°C]</li>
+</ul>
+*In
+most simulations these will be the same as the vectors for the
+refrigerant in the rest of the system, however this option allows for
+modeling different refrigerants in the bulb if&nbsp;desired.
+<p><a href="#TopPage">Top of Page</a></p>
+<!-- Last updated: 7/11/2013, Joseph Fasl-->
+</body></html>
