@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.284"
+    ComputedModelVersion    "1.285"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -32,7 +32,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-8.0, -8.0, 1382.0, 744.0]
+      Location		      [1362.0, 870.0, 1382.0, 1010.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -54,11 +54,11 @@ Model {
 	$ObjectID		5
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
-	ViewObjType		"SimulinkSubsys"
-	LoadSaveID		"25062"
-	Extents			[1139.0, 570.0]
-	ZoomFactor		[1.25]
-	Offset			[60.7833333333333, 467.66666666666674]
+	ViewObjType		"SimulinkTopLevel"
+	LoadSaveID		"0"
+	Extents			[1139.0, 835.0]
+	ZoomFactor		[1.0]
+	Offset			[-53.25, 34.749999999999943]
       }
     }
   }
@@ -66,11 +66,11 @@ Model {
   Creator		  "mwillms4"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "srikanthan"
+  LastModifiedBy	  "mwillms4"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Oct 13 13:56:51 2014"
-  RTWModifiedTimeStamp	  335109369
-  ModelVersionFormat	  "1.%<AutoIncrement:284>"
+  LastModifiedDate	  "Mon Oct 13 14:33:35 2014"
+  RTWModifiedTimeStamp	  335111561
+  ModelVersionFormat	  "1.%<AutoIncrement:285>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -196,8 +196,8 @@ Model {
 	  SolverMode		  "Auto"
 	  EnableConcurrentExecution off
 	  ConcurrentTasks	  off
-	  Solver		  "ode23tb"
-	  SolverName		  "ode23tb"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
 	  SolverJacobianMethodControl "auto"
 	  ShapePreserveControl	  "DisableAll"
 	  ZeroCrossControl	  "UseLocalSettings"
@@ -697,7 +697,7 @@ Model {
       }
       Name		      "Configuration"
       CurrentDlgPage	      "Solver"
-      ConfigPrmDlgPosition     [ 207, 84, 1073, 655 ] 
+      ConfigPrmDlgPosition     [ 191, 22, 1089, 671 ] 
     }
     PropName		    "ConfigurationSets"
   }
@@ -1339,8 +1339,8 @@ Model {
   }
   System {
     Name		    "Boeing737Sample_updatedCopy"
-    Location		    [-8, -8, 1374, 736]
-    Open		    off
+    Location		    [1362, 870, 2744, 1880]
+    Open		    on
     ModelBrowserVisibility  on
     ModelBrowserWidth	    212
     ScreenColor		    "white"
@@ -1366,22 +1366,6 @@ Model {
       Port {
 	PortNumber		1
 	Name			"<temp_K>"
-	RTWStorageClass		"Auto"
-	DataLoggingNameMode	"SignalName"
-      }
-    }
-    Block {
-      BlockType		      BusSelector
-      Name		      "Bus\nSelector1"
-      SID		      "26384"
-      Ports		      [1, 1]
-      Position		      [720, 648, 725, 762]
-      ZOrder		      -2
-      ShowName		      off
-      OutputSignals	      "Cabin Zone/temp_K"
-      Port {
-	PortNumber		1
-	Name			"<Cabin Zone/temp_K>"
 	RTWStorageClass		"Auto"
 	DataLoggingNameMode	"SignalName"
       }
@@ -3736,7 +3720,7 @@ Model {
 		    Annotation {
 		    SID			    "12203:8209"
 		    Name		    "It calculates the outlet temperature and enthalpy."
-		    Position		    [611, 30, 870, 47]
+		    Position		    [611, 30, 871, 47]
 		    AutoSize		    on
 		    WordWrap		    off
 		    ZOrder		    -1
@@ -4642,7 +4626,7 @@ Model {
 		    Annotation {
 		    SID			    "12203:8213"
 		    Name		    "It calculates the outlet temperature and enthalpy."
-		    Position		    [611, 30, 870, 47]
+		    Position		    [611, 30, 871, 47]
 		    AutoSize		    on
 		    WordWrap		    off
 		    ZOrder		    -1
@@ -7229,7 +7213,7 @@ Model {
 		    Annotation {
 		    SID			    "12204:8211"
 		    Name		    "It calculates the outlet temperature and enthalpy."
-		    Position		    [611, 30, 870, 47]
+		    Position		    [611, 30, 871, 47]
 		    AutoSize		    on
 		    WordWrap		    off
 		    ZOrder		    -3
@@ -8135,7 +8119,7 @@ Model {
 		    Annotation {
 		    SID			    "12204:8215"
 		    Name		    "It calculates the outlet temperature and enthalpy."
-		    Position		    [611, 30, 870, 47]
+		    Position		    [611, 30, 871, 47]
 		    AutoSize		    on
 		    WordWrap		    off
 		    ZOrder		    -3
@@ -9084,7 +9068,7 @@ Model {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Fuel Tanks/Pumps"
-	    Location		    [184, 52, 1288, 1110]
+	    Location		    [1192, 862, 2888, 1888]
 	    Open		    off
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    212
@@ -21404,7 +21388,7 @@ Model {
 	Annotation {
 	  SID			  "27283"
 	  Name			  "Environmental Control System"
-	  Position		  [202, 509, 436, 530]
+	  Position		  [202, 509, 437, 530]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -21416,7 +21400,7 @@ Model {
 	Annotation {
 	  SID			  "27284"
 	  Name			  "Fuel & Oil System"
-	  Position		  [282, 34, 421, 55]
+	  Position		  [282, 34, 422, 55]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -21451,8 +21435,8 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"ELECTRICAL SYS "
-	Location		[-8, -8, 1374, 736]
-	Open			on
+	Location		[1192, 862, 2888, 1888]
+	Open			off
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	212
 	ScreenColor		"white"
@@ -21463,7 +21447,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"125"
+	ZoomFactor		"60"
 	Block {
 	  BlockType		  Inport
 	  Name			  "Left Engine"
@@ -21750,7 +21734,7 @@ Model {
 	  }
 	  System {
 	    Name		    "BATTERY MONITORING"
-	    Location		    [172, 52, 1296, 1126]
+	    Location		    [1192, 862, 2888, 1888]
 	    Open		    off
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    200
@@ -28603,16 +28587,15 @@ Model {
 	  ZOrder		  22
 	  SrcBlock		  "BATTERY 1"
 	  SrcPort		  1
-	  Points		  [-50, 0]
+	  Points		  [-45, 0]
 	  Branch {
-	    ZOrder		    23
-	    Points		    [-120, 0]
+	    ZOrder		    252
+	    Points		    [-125, 0]
 	    DstBlock		    "DC Bus 1"
 	    DstPort		    2
 	  }
 	  Branch {
 	    ZOrder		    24
-	    Points		    [5, 0]
 	    DstBlock		    "Goto54"
 	    DstPort		    1
 	  }
@@ -28891,7 +28874,6 @@ Model {
 	  }
 	  Branch {
 	    ZOrder		    67
-	    Points		    [0, 0]
 	    DstBlock		    "Main Bus 2"
 	    DstPort		    2
 	  }
@@ -30196,7 +30178,7 @@ Model {
 	Annotation {
 	  SID			  "27286"
 	  Name			  "CONSTANTS"
-	  Position		  [550, 68, 648, 89]
+	  Position		  [550, 68, 653, 89]
 	  AutoSize		  on
 	  WordWrap		  off
 	  BackgroundColor	  "magenta"
@@ -30208,7 +30190,7 @@ Model {
 	Annotation {
 	  SID			  "27287"
 	  Name			  "CONTROL "
-	  Position		  [555, 93, 641, 114]
+	  Position		  [555, 93, 644, 114]
 	  AutoSize		  on
 	  WordWrap		  off
 	  BackgroundColor	  "cyan"
@@ -30220,7 +30202,7 @@ Model {
 	Annotation {
 	  SID			  "27288"
 	  Name			  "LOSSES"
-	  Position		  [555, 118, 618, 139]
+	  Position		  [555, 118, 621, 139]
 	  AutoSize		  on
 	  WordWrap		  off
 	  BackgroundColor	  "orange"
@@ -30232,7 +30214,7 @@ Model {
 	Annotation {
 	  SID			  "27289"
 	  Name			  "MECHANICAL"
-	  Position		  [550, 18, 665, 39]
+	  Position		  [550, 18, 670, 39]
 	  AutoSize		  on
 	  WordWrap		  off
 	  BackgroundColor	  "lightBlue"
@@ -30244,7 +30226,7 @@ Model {
 	Annotation {
 	  SID			  "27290"
 	  Name			  "ELECTRICAL "
-	  Position		  [550, 43, 661, 64]
+	  Position		  [550, 43, 666, 64]
 	  AutoSize		  on
 	  WordWrap		  off
 	  BackgroundColor	  "yellow"
@@ -30263,7 +30245,7 @@ Model {
 	Annotation {
 	  SID			  "27292"
 	  Name			  "Generator Bus 1"
-	  Position		  [1727, 14, 1853, 35]
+	  Position		  [1727, 14, 1854, 35]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -30275,7 +30257,7 @@ Model {
 	Annotation {
 	  SID			  "27293"
 	  Name			  "Generator 1"
-	  Position		  [1202, 89, 1294, 110]
+	  Position		  [1202, 89, 1295, 110]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -30287,7 +30269,7 @@ Model {
 	Annotation {
 	  SID			  "27294"
 	  Name			  "APU"
-	  Position		  [1212, 349, 1246, 370]
+	  Position		  [1212, 349, 1248, 370]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -30299,7 +30281,7 @@ Model {
 	Annotation {
 	  SID			  "27295"
 	  Name			  "GROUND SUPPLY"
-	  Position		  [1217, 549, 1353, 570]
+	  Position		  [1217, 549, 1359, 570]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -30311,7 +30293,7 @@ Model {
 	Annotation {
 	  SID			  "27296"
 	  Name			  "Generator 2"
-	  Position		  [1217, 739, 1309, 760]
+	  Position		  [1217, 739, 1310, 760]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -30323,7 +30305,7 @@ Model {
 	Annotation {
 	  SID			  "27297"
 	  Name			  "Main Bus 1"
-	  Position		  [2157, 34, 2243, 55]
+	  Position		  [2157, 34, 2244, 55]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -30335,7 +30317,7 @@ Model {
 	Annotation {
 	  SID			  "27298"
 	  Name			  "Transfer Bus 1"
-	  Position		  [2162, 304, 2275, 325]
+	  Position		  [2162, 304, 2276, 325]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -30347,7 +30329,7 @@ Model {
 	Annotation {
 	  SID			  "27299"
 	  Name			  "Main Bus 2"
-	  Position		  [2157, 529, 2243, 550]
+	  Position		  [2157, 529, 2244, 550]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -30359,7 +30341,7 @@ Model {
 	Annotation {
 	  SID			  "27300"
 	  Name			  "Transfer Bus 2"
-	  Position		  [2152, 814, 2265, 835]
+	  Position		  [2152, 814, 2266, 835]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -30371,7 +30353,7 @@ Model {
 	Annotation {
 	  SID			  "27301"
 	  Name			  "AC Loads"
-	  Position		  [2387, 34, 2461, 55]
+	  Position		  [2387, 34, 2462, 55]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -30383,7 +30365,7 @@ Model {
 	Annotation {
 	  SID			  "27302"
 	  Name			  "Transformer-Rectifier Units"
-	  Position		  [2587, 49, 2798, 70]
+	  Position		  [2587, 49, 2800, 70]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -30395,7 +30377,7 @@ Model {
 	Annotation {
 	  SID			  "27303"
 	  Name			  "DC Loads"
-	  Position		  [3022, 39, 3096, 60]
+	  Position		  [3022, 39, 3097, 60]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -30407,7 +30389,7 @@ Model {
 	Annotation {
 	  SID			  "27304"
 	  Name			  "DC Bus 1"
-	  Position		  [3377, 39, 3448, 60]
+	  Position		  [3377, 39, 3450, 60]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -30419,7 +30401,7 @@ Model {
 	Annotation {
 	  SID			  "27305"
 	  Name			  "DC Bus 2"
-	  Position		  [3377, 574, 3448, 595]
+	  Position		  [3377, 574, 3450, 595]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -30443,7 +30425,7 @@ Model {
 	Annotation {
 	  SID			  "27307"
 	  Name			  "AUX Battery "
-	  Position		  [3652, 369, 3754, 390]
+	  Position		  [3652, 369, 3756, 390]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -30467,7 +30449,7 @@ Model {
 	Annotation {
 	  SID			  "27309"
 	  Name			  "Inverter as Auxiliary Supply"
-	  Position		  [2827, 929, 3041, 950]
+	  Position		  [2827, 929, 3042, 950]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -30479,7 +30461,7 @@ Model {
 	Annotation {
 	  SID			  "27310"
 	  Name			  "50 s WAIT before Generator Loading"
-	  Position		  [802, 19, 1081, 40]
+	  Position		  [802, 19, 1084, 40]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -30491,7 +30473,7 @@ Model {
 	Annotation {
 	  SID			  "27311"
 	  Name			  "Generator Bus 2"
-	  Position		  [1757, 549, 1883, 570]
+	  Position		  [1757, 549, 1884, 570]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -30518,7 +30500,7 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"Engine #1 - updated 12/10"
-	Location		[-8, 0, 1596, 876]
+	Location		[1192, 862, 2888, 1888]
 	Open			off
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	212
@@ -30530,7 +30512,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"100"
+	ZoomFactor		"80"
 	Block {
 	  BlockType		  Inport
 	  Name			  "Electrical"
@@ -38776,7 +38758,7 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"Hydraulics "
-	Location		[191, 52, 1704, 901]
+	Location		[1192, 862, 2888, 1888]
 	Open			off
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	200
@@ -40612,11 +40594,11 @@ Model {
 	$ClassName		"Simulink.Mask"
 	Initialization		"set_param(gcb, 'LinkStatus', 'inactive')    % disable the library link\n"
 	SelfModifiable		"on"
-	Display			"str ='Cabin Zone/temp_K'; fprintf(str)"
+	Display			"str ='PowerFlow Data Manager\\n(Double click to select variables for output)'; fprintf(str)"
       }
       System {
 	Name			"PowerFlow Data Manager"
-	Location		[-8, 0, 1596, 876]
+	Location		[1192, 862, 2888, 1888]
 	Open			off
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	200
@@ -40632,155 +40614,12 @@ Model {
 	SIDHighWatermark	"30142"
 	SIDPrevWatermark	"29097"
 	Block {
-	  BlockType		  BusCreator
-	  Name			  "Bus Creator"
-	  SID			  "26386:30137"
-	  Ports			  [1, 1]
-	  Position		  [700, 100, 705, 130]
-	  ZOrder		  13
-	  ShowName		  off
-	  Inputs		  "1"
-	  DisplayOption		  "bar"
-	}
-	Block {
-	  BlockType		  BusSelector
-	  Name			  "Bus Selector1"
-	  SID			  "26386:30139"
-	  Ports			  [1, 1]
-	  Position		  [300, 105, 305, 125]
-	  ZOrder		  15
-	  ShowName		  off
-	  OutputSignals		  "temp_K"
-	  Port {
-	    PortNumber		    1
-	    Name		    "<temp_K>"
-	    RTWStorageClass	    "Auto"
-	    DataLoggingNameMode	    "SignalName"
-	  }
-	}
-	Block {
-	  BlockType		  From
-	  Name			  "From1"
-	  SID			  "26386:30138"
-	  Position		  [20, 108, 60, 122]
-	  ZOrder		  14
-	  ShowName		  off
-	  UserDataPersistent	  on
-	  UserData		  "DataTag0"
-	  GotoTag		  "gdata_16673000244141"
-	  TagVisibility		  "global"
-	  Port {
-	    PortNumber		    1
-	    Name		    "ECS & FOS /Cabin Zone/temp_K"
-	    RTWStorageClass	    "Auto"
-	    DataLoggingNameMode	    "SignalName"
-	  }
-	}
-	Block {
-	  BlockType		  SubSystem
-	  Name			  "SubSystem1"
-	  SID			  "26386:30140"
-	  Ports			  [1, 1]
-	  Position		  [420, 102, 480, 128]
-	  ZOrder		  16
-	  ShowName		  off
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
-	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
-	  Port {
-	    PortNumber		    1
-	    Name		    "Cabin Zone/temp_K"
-	    PropagatedSignals	    "temp_K"
-	    RTWStorageClass	    "Auto"
-	    DataLoggingNameMode	    "SignalName"
-	  }
-	  System {
-	    Name		    "SubSystem1"
-	    Location		    [100, 100, 900, 600]
-	    Open		    off
-	    ModelBrowserVisibility  on
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "usletter"
-	    PaperUnits		    "inches"
-	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "Rename"
-	      SID		      "26386:30141"
-	      Position		      [15, 15, 35, 35]
-	      ZOrder		      1
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "Bus"
-	      SID		      "26386:30142"
-	      Position		      [15, 15, 35, 35]
-	      ZOrder		      2
-	      IconDisplay	      "Port number"
-	    }
-	    Line {
-	      ZOrder		      1
-	      SrcBlock		      "Rename"
-	      SrcPort		      1
-	      Points		      [0, -15; -40, 0]
-	      DstBlock		      "Bus"
-	      DstPort		      1
-	    }
-	  }
-	}
-	Block {
 	  BlockType		  Outport
 	  Name			  "Data"
 	  SID			  "26386:29094"
 	  Position		  [750, 213, 780, 227]
 	  ZOrder		  -5
 	  IconDisplay		  "Port number"
-	}
-	Line {
-	  ZOrder		  17
-	  SrcBlock		  "Bus Creator"
-	  SrcPort		  1
-	  Points		  [10, 0; 0, 105]
-	  DstBlock		  "Data"
-	  DstPort		  1
-	}
-	Line {
-	  Name			  "ECS & FOS /Cabin Zone/temp_K"
-	  ZOrder		  18
-	  Labels		  [0, 0]
-	  SrcBlock		  "From1"
-	  SrcPort		  1
-	  DstBlock		  "Bus Selector1"
-	  DstPort		  1
-	}
-	Line {
-	  Name			  "<temp_K>"
-	  ZOrder		  19
-	  Labels		  [0, 0]
-	  SrcBlock		  "Bus Selector1"
-	  SrcPort		  1
-	  DstBlock		  "SubSystem1"
-	  DstPort		  1
-	}
-	Line {
-	  Name			  "Cabin Zone/temp_K"
-	  ZOrder		  20
-	  Labels		  [0, 0]
-	  SrcBlock		  "SubSystem1"
-	  SrcPort		  1
-	  DstBlock		  "Bus Creator"
-	  DstPort		  1
 	}
       }
     }
@@ -40812,8 +40651,8 @@ Model {
 	MarkerStyles		"none|none|none|none|none|none"
       }
       ShowLegends	      off
-      YMin		      "280.185"
-      YMax		      "309.679"
+      YMin		      "295.065"
+      YMax		      "295.075"
       SaveName		      "ScopeData36"
       DataFormat	      "StructureWithTime"
       LimitDataPoints	      off
@@ -41063,8 +40902,7 @@ Model {
       ZOrder		      36
       SrcBlock		      "PowerFlow Data Manager"
       SrcPort		      1
-      DstBlock		      "Bus\nSelector1"
-      DstPort		      1
+      Points		      [45, 0; 15, 0]
     }
     Line {
       ZOrder		      37
@@ -41102,15 +40940,6 @@ Model {
       DstBlock		      "Bus\nSelector"
       DstPort		      1
     }
-  }
-}
-MatData {
-  NumRecords		  1
-  DataRecord {
-    Tag			    DataTag0
-    Data		    "  %)30     .    P     8    (     0         %    \"     $    \"     0         .    4     8    (    !    "
-    "      %    \"     $    <     0         0    '    $5#4R F($9/4R O0V%B:6X@6F]N92]T96UP7TL     #@   #@    &    \"    "
-    " 8         !0    @    !     0    $         \"0    @           #P/P"
   }
 }
 # Finite State Machines
