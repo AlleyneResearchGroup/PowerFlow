@@ -1296,11 +1296,11 @@ switch ind
      axes(handles.MSSNPLT)
         plot(handles.MSSN.eng.time,handles.MSSN.eng.Gen1)
         hold on
-        plot(handles.MSSN.eng.time,handles.MSSN.eng.Gen2)
+        plot(handles.MSSN.eng.time,handles.MSSN.eng.Gen2,'r')
         hold on
-        plot(handles.MSSN.eng.time,handles.MSSN.eng.Gen3,'r')
+        plot(handles.MSSN.eng.time,handles.MSSN.eng.Gen3,'c')
         hold on
-        plot(handles.MSSN.eng.time,handles.MSSN.eng.Gen4,'r')
+        plot(handles.MSSN.eng.time,handles.MSSN.eng.Gen4,'m')
          xlabel('Time (Sec)')
            title(list)
             if handles.MSSN.gen.N_ENG > 2  
