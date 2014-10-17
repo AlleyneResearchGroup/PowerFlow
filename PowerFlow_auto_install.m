@@ -46,15 +46,22 @@ else
     err(4) = false;
 end
 
+dir_path{5} = spath;
+if exist(dir_path{5},'dir')
+    addpath(dir_path{5})
+    err(5) = true;
+else
+    err(5) = false;
+end
 % Error checking
-if ( err(1) == false && err(2) == false && err(3) ==  false && err(4) == false )
+if ( err(1) == false && err(2) == false && err(3) ==  false && err(4) == false && err(5) == false )
     warning(['PowerFlow_auto_install.m failed to install the necessary '...
         'directories. Administrator privileges may be required. Check', ...
         ' necessary privileges of the installation directory.'])
-elseif ( err(1) == false || err(2) == false || err(3) ==  false || err(4) == false )
+elseif ( err(1) == false || err(2) == false || err(3) ==  false || err(4) == false || err(5) == false )
     warning(['One or more directories failed to install.  Manual ',...
         'installation required for the following:'])
-    for i=1:4
+    for i=1:5
         if err(i) == false
             disp(dir_path{i})
         end
