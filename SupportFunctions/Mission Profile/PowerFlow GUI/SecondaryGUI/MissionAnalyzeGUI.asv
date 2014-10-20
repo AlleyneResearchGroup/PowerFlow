@@ -170,8 +170,8 @@ end
 for i=1:N_GEN
     Gen(i)=eval(['[handles.MSSN.eng.Gen' num2str(i) '(eng_time_index)];']);
 end
-Variables1={'Mission Phase';'Altitude (ft)';'Mach';'Flaps (Deg)';'APU';'Pack';'Bleed';'NavCom';'Autop';...
-    'Taxilight';'Landing Light';'Landing Gear';'Pressure'}
+Variables1={'State';'Altitude (ft)';'Mach';'Flaps (Deg)';'APU';'Pack';'Bleed';'NavCom';'Autop';...
+    'Taxilight';'Landing Light';'Landing Gear';'Pressure'};
 
 Values1_2={APU;Pack;Bleed;Navcom;Autop;Taxilit;Landinglit;...
     Landinggear;Pressure};
@@ -188,25 +188,16 @@ elseif state==2
     state='Taxi';
 elseif state==3
     state='Takeoff';
-elseif state==4
+elseif state=4
     state='Climb';
 elseif state==5
-    state='Cruise';
+    state='Cruise'
 elseif state==6
-    state='Descent';
-elseif state==7
-    state='Loiter';
-elseif state==8
-    state='Approach';
-elseif state==9
-    state='Landing';
-elseif state==10
-    state='Shutdown';
-end
-Values1_1=cellstr(state);
-Values1_3=cellstr(num2str([Altitude;Mach;Flaps]));
+    state='Descent'
+    
+Values1_1=cellstr(num2str([state;Altitude;Mach;Flaps]));
 Values1_2=cellstr(Values1_2);
-Values1=vertcat(Values1_1,Values1_3,Values1_2);
+Values1=vertcat(Values1_1,Values1_2);
 
 colnames1={'Variables','Values'};
 set(handles.property_table,'data',[Variables1,Values1],'ColumnName',colnames1);
