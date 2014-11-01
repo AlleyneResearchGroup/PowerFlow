@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.298"
+    ComputedModelVersion    "1.302"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -21,8 +21,8 @@ Model {
   MinMaxOverflowArchiveMode "Overwrite"
   FPTRunName		  "Run 1"
   MaxMDLFileLineLength	  120
-  InitFcn		  "load('loss_coeff_mixing_junction.mat')\n%load('defaultMSSN.mat')\nload('SampleOutput.mat')\nload('HydPro"
-  "p.mat')\nload('HydraulicLoad.mat')\nload('initavload.mat')\n%load('mission_short.mat')"
+  InitFcn		  "load('loss_coeff_mixing_junction.mat')\nload('SampleOutput.mat')\nload('HydProp.mat')\nload('HydraulicLo"
+  "ad.mat')\nload('initavload.mat')\n"
   Object {
     $PropName		    "BdWindowsInfo"
     $ObjectID		    1
@@ -58,35 +58,35 @@ Model {
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "25062"
 	  Extents		  [1139.0, 567.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [1788.2142857142867, 305.01666666666165]
+	  ZoomFactor		  [0.3]
+	  Offset		  [491.5476190476204, -435.40000000000566]
 	}
 	Object {
 	  $ObjectID		  6
 	  IsActive		  [0]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "12205"
-	  Extents		  [1139.0, 567.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [-0.875, -12.5]
+	  ViewObjType		  "SimulinkTopLevel"
+	  LoadSaveID		  "0"
+	  Extents		  [1053.0, 863.0]
+	  ZoomFactor		  [0.8]
+	  Offset		  [-79.799999999999955, 30.5]
 	}
 	Object {
 	  $ObjectID		  7
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "12374"
-	  Extents		  [1139.0, 567.0]
+	  Extents		  [1053.0, 863.0]
 	  ZoomFactor		  [1.0]
 	  Offset		  [0.0, 0.0]
 	}
 	Object {
 	  $ObjectID		  8
 	  IsActive		  [0]
-	  ViewObjType		  "SimulinkTopLevel"
-	  LoadSaveID		  "0"
-	  Extents		  [1139.0, 567.0]
-	  ZoomFactor		  [1.25]
-	  Offset		  [93.616666666666646, 122.95000000000009]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "26051"
+	  Extents		  [1053.0, 863.0]
+	  ZoomFactor		  [1.0]
+	  Offset		  [105.0, 0.0]
 	}
 	PropName		"EditorsInfo"
       }
@@ -98,9 +98,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "srikanthan"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Oct 15 16:21:57 2014"
-  RTWModifiedTimeStamp	  335290916
-  ModelVersionFormat	  "1.%<AutoIncrement:298>"
+  LastModifiedDate	  "Wed Oct 15 20:52:40 2014"
+  RTWModifiedTimeStamp	  335295393
+  ModelVersionFormat	  "1.%<AutoIncrement:302>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -226,8 +226,8 @@ Model {
 	  SolverMode		  "Auto"
 	  EnableConcurrentExecution off
 	  ConcurrentTasks	  off
-	  Solver		  "ode45"
-	  SolverName		  "ode45"
+	  Solver		  "ode23tb"
+	  SolverName		  "ode23tb"
 	  SolverJacobianMethodControl "auto"
 	  ShapePreserveControl	  "DisableAll"
 	  ZeroCrossControl	  "UseLocalSettings"
@@ -727,7 +727,7 @@ Model {
       }
       Name		      "Configuration"
       CurrentDlgPage	      "Solver"
-      ConfigPrmDlgPosition     [ 191, 22, 1089, 671 ] 
+      ConfigPrmDlgPosition     [ 183, -8, 1097, 679 ] 
     }
     PropName		    "ConfigurationSets"
   }
@@ -837,6 +837,17 @@ Model {
       SampleTime	      "inf"
       FramePeriod	      "inf"
       PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+      LockScale		      off
+      ConvertRealWorld	      "Real World Value (RWV)"
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
     }
     Block {
       BlockType		      Demux
@@ -1120,6 +1131,14 @@ Model {
       LUTDesignAbsError	      "1e-6"
     }
     Block {
+      BlockType		      MATLABFcn
+      MATLABFcn		      "sin"
+      OutputDimensions	      "-1"
+      OutputSignalType	      "auto"
+      Output1D		      on
+      SampleTime	      "-1"
+    }
+    Block {
       BlockType		      ManualSwitch
       CurrentSetting	      "1"
       varsize		      off
@@ -1350,7 +1369,7 @@ Model {
   }
   System {
     Name		    "Boeing737Sample_updatedCopy"
-    Location		    [-8, -8, 1374, 736]
+    Location		    [1358, -8, 2654, 1032]
     Open		    on
     ModelBrowserVisibility  on
     ModelBrowserWidth	    212
@@ -1362,9 +1381,9 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "125"
+    ZoomFactor		    "80"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "27432"
+    SIDHighWatermark	    "27442"
     Block {
       BlockType		      BusSelector
       Name		      "Bus\nSelector"
@@ -9079,8 +9098,8 @@ Model {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Fuel Tanks/Pumps"
-	    Location		    [-8, -8, 1374, 736]
-	    Open		    on
+	    Location		    [-8, 0, 1374, 744]
+	    Open		    off
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    212
 	    ScreenColor		    "white"
@@ -9091,7 +9110,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
+	    ZoomFactor		    "80"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Pamb"
@@ -12465,15 +12484,14 @@ Model {
 	      }
 	      Branch {
 		ZOrder			27
-		Points			[180, 0]
+		Points			[175, 0]
 		Branch {
-		  ZOrder		  28
+		  ZOrder		  139
 		  DstBlock		  "Flow Junction"
 		  DstPort		  4
 		}
 		Branch {
 		  ZOrder		  29
-		  Points		  [-5, 0]
 		  DstBlock		  "Scope5"
 		  DstPort		  1
 		}
@@ -16460,7 +16478,7 @@ Model {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Oil Tanks/Pumps\nLeft Wing"
-	    Location		    [-8, -8, 1374, 736]
+	    Location		    [1358, -8, 2654, 1032]
 	    Open		    on
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    200
@@ -21458,7 +21476,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"100"
+	ZoomFactor		"30"
 	Block {
 	  BlockType		  Inport
 	  Name			  "Left Engine"
@@ -21717,6 +21735,170 @@ Model {
 	}
 	Block {
 	  BlockType		  SubSystem
+	  Name			  "BATTERY MONITORING"
+	  SID			  "27435"
+	  Ports			  [1]
+	  Position		  [3665, 249, 3760, 291]
+	  ZOrder		  48
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  Object {
+	    $PropName		    "MaskObject"
+	    $ObjectID		    72
+	    $ClassName		    "Simulink.Mask"
+	    Object {
+	      $PropName		      "Parameters"
+	      $ObjectID		      73
+	      $ClassName	      "Simulink.MaskParameter"
+	      Type		      "edit"
+	      Name		      "mon_t"
+	      Prompt		      "Battery monitoring interval (s)"
+	      Value		      "10"
+	    }
+	  }
+	  System {
+	    Name		    "BATTERY MONITORING"
+	    Location		    [1358, -8, 2654, 1032]
+	    Open		    off
+	    ModelBrowserVisibility  on
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "200"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Voltages"
+	      SID		      "27436"
+	      Position		      [135, 188, 165, 202]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Clock
+	      Name		      "Clock"
+	      SID		      "27437"
+	      Position		      [190, 295, 210, 315]
+	      ZOrder		      20
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      SID		      "27438"
+	      Position		      [125, 250, 155, 280]
+	      ZOrder		      1
+	    }
+	    Block {
+	      BlockType		      DataTypeConversion
+	      Name		      "Data Type Conversion"
+	      SID		      "27439"
+	      Position		      [180, 249, 195, 281]
+	      ZOrder		      -2
+	      ShowName		      off
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "MATLAB Fcn"
+	      SID		      "27440"
+	      Ports		      [1, 1]
+	      Position		      [305, 250, 365, 280]
+	      ZOrder		      -4
+	      ShowName		      off
+	      MATLABFcn		      "batterywarning"
+	      SampleTime	      "mon_t"
+	    }
+	    Block {
+	      BlockType		      Memory
+	      Name		      "Memory18"
+	      SID		      "27441"
+	      Position		      [305, 312, 320, 328]
+	      ZOrder		      -5
+	      BlockMirror	      on
+	      ShowName		      off
+	      FontSize		      8
+	      X0		      "[0 0 0]"
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux"
+	      SID		      "27442"
+	      Ports		      [4, 1]
+	      Position		      [255, 236, 260, 299]
+	      ZOrder		      -6
+	      ShowName		      off
+	      DisplayOption	      "bar"
+	    }
+	    Line {
+	      ZOrder		      1
+	      SrcBlock		      "Mux"
+	      SrcPort		      1
+	      Points		      [0, -5]
+	      DstBlock		      "MATLAB Fcn"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      2
+	      SrcBlock		      "MATLAB Fcn"
+	      SrcPort		      1
+	      Points		      [9, 0; 0, 55]
+	      DstBlock		      "Memory18"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      3
+	      SrcBlock		      "Memory18"
+	      SrcPort		      1
+	      Points		      [-75, 0; 0, -45]
+	      DstBlock		      "Mux"
+	      DstPort		      3
+	    }
+	    Line {
+	      ZOrder		      4
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      DstBlock		      "Data Type Conversion"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      5
+	      SrcBlock		      "Voltages"
+	      SrcPort		      1
+	      Points		      [0, 50]
+	      DstBlock		      "Mux"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      6
+	      SrcBlock		      "Data Type Conversion"
+	      SrcPort		      1
+	      Points		      [40, 0]
+	      DstBlock		      "Mux"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      7
+	      SrcBlock		      "Clock"
+	      SrcPort		      1
+	      Points		      [25, 0]
+	      DstBlock		      "Mux"
+	      DstPort		      4
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
 	  Name			  "Bus Controls"
 	  SID			  "26468"
 	  Ports			  [2, 8]
@@ -21732,7 +21914,7 @@ Model {
 	  MaskHideContents	  off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    72
+	    $ObjectID		    74
 	    $ClassName		    "Simulink.Mask"
 	    Description		    "Specify the source from which different buses receive power. There are \n1. Two Generator buses"
 	    " (Bus 1-2)\n2. Two AC Main buses (Main Bus 1-2))\n3. Two AC Transfer buses and (AC Transfer Bus 1-2)\n4. Two DC I"
@@ -21750,7 +21932,7 @@ Model {
 	      Type		      "Simulink.MaskParameter"
 	      Dimension		      8
 	      Object {
-		$ObjectID		73
+		$ObjectID		75
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -21766,7 +21948,7 @@ Model {
 		Value			"Generator 1 "
 	      }
 	      Object {
-		$ObjectID		74
+		$ObjectID		76
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -21782,7 +21964,7 @@ Model {
 		Value			"Generator 2 "
 	      }
 	      Object {
-		$ObjectID		75
+		$ObjectID		77
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -21796,7 +21978,7 @@ Model {
 		Value			"Generator Bus 1"
 	      }
 	      Object {
-		$ObjectID		76
+		$ObjectID		78
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -21810,7 +21992,7 @@ Model {
 		Value			"Generator Bus 1"
 	      }
 	      Object {
-		$ObjectID		77
+		$ObjectID		79
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -21824,7 +22006,7 @@ Model {
 		Value			"Generator Bus 2"
 	      }
 	      Object {
-		$ObjectID		78
+		$ObjectID		80
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -21838,7 +22020,7 @@ Model {
 		Value			"Generator Bus 2"
 	      }
 	      Object {
-		$ObjectID		79
+		$ObjectID		81
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -21852,7 +22034,7 @@ Model {
 		Value			"Battery 1"
 	      }
 	      Object {
-		$ObjectID		80
+		$ObjectID		82
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -22154,7 +22336,7 @@ Model {
 	  MaskHideContents	  off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    81
+	    $ObjectID		    83
 	    $ClassName		    "Simulink.Mask"
 	    Type		    "DC Service Bus"
 	    Description		    "Service Bus"
@@ -22440,7 +22622,7 @@ Model {
 	  MaskHideContents	  off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    82
+	    $ObjectID		    84
 	    $ClassName		    "Simulink.Mask"
 	    Type		    "DC Service Bus"
 	    Description		    "Service Bus"
@@ -24017,7 +24199,7 @@ Model {
 	  MaskHideContents	  off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    83
+	    $ObjectID		    85
 	    $ClassName		    "Simulink.Mask"
 	    Description		    "Generator Bus Structure."
 	  }
@@ -24097,7 +24279,7 @@ Model {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		84
+		$ObjectID		86
 		$ClassName		"Simulink.Mask"
 		Type			"Compare To Constant"
 		Description		"Determine how a signal compares to a constant."
@@ -24115,7 +24297,7 @@ Model {
 		  Type			  "Simulink.MaskParameter"
 		  Dimension		  4
 		  Object {
-		    $ObjectID		    85
+		    $ObjectID		    87
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -24135,14 +24317,14 @@ Model {
 		    Tunable		    "off"
 		  }
 		  Object {
-		    $ObjectID		    86
+		    $ObjectID		    88
 		    Type		    "edit"
 		    Name		    "const"
 		    Prompt		    "Constant value:"
 		    Value		    "1"
 		  }
 		  Object {
-		    $ObjectID		    87
+		    $ObjectID		    89
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -24158,7 +24340,7 @@ Model {
 		    Tunable		    "off"
 		  }
 		  Object {
-		    $ObjectID		    88
+		    $ObjectID		    90
 		    Type		    "checkbox"
 		    Name		    "ZeroCross"
 		    Prompt		    "Enable zero-crossing detection"
@@ -24262,7 +24444,7 @@ Model {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		89
+		$ObjectID		91
 		$ClassName		"Simulink.Mask"
 		Type			"Compare To Constant"
 		Description		"Determine how a signal compares to a constant."
@@ -24280,7 +24462,7 @@ Model {
 		  Type			  "Simulink.MaskParameter"
 		  Dimension		  4
 		  Object {
-		    $ObjectID		    90
+		    $ObjectID		    92
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -24300,14 +24482,14 @@ Model {
 		    Tunable		    "off"
 		  }
 		  Object {
-		    $ObjectID		    91
+		    $ObjectID		    93
 		    Type		    "edit"
 		    Name		    "const"
 		    Prompt		    "Constant value:"
 		    Value		    "2"
 		  }
 		  Object {
-		    $ObjectID		    92
+		    $ObjectID		    94
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -24323,7 +24505,7 @@ Model {
 		    Tunable		    "off"
 		  }
 		  Object {
-		    $ObjectID		    93
+		    $ObjectID		    95
 		    Type		    "checkbox"
 		    Name		    "ZeroCross"
 		    Prompt		    "Enable zero-crossing detection"
@@ -24427,7 +24609,7 @@ Model {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		94
+		$ObjectID		96
 		$ClassName		"Simulink.Mask"
 		Type			"Compare To Constant"
 		Description		"Determine how a signal compares to a constant."
@@ -24445,7 +24627,7 @@ Model {
 		  Type			  "Simulink.MaskParameter"
 		  Dimension		  4
 		  Object {
-		    $ObjectID		    95
+		    $ObjectID		    97
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -24465,14 +24647,14 @@ Model {
 		    Tunable		    "off"
 		  }
 		  Object {
-		    $ObjectID		    96
+		    $ObjectID		    98
 		    Type		    "edit"
 		    Name		    "const"
 		    Prompt		    "Constant value:"
 		    Value		    "3"
 		  }
 		  Object {
-		    $ObjectID		    97
+		    $ObjectID		    99
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -24488,7 +24670,7 @@ Model {
 		    Tunable		    "off"
 		  }
 		  Object {
-		    $ObjectID		    98
+		    $ObjectID		    100
 		    Type		    "checkbox"
 		    Name		    "ZeroCross"
 		    Prompt		    "Enable zero-crossing detection"
@@ -24841,7 +25023,7 @@ Model {
 	  MaskHideContents	  off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    99
+	    $ObjectID		    101
 	    $ClassName		    "Simulink.Mask"
 	    Description		    "Generator Bus Structure."
 	  }
@@ -24930,7 +25112,7 @@ Model {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		100
+		$ObjectID		102
 		$ClassName		"Simulink.Mask"
 		Type			"Compare To Constant"
 		Description		"Determine how a signal compares to a constant."
@@ -24948,7 +25130,7 @@ Model {
 		  Type			  "Simulink.MaskParameter"
 		  Dimension		  4
 		  Object {
-		    $ObjectID		    101
+		    $ObjectID		    103
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -24968,14 +25150,14 @@ Model {
 		    Tunable		    "off"
 		  }
 		  Object {
-		    $ObjectID		    102
+		    $ObjectID		    104
 		    Type		    "edit"
 		    Name		    "const"
 		    Prompt		    "Constant value:"
 		    Value		    "1"
 		  }
 		  Object {
-		    $ObjectID		    103
+		    $ObjectID		    105
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -24991,7 +25173,7 @@ Model {
 		    Tunable		    "off"
 		  }
 		  Object {
-		    $ObjectID		    104
+		    $ObjectID		    106
 		    Type		    "checkbox"
 		    Name		    "ZeroCross"
 		    Prompt		    "Enable zero-crossing detection"
@@ -25095,7 +25277,7 @@ Model {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		105
+		$ObjectID		107
 		$ClassName		"Simulink.Mask"
 		Type			"Compare To Constant"
 		Description		"Determine how a signal compares to a constant."
@@ -25113,7 +25295,7 @@ Model {
 		  Type			  "Simulink.MaskParameter"
 		  Dimension		  4
 		  Object {
-		    $ObjectID		    106
+		    $ObjectID		    108
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -25133,14 +25315,14 @@ Model {
 		    Tunable		    "off"
 		  }
 		  Object {
-		    $ObjectID		    107
+		    $ObjectID		    109
 		    Type		    "edit"
 		    Name		    "const"
 		    Prompt		    "Constant value:"
 		    Value		    "2"
 		  }
 		  Object {
-		    $ObjectID		    108
+		    $ObjectID		    110
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -25156,7 +25338,7 @@ Model {
 		    Tunable		    "off"
 		  }
 		  Object {
-		    $ObjectID		    109
+		    $ObjectID		    111
 		    Type		    "checkbox"
 		    Name		    "ZeroCross"
 		    Prompt		    "Enable zero-crossing detection"
@@ -25260,7 +25442,7 @@ Model {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		110
+		$ObjectID		112
 		$ClassName		"Simulink.Mask"
 		Type			"Compare To Constant"
 		Description		"Determine how a signal compares to a constant."
@@ -25278,7 +25460,7 @@ Model {
 		  Type			  "Simulink.MaskParameter"
 		  Dimension		  4
 		  Object {
-		    $ObjectID		    111
+		    $ObjectID		    113
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -25298,14 +25480,14 @@ Model {
 		    Tunable		    "off"
 		  }
 		  Object {
-		    $ObjectID		    112
+		    $ObjectID		    114
 		    Type		    "edit"
 		    Name		    "const"
 		    Prompt		    "Constant value:"
 		    Value		    "3"
 		  }
 		  Object {
-		    $ObjectID		    113
+		    $ObjectID		    115
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -25321,7 +25503,7 @@ Model {
 		    Tunable		    "off"
 		  }
 		  Object {
-		    $ObjectID		    114
+		    $ObjectID		    116
 		    Type		    "checkbox"
 		    Name		    "ZeroCross"
 		    Prompt		    "Enable zero-crossing detection"
@@ -25425,7 +25607,7 @@ Model {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		115
+		$ObjectID		117
 		$ClassName		"Simulink.Mask"
 		Type			"Compare To Constant"
 		Description		"Determine how a signal compares to a constant."
@@ -25443,7 +25625,7 @@ Model {
 		  Type			  "Simulink.MaskParameter"
 		  Dimension		  4
 		  Object {
-		    $ObjectID		    116
+		    $ObjectID		    118
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -25463,14 +25645,14 @@ Model {
 		    Tunable		    "off"
 		  }
 		  Object {
-		    $ObjectID		    117
+		    $ObjectID		    119
 		    Type		    "edit"
 		    Name		    "const"
 		    Prompt		    "Constant value:"
 		    Value		    "4"
 		  }
 		  Object {
-		    $ObjectID		    118
+		    $ObjectID		    120
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -25486,7 +25668,7 @@ Model {
 		    Tunable		    "off"
 		  }
 		  Object {
-		    $ObjectID		    119
+		    $ObjectID		    121
 		    Type		    "checkbox"
 		    Name		    "ZeroCross"
 		    Prompt		    "Enable zero-crossing detection"
@@ -26859,14 +27041,14 @@ Model {
 	}
 	Block {
 	  BlockType		  Goto
-	  Name			  "Goto63"
-	  SID			  "27428"
-	  Position		  [2405, 483, 2495, 497]
-	  ZOrder		  43
-	  BackgroundColor	  "orange"
+	  Name			  "Goto65"
+	  SID			  "27434"
+	  Position		  [2420, 513, 2510, 527]
+	  ZOrder		  47
+	  BackgroundColor	  "[1.000000, 0.501961, 0.000000]"
 	  ShowName		  off
 	  FontName		  "Arial"
-	  GotoTag		  "loadloss_2"
+	  GotoTag		  "loadloss_4"
 	}
 	Block {
 	  BlockType		  Goto
@@ -26941,7 +27123,7 @@ Model {
 	  MaskHideContents	  off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    120
+	    $ObjectID		    122
 	    $ClassName		    "Simulink.Mask"
 	    Type		    "Avionics load configuration"
 	    Initialization	    "blk = gcb;\nvalue = get_param(blk,'avopt');\n\nif strcmp(value,'As average with variation')\n"
@@ -26950,7 +27132,7 @@ Model {
 	      Type		      "Simulink.MaskParameter"
 	      Dimension		      5
 	      Object {
-		$ObjectID		121
+		$ObjectID		123
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -26968,7 +27150,7 @@ Model {
 		"cellarr);\n clear blk STATS value cellarr"
 	      }
 	      Object {
-		$ObjectID		122
+		$ObjectID		124
 		Type			"edit"
 		Name			"mean"
 		Prompt			"Mean load in W:"
@@ -26976,7 +27158,7 @@ Model {
 		Visible			"off"
 	      }
 	      Object {
-		$ObjectID		123
+		$ObjectID		125
 		Type			"edit"
 		Name			"var"
 		Prompt			"          Variance:"
@@ -26984,7 +27166,7 @@ Model {
 		Visible			"off"
 	      }
 	      Object {
-		$ObjectID		124
+		$ObjectID		126
 		Type			"edit"
 		Name			"sampt"
 		Prompt			"           Sample interval:"
@@ -26992,7 +27174,7 @@ Model {
 		Visible			"off"
 	      }
 	      Object {
-		$ObjectID		125
+		$ObjectID		127
 		Type			"edit"
 		Name			"initavload"
 		Prompt			"Enter pathname of the mat file to load :"
@@ -30089,10 +30271,11 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  248
+	  ZOrder		  770
 	  SrcBlock		  "Mux"
 	  SrcPort		  1
-	  Points		  [15, 0; 15, 0]
+	  DstBlock		  "BATTERY MONITORING"
+	  DstPort		  1
 	}
 	Line {
 	  ZOrder		  249
@@ -30214,24 +30397,24 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  760
-	  SrcBlock		  "Enabled_AC_Loadloss"
-	  SrcPort		  2
-	  Points		  [0, 10]
-	  DstBlock		  "Goto63"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  766
+	  ZOrder		  767
 	  SrcBlock		  "Enabled_AC_Loadloss1"
 	  SrcPort		  2
-	  Points		  [0, 10; 15, 0]
+	  Points		  [0, 20; 20, 0]
 	}
 	Line {
-	  ZOrder		  764
+	  ZOrder		  768
 	  SrcBlock		  "Enabled_AC_Loadloss2"
 	  SrcPort		  2
-	  Points		  [0, 30; 10, 0]
+	  Points		  [0, 30; 15, 0]
+	}
+	Line {
+	  ZOrder		  769
+	  SrcBlock		  "Enabled_AC_Loadloss"
+	  SrcPort		  2
+	  Points		  [0, 40]
+	  DstBlock		  "Goto65"
+	  DstPort		  1
 	}
 	Annotation {
 	  SID			  "27286"
@@ -31835,7 +32018,7 @@ Model {
 	  MaskHideContents	  off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    126
+	    $ObjectID		    128
 	    $ClassName		    "Simulink.Mask"
 	    Type		    "Unit conversion"
 	    Description		    "Convert units of:\n\nMass, density, energy, power, force, temperature, pressure, length, area, "
@@ -31851,7 +32034,7 @@ Model {
 	      Type		      "Simulink.MaskParameter"
 	      Dimension		      47
 	      Object {
-		$ObjectID		127
+		$ObjectID		129
 		Type			"checkbox"
 		Name			"mass"
 		Prompt			"Mass"
@@ -31880,7 +32063,7 @@ Model {
 		") ; \nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		128
+		$ObjectID		130
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -31913,7 +32096,7 @@ Model {
 		"cn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		129
+		$ObjectID		131
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -31946,7 +32129,7 @@ Model {
 		"cn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		130
+		$ObjectID		132
 		Type			"checkbox"
 		Name			"dens"
 		Prompt			"Density"
@@ -31991,7 +32174,7 @@ Model {
 		"ue cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		131
+		$ObjectID		133
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32038,7 +32221,7 @@ Model {
 		"cn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		132
+		$ObjectID		134
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32088,7 +32271,7 @@ Model {
 		"cn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		133
+		$ObjectID		135
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32135,7 +32318,7 @@ Model {
 		"3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		134
+		$ObjectID		136
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32185,7 +32368,7 @@ Model {
 		"cn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		135
+		$ObjectID		137
 		Type			"checkbox"
 		Name			"energy"
 		Prompt			"Energy"
@@ -32214,7 +32397,7 @@ Model {
 		"m(blk,'MaskVisibilities',cellarr) ;\nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		136
+		$ObjectID		138
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32247,7 +32430,7 @@ Model {
 		"2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		137
+		$ObjectID		139
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32280,7 +32463,7 @@ Model {
 		"2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		138
+		$ObjectID		140
 		Type			"checkbox"
 		Name			"power"
 		Prompt			"Power"
@@ -32310,7 +32493,7 @@ Model {
 		"e cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		139
+		$ObjectID		141
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32344,7 +32527,7 @@ Model {
 		"str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		140
+		$ObjectID		142
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32378,7 +32561,7 @@ Model {
 		"str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		141
+		$ObjectID		143
 		Type			"checkbox"
 		Name			"force"
 		Prompt			"Force"
@@ -32407,7 +32590,7 @@ Model {
 		"ram(blk,'MaskVisibilities',cellarr) ;\nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		142
+		$ObjectID		144
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32440,7 +32623,7 @@ Model {
 		" expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		143
+		$ObjectID		145
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32473,7 +32656,7 @@ Model {
 		" expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		144
+		$ObjectID		146
 		Type			"checkbox"
 		Name			"temp"
 		Prompt			"Temperature"
@@ -32499,7 +32682,7 @@ Model {
 		"; \nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		145
+		$ObjectID		147
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32529,7 +32712,7 @@ Model {
 		"param(blk,'MaskDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		146
+		$ObjectID		148
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32559,7 +32742,7 @@ Model {
 		"param(blk,'MaskDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		147
+		$ObjectID		149
 		Type			"checkbox"
 		Name			"pres"
 		Prompt			"Pressure"
@@ -32593,7 +32776,7 @@ Model {
 		"nd\nset_param(blk,'MaskVisibilities',cellarr) ;\nclear blk value cellarr ind a b val i\n\n"
 	      }
 	      Object {
-		$ObjectID		148
+		$ObjectID		150
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32633,7 +32816,7 @@ Model {
 		",'MaskDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		149
+		$ObjectID		151
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32673,7 +32856,7 @@ Model {
 		",'MaskDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		150
+		$ObjectID		152
 		Type			"checkbox"
 		Name			"length"
 		Prompt			"Length"
@@ -32708,7 +32891,7 @@ Model {
 		"r(ind) = {'on'} ;\n    end\nend\nset_param(blk,'MaskVisibilities',cellarr) ;\nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		151
+		$ObjectID		153
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32750,7 +32933,7 @@ Model {
 		"lk,'MaskDisplay',str) ;\nend\nclear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		152
+		$ObjectID		154
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32792,7 +32975,7 @@ Model {
 		"lk,'MaskDisplay',str) ;\nend\nclear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		153
+		$ObjectID		155
 		Type			"checkbox"
 		Name			"area"
 		Prompt			"Area "
@@ -32827,7 +33010,7 @@ Model {
 		"lk,'MaskVisibilities',cellarr) ;\nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		154
+		$ObjectID		156
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32868,7 +33051,7 @@ Model {
 		"kDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		155
+		$ObjectID		157
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32909,7 +33092,7 @@ Model {
 		"kDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		156
+		$ObjectID		158
 		Type			"checkbox"
 		Name			"vol"
 		Prompt			"Volume "
@@ -32944,7 +33127,7 @@ Model {
 		"b val i"
 	      }
 	      Object {
-		$ObjectID		157
+		$ObjectID		159
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32985,7 +33168,7 @@ Model {
 		"me fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		158
+		$ObjectID		160
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -33026,7 +33209,7 @@ Model {
 		"me fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		159
+		$ObjectID		161
 		Type			"checkbox"
 		Name			"vel"
 		Prompt			"Velocity"
@@ -33068,7 +33251,7 @@ Model {
 		"end\nset_param(blk,'MaskVisibilities',cellarr) ; \nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		160
+		$ObjectID		162
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -33115,7 +33298,7 @@ Model {
 		"lue2 value3 value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		161
+		$ObjectID		163
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -33158,7 +33341,7 @@ Model {
 		"lue2 value3 value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		162
+		$ObjectID		164
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -33205,7 +33388,7 @@ Model {
 		"lue2 value3 value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		163
+		$ObjectID		165
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -33248,7 +33431,7 @@ Model {
 		"lue2 value3 value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		164
+		$ObjectID		166
 		Type			"checkbox"
 		Name			"flow_rate"
 		Prompt			"Volume Flow Rate"
@@ -33291,7 +33474,7 @@ Model {
 		"param(blk,'MaskVisibilities',cellarr) ; \nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		165
+		$ObjectID		167
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -33339,7 +33522,7 @@ Model {
 		" value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		166
+		$ObjectID		168
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -33383,7 +33566,7 @@ Model {
 		" value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		167
+		$ObjectID		169
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -33431,7 +33614,7 @@ Model {
 		" value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		168
+		$ObjectID		170
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -33475,7 +33658,7 @@ Model {
 		" value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		169
+		$ObjectID		171
 		Type			"checkbox"
 		Name			"mfr"
 		Prompt			"Mass Flow Rate"
@@ -33512,7 +33695,7 @@ Model {
 		"ram(blk,'MaskVisibilities',cellarr) ; \nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		170
+		$ObjectID		172
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -33552,7 +33735,7 @@ Model {
 		" fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		171
+		$ObjectID		173
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -33591,7 +33774,7 @@ Model {
 		" fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		172
+		$ObjectID		174
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -33631,7 +33814,7 @@ Model {
 		" fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		173
+		$ObjectID		175
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -35807,7 +35990,7 @@ Model {
 	  MaskHideContents	  off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    174
+	    $ObjectID		    176
 	    $ClassName		    "Simulink.Mask"
 	    Type		    "Unit conversion"
 	    Description		    "Convert units of:\n\nMass, density, energy, power, force, temperature, pressure, length, area, "
@@ -35823,7 +36006,7 @@ Model {
 	      Type		      "Simulink.MaskParameter"
 	      Dimension		      47
 	      Object {
-		$ObjectID		175
+		$ObjectID		177
 		Type			"checkbox"
 		Name			"mass"
 		Prompt			"Mass"
@@ -35852,7 +36035,7 @@ Model {
 		") ; \nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		176
+		$ObjectID		178
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -35885,7 +36068,7 @@ Model {
 		"cn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		177
+		$ObjectID		179
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -35918,7 +36101,7 @@ Model {
 		"cn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		178
+		$ObjectID		180
 		Type			"checkbox"
 		Name			"dens"
 		Prompt			"Density"
@@ -35963,7 +36146,7 @@ Model {
 		"ue cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		179
+		$ObjectID		181
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36010,7 +36193,7 @@ Model {
 		"cn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		180
+		$ObjectID		182
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36060,7 +36243,7 @@ Model {
 		"cn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		181
+		$ObjectID		183
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36107,7 +36290,7 @@ Model {
 		"3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		182
+		$ObjectID		184
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36157,7 +36340,7 @@ Model {
 		"cn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		183
+		$ObjectID		185
 		Type			"checkbox"
 		Name			"energy"
 		Prompt			"Energy"
@@ -36186,7 +36369,7 @@ Model {
 		"m(blk,'MaskVisibilities',cellarr) ;\nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		184
+		$ObjectID		186
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36219,7 +36402,7 @@ Model {
 		"2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		185
+		$ObjectID		187
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36252,7 +36435,7 @@ Model {
 		"2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		186
+		$ObjectID		188
 		Type			"checkbox"
 		Name			"power"
 		Prompt			"Power"
@@ -36282,7 +36465,7 @@ Model {
 		"e cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		187
+		$ObjectID		189
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36316,7 +36499,7 @@ Model {
 		"str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		188
+		$ObjectID		190
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36350,7 +36533,7 @@ Model {
 		"str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		189
+		$ObjectID		191
 		Type			"checkbox"
 		Name			"force"
 		Prompt			"Force"
@@ -36379,7 +36562,7 @@ Model {
 		"ram(blk,'MaskVisibilities',cellarr) ;\nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		190
+		$ObjectID		192
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36412,7 +36595,7 @@ Model {
 		" expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		191
+		$ObjectID		193
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36445,7 +36628,7 @@ Model {
 		" expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		192
+		$ObjectID		194
 		Type			"checkbox"
 		Name			"temp"
 		Prompt			"Temperature"
@@ -36471,7 +36654,7 @@ Model {
 		"; \nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		193
+		$ObjectID		195
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36501,7 +36684,7 @@ Model {
 		"param(blk,'MaskDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		194
+		$ObjectID		196
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36531,7 +36714,7 @@ Model {
 		"param(blk,'MaskDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		195
+		$ObjectID		197
 		Type			"checkbox"
 		Name			"pres"
 		Prompt			"Pressure"
@@ -36565,7 +36748,7 @@ Model {
 		"nd\nset_param(blk,'MaskVisibilities',cellarr) ;\nclear blk value cellarr ind a b val i\n\n"
 	      }
 	      Object {
-		$ObjectID		196
+		$ObjectID		198
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36605,7 +36788,7 @@ Model {
 		",'MaskDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		197
+		$ObjectID		199
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36645,7 +36828,7 @@ Model {
 		",'MaskDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		198
+		$ObjectID		200
 		Type			"checkbox"
 		Name			"length"
 		Prompt			"Length"
@@ -36680,7 +36863,7 @@ Model {
 		"r(ind) = {'on'} ;\n    end\nend\nset_param(blk,'MaskVisibilities',cellarr) ;\nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		199
+		$ObjectID		201
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36722,7 +36905,7 @@ Model {
 		"lk,'MaskDisplay',str) ;\nend\nclear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		200
+		$ObjectID		202
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36764,7 +36947,7 @@ Model {
 		"lk,'MaskDisplay',str) ;\nend\nclear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		201
+		$ObjectID		203
 		Type			"checkbox"
 		Name			"area"
 		Prompt			"Area "
@@ -36799,7 +36982,7 @@ Model {
 		"lk,'MaskVisibilities',cellarr) ;\nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		202
+		$ObjectID		204
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36840,7 +37023,7 @@ Model {
 		"kDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		203
+		$ObjectID		205
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36881,7 +37064,7 @@ Model {
 		"kDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		204
+		$ObjectID		206
 		Type			"checkbox"
 		Name			"vol"
 		Prompt			"Volume "
@@ -36916,7 +37099,7 @@ Model {
 		"b val i"
 	      }
 	      Object {
-		$ObjectID		205
+		$ObjectID		207
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36957,7 +37140,7 @@ Model {
 		"me fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		206
+		$ObjectID		208
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36998,7 +37181,7 @@ Model {
 		"me fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		207
+		$ObjectID		209
 		Type			"checkbox"
 		Name			"vel"
 		Prompt			"Velocity"
@@ -37040,7 +37223,7 @@ Model {
 		"end\nset_param(blk,'MaskVisibilities',cellarr) ; \nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		208
+		$ObjectID		210
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -37087,7 +37270,7 @@ Model {
 		"lue2 value3 value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		209
+		$ObjectID		211
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -37130,7 +37313,7 @@ Model {
 		"lue2 value3 value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		210
+		$ObjectID		212
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -37177,7 +37360,7 @@ Model {
 		"lue2 value3 value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		211
+		$ObjectID		213
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -37220,7 +37403,7 @@ Model {
 		"lue2 value3 value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		212
+		$ObjectID		214
 		Type			"checkbox"
 		Name			"flow_rate"
 		Prompt			"Volume Flow Rate"
@@ -37263,7 +37446,7 @@ Model {
 		"param(blk,'MaskVisibilities',cellarr) ; \nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		213
+		$ObjectID		215
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -37311,7 +37494,7 @@ Model {
 		" value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		214
+		$ObjectID		216
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -37355,7 +37538,7 @@ Model {
 		" value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		215
+		$ObjectID		217
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -37403,7 +37586,7 @@ Model {
 		" value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		216
+		$ObjectID		218
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -37447,7 +37630,7 @@ Model {
 		" value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		217
+		$ObjectID		219
 		Type			"checkbox"
 		Name			"mfr"
 		Prompt			"Mass Flow Rate"
@@ -37484,7 +37667,7 @@ Model {
 		"ram(blk,'MaskVisibilities',cellarr) ; \nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		218
+		$ObjectID		220
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -37524,7 +37707,7 @@ Model {
 		" fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		219
+		$ObjectID		221
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -37563,7 +37746,7 @@ Model {
 		" fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		220
+		$ObjectID		222
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -37603,7 +37786,7 @@ Model {
 		" fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		221
+		$ObjectID		223
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -40648,7 +40831,7 @@ Model {
       MaskHideContents	      off
       Object {
 	$PropName		"MaskObject"
-	$ObjectID		222
+	$ObjectID		224
 	$ClassName		"Simulink.Mask"
 	Initialization		"set_param(gcb, 'LinkStatus', 'inactive')    % disable the library link\n"
 	SelfModifiable		"on"
