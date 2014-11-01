@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.307"
+    ComputedModelVersion    "1.310"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -57,8 +57,8 @@ Model {
 	ViewObjType		"SimulinkSubsys"
 	LoadSaveID		"27406"
 	Extents			[1139.0, 570.0]
-	ZoomFactor		[1.75]
-	Offset			[155.90476190476176, 9.3982147148677484]
+	ZoomFactor		[2.0]
+	Offset			[149.59999999999974, 33.19821471486776]
       }
     }
   }
@@ -68,9 +68,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "srikanthan"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sat Nov 01 13:52:51 2014"
-  RTWModifiedTimeStamp	  336750715
-  ModelVersionFormat	  "1.%<AutoIncrement:307>"
+  LastModifiedDate	  "Sat Nov 01 13:55:44 2014"
+  RTWModifiedTimeStamp	  336750927
+  ModelVersionFormat	  "1.%<AutoIncrement:310>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -16562,7 +16562,7 @@ Model {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Oil Tanks/Pumps\nLeft Wing"
-	    Location		    [-8, 0, 1370, 744]
+	    Location		    [-8, -8, 1374, 736]
 	    Open		    off
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    200
@@ -21664,7 +21664,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"100"
+	ZoomFactor		"125"
 	Block {
 	  BlockType		  Inport
 	  Name			  "Left Engine"
@@ -28528,7 +28528,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "175"
+	    ZoomFactor		    "200"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Left_Wing_SCVGU_Ploss_W"
@@ -28614,12 +28614,11 @@ Model {
 	      BlockType		      Sum
 	      Name		      "Sum"
 	      SID		      "27460"
-	      Ports		      [3, 1]
+	      Ports		      [2, 1]
 	      Position		      [415, 95, 435, 115]
 	      ZOrder		      3
 	      ShowName		      off
 	      IconShape		      "round"
-	      Inputs		      "+++"
 	      InputSameDT	      off
 	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
 	      SaturateOnIntegerOverflow	off
@@ -28679,7 +28678,7 @@ Model {
 	      Name		      "To Workspace"
 	      SID		      "27461"
 	      Ports		      [1]
-	      Position		      [495, 90, 555, 120]
+	      Position		      [495, 92, 580, 118]
 	      ZOrder		      4
 	      ShowName		      off
 	      VariableName	      "Tot_Gen_Loss_W"
@@ -28694,7 +28693,7 @@ Model {
 	      Points		      [58, 0]
 	      Branch {
 		ZOrder			16
-		Points			[0, -20; 60, 0; 0, 5]
+		Points			[0, -20; 60, 0; 0, 30]
 		DstBlock		"Sum"
 		DstPort			2
 	      }
@@ -28708,18 +28707,8 @@ Model {
 	      ZOrder		      3
 	      SrcBlock		      "APU_Ploss_W"
 	      SrcPort		      1
-	      Points		      [62, 0]
-	      Branch {
-		ZOrder			23
-		Points			[0, -17; 128, 0]
-		DstBlock		"Sum"
-		DstPort			3
-	      }
-	      Branch {
-		ZOrder			14
-		DstBlock		"Terminator2"
-		DstPort			1
-	      }
+	      DstBlock		      "Terminator2"
+	      DstPort		      1
 	    }
 	    Line {
 	      ZOrder		      4
@@ -28781,6 +28770,10 @@ Model {
 	      }
 	    }
 	    Line {
+	      FontName		      "Helvetica"
+	      FontSize		      9
+	      FontWeight	      "normal"
+	      FontAngle		      "normal"
 	      ZOrder		      24
 	      SrcBlock		      "Sum"
 	      SrcPort		      1
