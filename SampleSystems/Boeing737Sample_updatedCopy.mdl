@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.302"
+    ComputedModelVersion    "1.307"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -22,7 +22,7 @@ Model {
   FPTRunName		  "Run 1"
   MaxMDLFileLineLength	  120
   InitFcn		  "load('loss_coeff_mixing_junction.mat')\nload('SampleOutput.mat')\nload('HydProp.mat')\nload('HydraulicLo"
-  "ad.mat')\nload('initavload.mat')\n"
+  "ad.mat')\nload('initavload.mat')\nload('SampleFuelBurn.mat')\n"
   Object {
     $PropName		    "BdWindowsInfo"
     $ObjectID		    1
@@ -49,46 +49,16 @@ Model {
 	$ClassName		"Simulink.ExplorerBarInfo"
 	Visible			[1]
       }
-      Array {
-	Type			"Simulink.EditorInfo"
-	Dimension		4
-	Object {
-	  $ObjectID		  5
-	  IsActive		  [1]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "25062"
-	  Extents		  [1139.0, 567.0]
-	  ZoomFactor		  [0.3]
-	  Offset		  [491.5476190476204, -435.40000000000566]
-	}
-	Object {
-	  $ObjectID		  6
-	  IsActive		  [0]
-	  ViewObjType		  "SimulinkTopLevel"
-	  LoadSaveID		  "0"
-	  Extents		  [1053.0, 863.0]
-	  ZoomFactor		  [0.8]
-	  Offset		  [-79.799999999999955, 30.5]
-	}
-	Object {
-	  $ObjectID		  7
-	  IsActive		  [0]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "12374"
-	  Extents		  [1053.0, 863.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [0.0, 0.0]
-	}
-	Object {
-	  $ObjectID		  8
-	  IsActive		  [0]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "26051"
-	  Extents		  [1053.0, 863.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [105.0, 0.0]
-	}
-	PropName		"EditorsInfo"
+      Object {
+	$PropName		"EditorsInfo"
+	$ObjectID		5
+	$ClassName		"Simulink.EditorInfo"
+	IsActive		[1]
+	ViewObjType		"SimulinkSubsys"
+	LoadSaveID		"27406"
+	Extents			[1139.0, 570.0]
+	ZoomFactor		[1.75]
+	Offset			[155.90476190476176, 9.3982147148677484]
       }
     }
   }
@@ -98,9 +68,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "srikanthan"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Oct 15 20:52:40 2014"
-  RTWModifiedTimeStamp	  335295393
-  ModelVersionFormat	  "1.%<AutoIncrement:302>"
+  LastModifiedDate	  "Sat Nov 01 13:52:51 2014"
+  RTWModifiedTimeStamp	  336750715
+  ModelVersionFormat	  "1.%<AutoIncrement:307>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -140,7 +110,7 @@ Model {
   TryForcingSFcnDF	  off
   Object {
     $PropName		    "DataLoggingOverride"
-    $ObjectID		    9
+    $ObjectID		    6
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
     model_		    "Boeing737Sample_updatedCopy"
     Array {
@@ -199,13 +169,13 @@ Model {
     Type		    "Handle"
     Dimension		    1
     Simulink.ConfigSet {
-      $ObjectID		      10
+      $ObjectID		      7
       Version		      "1.13.1"
       Array {
 	Type			"Handle"
 	Dimension		8
 	Simulink.SolverCC {
-	  $ObjectID		  11
+	  $ObjectID		  8
 	  Version		  "1.13.1"
 	  StartTime		  "0.0"
 	  StopTime		  "100"
@@ -240,7 +210,7 @@ Model {
 	  InsertRTBMode		  "Whenever possible"
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  12
+	  $ObjectID		  9
 	  Version		  "1.13.1"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
@@ -272,7 +242,7 @@ Model {
 	  Refine		  "1"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  13
+	  $ObjectID		  10
 	  Version		  "1.13.1"
 	  Array {
 	    Type		    "Cell"
@@ -330,7 +300,7 @@ Model {
 	  ParallelExecutionInRapidAccelerator on
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  14
+	  $ObjectID		  11
 	  Version		  "1.13.1"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
@@ -420,7 +390,7 @@ Model {
 	  SFTransitionActionBeforeConditionDiag	"warning"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  15
+	  $ObjectID		  12
 	  Version		  "1.13.1"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
@@ -461,7 +431,7 @@ Model {
 	  ProdEqTarget		  on
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  16
+	  $ObjectID		  13
 	  Version		  "1.13.1"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  CheckModelReferenceTargetMessage "error"
@@ -476,7 +446,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  17
+	  $ObjectID		  14
 	  Version		  "1.13.1"
 	  SFSimEnableDebug	  on
 	  SFSimOverflowDetection  on
@@ -492,7 +462,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  18
+	  $ObjectID		  15
 	  Version		  "1.13.1"
 	  Array {
 	    Type		    "Cell"
@@ -573,7 +543,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      19
+	      $ObjectID		      16
 	      Version		      "1.13.1"
 	      Array {
 		Type			"Cell"
@@ -641,7 +611,7 @@ Model {
 	    }
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      20
+	      $ObjectID		      17
 	      Version		      "1.13.1"
 	      Array {
 		Type			"Cell"
@@ -733,11 +703,11 @@ Model {
   }
   Simulink.ConfigSet {
     $PropName		    "ActiveConfigurationSet"
-    $ObjectID		    10
+    $ObjectID		    7
   }
   Object {
     $PropName		    "DataTransfer"
-    $ObjectID		    21
+    $ObjectID		    18
     $ClassName		    "Simulink.GlobalDataTransfer"
     DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
     DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
@@ -1366,11 +1336,21 @@ Model {
     Block {
       BlockType		      Terminator
     }
+    Block {
+      BlockType		      ToWorkspace
+      VariableName	      "simulink_output"
+      MaxDataPoints	      "1000"
+      Decimation	      "1"
+      SampleTime	      "0"
+      SaveFormat	      "Array"
+      FixptAsFi		      off
+      NumInputs		      "1"
+    }
   }
   System {
     Name		    "Boeing737Sample_updatedCopy"
-    Location		    [1358, -8, 2654, 1032]
-    Open		    on
+    Location		    [-8, -8, 1374, 736]
+    Open		    off
     ModelBrowserVisibility  on
     ModelBrowserWidth	    212
     ScreenColor		    "white"
@@ -1381,9 +1361,9 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "80"
+    ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "27442"
+    SIDHighWatermark	    "27461"
     Block {
       BlockType		      BusSelector
       Name		      "Bus\nSelector"
@@ -1428,7 +1408,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"80"
+	ZoomFactor		"100"
 	Block {
 	  BlockType		  Inport
 	  Name			  "Control"
@@ -1577,7 +1557,7 @@ Model {
 	  Ports			  [1, 1]
 	  Position		  [220, 174, 320, 216]
 	  ZOrder		  -9
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Thermal/Oil/Air Cooled Oil Cooler"
 	  SourceType		  "Air Cooled Oil Cooler"
 	  ContentPreviewEnabled	  off
@@ -1602,7 +1582,7 @@ Model {
 	  Ports			  [1, 1]
 	  Position		  [250, 384, 350, 426]
 	  ZOrder		  -10
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Thermal/Oil/Air Cooled Oil Cooler"
 	  SourceType		  "Air Cooled Oil Cooler"
 	  ContentPreviewEnabled	  off
@@ -1665,7 +1645,7 @@ Model {
 	  Ports			  [4, 2]
 	  Position		  [850, 661, 1040, 819]
 	  ZOrder		  -17
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Cabin Zone"
 	  SourceType		  "Passenger Cabin"
 	  ContentPreviewEnabled	  off
@@ -1691,7 +1671,7 @@ Model {
 	  Ports			  [3, 2]
 	  Position		  [1120, 757, 1290, 893]
 	  ZOrder		  82
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Cargo bay"
 	  SourceType		  "Cargo Bay"
 	  ContentPreviewEnabled	  off
@@ -2010,7 +1990,7 @@ Model {
 	  Position		  [900, 267, 990, 298]
 	  ZOrder		  -22
 	  ShowName		  off
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	  SourceType		  "Electrical Sink"
 	  ContentPreviewEnabled	  off
@@ -2029,7 +2009,7 @@ Model {
 	  Position		  [900, 302, 990, 333]
 	  ZOrder		  -23
 	  ShowName		  off
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	  SourceType		  "Electrical Sink"
 	  ContentPreviewEnabled	  off
@@ -2048,7 +2028,7 @@ Model {
 	  Position		  [900, 337, 990, 368]
 	  ZOrder		  -24
 	  ShowName		  off
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	  SourceType		  "Electrical Sink"
 	  ContentPreviewEnabled	  off
@@ -2067,7 +2047,7 @@ Model {
 	  Position		  [1095, 1097, 1185, 1133]
 	  ZOrder		  68
 	  ShowName		  off
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	  SourceType		  "Electrical Sink"
 	  ContentPreviewEnabled	  off
@@ -2093,7 +2073,7 @@ Model {
 	  MaskHideContents	  off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    22
+	    $ObjectID		    19
 	    $ClassName		    "Simulink.Mask"
 	    Initialization	    "%load TMSFluidProperties\n%eval(['SF = FluidProp.SinglePhase.' get_param(gcb,'fld_type1') ';'"
 	    "]);\n%eval(['F = FluidProp.TwoPhase.' get_param(gcb,'fld_type2') ';']);\n%FluidProp = FluidProp.TwoPhase.R134a; \n"
@@ -2107,7 +2087,7 @@ Model {
 	      Type		      "Simulink.MaskParameter"
 	      Dimension		      12
 	      Object {
-		$ObjectID		23
+		$ObjectID		20
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -2122,7 +2102,7 @@ Model {
 		TabName			"Wall Parameters"
 	      }
 	      Object {
-		$ObjectID		24
+		$ObjectID		21
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -2137,7 +2117,7 @@ Model {
 		TabName			"Wall Parameters"
 	      }
 	      Object {
-		$ObjectID		25
+		$ObjectID		22
 		Type			"edit"
 		Name			"alpha1"
 		Prompt			"Fluid 1 HTC [W/m� K]"
@@ -2145,7 +2125,7 @@ Model {
 		TabName			"Wall Parameters"
 	      }
 	      Object {
-		$ObjectID		26
+		$ObjectID		23
 		Type			"edit"
 		Name			"alpha2"
 		Prompt			"Fluid 2 HTC [W/m� K]"
@@ -2153,7 +2133,7 @@ Model {
 		TabName			"Wall Parameters"
 	      }
 	      Object {
-		$ObjectID		27
+		$ObjectID		24
 		Type			"edit"
 		Name			"N1"
 		Prompt			"Flow 1: Number of Channels"
@@ -2162,7 +2142,7 @@ Model {
 		TabName			"Geometry"
 	      }
 	      Object {
-		$ObjectID		28
+		$ObjectID		25
 		Type			"edit"
 		Name			"N2"
 		Prompt			"Flow 2: Number of Channels"
@@ -2171,7 +2151,7 @@ Model {
 		TabName			"Geometry"
 	      }
 	      Object {
-		$ObjectID		29
+		$ObjectID		26
 		Type			"edit"
 		Name			"A1_c"
 		Prompt			"Flow 1: Cross-sectional area [m^2]"
@@ -2180,7 +2160,7 @@ Model {
 		TabName			"Geometry"
 	      }
 	      Object {
-		$ObjectID		30
+		$ObjectID		27
 		Type			"edit"
 		Name			"A2_c"
 		Prompt			"Flow 2: Cross-sectional area [m^2]"
@@ -2189,7 +2169,7 @@ Model {
 		TabName			"Geometry"
 	      }
 	      Object {
-		$ObjectID		31
+		$ObjectID		28
 		Type			"edit"
 		Name			"A1_s"
 		Prompt			"Flow 1: Total surface area [m^2]"
@@ -2198,7 +2178,7 @@ Model {
 		TabName			"Geometry"
 	      }
 	      Object {
-		$ObjectID		32
+		$ObjectID		29
 		Type			"edit"
 		Name			"A2_s"
 		Prompt			"Flow 2: Total surface area [m^2]"
@@ -2207,7 +2187,7 @@ Model {
 		TabName			"Geometry"
 	      }
 	      Object {
-		$ObjectID		33
+		$ObjectID		30
 		Type			"edit"
 		Name			"P1init"
 		Prompt			"Flow 1 Pressure [kPa]"
@@ -2216,7 +2196,7 @@ Model {
 		TabName			"Operating Condition"
 	      }
 	      Object {
-		$ObjectID		34
+		$ObjectID		31
 		Type			"edit"
 		Name			"P2init"
 		Prompt			"Flow 2 Pressure [kPa]"
@@ -5570,7 +5550,7 @@ Model {
 	  MaskHideContents	  off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    35
+	    $ObjectID		    32
 	    $ClassName		    "Simulink.Mask"
 	    Initialization	    "%load TMSFluidProperties\n%eval(['SF = FluidProp.SinglePhase.' get_param(gcb,'fld_type1') ';'"
 	    "]);\n%eval(['F = FluidProp.TwoPhase.' get_param(gcb,'fld_type2') ';']);\n%FluidProp = FluidProp.TwoPhase.R134a; \n"
@@ -5584,7 +5564,7 @@ Model {
 	      Type		      "Simulink.MaskParameter"
 	      Dimension		      12
 	      Object {
-		$ObjectID		36
+		$ObjectID		33
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -5599,7 +5579,7 @@ Model {
 		TabName			"Wall Parameters"
 	      }
 	      Object {
-		$ObjectID		37
+		$ObjectID		34
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -5614,7 +5594,7 @@ Model {
 		TabName			"Wall Parameters"
 	      }
 	      Object {
-		$ObjectID		38
+		$ObjectID		35
 		Type			"edit"
 		Name			"alpha1"
 		Prompt			"Fluid 1 HTC [W/m� K]"
@@ -5622,7 +5602,7 @@ Model {
 		TabName			"Wall Parameters"
 	      }
 	      Object {
-		$ObjectID		39
+		$ObjectID		36
 		Type			"edit"
 		Name			"alpha2"
 		Prompt			"Fluid 2 HTC [W/m� K]"
@@ -5630,7 +5610,7 @@ Model {
 		TabName			"Wall Parameters"
 	      }
 	      Object {
-		$ObjectID		40
+		$ObjectID		37
 		Type			"edit"
 		Name			"N1"
 		Prompt			"Flow 1: Number of Channels"
@@ -5639,7 +5619,7 @@ Model {
 		TabName			"Geometry"
 	      }
 	      Object {
-		$ObjectID		41
+		$ObjectID		38
 		Type			"edit"
 		Name			"N2"
 		Prompt			"Flow 2: Number of Channels"
@@ -5648,7 +5628,7 @@ Model {
 		TabName			"Geometry"
 	      }
 	      Object {
-		$ObjectID		42
+		$ObjectID		39
 		Type			"edit"
 		Name			"A1_c"
 		Prompt			"Flow 1: Cross-sectional area [m^2]"
@@ -5657,7 +5637,7 @@ Model {
 		TabName			"Geometry"
 	      }
 	      Object {
-		$ObjectID		43
+		$ObjectID		40
 		Type			"edit"
 		Name			"A2_c"
 		Prompt			"Flow 2: Cross-sectional area [m^2]"
@@ -5666,7 +5646,7 @@ Model {
 		TabName			"Geometry"
 	      }
 	      Object {
-		$ObjectID		44
+		$ObjectID		41
 		Type			"edit"
 		Name			"A1_s"
 		Prompt			"Flow 1: Total surface area [m^2]"
@@ -5675,7 +5655,7 @@ Model {
 		TabName			"Geometry"
 	      }
 	      Object {
-		$ObjectID		45
+		$ObjectID		42
 		Type			"edit"
 		Name			"A2_s"
 		Prompt			"Flow 2: Total surface area [m^2]"
@@ -5684,7 +5664,7 @@ Model {
 		TabName			"Geometry"
 	      }
 	      Object {
-		$ObjectID		46
+		$ObjectID		43
 		Type			"edit"
 		Name			"P1init"
 		Prompt			"Flow 1 Pressure [kPa]"
@@ -5693,7 +5673,7 @@ Model {
 		TabName			"Operating Condition"
 	      }
 	      Object {
-		$ObjectID		47
+		$ObjectID		44
 		Type			"edit"
 		Name			"P2init"
 		Prompt			"Flow 2 Pressure [kPa]"
@@ -9037,7 +9017,7 @@ Model {
 	  Ports			  [1, 2]
 	  Position		  [890, 1009, 1040, 1151]
 	  ZOrder		  67
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Fan"
 	  SourceType		  "Fan"
 	  ContentPreviewEnabled	  off
@@ -9052,7 +9032,7 @@ Model {
 	  ZOrder		  -29
 	  DropShadow		  on
 	  ShowName		  off
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Support Functions//Tools/FluidComponent\nProperties"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -9535,7 +9515,7 @@ Model {
 	      Position		      [480, 467, 620, 603]
 	      ZOrder		      -26
 	      BackgroundColor	      "gray"
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel/Fuel Pump"
 	      SourceType	      "Pump"
 	      ContentPreviewEnabled   off
@@ -9557,7 +9537,7 @@ Model {
 	      Position		      [480, 632, 620, 768]
 	      ZOrder		      -27
 	      BackgroundColor	      "gray"
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel/Fuel Pump"
 	      SourceType	      "Pump"
 	      ContentPreviewEnabled   off
@@ -9578,7 +9558,7 @@ Model {
 	      Ports		      [5, 3]
 	      Position		      [130, 634, 290, 766]
 	      ZOrder		      -28
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel/Fuel Tank"
 	      SourceType	      "Fuel Tank"
 	      ContentPreviewEnabled   off
@@ -9609,7 +9589,7 @@ Model {
 	      Position		      [745, 182, 840, 213]
 	      ZOrder		      -29
 	      ShowName		      off
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	      SourceType	      "Electrical Sink"
 	      ContentPreviewEnabled   off
@@ -9628,7 +9608,7 @@ Model {
 	      Position		      [750, 352, 845, 383]
 	      ZOrder		      -30
 	      ShowName		      off
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	      SourceType	      "Electrical Sink"
 	      ContentPreviewEnabled   off
@@ -9647,7 +9627,7 @@ Model {
 	      Position		      [750, 517, 845, 548]
 	      ZOrder		      -31
 	      ShowName		      off
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	      SourceType	      "Electrical Sink"
 	      ContentPreviewEnabled   off
@@ -9666,7 +9646,7 @@ Model {
 	      Position		      [740, 682, 835, 713]
 	      ZOrder		      -32
 	      ShowName		      off
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	      SourceType	      "Electrical Sink"
 	      ContentPreviewEnabled   off
@@ -9685,7 +9665,7 @@ Model {
 	      Position		      [745, 832, 840, 863]
 	      ZOrder		      -33
 	      ShowName		      off
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	      SourceType	      "Electrical Sink"
 	      ContentPreviewEnabled   off
@@ -9704,7 +9684,7 @@ Model {
 	      Position		      [745, 1002, 840, 1033]
 	      ZOrder		      -34
 	      ShowName		      off
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	      SourceType	      "Electrical Sink"
 	      ContentPreviewEnabled   off
@@ -9721,7 +9701,7 @@ Model {
 	      Ports		      [4, 1]
 	      Position		      [1190, 387, 1295, 503]
 	      ZOrder		      -35
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel/Flow Junction"
 	      SourceType	      ""
 	      ContentPreviewEnabled   off
@@ -9745,7 +9725,7 @@ Model {
 	      Ports		      [4, 1]
 	      Position		      [1190, 642, 1295, 758]
 	      ZOrder		      -36
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel/Flow Junction"
 	      SourceType	      ""
 	      ContentPreviewEnabled   off
@@ -9780,7 +9760,7 @@ Model {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		48
+		$ObjectID		45
 		$ClassName		"Simulink.Mask"
 		SelfModifiable		"on"
 		Display			"text(.5,.5,'Flow Source','horizontalAlignment','center','texmode','on')"
@@ -9790,7 +9770,7 @@ Model {
 		  Type			  "Simulink.MaskParameter"
 		  Dimension		  5
 		  Object {
-		    $ObjectID		    49
+		    $ObjectID		    46
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -9803,28 +9783,28 @@ Model {
 		    Value		    "null"
 		  }
 		  Object {
-		    $ObjectID		    50
+		    $ObjectID		    47
 		    Type		    "edit"
 		    Name		    "flowrate"
 		    Prompt		    "Fluid Flow Rate (kg/s)"
 		    Value		    "0"
 		  }
 		  Object {
-		    $ObjectID		    51
+		    $ObjectID		    48
 		    Type		    "edit"
 		    Name		    "flowtemp"
 		    Prompt		    "Fluid Flow Temperature (C)"
 		    Value		    "0"
 		  }
 		  Object {
-		    $ObjectID		    52
+		    $ObjectID		    49
 		    Type		    "edit"
 		    Name		    "flowpres"
 		    Prompt		    "Fluid Flow Pressure (kPa)"
 		    Value		    "00"
 		  }
 		  Object {
-		    $ObjectID		    53
+		    $ObjectID		    50
 		    Type		    "edit"
 		    Name		    "flowenthalpy"
 		    Prompt		    "Fluid Flow Enthalpy (kJ/kg)"
@@ -10300,7 +10280,7 @@ Model {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		54
+		$ObjectID		51
 		$ClassName		"Simulink.Mask"
 		Display			"port_label('input',1,'{\\bf Fuel Need}','TexMode','on')\nport_label('input',2,'{\\bf Fuel In}','TexMode',"
 		"'on')\n\n\nport_label('output',1,'{\\bf Fuel to Eng.}','TexMode','on')\nport_label('output',2,'{\\bf Fuel Return}','"
@@ -10653,7 +10633,7 @@ Model {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		55
+		$ObjectID		52
 		$ClassName		"Simulink.Mask"
 		Display			"port_label('input',1,'{\\bf Fuel Need}','TexMode','on')\nport_label('input',2,'{\\bf Fuel In}','TexMode',"
 		"'on')\n\n\nport_label('output',1,'{\\bf Fuel to Eng.}','TexMode','on')\nport_label('output',2,'{\\bf Fuel Return}','"
@@ -11477,7 +11457,7 @@ Model {
 	      Position		      [480, 782, 620, 918]
 	      ZOrder		      -90
 	      BackgroundColor	      "gray"
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel/Fuel Pump"
 	      SourceType	      "Pump"
 	      ContentPreviewEnabled   off
@@ -11499,7 +11479,7 @@ Model {
 	      Position		      [480, 952, 620, 1088]
 	      ZOrder		      -91
 	      BackgroundColor	      "gray"
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel/Fuel Pump"
 	      SourceType	      "Pump"
 	      ContentPreviewEnabled   off
@@ -11520,7 +11500,7 @@ Model {
 	      Ports		      [5, 3]
 	      Position		      [130, 954, 290, 1086]
 	      ZOrder		      -92
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel/Fuel Tank"
 	      SourceType	      "Fuel Tank"
 	      ContentPreviewEnabled   off
@@ -12065,7 +12045,7 @@ Model {
 	      Position		      [480, 132, 620, 268]
 	      ZOrder		      -96
 	      BackgroundColor	      "gray"
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel/Fuel Pump"
 	      SourceType	      "Pump"
 	      ContentPreviewEnabled   off
@@ -12087,7 +12067,7 @@ Model {
 	      Position		      [480, 302, 620, 438]
 	      ZOrder		      -97
 	      BackgroundColor	      "gray"
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel/Fuel Pump"
 	      SourceType	      "Pump"
 	      ContentPreviewEnabled   off
@@ -12108,7 +12088,7 @@ Model {
 	      Ports		      [5, 3]
 	      Position		      [130, 304, 290, 436]
 	      ZOrder		      -98
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel/Fuel Tank"
 	      SourceType	      "Fuel Tank"
 	      ContentPreviewEnabled   off
@@ -13307,7 +13287,7 @@ Model {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Left PACK"
-	    Location		    [172, 52, 1296, 1110]
+	    Location		    [-8, -8, 1374, 736]
 	    Open		    off
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    200
@@ -13324,7 +13304,7 @@ Model {
 	      BlockType		      Inport
 	      Name		      "ENGINE"
 	      SID		      "24326"
-	      Position		      [80, 198, 110, 212]
+	      Position		      [80, 273, 110, 287]
 	      ZOrder		      -1
 	      IconDisplay	      "Port number"
 	    }
@@ -13332,7 +13312,7 @@ Model {
 	      BlockType		      Inport
 	      Name		      "CONTROL"
 	      SID		      "24327"
-	      Position		      [85, 18, 115, 32]
+	      Position		      [85, 93, 115, 107]
 	      ZOrder		      -2
 	      Port		      "2"
 	      IconDisplay	      "Port number"
@@ -13341,7 +13321,7 @@ Model {
 	      BlockType		      Inport
 	      Name		      "MISSION"
 	      SID		      "24328"
-	      Position		      [80, 288, 110, 302]
+	      Position		      [80, 363, 110, 377]
 	      ZOrder		      -3
 	      Port		      "3"
 	      IconDisplay	      "Port number"
@@ -13350,7 +13330,7 @@ Model {
 	      BlockType		      Inport
 	      Name		      "Cabin Conditions"
 	      SID		      "25015"
-	      Position		      [840, 103, 870, 117]
+	      Position		      [840, 178, 870, 192]
 	      ZOrder		      -4
 	      Port		      "4"
 	      IconDisplay	      "Port number"
@@ -13360,7 +13340,7 @@ Model {
 	      Name		      "Bus\nSelector"
 	      SID		      "24333"
 	      Ports		      [1, 2]
-	      Position		      [140, 257, 145, 328]
+	      Position		      [140, 332, 145, 403]
 	      ZOrder		      -5
 	      ShowName		      off
 	      OutputSignals	      "Flight parameters.Mach,Flight parameters.temp_K"
@@ -13382,7 +13362,7 @@ Model {
 	      Name		      "Bus\nSelector1"
 	      SID		      "24334"
 	      Ports		      [1, 1]
-	      Position		      [920, 31, 925, 69]
+	      Position		      [920, 106, 925, 144]
 	      ZOrder		      -6
 	      ShowName		      off
 	      OutputSignals	      "temp_K"
@@ -13398,7 +13378,7 @@ Model {
 	      Name		      "Bus\nSelector2"
 	      SID		      "24335"
 	      Ports		      [1, 1]
-	      Position		      [920, 161, 925, 199]
+	      Position		      [920, 236, 925, 274]
 	      ZOrder		      -7
 	      ShowName		      off
 	      OutputSignals	      "temp_K"
@@ -13414,7 +13394,7 @@ Model {
 	      Name		      "Bus\nSelector3"
 	      SID		      "25056"
 	      Ports		      [1, 1]
-	      Position		      [920, 91, 925, 129]
+	      Position		      [920, 166, 925, 204]
 	      ZOrder		      -8
 	      ShowName		      off
 	      OutputSignals	      "temp_K"
@@ -13430,7 +13410,7 @@ Model {
 	      Name		      "Bus\nSelector4"
 	      SID		      "24337"
 	      Ports		      [1, 2]
-	      Position		      [145, 174, 150, 236]
+	      Position		      [145, 249, 150, 311]
 	      ZOrder		      -9
 	      ShowName		      off
 	      OutputSignals	      "Bleed.BleedAirTemp_K,Bleed.BleedAirPres_kPa"
@@ -13452,9 +13432,9 @@ Model {
 	      Name		      "Compressor"
 	      SID		      "24339"
 	      Ports		      [2, 2]
-	      Position		      [415, 699, 575, 841]
+	      Position		      [415, 774, 575, 916]
 	      ZOrder		      -10
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Compressor"
 	      SourceType	      ""
 	      ContentPreviewEnabled   off
@@ -13463,7 +13443,7 @@ Model {
 	      BlockType		      Constant
 	      Name		      "Constant"
 	      SID		      "24340"
-	      Position		      [970, 17, 1000, 33]
+	      Position		      [970, 92, 1000, 108]
 	      ZOrder		      -11
 	      ShowName		      off
 	      Value		      "273"
@@ -13472,7 +13452,7 @@ Model {
 	      BlockType		      Constant
 	      Name		      "Constant1"
 	      SID		      "24341"
-	      Position		      [970, 77, 1000, 93]
+	      Position		      [970, 152, 1000, 168]
 	      ZOrder		      -12
 	      ShowName		      off
 	      Value		      "295"
@@ -13481,7 +13461,7 @@ Model {
 	      BlockType		      Constant
 	      Name		      "Constant2"
 	      SID		      "26377"
-	      Position		      [100, 592, 130, 608]
+	      Position		      [100, 667, 130, 683]
 	      ZOrder		      -13
 	      ShowName		      off
 	      Value		      ".3"
@@ -13490,7 +13470,7 @@ Model {
 	      BlockType		      Constant
 	      Name		      "Constant3"
 	      SID		      "24342"
-	      Position		      [970, 147, 1000, 163]
+	      Position		      [970, 222, 1000, 238]
 	      ZOrder		      -14
 	      ShowName		      off
 	      Value		      "250"
@@ -13500,7 +13480,7 @@ Model {
 	      Name		      "Distribution of bleed air"
 	      SID		      "24350"
 	      Ports		      [4, 2]
-	      Position		      [395, 110, 560, 240]
+	      Position		      [395, 185, 560, 315]
 	      ZOrder		      -15
 	      MinAlgLoopOccurrences   off
 	      PropExecContextOutsideSubsystem off
@@ -13511,7 +13491,7 @@ Model {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		56
+		$ObjectID		53
 		$ClassName		"Simulink.Mask"
 		Display			"port_label('input',1,'{ \\bfBleed air to valve [kg/s]}','texmode','on')\nport_label('input',2,'{ \\bfBlee"
 		"d air to ACM [kg/s]}','texmode','on')\nport_label('input',3,'{ \\bfBleed temp. (K)}','texmode','on');\nport_label('i"
@@ -13520,7 +13500,7 @@ Model {
 	      }
 	      System {
 		Name			"Distribution of bleed air"
-		Location		[264, 91, 1324, 908]
+		Location		[-8, -8, 1374, 736]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -13760,7 +13740,7 @@ Model {
 	      BlockType		      From
 	      Name		      "Fro"
 	      SID		      "24361"
-	      Position		      [325, 773, 400, 787]
+	      Position		      [325, 848, 400, 862]
 	      ZOrder		      -16
 	      ShowName		      off
 	      GotoTag		      "Shaft_speed"
@@ -13770,7 +13750,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From"
 	      SID		      "24364"
-	      Position		      [455, 392, 550, 408]
+	      Position		      [455, 467, 550, 483]
 	      ZOrder		      -17
 	      BackgroundColor	      "red"
 	      ShowName		      off
@@ -13780,7 +13760,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From1"
 	      SID		      "24365"
-	      Position		      [225, 437, 305, 453]
+	      Position		      [225, 512, 305, 528]
 	      ZOrder		      -18
 	      BackgroundColor	      "green"
 	      ShowName		      off
@@ -13790,7 +13770,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From10"
 	      SID		      "24366"
-	      Position		      [595, 757, 660, 773]
+	      Position		      [595, 832, 660, 848]
 	      ZOrder		      -19
 	      ShowName		      off
 	      GotoTag		      "ram_air"
@@ -13799,7 +13779,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From12"
 	      SID		      "24368"
-	      Position		      [65, 632, 155, 648]
+	      Position		      [65, 707, 155, 723]
 	      ZOrder		      -20
 	      BackgroundColor	      "cyan"
 	      ShowName		      off
@@ -13809,7 +13789,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From13"
 	      SID		      "24369"
-	      Position		      [405, 572, 490, 588]
+	      Position		      [405, 647, 490, 663]
 	      ZOrder		      -21
 	      BackgroundColor	      "magenta"
 	      ShowName		      off
@@ -13819,7 +13799,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From14"
 	      SID		      "24370"
-	      Position		      [145, 122, 245, 138]
+	      Position		      [145, 197, 245, 213]
 	      ZOrder		      -22
 	      ShowName		      off
 	      GotoTag		      "bleed_valve"
@@ -13828,7 +13808,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From15"
 	      SID		      "24371"
-	      Position		      [815, 172, 900, 188]
+	      Position		      [815, 247, 900, 263]
 	      ZOrder		      -23
 	      BackgroundColor	      "magenta"
 	      ShowName		      off
@@ -13838,7 +13818,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From2"
 	      SID		      "24372"
-	      Position		      [815, 42, 900, 58]
+	      Position		      [815, 117, 900, 133]
 	      ZOrder		      -24
 	      BackgroundColor	      "magenta"
 	      ShowName		      off
@@ -13848,7 +13828,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From4"
 	      SID		      "24374"
-	      Position		      [45, 507, 135, 523]
+	      Position		      [45, 582, 135, 598]
 	      ZOrder		      -25
 	      BackgroundColor	      "cyan"
 	      ShowName		      off
@@ -13858,7 +13838,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From5"
 	      SID		      "24375"
-	      Position		      [145, 152, 245, 168]
+	      Position		      [145, 227, 245, 243]
 	      ZOrder		      -26
 	      ShowName		      off
 	      GotoTag		      "bleed_acm"
@@ -13867,7 +13847,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From8"
 	      SID		      "24378"
-	      Position		      [890, 541, 980, 559]
+	      Position		      [890, 616, 980, 634]
 	      ZOrder		      -27
 	      ShowName		      off
 	      GotoTag		      "Cabin_pressure"
@@ -13882,7 +13862,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From9"
 	      SID		      "24379"
-	      Position		      [45, 478, 135, 492]
+	      Position		      [45, 553, 135, 567]
 	      ZOrder		      -28
 	      ShowName		      off
 	      GotoTag		      "temp_amb_K"
@@ -13891,7 +13871,7 @@ Model {
 	      BlockType		      Gain
 	      Name		      "Gain1"
 	      SID		      "24381"
-	      Position		      [275, 119, 310, 141]
+	      Position		      [275, 194, 310, 216]
 	      ZOrder		      -29
 	      ShowName		      off
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
@@ -13908,7 +13888,7 @@ Model {
 	      BlockType		      Gain
 	      Name		      "Gain2"
 	      SID		      "24382"
-	      Position		      [275, 179, 310, 201]
+	      Position		      [275, 254, 310, 276]
 	      ZOrder		      -30
 	      ShowName		      off
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
@@ -13925,7 +13905,7 @@ Model {
 	      BlockType		      Gain
 	      Name		      "Gain3"
 	      SID		      "24383"
-	      Position		      [275, 209, 310, 231]
+	      Position		      [275, 284, 310, 306]
 	      ZOrder		      -31
 	      ShowName		      off
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
@@ -13942,7 +13922,7 @@ Model {
 	      BlockType		      Gain
 	      Name		      "Gain4"
 	      SID		      "24384"
-	      Position		      [275, 149, 310, 171]
+	      Position		      [275, 224, 310, 246]
 	      ZOrder		      -32
 	      ShowName		      off
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
@@ -13956,10 +13936,22 @@ Model {
 	      }
 	    }
 	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain5"
+	      SID		      "27443"
+	      Position		      [455, 16, 515, 44]
+	      ZOrder		      1
+	      ShowName		      off
+	      Gain		      "1005"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
 	      BlockType		      Goto
 	      Name		      "Got1"
 	      SID		      "24385"
-	      Position		      [1115, 707, 1195, 723]
+	      Position		      [1115, 782, 1195, 798]
 	      ZOrder		      -33
 	      BackgroundColor	      "magenta"
 	      ShowName		      off
@@ -13969,7 +13961,7 @@ Model {
 	      BlockType		      Goto
 	      Name		      "Got2"
 	      SID		      "24386"
-	      Position		      [685, 647, 765, 663]
+	      Position		      [685, 722, 765, 738]
 	      ZOrder		      -34
 	      BackgroundColor	      "magenta"
 	      ShowName		      off
@@ -13979,7 +13971,7 @@ Model {
 	      BlockType		      Goto
 	      Name		      "Goto"
 	      SID		      "24387"
-	      Position		      [1115, 757, 1195, 773]
+	      Position		      [1115, 832, 1195, 848]
 	      ZOrder		      -35
 	      ShowName		      off
 	      GotoTag		      "Shaft_speed"
@@ -13988,7 +13980,7 @@ Model {
 	      BlockType		      Goto
 	      Name		      "Goto10"
 	      SID		      "24389"
-	      Position		      [510, 457, 585, 473]
+	      Position		      [510, 532, 585, 548]
 	      ZOrder		      -36
 	      BackgroundColor	      "cyan"
 	      ShowName		      off
@@ -13998,7 +13990,7 @@ Model {
 	      BlockType		      Goto
 	      Name		      "Goto3"
 	      SID		      "24391"
-	      Position		      [600, 138, 700, 152]
+	      Position		      [600, 213, 700, 227]
 	      ZOrder		      -37
 	      BackgroundColor	      "red"
 	      ShowName		      off
@@ -14008,7 +14000,7 @@ Model {
 	      BlockType		      Goto
 	      Name		      "Goto4"
 	      SID		      "24392"
-	      Position		      [605, 202, 665, 218]
+	      Position		      [605, 277, 665, 293]
 	      ZOrder		      -38
 	      BackgroundColor	      "green"
 	      ShowName		      off
@@ -14018,7 +14010,7 @@ Model {
 	      BlockType		      Goto
 	      Name		      "Goto5"
 	      SID		      "24393"
-	      Position		      [215, 302, 305, 318]
+	      Position		      [215, 377, 305, 393]
 	      ZOrder		      -39
 	      ShowName		      off
 	      GotoTag		      "temp_amb_K"
@@ -14027,7 +14019,7 @@ Model {
 	      BlockType		      Goto
 	      Name		      "Goto6"
 	      SID		      "24394"
-	      Position		      [335, 543, 400, 557]
+	      Position		      [335, 618, 400, 632]
 	      ZOrder		      -40
 	      ShowName		      off
 	      GotoTag		      "ram_air"
@@ -14036,7 +14028,7 @@ Model {
 	      BlockType		      Goto
 	      Name		      "Goto7"
 	      SID		      "24395"
-	      Position		      [220, 266, 305, 284]
+	      Position		      [220, 341, 305, 359]
 	      ZOrder		      -41
 	      ShowName		      off
 	      GotoTag		      "Mach_number"
@@ -14046,9 +14038,9 @@ Model {
 	      Name		      "Mixing Junction"
 	      SID		      "24400"
 	      Ports		      [2, 1]
-	      Position		      [695, 466, 800, 544]
+	      Position		      [695, 541, 800, 619]
 	      ZOrder		      -42
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Mixing Junction"
 	      SourceType	      "Mixing Junction"
 	      ContentPreviewEnabled   off
@@ -14061,9 +14053,9 @@ Model {
 	      Name		      "Mixing Junction2"
 	      SID		      "24402"
 	      Ports		      [2, 1]
-	      Position		      [515, 561, 620, 639]
+	      Position		      [515, 636, 620, 714]
 	      ZOrder		      -43
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Mixing Junction"
 	      SourceType	      "Mixing Junction"
 	      ContentPreviewEnabled   off
@@ -14076,7 +14068,7 @@ Model {
 	      Name		      "PID Controller"
 	      SID		      "24403"
 	      Ports		      [1, 1]
-	      Position		      [1065, 35, 1110, 65]
+	      Position		      [1065, 110, 1110, 140]
 	      ZOrder		      -44
 	      ShowName		      off
 	      LibraryVersion	      "1.285"
@@ -14187,7 +14179,7 @@ Model {
 	      Name		      "PID Controller1"
 	      SID		      "24404"
 	      Ports		      [1, 1]
-	      Position		      [1065, 95, 1110, 125]
+	      Position		      [1065, 170, 1110, 200]
 	      ZOrder		      -45
 	      ShowName		      off
 	      LibraryVersion	      "1.285"
@@ -14304,7 +14296,7 @@ Model {
 	      Name		      "PID Controller2"
 	      SID		      "24405"
 	      Ports		      [1, 1]
-	      Position		      [1065, 165, 1110, 195]
+	      Position		      [1065, 240, 1110, 270]
 	      ZOrder		      -46
 	      ShowName		      off
 	      LibraryVersion	      "1.285"
@@ -14421,9 +14413,9 @@ Model {
 	      Name		      "Primary HX (air-air)"
 	      SID		      "24407"
 	      Ports		      [2, 3]
-	      Position		      [335, 453, 490, 517]
+	      Position		      [335, 528, 490, 592]
 	      ZOrder		      -47
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Air-Air HX"
 	      SourceType	      "Air-Air Heat Exchanger"
 	      ContentPreviewEnabled   off
@@ -14443,11 +14435,24 @@ Model {
 	      T_cm_0		      "50"
 	    }
 	    Block {
+	      BlockType		      Product
+	      Name		      "Product"
+	      SID		      "27445"
+	      Ports		      [2, 1]
+	      Position		      [605, 32, 635, 63]
+	      ZOrder		      3
+	      ShowName		      off
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
 	      BlockType		      SubSystem
 	      Name		      "Ram air inlet"
 	      SID		      "24408"
 	      Ports		      [2, 1]
-	      Position		      [155, 471, 300, 529]
+	      Position		      [155, 546, 300, 604]
 	      ZOrder		      -48
 	      MinAlgLoopOccurrences   off
 	      PropExecContextOutsideSubsystem off
@@ -14458,7 +14463,7 @@ Model {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		57
+		$ObjectID		54
 		$ClassName		"Simulink.Mask"
 		Display			"port_label('input',1,'{ \\bf Ambient Temp.}','texmode','on')\nport_label('input',2,'{ \\bf Comp. Face Tem"
 		"p.}','texmode','on');\n\nport_label('output',1,'{\\bf Flow Out}','texmode','on')\n"
@@ -14466,14 +14471,14 @@ Model {
 		  Type			  "Simulink.MaskParameter"
 		  Dimension		  2
 		  Object {
-		    $ObjectID		    58
+		    $ObjectID		    55
 		    Type		    "edit"
 		    Name		    "ram_air"
 		    Prompt		    "Ram air mass flow rate"
 		    Value		    ".5"
 		  }
 		  Object {
-		    $ObjectID		    59
+		    $ObjectID		    56
 		    Type		    "edit"
 		    Name		    "T_35"
 		    Prompt		    "Temperature control for 35F valve"
@@ -14751,7 +14756,7 @@ Model {
 	      Name		      "Scope"
 	      SID		      "26102"
 	      Ports		      [1]
-	      Position		      [1265, 209, 1295, 241]
+	      Position		      [1265, 284, 1295, 316]
 	      ZOrder		      -49
 	      Floating		      off
 	      Location		      [-565, 165, 233, 688]
@@ -14775,7 +14780,7 @@ Model {
 	      Name		      "Scope1"
 	      SID		      "26103"
 	      Ports		      [1]
-	      Position		      [1250, 129, 1280, 161]
+	      Position		      [1250, 204, 1280, 236]
 	      ZOrder		      -50
 	      Floating		      off
 	      Location		      [-697, -8, -184, 562]
@@ -14797,7 +14802,7 @@ Model {
 	      Name		      "Scope2"
 	      SID		      "26104"
 	      Ports		      [1]
-	      Position		      [975, 259, 1005, 291]
+	      Position		      [975, 334, 1005, 366]
 	      ZOrder		      -51
 	      BlockMirror	      on
 	      NamePlacement	      "alternate"
@@ -14823,7 +14828,7 @@ Model {
 	      Name		      "Scope3"
 	      SID		      "26105"
 	      Ports		      [1]
-	      Position		      [1245, 59, 1275, 91]
+	      Position		      [1245, 134, 1275, 166]
 	      ZOrder		      -52
 	      Floating		      off
 	      Location		      [-475, 129, -151, 368]
@@ -14847,7 +14852,7 @@ Model {
 	      Name		      "Scope4"
 	      SID		      "26106"
 	      Ports		      [1]
-	      Position		      [735, 34, 765, 66]
+	      Position		      [735, 109, 765, 141]
 	      ZOrder		      -53
 	      BlockMirror	      on
 	      NamePlacement	      "alternate"
@@ -14875,9 +14880,9 @@ Model {
 	      Name		      "Secondary  HX (air-air)"
 	      SID		      "24421"
 	      Ports		      [2, 3]
-	      Position		      [685, 718, 840, 782]
+	      Position		      [685, 793, 840, 857]
 	      ZOrder		      -54
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Air-Air HX"
 	      SourceType	      "Air-Air Heat Exchanger"
 	      ContentPreviewEnabled   off
@@ -14901,7 +14906,7 @@ Model {
 	      Name		      "Subsystem1"
 	      SID		      "24422"
 	      Ports		      [2, 2]
-	      Position		      [185, 609, 340, 656]
+	      Position		      [185, 684, 340, 731]
 	      ZOrder		      -55
 	      LibraryVersion	      "1.225"
 	      MinAlgLoopOccurrences   off
@@ -15279,7 +15284,7 @@ Model {
 	      Name		      "Sum"
 	      SID		      "24437"
 	      Ports		      [2, 1]
-	      Position		      [1020, 40, 1040, 60]
+	      Position		      [1020, 115, 1040, 135]
 	      ZOrder		      -56
 	      ShowName		      off
 	      IconShape		      "round"
@@ -15293,7 +15298,7 @@ Model {
 	      Name		      "Sum1"
 	      SID		      "24438"
 	      Ports		      [2, 1]
-	      Position		      [1020, 100, 1040, 120]
+	      Position		      [1020, 175, 1040, 195]
 	      ZOrder		      -57
 	      ShowName		      off
 	      IconShape		      "round"
@@ -15307,7 +15312,7 @@ Model {
 	      Name		      "Sum2"
 	      SID		      "24439"
 	      Ports		      [2, 1]
-	      Position		      [355, 40, 375, 60]
+	      Position		      [355, 115, 375, 135]
 	      ZOrder		      -58
 	      ShowName		      off
 	      IconShape		      "round"
@@ -15321,7 +15326,7 @@ Model {
 	      Name		      "Sum3"
 	      SID		      "24440"
 	      Ports		      [2, 1]
-	      Position		      [1020, 170, 1040, 190]
+	      Position		      [1020, 245, 1040, 265]
 	      ZOrder		      -59
 	      ShowName		      off
 	      IconShape		      "round"
@@ -15331,10 +15336,24 @@ Model {
 	      SaturateOnIntegerOverflow	off
 	    }
 	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum4"
+	      SID		      "27444"
+	      Ports		      [2, 1]
+	      Position		      [550, 50, 570, 70]
+	      ZOrder		      2
+	      ShowName		      off
+	      IconShape		      "round"
+	      Inputs		      "|+-"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
 	      BlockType		      Terminator
 	      Name		      "Terminator"
 	      SID		      "24441"
-	      Position		      [520, 475, 540, 495]
+	      Position		      [520, 550, 540, 570]
 	      ZOrder		      -60
 	      ShowName		      off
 	    }
@@ -15342,7 +15361,7 @@ Model {
 	      BlockType		      Terminator
 	      Name		      "Terminator1"
 	      SID		      "24442"
-	      Position		      [1145, 805, 1165, 825]
+	      Position		      [1145, 880, 1165, 900]
 	      ZOrder		      -61
 	      ShowName		      off
 	    }
@@ -15350,7 +15369,7 @@ Model {
 	      BlockType		      Terminator
 	      Name		      "Terminator2"
 	      SID		      "24443"
-	      Position		      [155, 15, 175, 35]
+	      Position		      [155, 90, 175, 110]
 	      ZOrder		      -62
 	      ShowName		      off
 	    }
@@ -15358,7 +15377,7 @@ Model {
 	      BlockType		      Terminator
 	      Name		      "Terminator3"
 	      SID		      "24444"
-	      Position		      [520, 495, 540, 515]
+	      Position		      [520, 570, 540, 590]
 	      ZOrder		      -63
 	      ShowName		      off
 	    }
@@ -15366,7 +15385,7 @@ Model {
 	      BlockType		      Terminator
 	      Name		      "Terminator5"
 	      SID		      "24446"
-	      Position		      [860, 740, 880, 760]
+	      Position		      [860, 815, 880, 835]
 	      ZOrder		      -64
 	      ShowName		      off
 	    }
@@ -15374,18 +15393,30 @@ Model {
 	      BlockType		      Terminator
 	      Name		      "Terminator7"
 	      SID		      "24447"
-	      Position		      [860, 760, 880, 780]
+	      Position		      [860, 835, 880, 855]
 	      ZOrder		      -65
 	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace"
+	      SID		      "27446"
+	      Ports		      [1]
+	      Position		      [665, 35, 725, 65]
+	      ZOrder		      4
+	      VariableName	      "LeftPackPower_W"
+	      MaxDataPoints	      "inf"
+	      SampleTime	      "10"
+	      SaveFormat	      "Structure With Time"
 	    }
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Turbine"
 	      SID		      "24458"
 	      Ports		      [2, 3]
-	      Position		      [915, 688, 1075, 842]
+	      Position		      [915, 763, 1075, 917]
 	      ZOrder		      -66
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Turbine"
 	      SourceType	      ""
 	      ContentPreviewEnabled   off
@@ -15398,7 +15429,7 @@ Model {
 	      Name		      "User-set_\nsupply_pressure"
 	      SID		      "24460"
 	      Ports		      [2, 1]
-	      Position		      [1040, 484, 1125, 571]
+	      Position		      [1040, 559, 1125, 646]
 	      ZOrder		      -67
 	      ShowName		      off
 	      MinAlgLoopOccurrences   off
@@ -15556,7 +15587,7 @@ Model {
 	      Name		      "Valve1"
 	      SID		      "24467"
 	      Ports		      [1, 1]
-	      Position		      [570, 384, 665, 416]
+	      Position		      [570, 459, 665, 491]
 	      ZOrder		      -68
 	      MinAlgLoopOccurrences   off
 	      PropExecContextOutsideSubsystem off
@@ -15810,7 +15841,7 @@ Model {
 	      BlockType		      Goto
 	      Name		      "r_acm_increment1"
 	      SID		      "24480"
-	      Position		      [1265, 102, 1365, 118]
+	      Position		      [1265, 177, 1365, 193]
 	      ZOrder		      -69
 	      ShowName		      off
 	      GotoTag		      "bleed_valve"
@@ -15819,7 +15850,7 @@ Model {
 	      BlockType		      Goto
 	      Name		      "r_acm_increment4"
 	      SID		      "24481"
-	      Position		      [1320, 42, 1420, 58]
+	      Position		      [1320, 117, 1420, 133]
 	      ZOrder		      -70
 	      ShowName		      off
 	      GotoTag		      "bleed_acm"
@@ -15829,7 +15860,7 @@ Model {
 	      Name		      "valve \nopening"
 	      SID		      "24482"
 	      Ports		      [1, 1]
-	      Position		      [1165, 35, 1195, 65]
+	      Position		      [1165, 110, 1195, 140]
 	      ZOrder		      -71
 	      InitialCondition	      ".4"
 	      LimitOutput	      on
@@ -15847,7 +15878,7 @@ Model {
 	      Name		      "valve \nopening1"
 	      SID		      "24483"
 	      Ports		      [1, 1]
-	      Position		      [1165, 165, 1195, 195]
+	      Position		      [1165, 240, 1195, 270]
 	      ZOrder		      -72
 	      InitialCondition	      ".5"
 	      LimitOutput	      on
@@ -15864,7 +15895,7 @@ Model {
 	      BlockType		      Outport
 	      Name		      "Reqd. Bleed air"
 	      SID		      "24485"
-	      Position		      [410, 43, 440, 57]
+	      Position		      [410, 118, 440, 132]
 	      ZOrder		      -73
 	      IconDisplay	      "Port number"
 	    }
@@ -15872,7 +15903,7 @@ Model {
 	      BlockType		      Outport
 	      Name		      "Flow Out"
 	      SID		      "25014"
-	      Position		      [1175, 523, 1205, 537]
+	      Position		      [1175, 598, 1205, 612]
 	      ZOrder		      -74
 	      Port		      "2"
 	      IconDisplay	      "Port number"
@@ -15917,8 +15948,18 @@ Model {
 	      Labels		      [0, 0]
 	      SrcBlock		      "Bus\nSelector3"
 	      SrcPort		      1
-	      DstBlock		      "Sum1"
-	      DstPort		      2
+	      Points		      [17, 0]
+	      Branch {
+		ZOrder			91
+		Points			[0, -30; -387, 0]
+		DstBlock		"Sum4"
+		DstPort			2
+	      }
+	      Branch {
+		ZOrder			87
+		DstBlock		"Sum1"
+		DstPort			2
+	      }
 	    }
 	    Line {
 	      ZOrder		      7
@@ -16144,8 +16185,18 @@ Model {
 	      Labels		      [0, 0]
 	      SrcBlock		      "Gain2"
 	      SrcPort		      1
-	      DstBlock		      "Distribution of bleed air"
-	      DstPort		      3
+	      Points		      [56, 0]
+	      Branch {
+		ZOrder			90
+		Points			[0, -100; 161, 0; 0, -105]
+		DstBlock		"Sum4"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			82
+		DstBlock		"Distribution of bleed air"
+		DstPort			3
+	      }
 	    }
 	    Line {
 	      Name		      "pres_kPa"
@@ -16342,8 +16393,18 @@ Model {
 	      ZOrder		      66
 	      SrcBlock		      "Sum2"
 	      SrcPort		      1
-	      DstBlock		      "Reqd. Bleed air"
-	      DstPort		      1
+	      Points		      [7, 0]
+	      Branch {
+		ZOrder			80
+		Points			[0, -95]
+		DstBlock		"Gain5"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			78
+		DstBlock		"Reqd. Bleed air"
+		DstPort			1
+	      }
 	    }
 	    Line {
 	      ZOrder		      67
@@ -16426,9 +16487,32 @@ Model {
 	      DstBlock		      "Subsystem1"
 	      DstPort		      1
 	    }
+	    Line {
+	      ZOrder		      94
+	      SrcBlock		      "Gain5"
+	      SrcPort		      1
+	      Points		      [47, 0; 0, 10]
+	      DstBlock		      "Product"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      95
+	      SrcBlock		      "Sum4"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      DstBlock		      "Product"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      97
+	      SrcBlock		      "Product"
+	      SrcPort		      1
+	      DstBlock		      "To Workspace"
+	      DstPort		      1
+	    }
 	    Annotation {
 	      SID		      "27281"
-	      Position		      [998, 582, 998, 582]
+	      Position		      [998, 657, 998, 657]
 	      AutoSize		      on
 	      WordWrap		      off
 	      ZOrder		      -1
@@ -16478,8 +16562,8 @@ Model {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Oil Tanks/Pumps\nLeft Wing"
-	    Location		    [1358, -8, 2654, 1032]
-	    Open		    on
+	    Location		    [-8, 0, 1370, 744]
+	    Open		    off
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -16580,7 +16664,7 @@ Model {
 	      Position		      [750, 237, 845, 268]
 	      ZOrder		      -6
 	      ShowName		      off
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	      SourceType	      "Electrical Sink"
 	      ContentPreviewEnabled   off
@@ -16622,7 +16706,7 @@ Model {
 	      Position		      [445, 172, 585, 308]
 	      ZOrder		      -10
 	      BackgroundColor	      "gray"
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Oil/Oil Pump"
 	      SourceType	      "Pump"
 	      ContentPreviewEnabled   off
@@ -16649,7 +16733,7 @@ Model {
 	      Ports		      [5, 3]
 	      Position		      [150, 174, 310, 306]
 	      ZOrder		      -11
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel/Fuel Tank"
 	      SourceType	      "Fuel Tank"
 	      ContentPreviewEnabled   off
@@ -16941,7 +17025,7 @@ Model {
 	      Position		      [795, 247, 890, 278]
 	      ZOrder		      -6
 	      ShowName		      off
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	      SourceType	      "Electrical Sink"
 	      ContentPreviewEnabled   off
@@ -16966,7 +17050,7 @@ Model {
 	      Ports		      [5, 3]
 	      Position		      [155, 174, 315, 306]
 	      ZOrder		      -8
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel/Fuel Tank"
 	      SourceType	      "Fuel Tank"
 	      ContentPreviewEnabled   off
@@ -17011,7 +17095,7 @@ Model {
 	      Position		      [450, 172, 590, 308]
 	      ZOrder		      -11
 	      BackgroundColor	      "gray"
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Oil/Oil Pump"
 	      SourceType	      "Pump"
 	      ContentPreviewEnabled   off
@@ -17200,7 +17284,7 @@ Model {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Right PACK"
-	    Location		    [194, 52, 1726, 1150]
+	    Location		    [-8, -8, 1374, 736]
 	    Open		    off
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    200
@@ -17212,12 +17296,12 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
+	    ZoomFactor		    "80"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "ENGINE"
 	      SID		      "26242"
-	      Position		      [80, 198, 110, 212]
+	      Position		      [80, 353, 110, 367]
 	      ZOrder		      -1
 	      IconDisplay	      "Port number"
 	    }
@@ -17225,7 +17309,7 @@ Model {
 	      BlockType		      Inport
 	      Name		      "CONTROL"
 	      SID		      "26243"
-	      Position		      [85, 18, 115, 32]
+	      Position		      [85, 173, 115, 187]
 	      ZOrder		      -2
 	      Port		      "2"
 	      IconDisplay	      "Port number"
@@ -17234,7 +17318,7 @@ Model {
 	      BlockType		      Inport
 	      Name		      "MISSION"
 	      SID		      "26244"
-	      Position		      [80, 288, 110, 302]
+	      Position		      [80, 443, 110, 457]
 	      ZOrder		      -3
 	      Port		      "3"
 	      IconDisplay	      "Port number"
@@ -17243,7 +17327,7 @@ Model {
 	      BlockType		      Inport
 	      Name		      "Cabin Conditions"
 	      SID		      "26245"
-	      Position		      [840, 103, 870, 117]
+	      Position		      [840, 258, 870, 272]
 	      ZOrder		      -4
 	      Port		      "4"
 	      IconDisplay	      "Port number"
@@ -17253,7 +17337,7 @@ Model {
 	      Name		      "Bus\nSelector"
 	      SID		      "26246"
 	      Ports		      [1, 2]
-	      Position		      [140, 257, 145, 328]
+	      Position		      [140, 412, 145, 483]
 	      ZOrder		      -5
 	      ShowName		      off
 	      OutputSignals	      "Flight parameters.Mach,Flight parameters.temp_K"
@@ -17275,7 +17359,7 @@ Model {
 	      Name		      "Bus\nSelector1"
 	      SID		      "26247"
 	      Ports		      [1, 1]
-	      Position		      [920, 31, 925, 69]
+	      Position		      [920, 186, 925, 224]
 	      ZOrder		      -6
 	      ShowName		      off
 	      OutputSignals	      "temp_K"
@@ -17291,7 +17375,7 @@ Model {
 	      Name		      "Bus\nSelector2"
 	      SID		      "26248"
 	      Ports		      [1, 1]
-	      Position		      [920, 161, 925, 199]
+	      Position		      [920, 316, 925, 354]
 	      ZOrder		      -7
 	      ShowName		      off
 	      OutputSignals	      "temp_K"
@@ -17307,7 +17391,7 @@ Model {
 	      Name		      "Bus\nSelector3"
 	      SID		      "26249"
 	      Ports		      [1, 1]
-	      Position		      [920, 91, 925, 129]
+	      Position		      [920, 246, 925, 284]
 	      ZOrder		      -8
 	      ShowName		      off
 	      OutputSignals	      "temp_K"
@@ -17323,7 +17407,7 @@ Model {
 	      Name		      "Bus\nSelector4"
 	      SID		      "26250"
 	      Ports		      [1, 2]
-	      Position		      [145, 174, 150, 236]
+	      Position		      [145, 329, 150, 391]
 	      ZOrder		      -9
 	      ShowName		      off
 	      OutputSignals	      "Bleed.BleedAirTemp_K,Bleed.BleedAirPres_kPa"
@@ -17345,9 +17429,9 @@ Model {
 	      Name		      "Compressor"
 	      SID		      "26251"
 	      Ports		      [2, 2]
-	      Position		      [425, 712, 570, 803]
+	      Position		      [425, 867, 570, 958]
 	      ZOrder		      -10
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Compressor"
 	      SourceType	      ""
 	      ContentPreviewEnabled   off
@@ -17356,7 +17440,7 @@ Model {
 	      BlockType		      Constant
 	      Name		      "Constant"
 	      SID		      "26252"
-	      Position		      [970, 17, 1000, 33]
+	      Position		      [970, 172, 1000, 188]
 	      ZOrder		      -11
 	      ShowName		      off
 	      Value		      "273"
@@ -17365,7 +17449,7 @@ Model {
 	      BlockType		      Constant
 	      Name		      "Constant1"
 	      SID		      "26253"
-	      Position		      [970, 77, 1000, 93]
+	      Position		      [970, 232, 1000, 248]
 	      ZOrder		      -12
 	      ShowName		      off
 	      Value		      "295"
@@ -17374,7 +17458,7 @@ Model {
 	      BlockType		      Constant
 	      Name		      "Constant2"
 	      SID		      "26378"
-	      Position		      [140, 592, 170, 608]
+	      Position		      [140, 747, 170, 763]
 	      ZOrder		      -13
 	      ShowName		      off
 	      Value		      ".3"
@@ -17383,7 +17467,7 @@ Model {
 	      BlockType		      Constant
 	      Name		      "Constant3"
 	      SID		      "26254"
-	      Position		      [970, 147, 1000, 163]
+	      Position		      [970, 302, 1000, 318]
 	      ZOrder		      -14
 	      ShowName		      off
 	      Value		      "250"
@@ -17393,7 +17477,7 @@ Model {
 	      Name		      "Distribution of bleed air"
 	      SID		      "26255"
 	      Ports		      [4, 2]
-	      Position		      [395, 110, 560, 240]
+	      Position		      [395, 265, 560, 395]
 	      ZOrder		      -15
 	      MinAlgLoopOccurrences   off
 	      PropExecContextOutsideSubsystem off
@@ -17404,7 +17488,7 @@ Model {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		60
+		$ObjectID		57
 		$ClassName		"Simulink.Mask"
 		Display			"port_label('input',1,'{ \\bfBleed air to valve [kg/s]}','texmode','on')\nport_label('input',2,'{ \\bfBlee"
 		"d air to ACM [kg/s]}','texmode','on')\nport_label('input',3,'{ \\bfBleed temp. (K)}','texmode','on');\nport_label('i"
@@ -17653,7 +17737,7 @@ Model {
 	      BlockType		      From
 	      Name		      "Fro"
 	      SID		      "26265"
-	      Position		      [325, 773, 400, 787]
+	      Position		      [325, 928, 400, 942]
 	      ZOrder		      -16
 	      ShowName		      off
 	      GotoTag		      "Shaft_speed"
@@ -17663,7 +17747,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From"
 	      SID		      "26266"
-	      Position		      [455, 392, 550, 408]
+	      Position		      [455, 547, 550, 563]
 	      ZOrder		      -17
 	      BackgroundColor	      "red"
 	      ShowName		      off
@@ -17673,7 +17757,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From1"
 	      SID		      "26267"
-	      Position		      [225, 437, 305, 453]
+	      Position		      [225, 592, 305, 608]
 	      ZOrder		      -18
 	      BackgroundColor	      "green"
 	      ShowName		      off
@@ -17683,7 +17767,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From10"
 	      SID		      "26268"
-	      Position		      [595, 757, 660, 773]
+	      Position		      [595, 912, 660, 928]
 	      ZOrder		      -19
 	      ShowName		      off
 	      GotoTag		      "ram_air"
@@ -17692,7 +17776,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From11"
 	      SID		      "26269"
-	      Position		      [40, 612, 140, 628]
+	      Position		      [40, 767, 140, 783]
 	      ZOrder		      -20
 	      ShowName		      off
 	      GotoTag		      "r_acm"
@@ -17701,7 +17785,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From12"
 	      SID		      "26270"
-	      Position		      [65, 632, 155, 648]
+	      Position		      [65, 787, 155, 803]
 	      ZOrder		      -21
 	      BackgroundColor	      "cyan"
 	      ShowName		      off
@@ -17711,7 +17795,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From13"
 	      SID		      "26271"
-	      Position		      [405, 572, 490, 588]
+	      Position		      [405, 727, 490, 743]
 	      ZOrder		      -22
 	      BackgroundColor	      "magenta"
 	      ShowName		      off
@@ -17721,7 +17805,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From14"
 	      SID		      "26272"
-	      Position		      [145, 122, 245, 138]
+	      Position		      [145, 277, 245, 293]
 	      ZOrder		      -23
 	      ShowName		      off
 	      GotoTag		      "bleed_valve"
@@ -17730,7 +17814,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From15"
 	      SID		      "26273"
-	      Position		      [815, 172, 900, 188]
+	      Position		      [815, 327, 900, 343]
 	      ZOrder		      -24
 	      BackgroundColor	      "magenta"
 	      ShowName		      off
@@ -17740,7 +17824,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From2"
 	      SID		      "26274"
-	      Position		      [815, 42, 900, 58]
+	      Position		      [815, 197, 900, 213]
 	      ZOrder		      -25
 	      BackgroundColor	      "magenta"
 	      ShowName		      off
@@ -17750,7 +17834,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From4"
 	      SID		      "26275"
-	      Position		      [45, 507, 135, 523]
+	      Position		      [45, 662, 135, 678]
 	      ZOrder		      -26
 	      BackgroundColor	      "cyan"
 	      ShowName		      off
@@ -17760,7 +17844,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From5"
 	      SID		      "26276"
-	      Position		      [145, 152, 245, 168]
+	      Position		      [145, 307, 245, 323]
 	      ZOrder		      -27
 	      ShowName		      off
 	      GotoTag		      "bleed_acm"
@@ -17769,7 +17853,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From8"
 	      SID		      "26277"
-	      Position		      [890, 541, 980, 559]
+	      Position		      [890, 696, 980, 714]
 	      ZOrder		      -28
 	      ShowName		      off
 	      GotoTag		      "Cabin_pressure"
@@ -17784,7 +17868,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From9"
 	      SID		      "26278"
-	      Position		      [45, 478, 135, 492]
+	      Position		      [45, 633, 135, 647]
 	      ZOrder		      -29
 	      ShowName		      off
 	      GotoTag		      "temp_amb_K"
@@ -17793,7 +17877,7 @@ Model {
 	      BlockType		      Gain
 	      Name		      "Gain1"
 	      SID		      "26279"
-	      Position		      [275, 119, 310, 141]
+	      Position		      [275, 274, 310, 296]
 	      ZOrder		      -30
 	      ShowName		      off
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
@@ -17810,7 +17894,7 @@ Model {
 	      BlockType		      Gain
 	      Name		      "Gain2"
 	      SID		      "26280"
-	      Position		      [275, 179, 310, 201]
+	      Position		      [275, 334, 310, 356]
 	      ZOrder		      -31
 	      ShowName		      off
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
@@ -17827,7 +17911,7 @@ Model {
 	      BlockType		      Gain
 	      Name		      "Gain3"
 	      SID		      "26281"
-	      Position		      [275, 209, 310, 231]
+	      Position		      [275, 364, 310, 386]
 	      ZOrder		      -32
 	      ShowName		      off
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
@@ -17844,7 +17928,7 @@ Model {
 	      BlockType		      Gain
 	      Name		      "Gain4"
 	      SID		      "26282"
-	      Position		      [275, 149, 310, 171]
+	      Position		      [275, 304, 310, 326]
 	      ZOrder		      -33
 	      ShowName		      off
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
@@ -17858,10 +17942,22 @@ Model {
 	      }
 	    }
 	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain5"
+	      SID		      "27447"
+	      Position		      [415, 16, 475, 44]
+	      ZOrder		      5
+	      ShowName		      off
+	      Gain		      "1005"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
 	      BlockType		      Goto
 	      Name		      "Got1"
 	      SID		      "26283"
-	      Position		      [1115, 742, 1195, 758]
+	      Position		      [1115, 897, 1195, 913]
 	      ZOrder		      -34
 	      BackgroundColor	      "magenta"
 	      ShowName		      off
@@ -17871,7 +17967,7 @@ Model {
 	      BlockType		      Goto
 	      Name		      "Got2"
 	      SID		      "26284"
-	      Position		      [685, 647, 765, 663]
+	      Position		      [685, 802, 765, 818]
 	      ZOrder		      -35
 	      BackgroundColor	      "magenta"
 	      ShowName		      off
@@ -17881,7 +17977,7 @@ Model {
 	      BlockType		      Goto
 	      Name		      "Goto"
 	      SID		      "26285"
-	      Position		      [1115, 772, 1195, 788]
+	      Position		      [1115, 927, 1195, 943]
 	      ZOrder		      -36
 	      ShowName		      off
 	      GotoTag		      "Shaft_speed"
@@ -17890,7 +17986,7 @@ Model {
 	      BlockType		      Goto
 	      Name		      "Goto10"
 	      SID		      "26286"
-	      Position		      [510, 457, 585, 473]
+	      Position		      [510, 612, 585, 628]
 	      ZOrder		      -37
 	      BackgroundColor	      "cyan"
 	      ShowName		      off
@@ -17900,7 +17996,7 @@ Model {
 	      BlockType		      Goto
 	      Name		      "Goto3"
 	      SID		      "26287"
-	      Position		      [600, 138, 700, 152]
+	      Position		      [600, 293, 700, 307]
 	      ZOrder		      -38
 	      BackgroundColor	      "red"
 	      ShowName		      off
@@ -17910,7 +18006,7 @@ Model {
 	      BlockType		      Goto
 	      Name		      "Goto4"
 	      SID		      "26288"
-	      Position		      [605, 202, 665, 218]
+	      Position		      [605, 357, 665, 373]
 	      ZOrder		      -39
 	      BackgroundColor	      "green"
 	      ShowName		      off
@@ -17920,7 +18016,7 @@ Model {
 	      BlockType		      Goto
 	      Name		      "Goto5"
 	      SID		      "26289"
-	      Position		      [215, 302, 305, 318]
+	      Position		      [215, 457, 305, 473]
 	      ZOrder		      -40
 	      ShowName		      off
 	      GotoTag		      "temp_amb_K"
@@ -17929,7 +18025,7 @@ Model {
 	      BlockType		      Goto
 	      Name		      "Goto6"
 	      SID		      "26290"
-	      Position		      [335, 543, 400, 557]
+	      Position		      [335, 698, 400, 712]
 	      ZOrder		      -41
 	      ShowName		      off
 	      GotoTag		      "ram_air"
@@ -17938,7 +18034,7 @@ Model {
 	      BlockType		      Goto
 	      Name		      "Goto7"
 	      SID		      "26291"
-	      Position		      [220, 266, 305, 284]
+	      Position		      [220, 421, 305, 439]
 	      ZOrder		      -42
 	      ShowName		      off
 	      GotoTag		      "Mach_number"
@@ -17948,9 +18044,9 @@ Model {
 	      Name		      "Mixing Junction"
 	      SID		      "26292"
 	      Ports		      [2, 1]
-	      Position		      [695, 466, 800, 544]
+	      Position		      [695, 621, 800, 699]
 	      ZOrder		      -43
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Mixing Junction"
 	      SourceType	      "Mixing Junction"
 	      ContentPreviewEnabled   off
@@ -17963,9 +18059,9 @@ Model {
 	      Name		      "Mixing Junction2"
 	      SID		      "26293"
 	      Ports		      [2, 1]
-	      Position		      [515, 561, 620, 639]
+	      Position		      [515, 716, 620, 794]
 	      ZOrder		      -44
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Mixing Junction"
 	      SourceType	      "Mixing Junction"
 	      ContentPreviewEnabled   off
@@ -17978,7 +18074,7 @@ Model {
 	      Name		      "PID Controller"
 	      SID		      "26294"
 	      Ports		      [1, 1]
-	      Position		      [1065, 35, 1110, 65]
+	      Position		      [1065, 190, 1110, 220]
 	      ZOrder		      -45
 	      ShowName		      off
 	      LibraryVersion	      "1.285"
@@ -18089,7 +18185,7 @@ Model {
 	      Name		      "PID Controller1"
 	      SID		      "26295"
 	      Ports		      [1, 1]
-	      Position		      [1065, 95, 1110, 125]
+	      Position		      [1065, 250, 1110, 280]
 	      ZOrder		      -46
 	      ShowName		      off
 	      LibraryVersion	      "1.285"
@@ -18206,7 +18302,7 @@ Model {
 	      Name		      "PID Controller2"
 	      SID		      "26296"
 	      Ports		      [1, 1]
-	      Position		      [1065, 165, 1110, 195]
+	      Position		      [1065, 320, 1110, 350]
 	      ZOrder		      -47
 	      ShowName		      off
 	      LibraryVersion	      "1.285"
@@ -18323,9 +18419,9 @@ Model {
 	      Name		      "Primary HX (air-air)"
 	      SID		      "26297"
 	      Ports		      [2, 3]
-	      Position		      [335, 453, 490, 517]
+	      Position		      [335, 608, 490, 672]
 	      ZOrder		      -48
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Air-Air HX"
 	      SourceType	      "Air-Air Heat Exchanger"
 	      ContentPreviewEnabled   off
@@ -18345,11 +18441,24 @@ Model {
 	      T_cm_0		      "50"
 	    }
 	    Block {
+	      BlockType		      Product
+	      Name		      "Product"
+	      SID		      "27448"
+	      Ports		      [2, 1]
+	      Position		      [565, 32, 595, 63]
+	      ZOrder		      7
+	      ShowName		      off
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
 	      BlockType		      SubSystem
 	      Name		      "Ram air inlet"
 	      SID		      "26298"
 	      Ports		      [2, 1]
-	      Position		      [155, 471, 300, 529]
+	      Position		      [155, 626, 300, 684]
 	      ZOrder		      -49
 	      MinAlgLoopOccurrences   off
 	      PropExecContextOutsideSubsystem off
@@ -18360,7 +18469,7 @@ Model {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		61
+		$ObjectID		58
 		$ClassName		"Simulink.Mask"
 		Display			"port_label('input',1,'{ \\bf Ambient Temp.}','texmode','on')\nport_label('input',2,'{ \\bf Comp. Face Tem"
 		"p.}','texmode','on');\n\nport_label('output',1,'{\\bf Flow Out}','texmode','on')\n"
@@ -18368,14 +18477,14 @@ Model {
 		  Type			  "Simulink.MaskParameter"
 		  Dimension		  2
 		  Object {
-		    $ObjectID		    62
+		    $ObjectID		    59
 		    Type		    "edit"
 		    Name		    "ram_air"
 		    Prompt		    "Ram air mass flow rate"
 		    Value		    ".5"
 		  }
 		  Object {
-		    $ObjectID		    63
+		    $ObjectID		    60
 		    Type		    "edit"
 		    Name		    "T_35"
 		    Prompt		    "Temperature control for 35F valve"
@@ -18653,7 +18762,7 @@ Model {
 	      Name		      "Scope"
 	      SID		      "26311"
 	      Ports		      [1]
-	      Position		      [1250, 229, 1280, 261]
+	      Position		      [1250, 384, 1280, 416]
 	      ZOrder		      -50
 	      Floating		      off
 	      Location		      [-1122, -103, -324, 420]
@@ -18675,7 +18784,7 @@ Model {
 	      Name		      "Scope1"
 	      SID		      "26312"
 	      Ports		      [1]
-	      Position		      [1250, 129, 1280, 161]
+	      Position		      [1250, 284, 1280, 316]
 	      ZOrder		      -51
 	      Floating		      off
 	      Location		      [-612, 247, -288, 486]
@@ -18699,7 +18808,7 @@ Model {
 	      Name		      "Scope2"
 	      SID		      "26313"
 	      Ports		      [1]
-	      Position		      [975, 259, 1005, 291]
+	      Position		      [975, 414, 1005, 446]
 	      ZOrder		      -52
 	      BlockMirror	      on
 	      NamePlacement	      "alternate"
@@ -18725,7 +18834,7 @@ Model {
 	      Name		      "Scope3"
 	      SID		      "26314"
 	      Ports		      [1]
-	      Position		      [1245, 59, 1275, 91]
+	      Position		      [1245, 214, 1275, 246]
 	      ZOrder		      -53
 	      Floating		      off
 	      Location		      [188, 390, 512, 629]
@@ -18749,7 +18858,7 @@ Model {
 	      Name		      "Scope4"
 	      SID		      "26315"
 	      Ports		      [1]
-	      Position		      [735, 34, 765, 66]
+	      Position		      [735, 189, 765, 221]
 	      ZOrder		      -54
 	      BlockMirror	      on
 	      NamePlacement	      "alternate"
@@ -18776,9 +18885,9 @@ Model {
 	      Name		      "Secondary  HX (air-air)"
 	      SID		      "26316"
 	      Ports		      [2, 3]
-	      Position		      [685, 718, 840, 782]
+	      Position		      [685, 873, 840, 937]
 	      ZOrder		      -55
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Air-Air HX"
 	      SourceType	      "Air-Air Heat Exchanger"
 	      ContentPreviewEnabled   off
@@ -18802,7 +18911,7 @@ Model {
 	      Name		      "Subsystem1"
 	      SID		      "26317"
 	      Ports		      [2, 2]
-	      Position		      [185, 609, 300, 651]
+	      Position		      [185, 764, 300, 806]
 	      ZOrder		      -56
 	      LibraryVersion	      "1.225"
 	      MinAlgLoopOccurrences   off
@@ -19180,7 +19289,7 @@ Model {
 	      Name		      "Sum"
 	      SID		      "26332"
 	      Ports		      [2, 1]
-	      Position		      [1020, 40, 1040, 60]
+	      Position		      [1020, 195, 1040, 215]
 	      ZOrder		      -57
 	      ShowName		      off
 	      IconShape		      "round"
@@ -19194,7 +19303,7 @@ Model {
 	      Name		      "Sum1"
 	      SID		      "26333"
 	      Ports		      [2, 1]
-	      Position		      [1020, 100, 1040, 120]
+	      Position		      [1020, 255, 1040, 275]
 	      ZOrder		      -58
 	      ShowName		      off
 	      IconShape		      "round"
@@ -19208,7 +19317,7 @@ Model {
 	      Name		      "Sum2"
 	      SID		      "26334"
 	      Ports		      [2, 1]
-	      Position		      [355, 40, 375, 60]
+	      Position		      [355, 195, 375, 215]
 	      ZOrder		      -59
 	      ShowName		      off
 	      IconShape		      "round"
@@ -19222,7 +19331,7 @@ Model {
 	      Name		      "Sum3"
 	      SID		      "26335"
 	      Ports		      [2, 1]
-	      Position		      [1020, 170, 1040, 190]
+	      Position		      [1020, 325, 1040, 345]
 	      ZOrder		      -60
 	      ShowName		      off
 	      IconShape		      "round"
@@ -19232,10 +19341,24 @@ Model {
 	      SaturateOnIntegerOverflow	off
 	    }
 	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum4"
+	      SID		      "27449"
+	      Ports		      [2, 1]
+	      Position		      [510, 50, 530, 70]
+	      ZOrder		      6
+	      ShowName		      off
+	      IconShape		      "round"
+	      Inputs		      "|+-"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
 	      BlockType		      Terminator
 	      Name		      "Terminator"
 	      SID		      "26336"
-	      Position		      [520, 475, 540, 495]
+	      Position		      [520, 630, 540, 650]
 	      ZOrder		      -61
 	      ShowName		      off
 	    }
@@ -19243,7 +19366,7 @@ Model {
 	      BlockType		      Terminator
 	      Name		      "Terminator1"
 	      SID		      "26337"
-	      Position		      [1175, 800, 1195, 820]
+	      Position		      [1175, 955, 1195, 975]
 	      ZOrder		      -62
 	      ShowName		      off
 	    }
@@ -19251,7 +19374,7 @@ Model {
 	      BlockType		      Terminator
 	      Name		      "Terminator2"
 	      SID		      "26338"
-	      Position		      [155, 15, 175, 35]
+	      Position		      [155, 170, 175, 190]
 	      ZOrder		      -63
 	      ShowName		      off
 	    }
@@ -19259,7 +19382,7 @@ Model {
 	      BlockType		      Terminator
 	      Name		      "Terminator3"
 	      SID		      "26339"
-	      Position		      [520, 495, 540, 515]
+	      Position		      [520, 650, 540, 670]
 	      ZOrder		      -64
 	      ShowName		      off
 	    }
@@ -19267,7 +19390,7 @@ Model {
 	      BlockType		      Terminator
 	      Name		      "Terminator5"
 	      SID		      "26340"
-	      Position		      [860, 740, 880, 760]
+	      Position		      [860, 895, 880, 915]
 	      ZOrder		      -65
 	      ShowName		      off
 	    }
@@ -19275,18 +19398,30 @@ Model {
 	      BlockType		      Terminator
 	      Name		      "Terminator7"
 	      SID		      "26341"
-	      Position		      [860, 760, 880, 780]
+	      Position		      [860, 915, 880, 935]
 	      ZOrder		      -66
 	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace"
+	      SID		      "27450"
+	      Ports		      [1]
+	      Position		      [625, 37, 730, 63]
+	      ZOrder		      8
+	      VariableName	      "RightPackPower_W"
+	      MaxDataPoints	      "inf"
+	      SampleTime	      "10"
+	      SaveFormat	      "Structure With Time"
 	    }
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Turbine"
 	      SID		      "26342"
 	      Ports		      [2, 3]
-	      Position		      [915, 736, 1070, 824]
+	      Position		      [915, 891, 1070, 979]
 	      ZOrder		      -67
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Turbine"
 	      SourceType	      ""
 	      ContentPreviewEnabled   off
@@ -19299,7 +19434,7 @@ Model {
 	      Name		      "User-set_\nsupply_pressure"
 	      SID		      "26343"
 	      Ports		      [2, 1]
-	      Position		      [1040, 484, 1125, 571]
+	      Position		      [1040, 639, 1125, 726]
 	      ZOrder		      -68
 	      ShowName		      off
 	      MinAlgLoopOccurrences   off
@@ -19457,7 +19592,7 @@ Model {
 	      Name		      "Valve1"
 	      SID		      "26350"
 	      Ports		      [1, 1]
-	      Position		      [570, 384, 665, 416]
+	      Position		      [570, 539, 665, 571]
 	      ZOrder		      -69
 	      MinAlgLoopOccurrences   off
 	      PropExecContextOutsideSubsystem off
@@ -19711,7 +19846,7 @@ Model {
 	      BlockType		      Goto
 	      Name		      "r_acm_increment"
 	      SID		      "26361"
-	      Position		      [1340, 37, 1440, 53]
+	      Position		      [1340, 192, 1440, 208]
 	      ZOrder		      -70
 	      ShowName		      off
 	      GotoTag		      "r_acm"
@@ -19720,7 +19855,7 @@ Model {
 	      BlockType		      Goto
 	      Name		      "r_acm_increment1"
 	      SID		      "26362"
-	      Position		      [1265, 102, 1365, 118]
+	      Position		      [1265, 257, 1365, 273]
 	      ZOrder		      -71
 	      ShowName		      off
 	      GotoTag		      "bleed_valve"
@@ -19729,7 +19864,7 @@ Model {
 	      BlockType		      Goto
 	      Name		      "r_acm_increment4"
 	      SID		      "26363"
-	      Position		      [1315, 172, 1415, 188]
+	      Position		      [1315, 327, 1415, 343]
 	      ZOrder		      -72
 	      ShowName		      off
 	      GotoTag		      "bleed_acm"
@@ -19739,7 +19874,7 @@ Model {
 	      Name		      "valve \nopening"
 	      SID		      "26364"
 	      Ports		      [1, 1]
-	      Position		      [1165, 35, 1195, 65]
+	      Position		      [1165, 190, 1195, 220]
 	      ZOrder		      -73
 	      InitialCondition	      ".5"
 	      LimitOutput	      on
@@ -19757,7 +19892,7 @@ Model {
 	      Name		      "valve \nopening1"
 	      SID		      "26365"
 	      Ports		      [1, 1]
-	      Position		      [1165, 165, 1195, 195]
+	      Position		      [1165, 320, 1195, 350]
 	      ZOrder		      -74
 	      InitialCondition	      ".5"
 	      LimitOutput	      on
@@ -19774,7 +19909,7 @@ Model {
 	      BlockType		      Outport
 	      Name		      "Flow Out"
 	      SID		      "26367"
-	      Position		      [1175, 523, 1205, 537]
+	      Position		      [1175, 678, 1205, 692]
 	      ZOrder		      -75
 	      IconDisplay	      "Port number"
 	    }
@@ -19782,7 +19917,7 @@ Model {
 	      BlockType		      Outport
 	      Name		      "Reqd. Bleed air"
 	      SID		      "26366"
-	      Position		      [410, 43, 440, 57]
+	      Position		      [410, 198, 440, 212]
 	      ZOrder		      -76
 	      Port		      "2"
 	      IconDisplay	      "Port number"
@@ -19851,13 +19986,6 @@ Model {
 	      SrcBlock		      "From15"
 	      SrcPort		      1
 	      DstBlock		      "Bus\nSelector2"
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      10
-	      SrcBlock		      "Sum2"
-	      SrcPort		      1
-	      DstBlock		      "Reqd. Bleed air"
 	      DstPort		      1
 	    }
 	    Line {
@@ -20051,15 +20179,6 @@ Model {
 	      SrcPort		      1
 	      DstBlock		      "Distribution of bleed air"
 	      DstPort		      4
-	    }
-	    Line {
-	      Name		      "temp_K"
-	      ZOrder		      39
-	      Labels		      [0, 0]
-	      SrcBlock		      "Gain2"
-	      SrcPort		      1
-	      DstBlock		      "Distribution of bleed air"
-	      DstPort		      3
 	    }
 	    Line {
 	      Name		      "mdot_kgps"
@@ -20280,15 +20399,6 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      Name		      "<temp_K>"
-	      ZOrder		      70
-	      Labels		      [0, 0]
-	      SrcBlock		      "Bus\nSelector3"
-	      SrcPort		      1
-	      DstBlock		      "Sum1"
-	      DstPort		      2
-	    }
-	    Line {
 	      ZOrder		      71
 	      Labels		      [0, 0]
 	      SrcBlock		      "Sum1"
@@ -20337,9 +20447,87 @@ Model {
 	      DstBlock		      "Subsystem1"
 	      DstPort		      1
 	    }
+	    Line {
+	      Name		      "<temp_K>"
+	      ZOrder		      70
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector3"
+	      SrcPort		      1
+	      Points		      [12, 0]
+	      Branch {
+		ZOrder			89
+		Points			[0, -30; -422, 0]
+		DstBlock		"Sum4"
+		DstPort			2
+	      }
+	      Branch {
+		ZOrder			88
+		DstBlock		"Sum1"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      Name		      "temp_K"
+	      ZOrder		      39
+	      Labels		      [0, 0]
+	      SrcBlock		      "Gain2"
+	      SrcPort		      1
+	      Points		      [58, 0]
+	      Branch {
+		ZOrder			87
+		Points			[0, -100; 119, 0; 0, -185]
+		DstBlock		"Sum4"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			86
+		DstBlock		"Distribution of bleed air"
+		DstPort			3
+	      }
+	    }
+	    Line {
+	      ZOrder		      10
+	      SrcBlock		      "Sum2"
+	      SrcPort		      1
+	      Points		      [9, 0]
+	      Branch {
+		ZOrder			85
+		Points			[0, -175]
+		DstBlock		"Gain5"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			84
+		DstBlock		"Reqd. Bleed air"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      ZOrder		      81
+	      SrcBlock		      "Gain5"
+	      SrcPort		      1
+	      Points		      [47, 0; 0, 10]
+	      DstBlock		      "Product"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      82
+	      SrcBlock		      "Sum4"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      DstBlock		      "Product"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      83
+	      SrcBlock		      "Product"
+	      SrcPort		      1
+	      DstBlock		      "To Workspace"
+	      DstPort		      1
+	    }
 	    Annotation {
 	      SID		      "27282"
-	      Position		      [998, 582, 998, 582]
+	      Position		      [998, 737, 998, 737]
 	      AutoSize		      on
 	      WordWrap		      off
 	      ZOrder		      -1
@@ -20371,7 +20559,7 @@ Model {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Thermal_sources_from\nElectrical_power_model1"
-	    Location		    [188, 52, 1248, 869]
+	    Location		    [-8, -8, 1374, 736]
 	    Open		    off
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    200
@@ -20435,7 +20623,7 @@ Model {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		64
+		$ObjectID		61
 		$ClassName		"Simulink.Mask"
 		Type			"Thermal Source"
 		Description		"Output of all thermal loads from the selected location.  Loads are in Watts."
@@ -20447,7 +20635,7 @@ Model {
 		IconUnits		"normalized"
 		Object {
 		  $PropName		  "Parameters"
-		  $ObjectID		  65
+		  $ObjectID		  62
 		  $ClassName		  "Simulink.MaskParameter"
 		  Type			  "popup"
 		  Array {
@@ -20529,7 +20717,7 @@ Model {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		66
+		$ObjectID		63
 		$ClassName		"Simulink.Mask"
 		Type			"Thermal Source"
 		Description		"Output of all thermal loads from the selected location.  Loads are in Watts."
@@ -20541,7 +20729,7 @@ Model {
 		IconUnits		"normalized"
 		Object {
 		  $PropName		  "Parameters"
-		  $ObjectID		  67
+		  $ObjectID		  64
 		  $ClassName		  "Simulink.MaskParameter"
 		  Type			  "popup"
 		  Array {
@@ -20623,7 +20811,7 @@ Model {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		68
+		$ObjectID		65
 		$ClassName		"Simulink.Mask"
 		Type			"Thermal Source"
 		Description		"Output of all thermal loads from the selected location.  Loads are in Watts."
@@ -20635,7 +20823,7 @@ Model {
 		IconUnits		"normalized"
 		Object {
 		  $PropName		  "Parameters"
-		  $ObjectID		  69
+		  $ObjectID		  66
 		  $ClassName		  "Simulink.MaskParameter"
 		  Type			  "popup"
 		  Array {
@@ -20717,7 +20905,7 @@ Model {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		70
+		$ObjectID		67
 		$ClassName		"Simulink.Mask"
 		Type			"Thermal Source"
 		Description		"Output of all thermal loads from the selected location.  Loads are in Watts."
@@ -20729,7 +20917,7 @@ Model {
 		IconUnits		"normalized"
 		Object {
 		  $PropName		  "Parameters"
-		  $ObjectID		  71
+		  $ObjectID		  68
 		  $ClassName		  "Simulink.MaskParameter"
 		  Type			  "popup"
 		  Array {
@@ -20844,7 +21032,7 @@ Model {
 	  Ports			  [3, 1]
 	  Position		  [585, 622, 695, 738]
 	  ZOrder		  -43
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Thermal/ECS/n-intlet Mixing Junction"
 	  SourceType		  "Mixing Junction"
 	  ContentPreviewEnabled	  off
@@ -21465,7 +21653,7 @@ Model {
       System {
 	Name			"ELECTRICAL SYS "
 	Location		[-8, -8, 1374, 736]
-	Open			on
+	Open			off
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	212
 	ScreenColor		"white"
@@ -21476,7 +21664,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"30"
+	ZoomFactor		"100"
 	Block {
 	  BlockType		  Inport
 	  Name			  "Left Engine"
@@ -21520,7 +21708,7 @@ Model {
 	  Position		  [2925, 968, 3025, 1082]
 	  ZOrder		  -5
 	  BlockMirror		  on
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Inverters/ inverter"
 	  SourceType		  "Average inverter model"
 	  ContentPreviewEnabled	  off
@@ -21668,7 +21856,7 @@ Model {
 	  Ports			  [4, 3]
 	  Position		  [2120, 325, 2205, 470]
 	  ZOrder		  -15
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Service Bus"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -21680,7 +21868,7 @@ Model {
 	  Ports			  [4, 3]
 	  Position		  [2110, 835, 2195, 980]
 	  ZOrder		  -16
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Service Bus"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -21693,7 +21881,7 @@ Model {
 	  Position		  [3605, 107, 3710, 203]
 	  ZOrder		  -17
 	  BlockMirror		  on
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Battery/BATTERY"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -21709,7 +21897,7 @@ Model {
 	  Position		  [3600, 387, 3705, 483]
 	  ZOrder		  -18
 	  BlockMirror		  on
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Battery/BATTERY"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -21725,7 +21913,7 @@ Model {
 	  Position		  [3610, 642, 3715, 738]
 	  ZOrder		  -19
 	  BlockMirror		  on
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Battery/BATTERY"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -21749,11 +21937,11 @@ Model {
 	  MaskHideContents	  off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    72
+	    $ObjectID		    69
 	    $ClassName		    "Simulink.Mask"
 	    Object {
 	      $PropName		      "Parameters"
-	      $ObjectID		      73
+	      $ObjectID		      70
 	      $ClassName	      "Simulink.MaskParameter"
 	      Type		      "edit"
 	      Name		      "mon_t"
@@ -21914,7 +22102,7 @@ Model {
 	  MaskHideContents	  off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    74
+	    $ObjectID		    71
 	    $ClassName		    "Simulink.Mask"
 	    Description		    "Specify the source from which different buses receive power. There are \n1. Two Generator buses"
 	    " (Bus 1-2)\n2. Two AC Main buses (Main Bus 1-2))\n3. Two AC Transfer buses and (AC Transfer Bus 1-2)\n4. Two DC I"
@@ -21932,7 +22120,7 @@ Model {
 	      Type		      "Simulink.MaskParameter"
 	      Dimension		      8
 	      Object {
-		$ObjectID		75
+		$ObjectID		72
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -21948,7 +22136,7 @@ Model {
 		Value			"Generator 1 "
 	      }
 	      Object {
-		$ObjectID		76
+		$ObjectID		73
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -21964,7 +22152,7 @@ Model {
 		Value			"Generator 2 "
 	      }
 	      Object {
-		$ObjectID		77
+		$ObjectID		74
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -21978,7 +22166,7 @@ Model {
 		Value			"Generator Bus 1"
 	      }
 	      Object {
-		$ObjectID		78
+		$ObjectID		75
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -21992,7 +22180,7 @@ Model {
 		Value			"Generator Bus 1"
 	      }
 	      Object {
-		$ObjectID		79
+		$ObjectID		76
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -22006,7 +22194,7 @@ Model {
 		Value			"Generator Bus 2"
 	      }
 	      Object {
-		$ObjectID		80
+		$ObjectID		77
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -22020,7 +22208,7 @@ Model {
 		Value			"Generator Bus 2"
 	      }
 	      Object {
-		$ObjectID		81
+		$ObjectID		78
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -22034,7 +22222,7 @@ Model {
 		Value			"Battery 1"
 	      }
 	      Object {
-		$ObjectID		82
+		$ObjectID		79
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -22336,7 +22524,7 @@ Model {
 	  MaskHideContents	  off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    83
+	    $ObjectID		    80
 	    $ClassName		    "Simulink.Mask"
 	    Type		    "DC Service Bus"
 	    Description		    "Service Bus"
@@ -22622,7 +22810,7 @@ Model {
 	  MaskHideContents	  off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    84
+	    $ObjectID		    81
 	    $ClassName		    "Simulink.Mask"
 	    Type		    "DC Service Bus"
 	    Description		    "Service Bus"
@@ -22901,7 +23089,7 @@ Model {
 	  BlockRotation		  270
 	  BlockMirror		  on
 	  NamePlacement		  "alternate"
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Loads/Enabled \nDC Load1"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -22916,7 +23104,7 @@ Model {
 	  BlockRotation		  270
 	  BlockMirror		  on
 	  NamePlacement		  "alternate"
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Loads/Enabled \nDC Load1"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -22931,7 +23119,7 @@ Model {
 	  BlockRotation		  270
 	  BlockMirror		  on
 	  NamePlacement		  "alternate"
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Loads/Enabled_AC_Loadloss"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -22952,7 +23140,7 @@ Model {
 	  BlockRotation		  270
 	  BlockMirror		  on
 	  NamePlacement		  "alternate"
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Loads/Enabled_AC_Loadloss"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -22973,7 +23161,7 @@ Model {
 	  BlockRotation		  270
 	  BlockMirror		  on
 	  NamePlacement		  "alternate"
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Loads/Enabled_AC_Loadloss"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -22994,7 +23182,7 @@ Model {
 	  BlockRotation		  270
 	  BlockMirror		  on
 	  NamePlacement		  "alternate"
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Loads/Enabled_AC_Loadloss"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -24124,7 +24312,7 @@ Model {
 	  Ports			  [1, 1]
 	  Position		  [1170, 572, 1240, 658]
 	  ZOrder		  -102
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  FontSize		  8
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/GND Service Bus"
 	  SourceType		  ""
@@ -24137,7 +24325,7 @@ Model {
 	  Ports			  [3, 4]
 	  Position		  [1135, 111, 1280, 189]
 	  ZOrder		  -103
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  FontSize		  8
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Generation Unit\nSync-Sync"
 	  SourceType		  ""
@@ -24154,7 +24342,7 @@ Model {
 	  Ports			  [3, 4]
 	  Position		  [1135, 376, 1280, 454]
 	  ZOrder		  -104
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  FontSize		  8
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Generation Unit\nSync-Sync"
 	  SourceType		  ""
@@ -24171,7 +24359,7 @@ Model {
 	  Ports			  [3, 4]
 	  Position		  [1135, 761, 1280, 839]
 	  ZOrder		  -105
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  FontSize		  8
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Generation Unit\nSync-Sync"
 	  SourceType		  ""
@@ -24199,7 +24387,7 @@ Model {
 	  MaskHideContents	  off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    85
+	    $ObjectID		    82
 	    $ClassName		    "Simulink.Mask"
 	    Description		    "Generator Bus Structure."
 	  }
@@ -24279,7 +24467,7 @@ Model {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		86
+		$ObjectID		83
 		$ClassName		"Simulink.Mask"
 		Type			"Compare To Constant"
 		Description		"Determine how a signal compares to a constant."
@@ -24297,7 +24485,7 @@ Model {
 		  Type			  "Simulink.MaskParameter"
 		  Dimension		  4
 		  Object {
-		    $ObjectID		    87
+		    $ObjectID		    84
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -24317,14 +24505,14 @@ Model {
 		    Tunable		    "off"
 		  }
 		  Object {
-		    $ObjectID		    88
+		    $ObjectID		    85
 		    Type		    "edit"
 		    Name		    "const"
 		    Prompt		    "Constant value:"
 		    Value		    "1"
 		  }
 		  Object {
-		    $ObjectID		    89
+		    $ObjectID		    86
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -24340,7 +24528,7 @@ Model {
 		    Tunable		    "off"
 		  }
 		  Object {
-		    $ObjectID		    90
+		    $ObjectID		    87
 		    Type		    "checkbox"
 		    Name		    "ZeroCross"
 		    Prompt		    "Enable zero-crossing detection"
@@ -24444,7 +24632,7 @@ Model {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		91
+		$ObjectID		88
 		$ClassName		"Simulink.Mask"
 		Type			"Compare To Constant"
 		Description		"Determine how a signal compares to a constant."
@@ -24462,7 +24650,7 @@ Model {
 		  Type			  "Simulink.MaskParameter"
 		  Dimension		  4
 		  Object {
-		    $ObjectID		    92
+		    $ObjectID		    89
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -24482,14 +24670,14 @@ Model {
 		    Tunable		    "off"
 		  }
 		  Object {
-		    $ObjectID		    93
+		    $ObjectID		    90
 		    Type		    "edit"
 		    Name		    "const"
 		    Prompt		    "Constant value:"
 		    Value		    "2"
 		  }
 		  Object {
-		    $ObjectID		    94
+		    $ObjectID		    91
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -24505,7 +24693,7 @@ Model {
 		    Tunable		    "off"
 		  }
 		  Object {
-		    $ObjectID		    95
+		    $ObjectID		    92
 		    Type		    "checkbox"
 		    Name		    "ZeroCross"
 		    Prompt		    "Enable zero-crossing detection"
@@ -24609,7 +24797,7 @@ Model {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		96
+		$ObjectID		93
 		$ClassName		"Simulink.Mask"
 		Type			"Compare To Constant"
 		Description		"Determine how a signal compares to a constant."
@@ -24627,7 +24815,7 @@ Model {
 		  Type			  "Simulink.MaskParameter"
 		  Dimension		  4
 		  Object {
-		    $ObjectID		    97
+		    $ObjectID		    94
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -24647,14 +24835,14 @@ Model {
 		    Tunable		    "off"
 		  }
 		  Object {
-		    $ObjectID		    98
+		    $ObjectID		    95
 		    Type		    "edit"
 		    Name		    "const"
 		    Prompt		    "Constant value:"
 		    Value		    "3"
 		  }
 		  Object {
-		    $ObjectID		    99
+		    $ObjectID		    96
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -24670,7 +24858,7 @@ Model {
 		    Tunable		    "off"
 		  }
 		  Object {
-		    $ObjectID		    100
+		    $ObjectID		    97
 		    Type		    "checkbox"
 		    Name		    "ZeroCross"
 		    Prompt		    "Enable zero-crossing detection"
@@ -25023,7 +25211,7 @@ Model {
 	  MaskHideContents	  off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    101
+	    $ObjectID		    98
 	    $ClassName		    "Simulink.Mask"
 	    Description		    "Generator Bus Structure."
 	  }
@@ -25112,7 +25300,7 @@ Model {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		102
+		$ObjectID		99
 		$ClassName		"Simulink.Mask"
 		Type			"Compare To Constant"
 		Description		"Determine how a signal compares to a constant."
@@ -25130,7 +25318,7 @@ Model {
 		  Type			  "Simulink.MaskParameter"
 		  Dimension		  4
 		  Object {
-		    $ObjectID		    103
+		    $ObjectID		    100
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -25150,14 +25338,14 @@ Model {
 		    Tunable		    "off"
 		  }
 		  Object {
-		    $ObjectID		    104
+		    $ObjectID		    101
 		    Type		    "edit"
 		    Name		    "const"
 		    Prompt		    "Constant value:"
 		    Value		    "1"
 		  }
 		  Object {
-		    $ObjectID		    105
+		    $ObjectID		    102
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -25173,7 +25361,7 @@ Model {
 		    Tunable		    "off"
 		  }
 		  Object {
-		    $ObjectID		    106
+		    $ObjectID		    103
 		    Type		    "checkbox"
 		    Name		    "ZeroCross"
 		    Prompt		    "Enable zero-crossing detection"
@@ -25277,7 +25465,7 @@ Model {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		107
+		$ObjectID		104
 		$ClassName		"Simulink.Mask"
 		Type			"Compare To Constant"
 		Description		"Determine how a signal compares to a constant."
@@ -25295,7 +25483,7 @@ Model {
 		  Type			  "Simulink.MaskParameter"
 		  Dimension		  4
 		  Object {
-		    $ObjectID		    108
+		    $ObjectID		    105
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -25315,14 +25503,14 @@ Model {
 		    Tunable		    "off"
 		  }
 		  Object {
-		    $ObjectID		    109
+		    $ObjectID		    106
 		    Type		    "edit"
 		    Name		    "const"
 		    Prompt		    "Constant value:"
 		    Value		    "2"
 		  }
 		  Object {
-		    $ObjectID		    110
+		    $ObjectID		    107
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -25338,7 +25526,7 @@ Model {
 		    Tunable		    "off"
 		  }
 		  Object {
-		    $ObjectID		    111
+		    $ObjectID		    108
 		    Type		    "checkbox"
 		    Name		    "ZeroCross"
 		    Prompt		    "Enable zero-crossing detection"
@@ -25442,7 +25630,7 @@ Model {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		112
+		$ObjectID		109
 		$ClassName		"Simulink.Mask"
 		Type			"Compare To Constant"
 		Description		"Determine how a signal compares to a constant."
@@ -25460,7 +25648,7 @@ Model {
 		  Type			  "Simulink.MaskParameter"
 		  Dimension		  4
 		  Object {
-		    $ObjectID		    113
+		    $ObjectID		    110
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -25480,14 +25668,14 @@ Model {
 		    Tunable		    "off"
 		  }
 		  Object {
-		    $ObjectID		    114
+		    $ObjectID		    111
 		    Type		    "edit"
 		    Name		    "const"
 		    Prompt		    "Constant value:"
 		    Value		    "3"
 		  }
 		  Object {
-		    $ObjectID		    115
+		    $ObjectID		    112
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -25503,7 +25691,7 @@ Model {
 		    Tunable		    "off"
 		  }
 		  Object {
-		    $ObjectID		    116
+		    $ObjectID		    113
 		    Type		    "checkbox"
 		    Name		    "ZeroCross"
 		    Prompt		    "Enable zero-crossing detection"
@@ -25607,7 +25795,7 @@ Model {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		117
+		$ObjectID		114
 		$ClassName		"Simulink.Mask"
 		Type			"Compare To Constant"
 		Description		"Determine how a signal compares to a constant."
@@ -25625,7 +25813,7 @@ Model {
 		  Type			  "Simulink.MaskParameter"
 		  Dimension		  4
 		  Object {
-		    $ObjectID		    118
+		    $ObjectID		    115
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -25645,14 +25833,14 @@ Model {
 		    Tunable		    "off"
 		  }
 		  Object {
-		    $ObjectID		    119
+		    $ObjectID		    116
 		    Type		    "edit"
 		    Name		    "const"
 		    Prompt		    "Constant value:"
 		    Value		    "4"
 		  }
 		  Object {
-		    $ObjectID		    120
+		    $ObjectID		    117
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -25668,7 +25856,7 @@ Model {
 		    Tunable		    "off"
 		  }
 		  Object {
-		    $ObjectID		    121
+		    $ObjectID		    118
 		    Type		    "checkbox"
 		    Name		    "ZeroCross"
 		    Prompt		    "Enable zero-crossing detection"
@@ -27101,7 +27289,7 @@ Model {
 	  ZOrder		  -170
 	  BlockMirror		  on
 	  NamePlacement		  "alternate"
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Inverter Phase\nControl"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -27123,7 +27311,7 @@ Model {
 	  MaskHideContents	  off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    122
+	    $ObjectID		    119
 	    $ClassName		    "Simulink.Mask"
 	    Type		    "Avionics load configuration"
 	    Initialization	    "blk = gcb;\nvalue = get_param(blk,'avopt');\n\nif strcmp(value,'As average with variation')\n"
@@ -27132,7 +27320,7 @@ Model {
 	      Type		      "Simulink.MaskParameter"
 	      Dimension		      5
 	      Object {
-		$ObjectID		123
+		$ObjectID		120
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -27150,7 +27338,7 @@ Model {
 		"cellarr);\n clear blk STATS value cellarr"
 	      }
 	      Object {
-		$ObjectID		124
+		$ObjectID		121
 		Type			"edit"
 		Name			"mean"
 		Prompt			"Mean load in W:"
@@ -27158,7 +27346,7 @@ Model {
 		Visible			"off"
 	      }
 	      Object {
-		$ObjectID		125
+		$ObjectID		122
 		Type			"edit"
 		Name			"var"
 		Prompt			"          Variance:"
@@ -27166,7 +27354,7 @@ Model {
 		Visible			"off"
 	      }
 	      Object {
-		$ObjectID		126
+		$ObjectID		123
 		Type			"edit"
 		Name			"sampt"
 		Prompt			"           Sample interval:"
@@ -27174,7 +27362,7 @@ Model {
 		Visible			"off"
 	      }
 	      Object {
-		$ObjectID		127
+		$ObjectID		124
 		Type			"edit"
 		Name			"initavload"
 		Prompt			"Enter pathname of the mat file to load :"
@@ -27246,7 +27434,7 @@ Model {
 	      Position		      [170, 300, 260, 330]
 	      ZOrder		      -5
 	      ShowName		      off
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSource"
 	      SourceType	      "Electrical Source"
 	      ContentPreviewEnabled   off
@@ -27263,7 +27451,7 @@ Model {
 	      Position		      [170, 250, 260, 280]
 	      ZOrder		      -6
 	      ShowName		      off
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSource"
 	      SourceType	      "Electrical Source"
 	      ContentPreviewEnabled   off
@@ -27280,7 +27468,7 @@ Model {
 	      Position		      [170, 372, 260, 403]
 	      ZOrder		      -7
 	      ShowName		      off
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSource"
 	      SourceType	      "Electrical Source"
 	      ContentPreviewEnabled   off
@@ -27297,7 +27485,7 @@ Model {
 	      Position		      [170, 482, 260, 513]
 	      ZOrder		      -8
 	      ShowName		      off
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSource"
 	      SourceType	      "Electrical Source"
 	      ContentPreviewEnabled   off
@@ -27839,7 +28027,7 @@ Model {
 	  Ports			  [4, 3]
 	  Position		  [2120, 65, 2205, 235]
 	  ZOrder		  -172
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Service Bus"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -27851,7 +28039,7 @@ Model {
 	  Ports			  [4, 3]
 	  Position		  [2115, 555, 2200, 725]
 	  ZOrder		  -173
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Service Bus"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -28179,6 +28367,45 @@ Model {
 	  DisplayOption		  "bar"
 	}
 	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  SID			  "27451"
+	  Ports			  [2, 1]
+	  Position		  [1325, 37, 1355, 68]
+	  ZOrder		  49
+	  ShowName		  off
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product1"
+	  SID			  "27454"
+	  Ports			  [2, 1]
+	  Position		  [1315, 257, 1345, 288]
+	  ZOrder		  52
+	  ShowName		  off
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product2"
+	  SID			  "27457"
+	  Ports			  [2, 1]
+	  Position		  [1310, 697, 1340, 728]
+	  ZOrder		  55
+	  ShowName		  off
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
 	  BlockType		  Sum
 	  Name			  "Sum"
 	  SID			  "27405"
@@ -28187,6 +28414,34 @@ Model {
 	  ZOrder		  34
 	  ShowName		  off
 	  Inputs		  "++++"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  SID			  "27452"
+	  Ports			  [1, 1]
+	  Position		  [1380, 45, 1400, 65]
+	  ZOrder		  50
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "+"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum2"
+	  SID			  "27455"
+	  Ports			  [1, 1]
+	  Position		  [1370, 265, 1390, 285]
+	  ZOrder		  53
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "+"
 	  InputSameDT		  off
 	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
 	  SaturateOnIntegerOverflow off
@@ -28231,6 +28486,20 @@ Model {
 	  SaturateOnIntegerOverflow off
 	}
 	Block {
+	  BlockType		  Sum
+	  Name			  "Sum6"
+	  SID			  "27458"
+	  Ports			  [1, 1]
+	  Position		  [1355, 705, 1375, 725]
+	  ZOrder		  56
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "+"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
 	  BlockType		  SubSystem
 	  Name			  "Thermal Interface"
 	  SID			  "27406"
@@ -28248,7 +28517,7 @@ Model {
 	  System {
 	    Name		    "Thermal Interface"
 	    Location		    [-8, -8, 1374, 736]
-	    Open		    off
+	    Open		    on
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -28259,7 +28528,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
+	    ZoomFactor		    "175"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Left_Wing_SCVGU_Ploss_W"
@@ -28342,6 +28611,20 @@ Model {
 	      DisplayOption	      "bar"
 	    }
 	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum"
+	      SID		      "27460"
+	      Ports		      [3, 1]
+	      Position		      [415, 95, 435, 115]
+	      ZOrder		      3
+	      ShowName		      off
+	      IconShape		      "round"
+	      Inputs		      "+++"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
 	      BlockType		      Terminator
 	      Name		      "Terminator"
 	      SID		      "27416"
@@ -28383,7 +28666,7 @@ Model {
 	      Position		      [340, 285, 430, 315]
 	      ZOrder		      -12
 	      ShowName		      off
-	      LibraryVersion	      "1.239"
+	      LibraryVersion	      "1.240"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ThermalSink"
 	      SourceType	      "Thermal Sink"
 	      ContentPreviewEnabled   off
@@ -28391,26 +28674,52 @@ Model {
 	      units		      "Watts"
 	      unq_id		      "8332"
 	    }
-	    Line {
-	      ZOrder		      1
-	      SrcBlock		      "Left_Wing_SCVGU_Ploss_W"
-	      SrcPort		      1
-	      DstBlock		      "Terminator"
-	      DstPort		      1
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "To Workspace"
+	      SID		      "27461"
+	      Ports		      [1]
+	      Position		      [495, 90, 555, 120]
+	      ZOrder		      4
+	      ShowName		      off
+	      VariableName	      "Tot_Gen_Loss_W"
+	      MaxDataPoints	      "inf"
+	      SampleTime	      "10"
+	      SaveFormat	      "Structure With Time"
 	    }
 	    Line {
 	      ZOrder		      2
 	      SrcBlock		      "Right_Wing_SCVGU_Ploss_W"
 	      SrcPort		      1
-	      DstBlock		      "Terminator1"
-	      DstPort		      1
+	      Points		      [58, 0]
+	      Branch {
+		ZOrder			16
+		Points			[0, -20; 60, 0; 0, 5]
+		DstBlock		"Sum"
+		DstPort			2
+	      }
+	      Branch {
+		ZOrder			12
+		DstBlock		"Terminator1"
+		DstPort			1
+	      }
 	    }
 	    Line {
 	      ZOrder		      3
 	      SrcBlock		      "APU_Ploss_W"
 	      SrcPort		      1
-	      DstBlock		      "Terminator2"
-	      DstPort		      1
+	      Points		      [62, 0]
+	      Branch {
+		ZOrder			23
+		Points			[0, -17; 128, 0]
+		DstBlock		"Sum"
+		DstPort			3
+	      }
+	      Branch {
+		ZOrder			14
+		DstBlock		"Terminator2"
+		DstPort			1
+	      }
 	    }
 	    Line {
 	      ZOrder		      4
@@ -28454,7 +28763,70 @@ Model {
 	      DstBlock		      "Terminator3"
 	      DstPort		      1
 	    }
+	    Line {
+	      ZOrder		      1
+	      SrcBlock		      "Left_Wing_SCVGU_Ploss_W"
+	      SrcPort		      1
+	      Points		      [70, 0]
+	      Branch {
+		ZOrder			21
+		Points			[0, -25; 120, 0]
+		DstBlock		"Sum"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			10
+		DstBlock		"Terminator"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      ZOrder		      24
+	      SrcBlock		      "Sum"
+	      SrcPort		      1
+	      DstBlock		      "To Workspace"
+	      DstPort		      1
+	    }
 	  }
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace"
+	  SID			  "27453"
+	  Ports			  [1]
+	  Position		  [1425, 40, 1500, 70]
+	  ZOrder		  51
+	  ShowName		  off
+	  VariableName		  "Gen1Power_W"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "10"
+	  SaveFormat		  "Structure With Time"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace1"
+	  SID			  "27456"
+	  Ports			  [1]
+	  Position		  [1415, 260, 1495, 290]
+	  ZOrder		  54
+	  ShowName		  off
+	  VariableName		  "APUPower_W"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "10"
+	  SaveFormat		  "Structure With Time"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace2"
+	  SID			  "27459"
+	  Ports			  [1]
+	  Position		  [1395, 700, 1475, 730]
+	  ZOrder		  57
+	  ShowName		  off
+	  VariableName		  "Gen2Power_W"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "10"
+	  SaveFormat		  "Structure With Time"
 	}
 	Block {
 	  BlockType		  Reference
@@ -28464,7 +28836,7 @@ Model {
 	  Position		  [2605, 956, 2710, 1089]
 	  ZOrder		  -211
 	  BlockMirror		  on
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Machines/Transformer"
 	  SourceType		  "Transformer"
 	  ContentPreviewEnabled	  off
@@ -28480,7 +28852,7 @@ Model {
 	  Ports			  [2, 2]
 	  Position		  [2520, 85, 2645, 165]
 	  ZOrder		  -212
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Transformer-rectifier"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -28493,7 +28865,7 @@ Model {
 	  Ports			  [2, 2]
 	  Position		  [2520, 330, 2645, 410]
 	  ZOrder		  -213
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Transformer-rectifier"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -28506,7 +28878,7 @@ Model {
 	  Ports			  [2, 2]
 	  Position		  [2525, 565, 2650, 645]
 	  ZOrder		  -214
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Transformer-rectifier"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -28776,8 +29148,18 @@ Model {
 	  ZOrder		  25
 	  SrcBlock		  "Generation Unit\nSync-Sync"
 	  SrcPort		  1
-	  DstBlock		  "Generator Bus"
-	  DstPort		  2
+	  Points		  [13, 0]
+	  Branch {
+	    ZOrder		    796
+	    Points		    [0, -60]
+	    DstBlock		    "Product"
+	    DstPort		    2
+	  }
+	  Branch {
+	    ZOrder		    793
+	    DstBlock		    "Generator Bus"
+	    DstPort		    2
+	  }
 	}
 	Line {
 	  ZOrder		  26
@@ -28822,8 +29204,18 @@ Model {
 	  ZOrder		  32
 	  SrcBlock		  "1-dim"
 	  SrcPort		  1
-	  DstBlock		  "Generation Unit\nSync-Sync"
-	  DstPort		  3
+	  Points		  [20, 0]
+	  Branch {
+	    ZOrder		    795
+	    Points		    [0, -130]
+	    DstBlock		    "Product"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    791
+	    DstBlock		    "Generation Unit\nSync-Sync"
+	    DstPort		    3
+	  }
 	}
 	Line {
 	  ZOrder		  33
@@ -28831,13 +29223,6 @@ Model {
 	  SrcPort		  1
 	  DstBlock		  "1-dim1"
 	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  34
-	  SrcBlock		  "1-dim1"
-	  SrcPort		  1
-	  DstBlock		  "Generation Unit\nSync-Sync1"
-	  DstPort		  3
 	}
 	Line {
 	  ZOrder		  35
@@ -28924,24 +29309,6 @@ Model {
 	  SrcPort		  1
 	  DstBlock		  "Memory7"
 	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  49
-	  SrcBlock		  "Generation Unit\nSync-Sync1"
-	  SrcPort		  1
-	  Points		  [235, 0]
-	  Branch {
-	    ZOrder		    50
-	    Points		    [0, -215]
-	    DstBlock		    "Generator Bus"
-	    DstPort		    3
-	  }
-	  Branch {
-	    ZOrder		    51
-	    Points		    [0, 330]
-	    DstBlock		    "Generator Bus1"
-	    DstPort		    3
-	  }
 	}
 	Line {
 	  ZOrder		  52
@@ -29088,9 +29455,18 @@ Model {
 	  ZOrder		  73
 	  SrcBlock		  "Generation Unit\nSync-Sync2"
 	  SrcPort		  1
-	  Points		  [155, 0; 0, -105]
-	  DstBlock		  "Generator Bus1"
-	  DstPort		  2
+	  Points		  [10, 0]
+	  Branch {
+	    ZOrder		    815
+	    DstBlock		    "Product2"
+	    DstPort		    2
+	  }
+	  Branch {
+	    ZOrder		    814
+	    Points		    [145, 0; 0, -105]
+	    DstBlock		    "Generator Bus1"
+	    DstPort		    2
+	  }
 	}
 	Line {
 	  ZOrder		  74
@@ -29547,13 +29923,6 @@ Model {
 	  SrcPort		  1
 	  DstBlock		  "Generation Unit\nSync-Sync2"
 	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  148
-	  SrcBlock		  "1-dim2"
-	  SrcPort		  1
-	  DstBlock		  "Generation Unit\nSync-Sync2"
-	  DstPort		  3
 	}
 	Line {
 	  ZOrder		  149
@@ -30414,6 +30783,110 @@ Model {
 	  SrcPort		  2
 	  Points		  [0, 40]
 	  DstBlock		  "Goto65"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  797
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  799
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  DstBlock		  "To Workspace"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  49
+	  SrcBlock		  "Generation Unit\nSync-Sync1"
+	  SrcPort		  1
+	  Points		  [3, 0]
+	  Branch {
+	    ZOrder		    807
+	    Points		    [0, -105]
+	    DstBlock		    "Product1"
+	    DstPort		    2
+	  }
+	  Branch {
+	    ZOrder		    806
+	    Points		    [232, 0]
+	    Branch {
+	      ZOrder		      50
+	      Points		      [0, -215]
+	      DstBlock		      "Generator Bus"
+	      DstPort		      3
+	    }
+	    Branch {
+	      ZOrder		      51
+	      Points		      [0, 330]
+	      DstBlock		      "Generator Bus1"
+	      DstPort		      3
+	    }
+	  }
+	}
+	Line {
+	  ZOrder		  34
+	  SrcBlock		  "1-dim1"
+	  SrcPort		  1
+	  Points		  [4, 0]
+	  Branch {
+	    ZOrder		    805
+	    Points		    [0, -175]
+	    DstBlock		    "Product1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    804
+	    DstBlock		    "Generation Unit\nSync-Sync1"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  ZOrder		  802
+	  SrcBlock		  "Product1"
+	  SrcPort		  1
+	  DstBlock		  "Sum2"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  803
+	  SrcBlock		  "Sum2"
+	  SrcPort		  1
+	  DstBlock		  "To Workspace1"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  148
+	  SrcBlock		  "1-dim2"
+	  SrcPort		  1
+	  Points		  [24, 0]
+	  Branch {
+	    ZOrder		    813
+	    Points		    [0, -120]
+	    DstBlock		    "Product2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    812
+	    DstBlock		    "Generation Unit\nSync-Sync2"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  ZOrder		  810
+	  SrcBlock		  "Product2"
+	  SrcPort		  1
+	  DstBlock		  "Sum6"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  811
+	  SrcBlock		  "Sum6"
+	  SrcPort		  1
+	  DstBlock		  "To Workspace2"
 	  DstPort		  1
 	}
 	Annotation {
@@ -32018,7 +32491,7 @@ Model {
 	  MaskHideContents	  off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    128
+	    $ObjectID		    125
 	    $ClassName		    "Simulink.Mask"
 	    Type		    "Unit conversion"
 	    Description		    "Convert units of:\n\nMass, density, energy, power, force, temperature, pressure, length, area, "
@@ -32034,7 +32507,7 @@ Model {
 	      Type		      "Simulink.MaskParameter"
 	      Dimension		      47
 	      Object {
-		$ObjectID		129
+		$ObjectID		126
 		Type			"checkbox"
 		Name			"mass"
 		Prompt			"Mass"
@@ -32063,7 +32536,7 @@ Model {
 		") ; \nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		130
+		$ObjectID		127
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32096,7 +32569,7 @@ Model {
 		"cn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		131
+		$ObjectID		128
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32129,7 +32602,7 @@ Model {
 		"cn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		132
+		$ObjectID		129
 		Type			"checkbox"
 		Name			"dens"
 		Prompt			"Density"
@@ -32174,7 +32647,7 @@ Model {
 		"ue cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		133
+		$ObjectID		130
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32221,7 +32694,7 @@ Model {
 		"cn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		134
+		$ObjectID		131
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32271,7 +32744,7 @@ Model {
 		"cn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		135
+		$ObjectID		132
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32318,7 +32791,7 @@ Model {
 		"3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		136
+		$ObjectID		133
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32368,7 +32841,7 @@ Model {
 		"cn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		137
+		$ObjectID		134
 		Type			"checkbox"
 		Name			"energy"
 		Prompt			"Energy"
@@ -32397,7 +32870,7 @@ Model {
 		"m(blk,'MaskVisibilities',cellarr) ;\nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		138
+		$ObjectID		135
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32430,7 +32903,7 @@ Model {
 		"2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		139
+		$ObjectID		136
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32463,7 +32936,7 @@ Model {
 		"2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		140
+		$ObjectID		137
 		Type			"checkbox"
 		Name			"power"
 		Prompt			"Power"
@@ -32493,7 +32966,7 @@ Model {
 		"e cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		141
+		$ObjectID		138
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32527,7 +33000,7 @@ Model {
 		"str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		142
+		$ObjectID		139
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32561,7 +33034,7 @@ Model {
 		"str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		143
+		$ObjectID		140
 		Type			"checkbox"
 		Name			"force"
 		Prompt			"Force"
@@ -32590,7 +33063,7 @@ Model {
 		"ram(blk,'MaskVisibilities',cellarr) ;\nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		144
+		$ObjectID		141
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32623,7 +33096,7 @@ Model {
 		" expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		145
+		$ObjectID		142
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32656,7 +33129,7 @@ Model {
 		" expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		146
+		$ObjectID		143
 		Type			"checkbox"
 		Name			"temp"
 		Prompt			"Temperature"
@@ -32682,7 +33155,7 @@ Model {
 		"; \nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		147
+		$ObjectID		144
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32712,7 +33185,7 @@ Model {
 		"param(blk,'MaskDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		148
+		$ObjectID		145
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32742,7 +33215,7 @@ Model {
 		"param(blk,'MaskDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		149
+		$ObjectID		146
 		Type			"checkbox"
 		Name			"pres"
 		Prompt			"Pressure"
@@ -32776,7 +33249,7 @@ Model {
 		"nd\nset_param(blk,'MaskVisibilities',cellarr) ;\nclear blk value cellarr ind a b val i\n\n"
 	      }
 	      Object {
-		$ObjectID		150
+		$ObjectID		147
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32816,7 +33289,7 @@ Model {
 		",'MaskDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		151
+		$ObjectID		148
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32856,7 +33329,7 @@ Model {
 		",'MaskDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		152
+		$ObjectID		149
 		Type			"checkbox"
 		Name			"length"
 		Prompt			"Length"
@@ -32891,7 +33364,7 @@ Model {
 		"r(ind) = {'on'} ;\n    end\nend\nset_param(blk,'MaskVisibilities',cellarr) ;\nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		153
+		$ObjectID		150
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32933,7 +33406,7 @@ Model {
 		"lk,'MaskDisplay',str) ;\nend\nclear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		154
+		$ObjectID		151
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -32975,7 +33448,7 @@ Model {
 		"lk,'MaskDisplay',str) ;\nend\nclear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		155
+		$ObjectID		152
 		Type			"checkbox"
 		Name			"area"
 		Prompt			"Area "
@@ -33010,7 +33483,7 @@ Model {
 		"lk,'MaskVisibilities',cellarr) ;\nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		156
+		$ObjectID		153
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -33051,7 +33524,7 @@ Model {
 		"kDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		157
+		$ObjectID		154
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -33092,7 +33565,7 @@ Model {
 		"kDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		158
+		$ObjectID		155
 		Type			"checkbox"
 		Name			"vol"
 		Prompt			"Volume "
@@ -33127,7 +33600,7 @@ Model {
 		"b val i"
 	      }
 	      Object {
-		$ObjectID		159
+		$ObjectID		156
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -33168,7 +33641,7 @@ Model {
 		"me fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		160
+		$ObjectID		157
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -33209,7 +33682,7 @@ Model {
 		"me fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		161
+		$ObjectID		158
 		Type			"checkbox"
 		Name			"vel"
 		Prompt			"Velocity"
@@ -33251,7 +33724,7 @@ Model {
 		"end\nset_param(blk,'MaskVisibilities',cellarr) ; \nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		162
+		$ObjectID		159
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -33298,7 +33771,7 @@ Model {
 		"lue2 value3 value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		163
+		$ObjectID		160
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -33341,7 +33814,7 @@ Model {
 		"lue2 value3 value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		164
+		$ObjectID		161
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -33388,7 +33861,7 @@ Model {
 		"lue2 value3 value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		165
+		$ObjectID		162
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -33431,7 +33904,7 @@ Model {
 		"lue2 value3 value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		166
+		$ObjectID		163
 		Type			"checkbox"
 		Name			"flow_rate"
 		Prompt			"Volume Flow Rate"
@@ -33474,7 +33947,7 @@ Model {
 		"param(blk,'MaskVisibilities',cellarr) ; \nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		167
+		$ObjectID		164
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -33522,7 +33995,7 @@ Model {
 		" value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		168
+		$ObjectID		165
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -33566,7 +34039,7 @@ Model {
 		" value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		169
+		$ObjectID		166
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -33614,7 +34087,7 @@ Model {
 		" value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		170
+		$ObjectID		167
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -33658,7 +34131,7 @@ Model {
 		" value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		171
+		$ObjectID		168
 		Type			"checkbox"
 		Name			"mfr"
 		Prompt			"Mass Flow Rate"
@@ -33695,7 +34168,7 @@ Model {
 		"ram(blk,'MaskVisibilities',cellarr) ; \nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		172
+		$ObjectID		169
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -33735,7 +34208,7 @@ Model {
 		" fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		173
+		$ObjectID		170
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -33774,7 +34247,7 @@ Model {
 		" fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		174
+		$ObjectID		171
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -33814,7 +34287,7 @@ Model {
 		" fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		175
+		$ObjectID		172
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -35990,7 +36463,7 @@ Model {
 	  MaskHideContents	  off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    176
+	    $ObjectID		    173
 	    $ClassName		    "Simulink.Mask"
 	    Type		    "Unit conversion"
 	    Description		    "Convert units of:\n\nMass, density, energy, power, force, temperature, pressure, length, area, "
@@ -36006,7 +36479,7 @@ Model {
 	      Type		      "Simulink.MaskParameter"
 	      Dimension		      47
 	      Object {
-		$ObjectID		177
+		$ObjectID		174
 		Type			"checkbox"
 		Name			"mass"
 		Prompt			"Mass"
@@ -36035,7 +36508,7 @@ Model {
 		") ; \nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		178
+		$ObjectID		175
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36068,7 +36541,7 @@ Model {
 		"cn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		179
+		$ObjectID		176
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36101,7 +36574,7 @@ Model {
 		"cn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		180
+		$ObjectID		177
 		Type			"checkbox"
 		Name			"dens"
 		Prompt			"Density"
@@ -36146,7 +36619,7 @@ Model {
 		"ue cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		181
+		$ObjectID		178
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36193,7 +36666,7 @@ Model {
 		"cn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		182
+		$ObjectID		179
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36243,7 +36716,7 @@ Model {
 		"cn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		183
+		$ObjectID		180
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36290,7 +36763,7 @@ Model {
 		"3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		184
+		$ObjectID		181
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36340,7 +36813,7 @@ Model {
 		"cn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		185
+		$ObjectID		182
 		Type			"checkbox"
 		Name			"energy"
 		Prompt			"Energy"
@@ -36369,7 +36842,7 @@ Model {
 		"m(blk,'MaskVisibilities',cellarr) ;\nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		186
+		$ObjectID		183
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36402,7 +36875,7 @@ Model {
 		"2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		187
+		$ObjectID		184
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36435,7 +36908,7 @@ Model {
 		"2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		188
+		$ObjectID		185
 		Type			"checkbox"
 		Name			"power"
 		Prompt			"Power"
@@ -36465,7 +36938,7 @@ Model {
 		"e cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		189
+		$ObjectID		186
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36499,7 +36972,7 @@ Model {
 		"str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		190
+		$ObjectID		187
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36533,7 +37006,7 @@ Model {
 		"str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		191
+		$ObjectID		188
 		Type			"checkbox"
 		Name			"force"
 		Prompt			"Force"
@@ -36562,7 +37035,7 @@ Model {
 		"ram(blk,'MaskVisibilities',cellarr) ;\nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		192
+		$ObjectID		189
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36595,7 +37068,7 @@ Model {
 		" expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		193
+		$ObjectID		190
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36628,7 +37101,7 @@ Model {
 		" expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		194
+		$ObjectID		191
 		Type			"checkbox"
 		Name			"temp"
 		Prompt			"Temperature"
@@ -36654,7 +37127,7 @@ Model {
 		"; \nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		195
+		$ObjectID		192
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36684,7 +37157,7 @@ Model {
 		"param(blk,'MaskDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		196
+		$ObjectID		193
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36714,7 +37187,7 @@ Model {
 		"param(blk,'MaskDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		197
+		$ObjectID		194
 		Type			"checkbox"
 		Name			"pres"
 		Prompt			"Pressure"
@@ -36748,7 +37221,7 @@ Model {
 		"nd\nset_param(blk,'MaskVisibilities',cellarr) ;\nclear blk value cellarr ind a b val i\n\n"
 	      }
 	      Object {
-		$ObjectID		198
+		$ObjectID		195
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36788,7 +37261,7 @@ Model {
 		",'MaskDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		199
+		$ObjectID		196
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36828,7 +37301,7 @@ Model {
 		",'MaskDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		200
+		$ObjectID		197
 		Type			"checkbox"
 		Name			"length"
 		Prompt			"Length"
@@ -36863,7 +37336,7 @@ Model {
 		"r(ind) = {'on'} ;\n    end\nend\nset_param(blk,'MaskVisibilities',cellarr) ;\nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		201
+		$ObjectID		198
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36905,7 +37378,7 @@ Model {
 		"lk,'MaskDisplay',str) ;\nend\nclear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		202
+		$ObjectID		199
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -36947,7 +37420,7 @@ Model {
 		"lk,'MaskDisplay',str) ;\nend\nclear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		203
+		$ObjectID		200
 		Type			"checkbox"
 		Name			"area"
 		Prompt			"Area "
@@ -36982,7 +37455,7 @@ Model {
 		"lk,'MaskVisibilities',cellarr) ;\nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		204
+		$ObjectID		201
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -37023,7 +37496,7 @@ Model {
 		"kDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		205
+		$ObjectID		202
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -37064,7 +37537,7 @@ Model {
 		"kDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		206
+		$ObjectID		203
 		Type			"checkbox"
 		Name			"vol"
 		Prompt			"Volume "
@@ -37099,7 +37572,7 @@ Model {
 		"b val i"
 	      }
 	      Object {
-		$ObjectID		207
+		$ObjectID		204
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -37140,7 +37613,7 @@ Model {
 		"me fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		208
+		$ObjectID		205
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -37181,7 +37654,7 @@ Model {
 		"me fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		209
+		$ObjectID		206
 		Type			"checkbox"
 		Name			"vel"
 		Prompt			"Velocity"
@@ -37223,7 +37696,7 @@ Model {
 		"end\nset_param(blk,'MaskVisibilities',cellarr) ; \nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		210
+		$ObjectID		207
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -37270,7 +37743,7 @@ Model {
 		"lue2 value3 value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		211
+		$ObjectID		208
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -37313,7 +37786,7 @@ Model {
 		"lue2 value3 value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		212
+		$ObjectID		209
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -37360,7 +37833,7 @@ Model {
 		"lue2 value3 value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		213
+		$ObjectID		210
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -37403,7 +37876,7 @@ Model {
 		"lue2 value3 value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		214
+		$ObjectID		211
 		Type			"checkbox"
 		Name			"flow_rate"
 		Prompt			"Volume Flow Rate"
@@ -37446,7 +37919,7 @@ Model {
 		"param(blk,'MaskVisibilities',cellarr) ; \nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		215
+		$ObjectID		212
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -37494,7 +37967,7 @@ Model {
 		" value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		216
+		$ObjectID		213
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -37538,7 +38011,7 @@ Model {
 		" value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		217
+		$ObjectID		214
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -37586,7 +38059,7 @@ Model {
 		" value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		218
+		$ObjectID		215
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -37630,7 +38103,7 @@ Model {
 		" value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		219
+		$ObjectID		216
 		Type			"checkbox"
 		Name			"mfr"
 		Prompt			"Mass Flow Rate"
@@ -37667,7 +38140,7 @@ Model {
 		"ram(blk,'MaskVisibilities',cellarr) ; \nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		220
+		$ObjectID		217
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -37707,7 +38180,7 @@ Model {
 		" fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		221
+		$ObjectID		218
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -37746,7 +38219,7 @@ Model {
 		" fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		222
+		$ObjectID		219
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -37786,7 +38259,7 @@ Model {
 		" fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		223
+		$ObjectID		220
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -39323,7 +39796,7 @@ Model {
 	  Ports			  [2, 2]
 	  Position		  [695, 244, 795, 286]
 	  ZOrder		  -21
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Bypass Valve"
 	  SourceType		  "Bypass Valve"
 	  ContentPreviewEnabled	  off
@@ -39335,7 +39808,7 @@ Model {
 	  Ports			  [2, 2]
 	  Position		  [695, 574, 795, 616]
 	  ZOrder		  -22
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Bypass Valve"
 	  SourceType		  "Bypass Valve"
 	  ContentPreviewEnabled	  off
@@ -39365,7 +39838,7 @@ Model {
 	  Ports			  [3, 2]
 	  Position		  [505, 219, 605, 261]
 	  ZOrder		  -25
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Engine Driven Pump"
 	  SourceType		  "Engine Driven Hydraulic Pump"
 	  ContentPreviewEnabled	  off
@@ -39384,7 +39857,7 @@ Model {
 	  Ports			  [3, 2]
 	  Position		  [505, 549, 605, 591]
 	  ZOrder		  -26
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Engine Driven Pump"
 	  SourceType		  "Engine Driven Hydraulic Pump"
 	  ContentPreviewEnabled	  off
@@ -39403,7 +39876,7 @@ Model {
 	  Ports			  [4, 2]
 	  Position		  [300, 160, 470, 250]
 	  ZOrder		  -27
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Fluid Reservoir"
 	  SourceType		  "Fluid Reservoir"
 	  ContentPreviewEnabled	  off
@@ -39427,7 +39900,7 @@ Model {
 	  Ports			  [4, 2]
 	  Position		  [305, 490, 475, 580]
 	  ZOrder		  -28
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Fluid Reservoir"
 	  SourceType		  "Fluid Reservoir"
 	  ContentPreviewEnabled	  off
@@ -39605,7 +40078,7 @@ Model {
 	  Position		  [845, 244, 1015, 286]
 	  ZOrder		  -42
 	  ShowName		  off
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  ContentPreviewEnabled	  off
@@ -39624,7 +40097,7 @@ Model {
 	  Position		  [845, 304, 1015, 346]
 	  ZOrder		  -43
 	  ShowName		  off
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  ContentPreviewEnabled	  off
@@ -39643,7 +40116,7 @@ Model {
 	  Position		  [845, 364, 1015, 406]
 	  ZOrder		  -44
 	  ShowName		  off
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  ContentPreviewEnabled	  off
@@ -39662,7 +40135,7 @@ Model {
 	  Position		  [845, 424, 1015, 466]
 	  ZOrder		  -45
 	  ShowName		  off
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  ContentPreviewEnabled	  off
@@ -39681,7 +40154,7 @@ Model {
 	  Position		  [840, 484, 1010, 526]
 	  ZOrder		  -46
 	  ShowName		  off
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  ContentPreviewEnabled	  off
@@ -39700,7 +40173,7 @@ Model {
 	  Position		  [850, 574, 1020, 616]
 	  ZOrder		  -47
 	  ShowName		  off
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  ContentPreviewEnabled	  off
@@ -39719,7 +40192,7 @@ Model {
 	  Position		  [850, 634, 1020, 676]
 	  ZOrder		  -48
 	  ShowName		  off
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  ContentPreviewEnabled	  off
@@ -39738,7 +40211,7 @@ Model {
 	  Position		  [850, 694, 1020, 736]
 	  ZOrder		  -49
 	  ShowName		  off
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  ContentPreviewEnabled	  off
@@ -39757,7 +40230,7 @@ Model {
 	  Position		  [850, 754, 1020, 796]
 	  ZOrder		  -50
 	  ShowName		  off
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  ContentPreviewEnabled	  off
@@ -39776,7 +40249,7 @@ Model {
 	  Position		  [845, 814, 1015, 856]
 	  ZOrder		  -51
 	  ShowName		  off
-	  LibraryVersion	  "1.239"
+	  LibraryVersion	  "1.240"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  ContentPreviewEnabled	  off
@@ -40776,7 +41249,7 @@ Model {
       Ports		      [0, 1]
       Position		      [15, 48, 110, 82]
       ZOrder		      -43
-      LibraryVersion	      "1.239"
+      LibraryVersion	      "1.240"
       SourceBlock	      "PowerFlowLib/Mission Profile/Mission Profile"
       SourceType	      "MISSION PROFILE SELECT  "
       ContentPreviewEnabled   off
@@ -40831,7 +41304,7 @@ Model {
       MaskHideContents	      off
       Object {
 	$PropName		"MaskObject"
-	$ObjectID		224
+	$ObjectID		221
 	$ClassName		"Simulink.Mask"
 	Initialization		"set_param(gcb, 'LinkStatus', 'inactive')    % disable the library link\n"
 	SelfModifiable		"on"
