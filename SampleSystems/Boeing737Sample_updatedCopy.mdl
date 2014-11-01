@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.310"
+    ComputedModelVersion    "1.312"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -32,7 +32,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-8.0, -8.0, 1382.0, 744.0]
+      Location		      [-8.0, 0.0, 1356.0, 744.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -47,18 +47,18 @@ Model {
 	$PropName		"ExplorerBarInfo"
 	$ObjectID		4
 	$ClassName		"Simulink.ExplorerBarInfo"
-	Visible			[1]
+	Visible			[0]
       }
       Object {
 	$PropName		"EditorsInfo"
 	$ObjectID		5
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
-	ViewObjType		"SimulinkSubsys"
-	LoadSaveID		"27406"
-	Extents			[1139.0, 570.0]
-	ZoomFactor		[2.0]
-	Offset			[149.59999999999974, 33.19821471486776]
+	ViewObjType		"SimulinkTopLevel"
+	LoadSaveID		"0"
+	Extents			[1113.0, 599.0]
+	ZoomFactor		[1.0]
+	Offset			[0.0, 0.0]
       }
     }
   }
@@ -66,11 +66,11 @@ Model {
   Creator		  "mwillms4"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "srikanthan"
+  LastModifiedBy	  "mwillms4"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sat Nov 01 13:55:44 2014"
-  RTWModifiedTimeStamp	  336750927
-  ModelVersionFormat	  "1.%<AutoIncrement:310>"
+  LastModifiedDate	  "Sat Nov 01 14:17:06 2014"
+  RTWModifiedTimeStamp	  336752206
+  ModelVersionFormat	  "1.%<AutoIncrement:312>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -178,7 +178,7 @@ Model {
 	  $ObjectID		  8
 	  Version		  "1.13.1"
 	  StartTime		  "0.0"
-	  StopTime		  "100"
+	  StopTime		  "MSSN.gen.time(end)"
 	  AbsTol		  "auto"
 	  FixedStep		  "auto"
 	  InitialStep		  "auto"
@@ -196,8 +196,8 @@ Model {
 	  SolverMode		  "Auto"
 	  EnableConcurrentExecution off
 	  ConcurrentTasks	  off
-	  Solver		  "ode23tb"
-	  SolverName		  "ode23tb"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
 	  SolverJacobianMethodControl "auto"
 	  ShapePreserveControl	  "DisableAll"
 	  ZeroCrossControl	  "UseLocalSettings"
@@ -697,7 +697,7 @@ Model {
       }
       Name		      "Configuration"
       CurrentDlgPage	      "Solver"
-      ConfigPrmDlgPosition     [ 183, -8, 1097, 679 ] 
+      ConfigPrmDlgPosition     [ 175, -39, 1105, 687 ] 
     }
     PropName		    "ConfigurationSets"
   }
@@ -1349,8 +1349,8 @@ Model {
   }
   System {
     Name		    "Boeing737Sample_updatedCopy"
-    Location		    [-8, -8, 1374, 736]
-    Open		    off
+    Location		    [-8, 0, 1348, 744]
+    Open		    on
     ModelBrowserVisibility  on
     ModelBrowserWidth	    212
     ScreenColor		    "white"
@@ -3730,7 +3730,7 @@ Model {
 		    Annotation {
 		    SID			    "12203:8209"
 		    Name		    "It calculates the outlet temperature and enthalpy."
-		    Position		    [611, 30, 870, 47]
+		    Position		    [611, 30, 871, 47]
 		    AutoSize		    on
 		    WordWrap		    off
 		    ZOrder		    -1
@@ -4636,7 +4636,7 @@ Model {
 		    Annotation {
 		    SID			    "12203:8213"
 		    Name		    "It calculates the outlet temperature and enthalpy."
-		    Position		    [611, 30, 870, 47]
+		    Position		    [611, 30, 871, 47]
 		    AutoSize		    on
 		    WordWrap		    off
 		    ZOrder		    -1
@@ -7223,7 +7223,7 @@ Model {
 		    Annotation {
 		    SID			    "12204:8211"
 		    Name		    "It calculates the outlet temperature and enthalpy."
-		    Position		    [611, 30, 870, 47]
+		    Position		    [611, 30, 871, 47]
 		    AutoSize		    on
 		    WordWrap		    off
 		    ZOrder		    -3
@@ -8129,7 +8129,7 @@ Model {
 		    Annotation {
 		    SID			    "12204:8215"
 		    Name		    "It calculates the outlet temperature and enthalpy."
-		    Position		    [611, 30, 870, 47]
+		    Position		    [611, 30, 871, 47]
 		    AutoSize		    on
 		    WordWrap		    off
 		    ZOrder		    -3
@@ -21605,7 +21605,7 @@ Model {
 	Annotation {
 	  SID			  "27283"
 	  Name			  "Environmental Control System"
-	  Position		  [202, 509, 436, 530]
+	  Position		  [202, 509, 437, 530]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -21617,7 +21617,7 @@ Model {
 	Annotation {
 	  SID			  "27284"
 	  Name			  "Fuel & Oil System"
-	  Position		  [282, 34, 421, 55]
+	  Position		  [282, 34, 422, 55]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -21652,7 +21652,7 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"ELECTRICAL SYS "
-	Location		[-8, -8, 1374, 736]
+	Location		[-8, 0, 1348, 744]
 	Open			off
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	212
@@ -28516,8 +28516,8 @@ Model {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Thermal Interface"
-	    Location		    [-8, -8, 1374, 736]
-	    Open		    on
+	    Location		    [-8, 0, 1348, 744]
+	    Open		    off
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -28770,10 +28770,6 @@ Model {
 	      }
 	    }
 	    Line {
-	      FontName		      "Helvetica"
-	      FontSize		      9
-	      FontWeight	      "normal"
-	      FontAngle		      "normal"
 	      ZOrder		      24
 	      SrcBlock		      "Sum"
 	      SrcPort		      1
@@ -30885,7 +30881,7 @@ Model {
 	Annotation {
 	  SID			  "27286"
 	  Name			  "CONSTANTS"
-	  Position		  [550, 68, 648, 89]
+	  Position		  [550, 68, 653, 89]
 	  AutoSize		  on
 	  WordWrap		  off
 	  BackgroundColor	  "magenta"
@@ -30897,7 +30893,7 @@ Model {
 	Annotation {
 	  SID			  "27287"
 	  Name			  "CONTROL "
-	  Position		  [555, 93, 641, 114]
+	  Position		  [555, 93, 644, 114]
 	  AutoSize		  on
 	  WordWrap		  off
 	  BackgroundColor	  "cyan"
@@ -30909,7 +30905,7 @@ Model {
 	Annotation {
 	  SID			  "27288"
 	  Name			  "LOSSES"
-	  Position		  [555, 118, 618, 139]
+	  Position		  [555, 118, 621, 139]
 	  AutoSize		  on
 	  WordWrap		  off
 	  BackgroundColor	  "orange"
@@ -30921,7 +30917,7 @@ Model {
 	Annotation {
 	  SID			  "27289"
 	  Name			  "MECHANICAL"
-	  Position		  [550, 18, 665, 39]
+	  Position		  [550, 18, 670, 39]
 	  AutoSize		  on
 	  WordWrap		  off
 	  BackgroundColor	  "lightBlue"
@@ -30933,7 +30929,7 @@ Model {
 	Annotation {
 	  SID			  "27290"
 	  Name			  "ELECTRICAL "
-	  Position		  [550, 43, 661, 64]
+	  Position		  [550, 43, 666, 64]
 	  AutoSize		  on
 	  WordWrap		  off
 	  BackgroundColor	  "yellow"
@@ -30952,7 +30948,7 @@ Model {
 	Annotation {
 	  SID			  "27292"
 	  Name			  "Generator Bus 1"
-	  Position		  [1727, 14, 1853, 35]
+	  Position		  [1727, 14, 1854, 35]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -30964,7 +30960,7 @@ Model {
 	Annotation {
 	  SID			  "27293"
 	  Name			  "Generator 1"
-	  Position		  [1202, 89, 1294, 110]
+	  Position		  [1202, 89, 1295, 110]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -30976,7 +30972,7 @@ Model {
 	Annotation {
 	  SID			  "27294"
 	  Name			  "APU"
-	  Position		  [1212, 349, 1246, 370]
+	  Position		  [1212, 349, 1248, 370]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -30988,7 +30984,7 @@ Model {
 	Annotation {
 	  SID			  "27295"
 	  Name			  "GROUND SUPPLY"
-	  Position		  [1217, 549, 1353, 570]
+	  Position		  [1217, 549, 1359, 570]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -31000,7 +30996,7 @@ Model {
 	Annotation {
 	  SID			  "27296"
 	  Name			  "Generator 2"
-	  Position		  [1217, 739, 1309, 760]
+	  Position		  [1217, 739, 1310, 760]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -31012,7 +31008,7 @@ Model {
 	Annotation {
 	  SID			  "27297"
 	  Name			  "Main Bus 1"
-	  Position		  [2157, 34, 2243, 55]
+	  Position		  [2157, 34, 2244, 55]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -31024,7 +31020,7 @@ Model {
 	Annotation {
 	  SID			  "27298"
 	  Name			  "Transfer Bus 1"
-	  Position		  [2162, 304, 2275, 325]
+	  Position		  [2162, 304, 2276, 325]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -31036,7 +31032,7 @@ Model {
 	Annotation {
 	  SID			  "27299"
 	  Name			  "Main Bus 2"
-	  Position		  [2157, 529, 2243, 550]
+	  Position		  [2157, 529, 2244, 550]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -31048,7 +31044,7 @@ Model {
 	Annotation {
 	  SID			  "27300"
 	  Name			  "Transfer Bus 2"
-	  Position		  [2152, 814, 2265, 835]
+	  Position		  [2152, 814, 2266, 835]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -31060,7 +31056,7 @@ Model {
 	Annotation {
 	  SID			  "27301"
 	  Name			  "AC Loads"
-	  Position		  [2387, 34, 2461, 55]
+	  Position		  [2387, 34, 2462, 55]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -31072,7 +31068,7 @@ Model {
 	Annotation {
 	  SID			  "27302"
 	  Name			  "Transformer-Rectifier Units"
-	  Position		  [2587, 49, 2798, 70]
+	  Position		  [2587, 49, 2800, 70]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -31084,7 +31080,7 @@ Model {
 	Annotation {
 	  SID			  "27303"
 	  Name			  "DC Loads"
-	  Position		  [3022, 39, 3096, 60]
+	  Position		  [3022, 39, 3097, 60]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -31096,7 +31092,7 @@ Model {
 	Annotation {
 	  SID			  "27304"
 	  Name			  "DC Bus 1"
-	  Position		  [3377, 39, 3448, 60]
+	  Position		  [3377, 39, 3450, 60]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -31108,7 +31104,7 @@ Model {
 	Annotation {
 	  SID			  "27305"
 	  Name			  "DC Bus 2"
-	  Position		  [3377, 574, 3448, 595]
+	  Position		  [3377, 574, 3450, 595]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -31132,7 +31128,7 @@ Model {
 	Annotation {
 	  SID			  "27307"
 	  Name			  "AUX Battery "
-	  Position		  [3652, 369, 3754, 390]
+	  Position		  [3652, 369, 3756, 390]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -31156,7 +31152,7 @@ Model {
 	Annotation {
 	  SID			  "27309"
 	  Name			  "Inverter as Auxiliary Supply"
-	  Position		  [2827, 929, 3041, 950]
+	  Position		  [2827, 929, 3042, 950]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -31168,7 +31164,7 @@ Model {
 	Annotation {
 	  SID			  "27310"
 	  Name			  "50 s WAIT before Generator Loading"
-	  Position		  [802, 19, 1081, 40]
+	  Position		  [802, 19, 1084, 40]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -31180,7 +31176,7 @@ Model {
 	Annotation {
 	  SID			  "27311"
 	  Name			  "Generator Bus 2"
-	  Position		  [1757, 549, 1883, 570]
+	  Position		  [1757, 549, 1884, 570]
 	  AutoSize		  on
 	  WordWrap		  off
 	  DropShadow		  on
@@ -41339,8 +41335,8 @@ Model {
       ZOrder		      -47
       ShowName		      off
       Floating		      off
-      Location		      [89, 105, 1170, 455]
-      Open		      off
+      Location		      [88, 278, 1169, 628]
+      Open		      on
       NumInputPorts	      "1"
       ZoomMode		      "xonly"
       List {
@@ -41358,8 +41354,8 @@ Model {
 	MarkerStyles		"none|none|none|none|none|none"
       }
       ShowLegends	      off
-      YMin		      "295.065"
-      YMax		      "295.075"
+      YMin		      "290"
+      YMax		      "300"
       SaveName		      "ScopeData36"
       DataFormat	      "StructureWithTime"
       LimitDataPoints	      off
