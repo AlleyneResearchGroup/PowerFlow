@@ -31,3 +31,13 @@ data = RightPackPower_W.signals.values/1000;
 plot(RightPackPower_W.time/3600,data)
 ylabel('Right Pack [kW]')
 xlabel('Mission Time [hrs]')
+
+
+subplot(2,1,1)
+plot(MSSN.cond.time/3600,MSSN.cond.alt)
+ylabel('Altitude [ft]')
+axis([0 6 0 35000])
+subplot(2,1,2)
+plot(MSSN.cond.time/3600,MSSN.cond.mach)
+ylabel('Mach #')
+xlabel('Mission Time [hrs]')
