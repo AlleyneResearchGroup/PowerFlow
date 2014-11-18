@@ -61,6 +61,7 @@ assignin('base','M',M)
 evalin('base','load(''Defaults.mat'')');
 handles.M = M.M;
 handles.index.build = 0;
+handles.index.define=0;
 evalin('base','');
 % Update handles structure
 guidata(hObject, handles);
@@ -273,6 +274,10 @@ val = get(handles.Definelist,'Value');
 list = a(val);
 varopt(handles,list,val,'on');
 altindex(hObject,handles)
+guidata(hObject, handles);
+
+definestatestext(hObject, handles)
+
 
 
 
@@ -391,6 +396,10 @@ list = a(val);
 varopt(handles,list,val,'off');
 
 
+
+
+
+%%%%%%%%%%Input code here. 11/2/2014%%%%%%%%%%%%%
 if numel(get(handles.MSSNList,'string'))>val
 new_list=a(val+1);
 set(handles.Definelist,'value',val+1);
@@ -403,6 +412,7 @@ set(handles.DescentRate,'string','Rate');
 set(handles.FlapSet,'string','Flap Angle');
 set(handles.FlapSet2,'string','Flap Angle');
 end
+definestatestext(hObject, handles)
 
 % --- Executes on button press in BuildSave.
 function BuildSave_Callback(hObject, eventdata, handles)
@@ -1159,6 +1169,273 @@ end
 end
 assignin('base', 'M', handles.M)
 guidata(hObject,handles)
+
+function definestatestext(hObject, handles)
+a = get(handles.Definelist,'string');
+val = get(handles.Definelist,'Value');
+list = a(val);
+
+if strncmp(list,'Startup',3) == 1
+    ch = char(list);
+    ident = str2double(ch(end));
+    real = isreal(ident);
+    nan = isnan(ident);
+
+if real == 0 || nan == 1 || ident == 1
+        if handles.index.build==1
+        set(handles.Time,'string',num2str(handles.M.startuparr(1,1)/60));
+        set(handles.GroundPower,'value',handles.M.startuparr(1,2));
+        set(handles.Alt,'string',num2str(handles.M.genstrct.alt.values(1)));
+        else
+        set(handles.Time,'string','Time');
+        set(handles.Alt,'string','Altitude'); 
+        set(handles.GroundPower,'value',0)
+        end
+       
+else
+        if handles.index.build==1
+        set(handles.Time,'string',num2str(handles.M.startuparr(ident,1)/60));
+        set(handles.GroundPower,'value',handles.M.startuparr(ident,2));
+        else
+        set(handles.Time,'string','Time');
+        set(handles.Alt,'string','Altitude'); 
+        set(handles.GroundPower,'value',0)
+        end
+    end
+    
+elseif strncmp(list,'Taxi',3) == 1
+    ch = char(list);
+    ident = str2double(ch(end));
+    real = isreal(ident);
+    nan = isnan(ident);
+    if real == 0 || nan == 1 || ident == 1
+        if handles.index.build==1
+        set(handles.Time,'string',num2str(handles.M.taxiarr(1,1)/60));
+        set(handles.ThrustSet,'string',num2str(handles.M.taxiarr(1,3)));
+        else
+        set(handles.Time,'string','Time');
+        set(handles.Alt,'string','Altitude'); 
+        set(handles.GroundPower,'value',0)
+        end
+    else
+        if handles.index.build==1
+        set(handles.Time,'string',num2str(handles.M.taxiarr(ident,1)/60));
+        set(handles.ThrustSet,'string',handles.M.taxiarr(ident,3));
+        else
+        set(handles.Time,'string','Time');
+        set(handles.Alt,'string','Altitude'); 
+        set(handles.GroundPower,'value',0)
+        end
+    end
+elseif strncmp(list,'Takeoff',3) == 1
+    ch = char(list);
+    ident = str2double(ch(end));
+    real = isreal(ident);
+    nan = isnan(ident);
+    if real == 0 || nan == 1 || ident == 1
+        if handles.index.build==1
+        set(handles.Time,'string',num2str(handles.M.takeoffarr(1,1)));
+        set(handles.FlapSet,'string',num2str(handles.M.takeoffarr(1,2)));
+        set(handles.ThrustSet,'string',num2str(handles.M.takeoffarr(1,3)));
+        else
+        set(handles.Time,'string','Time');
+        set(handles.Alt,'string','Altitude'); 
+        set(handles.GroundPower,'value',0)
+        end
+    else
+        if handles.index.build==1
+        set(handles.Time,'string',num2str(handles.M.takeoffarr(ident,1)));
+        set(handles.FlapSet,'string',num2str(handles.M.takeoffarr(ident,2)));
+        set(handles.ThrustSet,'string',num2str(handles.M.takeoffarr(ident,3)));
+        else
+        set(handles.Time,'string','Time');
+        set(handles.Alt,'string','Altitude'); 
+        set(handles.GroundPower,'value',0)
+        end
+        
+    end
+elseif strncmp(list,'Climb',3) == 1
+    ch = char(list);
+    ident = str2double(ch(end));
+    real = isreal(ident);
+    nan = isnan(ident);
+    if real == 0 || nan == 1 || ident == 1
+        if handles.index.build==1
+        set(handles.ClimbRate,'string',num2str(handles.M.climbarr(1,3)));
+        set(handles.ThrustSet,'string',num2str(handles.M.climbarr(1,5)));
+        % In the case of a climb, descent, or approach, the altitude of the
+        % aircraft changes and the new altitdue must be recorded.  On
+        % Climb, Descent, or Approach phases the following additional line
+        % are added 
+        CLI = handles.M.genstrct.alt.ind.CL2_ALT_i(1);
+        set(handles.Alt,'string',handles.M.genstrct.alt.values(CLI));
+         else
+           set(handles.ClimbRate,'string','Rate');
+           set(handles.Alt,'string','Altitude'); 
+           set(handles.ThrustSet,'string','Thrust');
+         end
+    else
+        if handles.index.build==1
+        set(handles.ClimbRate,'string',num2str(handles.M.climbarr(ident,3)));
+        set(handles.ThrustSet,'string',num2str(handles.M.climbarr(ident,5)));
+        % In the case of a climb, descent, or approach, the altitude of the
+        % aircraft changes and the new altitdue must be recorded.  On
+        % Climb, Descent, or Approach phases the following additional line
+        % are added 
+        CLI = handles.M.genstrct.alt.ind.CL2_ALT_i(ident);
+        set(handles.Alt,'string',handles.M.genstrct.alt.values(CLI));
+         else
+           set(handles.ClimbRate,'string','Rate');
+           set(handles.Alt,'string','Altitude'); 
+           set(handles.ThrustSet,'string','Thrust');
+         end
+    end
+elseif strncmp(list,'Cruise',3) == 1
+    ch = char(list);
+    ident = str2double(ch(end));
+    real = isreal(ident);
+    nan = isnan(ident);
+    if real == 0 || nan == 1 || ident == 1
+        if handles.index.build==1
+        set(handles.Time,'string',num2str(handles.M.cruisearr(1,1)/60));
+        set(handles.ThrustSet,'string',num2str(handles.M.cruisearr(1,2)));
+        else
+           set(handles.Time,'string','Time');
+           set(handles.ThrustSet,'string','Thrust'); 
+        end
+    else
+        if handles.index.build==1
+        set(handles.Time,'string',num2str(handles.M.cruisearr(ident,1)/60));
+        set(handles.ThrustSet,'string',num2str(handles.M.cruisearr(ident,2)));
+        else
+           set(handles.Time,'string','Time');
+           set(handles.ThrustSet,'string','Thrust'); 
+        end
+    end
+elseif strncmp(list,'Descent',3) == 1
+    ch = char(list);
+    ident = str2double(ch(end));
+    real = isreal(ident);
+    nan = isnan(ident);
+    if real == 0 || nan == 1 || ident == 1
+        if handles.index.build==1
+        set(handles.DescentRate,'string',num2str(handles.M.descentarr(1,1)));
+        set(handles.ThrustSet,'string',num2str(handles.M.descentarr(1,2)));
+        DEI = handles.M.genstrct.alt.ind.DE2_ALT_i(1);
+        set(handles.Alt,'string',num2str(handles.M.genstrct.alt.values(DEI)));
+        else
+           set(handles.DescentRate,'string','Rate');
+           set(handles.ThrustSet,'string','Thrust'); 
+        end
+    else
+        if handles.index.build==1
+        set(handles.DescentRate,'string',num2str(handles.M.descentarr(ident,1)));
+        set(handles.ThrustSet,'string',num2str(handles.M.descentarr(ident,2)));
+        DEI = handles.M.genstrct.alt.ind.DE2_ALT_i(ident);
+        set(handles.Alt,'string',num2str(handles.M.genstrct.alt.values(DEI)));
+        else
+           set(handles.DescentRate,'string','Rate');
+           set(handles.ThrustSet,'string','Thrust'); 
+        end
+    end
+elseif strncmp(list,'Loiter',3) == 1
+    ch = char(list);
+    ident = str2double(ch(end));
+    real = isreal(ident);
+    nan = isnan(ident);
+    if real == 0 || nan == 1 || ident == 1
+        if handles.index.build==1
+       
+        set(handles.Time,'string',num2str(handles.M.loiterarr(1,1)/60));
+        set(handles.ThrustSet,'string',num2str(handles.M.loiterarr(1,2)));
+        else
+            set(handles.Time,'string','Time');
+           set(handles.ThrustSet,'string','Thrust'); 
+        end
+    else
+       if handles.index.build==1
+        set(handles.Time,'string',num2str(handles.M.loiterarr(ident,1)/60));
+        set(handles.ThrustSet,'string',num2str(handles.M.loiterarr(ident,2)));
+        else
+            set(handles.Time,'string','Time');
+           set(handles.ThrustSet,'string','Thrust'); 
+        end
+    end
+elseif strncmp(list,'Approach',3) == 1
+    ch = char(list);
+    ident = str2double(ch(end));
+    real = isreal(ident);
+    nan = isnan(ident);
+    if real == 0 || nan == 1 || ident == 1
+        if handles.index.build==1
+          API = handles.M.genstrct.alt.ind.AP2_ALT_i(1);
+          set(handles.Alt,'string',handles.M.genstrct.alt.values(API));
+          set(handles.DescentRate,'string',num2str(handles.M.approacharr(1,1)));
+          set(handles.ThrustSet,'string',num2str(handles.M.approacharr(1,4)));
+          set(handles.FlapSet,'string',num2str(handles.M.approacharr(1,2)));
+          set(handles.FlapSet2,'string',num2str(handles.M.approacharr(1,3)));
+        else
+            set(handles.Alt,'string','Altitude');
+            set(handles.ThrustSet,'string','Thrust');
+            set(handles.FlapSet,'string','Flaps');
+            set(handles.DescentRate,'string','Rate');
+        end
+    else
+        if handles.index.build==1
+          API = handles.M.genstrct.alt.ind.AP2_ALT_i(ident);
+          set(handles.Alt,'string',handles.M.genstrct.alt.values(API));
+          set(handles.DescentRate,'string',num2str(handles.M.approacharr(ident,1)));
+          set(handles.ThrustSet,'string',num2str(handles.M.approacharr(ident,4)));
+          set(handles.FlapSet,'string',num2str(handles.M.approacharr(ident,2)));
+          set(handles.FlapSet2,'string',num2str(handles.M.approacharr(ident,3)));
+        else
+            set(handles.Alt,'string','Altitude');
+            set(handles.ThrustSet,'string','Thrust');
+            set(handles.FlapSet,'string','Flaps');
+            set(handles.DescentRate,'string','Rate');
+        end
+    end
+elseif strncmp(list,'Landing',3) == 1
+    ch = char(list);
+    ident = str2double(ch(end));
+    real = isreal(ident);
+    nan = isnan(ident);
+    if real == 0 || nan == 1 || ident == 1
+        if handles.index.build==1
+        set(handles.FlapSet,'string',num2str(handles.M.landingarr(1,1)));
+        set(handles.ThrustSet,'string',num2str(handles.M.landingarr(1,2)));
+        else
+            set(handles.ThrustSet,'string','Thrust');
+            set(handles.FlapSet,'string','Flaps');
+        end
+    else
+         if handles.index.build==1
+        set(handles.FlapSet,'string',num2str(handles.M.landingarr(ident,1)));
+        set(handles.ThrustSet,'string',num2str(handles.M.landingarr(ident,2)));
+        else
+            set(handles.ThrustSet,'string','Thrust');
+            set(handles.FlapSet,'string','Flaps');
+        end
+    end
+elseif strncmp(list,'Shutdown',3) == 1
+    ch = char(list);
+    ident = str2double(ch(end));
+    real = isreal(ident);
+    nan = isnan(ident);
+    if real == 0 || nan == 1 || ident == 1
+        if handles.index.build==1
+          set(handles.Time,'string',num2str(handles.M.shutdownarr(1,1)/60));
+        else
+             set(handles.Time,'string','Time');
+        end
+    else
+         if handles.index.build==1
+          set(handles.Time,'string',num2str(handles.M.shutdownarr(ident,1)));
+        else
+             set(handles.Time,'string','Time');
+        end
+    end
+end
 
 
 function altindex(hObject,handles)
