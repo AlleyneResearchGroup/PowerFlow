@@ -87,7 +87,11 @@ for i = 1:N_mssnphase(1)
             cruise_i = cruise_i+1;
             %cruise()
     elseif strcmp(phaselist(i),'Descent') == 1
-            disp('descent')
+        
+
+climbNo = sum(strcmp(phaselist,'Climb'))
+
+   disp('descent')
             j = desc_i;
             MSSN_temp = descent(t,alt(DE1_ALT_i(j)),alt(DE2_ALT_i(j)),N_ENG...
                 ,descentarr(j,2),descentarr(j,1));%descent()

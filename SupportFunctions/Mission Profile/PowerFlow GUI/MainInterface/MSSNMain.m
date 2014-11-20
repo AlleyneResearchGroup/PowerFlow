@@ -61,7 +61,6 @@ assignin('base','M',M)
 evalin('base','load(''Defaults.mat'')');
 handles.M = M.M;
 handles.index.build = 0;
-handles.index.define=0;
 evalin('base','');
 % Update handles structure
 guidata(hObject, handles);
@@ -274,11 +273,7 @@ val = get(handles.Definelist,'Value');
 list = a(val);
 varopt(handles,list,val,'on');
 altindex(hObject,handles)
-guidata(hObject, handles);
-
 definestatestext(hObject, handles)
-
-
 
 
 
@@ -396,10 +391,6 @@ list = a(val);
 varopt(handles,list,val,'off');
 
 
-
-
-
-%%%%%%%%%%Input code here. 11/2/2014%%%%%%%%%%%%%
 if numel(get(handles.MSSNList,'string'))>val
 new_list=a(val+1);
 set(handles.Definelist,'value',val+1);
@@ -412,7 +403,6 @@ set(handles.DescentRate,'string','Rate');
 set(handles.FlapSet,'string','Flap Angle');
 set(handles.FlapSet2,'string','Flap Angle');
 end
-definestatestext(hObject, handles)
 
 % --- Executes on button press in BuildSave.
 function BuildSave_Callback(hObject, eventdata, handles)
@@ -1096,7 +1086,7 @@ elseif strncmp(list,'Descent',3) == 1
         handles.M.descentarr(1,1) = str2double(get(handles.DescentRate,'string'));
         handles.M.descentarr(1,2) = str2double(get(handles.ThrustSet,'string'));
         ALT = str2double(get(handles.Alt,'string'));
-        DEI = handles.M.genstrct.alt.ind.DE2_ALT_i(1);
+        DEI = handles.M.genstrct.alt.ind.DE2_ALT_i(1)
         handles.M.genstrct.alt.values(DEI) = ALT;
     else
         handles.M.descentarr(ident,1) = str2double(get(handles.DescentRate,'string'));
@@ -1170,17 +1160,70 @@ end
 assignin('base', 'M', handles.M)
 guidata(hObject,handles)
 
+
+function altindex(hObject,handles)
+% this function indexes the altitudes so that the right altitude is used
+% for each phase.  the altitudes or simply kept in a standard array such as
+% the following [0, 10000, 35000, 3000, 0].  Each phase must know which
+% altitude or altitudes to operate at, hence each gets indices
+MSSNlist = cellstr(get(handles.MSSNList,'String'));
+M = handles.M;
+j = 1;
+N_mssnphase = size(MSSNlist);
+M.genstrct.alt.ind.ST_ALT_i = []; %Startup altitude index
+M.genstrct.alt.ind.TA_ALT_i = []; %Taxi altitude index
+M.genstrct.alt.ind.TO_ALT_i = []; %Take Off altitude index
+M.genstrct.alt.ind.CL1_ALT_i = []; %Climb Starting altitude index
+M.genstrct.alt.ind.CL2_ALT_i = []; %Climb final altitude index
+M.genstrct.alt.ind.CR_ALT_i = []; %Cruise altitude index
+M.genstrct.alt.ind.DE1_ALT_i = []; %Descent Starting altitude index
+M.genstrct.alt.ind.DE2_ALT_i = []; %Descent final altitude index
+M.genstrct.alt.ind.LO_ALT_i = []; %Loiter altitude index
+M.genstrct.alt.ind.AP1_ALT_i = []; %Approach Starting altitude index
+M.genstrct.alt.ind.AP2_ALT_i = []; %Approach final altitude index (also 
+    % serves as landing altitude index
+M.genstrct.alt.ind.SD_ALT_i = []; %Shutdown altitude index
+for i = 1:N_mssnphase(1)
+    if strncmp(MSSNlist(i),'Startup',3) == 1
+        M.genstrct.alt.ind.ST_ALT_i = [M.genstrct.alt.ind.ST_ALT_i j];
+    elseif strncmp(MSSNlist(i),'Taxi',3) == 1
+        M.genstrct.alt.ind.TA_ALT_i = [M.genstrct.alt.ind.TA_ALT_i j];
+    elseif strncmp(MSSNlist(i),'Takeoff',3) == 1
+        M.genstrct.alt.ind.TO_ALT_i = [M.genstrct.alt.ind.TO_ALT_i j];
+    elseif strncmp(MSSNlist(i),'Climb',3) == 1
+        M.genstrct.alt.ind.CL1_ALT_i = [M.genstrct.alt.ind.CL1_ALT_i j];
+        M.genstrct.alt.ind.CL2_ALT_i = [M.genstrct.alt.ind.CL2_ALT_i j+1];
+        j = j+1;
+    elseif strncmp(MSSNlist(i),'Cruise',3) == 1
+        M.genstrct.alt.ind.CR_ALT_i = [M.genstrct.alt.ind.CR_ALT_i j];
+    elseif strncmp(MSSNlist(i),'Descent',3) == 1
+        M.genstrct.alt.ind.DE1_ALT_i = [M.genstrct.alt.ind.DE1_ALT_i j];
+        M.genstrct.alt.ind.DE2_ALT_i = [M.genstrct.alt.ind.DE2_ALT_i j+1];
+        j = j+1;
+    elseif strncmp(MSSNlist(i),'Loiter',3) == 1
+        M.genstrct.alt.ind.LO_ALT_i = [M.genstrct.alt.ind.LO_ALT_i j];
+    elseif strncmp(MSSNlist(i),'Approach',3) == 1
+        M.genstrct.alt.ind.AP1_ALT_i = [M.genstrct.alt.ind.AP1_ALT_i j];
+        M.genstrct.alt.ind.AP2_ALT_i = [M.genstrct.alt.ind.AP2_ALT_i j+1];
+        j = j+1;
+    elseif strncmp(MSSNlist(i),'Shutdown',3) == 1
+        M.genstrct.alt.ind.SD_ALT_i = [M.genstrct.alt.ind.SD_ALT_i j];
+    end
+end
+handles.M = M;
+guidata(hObject,handles)
+
 function definestatestext(hObject, handles)
 a = get(handles.Definelist,'string');
 val = get(handles.Definelist,'Value');
 list = a(val);
-
+ 
 if strncmp(list,'Startup',3) == 1
     ch = char(list);
     ident = str2double(ch(end));
     real = isreal(ident);
     nan = isnan(ident);
-
+ 
 if real == 0 || nan == 1 || ident == 1
         if handles.index.build==1
         set(handles.Time,'string',num2str(handles.M.startuparr(1,1)/60));
@@ -1437,58 +1480,6 @@ elseif strncmp(list,'Shutdown',3) == 1
     end
 end
 
-
-function altindex(hObject,handles)
-% this function indexes the altitudes so that the right altitude is used
-% for each phase.  the altitudes or simply kept in a standard array such as
-% the following [0, 10000, 35000, 3000, 0].  Each phase must know which
-% altitude or altitudes to operate at, hence each gets indices
-MSSNlist = cellstr(get(handles.MSSNList,'String'));
-M = handles.M;
-j = 1;
-N_mssnphase = size(MSSNlist);
-M.genstrct.alt.ind.ST_ALT_i = []; %Startup altitude index
-M.genstrct.alt.ind.TA_ALT_i = []; %Taxi altitude index
-M.genstrct.alt.ind.TO_ALT_i = []; %Take Off altitude index
-M.genstrct.alt.ind.CL1_ALT_i = []; %Climb Starting altitude index
-M.genstrct.alt.ind.CL2_ALT_i = []; %Climb final altitude index
-M.genstrct.alt.ind.CR_ALT_i = []; %Cruise altitude index
-M.genstrct.alt.ind.DE1_ALT_i = []; %Descent Starting altitude index
-M.genstrct.alt.ind.DE2_ALT_i = []; %Descent final altitude index
-M.genstrct.alt.ind.LO_ALT_i = []; %Loiter altitude index
-M.genstrct.alt.ind.AP1_ALT_i = []; %Approach Starting altitude index
-M.genstrct.alt.ind.AP2_ALT_i = []; %Approach final altitude index (also 
-    % serves as landing altitude index
-M.genstrct.alt.ind.SD_ALT_i = []; %Shutdown altitude index
-for i = 1:N_mssnphase(1)
-    if strncmp(MSSNlist(i),'Startup',3) == 1
-        M.genstrct.alt.ind.ST_ALT_i = [M.genstrct.alt.ind.ST_ALT_i j];
-    elseif strncmp(MSSNlist(i),'Taxi',3) == 1
-        M.genstrct.alt.ind.TA_ALT_i = [M.genstrct.alt.ind.TA_ALT_i j];
-    elseif strncmp(MSSNlist(i),'Takeoff',3) == 1
-        M.genstrct.alt.ind.TO_ALT_i = [M.genstrct.alt.ind.TO_ALT_i j];
-    elseif strncmp(MSSNlist(i),'Climb',3) == 1
-        M.genstrct.alt.ind.CL1_ALT_i = [M.genstrct.alt.ind.CL1_ALT_i j];
-        M.genstrct.alt.ind.CL2_ALT_i = [M.genstrct.alt.ind.CL2_ALT_i j+1];
-        j = j+1;
-    elseif strncmp(MSSNlist(i),'Cruise',3) == 1
-        M.genstrct.alt.ind.CR_ALT_i = [M.genstrct.alt.ind.CR_ALT_i j];
-    elseif strncmp(MSSNlist(i),'Descent',3) == 1
-        M.genstrct.alt.ind.DE1_ALT_i = [M.genstrct.alt.ind.DE1_ALT_i j];
-        M.genstrct.alt.ind.DE2_ALT_i = [M.genstrct.alt.ind.DE2_ALT_i j+1];
-        j = j+1;
-    elseif strncmp(MSSNlist(i),'Loiter',3) == 1
-        M.genstrct.alt.ind.LO_ALT_i = [M.genstrct.alt.ind.LO_ALT_i j];
-    elseif strncmp(MSSNlist(i),'Approach',3) == 1
-        M.genstrct.alt.ind.AP1_ALT_i = [M.genstrct.alt.ind.AP1_ALT_i j];
-        M.genstrct.alt.ind.AP2_ALT_i = [M.genstrct.alt.ind.AP2_ALT_i j+1];
-        j = j+1;
-    elseif strncmp(MSSNlist(i),'Shutdown',3) == 1
-        M.genstrct.alt.ind.SD_ALT_i = [M.genstrct.alt.ind.SD_ALT_i j];
-    end
-end
-handles.M = M;
-guidata(hObject,handles)
 
 function plotfcn(ind,handles)
 % Plotting function.  could also populate the table in the GUI.  Needs
