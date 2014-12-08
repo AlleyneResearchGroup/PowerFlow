@@ -1,10 +1,10 @@
-% tic
-% sim('Boeing737Sample_updatedCopy.mdl')
-% toc
-
+tic
+sim('Boeing737Sample_updatedCopy.mdl')
+time_ex = toc
+save('Benchmark_data1.mat')
 close all
 
-load('Benchmark_data.mat')
+load('Benchmark_data1.mat')
 %Elapsed time is 5785.585284 seconds.
 figure
 subplot(3,1,1)
