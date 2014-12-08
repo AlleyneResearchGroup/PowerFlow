@@ -8,7 +8,11 @@ Model {
     NumRootOutports	    0
     ParameterArgumentNames  ""
 <<<<<<< HEAD
+<<<<<<< HEAD
     ComputedModelVersion    "1.319"
+=======
+    ComputedModelVersion    "1.317"
+>>>>>>> parent of f8d1e8f... Cosmetic changes to Toolset
 =======
     ComputedModelVersion    "1.317"
 >>>>>>> parent of f8d1e8f... Cosmetic changes to Toolset
@@ -54,6 +58,7 @@ Model {
 	Visible			[1]
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
       Object {
 	$PropName		"EditorsInfo"
 	$ObjectID		5
@@ -65,6 +70,8 @@ Model {
 	ZoomFactor		[1.0]
 	Offset			[0.0, 0.0]
 =======
+=======
+>>>>>>> parent of f8d1e8f... Cosmetic changes to Toolset
       Array {
 	Type			"Simulink.EditorInfo"
 	Dimension		3
@@ -96,6 +103,9 @@ Model {
 	  Offset		  [-33.41666666666697, -37.083333333333428]
 	}
 	PropName		"EditorsInfo"
+<<<<<<< HEAD
+>>>>>>> parent of f8d1e8f... Cosmetic changes to Toolset
+=======
 >>>>>>> parent of f8d1e8f... Cosmetic changes to Toolset
       }
     }
@@ -107,9 +117,15 @@ Model {
   LastModifiedBy	  "mwillms4"
   ModifiedDateFormat	  "%<Auto>"
 <<<<<<< HEAD
+<<<<<<< HEAD
   LastModifiedDate	  "Sat Dec 06 18:18:09 2014"
   RTWModifiedTimeStamp	  339790592
   ModelVersionFormat	  "1.%<AutoIncrement:319>"
+=======
+  LastModifiedDate	  "Sat Dec 06 17:19:53 2014"
+  RTWModifiedTimeStamp	  339787139
+  ModelVersionFormat	  "1.%<AutoIncrement:317>"
+>>>>>>> parent of f8d1e8f... Cosmetic changes to Toolset
 =======
   LastModifiedDate	  "Sat Dec 06 17:19:53 2014"
   RTWModifiedTimeStamp	  339787139
