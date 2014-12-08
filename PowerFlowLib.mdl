@@ -19,7 +19,7 @@ Library {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [683.0, 0.0, 683.0, 724.0]
+      Location		      [1414.0, 941.0, 942.0, 613.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -41,11 +41,11 @@ Library {
 	$ObjectID		5
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
-	ViewObjType		"SimulinkSubsys"
-	LoadSaveID		"18409"
-	Extents			[444.0, 572.0]
-	ZoomFactor		[1.05]
-	Offset			[310.0, 0.0]
+	ViewObjType		"SimulinkTopLevel"
+	LoadSaveID		"0"
+	Extents			[699.0, 446.0]
+	ZoomFactor		[1.0]
+	Offset			[0.0, 0.0]
       }
     }
   }
@@ -53,15 +53,15 @@ Library {
   Creator		  "mwillms4"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "cmm"
+  LastModifiedBy	  "mwillms4"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Dec 08 13:01:38 2014"
-  RTWModifiedTimeStamp	  339944485
-  ModelVersionFormat	  "1.%<AutoIncrement:268>"
+  LastModifiedDate	  "Mon Dec 08 13:37:31 2014"
+  RTWModifiedTimeStamp	  339946645
+  ModelVersionFormat	  "1.%<AutoIncrement:270>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
-  LibraryLinkDisplay	  "all"
+  LibraryLinkDisplay	  "disabled"
   WideLines		  off
   ShowLineDimensions	  off
   ShowPortDataTypes	  off
@@ -1366,8 +1366,8 @@ Library {
   }
   System {
     Name		    "PowerFlowLib"
-    Location		    [683, 0, 1366, 724]
-    Open		    off
+    Location		    [1414, 941, 2356, 1554]
+    Open		    on
     ModelBrowserVisibility  on
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -1403,7 +1403,7 @@ Library {
       }
       System {
 	Name			"Energy & Power Systems"
-	Location		[683, 0, 1366, 724]
+	Location		[123, 920, 1065, 1533]
 	Open			off
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	128
@@ -1433,7 +1433,7 @@ Library {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Additional Systems"
-	    Location		    [-1688, 862, 8, 1888]
+	    Location		    [1192, 862, 2888, 1888]
 	    Open		    off
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    200
@@ -1620,7 +1620,7 @@ Library {
 	      }
 	      System {
 		Name			"Commercial Cabin Systems"
-		Location		[1531, 910, 2566, 1891]
+		Location		[1192, 862, 2888, 1888]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -1966,7 +1966,7 @@ Library {
 		  Position		  [545, 56, 660, 94]
 		  ZOrder		  -24
 		  ShowName		  off
-		  LibraryVersion	  "1.264"
+		  LibraryVersion	  "1.269"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  ContentPreviewEnabled	  off
@@ -1985,7 +1985,7 @@ Library {
 		  Position		  [545, 136, 660, 174]
 		  ZOrder		  -25
 		  ShowName		  off
-		  LibraryVersion	  "1.264"
+		  LibraryVersion	  "1.269"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  ContentPreviewEnabled	  off
@@ -2004,7 +2004,7 @@ Library {
 		  Position		  [545, 271, 660, 309]
 		  ZOrder		  -26
 		  ShowName		  off
-		  LibraryVersion	  "1.264"
+		  LibraryVersion	  "1.269"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  ContentPreviewEnabled	  off
@@ -2023,7 +2023,7 @@ Library {
 		  Position		  [545, 461, 660, 499]
 		  ZOrder		  -27
 		  ShowName		  off
-		  LibraryVersion	  "1.264"
+		  LibraryVersion	  "1.269"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  ContentPreviewEnabled	  off
@@ -2042,7 +2042,7 @@ Library {
 		  Position		  [545, 531, 660, 569]
 		  ZOrder		  -28
 		  ShowName		  off
-		  LibraryVersion	  "1.264"
+		  LibraryVersion	  "1.269"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  ContentPreviewEnabled	  off
@@ -2151,7 +2151,7 @@ Library {
 		  Position		  [755, 15, 845, 45]
 		  ZOrder		  -34
 		  ShowName		  off
-		  LibraryVersion	  "1.264"
+		  LibraryVersion	  "1.269"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ThermalSink"
 		  SourceType		  "Thermal Sink"
 		  ContentPreviewEnabled	  off
@@ -2169,7 +2169,7 @@ Library {
 		  Position		  [620, 230, 710, 260]
 		  ZOrder		  -35
 		  ShowName		  off
-		  LibraryVersion	  "1.264"
+		  LibraryVersion	  "1.269"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ThermalSink"
 		  SourceType		  "Thermal Sink"
 		  ContentPreviewEnabled	  off
@@ -2187,7 +2187,7 @@ Library {
 		  Position		  [615, 340, 705, 370]
 		  ZOrder		  -36
 		  ShowName		  off
-		  LibraryVersion	  "1.264"
+		  LibraryVersion	  "1.269"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ThermalSink"
 		  SourceType		  "Thermal Sink"
 		  ContentPreviewEnabled	  off
@@ -2205,7 +2205,7 @@ Library {
 		  Position		  [615, 385, 705, 415]
 		  ZOrder		  -37
 		  ShowName		  off
-		  LibraryVersion	  "1.264"
+		  LibraryVersion	  "1.269"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ThermalSink"
 		  SourceType		  "Thermal Sink"
 		  ContentPreviewEnabled	  off
@@ -2221,7 +2221,7 @@ Library {
 		  Position		  [880, 307, 930, 333]
 		  ZOrder		  -38
 		  BackgroundColor	  "green"
-		  LibraryVersion	  "1.264"
+		  LibraryVersion	  "1.269"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/data_sink"
 		  SourceType		  "Data Sink"
 		  ContentPreviewEnabled	  off
@@ -2812,7 +2812,7 @@ Library {
 	      }
 	      System {
 		Name			"External Lights"
-		Location		[1596, 888, 2631, 1869]
+		Location		[1192, 862, 2888, 1888]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -3134,7 +3134,7 @@ Library {
 		  Position		  [545, 56, 660, 94]
 		  ZOrder		  -24
 		  ShowName		  off
-		  LibraryVersion	  "1.264"
+		  LibraryVersion	  "1.269"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  ContentPreviewEnabled	  off
@@ -3153,7 +3153,7 @@ Library {
 		  Position		  [545, 131, 660, 169]
 		  ZOrder		  -25
 		  ShowName		  off
-		  LibraryVersion	  "1.264"
+		  LibraryVersion	  "1.269"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  ContentPreviewEnabled	  off
@@ -3172,7 +3172,7 @@ Library {
 		  Position		  [545, 201, 660, 239]
 		  ZOrder		  -26
 		  ShowName		  off
-		  LibraryVersion	  "1.264"
+		  LibraryVersion	  "1.269"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  ContentPreviewEnabled	  off
@@ -3191,7 +3191,7 @@ Library {
 		  Position		  [545, 281, 660, 319]
 		  ZOrder		  -27
 		  ShowName		  off
-		  LibraryVersion	  "1.264"
+		  LibraryVersion	  "1.269"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  ContentPreviewEnabled	  off
@@ -3210,7 +3210,7 @@ Library {
 		  Position		  [545, 356, 660, 394]
 		  ZOrder		  -28
 		  ShowName		  off
-		  LibraryVersion	  "1.264"
+		  LibraryVersion	  "1.269"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  ContentPreviewEnabled	  off
@@ -3319,7 +3319,7 @@ Library {
 		  Position		  [545, 510, 635, 540]
 		  ZOrder		  -34
 		  ShowName		  off
-		  LibraryVersion	  "1.264"
+		  LibraryVersion	  "1.269"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ThermalSink"
 		  SourceType		  "Thermal Sink"
 		  ContentPreviewEnabled	  off
@@ -3337,7 +3337,7 @@ Library {
 		  Position		  [545, 560, 635, 590]
 		  ZOrder		  -35
 		  ShowName		  off
-		  LibraryVersion	  "1.264"
+		  LibraryVersion	  "1.269"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ThermalSink"
 		  SourceType		  "Thermal Sink"
 		  ContentPreviewEnabled	  off
@@ -3355,7 +3355,7 @@ Library {
 		  Position		  [545, 600, 635, 630]
 		  ZOrder		  -36
 		  ShowName		  off
-		  LibraryVersion	  "1.264"
+		  LibraryVersion	  "1.269"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ThermalSink"
 		  SourceType		  "Thermal Sink"
 		  ContentPreviewEnabled	  off
@@ -3373,7 +3373,7 @@ Library {
 		  Position		  [545, 645, 635, 675]
 		  ZOrder		  -37
 		  ShowName		  off
-		  LibraryVersion	  "1.264"
+		  LibraryVersion	  "1.269"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ThermalSink"
 		  SourceType		  "Thermal Sink"
 		  ContentPreviewEnabled	  off
@@ -3389,7 +3389,7 @@ Library {
 		  Position		  [880, 202, 930, 228]
 		  ZOrder		  -38
 		  BackgroundColor	  "green"
-		  LibraryVersion	  "1.264"
+		  LibraryVersion	  "1.269"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/data_sink"
 		  SourceType		  "Data Sink"
 		  ContentPreviewEnabled	  off
@@ -3778,7 +3778,7 @@ Library {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Electrical"
-	    Location		    [683, 0, 1366, 724]
+	    Location		    [1192, 862, 2888, 1888]
 	    Open		    off
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    200
@@ -3807,7 +3807,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Battery"
-		Location		[200, 52, 684, 1118]
+		Location		[1192, 862, 2888, 1888]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -3887,7 +3887,7 @@ Library {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "31857"
+		    SIDHighWatermark	    "32089"
 		    SIDPrevWatermark	    "30301"
 		    Block {
 		    BlockType		    Inport
@@ -8473,7 +8473,7 @@ Library {
 		    Position		    [1075, 112, 1125, 138]
 		    ZOrder		    -11
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.264"
+		    LibraryVersion	    "1.269"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    ContentPreviewEnabled   off
@@ -8693,7 +8693,7 @@ Library {
 		Annotation {
 		  SID			  "30264"
 		  Name			  "Battery Model"
-		  Position		  [112, 21, 217, 44]
+		  Position		  [112, 21, 218, 44]
 		  AutoSize		  on
 		  WordWrap		  off
 		  ZOrder		  -1
@@ -8718,7 +8718,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Converters"
-		Location		[200, 52, 684, 1102]
+		Location		[1192, 862, 2888, 1888]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -19217,7 +19217,7 @@ Library {
 		Annotation {
 		  SID			  "30265"
 		  Name			  "DC/DC Converters"
-		  Position		  [182, 26, 321, 49]
+		  Position		  [182, 26, 325, 49]
 		  AutoSize		  on
 		  WordWrap		  off
 		  ZOrder		  -1
@@ -19243,7 +19243,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Coordinate Transformation"
-		Location		[114, 75, 1322, 1021]
+		Location		[1192, 862, 2888, 1888]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -19833,7 +19833,7 @@ Library {
 		Annotation {
 		  SID			  "30269"
 		  Name			  "Coordinate Transformation"
-		  Position		  [152, 29, 348, 52]
+		  Position		  [152, 29, 349, 52]
 		  AutoSize		  on
 		  WordWrap		  off
 		  ZOrder		  -1
@@ -19858,7 +19858,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Inverters"
-		Location		[180, 157, 1304, 1002]
+		Location		[1192, 862, 2888, 1888]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -24707,7 +24707,7 @@ Library {
 		Annotation {
 		  SID			  "30270"
 		  Name			  "Voltage Source Inverter"
-		  Position		  [547, 21, 717, 44]
+		  Position		  [547, 21, 719, 44]
 		  AutoSize		  on
 		  WordWrap		  off
 		  ZOrder		  -1
@@ -24717,7 +24717,7 @@ Library {
 		Annotation {
 		  SID			  "30271"
 		  Name			  "Current Source Inverter"
-		  Position		  [177, 21, 348, 44]
+		  Position		  [177, 21, 350, 44]
 		  AutoSize		  on
 		  WordWrap		  off
 		  ZOrder		  -2
@@ -33818,7 +33818,7 @@ Library {
 		Annotation {
 		  SID			  "30276"
 		  Name			  "Electrical Loads"
-		  Position		  [137, 26, 256, 49]
+		  Position		  [137, 26, 257, 49]
 		  AutoSize		  on
 		  WordWrap		  off
 		  ZOrder		  -1
@@ -33843,7 +33843,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Loss Estimation"
-		Location		[991, 89, 2199, 1035]
+		Location		[1192, 862, 2888, 1888]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -37628,7 +37628,7 @@ Library {
 		Annotation {
 		  SID			  "30277"
 		  Name			  "Power Loss Estimation"
-		  Position		  [172, 26, 339, 49]
+		  Position		  [172, 26, 342, 49]
 		  AutoSize		  on
 		  WordWrap		  off
 		  ZOrder		  -1
@@ -37653,7 +37653,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Machines"
-		Location		[126, 52, 1250, 989]
+		Location		[1192, 862, 2888, 1888]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -45699,7 +45699,7 @@ Library {
 		Annotation {
 		  SID			  "30286"
 		  Name			  "Electric Machines"
-		  Position		  [368, 27, 500, 50]
+		  Position		  [368, 27, 501, 50]
 		  AutoSize		  on
 		  WordWrap		  off
 		  ZOrder		  -1
@@ -45724,7 +45724,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Rectifiers"
-		Location		[114, 75, 1322, 1021]
+		Location		[1192, 862, 2888, 1888]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -48550,7 +48550,7 @@ Library {
 		Annotation {
 		  SID			  "30287"
 		  Name			  "Rectifier"
-		  Position		  [127, 21, 191, 44]
+		  Position		  [127, 21, 192, 44]
 		  AutoSize		  on
 		  WordWrap		  off
 		  ZOrder		  -1
@@ -48575,8 +48575,8 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Systems"
-		Location		[683, 0, 1366, 724]
-		Open			on
+		Location		[1414, 941, 2356, 1554]
+		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -57908,7 +57908,7 @@ Library {
 		  }
 		  System {
 		    Name		    "Gearbox"
-		    Location		    [387, 273, 1048, 1001]
+		    Location		    [1192, 862, 2888, 1888]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -65841,25 +65841,29 @@ Library {
 		    Name		    "machine_mode"
 		    Prompt		    "Machine Preset"
 		    Value		    "300kVA_Gen"
-		    Callback		    "clc\nh=get_param(gcb,'handle');\nhblock=get(h);\ndata=load('GenProp.mat');\n\nif strcmp(hblock.ma"
-		    "chine_mode,'User-defined')==1;\n    adv_warn=warndlg(sprintf('User-defined option is for advanced users'));\n   "
-		    " else\nif strcmp(hblock.machine_mode,'20kVA_Gen')==1; n=1;\nelseif strcmp(hblock.machine_mode,'52.5kVA_Gen')==1;"
-		    " n=2;\nelseif strcmp(hblock.machine_mode,'100kVA_Gen')==1; n=3;\nelseif strcmp(hblock.machine_mode,'300kVA_Gen')"
-		    "==1; n=4;\nelseif strcmp(hblock.machine_mode,'800kVA_Gen')==1; n=5;    \nelseif strcmp(hblock.machine_mode,'1MVA"
-		    "_Gen')==1; n=6;\nend\n\n    set1=num2str(data.r(1,n));\n    set2=num2str(data.r(2,n));\n    set3=num2str(data.r("
-		    "3,n));\n    set4=num2str(data.r(4,n));\n    set_param(gcb,'Rs',set1,'Xls',set2,'Xmd',set3,'Xmq',set4)\n    set1="
-		    "num2str(data.r(5,n));\n    set2=num2str(data.r(6,n));\n    set_param(gcb,'R_fd',set1,'Xlfd',set2) %5 and 6\n    "
-		    "set1=num2str(data.r(7,n));\n    set2=num2str(data.r(8,n));\n    set3=num2str(data.r(9,n));\n    set4=num2str(dat"
-		    "a.r(10,n));\n    set5=num2str(data.r(11,n));\n    set6=num2str(data.r(12,n));\n    set_param(gcb,'R_1d',set1,'Xl"
-		    "1d',set2,'R_1q',set3,'Xl1q',set4,'R_2q',set5,'Xl2q',set6) %7-12\n    set1=num2str(data.r(14,n));\n    set2=num2s"
-		    "tr(data.r(15,n));\n    set3=num2str(data.r(16,n));\n    set_param(gcb,'ws',set1,'RTL',set2,'XTL',set3)\n    set1"
-		    "=num2str(data.r(17,n));\n    set2=num2str(data.r(18,n));\n    set3=num2str(data.r(19,n));\n    set4=num2str(data"
-		    ".r(20,n));\n    set5=num2str(data.r(21,n));\n    set6=num2str(data.r(22,n));\n    set_param(gcb,'KA',set1,'KF',s"
-		    "et2,'T_f',set3,'TA',set4,'KE',set5,'TE',set6)\n    set1=num2str(data.r(23,n));\n    set2=num2str(data.r(24,n));\n"
-		    "    set3=num2str(data.r(25,n));\n    set4=num2str(data.r(13,n));\n    set5=num2str(data.r(26,n));\n    set_param"
-		    "(gcb,'SB',set1,'VBDQ',set2,'wB',set3,'P',set4,'H',set5)\n    set1=num2str(1/data.r(27,n));\n    set2=num2str(dat"
-		    "a.r(28,n));\n    set_param(gcb,'R_conv_gen',set1,'mc_gen',set2)\n\nend\n\n\nclear h hblock n data\nclear set1 se"
-		    "t2 set3 set4 set5 set6\n"
+		    Callback		    "h=get_param(gcb,'handle');\nhblock=get(h);\ndata=load('GenProp.mat');\n\nif strcmp(hblock.machine"
+		    "_mode,'User-defined')==1;\n    adv_warn=warndlg(sprintf('User-defined option is for advanced users'));\n    \n  "
+		    "  % grabs current values of enabled GUI parameters\n    mskenabl = get_param(gcb,'MaskEnables');\n    mskenabl(1"
+		    ":size(mskenabl,1)) = {'on'};  % sets all parameters to enable\n    set_param(gcb,'MaskEnables',mskenabl)\n    \n"
+		    "else\n    if strcmp(hblock.machine_mode,'20kVA_Gen')==1; n=1;\n    elseif strcmp(hblock.machine_mode,'52.5kVA_Ge"
+		    "n')==1; n=2;\n    elseif strcmp(hblock.machine_mode,'100kVA_Gen')==1; n=3;\n    elseif strcmp(hblock.machine_mod"
+		    "e,'300kVA_Gen')==1; n=4;\n    elseif strcmp(hblock.machine_mode,'800kVA_Gen')==1; n=5;    \n    elseif strcmp(hb"
+		    "lock.machine_mode,'1MVA_Gen')==1; n=6;\n    end\n\n    set1=num2str(data.r(1,n));\n    set2=num2str(data.r(2,n))"
+		    ";\n    set3=num2str(data.r(3,n));\n    set4=num2str(data.r(4,n));\n    set_param(gcb,'Rs',set1,'Xls',set2,'Xmd',"
+		    "set3,'Xmq',set4)\n    set1=num2str(data.r(5,n));\n    set2=num2str(data.r(6,n));\n    set_param(gcb,'R_fd',set1,"
+		    "'Xlfd',set2) %5 and 6\n    set1=num2str(data.r(7,n));\n    set2=num2str(data.r(8,n));\n    set3=num2str(data.r(9"
+		    ",n));\n    set4=num2str(data.r(10,n));\n    set5=num2str(data.r(11,n));\n    set6=num2str(data.r(12,n));\n    se"
+		    "t_param(gcb,'R_1d',set1,'Xl1d',set2,'R_1q',set3,'Xl1q',set4,'R_2q',set5,'Xl2q',set6) %7-12\n    set1=num2str(dat"
+		    "a.r(14,n));\n    set2=num2str(data.r(15,n));\n    set3=num2str(data.r(16,n));\n    set_param(gcb,'ws',set1,'RTL'"
+		    ",set2,'XTL',set3)\n    set1=num2str(data.r(17,n));\n    set2=num2str(data.r(18,n));\n    set3=num2str(data.r(19,"
+		    "n));\n    set4=num2str(data.r(20,n));\n    set5=num2str(data.r(21,n));\n    set6=num2str(data.r(22,n));\n    set"
+		    "_param(gcb,'KA',set1,'KF',set2,'T_f',set3,'TA',set4,'KE',set5,'TE',set6)\n    set1=num2str(data.r(23,n));\n    s"
+		    "et2=num2str(data.r(24,n));\n    set3=num2str(data.r(25,n));\n    set4=num2str(data.r(13,n));\n    set5=num2str(d"
+		    "ata.r(26,n));\n    set_param(gcb,'SB',set1,'VBDQ',set2,'wB',set3,'P',set4,'H',set5)\n    set1=num2str(1/data.r(2"
+		    "7,n));\n    set2=num2str(data.r(28,n));\n    set_param(gcb,'R_conv_gen',set1,'mc_gen',set2)\n    \n    % grabs c"
+		    "urrent values of enabled GUI parameters\n    mskenabl = get_param(gcb,'MaskEnables');\n    % sets all parameters"
+		    " to enable\n    mskenabl(2:size(mskenabl,1)-3) = {'off'};\n    set_param(gcb,'MaskEnables',mskenabl)\n    \n\nen"
+		    "d\n\n\nclear h hblock n data mskenabl\nclear set1 set2 set3 set4 set5 set6\n"
 		    }
 		    Object {
 		    $ObjectID		    251
@@ -66063,6 +66067,7 @@ Library {
 		    Name		    "init_gear"
 		    Prompt		    "Gear Box Parameters"
 		    Value		    "'init_gear_box.mat'"
+		    Enabled		    "off"
 		    }
 		    Object {
 		    $ObjectID		    280
@@ -66119,18 +66124,22 @@ Library {
 		    Dimension		    4
 		    Object {
 		    $ObjectID		    287
+		    PromptLocation	    "left"
 		    Name		    "Rs"
 		    }
 		    Object {
 		    $ObjectID		    288
+		    PromptLocation	    "left"
 		    Name		    "Xls"
 		    }
 		    Object {
 		    $ObjectID		    289
+		    PromptLocation	    "left"
 		    Name		    "Xmd"
 		    }
 		    Object {
 		    $ObjectID		    290
+		    PromptLocation	    "left"
 		    Name		    "Xmq"
 		    }
 		    PropName		    "DialogControls"
@@ -66309,27 +66318,19 @@ Library {
 		    $ClassName		    "Simulink.dialog.Group"
 		    Prompt		    "Simulink:studio:ToolBarParametersMenu"
 		    Array {
-		    Type		    "Simulink.dialog.Control"
-		    Dimension		    4
+		    Type		    "Simulink.dialog.parameter.Edit"
+		    Dimension		    3
 		    Object {
 		    $ObjectID		    323
-		    $ClassName		    "Simulink.dialog.parameter.Edit"
 		    Name		    "init_gear"
 		    }
 		    Object {
 		    $ObjectID		    324
-		    $ClassName		    "Simulink.dialog.parameter.Edit"
 		    Name		    "fan_load"
 		    }
 		    Object {
 		    $ObjectID		    325
-		    $ClassName		    "Simulink.dialog.parameter.Edit"
 		    Name		    "exciter_param"
-		    }
-		    Object {
-		    $ObjectID		    326
-		    $ClassName		    "Simulink.dialog.TabContainer"
-		    Name		    "Container3"
 		    }
 		    PropName		    "DialogControls"
 		    }
@@ -66340,7 +66341,7 @@ Library {
 		  }
 		  System {
 		    Name		    "Generation Unit\nSync-Sync"
-		    Location		    [-4, 0, 1370, 732]
+		    Location		    [1192, 862, 2888, 1888]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -66422,7 +66423,7 @@ Library {
 		    MaskHideContents	    off
 		    Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    327
+		    $ObjectID		    326
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Chopper."
 		    Description		    "Basic chopper.  Lossless storage elements.  Switching model."
@@ -66658,7 +66659,7 @@ Library {
 		    MaskHideContents	    off
 		    Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    328
+		    $ObjectID		    327
 		    $ClassName		    "Simulink.Mask"
 		    Display		    "p = 0:0.1:(2*pi+0.1);\nplot(sin(p), cos(p));\np1 = (-pi/8-0.1-0.2):0.1:(pi/8+0.1-0.2);\nplot(0.8*s"
 		    "in(p1), 0.8*cos(p1), 0.8*sin(p1+pi), 0.8*cos(p1+pi));\np2 = sin((-pi/8-0.1-0.2+pi/8+0.1-0.2)/2);\np3 = sin((-pi/"
@@ -70266,7 +70267,7 @@ Library {
 		    Ports		    [2, 2]
 		    Position		    [170, 132, 285, 263]
 		    ZOrder		    -16
-		    LibraryVersion	    "1.264"
+		    LibraryVersion	    "1.269"
 		    SourceBlock		    "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Gearbox"
 		    SourceType		    ""
 		    ContentPreviewEnabled   off
@@ -70293,7 +70294,7 @@ Library {
 		    MaskHideContents	    off
 		    Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    329
+		    $ObjectID		    328
 		    $ClassName		    "Simulink.Mask"
 		    Display		    "p = 0:0.1:(2*pi+0.1);\nplot(sin(p), cos(p));\np1 = (-pi/8-0.1-0.2):0.1:(pi/8+0.1-0.2);\nplot(0.8*s"
 		    "in(p1), 0.8*cos(p1), 0.8*sin(p1+pi), 0.8*cos(p1+pi));\np2 = sin((-pi/8-0.1-0.2+pi/8+0.1-0.2)/2);\np3 = sin((-pi/"
@@ -74129,7 +74130,7 @@ Library {
 		    Position		    [670, 42, 720, 68]
 		    ZOrder		    -39
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.264"
+		    LibraryVersion	    "1.269"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    ContentPreviewEnabled   off
@@ -74141,7 +74142,7 @@ Library {
 		    Ports		    [3, 2]
 		    Position		    [835, 107, 905, 203]
 		    ZOrder		    -40
-		    LibraryVersion	    "1.264"
+		    LibraryVersion	    "1.269"
 		    SourceBlock		    "PowerFlowLib/Energy & Power Systems/Electrical/Rectifiers/three-phase \nactive\nrectifier\nVol"
 		    "tage Mode"
 		    SourceType		    ""
@@ -74687,7 +74688,7 @@ Library {
 		  MaskHideContents	  off
 		  Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    330
+		    $ObjectID		    329
 		    $ClassName		    "Simulink.Mask"
 		    Description		    "Generator Bus Structure."
 		  }
@@ -74776,7 +74777,7 @@ Library {
 		    MaskHideContents	    off
 		    Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    331
+		    $ObjectID		    330
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Compare To Constant"
 		    Description		    "Determine how a signal compares to a constant."
@@ -74794,7 +74795,7 @@ Library {
 		    Type		    "Simulink.MaskParameter"
 		    Dimension		    4
 		    Object {
-		    $ObjectID		    332
+		    $ObjectID		    331
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -74814,14 +74815,14 @@ Library {
 		    Tunable		    "off"
 		    }
 		    Object {
-		    $ObjectID		    333
+		    $ObjectID		    332
 		    Type		    "edit"
 		    Name		    "const"
 		    Prompt		    "Constant value:"
 		    Value		    "1"
 		    }
 		    Object {
-		    $ObjectID		    334
+		    $ObjectID		    333
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -74837,7 +74838,7 @@ Library {
 		    Tunable		    "off"
 		    }
 		    Object {
-		    $ObjectID		    335
+		    $ObjectID		    334
 		    Type		    "checkbox"
 		    Name		    "ZeroCross"
 		    Prompt		    "Enable zero-crossing detection"
@@ -74942,7 +74943,7 @@ Library {
 		    MaskHideContents	    off
 		    Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    336
+		    $ObjectID		    335
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Compare To Constant"
 		    Description		    "Determine how a signal compares to a constant."
@@ -74960,7 +74961,7 @@ Library {
 		    Type		    "Simulink.MaskParameter"
 		    Dimension		    4
 		    Object {
-		    $ObjectID		    337
+		    $ObjectID		    336
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -74980,14 +74981,14 @@ Library {
 		    Tunable		    "off"
 		    }
 		    Object {
-		    $ObjectID		    338
+		    $ObjectID		    337
 		    Type		    "edit"
 		    Name		    "const"
 		    Prompt		    "Constant value:"
 		    Value		    "2"
 		    }
 		    Object {
-		    $ObjectID		    339
+		    $ObjectID		    338
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -75003,7 +75004,7 @@ Library {
 		    Tunable		    "off"
 		    }
 		    Object {
-		    $ObjectID		    340
+		    $ObjectID		    339
 		    Type		    "checkbox"
 		    Name		    "ZeroCross"
 		    Prompt		    "Enable zero-crossing detection"
@@ -75108,7 +75109,7 @@ Library {
 		    MaskHideContents	    off
 		    Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    341
+		    $ObjectID		    340
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Compare To Constant"
 		    Description		    "Determine how a signal compares to a constant."
@@ -75126,7 +75127,7 @@ Library {
 		    Type		    "Simulink.MaskParameter"
 		    Dimension		    4
 		    Object {
-		    $ObjectID		    342
+		    $ObjectID		    341
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -75146,14 +75147,14 @@ Library {
 		    Tunable		    "off"
 		    }
 		    Object {
-		    $ObjectID		    343
+		    $ObjectID		    342
 		    Type		    "edit"
 		    Name		    "const"
 		    Prompt		    "Constant value:"
 		    Value		    "3"
 		    }
 		    Object {
-		    $ObjectID		    344
+		    $ObjectID		    343
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -75169,7 +75170,7 @@ Library {
 		    Tunable		    "off"
 		    }
 		    Object {
-		    $ObjectID		    345
+		    $ObjectID		    344
 		    Type		    "checkbox"
 		    Name		    "ZeroCross"
 		    Prompt		    "Enable zero-crossing detection"
@@ -75274,7 +75275,7 @@ Library {
 		    MaskHideContents	    off
 		    Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    346
+		    $ObjectID		    345
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Compare To Constant"
 		    Description		    "Determine how a signal compares to a constant."
@@ -75292,7 +75293,7 @@ Library {
 		    Type		    "Simulink.MaskParameter"
 		    Dimension		    4
 		    Object {
-		    $ObjectID		    347
+		    $ObjectID		    346
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -75312,14 +75313,14 @@ Library {
 		    Tunable		    "off"
 		    }
 		    Object {
-		    $ObjectID		    348
+		    $ObjectID		    347
 		    Type		    "edit"
 		    Name		    "const"
 		    Prompt		    "Constant value:"
 		    Value		    "4"
 		    }
 		    Object {
-		    $ObjectID		    349
+		    $ObjectID		    348
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -75335,7 +75336,7 @@ Library {
 		    Tunable		    "off"
 		    }
 		    Object {
-		    $ObjectID		    350
+		    $ObjectID		    349
 		    Type		    "checkbox"
 		    Name		    "ZeroCross"
 		    Prompt		    "Enable zero-crossing detection"
@@ -75757,7 +75758,7 @@ Library {
 		  MaskHideContents	  off
 		  Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    351
+		    $ObjectID		    350
 		    $ClassName		    "Simulink.Mask"
 		    Description		    "Inverter PWM Current Controller."
 		  }
@@ -76004,7 +76005,7 @@ Library {
 		  MaskHideContents	  off
 		  Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    352
+		    $ObjectID		    351
 		    $ClassName		    "Simulink.Mask"
 		    Description		    "Service Bus Structure."
 		  }
@@ -76289,7 +76290,7 @@ Library {
 		  MaskHideContents	  off
 		  Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    353
+		    $ObjectID		    352
 		    $ClassName		    "Simulink.Mask"
 		    Description		    "Transformer-Rectifier Unit."
 		  }
@@ -76621,34 +76622,34 @@ Library {
 		    MaskHideContents	    off
 		    Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    354
+		    $ObjectID		    353
 		    $ClassName		    "Simulink.Mask"
 		    Array {
 		    Type		    "Simulink.MaskParameter"
 		    Dimension		    4
 		    Object {
-		    $ObjectID		    355
+		    $ObjectID		    354
 		    Type		    "edit"
 		    Name		    "Rp"
 		    Prompt		    "Primary Winding Resistance"
 		    Value		    "0.005"
 		    }
 		    Object {
-		    $ObjectID		    356
+		    $ObjectID		    355
 		    Type		    "edit"
 		    Name		    "Rs"
 		    Prompt		    "Secondary Winding Resistance"
 		    Value		    "0.1"
 		    }
 		    Object {
-		    $ObjectID		    357
+		    $ObjectID		    356
 		    Type		    "edit"
 		    Name		    "N1"
 		    Prompt		    "Number of Turns in Primary"
 		    Value		    "100"
 		    }
 		    Object {
-		    $ObjectID		    358
+		    $ObjectID		    357
 		    Type		    "edit"
 		    Name		    "N2"
 		    Prompt		    "Number of Turns in Secondary"
@@ -77043,27 +77044,27 @@ Library {
 		    MaskHideContents	    off
 		    Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    359
+		    $ObjectID		    358
 		    $ClassName		    "Simulink.Mask"
 		    Array {
 		    Type		    "Simulink.MaskParameter"
 		    Dimension		    3
 		    Object {
-		    $ObjectID		    360
+		    $ObjectID		    359
 		    Type		    "edit"
 		    Name		    "L"
 		    Prompt		    "Inductance"
 		    Value		    "1e-1"
 		    }
 		    Object {
-		    $ObjectID		    361
+		    $ObjectID		    360
 		    Type		    "edit"
 		    Name		    "C"
 		    Prompt		    "Capacitance"
 		    Value		    "1e-4"
 		    }
 		    Object {
-		    $ObjectID		    362
+		    $ObjectID		    361
 		    Type		    "edit"
 		    Name		    "R_ESR"
 		    Prompt		    "ESR"
@@ -77962,34 +77963,34 @@ Library {
 		  MaskHideContents	  off
 		  Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    363
+		    $ObjectID		    362
 		    $ClassName		    "Simulink.Mask"
 		    Array {
 		    Type		    "Simulink.MaskParameter"
 		    Dimension		    4
 		    Object {
-		    $ObjectID		    364
+		    $ObjectID		    363
 		    Type		    "edit"
 		    Name		    "Rp"
 		    Prompt		    "Primary Winding Resistance"
 		    Value		    "0.005"
 		    }
 		    Object {
-		    $ObjectID		    365
+		    $ObjectID		    364
 		    Type		    "edit"
 		    Name		    "Rs"
 		    Prompt		    "Secondary Winding Resistance"
 		    Value		    "0.1"
 		    }
 		    Object {
-		    $ObjectID		    366
+		    $ObjectID		    365
 		    Type		    "edit"
 		    Name		    "N1"
 		    Prompt		    "Number of Turns in Primary"
 		    Value		    "32"
 		    }
 		    Object {
-		    $ObjectID		    367
+		    $ObjectID		    366
 		    Type		    "edit"
 		    Name		    "N2"
 		    Prompt		    "Number of Turns in Secondary"
@@ -78247,11 +78248,11 @@ Library {
 		  MaskHideContents	  off
 		  Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    368
+		    $ObjectID		    367
 		    $ClassName		    "Simulink.Mask"
 		    Object {
 		    $PropName		    "Parameters"
-		    $ObjectID		    369
+		    $ObjectID		    368
 		    $ClassName		    "Simulink.MaskParameter"
 		    Type		    "edit"
 		    Name		    "pu"
@@ -78326,7 +78327,7 @@ Library {
 		    Position		    [235, 136, 340, 234]
 		    ZOrder		    -6
 		    NamePlacement	    "alternate"
-		    LibraryVersion	    "1.264"
+		    LibraryVersion	    "1.269"
 		    SourceBlock		    "PowerFlowLib/Energy & Power Systems/Electrical/Machines/Transformer"
 		    SourceType		    "Transformer"
 		    ContentPreviewEnabled   off
@@ -78343,7 +78344,7 @@ Library {
 		    Position		    [640, 87, 690, 113]
 		    ZOrder		    -7
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.264"
+		    LibraryVersion	    "1.269"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    ContentPreviewEnabled   off
@@ -78355,7 +78356,7 @@ Library {
 		    Ports		    [3, 2]
 		    Position		    [455, 142, 525, 238]
 		    ZOrder		    -8
-		    LibraryVersion	    "1.264"
+		    LibraryVersion	    "1.269"
 		    SourceBlock		    "PowerFlowLib/Energy & Power Systems/Electrical/Converters/rectifier"
 		    SourceType		    ""
 		    ContentPreviewEnabled   off
@@ -78482,7 +78483,7 @@ Library {
 		  MaskHideContents	  off
 		  Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    370
+		    $ObjectID		    369
 		    $ClassName		    "Simulink.Mask"
 		    Description		    "Inverter"
 		  }
@@ -78684,41 +78685,41 @@ Library {
 		    MaskHideContents	    off
 		    Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    371
+		    $ObjectID		    370
 		    $ClassName		    "Simulink.Mask"
 		    Array {
 		    Type		    "Simulink.MaskParameter"
 		    Dimension		    5
 		    Object {
-		    $ObjectID		    372
+		    $ObjectID		    371
 		    Type		    "edit"
 		    Name		    "Tr"
 		    Prompt		    "Rise time for switching (s)"
 		    Value		    "4e-6"
 		    }
 		    Object {
-		    $ObjectID		    373
+		    $ObjectID		    372
 		    Type		    "edit"
 		    Name		    "Tf"
 		    Prompt		    "Fall time for switching (s)"
 		    Value		    "3e-6"
 		    }
 		    Object {
-		    $ObjectID		    374
+		    $ObjectID		    373
 		    Type		    "edit"
 		    Name		    "Fsw"
 		    Prompt		    "PWM Frequency (Hz)"
 		    Value		    "2000"
 		    }
 		    Object {
-		    $ObjectID		    375
+		    $ObjectID		    374
 		    Type		    "edit"
 		    Name		    "VCEsat"
 		    Prompt		    "VCE saturation volt (V)"
 		    Value		    "1"
 		    }
 		    Object {
-		    $ObjectID		    376
+		    $ObjectID		    375
 		    Type		    "edit"
 		    Name		    "Nsw"
 		    Prompt		    "No. switches in inverter"
@@ -79373,7 +79374,7 @@ Library {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		377
+		$ObjectID		376
 		$ClassName		"Simulink.Mask"
 		Type			"Bypass Valve"
 		Description		"Calculates hydraulic fluid bypass.  \n\nFlow Out - hydraulic fluid flow to the actuators.\nBypass - hy"
@@ -79681,7 +79682,7 @@ Library {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		378
+		$ObjectID		377
 		$ClassName		"Simulink.Mask"
 		Type			"Engine Driven Hydraulic Pump"
 		Description		"This is a fixed displacement, uni-directional hydraulic pump.  Flow rate is calculated by this block. "
@@ -79696,7 +79697,7 @@ Library {
 		  Type			  "Simulink.MaskParameter"
 		  Dimension		  7
 		  Object {
-		    $ObjectID		    379
+		    $ObjectID		    378
 		    Type		    "edit"
 		    Name		    "RPM"
 		    Prompt		    "Fixed RPM"
@@ -79705,7 +79706,7 @@ Library {
 		    TabName		    "General"
 		  }
 		  Object {
-		    $ObjectID		    380
+		    $ObjectID		    379
 		    Type		    "edit"
 		    Name		    "disp"
 		    Prompt		    "Fixed Displacement [cm³/rev]"
@@ -79713,7 +79714,7 @@ Library {
 		    TabName		    "General"
 		  }
 		  Object {
-		    $ObjectID		    381
+		    $ObjectID		    380
 		    Type		    "edit"
 		    Name		    "eta_mech"
 		    Prompt		    "Mechanical Efficiency [%]"
@@ -79725,7 +79726,7 @@ Library {
 		    TabName		    "General"
 		  }
 		  Object {
-		    $ObjectID		    382
+		    $ObjectID		    381
 		    Type		    "edit"
 		    Name		    "eta_v"
 		    Prompt		    "Volumetric Efficiency [%]"
@@ -79737,7 +79738,7 @@ Library {
 		    TabName		    "General"
 		  }
 		  Object {
-		    $ObjectID		    383
+		    $ObjectID		    382
 		    Type		    "edit"
 		    Name		    "nom_T"
 		    Prompt		    "Nominal Fluid Temperature [°C]"
@@ -79745,7 +79746,7 @@ Library {
 		    TabName		    "Hagen-Poiseuille Coefficient"
 		  }
 		  Object {
-		    $ObjectID		    384
+		    $ObjectID		    383
 		    Type		    "edit"
 		    Name		    "nom_w"
 		    Prompt		    "Nominal Angular Velocity [rad/s]"
@@ -79753,7 +79754,7 @@ Library {
 		    TabName		    "Hagen-Poiseuille Coefficient"
 		  }
 		  Object {
-		    $ObjectID		    385
+		    $ObjectID		    384
 		    Type		    "edit"
 		    Name		    "nom_delP"
 		    Prompt		    "Nominal Pressure Differential [kPa]"
@@ -80558,7 +80559,7 @@ Library {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		386
+		$ObjectID		385
 		$ClassName		"Simulink.Mask"
 		Type			"Fluid Reservoir"
 		Description		"Block Inputs\n#1: Bleed air properties (Bus signal)\n#2: Bypass return from bypass valve\n#3: Mass flo"
@@ -80573,7 +80574,7 @@ Library {
 		  Type			  "Simulink.MaskParameter"
 		  Dimension		  6
 		  Object {
-		    $ObjectID		    387
+		    $ObjectID		    386
 		    Type		    "edit"
 		    Name		    "res_vol"
 		    Prompt		    "Resevoir Volume [m³]"
@@ -80581,7 +80582,7 @@ Library {
 		    TabName		    "General"
 		  }
 		  Object {
-		    $ObjectID		    388
+		    $ObjectID		    387
 		    Type		    "edit"
 		    Name		    "bleed_flowrate"
 		    Prompt		    "Max Bleed Air Supply Rate [kg/s]"
@@ -80589,7 +80590,7 @@ Library {
 		    TabName		    "General"
 		  }
 		  Object {
-		    $ObjectID		    389
+		    $ObjectID		    388
 		    Type		    "edit"
 		    Name		    "pres_loss"
 		    Prompt		    "Air Pressure Losses [%]"
@@ -80598,7 +80599,7 @@ Library {
 		    TabName		    "General"
 		  }
 		  Object {
-		    $ObjectID		    390
+		    $ObjectID		    389
 		    Type		    "edit"
 		    Name		    "T_init"
 		    Prompt		    "Initial Fluid Temp [K]"
@@ -80606,7 +80607,7 @@ Library {
 		    TabName		    "Initial Conditions"
 		  }
 		  Object {
-		    $ObjectID		    391
+		    $ObjectID		    390
 		    Type		    "edit"
 		    Name		    "P_init"
 		    Prompt		    "Initial Air Pressure [kPa]"
@@ -80614,7 +80615,7 @@ Library {
 		    TabName		    "Initial Conditions"
 		  }
 		  Object {
-		    $ObjectID		    392
+		    $ObjectID		    391
 		    Type		    "edit"
 		    Name		    "mass_init"
 		    Prompt		    "Initial Fluid Mass [kg]"
@@ -81488,7 +81489,7 @@ Library {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		393
+		$ObjectID		392
 		$ClassName		"Simulink.Mask"
 		Type			"Hydraulic Loading"
 		Initialization		"h      = get_param(gcb,'handle');   % Get block handle\nblk    = gcb; \nhblock = get(h);\n\nset_par"
@@ -81506,7 +81507,7 @@ Library {
 		  Type			  "Simulink.MaskParameter"
 		  Dimension		  5
 		  Object {
-		    $ObjectID		    394
+		    $ObjectID		    393
 		    Type		    "checkbox"
 		    Name		    "fileslct"
 		    Prompt		    "Select Hydraulic Load File?"
@@ -81519,7 +81520,7 @@ Library {
 		    "already exists in the Workspace. Unable to load ',hblock.filename])\n    end\nend\n\nclear h blk hblock s"
 		  }
 		  Object {
-		    $ObjectID		    395
+		    $ObjectID		    394
 		    Type		    "edit"
 		    Name		    "filename"
 		    Prompt		    "Hydraulic Load File"
@@ -81527,7 +81528,7 @@ Library {
 		    Evaluate		    "off"
 		  }
 		  Object {
-		    $ObjectID		    396
+		    $ObjectID		    395
 		    Type		    "edit"
 		    Name		    "filedir"
 		    Prompt		    "Hydraulic Load File Location"
@@ -81538,14 +81539,14 @@ Library {
 		    Visible		    "off"
 		  }
 		  Object {
-		    $ObjectID		    397
+		    $ObjectID		    396
 		    Type		    "edit"
 		    Name		    "var_struct"
 		    Prompt		    "Structure Name (in workspace)"
 		    Value		    "HydraulicLoad"
 		  }
 		  Object {
-		    $ObjectID		    398
+		    $ObjectID		    397
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -81596,7 +81597,7 @@ Library {
 		TiledPageScale		1
 		ShowPageBoundaries	off
 		ZoomFactor		"100"
-		SIDHighWatermark	"13975"
+		SIDHighWatermark	"13996"
 		Block {
 		  BlockType		  Inport
 		  Name			  "Fluid In"
@@ -81729,7 +81730,7 @@ Library {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "77"
+		    SIDHighWatermark	    "84"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "prev_phase"
@@ -82261,7 +82262,7 @@ Library {
 	      MaskHideContents	      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		399
+		$ObjectID		398
 		$ClassName		"Simulink.Mask"
 		Type			"Anti-Ice System"
 		Description		"Simulates power lost due to anti-ice systems.  \n\nBlock Inputs:\n1. On/Off Control Input (1/0 for On/"
@@ -82293,7 +82294,7 @@ Library {
 		  Type			  "Simulink.MaskParameter"
 		  Dimension		  5
 		  Object {
-		    $ObjectID		    400
+		    $ObjectID		    399
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -82307,7 +82308,7 @@ Library {
 		    Value		    "Wing"
 		  }
 		  Object {
-		    $ObjectID		    401
+		    $ObjectID		    400
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -82332,7 +82333,7 @@ Library {
 		    "]);\n    end\nend\n\nclear h blk hblock vis"
 		  }
 		  Object {
-		    $ObjectID		    402
+		    $ObjectID		    401
 		    Type		    "checkbox"
 		    Name		    "dfine"
 		    Prompt		    "Define Energy Consumption Externally?"
@@ -82352,14 +82353,14 @@ Library {
 		    "\n\nclear h blk hblock vis"
 		  }
 		  Object {
-		    $ObjectID		    403
+		    $ObjectID		    402
 		    Type		    "edit"
 		    Name		    "pwr"
 		    Prompt		    "Power Consumption [kW]"
 		    Value		    "0"
 		  }
 		  Object {
-		    $ObjectID		    404
+		    $ObjectID		    403
 		    Type		    "edit"
 		    Name		    "m_dot"
 		    Prompt		    "Bleed Air Flow Rate [kg/s]"
@@ -82462,7 +82463,7 @@ Library {
 		  Position		  [450, 262, 500, 288]
 		  ZOrder		  -8
 		  BackgroundColor	  "green"
-		  LibraryVersion	  "1.264"
+		  LibraryVersion	  "1.269"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/data_sink"
 		  SourceType		  "Data Sink"
 		  ContentPreviewEnabled	  off
@@ -82594,7 +82595,7 @@ Library {
 		  MaskHideContents	  off
 		  Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    405
+		    $ObjectID		    404
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Air-Air Heat Exchanger"
 		    Help		    "Main Assumptions:\n\n1. Rectangular offset-strip fin heat exchanger.\n2. Lumped parameter model.\n3. "
@@ -82610,7 +82611,7 @@ Library {
 		    Type		    "Simulink.MaskParameter"
 		    Dimension		    14
 		    Object {
-		    $ObjectID		    406
+		    $ObjectID		    405
 		    Type		    "edit"
 		    Name		    "L_hx"
 		    Prompt		    "Length of HX in the flow direction [m]"
@@ -82618,7 +82619,7 @@ Library {
 		    TabName		    "HX parameters"
 		    }
 		    Object {
-		    $ObjectID		    407
+		    $ObjectID		    406
 		    Type		    "edit"
 		    Name		    "W_hx"
 		    Prompt		    "Width of HX [m]"
@@ -82626,7 +82627,7 @@ Library {
 		    TabName		    "HX parameters"
 		    }
 		    Object {
-		    $ObjectID		    408
+		    $ObjectID		    407
 		    Type		    "edit"
 		    Name		    "H_hx"
 		    Prompt		    "Height of HX [m]"
@@ -82634,7 +82635,7 @@ Library {
 		    TabName		    "HX parameters"
 		    }
 		    Object {
-		    $ObjectID		    409
+		    $ObjectID		    408
 		    Type		    "edit"
 		    Name		    "t_p"
 		    Prompt		    "HX plate thickness [m]"
@@ -82642,7 +82643,7 @@ Library {
 		    TabName		    "HX parameters"
 		    }
 		    Object {
-		    $ObjectID		    410
+		    $ObjectID		    409
 		    Type		    "edit"
 		    Name		    "K_p"
 		    Prompt		    "Thermal conductivity of the plates [W/m.K]"
@@ -82650,7 +82651,7 @@ Library {
 		    TabName		    "HX parameters"
 		    }
 		    Object {
-		    $ObjectID		    411
+		    $ObjectID		    410
 		    Type		    "edit"
 		    Name		    "cp_hx"
 		    Prompt		    "Specific heat of the HX material [J/kg.K]"
@@ -82658,7 +82659,7 @@ Library {
 		    TabName		    "HX parameters"
 		    }
 		    Object {
-		    $ObjectID		    412
+		    $ObjectID		    411
 		    Type		    "edit"
 		    Name		    "m_cm"
 		    Prompt		    "Mass of HX [kg]"
@@ -82666,7 +82667,7 @@ Library {
 		    TabName		    "HX parameters"
 		    }
 		    Object {
-		    $ObjectID		    413
+		    $ObjectID		    412
 		    Type		    "edit"
 		    Name		    "l_fin"
 		    Prompt		    "Fin length [m]"
@@ -82674,7 +82675,7 @@ Library {
 		    TabName		    "Fin parameters"
 		    }
 		    Object {
-		    $ObjectID		    414
+		    $ObjectID		    413
 		    Type		    "edit"
 		    Name		    "t_fin"
 		    Prompt		    "Fin thickness [m]"
@@ -82682,7 +82683,7 @@ Library {
 		    TabName		    "Fin parameters"
 		    }
 		    Object {
-		    $ObjectID		    415
+		    $ObjectID		    414
 		    Type		    "edit"
 		    Name		    "s_fin"
 		    Prompt		    "Fin free flow width [m]"
@@ -82690,7 +82691,7 @@ Library {
 		    TabName		    "Fin parameters"
 		    }
 		    Object {
-		    $ObjectID		    416
+		    $ObjectID		    415
 		    Type		    "edit"
 		    Name		    "h_fin"
 		    Prompt		    "Fin free flow height [m]"
@@ -82698,7 +82699,7 @@ Library {
 		    TabName		    "Fin parameters"
 		    }
 		    Object {
-		    $ObjectID		    417
+		    $ObjectID		    416
 		    Type		    "edit"
 		    Name		    "K_n"
 		    Prompt		    "Thermal conductivity of the fin material [W/m.K]"
@@ -82706,7 +82707,7 @@ Library {
 		    TabName		    "Fin parameters"
 		    }
 		    Object {
-		    $ObjectID		    418
+		    $ObjectID		    417
 		    Type		    "edit"
 		    Name		    "eta_f"
 		    Prompt		    "Fin efficiency"
@@ -82714,7 +82715,7 @@ Library {
 		    TabName		    "Fin parameters"
 		    }
 		    Object {
-		    $ObjectID		    419
+		    $ObjectID		    418
 		    Type		    "edit"
 		    Name		    "T_cm_0"
 		    Prompt		    "Initial_HX_core_temp_[C]"
@@ -96978,7 +96979,7 @@ Library {
 		  MaskHideContents	  off
 		  Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    420
+		    $ObjectID		    419
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Passenger Cabin"
 		    Help		    "Main assumptions\n\n1. The thermal loads considered in the current release are: passengers sensible l"
@@ -97004,7 +97005,7 @@ Library {
 		    Type		    "Simulink.MaskParameter"
 		    Dimension		    14
 		    Object {
-		    $ObjectID		    421
+		    $ObjectID		    420
 		    Type		    "edit"
 		    Name		    "A_fuselage"
 		    Prompt		    "Total fuselage area [m^2]"
@@ -97012,7 +97013,7 @@ Library {
 		    TabName		    "Aircraft parameters"
 		    }
 		    Object {
-		    $ObjectID		    422
+		    $ObjectID		    421
 		    Type		    "edit"
 		    Name		    "V_cab"
 		    Prompt		    "Total cabin volume [m^3]"
@@ -97020,7 +97021,7 @@ Library {
 		    TabName		    "Aircraft parameters"
 		    }
 		    Object {
-		    $ObjectID		    423
+		    $ObjectID		    422
 		    Type		    "edit"
 		    Name		    "n_pass"
 		    Prompt		    "Total number of passengers [-]"
@@ -97028,7 +97029,7 @@ Library {
 		    TabName		    "Aircraft parameters"
 		    }
 		    Object {
-		    $ObjectID		    424
+		    $ObjectID		    423
 		    Type		    "edit"
 		    Name		    "L_shell"
 		    Prompt		    "Shell thickness [m]"
@@ -97036,7 +97037,7 @@ Library {
 		    TabName		    "Wall parameters"
 		    }
 		    Object {
-		    $ObjectID		    425
+		    $ObjectID		    424
 		    Type		    "edit"
 		    Name		    "K_shell"
 		    Prompt		    "Shell thermal conductivity [W/m.K]"
@@ -97044,7 +97045,7 @@ Library {
 		    TabName		    "Wall parameters"
 		    }
 		    Object {
-		    $ObjectID		    426
+		    $ObjectID		    425
 		    Type		    "edit"
 		    Name		    "L_insulation"
 		    Prompt		    "Insulation thickness [m]"
@@ -97052,7 +97053,7 @@ Library {
 		    TabName		    "Wall parameters"
 		    }
 		    Object {
-		    $ObjectID		    427
+		    $ObjectID		    426
 		    Type		    "edit"
 		    Name		    "K_insulation"
 		    Prompt		    "Insulation thermal conductivity [W/m.K]"
@@ -97060,7 +97061,7 @@ Library {
 		    TabName		    "Wall parameters"
 		    }
 		    Object {
-		    $ObjectID		    428
+		    $ObjectID		    427
 		    Type		    "edit"
 		    Name		    "L_coating"
 		    Prompt		    "Coating thickness [m]"
@@ -97068,7 +97069,7 @@ Library {
 		    TabName		    "Wall parameters"
 		    }
 		    Object {
-		    $ObjectID		    429
+		    $ObjectID		    428
 		    Type		    "edit"
 		    Name		    "K_coating"
 		    Prompt		    "Coating thermal conductivity [W/m.K]"
@@ -97076,7 +97077,7 @@ Library {
 		    TabName		    "Wall parameters"
 		    }
 		    Object {
-		    $ObjectID		    430
+		    $ObjectID		    429
 		    Type		    "edit"
 		    Name		    "Vdot_sa_pass"
 		    Prompt		    "Required supply air per passenger [m^3/Sec.pass]"
@@ -97084,7 +97085,7 @@ Library {
 		    TabName		    "Passenger parameters"
 		    }
 		    Object {
-		    $ObjectID		    431
+		    $ObjectID		    430
 		    Type		    "edit"
 		    Name		    "q_pass"
 		    Prompt		    "Sensible heat release per passenger [W/pass]"
@@ -97092,7 +97093,7 @@ Library {
 		    TabName		    "Passenger parameters"
 		    }
 		    Object {
-		    $ObjectID		    432
+		    $ObjectID		    431
 		    Type		    "edit"
 		    Name		    "RAR"
 		    Prompt		    "Recirculation air ratio [-]"
@@ -97100,7 +97101,7 @@ Library {
 		    TabName		    "Passenger parameters"
 		    }
 		    Object {
-		    $ObjectID		    433
+		    $ObjectID		    432
 		    Type		    "edit"
 		    Name		    "h_outside"
 		    Prompt		    "Outside convective HT coefficient [W/m^2.K]"
@@ -97108,7 +97109,7 @@ Library {
 		    TabName		    "Convection HT coeff"
 		    }
 		    Object {
-		    $ObjectID		    434
+		    $ObjectID		    433
 		    Type		    "edit"
 		    Name		    "h_inside"
 		    Prompt		    "Inside convective HT coefficient [W/m^2.K]"
@@ -100416,7 +100417,7 @@ Library {
 		    Position		    [1260, 422, 1310, 448]
 		    ZOrder		    -29
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.264"
+		    LibraryVersion	    "1.269"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    ContentPreviewEnabled   off
@@ -101071,7 +101072,7 @@ Library {
 		  MaskHideContents	  off
 		  Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    435
+		    $ObjectID		    434
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Cargo Bay"
 		    Display		    "port_label('input',1,'{ \\bfReturn Air Conditions}','texmode','on')\nport_label('input',2,'{ \\bfT"
@@ -101080,7 +101081,7 @@ Library {
 		    "')\n"
 		    Object {
 		    $PropName		    "Parameters"
-		    $ObjectID		    436
+		    $ObjectID		    435
 		    $ClassName		    "Simulink.MaskParameter"
 		    Type		    "edit"
 		    Name		    "T_cargo_K"
@@ -101091,12 +101092,12 @@ Library {
 		    Type		    "Simulink.dialog.Container"
 		    Dimension		    3
 		    Object {
-		    $ObjectID		    437
+		    $ObjectID		    436
 		    $ClassName		    "Simulink.dialog.Group"
 		    Prompt		    "%<MaskType>"
 		    Object {
 		    $PropName		    "DialogControls"
-		    $ObjectID		    438
+		    $ObjectID		    437
 		    $ClassName		    "Simulink.dialog.Text"
 		    Prompt		    "%<MaskDescription>"
 		    Name		    "DescTextVar"
@@ -101104,22 +101105,22 @@ Library {
 		    Name		    "DescGroupVar"
 		    }
 		    Object {
-		    $ObjectID		    439
+		    $ObjectID		    438
 		    $ClassName		    "Simulink.dialog.Group"
 		    Prompt		    "Simulink:studio:ToolBarParametersMenu"
 		    Name		    "ParameterGroupVar"
 		    }
 		    Object {
-		    $ObjectID		    440
+		    $ObjectID		    439
 		    $ClassName		    "Simulink.dialog.TabContainer"
 		    Object {
 		    $PropName		    "DialogControls"
-		    $ObjectID		    441
+		    $ObjectID		    440
 		    $ClassName		    "Simulink.dialog.Tab"
 		    Prompt		    "Tab"
 		    Object {
 		    $PropName		    "DialogControls"
-		    $ObjectID		    442
+		    $ObjectID		    441
 		    $ClassName		    "Simulink.dialog.parameter.Edit"
 		    Name		    "T_cargo_K"
 		    }
@@ -101505,7 +101506,7 @@ Library {
 		    Position		    [1075, 372, 1125, 398]
 		    ZOrder		    48
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.264"
+		    LibraryVersion	    "1.269"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    ContentPreviewEnabled   off
@@ -101779,7 +101780,7 @@ Library {
 		  MaskHideContents	  off
 		  Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    443
+		    $ObjectID		    442
 		    $ClassName		    "Simulink.Mask"
 		    Description		    "COMPRESSOR (ECS)\n\n\n"
 		    Help		    "Main Assumptions\n1. The Turbine and the compressor are coupled to each other (turbocharger).\n2. Map"
@@ -102462,7 +102463,7 @@ Library {
 		  MaskHideContents	  off
 		  Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    444
+		    $ObjectID		    443
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Fan"
 		    Help		    "Main Assumptions:\n\n1. Fan performance data based on GREENHECK-SQ 130.\n2. Volume flow rate allowabl"
@@ -102474,7 +102475,7 @@ Library {
 		    "utput',1,'{\\bfFlow Out}','texmode','on')\nport_label('output',2,'{\\bfFan Data}','texmode','on')\n"
 		    Object {
 		    $PropName		    "Parameters"
-		    $ObjectID		    445
+		    $ObjectID		    444
 		    $ClassName		    "Simulink.MaskParameter"
 		    Type		    "edit"
 		    Name		    "N_fan"
@@ -104347,7 +104348,7 @@ Library {
 		  MaskHideContents	  off
 		  Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    446
+		    $ObjectID		    445
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Mixing Junction"
 		    Description		    "\n"
@@ -104359,21 +104360,21 @@ Library {
 		    Type		    "Simulink.MaskParameter"
 		    Dimension		    3
 		    Object {
-		    $ObjectID		    447
+		    $ObjectID		    446
 		    Type		    "edit"
 		    Name		    "d_in_1"
 		    Prompt		    "Diameter of the inlet duct (1)"
 		    Value		    "0.1"
 		    }
 		    Object {
-		    $ObjectID		    448
+		    $ObjectID		    447
 		    Type		    "edit"
 		    Name		    "d_in_2"
 		    Prompt		    "Diameter of the inlet duct (2)"
 		    Value		    "0.1"
 		    }
 		    Object {
-		    $ObjectID		    449
+		    $ObjectID		    448
 		    Type		    "edit"
 		    Name		    "d_out"
 		    Prompt		    "Diameter of the outlet duct"
@@ -105733,7 +105734,7 @@ Library {
 		  MaskHideContents	  off
 		  Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    450
+		    $ObjectID		    449
 		    $ClassName		    "Simulink.Mask"
 		    Description		    "35 F VALVE (ECS)"
 		    Help		    "Main Assumptions\n1. The valve regulates the flow rate such that the air temperature \ndownstream of "
@@ -105744,7 +105745,7 @@ Library {
 		    "_label('output',2,'{\\bfTotal flow to Mix.junct }','texmode','on')"
 		    Object {
 		    $PropName		    "Parameters"
-		    $ObjectID		    451
+		    $ObjectID		    450
 		    $ClassName		    "Simulink.MaskParameter"
 		    Type		    "edit"
 		    Name		    "T_35"
@@ -106282,7 +106283,7 @@ Library {
 		  MaskHideContents	  off
 		  Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    452
+		    $ObjectID		    451
 		    $ClassName		    "Simulink.Mask"
 		    Description		    "TURBINE (ECS)\n\n"
 		    Help		    "Main Assumptions\n1. The Turbine and the compressor are coupled to each other (turbocharger).\n2. The"
@@ -106296,21 +106297,21 @@ Library {
 		    Type		    "Simulink.MaskParameter"
 		    Dimension		    3
 		    Object {
-		    $ObjectID		    453
+		    $ObjectID		    452
 		    Type		    "edit"
 		    Name		    "press_Turbine_exit"
 		    Prompt		    "Turbine exit pressure (kPa)"
 		    Value		    "80"
 		    }
 		    Object {
-		    $ObjectID		    454
+		    $ObjectID		    453
 		    Type		    "edit"
 		    Name		    "inertia"
 		    Prompt		    "Turbine Inertia"
 		    Value		    "5e-5"
 		    }
 		    Object {
-		    $ObjectID		    455
+		    $ObjectID		    454
 		    Type		    "edit"
 		    Name		    "n_t"
 		    Prompt		    "Turbine Efficiency"
@@ -106921,7 +106922,7 @@ Library {
 		  MaskHideContents	  off
 		  Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    456
+		    $ObjectID		    455
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Mixing Junction"
 		    Help		    "Main Assumptions \n1. The convergign ducts have same cross section area\n2. The outlet has twice the "
@@ -106949,7 +106950,7 @@ Library {
 		    Type		    "Simulink.MaskParameter"
 		    Dimension		    4
 		    Object {
-		    $ObjectID		    457
+		    $ObjectID		    456
 		    Type		    "edit"
 		    Name		    "no_inlets"
 		    Prompt		    "Number of Inlets (Max: 10)"
@@ -106959,21 +106960,21 @@ Library {
 		    "\n\nclear h blk hblock"
 		    }
 		    Object {
-		    $ObjectID		    458
+		    $ObjectID		    457
 		    Type		    "edit"
 		    Name		    "d_in_1"
 		    Prompt		    "Diameter of the inlet duct (1)"
 		    Value		    "0.1"
 		    }
 		    Object {
-		    $ObjectID		    459
+		    $ObjectID		    458
 		    Type		    "edit"
 		    Name		    "d_in_2"
 		    Prompt		    "Diameter of the inlet duct (2)"
 		    Value		    "0.1"
 		    }
 		    Object {
-		    $ObjectID		    460
+		    $ObjectID		    459
 		    Type		    "edit"
 		    Name		    "d_out"
 		    Prompt		    "Diameter of the outlet duct"
@@ -106997,7 +106998,7 @@ Library {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "24542"
+		    SIDHighWatermark	    "24567"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Inlet#1"
@@ -107717,7 +107718,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Fuel & Oil"
-		Location		[-1514, 963, -134, 1545]
+		Location		[1192, 862, 2888, 1888]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -107747,7 +107748,7 @@ Library {
 		  MaskHideContents	  off
 		  Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    461
+		    $ObjectID		    460
 		    $ClassName		    "Simulink.Mask"
 		    Initialization	    "initTemp = initTemp + 273.15;"
 		    SelfModifiable	    "on"
@@ -107761,28 +107762,28 @@ Library {
 		    Type		    "Simulink.MaskParameter"
 		    Dimension		    4
 		    Object {
-		    $ObjectID		    462
+		    $ObjectID		    461
 		    Type		    "edit"
 		    Name		    "V"
 		    Prompt		    "Volume (m^3)"
 		    Value		    ".05"
 		    }
 		    Object {
-		    $ObjectID		    463
+		    $ObjectID		    462
 		    Type		    "edit"
 		    Name		    "Bm"
 		    Prompt		    "Bulk Modulus (kPa)"
 		    Value		    "10^5"
 		    }
 		    Object {
-		    $ObjectID		    464
+		    $ObjectID		    463
 		    Type		    "edit"
 		    Name		    "initPres"
 		    Prompt		    "Initial Pressure (kPa)"
 		    Value		    "6000"
 		    }
 		    Object {
-		    $ObjectID		    465
+		    $ObjectID		    464
 		    Type		    "edit"
 		    Name		    "initTemp"
 		    Prompt		    "Initial Temperature (C)"
@@ -107806,7 +107807,7 @@ Library {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "80"
-		    SIDHighWatermark	    "7890"
+		    SIDHighWatermark	    "7938"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "mdot Out"
@@ -108938,7 +108939,7 @@ Library {
 		  MaskHideContents	  off
 		  Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    466
+		    $ObjectID		    465
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Pump"
 		    Description		    "Input 1: Input Flow Bus\nInput 2: Shaft RPM (rpm)\nInput 3: Upstream Pressure (kPa)\n\nOutput "
@@ -108971,7 +108972,7 @@ Library {
 		    Type		    "Simulink.MaskParameter"
 		    Dimension		    9
 		    Object {
-		    $ObjectID		    467
+		    $ObjectID		    466
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -108997,7 +108998,7 @@ Library {
 		    "lback for map type');\nend\n    \nclear h blk hblock"
 		    }
 		    Object {
-		    $ObjectID		    468
+		    $ObjectID		    467
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -109025,7 +109026,7 @@ Library {
 		    ")]);\n\nclear h blk hblock styl vals vis str pmpstr i indx pumps"
 		    }
 		    Object {
-		    $ObjectID		    469
+		    $ObjectID		    468
 		    Type		    "checkbox"
 		    Name		    "map_load"
 		    Prompt		    "Load new map?"
@@ -109033,7 +109034,7 @@ Library {
 		    Visible		    "off"
 		    }
 		    Object {
-		    $ObjectID		    470
+		    $ObjectID		    469
 		    Type		    "edit"
 		    Name		    "SG"
 		    Prompt		    "Specific Gravity of Flow"
@@ -109041,21 +109042,21 @@ Library {
 		    Visible		    "off"
 		    }
 		    Object {
-		    $ObjectID		    471
+		    $ObjectID		    470
 		    Type		    "edit"
 		    Name		    "pump_eff"
 		    Prompt		    "Pump Overall Efficiency"
 		    Value		    ".75"
 		    }
 		    Object {
-		    $ObjectID		    472
+		    $ObjectID		    471
 		    Type		    "checkbox"
 		    Name		    "heat_out"
 		    Prompt		    "Add heat to flow? "
 		    Value		    "on"
 		    }
 		    Object {
-		    $ObjectID		    473
+		    $ObjectID		    472
 		    Type		    "checkbox"
 		    Name		    "AC_pwr"
 		    Prompt		    "AC Powered?"
@@ -109069,14 +109070,14 @@ Library {
 		    "is"
 		    }
 		    Object {
-		    $ObjectID		    474
+		    $ObjectID		    473
 		    Type		    "edit"
 		    Name		    "pf"
 		    Prompt		    "Power Factor"
 		    Value		    "1"
 		    }
 		    Object {
-		    $ObjectID		    475
+		    $ObjectID		    474
 		    Type		    "checkbox"
 		    Name		    "mech_pwr"
 		    Prompt		    "Mechanically Driven?"
@@ -109094,12 +109095,12 @@ Library {
 		    Type		    "Simulink.dialog.Container"
 		    Dimension		    2
 		    Object {
-		    $ObjectID		    476
+		    $ObjectID		    475
 		    $ClassName		    "Simulink.dialog.Group"
 		    Prompt		    "%<MaskType>"
 		    Object {
 		    $PropName		    "DialogControls"
-		    $ObjectID		    477
+		    $ObjectID		    476
 		    $ClassName		    "Simulink.dialog.Text"
 		    Prompt		    "%<MaskDescription>"
 		    Name		    "DescTextVar"
@@ -109107,44 +109108,44 @@ Library {
 		    Name		    "DescGroupVar"
 		    }
 		    Object {
-		    $ObjectID		    478
+		    $ObjectID		    477
 		    $ClassName		    "Simulink.dialog.TabContainer"
 		    Array {
 		    Type		    "Simulink.dialog.Tab"
 		    Dimension		    2
 		    Object {
-		    $ObjectID		    479
+		    $ObjectID		    478
 		    Prompt		    "General"
 		    Array {
 		    Type		    "Simulink.dialog.parameter.Control"
 		    Dimension		    6
 		    Object {
-		    $ObjectID		    480
+		    $ObjectID		    479
 		    $ClassName		    "Simulink.dialog.parameter.Popup"
 		    Name		    "maptype"
 		    }
 		    Object {
-		    $ObjectID		    481
+		    $ObjectID		    480
 		    $ClassName		    "Simulink.dialog.parameter.Popup"
 		    Name		    "map"
 		    }
 		    Object {
-		    $ObjectID		    482
+		    $ObjectID		    481
 		    $ClassName		    "Simulink.dialog.parameter.CheckBox"
 		    Name		    "map_load"
 		    }
 		    Object {
-		    $ObjectID		    483
+		    $ObjectID		    482
 		    $ClassName		    "Simulink.dialog.parameter.Edit"
 		    Name		    "SG"
 		    }
 		    Object {
-		    $ObjectID		    484
+		    $ObjectID		    483
 		    $ClassName		    "Simulink.dialog.parameter.Edit"
 		    Name		    "pump_eff"
 		    }
 		    Object {
-		    $ObjectID		    485
+		    $ObjectID		    484
 		    $ClassName		    "Simulink.dialog.parameter.CheckBox"
 		    Name		    "heat_out"
 		    }
@@ -109153,23 +109154,23 @@ Library {
 		    Name		    "ParameterTabVar0"
 		    }
 		    Object {
-		    $ObjectID		    486
+		    $ObjectID		    485
 		    Prompt		    "Power"
 		    Array {
 		    Type		    "Simulink.dialog.parameter.Control"
 		    Dimension		    3
 		    Object {
-		    $ObjectID		    487
+		    $ObjectID		    486
 		    $ClassName		    "Simulink.dialog.parameter.CheckBox"
 		    Name		    "AC_pwr"
 		    }
 		    Object {
-		    $ObjectID		    488
+		    $ObjectID		    487
 		    $ClassName		    "Simulink.dialog.parameter.Edit"
 		    Name		    "pf"
 		    }
 		    Object {
-		    $ObjectID		    489
+		    $ObjectID		    488
 		    $ClassName		    "Simulink.dialog.parameter.CheckBox"
 		    Name		    "mech_pwr"
 		    }
@@ -109199,7 +109200,7 @@ Library {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "12822"
+		    SIDHighWatermark	    "12872"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Flow_in"
@@ -109745,7 +109746,7 @@ Library {
 		    Position		    [1275, 397, 1325, 423]
 		    ZOrder		    -35
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.264"
+		    LibraryVersion	    "1.269"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    ContentPreviewEnabled   off
@@ -110509,7 +110510,7 @@ Library {
 		  MaskHideContents	  off
 		  Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    490
+		    $ObjectID		    489
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Fluid Tank"
 		    Description		    "Input 1: Input Flow Bus\nInput 2: Flow Rate Out [kg/s]\nInput 3: Ambient Pressure [kPa]\nInput"
@@ -110566,7 +110567,7 @@ Library {
 		    Type		    "Simulink.MaskParameter"
 		    Dimension		    16
 		    Object {
-		    $ObjectID		    491
+		    $ObjectID		    490
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -110580,7 +110581,7 @@ Library {
 		    Value		    "Fuel"
 		    }
 		    Object {
-		    $ObjectID		    492
+		    $ObjectID		    491
 		    Type		    "checkbox"
 		    Name		    "fileslct"
 		    Prompt		    "Browse for area .m file?"
@@ -110592,7 +110593,7 @@ Library {
 		    "hblock"
 		    }
 		    Object {
-		    $ObjectID		    493
+		    $ObjectID		    492
 		    Type		    "edit"
 		    Name		    "filename"
 		    Prompt		    "Fuel Tank Area .m File"
@@ -110600,7 +110601,7 @@ Library {
 		    Evaluate		    "off"
 		    }
 		    Object {
-		    $ObjectID		    494
+		    $ObjectID		    493
 		    Type		    "edit"
 		    Name		    "filedir"
 		    Prompt		    "Area .m File Directory"
@@ -110609,7 +110610,7 @@ Library {
 		    Visible		    "off"
 		    }
 		    Object {
-		    $ObjectID		    495
+		    $ObjectID		    494
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -110624,7 +110625,7 @@ Library {
 		    Value		    "Left Wing Tank"
 		    }
 		    Object {
-		    $ObjectID		    496
+		    $ObjectID		    495
 		    Type		    "checkbox"
 		    Name		    "areaprompt2"
 		    Prompt		    "Edit Fuel Tank Area Manually?"
@@ -110634,49 +110635,49 @@ Library {
 		    "  open_system([blk, '/Wall Heat Transfer/volume_%']);\nend\n\n"
 		    }
 		    Object {
-		    $ObjectID		    497
+		    $ObjectID		    496
 		    Type		    "edit"
 		    Name		    "max_vol"
 		    Prompt		    "Maximum Tank Volume [m³]"
 		    Value		    "3.2"
 		    }
 		    Object {
-		    $ObjectID		    498
+		    $ObjectID		    497
 		    Type		    "edit"
 		    Name		    "m_init"
 		    Prompt		    "Initial Fluid Mass [kg]"
 		    Value		    "2500"
 		    }
 		    Object {
-		    $ObjectID		    499
+		    $ObjectID		    498
 		    Type		    "edit"
 		    Name		    "fld_Tint"
 		    Prompt		    "Initial Fluid Temperature [°C]"
 		    Value		    "0"
 		    }
 		    Object {
-		    $ObjectID		    500
+		    $ObjectID		    499
 		    Type		    "edit"
 		    Name		    "ull_Tint"
 		    Prompt		    "Initial Ullage Temperature [°C]"
 		    Value		    "30"
 		    }
 		    Object {
-		    $ObjectID		    501
+		    $ObjectID		    500
 		    Type		    "edit"
 		    Name		    "Pover"
 		    Prompt		    "Tank Pressurization [kPa]"
 		    Value		    "100"
 		    }
 		    Object {
-		    $ObjectID		    502
+		    $ObjectID		    501
 		    Type		    "edit"
 		    Name		    "HTC_fg"
 		    Prompt		    "Liquid to Ullage HTC [W/m² K]"
 		    Value		    "14.2"
 		    }
 		    Object {
-		    $ObjectID		    503
+		    $ObjectID		    502
 		    Type		    "checkbox"
 		    Name		    "wallHXF"
 		    Prompt		    "Enable Wall Heat Transfer"
@@ -110686,21 +110687,21 @@ Library {
 		    "e','1');\nelse\n    set_param([blk,'/enable_wall_HXF'],'Value','0');\nend\n\nclear h blk hblock\n    \n"
 		    }
 		    Object {
-		    $ObjectID		    504
+		    $ObjectID		    503
 		    Type		    "edit"
 		    Name		    "wetHTC"
 		    Prompt		    "Wall to Liquid HTC [W/m² K]"
 		    Value		    "14.2"
 		    }
 		    Object {
-		    $ObjectID		    505
+		    $ObjectID		    504
 		    Type		    "edit"
 		    Name		    "dryHTC"
 		    Prompt		    "Wall to Ullage HTC [W/m² K]"
 		    Value		    "14.2"
 		    }
 		    Object {
-		    $ObjectID		    506
+		    $ObjectID		    505
 		    Type		    "edit"
 		    Name		    "Qinternal"
 		    Prompt		    "Internal Heat Load [W]"
@@ -110712,12 +110713,12 @@ Library {
 		    Type		    "Simulink.dialog.Container"
 		    Dimension		    2
 		    Object {
-		    $ObjectID		    507
+		    $ObjectID		    506
 		    $ClassName		    "Simulink.dialog.Group"
 		    Prompt		    "%<MaskType>"
 		    Object {
 		    $PropName		    "DialogControls"
-		    $ObjectID		    508
+		    $ObjectID		    507
 		    $ClassName		    "Simulink.dialog.Text"
 		    Prompt		    "%<MaskDescription>"
 		    Name		    "DescTextVar"
@@ -110725,49 +110726,49 @@ Library {
 		    Name		    "DescGroupVar"
 		    }
 		    Object {
-		    $ObjectID		    509
+		    $ObjectID		    508
 		    $ClassName		    "Simulink.dialog.TabContainer"
 		    Array {
 		    Type		    "Simulink.dialog.Tab"
 		    Dimension		    3
 		    Object {
-		    $ObjectID		    510
+		    $ObjectID		    509
 		    Prompt		    "Geometry"
 		    Array {
 		    Type		    "Simulink.dialog.parameter.Control"
 		    Dimension		    7
 		    Object {
-		    $ObjectID		    511
+		    $ObjectID		    510
 		    $ClassName		    "Simulink.dialog.parameter.Popup"
 		    Name		    "Parameter16"
 		    }
 		    Object {
-		    $ObjectID		    512
+		    $ObjectID		    511
 		    $ClassName		    "Simulink.dialog.parameter.CheckBox"
 		    Name		    "fileslct"
 		    }
 		    Object {
-		    $ObjectID		    513
+		    $ObjectID		    512
 		    $ClassName		    "Simulink.dialog.parameter.Edit"
 		    Name		    "filename"
 		    }
 		    Object {
-		    $ObjectID		    514
+		    $ObjectID		    513
 		    $ClassName		    "Simulink.dialog.parameter.Edit"
 		    Name		    "filedir"
 		    }
 		    Object {
-		    $ObjectID		    515
+		    $ObjectID		    514
 		    $ClassName		    "Simulink.dialog.parameter.Popup"
 		    Name		    "tank_loc"
 		    }
 		    Object {
-		    $ObjectID		    516
+		    $ObjectID		    515
 		    $ClassName		    "Simulink.dialog.parameter.CheckBox"
 		    Name		    "areaprompt2"
 		    }
 		    Object {
-		    $ObjectID		    517
+		    $ObjectID		    516
 		    $ClassName		    "Simulink.dialog.parameter.Edit"
 		    Name		    "max_vol"
 		    }
@@ -110776,25 +110777,25 @@ Library {
 		    Name		    "ParameterTabVar0"
 		    }
 		    Object {
-		    $ObjectID		    518
+		    $ObjectID		    517
 		    Prompt		    "Initial Conditions"
 		    Array {
 		    Type		    "Simulink.dialog.parameter.Edit"
 		    Dimension		    4
 		    Object {
-		    $ObjectID		    519
+		    $ObjectID		    518
 		    Name		    "m_init"
 		    }
 		    Object {
-		    $ObjectID		    520
+		    $ObjectID		    519
 		    Name		    "fld_Tint"
 		    }
 		    Object {
-		    $ObjectID		    521
+		    $ObjectID		    520
 		    Name		    "ull_Tint"
 		    }
 		    Object {
-		    $ObjectID		    522
+		    $ObjectID		    521
 		    Name		    "Pover"
 		    }
 		    PropName		    "DialogControls"
@@ -110802,33 +110803,33 @@ Library {
 		    Name		    "ParameterTabVar01"
 		    }
 		    Object {
-		    $ObjectID		    523
+		    $ObjectID		    522
 		    Prompt		    "Thermal Characteristics"
 		    Array {
 		    Type		    "Simulink.dialog.parameter.Control"
 		    Dimension		    5
 		    Object {
-		    $ObjectID		    524
+		    $ObjectID		    523
 		    $ClassName		    "Simulink.dialog.parameter.Edit"
 		    Name		    "HTC_fg"
 		    }
 		    Object {
-		    $ObjectID		    525
+		    $ObjectID		    524
 		    $ClassName		    "Simulink.dialog.parameter.CheckBox"
 		    Name		    "wallHXF"
 		    }
 		    Object {
-		    $ObjectID		    526
+		    $ObjectID		    525
 		    $ClassName		    "Simulink.dialog.parameter.Edit"
 		    Name		    "wetHTC"
 		    }
 		    Object {
-		    $ObjectID		    527
+		    $ObjectID		    526
 		    $ClassName		    "Simulink.dialog.parameter.Edit"
 		    Name		    "dryHTC"
 		    }
 		    Object {
-		    $ObjectID		    528
+		    $ObjectID		    527
 		    $ClassName		    "Simulink.dialog.parameter.Edit"
 		    Name		    "Qinternal"
 		    }
@@ -110858,7 +110859,7 @@ Library {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "150"
-		    SIDHighWatermark	    "20814"
+		    SIDHighWatermark	    "20913"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Flow"
@@ -112067,7 +112068,7 @@ Library {
 		    Position		    [1540, 372, 1590, 398]
 		    ZOrder		    15
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.264"
+		    LibraryVersion	    "1.269"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    ContentPreviewEnabled   off
@@ -113011,7 +113012,7 @@ Library {
 		  MaskHideContents	  off
 		  Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    529
+		    $ObjectID		    528
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Fuel Control"
 		    Description		    "Manages fuel bypass and fuel sent to the engine."
@@ -113366,7 +113367,7 @@ Library {
 		  MaskHideContents	  off
 		  Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    530
+		    $ObjectID		    529
 		    $ClassName		    "Simulink.Mask"
 		    Initialization	    "\n% the following if statements look at the selected fluid for the primary\n% and secondary "
 		    "flow. based upon this selection, the appropriate fluid\n% property file is loaded and saved locally as Fld1 or F"
@@ -113400,7 +113401,7 @@ Library {
 		    Type		    "Simulink.MaskParameter"
 		    Dimension		    17
 		    Object {
-		    $ObjectID		    531
+		    $ObjectID		    530
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -113417,7 +113418,7 @@ Library {
 		    Tunable		    "off"
 		    }
 		    Object {
-		    $ObjectID		    532
+		    $ObjectID		    531
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -113434,21 +113435,21 @@ Library {
 		    Tunable		    "off"
 		    }
 		    Object {
-		    $ObjectID		    533
+		    $ObjectID		    532
 		    Type		    "edit"
 		    Name		    "Tw_init"
 		    Prompt		    "Initial Wall Temperature [°C]"
 		    Value		    "0"
 		    }
 		    Object {
-		    $ObjectID		    534
+		    $ObjectID		    533
 		    Type		    "edit"
 		    Name		    "C_wall"
 		    Prompt		    "Wall Heat Capacitance  [J/K]"
 		    Value		    "60000"
 		    }
 		    Object {
-		    $ObjectID		    535
+		    $ObjectID		    534
 		    Type		    "radiobutton"
 		    Array {
 		    Type		    "Cell"
@@ -113464,28 +113465,28 @@ Library {
 		    Visible		    "off"
 		    }
 		    Object {
-		    $ObjectID		    536
+		    $ObjectID		    535
 		    Type		    "edit"
 		    Name		    "Tw0"
 		    Prompt		    "Wall Temperature [°C]"
 		    Value		    "30"
 		    }
 		    Object {
-		    $ObjectID		    537
+		    $ObjectID		    536
 		    Type		    "edit"
 		    Name		    "Q0"
 		    Prompt		    "Heat Transfer Rate [W]"
 		    Value		    "20000"
 		    }
 		    Object {
-		    $ObjectID		    538
+		    $ObjectID		    537
 		    Type		    "edit"
 		    Name		    "H1_0"
 		    Prompt		    "Heat Transfer Coefficient [W/m²K]"
 		    Value		    "10000"
 		    }
 		    Object {
-		    $ObjectID		    539
+		    $ObjectID		    538
 		    Type		    "edit"
 		    Name		    "A1"
 		    Prompt		    "Heat Transfer Area [m²]"
@@ -113493,35 +113494,35 @@ Library {
 		    Enabled		    "off"
 		    }
 		    Object {
-		    $ObjectID		    540
+		    $ObjectID		    539
 		    Type		    "edit"
 		    Name		    "mdot1_0"
 		    Prompt		    "Mass Flow Rate [kg/s]"
 		    Value		    "2"
 		    }
 		    Object {
-		    $ObjectID		    541
+		    $ObjectID		    540
 		    Type		    "edit"
 		    Name		    "Tin1_0"
 		    Prompt		    "Fluid Inlet Temperature [°C]"
 		    Value		    "10"
 		    }
 		    Object {
-		    $ObjectID		    542
+		    $ObjectID		    541
 		    Type		    "edit"
 		    Name		    "Pin1_0"
 		    Prompt		    "Fluid Inlet Pressure [kPa]"
 		    Value		    "0"
 		    }
 		    Object {
-		    $ObjectID		    543
+		    $ObjectID		    542
 		    Type		    "edit"
 		    Name		    "H2_0"
 		    Prompt		    "Heat Transfer Coefficient [W/m²K]"
 		    Value		    "10000"
 		    }
 		    Object {
-		    $ObjectID		    544
+		    $ObjectID		    543
 		    Type		    "edit"
 		    Name		    "A2"
 		    Prompt		    "Heat Transfer Area [m²]"
@@ -113529,21 +113530,21 @@ Library {
 		    Enabled		    "off"
 		    }
 		    Object {
-		    $ObjectID		    545
+		    $ObjectID		    544
 		    Type		    "edit"
 		    Name		    "mdot2_0"
 		    Prompt		    "Mass Flow Rate [kg/s]"
 		    Value		    "2"
 		    }
 		    Object {
-		    $ObjectID		    546
+		    $ObjectID		    545
 		    Type		    "edit"
 		    Name		    "Tin2_0"
 		    Prompt		    "Fluid Inlet Temperature [°C]"
 		    Value		    "35"
 		    }
 		    Object {
-		    $ObjectID		    547
+		    $ObjectID		    546
 		    Type		    "edit"
 		    Name		    "Pin2_0"
 		    Prompt		    "Fluid Inlet Pressure [kPa]"
@@ -113555,12 +113556,12 @@ Library {
 		    Type		    "Simulink.dialog.Container"
 		    Dimension		    2
 		    Object {
-		    $ObjectID		    548
+		    $ObjectID		    547
 		    $ClassName		    "Simulink.dialog.Group"
 		    Prompt		    "Heat Exchanger"
 		    Object {
 		    $PropName		    "DialogControls"
-		    $ObjectID		    549
+		    $ObjectID		    548
 		    $ClassName		    "Simulink.dialog.Text"
 		    Prompt		    "Tracks the time rate of change of the wall temperature and exit flow temperatures."
 		    Name		    "DescTextVar"
@@ -113568,41 +113569,41 @@ Library {
 		    Name		    "DescGroupVar"
 		    }
 		    Object {
-		    $ObjectID		    550
+		    $ObjectID		    549
 		    $ClassName		    "Simulink.dialog.TabContainer"
 		    Array {
 		    Type		    "Simulink.dialog.Tab"
 		    Dimension		    3
 		    Object {
-		    $ObjectID		    551
+		    $ObjectID		    550
 		    Prompt		    "Parameters"
 		    Array {
 		    Type		    "Simulink.dialog.parameter.Control"
 		    Dimension		    5
 		    Object {
-		    $ObjectID		    552
+		    $ObjectID		    551
 		    $ClassName		    "Simulink.dialog.parameter.Popup"
 		    Name		    "fld1"
 		    }
 		    Object {
-		    $ObjectID		    553
+		    $ObjectID		    552
 		    $ClassName		    "Simulink.dialog.parameter.Popup"
 		    Name		    "fld2"
 		    }
 		    Object {
-		    $ObjectID		    554
+		    $ObjectID		    553
 		    $ClassName		    "Simulink.dialog.parameter.Edit"
 		    PromptLocation	    "left"
 		    Name		    "Tw_init"
 		    }
 		    Object {
-		    $ObjectID		    555
+		    $ObjectID		    554
 		    $ClassName		    "Simulink.dialog.parameter.Edit"
 		    PromptLocation	    "left"
 		    Name		    "C_wall"
 		    }
 		    Object {
-		    $ObjectID		    556
+		    $ObjectID		    555
 		    $ClassName		    "Simulink.dialog.parameter.RadioButton"
 		    Name		    "flow_switch"
 		    }
@@ -113611,57 +113612,57 @@ Library {
 		    Name		    "Container10"
 		    }
 		    Object {
-		    $ObjectID		    557
+		    $ObjectID		    556
 		    Prompt		    "Nonlinear Model"
 		    Object {
 		    $PropName		    "DialogControls"
-		    $ObjectID		    558
+		    $ObjectID		    557
 		    $ClassName		    "Simulink.dialog.Group"
 		    Prompt		    "Component Sizing - Nominal Values"
 		    Array {
 		    Type		    "Simulink.dialog.Control"
 		    Dimension		    4
 		    Object {
-		    $ObjectID		    559
+		    $ObjectID		    558
 		    $ClassName		    "Simulink.dialog.parameter.Edit"
 		    PromptLocation	    "left"
 		    Name		    "Tw0"
 		    }
 		    Object {
-		    $ObjectID		    560
+		    $ObjectID		    559
 		    $ClassName		    "Simulink.dialog.parameter.Edit"
 		    PromptLocation	    "left"
 		    Name		    "Q0"
 		    }
 		    Object {
-		    $ObjectID		    561
+		    $ObjectID		    560
 		    $ClassName		    "Simulink.dialog.Group"
 		    Prompt		    "Primary Fluid"
 		    Array {
 		    Type		    "Simulink.dialog.parameter.Edit"
 		    Dimension		    5
 		    Object {
-		    $ObjectID		    562
+		    $ObjectID		    561
 		    PromptLocation	    "left"
 		    Name		    "H1_0"
 		    }
 		    Object {
-		    $ObjectID		    563
+		    $ObjectID		    562
 		    PromptLocation	    "left"
 		    Name		    "A1"
 		    }
 		    Object {
-		    $ObjectID		    564
+		    $ObjectID		    563
 		    PromptLocation	    "left"
 		    Name		    "mdot1_0"
 		    }
 		    Object {
-		    $ObjectID		    565
+		    $ObjectID		    564
 		    PromptLocation	    "left"
 		    Name		    "Tin1_0"
 		    }
 		    Object {
-		    $ObjectID		    566
+		    $ObjectID		    565
 		    PromptLocation	    "left"
 		    Name		    "Pin1_0"
 		    }
@@ -113670,34 +113671,34 @@ Library {
 		    Name		    "Container8"
 		    }
 		    Object {
-		    $ObjectID		    567
+		    $ObjectID		    566
 		    $ClassName		    "Simulink.dialog.Group"
 		    Prompt		    "Secondary Fluid"
 		    Array {
 		    Type		    "Simulink.dialog.parameter.Edit"
 		    Dimension		    5
 		    Object {
-		    $ObjectID		    568
+		    $ObjectID		    567
 		    PromptLocation	    "left"
 		    Name		    "H2_0"
 		    }
 		    Object {
-		    $ObjectID		    569
+		    $ObjectID		    568
 		    PromptLocation	    "left"
 		    Name		    "A2"
 		    }
 		    Object {
-		    $ObjectID		    570
+		    $ObjectID		    569
 		    PromptLocation	    "left"
 		    Name		    "mdot2_0"
 		    }
 		    Object {
-		    $ObjectID		    571
+		    $ObjectID		    570
 		    PromptLocation	    "left"
 		    Name		    "Tin2_0"
 		    }
 		    Object {
-		    $ObjectID		    572
+		    $ObjectID		    571
 		    PromptLocation	    "left"
 		    Name		    "Pin2_0"
 		    }
@@ -113712,7 +113713,7 @@ Library {
 		    Name		    "Container7"
 		    }
 		    Object {
-		    $ObjectID		    573
+		    $ObjectID		    572
 		    Prompt		    "Linear Model"
 		    Visible		    "off"
 		    Name		    "Container6"
@@ -113739,7 +113740,7 @@ Library {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "125"
-		    SIDHighWatermark	    "834"
+		    SIDHighWatermark	    "904"
 		    SIDPrevWatermark	    "748"
 		    Block {
 		    BlockType		    Inport
@@ -114620,7 +114621,7 @@ Library {
 		    Position		    [1235, 347, 1285, 373]
 		    ZOrder		    432
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.264"
+		    LibraryVersion	    "1.269"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    ContentPreviewEnabled   off
@@ -115272,7 +115273,7 @@ Library {
 		  MaskHideContents	  off
 		  Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    574
+		    $ObjectID		    573
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Heat Loads "
 		    Description		    "Increase the flow temperature using nomally distributed white noise.  Noise power and sample t"
@@ -115284,21 +115285,21 @@ Library {
 		    Type		    "Simulink.MaskParameter"
 		    Dimension		    3
 		    Object {
-		    $ObjectID		    575
+		    $ObjectID		    574
 		    Type		    "edit"
 		    Name		    "noise_pwr"
 		    Prompt		    "Noise Power"
 		    Value		    ".5"
 		    }
 		    Object {
-		    $ObjectID		    576
+		    $ObjectID		    575
 		    Type		    "edit"
 		    Name		    "samp_time"
 		    Prompt		    "Sample Time"
 		    Value		    "10"
 		    }
 		    Object {
-		    $ObjectID		    577
+		    $ObjectID		    576
 		    Type		    "edit"
 		    Name		    "seed"
 		    Prompt		    "Seed"
@@ -115541,7 +115542,7 @@ Library {
       MaskHideContents	      off
       Object {
 	$PropName		"MaskObject"
-	$ObjectID		578
+	$ObjectID		577
 	$ClassName		"Simulink.Mask"
 	Display			"color('white')"
       }
@@ -115577,7 +115578,7 @@ Library {
 	  MaskHideContents	  off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    579
+	    $ObjectID		    578
 	    $ClassName		    "Simulink.Mask"
 	    Type		    "MISSION PROFILE SELECT  "
 	    Description		    "Select the MATLAB workspace variable that contains mission specifications. This variable should"
@@ -115600,7 +115601,7 @@ Library {
 	      Type		      "Simulink.MaskParameter"
 	      Dimension		      8
 	      Object {
-		$ObjectID		580
+		$ObjectID		579
 		Type			"checkbox"
 		Name			"mssn_check"
 		Prompt			"Define new mission?"
@@ -115612,7 +115613,7 @@ Library {
 		TabName			"General"
 	      }
 	      Object {
-		$ObjectID		581
+		$ObjectID		580
 		Type			"edit"
 		Name			"mssn_prof"
 		Prompt			"Mission Profile Variable (from workspace)"
@@ -115624,7 +115625,7 @@ Library {
 		TabName			"General"
 	      }
 	      Object {
-		$ObjectID		582
+		$ObjectID		581
 		Type			"edit"
 		Name			"del_P"
 		Prompt			"Pres. deviation from standard atmospheric conditions [kPa]"
@@ -115632,7 +115633,7 @@ Library {
 		TabName			"Atmosphere"
 	      }
 	      Object {
-		$ObjectID		583
+		$ObjectID		582
 		Type			"edit"
 		Name			"del_T"
 		Prompt			"Temp. deviation from standard atmospheric conditions [°C]"
@@ -115640,7 +115641,7 @@ Library {
 		TabName			"Atmosphere"
 	      }
 	      Object {
-		$ObjectID		584
+		$ObjectID		583
 		Type			"edit"
 		Name			"del_rho"
 		Prompt			"Density Deviation from standard"
@@ -115648,7 +115649,7 @@ Library {
 		TabName			"Atmosphere"
 	      }
 	      Object {
-		$ObjectID		585
+		$ObjectID		584
 		Type			"edit"
 		Name			"pres_msl"
 		Prompt			"MSL Pressure [kPa]"
@@ -115657,7 +115658,7 @@ Library {
 		TabName			"Atmosphere"
 	      }
 	      Object {
-		$ObjectID		586
+		$ObjectID		585
 		Type			"edit"
 		Name			"temp_msl"
 		Prompt			"MSL Temperature [°C]"
@@ -115666,7 +115667,7 @@ Library {
 		TabName			"Atmosphere"
 	      }
 	      Object {
-		$ObjectID		587
+		$ObjectID		586
 		Type			"edit"
 		Name			"dens_msl"
 		Prompt			"MSL Density [kg/m³]"
@@ -115692,7 +115693,7 @@ Library {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "14027"
+	    SIDHighWatermark	    "14055"
 	    Block {
 	      BlockType		      Lookup
 	      Name		      "APU"
@@ -116501,13 +116502,13 @@ Library {
       MaskHideContents	      off
       Object {
 	$PropName		"MaskObject"
-	$ObjectID		588
+	$ObjectID		587
 	$ClassName		"Simulink.Mask"
 	Display			"color('white')"
       }
       System {
 	Name			"Support Functions/Tools"
-	Location		[-1514, 963, -134, 1545]
+	Location		[1192, 862, 2888, 1888]
 	Open			off
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	200
@@ -116541,7 +116542,7 @@ Library {
 	  MaskHideContents	  off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    589
+	    $ObjectID		    588
 	    $ClassName		    "Simulink.Mask"
 	    Type		    "Electrical Sink"
 	    Description		    "AC Loads require real (P) and reactive loads (Q)."
@@ -116567,7 +116568,7 @@ Library {
 	      Type		      "Simulink.MaskParameter"
 	      Dimension		      4
 	      Object {
-		$ObjectID		590
+		$ObjectID		589
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -116585,7 +116586,7 @@ Library {
 		Value			"Cockpit"
 	      }
 	      Object {
-		$ObjectID		591
+		$ObjectID		590
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -116599,7 +116600,7 @@ Library {
 		Value			"AC"
 	      }
 	      Object {
-		$ObjectID		592
+		$ObjectID		591
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -116616,7 +116617,7 @@ Library {
 		"    set_param([blk,'/units'],'Gain','1');\nend\n\nclear h blk hblock\n"
 	      }
 	      Object {
-		$ObjectID		593
+		$ObjectID		592
 		Type			"edit"
 		Name			"unq_id"
 		Prompt			"Unique ID"
@@ -116653,7 +116654,7 @@ Library {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "61"
+	    SIDHighWatermark	    "67"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Load In"
@@ -116797,7 +116798,7 @@ Library {
 	  MaskHideContents	  off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    594
+	    $ObjectID		    593
 	    $ClassName		    "Simulink.Mask"
 	    Type		    "Electrical Source"
 	    Description		    "Output of all electrical loads from the selected location.  Loads are in Watts."
@@ -116854,7 +116855,7 @@ Library {
 	      Type		      "Simulink.MaskParameter"
 	      Dimension		      2
 	      Object {
-		$ObjectID		595
+		$ObjectID		594
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -116872,7 +116873,7 @@ Library {
 		Value			"Cockpit"
 	      }
 	      Object {
-		$ObjectID		596
+		$ObjectID		595
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -116903,7 +116904,7 @@ Library {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "790"
+	    SIDHighWatermark	    "792"
 	    Block {
 	      BlockType		      BusCreator
 	      Name		      "LoadBus"
@@ -116950,7 +116951,7 @@ Library {
 	  MaskHideContents	  off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    597
+	    $ObjectID		    596
 	    $ClassName		    "Simulink.Mask"
 	    Initialization	    "LoadFluidProps()"
 	    Display		    "fprintf('Fluid & Component Properties')"
@@ -116958,7 +116959,7 @@ Library {
 	      Type		      "Simulink.MaskParameter"
 	      Dimension		      7
 	      Object {
-		$ObjectID		598
+		$ObjectID		597
 		Type			"edit"
 		Name			"fuelprop"
 		Prompt			"Fuel Properties"
@@ -116966,7 +116967,7 @@ Library {
 		Evaluate		"off"
 	      }
 	      Object {
-		$ObjectID		599
+		$ObjectID		598
 		Type			"edit"
 		Name			"oilprop"
 		Prompt			"Oil Properties"
@@ -116974,7 +116975,7 @@ Library {
 		Evaluate		"off"
 	      }
 	      Object {
-		$ObjectID		600
+		$ObjectID		599
 		Type			"edit"
 		Name			"airprop"
 		Prompt			"Air Properties"
@@ -116982,7 +116983,7 @@ Library {
 		Evaluate		"off"
 	      }
 	      Object {
-		$ObjectID		601
+		$ObjectID		600
 		Type			"edit"
 		Name			"pumpprop"
 		Prompt			"Pump Properties"
@@ -116990,7 +116991,7 @@ Library {
 		Evaluate		"off"
 	      }
 	      Object {
-		$ObjectID		602
+		$ObjectID		601
 		Type			"edit"
 		Name			"fanprop"
 		Prompt			"Fan Properties"
@@ -116998,7 +116999,7 @@ Library {
 		Evaluate		"off"
 	      }
 	      Object {
-		$ObjectID		603
+		$ObjectID		602
 		Type			"edit"
 		Name			"compprop"
 		Prompt			"Compressor Properties"
@@ -117006,7 +117007,7 @@ Library {
 		Evaluate		"off"
 	      }
 	      Object {
-		$ObjectID		604
+		$ObjectID		603
 		Type			"edit"
 		Name			"heatexprop"
 		Prompt			"Heat Exchanger Data"
@@ -117052,14 +117053,14 @@ Library {
 	  MaskHideContents	  off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    605
+	    $ObjectID		    604
 	    $ClassName		    "Simulink.Mask"
 	    Initialization	    "set_param(gcb, 'LinkStatus', 'inactive')    % disable the library link\n"
 	    SelfModifiable	    "on"
 	    Display		    "str ='PowerFlow Data Manager\\n(Double click to select variables for output)'; fprintf(str)"
 	    Object {
 	      $PropName		      "Parameters"
-	      $ObjectID		      606
+	      $ObjectID		      605
 	      $ClassName	      "Simulink.MaskParameter"
 	      Type		      "edit"
 	      Name		      "null"
@@ -117115,7 +117116,7 @@ Library {
 	  MaskHideContents	  off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    607
+	    $ObjectID		    606
 	    $ClassName		    "Simulink.Mask"
 	    Type		    "Thermal Sink"
 	    Description		    "Input thermal loads in watts or kilowatts. Multiple heat loads should be input as a muxed signa"
@@ -117130,7 +117131,7 @@ Library {
 	      Type		      "Simulink.MaskParameter"
 	      Dimension		      3
 	      Object {
-		$ObjectID		608
+		$ObjectID		607
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -117148,7 +117149,7 @@ Library {
 		Value			"Cabin"
 	      }
 	      Object {
-		$ObjectID		609
+		$ObjectID		608
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -117165,7 +117166,7 @@ Library {
 		"    set_param([blk,'/units'],'Gain','1');\nend\n\nclear h blk hblock\n"
 	      }
 	      Object {
-		$ObjectID		610
+		$ObjectID		609
 		Type			"edit"
 		Name			"unq_id"
 		Prompt			"Unique ID"
@@ -117202,7 +117203,7 @@ Library {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "34"
+	    SIDHighWatermark	    "38"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Flow In"
@@ -117303,7 +117304,7 @@ Library {
 	  MaskHideContents	  off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    611
+	    $ObjectID		    610
 	    $ClassName		    "Simulink.Mask"
 	    Type		    "Thermal Source"
 	    Description		    "Output of all thermal loads from the selected location.  Loads are in Watts."
@@ -117315,7 +117316,7 @@ Library {
 	    IconUnits		    "normalized"
 	    Object {
 	      $PropName		      "Parameters"
-	      $ObjectID		      612
+	      $ObjectID		      611
 	      $ClassName	      "Simulink.MaskParameter"
 	      Type		      "popup"
 	      Array {
@@ -117392,7 +117393,7 @@ Library {
 	  MaskHideContents	  off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    613
+	    $ObjectID		    612
 	    $ClassName		    "Simulink.Mask"
 	    Type		    "Unit conversion"
 	    Description		    "Convert units of:\n\nMass, density, energy, power, force, temperature, pressure, length, area, "
@@ -117408,7 +117409,7 @@ Library {
 	      Type		      "Simulink.MaskParameter"
 	      Dimension		      47
 	      Object {
-		$ObjectID		614
+		$ObjectID		613
 		Type			"checkbox"
 		Name			"mass"
 		Prompt			"Mass"
@@ -117436,7 +117437,7 @@ Library {
 		") ; \nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		615
+		$ObjectID		614
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -117469,7 +117470,7 @@ Library {
 		"cn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		616
+		$ObjectID		615
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -117502,7 +117503,7 @@ Library {
 		"cn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		617
+		$ObjectID		616
 		Type			"checkbox"
 		Name			"dens"
 		Prompt			"Density"
@@ -117546,7 +117547,7 @@ Library {
 		"ue cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		618
+		$ObjectID		617
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -117593,7 +117594,7 @@ Library {
 		"cn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		619
+		$ObjectID		618
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -117643,7 +117644,7 @@ Library {
 		"cn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		620
+		$ObjectID		619
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -117690,7 +117691,7 @@ Library {
 		"3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		621
+		$ObjectID		620
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -117740,7 +117741,7 @@ Library {
 		"cn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		622
+		$ObjectID		621
 		Type			"checkbox"
 		Name			"energy"
 		Prompt			"Energy"
@@ -117768,7 +117769,7 @@ Library {
 		"m(blk,'MaskVisibilities',cellarr) ;\nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		623
+		$ObjectID		622
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -117801,7 +117802,7 @@ Library {
 		"2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		624
+		$ObjectID		623
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -117834,7 +117835,7 @@ Library {
 		"2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		625
+		$ObjectID		624
 		Type			"checkbox"
 		Name			"power"
 		Prompt			"Power"
@@ -117864,7 +117865,7 @@ Library {
 		"e cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		626
+		$ObjectID		625
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -117899,7 +117900,7 @@ Library {
 		"str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		627
+		$ObjectID		626
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -117934,7 +117935,7 @@ Library {
 		"str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		628
+		$ObjectID		627
 		Type			"checkbox"
 		Name			"force"
 		Prompt			"Force"
@@ -117962,7 +117963,7 @@ Library {
 		"ram(blk,'MaskVisibilities',cellarr) ;\nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		629
+		$ObjectID		628
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -117995,7 +117996,7 @@ Library {
 		" expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		630
+		$ObjectID		629
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -118028,7 +118029,7 @@ Library {
 		" expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		631
+		$ObjectID		630
 		Type			"checkbox"
 		Name			"temp"
 		Prompt			"Temperature"
@@ -118053,7 +118054,7 @@ Library {
 		"; \nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		632
+		$ObjectID		631
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -118083,7 +118084,7 @@ Library {
 		"param(blk,'MaskDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		633
+		$ObjectID		632
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -118113,7 +118114,7 @@ Library {
 		"param(blk,'MaskDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		634
+		$ObjectID		633
 		Type			"checkbox"
 		Name			"pres"
 		Prompt			"Pressure"
@@ -118146,7 +118147,7 @@ Library {
 		"nd\nset_param(blk,'MaskVisibilities',cellarr) ;\nclear blk value cellarr ind a b val i\n\n"
 	      }
 	      Object {
-		$ObjectID		635
+		$ObjectID		634
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -118186,7 +118187,7 @@ Library {
 		",'MaskDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		636
+		$ObjectID		635
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -118226,7 +118227,7 @@ Library {
 		",'MaskDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		637
+		$ObjectID		636
 		Type			"checkbox"
 		Name			"length"
 		Prompt			"Length"
@@ -118260,7 +118261,7 @@ Library {
 		"r(ind) = {'on'} ;\n    end\nend\nset_param(blk,'MaskVisibilities',cellarr) ;\nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		638
+		$ObjectID		637
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -118302,7 +118303,7 @@ Library {
 		"lk,'MaskDisplay',str) ;\nend\nclear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		639
+		$ObjectID		638
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -118344,7 +118345,7 @@ Library {
 		"lk,'MaskDisplay',str) ;\nend\nclear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		640
+		$ObjectID		639
 		Type			"checkbox"
 		Name			"area"
 		Prompt			"Area "
@@ -118378,7 +118379,7 @@ Library {
 		"lk,'MaskVisibilities',cellarr) ;\nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		641
+		$ObjectID		640
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -118419,7 +118420,7 @@ Library {
 		"kDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		642
+		$ObjectID		641
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -118460,7 +118461,7 @@ Library {
 		"kDisplay',str) ;\nend\n    clear blk value1 value2 expr name1 name2 name fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		643
+		$ObjectID		642
 		Type			"checkbox"
 		Name			"vol"
 		Prompt			"Volume "
@@ -118494,7 +118495,7 @@ Library {
 		"b val i"
 	      }
 	      Object {
-		$ObjectID		644
+		$ObjectID		643
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -118535,7 +118536,7 @@ Library {
 		"me fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		645
+		$ObjectID		644
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -118576,7 +118577,7 @@ Library {
 		"me fcn1 fcn2 str1 str2 str"
 	      }
 	      Object {
-		$ObjectID		646
+		$ObjectID		645
 		Type			"checkbox"
 		Name			"vel"
 		Prompt			"Velocity"
@@ -118617,7 +118618,7 @@ Library {
 		"end\nset_param(blk,'MaskVisibilities',cellarr) ; \nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		647
+		$ObjectID		646
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -118664,7 +118665,7 @@ Library {
 		"lue2 value3 value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		648
+		$ObjectID		647
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -118707,7 +118708,7 @@ Library {
 		"lue2 value3 value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		649
+		$ObjectID		648
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -118754,7 +118755,7 @@ Library {
 		"lue2 value3 value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		650
+		$ObjectID		649
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -118797,7 +118798,7 @@ Library {
 		"lue2 value3 value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		651
+		$ObjectID		650
 		Type			"checkbox"
 		Name			"flow_rate"
 		Prompt			"Volume Flow Rate"
@@ -118839,7 +118840,7 @@ Library {
 		"param(blk,'MaskVisibilities',cellarr) ; \nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		652
+		$ObjectID		651
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -118887,7 +118888,7 @@ Library {
 		" value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		653
+		$ObjectID		652
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -118931,7 +118932,7 @@ Library {
 		" value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		654
+		$ObjectID		653
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -118979,7 +118980,7 @@ Library {
 		" value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		655
+		$ObjectID		654
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -119023,7 +119024,7 @@ Library {
 		" value4 expr name1 name2 name3 name4 name fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		656
+		$ObjectID		655
 		Type			"checkbox"
 		Name			"mfr"
 		Prompt			"Mass Flow Rate"
@@ -119059,7 +119060,7 @@ Library {
 		"ram(blk,'MaskVisibilities',cellarr) ; \nclear blk value cellarr ind a b val i"
 	      }
 	      Object {
-		$ObjectID		657
+		$ObjectID		656
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -119099,7 +119100,7 @@ Library {
 		" fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		658
+		$ObjectID		657
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -119138,7 +119139,7 @@ Library {
 		" fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		659
+		$ObjectID		658
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -119178,7 +119179,7 @@ Library {
 		" fcn1 fcn2 fcn3 fcn4 str1 str2 str\n"
 	      }
 	      Object {
-		$ObjectID		660
+		$ObjectID		659
 		Type			"popup"
 		Array {
 		  Type			  "Cell"
@@ -119312,7 +119313,7 @@ Library {
 	  MaskHideContents	  off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    661
+	    $ObjectID		    660
 	    $ClassName		    "Simulink.Mask"
 	    Type		    "Data Sink"
 	    Description		    "Input to this block should be a bus signal with appropriately named signals.\n\nBus signals sen"
@@ -119383,7 +119384,7 @@ MatData {
 }
 # Finite State Machines
 #
-#    Stateflow Version 7.6 (R2013a) dated Aug  8 2013, 23:18:33
+#    Stateflow Version 7.6 (R2013a) dated Aug  8 2013, 23:20:01
 #
 #
 
