@@ -267,9 +267,45 @@ MSSN.pnu.pres=[MSSN.pnu.pres(1:t_ind_pnu-1),Cur_pres,Mssn_Cruise.pnu.pres,Mssn_d
 state_eng=[0,state_eng_cruise,state_eng_descent,state_eng_approach,state_eng_landing,state_eng_shutdown];
 
 
-        difference=length(MSSN.eng.Eng1(t_ind:end))-length(MSSN.eng.time(t_ind:end));
-         
+        difference=length(MSSN.eng.Eng1(t_ind:end))-length(MSSN.eng.time(t_ind:end))
+        difference_abs=abs(length(MSSN.eng.Eng1(t_ind:end))-length(MSSN.eng.time(t_ind:end)));
+        
         state_eng=zeros(1,length(state_eng));
+        
+if difference <0 
+                    if N_ENG<3
+                      t_ind_dif=length(MSSN.eng.Eng1)
+                     MSSN.eng.Eng1=horzcat(MSSN.eng.Eng1(1:end),zeros(1,difference_abs-1));
+                     MSSN.eng.Eng2=horzcat(MSSN.eng.Eng2(1:end),zeros(1,difference_abs-1));
+                     MSSN.eng.EngThrust1=horzcat(MSSN.eng.EngThrust1(1:end),zeros(1,difference_abs-1));   
+                     MSSN.eng.EngThrust2=horzcat(MSSN.eng.EngThrust2(1:end),zeros(1,difference_abs-1));
+                     
+                     MSSN.eng.Gen1=horzcat(MSSN.eng.Gen1(1:end),ones(1,difference_abs-3),zeros(1,2));
+                     MSSN.eng.Gen2=horzcat(MSSN.eng.Gen2(1:end),ones(1,difference_abs-3),zeros(1,2));
+                     MSSN.eng.Gen3=horzcat(MSSN.eng.Gen3(1:end),ones(1,difference_abs-3),zeros(1,2));
+                     MSSN.eng.Gen4=horzcat(MSSN.eng.Gen4(1:end),ones(1,difference_abs-3),zeros(1,2));
+                    
+                    elseif N_ENG>2
+                     MSSN.eng.Eng1=horzcat(MSSN.eng.Eng1(1:end),zeros(1,difference_abs-1));
+                     MSSN.eng.Eng2=horzcat(MSSN.eng.Eng2(1:end),zeros(1,difference_abs-1));
+                     MSSN.eng.EngThrust1=horzcat(MSSN.eng.EngThrust1(1:end),zeros(1,difference_abs-1));   
+                     MSSN.eng.EngThrust2=horzcat(MSSN.eng.EngThrust2(1:end),zeros(1,difference_abs-1));
+                     MSSN.eng.Eng3=horzcat(MSSN.eng.Eng3(1:end),zeros(1,difference_abs-1));
+                     MSSN.eng.Eng4=horzcat(MSSN.eng.Eng4(1:end),zeros(1,difference_abs-1));
+                     MSSN.eng.EngThrust3=horzcat(MSSN.eng.EngThrust3(1:end),zeros(1,difference_abs-1));   
+                     MSSN.eng.EngThrust4=horzcat(MSSN.eng.EngThrust4(1:end),zeros(1,difference_abs-1));
+                     
+                     
+                     MSSN.eng.Gen1=horzcat(MSSN.eng.Gen1(1:end),ones(1,difference_abs-3),zeros(1,2));
+                     MSSN.eng.Gen2=horzcat(MSSN.eng.Gen2(1:end),ones(1,difference_abs-3),zeros(1,2));
+                     MSSN.eng.Gen3=horzcat(MSSN.eng.Gen3(1:end),ones(1,difference_abs-3),zeros(1,2));
+                     MSSN.eng.Gen4=horzcat(MSSN.eng.Gen4(1:end),ones(1,difference_abs-3),zeros(1,2));
+                     MSSN.eng.Gen5=horzcat(MSSN.eng.Gen5(1:end),ones(1,difference_abs-3),zeros(1,2));
+                     MSSN.eng.Gen6=horzcat(MSSN.eng.Gen6(1:end),ones(1,difference_abs-3),zeros(1,2));
+                     MSSN.eng.Gen7=horzcat(MSSN.eng.Gen7(1:end),ones(1,difference_abs-3),zeros(1,2));
+                     MSSN.eng.Gen8=horzcat(MSSN.eng.Gen8(1:end),ones(1,difference_abs-3),zeros(1,2));
+                    end
+end
 
  for n = 1:MSSN.gen.N_ENG
         eval(['MSSN.eng.Eng' num2str(n) ' = [MSSN.eng.Eng' num2str(n) ...
@@ -293,35 +329,57 @@ state_eng=[0,state_eng_cruise,state_eng_descent,state_eng_approach,state_eng_lan
                 b = 100*ones(1,length(a));
                 eval(['MSSN.eng.EngThrust' num2str(i) '(t_ind+1:end)' ...
                     '= min([a;b],[],1);']);
-                  eval(['MSSN.eng.Eng' num2str(i) '(end-difference:end)' ' =[];']);
-                  eval(['MSSN.eng.EngThrust' num2str(i) '(end-difference:end)' ' = [];']);
-                  eval(['MSSN.eng.EngThrust' num2str(i) '(end-1:end)' ' =zeros(1,2);']);
-                  eval(['MSSN.eng.Eng' num2str(i) '(end-1:end)' ' =zeros(1,2);']); %For Shutdown
+                         if difference >0
+                             eval(['MSSN.eng.Eng' num2str(i) '(end-difference:end)' ' =[];']);
+                             eval(['MSSN.eng.EngThrust' num2str(i) '(end-difference:end)' ' = [];']);
+                             eval(['MSSN.eng.EngThrust' num2str(i) '(end-1:end)' ' =zeros(1,2);']);
+                             eval(['MSSN.eng.Eng' num2str(i) '(end-1:end)' ' =zeros(1,2);']); %For Shutdown
+                             
+                         end
+                        if difference<0
+                         eval(['MSSN.eng.Eng' num2str(i) '(t_ind+1:end)' ' =ones(1,length(MSSN.eng.Eng1(t_ind+1:end)));']);
+                         eval(['MSSN.eng.Eng' num2str(i) '(end-1:end)' ' =zeros(1,2);']); %For Shutdown
+                         eval(['MSSN.eng.EngThrust' num2str(i) '(t_ind+2:t_ind+3)' ' =CruiseThrust;']);
+                         eval(['MSSN.eng.EngThrust' num2str(i) '(t_ind+4:t_ind+5)' ' =DescentThrust;']);
+                         eval(['MSSN.eng.EngThrust' num2str(i) '(t_ind+6:t_ind+7)' ' =ApproachThrust;']);
+                         eval(['MSSN.eng.EngThrust' num2str(i) '(t_ind+8:t_ind+9)' ' =LandingThrust;']);
+                         eval(['MSSN.eng.EngThrust' num2str(i) '(end-1:end)' ' =zeros(1,2);']); %For Shutdown  
+                        end
+     
+     
+     
             elseif i==k
-
-                eval(['MSSN.eng.Eng' num2str(k) '(end-difference:end)' ' =[];']);
-                eval(['MSSN.eng.EngThrust' num2str(k) '(end-difference:end)' ' = [];']);
-                length(state_eng)
-length(MSSN.eng.Eng1(t_ind-1:end))
-                eval(['MSSN.eng.Eng' num2str(k) '(t_ind+1:end)' ' =state_eng;']);
-                eval(['MSSN.eng.EngThrust' num2str(k) '(t_ind+1:end)' ' = state_eng;']);  
-            end
+                        if difference >0
+                            state_eng=zeros(1,difference)
+                                        eval(['MSSN.eng.Eng' num2str(k) '(end-difference:end)' ' =[];']);
+                                        eval(['MSSN.eng.EngThrust' num2str(k) '(end-difference:end)' ' = [];']); 
+                                        eval(['MSSN.eng.Eng' num2str(k) '(t_ind-difference:end)' ' =state_eng;']);
+                                        eval(['MSSN.eng.EngThrust' num2str(k) '(t_ind-difference:end)' ' = state_eng;']);  
+                        elseif difference <0
+                            eval(['MSSN.eng.Eng' num2str(i) '(t_ind+1:end)' ' =zeros(1,length(MSSN.eng.Eng1(t_ind+1:end)));']);
+                            eval(['MSSN.eng.EngThrust' num2str(i) '(t_ind+1:end)' ' =zeros(1,length(MSSN.eng.Eng1(t_ind+1:end)));']);
+                            eval(['MSSN.eng.Eng' num2str(i) '(end-1:end)' ' =zeros(1,2);']); %For Shutdown
+                            eval(['MSSN.eng.EngThrust' num2str(i) '(end-1:end)' ' =zeros(1,2);']); %For Shutdown
+                        end
+           end
         end
+
     
     elseif fail == 2;
         k = fail_loc;
         state_gen = zeros(1,length(MSSN.eng.time(t_ind+1:end)));
+       
         eval(['MSSN.eng.Gen' num2str(k) '(t_ind+1:end)' ' = state_gen;']);
-        
+     
+       
         for i = 1:MSSN.gen.N_ENG   
                  eval(['a = T_mult*MSSN.eng.EngThrust' num2str(i) '(t_ind:end);']);
                  b = 100*ones(1,length(a));
                     eval(['MSSN.eng.EngThrust' num2str(i) '(t_ind:end)' ...
                     '= min([a;b],[],1);']);
-                  eval(['MSSN.eng.Eng' num2str(i) '(end-difference:end)' ' =[];']);
-                  eval(['MSSN.eng.EngThrust' num2str(i) '(end-difference:end)' ' = [];']);
-                  eval(['MSSN.eng.EngThrust' num2str(i) '(end-1:end)' ' =zeros(1,2);']);
-                  eval(['MSSN.eng.Eng' num2str(i) '(end-1:end)' ' =zeros(1,2);']); %For Shutdown
+                        
+                          eval(['MSSN.eng.Gen' num2str(k) '(t_ind+1:end)' ' = state_gen;']);
+                             
         end
     end
     
