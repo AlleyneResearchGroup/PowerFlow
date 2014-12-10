@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.327"
+    ComputedModelVersion    "1.328"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -32,7 +32,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [0.0, 0.0, 1280.0, 732.0]
+      Location		      [1192.0, 862.0, 1696.0, 1026.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -57,7 +57,7 @@ Model {
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1"
-	  Extents		  [1049.0, 554.0]
+	  Extents		  [1453.0, 848.0]
 	  ZoomFactor		  [1.0]
 	  Offset		  [281.0, 608.19999873638153]
 	}
@@ -66,7 +66,7 @@ Model {
 	  IsActive		  [1]
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
-	  Extents		  [1037.0, 554.0]
+	  Extents		  [1453.0, 848.0]
 	  ZoomFactor		  [1.0]
 	  Offset		  [-16.27500057220459, 34.0]
 	}
@@ -80,9 +80,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "mwillms4"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Dec 10 15:28:40 2014"
-  RTWModifiedTimeStamp	  340125330
-  ModelVersionFormat	  "1.%<AutoIncrement:327>"
+  LastModifiedDate	  "Wed Dec 10 16:33:15 2014"
+  RTWModifiedTimeStamp	  340129325
+  ModelVersionFormat	  "1.%<AutoIncrement:328>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1206,7 +1206,7 @@ Model {
   }
   System {
     Name		    "Boeing737Sample_updatedCopy"
-    Location		    [0, 0, 1280, 732]
+    Location		    [1192, 862, 2888, 1888]
     Open		    on
     ModelBrowserVisibility  on
     ModelBrowserWidth	    212
@@ -1220,7 +1220,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "27641"
+    SIDHighWatermark	    "27646"
     Block {
       BlockType		      BusSelector
       Name		      "Bus\nSelector"
@@ -1253,7 +1253,7 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"ECS & FOS "
-	Location		[-4, 0, 1288, 732]
+	Location		[1192, 862, 2888, 1888]
 	Open			on
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	212
@@ -1403,7 +1403,7 @@ Model {
 	  ZOrder		  -17
 	  ForegroundColor	  "red"
 	  BackgroundColor	  "yellow"
-	  LibraryVersion	  "1.280"
+	  LibraryVersion	  "1.283"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Cabin Zone"
 	  SourceType		  "Passenger Cabin"
 	  ContentPreviewEnabled	  off
@@ -1513,7 +1513,7 @@ Model {
 	  Position		  [1040, 267, 1130, 298]
 	  ZOrder		  -22
 	  ShowName		  off
-	  LibraryVersion	  "1.280"
+	  LibraryVersion	  "1.283"
 	  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	  SourceType		  "Electrical Sink"
 	  ContentPreviewEnabled	  off
@@ -1532,7 +1532,7 @@ Model {
 	  Position		  [1040, 302, 1130, 333]
 	  ZOrder		  -23
 	  ShowName		  off
-	  LibraryVersion	  "1.280"
+	  LibraryVersion	  "1.283"
 	  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	  SourceType		  "Electrical Sink"
 	  ContentPreviewEnabled	  off
@@ -1551,7 +1551,7 @@ Model {
 	  Position		  [1040, 337, 1130, 368]
 	  ZOrder		  -24
 	  ShowName		  off
-	  LibraryVersion	  "1.280"
+	  LibraryVersion	  "1.283"
 	  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	  SourceType		  "Electrical Sink"
 	  ContentPreviewEnabled	  off
@@ -1570,7 +1570,7 @@ Model {
 	  Position		  [1485, 872, 1575, 908]
 	  ZOrder		  68
 	  ShowName		  off
-	  LibraryVersion	  "1.280"
+	  LibraryVersion	  "1.283"
 	  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	  SourceType		  "Electrical Sink"
 	  ContentPreviewEnabled	  off
@@ -1586,7 +1586,7 @@ Model {
 	  Ports			  [1, 2]
 	  Position		  [1280, 784, 1430, 926]
 	  ZOrder		  67
-	  LibraryVersion	  "1.280"
+	  LibraryVersion	  "1.283"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Fan"
 	  SourceType		  "Fan"
 	  ContentPreviewEnabled	  off
@@ -1601,7 +1601,7 @@ Model {
 	  ZOrder		  -29
 	  DropShadow		  on
 	  ShowName		  off
-	  LibraryVersion	  "1.280"
+	  LibraryVersion	  "1.283"
 	  SourceBlock		  "PowerFlowLib/Support Functions//Tools/FluidComponent\nProperties"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -2084,7 +2084,7 @@ Model {
 	      Position		      [480, 467, 620, 603]
 	      ZOrder		      6
 	      BackgroundColor	      "[0.501961, 0.501961, 0.501961]"
-	      LibraryVersion	      "1.277"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Fluid Pump"
 	      SourceType	      "Pump"
 	      ContentPreviewEnabled   off
@@ -2106,7 +2106,7 @@ Model {
 	      Position		      [480, 632, 620, 768]
 	      ZOrder		      7
 	      BackgroundColor	      "[0.501961, 0.501961, 0.501961]"
-	      LibraryVersion	      "1.277"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Fluid Pump"
 	      SourceType	      "Pump"
 	      ContentPreviewEnabled   off
@@ -2127,7 +2127,7 @@ Model {
 	      Ports		      [5, 3]
 	      Position		      [130, 634, 290, 766]
 	      ZOrder		      2
-	      LibraryVersion	      "1.277"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Fluid Tank"
 	      SourceType	      "Fluid Tank"
 	      ContentPreviewEnabled   off
@@ -2158,7 +2158,7 @@ Model {
 	      Position		      [745, 182, 840, 213]
 	      ZOrder		      -29
 	      ShowName		      off
-	      LibraryVersion	      "1.277"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	      SourceType	      "Electrical Sink"
 	      ContentPreviewEnabled   off
@@ -2177,7 +2177,7 @@ Model {
 	      Position		      [750, 352, 845, 383]
 	      ZOrder		      -30
 	      ShowName		      off
-	      LibraryVersion	      "1.277"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	      SourceType	      "Electrical Sink"
 	      ContentPreviewEnabled   off
@@ -2196,7 +2196,7 @@ Model {
 	      Position		      [750, 517, 845, 548]
 	      ZOrder		      -31
 	      ShowName		      off
-	      LibraryVersion	      "1.277"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	      SourceType	      "Electrical Sink"
 	      ContentPreviewEnabled   off
@@ -2215,7 +2215,7 @@ Model {
 	      Position		      [740, 682, 835, 713]
 	      ZOrder		      -32
 	      ShowName		      off
-	      LibraryVersion	      "1.277"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	      SourceType	      "Electrical Sink"
 	      ContentPreviewEnabled   off
@@ -2234,7 +2234,7 @@ Model {
 	      Position		      [745, 832, 840, 863]
 	      ZOrder		      -33
 	      ShowName		      off
-	      LibraryVersion	      "1.277"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	      SourceType	      "Electrical Sink"
 	      ContentPreviewEnabled   off
@@ -2253,7 +2253,7 @@ Model {
 	      Position		      [745, 1002, 840, 1033]
 	      ZOrder		      -34
 	      ShowName		      off
-	      LibraryVersion	      "1.277"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	      SourceType	      "Electrical Sink"
 	      ContentPreviewEnabled   off
@@ -2270,7 +2270,7 @@ Model {
 	      Ports		      [4, 1]
 	      Position		      [1195, 387, 1300, 503]
 	      ZOrder		      11
-	      LibraryVersion	      "1.277"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Flow Junction"
 	      SourceType	      ""
 	      ContentPreviewEnabled   off
@@ -2294,7 +2294,7 @@ Model {
 	      Ports		      [4, 1]
 	      Position		      [1195, 642, 1300, 758]
 	      ZOrder		      10
-	      LibraryVersion	      "1.277"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Flow Junction"
 	      SourceType	      ""
 	      ContentPreviewEnabled   off
@@ -4026,7 +4026,7 @@ Model {
 	      Position		      [480, 782, 620, 918]
 	      ZOrder		      8
 	      BackgroundColor	      "[0.501961, 0.501961, 0.501961]"
-	      LibraryVersion	      "1.277"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Fluid Pump"
 	      SourceType	      "Pump"
 	      ContentPreviewEnabled   off
@@ -4048,7 +4048,7 @@ Model {
 	      Position		      [480, 952, 620, 1088]
 	      ZOrder		      9
 	      BackgroundColor	      "[0.501961, 0.501961, 0.501961]"
-	      LibraryVersion	      "1.277"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Fluid Pump"
 	      SourceType	      "Pump"
 	      ContentPreviewEnabled   off
@@ -4069,7 +4069,7 @@ Model {
 	      Ports		      [5, 3]
 	      Position		      [130, 954, 290, 1086]
 	      ZOrder		      3
-	      LibraryVersion	      "1.277"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Fluid Tank"
 	      SourceType	      "Fluid Tank"
 	      ContentPreviewEnabled   off
@@ -4572,7 +4572,7 @@ Model {
 	      Position		      [480, 132, 620, 268]
 	      ZOrder		      4
 	      BackgroundColor	      "[0.501961, 0.501961, 0.501961]"
-	      LibraryVersion	      "1.277"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Fluid Pump"
 	      SourceType	      "Pump"
 	      ContentPreviewEnabled   off
@@ -4594,7 +4594,7 @@ Model {
 	      Position		      [480, 302, 620, 438]
 	      ZOrder		      5
 	      BackgroundColor	      "[0.501961, 0.501961, 0.501961]"
-	      LibraryVersion	      "1.277"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Fluid Pump"
 	      SourceType	      "Pump"
 	      ContentPreviewEnabled   off
@@ -4615,7 +4615,7 @@ Model {
 	      Ports		      [5, 3]
 	      Position		      [130, 304, 290, 436]
 	      ZOrder		      1
-	      LibraryVersion	      "1.277"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Fluid Tank"
 	      SourceType	      "Fluid Tank"
 	      ContentPreviewEnabled   off
@@ -5804,7 +5804,7 @@ Model {
 	  Ports			  [2, 2]
 	  Position		  [385, 178, 510, 247]
 	  ZOrder		  398
-	  LibraryVersion	  "1.280"
+	  LibraryVersion	  "1.283"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Heat Exchanger"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -5833,7 +5833,7 @@ Model {
 	  Ports			  [2, 2]
 	  Position		  [415, 388, 540, 457]
 	  ZOrder		  399
-	  LibraryVersion	  "1.280"
+	  LibraryVersion	  "1.283"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Heat Exchanger"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -5862,7 +5862,7 @@ Model {
 	  Ports			  [2, 2]
 	  Position		  [590, 178, 715, 247]
 	  ZOrder		  400
-	  LibraryVersion	  "1.280"
+	  LibraryVersion	  "1.283"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Heat Exchanger"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -5891,7 +5891,7 @@ Model {
 	  Ports			  [2, 2]
 	  Position		  [590, 353, 715, 422]
 	  ZOrder		  401
-	  LibraryVersion	  "1.280"
+	  LibraryVersion	  "1.283"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Heat Exchanger"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -5929,7 +5929,7 @@ Model {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Left PACK"
-	    Location		    [-4, 0, 1288, 732]
+	    Location		    [1192, 862, 2888, 1888]
 	    Open		    off
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    200
@@ -6051,7 +6051,7 @@ Model {
 	      Ports		      [2, 2]
 	      Position		      [415, 774, 575, 916]
 	      ZOrder		      -10
-	      LibraryVersion	      "1.277"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Compressor"
 	      SourceType	      ""
 	      ContentPreviewEnabled   off
@@ -6633,44 +6633,6 @@ Model {
 	    }
 	    Block {
 	      BlockType		      Reference
-	      Name		      "Mixing Junction"
-	      SID		      "24400"
-	      Ports		      [2, 1]
-	      Position		      [695, 541, 800, 619]
-	      ZOrder		      -42
-	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Mixing Junction"
-	      SourceType	      "Mixing Junction"
-	      d_in_1		      "0.1"
-	      d_in_2		      "0.1"
-	      d_out		      "0.2"
-	      RTWMemSecFuncInitTerm   "Inherit from model"
-	      RTWMemSecFuncExecute    "Inherit from model"
-	      RTWMemSecDataConstants  "Inherit from model"
-	      RTWMemSecDataInternal   "Inherit from model"
-	      RTWMemSecDataParameters "Inherit from model"
-	      ContentPreviewEnabled   off
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "Mixing Junction2"
-	      SID		      "24402"
-	      Ports		      [2, 1]
-	      Position		      [515, 636, 620, 714]
-	      ZOrder		      -43
-	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Mixing Junction"
-	      SourceType	      "Mixing Junction"
-	      d_in_1		      "0.1"
-	      d_in_2		      "0.1"
-	      d_out		      "0.2"
-	      RTWMemSecFuncInitTerm   "Inherit from model"
-	      RTWMemSecFuncExecute    "Inherit from model"
-	      RTWMemSecDataConstants  "Inherit from model"
-	      RTWMemSecDataInternal   "Inherit from model"
-	      RTWMemSecDataParameters "Inherit from model"
-	      ContentPreviewEnabled   off
-	    }
-	    Block {
-	      BlockType		      Reference
 	      Name		      "PID Controller"
 	      SID		      "24403"
 	      Ports		      [1, 1]
@@ -6904,7 +6866,7 @@ Model {
 	      Ports		      [2, 3]
 	      Position		      [335, 528, 490, 592]
 	      ZOrder		      -47
-	      LibraryVersion	      "1.277"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Air-Air HX"
 	      SourceType	      "Air-Air Heat Exchanger"
 	      ContentPreviewEnabled   off
@@ -7343,7 +7305,7 @@ Model {
 	      Ports		      [2, 3]
 	      Position		      [685, 793, 840, 857]
 	      ZOrder		      -54
-	      LibraryVersion	      "1.277"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Air-Air HX"
 	      SourceType	      "Air-Air Heat Exchanger"
 	      ContentPreviewEnabled   off
@@ -7855,7 +7817,7 @@ Model {
 	      Ports		      [2, 3]
 	      Position		      [915, 763, 1075, 917]
 	      ZOrder		      -66
-	      LibraryVersion	      "1.277"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Turbine"
 	      SourceType	      ""
 	      ContentPreviewEnabled   off
@@ -8277,6 +8239,38 @@ Model {
 	      }
 	    }
 	    Block {
+	      BlockType		      Reference
+	      Name		      "n-intlet Mixing Junction1"
+	      SID		      "27645"
+	      Ports		      [2, 1]
+	      Position		      [525, 637, 615, 713]
+	      ZOrder		      11
+	      LibraryVersion	      "1.280"
+	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/n-intlet Mixing Junction"
+	      SourceType	      "Mixing Junction"
+	      ContentPreviewEnabled   off
+	      no_inlets		      "2"
+	      d_in_1		      "0.1"
+	      d_in_2		      "0.1"
+	      d_out		      "0.2"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "n-intlet Mixing Junction2"
+	      SID		      "27646"
+	      Ports		      [2, 1]
+	      Position		      [700, 542, 790, 618]
+	      ZOrder		      12
+	      LibraryVersion	      "1.280"
+	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/n-intlet Mixing Junction"
+	      SourceType	      "Mixing Junction"
+	      ContentPreviewEnabled   off
+	      no_inlets		      "2"
+	      d_in_1		      "0.1"
+	      d_in_2		      "0.1"
+	      d_out		      "0.2"
+	    }
+	    Block {
 	      BlockType		      Goto
 	      Name		      "r_acm_increment1"
 	      SID		      "24480"
@@ -8392,11 +8386,11 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      8
+	      ZOrder		      167
 	      SrcBlock		      "Valve1"
 	      SrcPort		      1
-	      Points		      [10, 0]
-	      DstBlock		      "Mixing Junction"
+	      Points		      [12, 0; 0, 85]
+	      DstBlock		      "n-intlet Mixing Junction2"
 	      DstPort		      1
 	    }
 	    Line {
@@ -8453,8 +8447,8 @@ Model {
 	      DstPort		      2
 	    }
 	    Line {
-	      ZOrder		      17
-	      SrcBlock		      "Mixing Junction"
+	      ZOrder		      165
+	      SrcBlock		      "n-intlet Mixing Junction2"
 	      SrcPort		      1
 	      DstBlock		      "User-set_\nsupply_pressure"
 	      DstPort		      1
@@ -8679,35 +8673,35 @@ Model {
 	      DstPort		      2
 	    }
 	    Line {
-	      ZOrder		      47
-	      SrcBlock		      "Mixing Junction2"
+	      ZOrder		      164
+	      SrcBlock		      "n-intlet Mixing Junction1"
 	      SrcPort		      1
-	      Points		      [40, 0]
+	      Points		      [45, 0]
+	      Branch {
+		ZOrder			166
+		Points			[0, -75]
+		DstBlock		"n-intlet Mixing Junction2"
+		DstPort			2
+	      }
 	      Branch {
 		ZOrder			48
 		Points			[0, 55]
 		DstBlock		"Got2"
 		DstPort			1
 	      }
-	      Branch {
-		ZOrder			49
-		Points			[0, -75]
-		DstBlock		"Mixing Junction"
-		DstPort			2
-	      }
 	    }
 	    Line {
-	      ZOrder		      50
+	      ZOrder		      163
 	      SrcBlock		      "From13"
 	      SrcPort		      1
-	      DstBlock		      "Mixing Junction2"
+	      DstBlock		      "n-intlet Mixing Junction1"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      51
+	      ZOrder		      162
 	      SrcBlock		      "Subsystem1"
 	      SrcPort		      1
-	      DstBlock		      "Mixing Junction2"
+	      DstBlock		      "n-intlet Mixing Junction1"
 	      DstPort		      2
 	    }
 	    Line {
@@ -9010,7 +9004,7 @@ Model {
 	      Position		      [750, 237, 845, 268]
 	      ZOrder		      -6
 	      ShowName		      off
-	      LibraryVersion	      "1.276"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	      SourceType	      "Electrical Sink"
 	      ContentPreviewEnabled   off
@@ -9027,7 +9021,7 @@ Model {
 	      Position		      [440, 172, 580, 308]
 	      ZOrder		      2
 	      BackgroundColor	      "gray"
-	      LibraryVersion	      "1.276"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Fluid Pump"
 	      SourceType	      "Pump"
 	      ContentPreviewEnabled   off
@@ -9048,7 +9042,7 @@ Model {
 	      Ports		      [5, 3]
 	      Position		      [150, 174, 310, 306]
 	      ZOrder		      1
-	      LibraryVersion	      "1.276"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Fluid Tank"
 	      SourceType	      "Fluid Tank"
 	      ContentPreviewEnabled   off
@@ -9366,7 +9360,7 @@ Model {
 	      Position		      [750, 237, 845, 268]
 	      ZOrder		      -6
 	      ShowName		      off
-	      LibraryVersion	      "1.276"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	      SourceType	      "Electrical Sink"
 	      ContentPreviewEnabled   off
@@ -9383,7 +9377,7 @@ Model {
 	      Position		      [440, 172, 580, 308]
 	      ZOrder		      2
 	      BackgroundColor	      "gray"
-	      LibraryVersion	      "1.276"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Fluid Pump"
 	      SourceType	      "Pump"
 	      ContentPreviewEnabled   off
@@ -9404,7 +9398,7 @@ Model {
 	      Ports		      [5, 3]
 	      Position		      [150, 174, 310, 306]
 	      ZOrder		      1
-	      LibraryVersion	      "1.276"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Fluid Tank"
 	      SourceType	      "Fluid Tank"
 	      ContentPreviewEnabled   off
@@ -9620,7 +9614,7 @@ Model {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Right PACK"
-	    Location		    [-4, 0, 1288, 732]
+	    Location		    [1192, 862, 2888, 1888]
 	    Open		    off
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    200
@@ -9742,7 +9736,7 @@ Model {
 	      Ports		      [2, 2]
 	      Position		      [425, 867, 570, 958]
 	      ZOrder		      -10
-	      LibraryVersion	      "1.276"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Compressor"
 	      SourceType	      ""
 	      ContentPreviewEnabled   off
@@ -10333,44 +10327,6 @@ Model {
 	    }
 	    Block {
 	      BlockType		      Reference
-	      Name		      "Mixing Junction"
-	      SID		      "26292"
-	      Ports		      [2, 1]
-	      Position		      [695, 621, 800, 699]
-	      ZOrder		      -43
-	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Mixing Junction"
-	      SourceType	      "Mixing Junction"
-	      d_in_1		      "0.1"
-	      d_in_2		      "0.1"
-	      d_out		      "0.2"
-	      RTWMemSecFuncInitTerm   "Inherit from model"
-	      RTWMemSecFuncExecute    "Inherit from model"
-	      RTWMemSecDataConstants  "Inherit from model"
-	      RTWMemSecDataInternal   "Inherit from model"
-	      RTWMemSecDataParameters "Inherit from model"
-	      ContentPreviewEnabled   off
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "Mixing Junction2"
-	      SID		      "26293"
-	      Ports		      [2, 1]
-	      Position		      [515, 716, 620, 794]
-	      ZOrder		      -44
-	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Mixing Junction"
-	      SourceType	      "Mixing Junction"
-	      d_in_1		      "0.1"
-	      d_in_2		      "0.1"
-	      d_out		      "0.2"
-	      RTWMemSecFuncInitTerm   "Inherit from model"
-	      RTWMemSecFuncExecute    "Inherit from model"
-	      RTWMemSecDataConstants  "Inherit from model"
-	      RTWMemSecDataInternal   "Inherit from model"
-	      RTWMemSecDataParameters "Inherit from model"
-	      ContentPreviewEnabled   off
-	    }
-	    Block {
-	      BlockType		      Reference
 	      Name		      "PID Controller"
 	      SID		      "26294"
 	      Ports		      [1, 1]
@@ -10512,7 +10468,7 @@ Model {
 	      UpperSaturationLimit    "2"
 	      LowerSaturationLimit    ".05"
 	      LinearizeAsGain	      off
-	      AntiWindupMode	      "none"
+	      AntiWindupMode	      "clamping"
 	      Kb		      "1"
 	      TrackingMode	      off
 	      Kt		      "1"
@@ -10604,7 +10560,7 @@ Model {
 	      Ports		      [2, 3]
 	      Position		      [335, 608, 490, 672]
 	      ZOrder		      -48
-	      LibraryVersion	      "1.276"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Air-Air HX"
 	      SourceType	      "Air-Air Heat Exchanger"
 	      ContentPreviewEnabled   off
@@ -11022,7 +10978,7 @@ Model {
 	      Ports		      [2, 3]
 	      Position		      [685, 873, 840, 937]
 	      ZOrder		      -55
-	      LibraryVersion	      "1.276"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Air-Air HX"
 	      SourceType	      "Air-Air Heat Exchanger"
 	      ContentPreviewEnabled   off
@@ -11534,7 +11490,7 @@ Model {
 	      Ports		      [2, 3]
 	      Position		      [915, 891, 1070, 979]
 	      ZOrder		      -67
-	      LibraryVersion	      "1.276"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Turbine"
 	      SourceType	      ""
 	      ContentPreviewEnabled   off
@@ -11956,6 +11912,38 @@ Model {
 	      }
 	    }
 	    Block {
+	      BlockType		      Reference
+	      Name		      "n-intlet Mixing Junction"
+	      SID		      "27643"
+	      Ports		      [2, 1]
+	      Position		      [705, 622, 795, 698]
+	      ZOrder		      9
+	      LibraryVersion	      "1.280"
+	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/n-intlet Mixing Junction"
+	      SourceType	      "Mixing Junction"
+	      ContentPreviewEnabled   off
+	      no_inlets		      "2"
+	      d_in_1		      "0.1"
+	      d_in_2		      "0.1"
+	      d_out		      "0.2"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "n-intlet Mixing Junction1"
+	      SID		      "27644"
+	      Ports		      [2, 1]
+	      Position		      [525, 717, 615, 793]
+	      ZOrder		      10
+	      LibraryVersion	      "1.280"
+	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/n-intlet Mixing Junction"
+	      SourceType	      "Mixing Junction"
+	      ContentPreviewEnabled   off
+	      no_inlets		      "2"
+	      d_in_1		      "0.1"
+	      d_in_2		      "0.1"
+	      d_out		      "0.2"
+	    }
+	    Block {
 	      BlockType		      Goto
 	      Name		      "r_acm_increment"
 	      SID		      "26361"
@@ -12119,28 +12107,28 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      25
+	      ZOrder		      105
 	      SrcBlock		      "Subsystem1"
 	      SrcPort		      1
-	      DstBlock		      "Mixing Junction2"
+	      DstBlock		      "n-intlet Mixing Junction1"
 	      DstPort		      2
 	    }
 	    Line {
-	      ZOrder		      26
+	      ZOrder		      104
 	      SrcBlock		      "From13"
 	      SrcPort		      1
-	      DstBlock		      "Mixing Junction2"
+	      DstBlock		      "n-intlet Mixing Junction1"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      27
-	      SrcBlock		      "Mixing Junction2"
+	      ZOrder		      103
+	      SrcBlock		      "n-intlet Mixing Junction1"
 	      SrcPort		      1
-	      Points		      [40, 0]
+	      Points		      [45, 0]
 	      Branch {
-		ZOrder			28
+		ZOrder			100
 		Points			[0, -75]
-		DstBlock		"Mixing Junction"
+		DstBlock		"n-intlet Mixing Junction"
 		DstPort			2
 	      }
 	      Branch {
@@ -12351,8 +12339,8 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      59
-	      SrcBlock		      "Mixing Junction"
+	      ZOrder		      102
+	      SrcBlock		      "n-intlet Mixing Junction"
 	      SrcPort		      1
 	      DstBlock		      "User-set_\nsupply_pressure"
 	      DstPort		      1
@@ -12411,11 +12399,11 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      68
+	      ZOrder		      101
 	      SrcBlock		      "Valve1"
 	      SrcPort		      1
-	      Points		      [10, 0]
-	      DstBlock		      "Mixing Junction"
+	      Points		      [12, 0; 0, 85]
+	      DstBlock		      "n-intlet Mixing Junction"
 	      DstPort		      1
 	    }
 	    Line {
@@ -13053,7 +13041,7 @@ Model {
 	  Ports			  [3, 1]
 	  Position		  [725, 622, 835, 738]
 	  ZOrder		  -43
-	  LibraryVersion	  "1.280"
+	  LibraryVersion	  "1.283"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Thermal/ECS/n-intlet Mixing Junction"
 	  SourceType		  "Mixing Junction"
 	  ContentPreviewEnabled	  off
@@ -13630,7 +13618,7 @@ Model {
 	  Position		  [2925, 968, 3025, 1082]
 	  ZOrder		  -5
 	  BlockMirror		  on
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Inverters/ inverter"
 	  SourceType		  "Average inverter model"
 	  ContentPreviewEnabled	  off
@@ -13778,7 +13766,7 @@ Model {
 	  Ports			  [4, 3]
 	  Position		  [2120, 325, 2205, 470]
 	  ZOrder		  -15
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Service Bus"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -13790,7 +13778,7 @@ Model {
 	  Ports			  [4, 3]
 	  Position		  [2110, 835, 2195, 980]
 	  ZOrder		  -16
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Service Bus"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -13803,7 +13791,7 @@ Model {
 	  Position		  [3605, 107, 3710, 203]
 	  ZOrder		  -17
 	  BlockMirror		  on
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Battery/BATTERY"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -13819,7 +13807,7 @@ Model {
 	  Position		  [3600, 387, 3705, 483]
 	  ZOrder		  -18
 	  BlockMirror		  on
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Battery/BATTERY"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -13835,7 +13823,7 @@ Model {
 	  Position		  [3610, 642, 3715, 738]
 	  ZOrder		  -19
 	  BlockMirror		  on
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Battery/BATTERY"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -14982,7 +14970,7 @@ Model {
 	  BlockRotation		  270
 	  BlockMirror		  on
 	  NamePlacement		  "alternate"
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Loads/Enabled \nDC Load1"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -14997,7 +14985,7 @@ Model {
 	  BlockRotation		  270
 	  BlockMirror		  on
 	  NamePlacement		  "alternate"
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Loads/Enabled \nDC Load1"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -15012,7 +15000,7 @@ Model {
 	  BlockRotation		  270
 	  BlockMirror		  on
 	  NamePlacement		  "alternate"
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Loads/Enabled_AC_Loadloss"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -15033,7 +15021,7 @@ Model {
 	  BlockRotation		  270
 	  BlockMirror		  on
 	  NamePlacement		  "alternate"
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Loads/Enabled_AC_Loadloss"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -15054,7 +15042,7 @@ Model {
 	  BlockRotation		  270
 	  BlockMirror		  on
 	  NamePlacement		  "alternate"
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Loads/Enabled_AC_Loadloss"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -15075,7 +15063,7 @@ Model {
 	  BlockRotation		  270
 	  BlockMirror		  on
 	  NamePlacement		  "alternate"
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Loads/Enabled_AC_Loadloss"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -15209,7 +15197,7 @@ Model {
 	      Ports		      [2, 2]
 	      Position		      [265, 402, 380, 533]
 	      ZOrder		      3
-	      LibraryVersion	      "1.276"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Gearbox"
 	      SourceType	      ""
 	      ContentPreviewEnabled   off
@@ -16342,7 +16330,7 @@ Model {
 	  Ports			  [1, 1]
 	  Position		  [1170, 572, 1240, 658]
 	  ZOrder		  -102
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  FontSize		  8
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/GND Service Bus"
 	  SourceType		  ""
@@ -16355,7 +16343,7 @@ Model {
 	  Ports			  [3, 4]
 	  Position		  [1135, 111, 1280, 189]
 	  ZOrder		  -103
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  FontSize		  8
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Generation Unit\nSync-Sync"
 	  SourceType		  ""
@@ -16399,7 +16387,7 @@ Model {
 	  Ports			  [3, 4]
 	  Position		  [1135, 376, 1280, 454]
 	  ZOrder		  -104
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  FontSize		  8
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Generation Unit\nSync-Sync"
 	  SourceType		  ""
@@ -16443,7 +16431,7 @@ Model {
 	  Ports			  [3, 4]
 	  Position		  [1135, 761, 1280, 839]
 	  ZOrder		  -105
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  FontSize		  8
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Generation Unit\nSync-Sync"
 	  SourceType		  ""
@@ -18362,7 +18350,7 @@ Model {
 	  ZOrder		  -170
 	  BlockMirror		  on
 	  NamePlacement		  "alternate"
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Inverter Phase\nControl"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -18507,7 +18495,7 @@ Model {
 	      Position		      [170, 300, 260, 330]
 	      ZOrder		      -5
 	      ShowName		      off
-	      LibraryVersion	      "1.276"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSource"
 	      SourceType	      "Electrical Source"
 	      ContentPreviewEnabled   off
@@ -18524,7 +18512,7 @@ Model {
 	      Position		      [170, 250, 260, 280]
 	      ZOrder		      -6
 	      ShowName		      off
-	      LibraryVersion	      "1.276"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSource"
 	      SourceType	      "Electrical Source"
 	      ContentPreviewEnabled   off
@@ -18541,7 +18529,7 @@ Model {
 	      Position		      [170, 372, 260, 403]
 	      ZOrder		      -7
 	      ShowName		      off
-	      LibraryVersion	      "1.276"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSource"
 	      SourceType	      "Electrical Source"
 	      ContentPreviewEnabled   off
@@ -18558,7 +18546,7 @@ Model {
 	      Position		      [170, 482, 260, 513]
 	      ZOrder		      -8
 	      ShowName		      off
-	      LibraryVersion	      "1.276"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSource"
 	      SourceType	      "Electrical Source"
 	      ContentPreviewEnabled   off
@@ -19100,7 +19088,7 @@ Model {
 	  Ports			  [4, 3]
 	  Position		  [2120, 65, 2205, 235]
 	  ZOrder		  -172
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Service Bus"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -19112,7 +19100,7 @@ Model {
 	  Ports			  [4, 3]
 	  Position		  [2115, 555, 2200, 725]
 	  ZOrder		  -173
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Service Bus"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -19738,7 +19726,7 @@ Model {
 	      Position		      [340, 285, 430, 315]
 	      ZOrder		      -12
 	      ShowName		      off
-	      LibraryVersion	      "1.276"
+	      LibraryVersion	      "1.280"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ThermalSink"
 	      SourceType	      "Thermal Sink"
 	      ContentPreviewEnabled   off
@@ -19898,7 +19886,7 @@ Model {
 	  Position		  [2605, 956, 2710, 1089]
 	  ZOrder		  -211
 	  BlockMirror		  on
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Machines/Transformer"
 	  SourceType		  "Transformer"
 	  ContentPreviewEnabled	  off
@@ -19914,7 +19902,7 @@ Model {
 	  Ports			  [2, 2]
 	  Position		  [2520, 85, 2645, 165]
 	  ZOrder		  -212
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Transformer-rectifier"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -19927,7 +19915,7 @@ Model {
 	  Ports			  [2, 2]
 	  Position		  [2520, 330, 2645, 410]
 	  ZOrder		  -213
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Transformer-rectifier"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -19940,7 +19928,7 @@ Model {
 	  Ports			  [2, 2]
 	  Position		  [2525, 565, 2650, 645]
 	  ZOrder		  -214
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Transformer-rectifier"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -22928,7 +22916,7 @@ Model {
 	  Ports			  [2, 2]
 	  Position		  [1100, 17, 1215, 148]
 	  ZOrder		  407
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Gearbox"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -23377,7 +23365,7 @@ Model {
 	  Ports			  [1, 1]
 	  Position		  [1090, 449, 1205, 491]
 	  ZOrder		  406
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Stochastic Heat Loads"
 	  SourceType		  "Heat Loads "
 	  ContentPreviewEnabled	  off
@@ -26883,7 +26871,7 @@ Model {
 	  Ports			  [2, 2]
 	  Position		  [1105, 17, 1220, 148]
 	  ZOrder		  410
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Gearbox"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -27332,7 +27320,7 @@ Model {
 	  Ports			  [1, 1]
 	  Position		  [1090, 449, 1205, 491]
 	  ZOrder		  406
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Stochastic Heat Loads"
 	  SourceType		  "Heat Loads "
 	  ContentPreviewEnabled	  off
@@ -30231,7 +30219,7 @@ Model {
       BlockType		      From
       Name		      "From2"
       SID		      "26393"
-      Position		      [140, 361, 225, 379]
+      Position		      [140, 341, 225, 359]
       ZOrder		      -17
       ShowName		      off
       GotoTag		      "eng1"
@@ -30294,7 +30282,7 @@ Model {
       BlockType		      From
       Name		      "From4"
       SID		      "12590"
-      Position		      [140, 321, 225, 339]
+      Position		      [140, 291, 225, 309]
       ZOrder		      -25
       ShowName		      off
       GotoTag		      "Mission"
@@ -30303,7 +30291,7 @@ Model {
       BlockType		      From
       Name		      "From5"
       SID		      "26394"
-      Position		      [140, 401, 225, 419]
+      Position		      [140, 391, 225, 409]
       ZOrder		      -26
       ShowName		      off
       GotoTag		      "eng2"
@@ -30783,7 +30771,7 @@ Model {
 	  Ports			  [2, 2]
 	  Position		  [695, 244, 795, 286]
 	  ZOrder		  -21
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Bypass Valve"
 	  SourceType		  "Bypass Valve"
 	  ContentPreviewEnabled	  off
@@ -30795,7 +30783,7 @@ Model {
 	  Ports			  [2, 2]
 	  Position		  [695, 574, 795, 616]
 	  ZOrder		  -22
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Bypass Valve"
 	  SourceType		  "Bypass Valve"
 	  ContentPreviewEnabled	  off
@@ -30843,7 +30831,7 @@ Model {
 	  Ports			  [3, 2]
 	  Position		  [505, 219, 605, 261]
 	  ZOrder		  -25
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Engine Driven Pump"
 	  SourceType		  "Engine Driven Hydraulic Pump"
 	  ContentPreviewEnabled	  off
@@ -30862,7 +30850,7 @@ Model {
 	  Ports			  [3, 2]
 	  Position		  [505, 549, 605, 591]
 	  ZOrder		  -26
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Engine Driven Pump"
 	  SourceType		  "Engine Driven Hydraulic Pump"
 	  ContentPreviewEnabled	  off
@@ -30881,7 +30869,7 @@ Model {
 	  Ports			  [4, 2]
 	  Position		  [300, 160, 470, 250]
 	  ZOrder		  -27
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Fluid Reservoir"
 	  SourceType		  "Fluid Reservoir"
 	  ContentPreviewEnabled	  off
@@ -30905,7 +30893,7 @@ Model {
 	  Ports			  [4, 2]
 	  Position		  [305, 490, 475, 580]
 	  ZOrder		  -28
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Fluid Reservoir"
 	  SourceType		  "Fluid Reservoir"
 	  ContentPreviewEnabled	  off
@@ -31083,7 +31071,7 @@ Model {
 	  Position		  [845, 244, 1015, 286]
 	  ZOrder		  -42
 	  ShowName		  off
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  ContentPreviewEnabled	  off
@@ -31102,7 +31090,7 @@ Model {
 	  Position		  [845, 304, 1015, 346]
 	  ZOrder		  -43
 	  ShowName		  off
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  ContentPreviewEnabled	  off
@@ -31121,7 +31109,7 @@ Model {
 	  Position		  [845, 364, 1015, 406]
 	  ZOrder		  -44
 	  ShowName		  off
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  ContentPreviewEnabled	  off
@@ -31140,7 +31128,7 @@ Model {
 	  Position		  [845, 424, 1015, 466]
 	  ZOrder		  -45
 	  ShowName		  off
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  ContentPreviewEnabled	  off
@@ -31159,7 +31147,7 @@ Model {
 	  Position		  [840, 484, 1010, 526]
 	  ZOrder		  -46
 	  ShowName		  off
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  ContentPreviewEnabled	  off
@@ -31178,7 +31166,7 @@ Model {
 	  Position		  [850, 574, 1020, 616]
 	  ZOrder		  -47
 	  ShowName		  off
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  ContentPreviewEnabled	  off
@@ -31197,7 +31185,7 @@ Model {
 	  Position		  [850, 634, 1020, 676]
 	  ZOrder		  -48
 	  ShowName		  off
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  ContentPreviewEnabled	  off
@@ -31216,7 +31204,7 @@ Model {
 	  Position		  [850, 694, 1020, 736]
 	  ZOrder		  -49
 	  ShowName		  off
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  ContentPreviewEnabled	  off
@@ -31235,7 +31223,7 @@ Model {
 	  Position		  [850, 754, 1020, 796]
 	  ZOrder		  -50
 	  ShowName		  off
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  ContentPreviewEnabled	  off
@@ -31254,7 +31242,7 @@ Model {
 	  Position		  [845, 814, 1015, 856]
 	  ZOrder		  -51
 	  ShowName		  off
-	  LibraryVersion	  "1.276"
+	  LibraryVersion	  "1.280"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  ContentPreviewEnabled	  off
@@ -32271,7 +32259,7 @@ Model {
       Ports		      [0, 1]
       Position		      [15, 48, 110, 82]
       ZOrder		      -43
-      LibraryVersion	      "1.280"
+      LibraryVersion	      "1.283"
       SourceBlock	      "PowerFlowLib/Mission Profile/Mission Profile"
       SourceType	      "MISSION PROFILE SELECT  "
       ContentPreviewEnabled   off
@@ -32311,7 +32299,7 @@ Model {
       Name		      "PowerFlow Data Manager"
       SID		      "26386"
       Ports		      [0, 1]
-      Position		      [430, 633, 655, 777]
+      Position		      [530, 750, 655, 780]
       ZOrder		      -46
       AncestorBlock	      "PowerFlowLib/Support Functions//Tools/PowerFlow Data Manager"
       LibraryVersion	      "*1.167"
@@ -32330,7 +32318,7 @@ Model {
 	$ClassName		"Simulink.Mask"
 	Initialization		"set_param(gcb, 'LinkStatus', 'inactive')    % disable the library link\n"
 	SelfModifiable		"on"
-	Display			"str ='PowerFlow Data Manager\\n(Double click to select variables for output)'; fprintf(str)"
+	Display			"str ='Cabin Zone/temp_K'; fprintf(str)"
       }
       System {
 	Name			"PowerFlow Data Manager"
@@ -32347,8 +32335,114 @@ Model {
 	TiledPageScale		1
 	ShowPageBoundaries	off
 	ZoomFactor		"100"
-	SIDHighWatermark	"30142"
+	SIDHighWatermark	"30148"
 	SIDPrevWatermark	"29097"
+	Block {
+	  BlockType		  BusCreator
+	  Name			  "Bus Creator"
+	  SID			  "26386:30143"
+	  Ports			  [1, 1]
+	  Position		  [700, 100, 705, 130]
+	  ZOrder		  1
+	  ShowName		  off
+	  Inputs		  "1"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  BusSelector
+	  Name			  "Bus Selector1"
+	  SID			  "26386:30145"
+	  Ports			  [1, 1]
+	  Position		  [300, 105, 305, 125]
+	  ZOrder		  3
+	  ShowName		  off
+	  OutputSignals		  "temp_K"
+	  Port {
+	    PortNumber		    1
+	    Name		    "<temp_K>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From1"
+	  SID			  "26386:30144"
+	  Position		  [20, 108, 60, 122]
+	  ZOrder		  2
+	  ShowName		  off
+	  UserDataPersistent	  on
+	  UserData		  "DataTag0"
+	  GotoTag		  "gdata_Boeing737Sample_updatedCopyECSFOSCabinZonedata_sink"
+	  Port {
+	    PortNumber		    1
+	    Name		    "ECS & FOS /Cabin Zone/temp_K"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "SubSystem1"
+	  SID			  "26386:30146"
+	  Ports			  [1, 1]
+	  Position		  [420, 102, 480, 128]
+	  ZOrder		  4
+	  ShowName		  off
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "Cabin Zone/temp_K"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "SubSystem1"
+	    Location		    [100, 100, 900, 600]
+	    Open		    off
+	    ModelBrowserVisibility  on
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Rename"
+	      SID		      "26386:30147"
+	      Position		      [15, 15, 35, 35]
+	      ZOrder		      1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Bus"
+	      SID		      "26386:30148"
+	      Position		      [15, 15, 35, 35]
+	      ZOrder		      2
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      ZOrder		      1
+	      SrcBlock		      "Rename"
+	      SrcPort		      1
+	      Points		      [0, -15; -40, 0]
+	      DstBlock		      "Bus"
+	      DstPort		      1
+	    }
+	  }
+	}
 	Block {
 	  BlockType		  Outport
 	  Name			  "Data"
@@ -32356,6 +32450,41 @@ Model {
 	  Position		  [750, 213, 780, 227]
 	  ZOrder		  -5
 	  IconDisplay		  "Port number"
+	}
+	Line {
+	  ZOrder		  1
+	  SrcBlock		  "Bus Creator"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, 105]
+	  DstBlock		  "Data"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "ECS & FOS /Cabin Zone/temp_K"
+	  ZOrder		  2
+	  Labels		  [0, 0]
+	  SrcBlock		  "From1"
+	  SrcPort		  1
+	  DstBlock		  "Bus Selector1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<temp_K>"
+	  ZOrder		  3
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus Selector1"
+	  SrcPort		  1
+	  DstBlock		  "SubSystem1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "Cabin Zone/temp_K"
+	  ZOrder		  4
+	  Labels		  [0, 0]
+	  SrcBlock		  "SubSystem1"
+	  SrcPort		  1
+	  DstBlock		  "Bus Creator"
+	  DstPort		  1
 	}
       }
     }
@@ -32390,6 +32519,41 @@ Model {
       YMin		      "294.6"
       YMax		      "296.2"
       SaveName		      "ScopeData36"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope2"
+      SID		      "27642"
+      Ports		      [1]
+      Position		      [720, 749, 750, 781]
+      ZOrder		      406
+      ShowName		      off
+      Floating		      off
+      Location		      [88, 278, 1169, 628]
+      Open		      off
+      NumInputPorts	      "1"
+      ZoomMode		      "xonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		ScopeGraphics
+	FigureColor		"[0.5 0.5 0.5]"
+	AxesColor		"[0 0 0]"
+	AxesTickColor		"[1 1 1]"
+	LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	LineStyles		"-|-|-|-|-|-"
+	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
+	MarkerStyles		"none|none|none|none|none|none"
+      }
+      ShowLegends	      off
+      YMin		      "294.6"
+      YMax		      "296.2"
+      SaveName		      "ScopeData10"
       DataFormat	      "StructureWithTime"
       LimitDataPoints	      off
       SampleTime	      "0"
@@ -32504,7 +32668,6 @@ Model {
       ZOrder		      17
       SrcBlock		      "From4"
       SrcPort		      1
-      Points		      [5, 0; 0, -30]
       DstBlock		      "ECS & FOS "
       DstPort		      1
     }
@@ -32619,7 +32782,6 @@ Model {
       ZOrder		      34
       SrcBlock		      "From2"
       SrcPort		      1
-      Points		      [5, 0; 0, -20]
       DstBlock		      "ECS & FOS "
       DstPort		      2
     }
@@ -32627,15 +32789,15 @@ Model {
       ZOrder		      35
       SrcBlock		      "From5"
       SrcPort		      1
-      Points		      [5, 0; 0, -10]
       DstBlock		      "ECS & FOS "
       DstPort		      3
     }
     Line {
-      ZOrder		      36
+      ZOrder		      82
       SrcBlock		      "PowerFlow Data Manager"
       SrcPort		      1
-      Points		      [60, 0]
+      DstBlock		      "Scope2"
+      DstPort		      1
     }
     Line {
       ZOrder		      38
@@ -32661,6 +32823,15 @@ Model {
     }
   }
 }
+MatData {
+  NumRecords		  1
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    P     8    (     0         %    \"     $    \"     0         .    4     8    (    !    "
+    "      %    \"     $    <     0         0    '    $5#4R F($9/4R O0V%B:6X@6F]N92]T96UP7TL     #@   #@    &    \"    "
+    " 8         !0    @    !     0    $         \"0    @           #P/P"
+  }
+}
 # Finite State Machines
 #
 #    Stateflow Version 7.6 (R2013a) dated Aug  8 2013, 23:20:01
@@ -32674,8 +32845,6 @@ Stateflow {
     created		    "06-May-2013 16:35:33"
     isLibrary		    0
     firstTarget		    2
-    debug {
-    }
     sfVersion		    76014001.0016
   }
   target {
