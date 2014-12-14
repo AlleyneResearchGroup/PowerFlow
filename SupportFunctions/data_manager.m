@@ -366,7 +366,7 @@ if handles.var_ind(1,1) ~= 0
         
         % shortening the signal name to include component & signal only
         str_ndx = strfind(str,'/');
-        str_ndx = str_ndx(end-1);
+        str_ndx = str_ndx(max(end-1,1));
         str = str(str_ndx+1:end);
     
         set_param(hline,'Name',str)     % setting bus signal name to shortened string
