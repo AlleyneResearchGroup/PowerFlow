@@ -1,5 +1,5 @@
-% horizontal is wall number
-% vertical is fuel tank fraction filled (ascending)
+% Columns correspond to wall number
+% Rows correspond to fuel tank fraction filled (ascending)
 %  Wall number:         1   2   3   4   5   6
 %                   0.0
 %                   0.1
