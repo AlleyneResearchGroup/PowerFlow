@@ -1,5 +1,7 @@
 function [ Fail_string ] = ResetMissionLeg( MSSN )
 
+%This function resets the mission leg of the lists in order to reflect a
+%new mission in case of an emergency landing fault. 
 for i=1:length(MSSN.gen.state)
    if length(MSSN.gen.state(1:i))>length(MSSN.gen.state(1:end))
        return
@@ -27,7 +29,6 @@ for i=1:length(MSSN.gen.state)
     end
     end
 end
-%%%%%%This right here is giving me trouble%%%%%%%%%%%%%
 k=0;
 for j=1:length(Mission)-1
     if isempty(Mission{j})==1 || (strcmp(Mission{j},Mission{j-1})==1 && strcmp(Mission{j},Mission{j+1})==0)%%This right here.

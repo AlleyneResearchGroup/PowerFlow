@@ -64,6 +64,7 @@ handles.index.build = 0;
 evalin('base','');
 % Update handles structure
 guidata(hObject, handles);
+% Rolls Royce logo
 logo=axes('Tag','logo','Position',[0.008 0.86 0.16 0.1]);
 imshow('Rolls-royce-logo-png.png');
 initialize_gui(hObject, handles, false);
@@ -114,6 +115,7 @@ approach_check=size(handles.M.approacharr);
 landing_check=size(handles.M.landingarr);
 shutdown_check=size(handles.M.shutdownarr);
 
+% Checks if the user has input values for the phases
 for i=1:startup_check(1)
     for j=1:startup_check(2)
     startup_indic=isnan(handles.M.startuparr(i,j));
@@ -216,10 +218,8 @@ for i=1:length(handles.M.genstrct.alt.values)
 
 end
     
-        guidata(hObject,handles)
-%axes(handles.MSSNPLT)
-%plot(handles.MSSN.cond.time,handles.MSSN.cond.alt)
-%axis([0 handles.MSSN.gen.time(end) -500 1.1*max(handles.MSSN.cond.alt)])
+%Resets the mission plot with the given input values
+guidata(hObject,handles)
 cla(handles.MSSNPLT,'reset')
 ind = get(handles.GraphSelect,'value');
 plotfcn(ind,handles)
@@ -237,6 +237,7 @@ function Cancel_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
+%Closes the GUI
 a = get(handles.Definelist,'string');
 val = get(handles.Definelist,'Value');
 empty = isempty(a);
@@ -271,9 +272,12 @@ varoptalloff(handles)
 a = get(handles.Definelist,'string');
 val = get(handles.Definelist,'Value');
 list = a(val);
+%Varopt changes which define boxes and shown
 varopt(handles,list,val,'on');
-altindex(hObject,handles)
-definestatestext(hObject, handles)
+
+altindex(hObject,handles);
+%Defiens the text in the boxes given the situation.
+definestatestext(hObject, handles);
 
 
 
@@ -319,11 +323,8 @@ function Standard_Callback(hObject, eventdata, handles)
 % hObject    handle to Standard (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-%contents = cellstr(get(handles.PhaseList,'String'));
-%contents2 = [contents(1:end-1);'Taxi';contents(end)];
-%set(handles.MSSNList,'String',contents2);
-%c = relist(contents2);
-%set(handles.Definelist,'String',c)
+
+%Loads a standard mission
 load('Input.mat')
 handles.M = M;
 set(handles.MSSNList,'String',M.phaselist)
@@ -350,6 +351,7 @@ function Load_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
+%Loads a selected mission
 uiopen('load');
 handles.M = M;
 set(handles.MSSNList,'String',M.phaselist)
@@ -372,6 +374,8 @@ function DefineCancel_Callback(hObject, eventdata, handles)
 % hObject    handle to DefineCancel (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+
+%Cancels define button
 a = get(handles.Definelist,'string');
 val = get(handles.Definelist,'Value');
 list = a(val);
@@ -384,24 +388,25 @@ function Defineexec_Callback(hObject, eventdata, handles)
 % hObject    handle to Defineexec (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+
 definestates(hObject,handles)  
 a = get(handles.Definelist,'string');
 val = get(handles.Definelist,'Value');
 list = a(val);
 varopt(handles,list,val,'off');
 
-
+% This determines the text within the boxes
 if numel(get(handles.MSSNList,'string'))>val
-new_list=a(val+1);
-set(handles.Definelist,'value',val+1);
-varopt(handles,new_list,val+1,'on');
-set(handles.Time,'string','Time');
-set(handles.ThrustSet,'string','Thrust');
-set(handles.Alt,'string','Altitude');
-set(handles.ClimbRate,'string','Rate');
-set(handles.DescentRate,'string','Rate');
-set(handles.FlapSet,'string','Flap Angle');
-set(handles.FlapSet2,'string','Flap Angle');
+    new_list=a(val+1);
+    set(handles.Definelist,'value',val+1);
+    varopt(handles,new_list,val+1,'on');
+    set(handles.Time,'string','Time');
+    set(handles.ThrustSet,'string','Thrust');
+    set(handles.Alt,'string','Altitude');
+    set(handles.ClimbRate,'string','Rate');
+    set(handles.DescentRate,'string','Rate');
+    set(handles.FlapSet,'string','Flap Angle');
+    set(handles.FlapSet2,'string','Flap Angle');
 end
 
 % --- Executes on button press in BuildSave.
@@ -472,7 +477,7 @@ function addphase_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 % get current value of FlightPhaseMenu
-
+%Reorganizes the string in the mission phase listbox
 contents = cellstr(get(handles.PhaseList,'String'));
 val = contents{get(handles.PhaseList,'Value')};
 
@@ -498,6 +503,8 @@ function removephase_Callback(hObject, eventdata, handles)
 % hObject    handle to removephase (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+
+%Removes a phase from the mission phase listbox
 a = get(handles.MSSNList,'string');
 temp = char(a);
 index = get(handles.MSSNList,'Value');
@@ -720,6 +727,7 @@ function GraphSelect_Callback(hObject, eventdata, handles)
 % hObject    handle to GraphSelect (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+
 cla(handles.MSSNPLT,'reset')
 ind = get(handles.GraphSelect,'value');
 plotfcn(ind,handles)
@@ -745,6 +753,9 @@ function Batch_Callback(hObject, eventdata, handles)
 % hObject    handle to Batch (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+
+%Doesnt do anything currently but can in the future to run multiple mission
+%at a time
 Main
 
 
@@ -1214,6 +1225,9 @@ handles.M = M;
 guidata(hObject,handles)
 
 function definestatestext(hObject, handles)
+%This function is used to display the current input values of the mission
+%in order to making the rebuild process easier. The code finds the
+%respective values and displays in on the GUI
 a = get(handles.Definelist,'string');
 val = get(handles.Definelist,'Value');
 list = a(val);
@@ -1675,7 +1689,9 @@ handles.MSSN = evalin('base','MSSN');
 val = get(handles.GraphSelect2,'Value');
         str = get(handles.GraphSelect2,'String');
         list=str(val);
-        
+ 
+%Lines 1693-2105 are code that will generate different x limits for the mission 
+%plot based on the different phase selected.
 if strncmp(list,'Startup',3)==1 
    ch = char(list);
    ident = str2double(ch(end));
@@ -2141,18 +2157,17 @@ handles.MSSN= evalin('base','MSSN');
 guidata(hObject, handles);
 
 
-
+%Checks to see if a fault has occured. If so it will update the mission
+%plot based on certain criteria.
 if handles.MSSN.gen.faults(5)~=0;
-FailString=evalin('base','FailString');
-ind = get(handles.GraphSelect,'value');
-plotfcn(ind,handles)
-FailString=transpose(FailString);
-set(handles.GraphSelect2,'String',FailString)
-
+    FailString=evalin('base','FailString');
+    ind = get(handles.GraphSelect,'value');
+    plotfcn(ind,handles)
+    FailString=transpose(FailString);
+    set(handles.GraphSelect2,'String',FailString)
 else
-
-ind = get(handles.GraphSelect,'value');
-plotfcn(ind,handles)
+    ind = get(handles.GraphSelect,'value');
+    plotfcn(ind,handles)
 end
 end
 
@@ -2166,6 +2181,8 @@ function Time_Inquiry_Callback(hObject, eventdata, handles)
 if strcmp(cellstr(get(handles.MSSNList,'String')),'')==1
     warndlg('You must load a mission before you can analyze.','Warning');
 else
+    
+    %Calls the mission analyze GUI
 MissionAnalyzeGUI
 end
 

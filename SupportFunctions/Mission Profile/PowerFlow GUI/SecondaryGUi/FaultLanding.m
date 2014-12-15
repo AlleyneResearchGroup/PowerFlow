@@ -59,8 +59,6 @@ handles.MSSN = evalin('base','MSSN');
 handles.M=evalin('base','M');
 guidata(hObject, handles);
 
-% UIWAIT makes FaultLanding wait for user response (see UIRESUME)
-% uiwait(handles.figure1);
 
 
 % --- Outputs from this function are returned to the command line.
@@ -331,7 +329,8 @@ function Define_Callback(hObject, eventdata, handles)
 % hObject    handle to Define (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 
-
+%Takes all the inputs and call the function that will build the new
+%mission.
 CruiseTime=str2double(get(handles.CrTime,'String'));
 CruiseThrust=str2double(get(handles.CrThr,'String'));
 DescentRate=str2double(get(handles.DesRate,'String'));

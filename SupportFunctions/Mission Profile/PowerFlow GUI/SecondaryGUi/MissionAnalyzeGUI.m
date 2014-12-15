@@ -77,9 +77,9 @@ varargout{1} = handles.output;
 
 % --- Executes on button press in Analyze.
 function Analyze_Callback(hObject, eventdata, handles)
-% hObject    handle to Analyze (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
+%This function pulls the values from the output arrays based on the time
+%the user inputs. From there it takes the values and changes it into a
+%string so it can be displayed to the user.
 Time_input=str2double(get(handles.Time,'String'));
 if Time_input>handles.MSSN.gen.time(end)
     warndlg('That is out of the bounds of the mission!','Heads up!');

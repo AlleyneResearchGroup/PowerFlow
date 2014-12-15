@@ -80,6 +80,8 @@ function Faulttype_Callback(hObject, eventdata, handles)
 % hObject    handle to Faulttype (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+
+% Shows which inputs based on fault type.
 a = get(handles.Faulttype,'value');
 if a == 2
     set(handles.thrcomptxt,'Visible','off')
@@ -186,7 +188,7 @@ function Define_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 handles.MSSN = evalin('base','MSSN');
 a=get(handles.Landing,'value');
-if a==1
+if a==1 %Checks if time of fault within mission time
   
 t_fail = str2double(get(handles.Time, 'String'));
 if t_fail>handles.MSSN.gen.time(end)
@@ -202,7 +204,7 @@ fail = get(handles.Faulttype, 'value');
 fail_loc = get(handles.Faultnum, 'value');
 T_mult = str2double(get(handles.ThrComp, 'string'));
 LandData = 0;
-
+%Calls the failure function for a continued mission faults
 MSSN = Failures(handles.MSSN,t_fail,fail,fail_loc,T_mult,LandData);
 MSSN.gen.faults(1)=t_fail;
 MSSN.gen.faults(2)=fail;
@@ -214,7 +216,7 @@ close FaultGui
 
 elseif a==2
 
-
+%Calls the Fault landing GUI
 t_fail = str2double(get(handles.Time, 'String'));
 fail = get(handles.Faulttype, 'value');
 fail_loc = get(handles.Faultnum, 'value');

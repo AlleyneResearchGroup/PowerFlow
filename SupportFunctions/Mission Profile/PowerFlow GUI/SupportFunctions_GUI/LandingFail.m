@@ -24,6 +24,8 @@ Cur_state=MSSN.gen.state(t_ind_gen);
 Cur_pres=MSSN.pnu.pres(t_ind_pnu);
 N_ENG=MSSN.gen.N_ENG;
 
+%This FOR loop builds the mission after the fault. This includes
+%cruise,descent,approach,landing,shutdown.
 for ind=1:5
     if ind==1
         t_cruise = t_fail + (CruiseTime)*60;
@@ -208,6 +210,8 @@ Mssn_shutdown.pnu.time = [t_lnd+1,t_deboard]; %time (seconds)
 Mssn_shutdown.pnu.pres = zeros(1,2);  %pressurization on/off
     end 
 end
+%The previously built values for the new mission are concacted to the old
+%mission after the fault.
 MSSN.gen.time=[MSSN.gen.time(1:t_ind_gen-1),t_fail,Mssn_Cruise.gen.time,...
     Mssn_descent.gen.time,Mssn_approach.gen.time,Mssn_landing.gen.time,Mssn_shutdown.gen.time];
 
@@ -266,12 +270,14 @@ MSSN.pnu.pres=[MSSN.pnu.pres(1:t_ind_pnu-1),Cur_pres,Mssn_Cruise.pnu.pres,Mssn_d
     Mssn_approach.pnu.pres,Mssn_landing.pnu.pres,Mssn_shutdown.pnu.pres];
 state_eng=[0,state_eng_cruise,state_eng_descent,state_eng_approach,state_eng_landing,state_eng_shutdown];
 
-
+%Lines 273-350 is an algorithm that concacts the engine and generatory
+%array. difference is used to determine if the previous or new mission
+%arrays are longer or shorter. If shorter then elements must be removed and
+%if longer then elements must be added. 
         difference=length(MSSN.eng.Eng1(t_ind:end))-length(MSSN.eng.time(t_ind:end))
-        difference_abs=abs(length(MSSN.eng.Eng1(t_ind:end))-length(MSSN.eng.time(t_ind:end)));
-        
+        difference_abs=abs(length(MSSN.eng.Eng1(t_ind:end))-length(MSSN.eng.time(t_ind:end)));  
         state_eng=zeros(1,length(state_eng));
-        
+       
 if difference <0 
                     if N_ENG<3
                       t_ind_dif=length(MSSN.eng.Eng1)
