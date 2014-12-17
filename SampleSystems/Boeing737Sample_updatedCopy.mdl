@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.352"
+    ComputedModelVersion    "1.354"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -32,7 +32,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-8.0, -8.0, 1382.0, 744.0]
+      Location		      [-2.0, 0.0, 1378.0, 744.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -54,11 +54,11 @@ Model {
 	$ObjectID		5
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
-	ViewObjType		"SimulinkTopLevel"
-	LoadSaveID		"0"
-	Extents			[1139.0, 570.0]
-	ZoomFactor		[1.0]
-	Offset			[1.0, 34.0]
+	ViewObjType		"SimulinkSubsys"
+	LoadSaveID		"26542"
+	Extents			[1135.0, 570.0]
+	ZoomFactor		[1.25]
+	Offset			[0.0, 0.0]
       }
     }
   }
@@ -68,9 +68,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "srikanthan"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Dec 17 15:31:07 2014"
-  RTWModifiedTimeStamp	  340730952
-  ModelVersionFormat	  "1.%<AutoIncrement:352>"
+  LastModifiedDate	  "Wed Dec 17 15:50:18 2014"
+  RTWModifiedTimeStamp	  340732165
+  ModelVersionFormat	  "1.%<AutoIncrement:354>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1157,8 +1157,8 @@ Model {
   }
   System {
     Name		    "Boeing737Sample_updatedCopy"
-    Location		    [-8, -8, 1374, 736]
-    Open		    on
+    Location		    [-8, 0, 1370, 744]
+    Open		    off
     ModelBrowserVisibility  on
     ModelBrowserWidth	    212
     ScreenColor		    "white"
@@ -12835,7 +12835,7 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"ELECTRICAL SYS "
-	Location		[1, 1, 1365, 727]
+	Location		[-2, 0, 1376, 744]
 	Open			off
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	212
@@ -12847,7 +12847,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"60"
+	ZoomFactor		"100"
 	Block {
 	  BlockType		  Inport
 	  Name			  "Left Engine"
@@ -16498,7 +16498,7 @@ Model {
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
 	  FontName		  "Arial"
-	  GotoTag		  "i_MB2_S2"
+	  GotoTag		  "i_MB2_S1"
 	}
 	Block {
 	  BlockType		  Goto
@@ -16509,7 +16509,7 @@ Model {
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
 	  FontName		  "Arial"
-	  GotoTag		  "i_MB2_S1"
+	  GotoTag		  "i_MB2_S2"
 	}
 	Block {
 	  BlockType		  Goto
@@ -16520,7 +16520,7 @@ Model {
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
 	  FontName		  "Arial"
-	  GotoTag		  "i_TB2_S2"
+	  GotoTag		  "i_TB2_S1"
 	}
 	Block {
 	  BlockType		  Goto
@@ -16531,7 +16531,7 @@ Model {
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
 	  FontName		  "Arial"
-	  GotoTag		  "i_TB2_S1"
+	  GotoTag		  "i_TB2_S2"
 	}
 	Block {
 	  BlockType		  Goto
@@ -17226,8 +17226,8 @@ Model {
 	  }
 	  System {
 	    Name		    "Loads"
-	    Location		    [1358, 0, 2654, 1036]
-	    Open		    off
+	    Location		    [-2, 0, 1376, 744]
+	    Open		    on
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -20382,7 +20382,7 @@ Model {
 	Annotation {
 	  SID			  "27292"
 	  Name			  "Generator Bus 1"
-	  Position		  [1790, 37]
+	  Position		  [1750, 2]
 	  DropShadow		  on
 	  ZOrder		  -7
 	  FontName		  "Arial Black"
@@ -20392,7 +20392,7 @@ Model {
 	Annotation {
 	  SID			  "27293"
 	  Name			  "Generator 1"
-	  Position		  [1248, 112]
+	  Position		  [1208, 92]
 	  DropShadow		  on
 	  ZOrder		  -8
 	  FontName		  "Arial Black"
@@ -20422,7 +20422,7 @@ Model {
 	Annotation {
 	  SID			  "27296"
 	  Name			  "Generator 2"
-	  Position		  [1198, 732]
+	  Position		  [1208, 742]
 	  DropShadow		  on
 	  ZOrder		  -11
 	  FontName		  "Arial Black"
@@ -20432,7 +20432,7 @@ Model {
 	Annotation {
 	  SID			  "27297"
 	  Name			  "Main Bus 1"
-	  Position		  [2200, 57]
+	  Position		  [2165, 37]
 	  DropShadow		  on
 	  ZOrder		  -12
 	  FontName		  "Arial Black"
@@ -20442,7 +20442,7 @@ Model {
 	Annotation {
 	  SID			  "27298"
 	  Name			  "Transfer Bus 1"
-	  Position		  [2218, 327]
+	  Position		  [2163, 302]
 	  DropShadow		  on
 	  ZOrder		  -13
 	  FontName		  "Arial Black"
@@ -20452,7 +20452,7 @@ Model {
 	Annotation {
 	  SID			  "27299"
 	  Name			  "Main Bus 2"
-	  Position		  [2200, 552]
+	  Position		  [2160, 532]
 	  DropShadow		  on
 	  ZOrder		  -14
 	  FontName		  "Arial Black"
@@ -20462,7 +20462,7 @@ Model {
 	Annotation {
 	  SID			  "27300"
 	  Name			  "Transfer Bus 2"
-	  Position		  [2208, 837]
+	  Position		  [2153, 812]
 	  DropShadow		  on
 	  ZOrder		  -15
 	  FontName		  "Arial Black"
@@ -20472,7 +20472,7 @@ Model {
 	Annotation {
 	  SID			  "27301"
 	  Name			  "AC Loads"
-	  Position		  [2424, 57]
+	  Position		  [2384, 37]
 	  DropShadow		  on
 	  ZOrder		  -16
 	  FontName		  "Arial Black"
@@ -20482,7 +20482,7 @@ Model {
 	Annotation {
 	  SID			  "27302"
 	  Name			  "Transformer-Rectifier Units"
-	  Position		  [2692, 72]
+	  Position		  [2602, 62]
 	  DropShadow		  on
 	  ZOrder		  -17
 	  FontName		  "Arial Black"
@@ -20492,7 +20492,7 @@ Model {
 	Annotation {
 	  SID			  "27303"
 	  Name			  "DC Loads"
-	  Position		  [3059, 62]
+	  Position		  [3044, 62]
 	  DropShadow		  on
 	  ZOrder		  -18
 	  FontName		  "Arial Black"
@@ -20502,7 +20502,7 @@ Model {
 	Annotation {
 	  SID			  "27304"
 	  Name			  "DC Bus 1"
-	  Position		  [3412, 62]
+	  Position		  [3377, 37]
 	  DropShadow		  on
 	  ZOrder		  -19
 	  FontName		  "Arial Black"
@@ -20512,7 +20512,7 @@ Model {
 	Annotation {
 	  SID			  "27305"
 	  Name			  "DC Bus 2"
-	  Position		  [3412, 597]
+	  Position		  [3377, 562]
 	  DropShadow		  on
 	  ZOrder		  -20
 	  FontName		  "Arial Black"
@@ -20522,7 +20522,7 @@ Model {
 	Annotation {
 	  SID			  "27306"
 	  Name			  "Battery 1"
-	  Position		  [3693, 102]
+	  Position		  [3658, 72]
 	  DropShadow		  on
 	  ZOrder		  -21
 	  FontName		  "Arial Black"
@@ -20532,7 +20532,7 @@ Model {
 	Annotation {
 	  SID			  "27307"
 	  Name			  "AUX Battery "
-	  Position		  [3703, 392]
+	  Position		  [3653, 372]
 	  DropShadow		  on
 	  ZOrder		  -22
 	  FontName		  "Arial Black"
@@ -20542,7 +20542,7 @@ Model {
 	Annotation {
 	  SID			  "27308"
 	  Name			  "Battery 2"
-	  Position		  [3698, 642]
+	  Position		  [3658, 622]
 	  DropShadow		  on
 	  ZOrder		  -23
 	  FontName		  "Arial Black"
@@ -20552,7 +20552,7 @@ Model {
 	Annotation {
 	  SID			  "27309"
 	  Name			  "Inverter as Auxiliary Supply"
-	  Position		  [2934, 952]
+	  Position		  [2824, 937]
 	  DropShadow		  on
 	  ZOrder		  -24
 	  FontName		  "Arial Black"
@@ -20572,7 +20572,7 @@ Model {
 	Annotation {
 	  SID			  "27311"
 	  Name			  "Generator Bus 2"
-	  Position		  [1820, 572]
+	  Position		  [1760, 562]
 	  DropShadow		  on
 	  ZOrder		  -26
 	  FontName		  "Arial Black"
