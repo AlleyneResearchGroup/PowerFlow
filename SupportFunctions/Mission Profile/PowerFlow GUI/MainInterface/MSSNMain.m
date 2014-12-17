@@ -228,6 +228,8 @@ a=get(handles.MSSNList,'String');
 c = relist(a);
 set(handles.GraphSelect2,'String',c)
 
+
+handles.MSSN=MonotonicFix(handles.MSSN);
 end
 
 
