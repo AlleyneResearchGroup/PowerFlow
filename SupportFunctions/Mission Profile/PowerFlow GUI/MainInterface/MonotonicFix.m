@@ -18,7 +18,7 @@ MSSN.el.landinglit(1)=[];
 MSSN.el.flaps(1)=[];
 MSSN.hyd.time(1)=[];
 MSSN.hyd.lndgr(1)=[];
-MSSN.pnu.time=[];
+MSSN.pnu.time(1)=[];
 MSSN.pnu.pres(1)=[];
 
 if MSSN.gen.N_ENG==2
@@ -48,6 +48,6 @@ MSSN.eng.Gen6(1)=[];
 MSSN.eng.Gen7(1)=[];
 MSSN.eng.Gen8(1)=[];   
 end
-
+MSSN=MSSN;
 end
 
