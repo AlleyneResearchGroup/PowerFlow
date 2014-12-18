@@ -229,7 +229,7 @@ c = relist(a);
 set(handles.GraphSelect2,'String',c)
 
 
-[handles.MSSN ] = MonotonicFix(handles.MSSN)
+[handles.MSSN ] = MonotonicFix(handles.MSSN);
 assignin('base', 'MSSN', handles.MSSN)
 end
 

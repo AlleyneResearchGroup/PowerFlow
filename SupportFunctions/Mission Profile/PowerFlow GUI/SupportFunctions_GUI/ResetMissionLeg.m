@@ -30,7 +30,8 @@ for i=1:length(MSSN.gen.state)
     end
 end
 k=0;
-for j=1:length(Mission)-1
+
+for j=2:length(Mission)-1
     if isempty(Mission{j})==1 || (strcmp(Mission{j},Mission{j-1})==1 && strcmp(Mission{j},Mission{j+1})==0)%%This right here.
         
     elseif isempty(Mission{j})==0 || (strcmp(Mission{j},Mission{j-1})==1 && strcmp(Mission{j},Mission{j+1})==1)
