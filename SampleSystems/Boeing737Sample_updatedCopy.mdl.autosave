@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.358"
+    ComputedModelVersion    "1.357"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -58,8 +58,8 @@ Model {
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
 	  Extents		  [1135.0, 566.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [86.833333333333144, 332.39583485921207]
+	  ZoomFactor		  [0.8]
+	  Offset		  [-134.75, 13.5]
 	}
 	Object {
 	  $ObjectID		  6
@@ -89,9 +89,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "mwillms4"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Dec 18 00:21:50 2014"
-  RTWModifiedTimeStamp	  340762901
-  ModelVersionFormat	  "1.%<AutoIncrement:358>"
+  LastModifiedDate	  "Thu Dec 18 00:15:04 2014"
+  RTWModifiedTimeStamp	  340762563
+  ModelVersionFormat	  "1.%<AutoIncrement:357>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1190,9 +1190,9 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "100"
+    ZoomFactor		    "80"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "27843"
+    SIDHighWatermark	    "27841"
     Block {
       BlockType		      BusSelector
       Name		      "Bus\nSelector"
@@ -1205,66 +1205,6 @@ Model {
       Port {
 	PortNumber		1
 	Name			"<temp_K>"
-	RTWStorageClass		"Auto"
-	DataLoggingNameMode	"SignalName"
-      }
-    }
-    Block {
-      BlockType		      BusSelector
-      Name		      "Bus\nSelector1"
-      SID		      "27843"
-      Ports		      [1, 8]
-      Position		      [640, 705, 645, 820]
-      ZOrder		      413
-      ShowName		      off
-      OutputSignals	      "Cabin Zone/temp_K,BATTERY 1/VDC (V),Left Wing Fuel Tank/FluidMass_kg,Center Fuel Tank/Fluid"
-      "Mass_kg,Right Wing Fuel Tank/FluidMass_kg,Generation Unit Sync-Sync/vdq0 (V),Generation Unit Sync-Sync1/vdq0 (V)"
-      ",Generation Unit Sync-Sync2/vdq0 (V)"
-      Port {
-	PortNumber		1
-	Name			"<Cabin Zone/temp_K>"
-	RTWStorageClass		"Auto"
-	DataLoggingNameMode	"SignalName"
-      }
-      Port {
-	PortNumber		2
-	Name			"<BATTERY 1/VDC (V)>"
-	RTWStorageClass		"Auto"
-	DataLoggingNameMode	"SignalName"
-      }
-      Port {
-	PortNumber		3
-	Name			"<Left Wing Fuel Tank/FluidMass_kg>"
-	RTWStorageClass		"Auto"
-	DataLoggingNameMode	"SignalName"
-      }
-      Port {
-	PortNumber		4
-	Name			"<Center Fuel Tank/FluidMass_kg>"
-	RTWStorageClass		"Auto"
-	DataLoggingNameMode	"SignalName"
-      }
-      Port {
-	PortNumber		5
-	Name			"<Right Wing Fuel Tank/FluidMass_kg>"
-	RTWStorageClass		"Auto"
-	DataLoggingNameMode	"SignalName"
-      }
-      Port {
-	PortNumber		6
-	Name			"<Generation Unit Sync-Sync/vdq0 (V)>"
-	RTWStorageClass		"Auto"
-	DataLoggingNameMode	"SignalName"
-      }
-      Port {
-	PortNumber		7
-	Name			"<Generation Unit Sync-Sync1/vdq0 (V)>"
-	RTWStorageClass		"Auto"
-	DataLoggingNameMode	"SignalName"
-      }
-      Port {
-	PortNumber		8
-	Name			"<Generation Unit Sync-Sync2/vdq0 (V)>"
 	RTWStorageClass		"Auto"
 	DataLoggingNameMode	"SignalName"
       }
@@ -1285,7 +1225,7 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"ECS & FOS "
-	Location		[2055, 240, 3433, 984]
+	Location		[-8, -8, 1374, 736]
 	Open			off
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	212
@@ -12916,7 +12856,7 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"ELECTRICAL SYS "
-	Location		[2055, 240, 3433, 984]
+	Location		[-2, 0, 1376, 744]
 	Open			off
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	212
@@ -15311,7 +15251,7 @@ Model {
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "Generation Unit Sync-Sync"
+	  Name			  "Generation Unit\nSync-Sync"
 	  SID			  "25467"
 	  Ports			  [3, 4]
 	  Position		  [1135, 111, 1280, 189]
@@ -15354,7 +15294,7 @@ Model {
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "Generation Unit Sync-Sync1"
+	  Name			  "Generation Unit\nSync-Sync1"
 	  SID			  "25468"
 	  Ports			  [3, 4]
 	  Position		  [1135, 376, 1280, 454]
@@ -15397,7 +15337,7 @@ Model {
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "Generation Unit Sync-Sync2"
+	  Name			  "Generation Unit\nSync-Sync2"
 	  SID			  "25469"
 	  Ports			  [3, 4]
 	  Position		  [1135, 761, 1280, 839]
@@ -18938,7 +18878,7 @@ Model {
 	  }
 	}
 	Line {
-	  SrcBlock		  "Generation Unit Sync-Sync"
+	  SrcBlock		  "Generation Unit\nSync-Sync"
 	  SrcPort		  1
 	  Points		  [13, 0]
 	  Branch {
@@ -18994,7 +18934,7 @@ Model {
 	    DstPort		    1
 	  }
 	  Branch {
-	    DstBlock		    "Generation Unit Sync-Sync"
+	    DstBlock		    "Generation Unit\nSync-Sync"
 	    DstPort		    3
 	  }
 	}
@@ -19022,14 +18962,14 @@ Model {
 	  SrcBlock		  "Bus\nSelector"
 	  SrcPort		  1
 	  Points		  [115, 0]
-	  DstBlock		  "Generation Unit Sync-Sync"
+	  DstBlock		  "Generation Unit\nSync-Sync"
 	  DstPort		  1
 	}
 	Line {
 	  SrcBlock		  "RPM"
 	  SrcPort		  1
 	  Points		  [20, 0; 0, 30]
-	  DstBlock		  "Generation Unit Sync-Sync1"
+	  DstBlock		  "Generation Unit\nSync-Sync1"
 	  DstPort		  1
 	}
 	Line {
@@ -19200,7 +19140,7 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "Generation Unit Sync-Sync2"
+	  SrcBlock		  "Generation Unit\nSync-Sync2"
 	  SrcPort		  1
 	  Points		  [10, 0]
 	  Branch {
@@ -19359,37 +19299,37 @@ Model {
 	  DstPort		  4
 	}
 	Line {
-	  SrcBlock		  "Generation Unit Sync-Sync"
+	  SrcBlock		  "Generation Unit\nSync-Sync"
 	  SrcPort		  4
 	  DstBlock		  "Goto31"
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "Generation Unit Sync-Sync"
+	  SrcBlock		  "Generation Unit\nSync-Sync"
 	  SrcPort		  3
 	  DstBlock		  "Goto32"
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "Generation Unit Sync-Sync2"
+	  SrcBlock		  "Generation Unit\nSync-Sync2"
 	  SrcPort		  4
 	  DstBlock		  "Goto33"
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "Generation Unit Sync-Sync2"
+	  SrcBlock		  "Generation Unit\nSync-Sync2"
 	  SrcPort		  3
 	  DstBlock		  "Goto34"
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "Generation Unit Sync-Sync1"
+	  SrcBlock		  "Generation Unit\nSync-Sync1"
 	  SrcPort		  3
 	  DstBlock		  "Goto35"
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "Generation Unit Sync-Sync1"
+	  SrcBlock		  "Generation Unit\nSync-Sync1"
 	  SrcPort		  4
 	  DstBlock		  "Goto36"
 	  DstPort		  1
@@ -19544,11 +19484,11 @@ Model {
 	Line {
 	  SrcBlock		  "Fromb1"
 	  SrcPort		  1
-	  DstBlock		  "Generation Unit Sync-Sync"
+	  DstBlock		  "Generation Unit\nSync-Sync"
 	  DstPort		  2
 	}
 	Line {
-	  SrcBlock		  "Generation Unit Sync-Sync"
+	  SrcBlock		  "Generation Unit\nSync-Sync"
 	  SrcPort		  2
 	  DstBlock		  "Goto2"
 	  DstPort		  1
@@ -19557,11 +19497,11 @@ Model {
 	  SrcBlock		  "Fromb2"
 	  SrcPort		  1
 	  Points		  [75, 0; 0, 25]
-	  DstBlock		  "Generation Unit Sync-Sync1"
+	  DstBlock		  "Generation Unit\nSync-Sync1"
 	  DstPort		  2
 	}
 	Line {
-	  SrcBlock		  "Generation Unit Sync-Sync1"
+	  SrcBlock		  "Generation Unit\nSync-Sync1"
 	  SrcPort		  2
 	  DstBlock		  "Goto9"
 	  DstPort		  1
@@ -19572,17 +19512,17 @@ Model {
 	  SrcBlock		  "Bus\nSelector1"
 	  SrcPort		  1
 	  Points		  [134, 0; 0, 20]
-	  DstBlock		  "Generation Unit Sync-Sync2"
+	  DstBlock		  "Generation Unit\nSync-Sync2"
 	  DstPort		  1
 	}
 	Line {
 	  SrcBlock		  "Fromb3"
 	  SrcPort		  1
-	  DstBlock		  "Generation Unit Sync-Sync2"
+	  DstBlock		  "Generation Unit\nSync-Sync2"
 	  DstPort		  2
 	}
 	Line {
-	  SrcBlock		  "Generation Unit Sync-Sync2"
+	  SrcBlock		  "Generation Unit\nSync-Sync2"
 	  SrcPort		  2
 	  DstBlock		  "Goto10"
 	  DstPort		  1
@@ -20320,7 +20260,7 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "Generation Unit Sync-Sync1"
+	  SrcBlock		  "Generation Unit\nSync-Sync1"
 	  SrcPort		  1
 	  Points		  [3, 0; 0, -105]
 	  Branch {
@@ -20351,7 +20291,7 @@ Model {
 	    DstPort		    1
 	  }
 	  Branch {
-	    DstBlock		    "Generation Unit Sync-Sync1"
+	    DstBlock		    "Generation Unit\nSync-Sync1"
 	    DstPort		    3
 	  }
 	}
@@ -20377,7 +20317,7 @@ Model {
 	    DstPort		    1
 	  }
 	  Branch {
-	    DstBlock		    "Generation Unit Sync-Sync2"
+	    DstBlock		    "Generation Unit\nSync-Sync2"
 	    DstPort		    3
 	  }
 	}
@@ -49066,7 +49006,7 @@ Model {
       Name		      "PowerFlow Data Manager"
       SID		      "26386"
       Ports		      [0, 1]
-      Position		      [360, 700, 600, 830]
+      Position		      [530, 750, 655, 780]
       ZOrder		      -46
       AncestorBlock	      "PowerFlowLib/Support Functions//Tools/PowerFlow Data Manager"
       LibraryVersion	      "*1.167"
@@ -49085,9 +49025,7 @@ Model {
 	$ClassName		"Simulink.Mask"
 	Initialization		"set_param(gcb, 'LinkStatus', 'inactive')    % disable the library link\n"
 	SelfModifiable		"on"
-	Display			"str ='Cabin Zone/temp_K\\nBATTERY 1/VDC (V)\\nGeneration Unit Sync-Sync/vdq0 (V)\\nGeneration Unit Sync-Sy"
-	"nc1/vdq0 (V)\\nGeneration Unit Sync-Sync2/vdq0 (V)\\nLeft Wing Fuel Tank/FluidMass_kg\\nCenter Fuel Tank/FluidMass_kg"
-	"\\nRight Wing Fuel Tank/FluidMass_kg'; fprintf(str)"
+	Display			"str ='Cabin Zone/temp_K'; fprintf(str)"
       }
       System {
 	Name			"PowerFlow Data Manager"
@@ -49104,26 +49042,26 @@ Model {
 	TiledPageScale		1
 	ShowPageBoundaries	off
 	ZoomFactor		"100"
-	SIDHighWatermark	"30230"
+	SIDHighWatermark	"30148"
 	SIDPrevWatermark	"29097"
 	Block {
 	  BlockType		  BusCreator
 	  Name			  "Bus Creator"
-	  SID			  "26386:30190"
-	  Ports			  [8, 1]
-	  Position		  [700, 100, 705, 340]
-	  ZOrder		  30
+	  SID			  "26386:30143"
+	  Ports			  [1, 1]
+	  Position		  [700, 100, 705, 130]
+	  ZOrder		  1
 	  ShowName		  off
-	  Inputs		  "8"
+	  Inputs		  "1"
 	  DisplayOption		  "bar"
 	}
 	Block {
 	  BlockType		  BusSelector
 	  Name			  "Bus Selector1"
-	  SID			  "26386:30192"
+	  SID			  "26386:30145"
 	  Ports			  [1, 1]
 	  Position		  [300, 105, 305, 125]
-	  ZOrder		  32
+	  ZOrder		  3
 	  ShowName		  off
 	  OutputSignals		  "temp_K"
 	  Port {
@@ -49134,127 +49072,16 @@ Model {
 	  }
 	}
 	Block {
-	  BlockType		  BusSelector
-	  Name			  "Bus Selector2"
-	  SID			  "26386:30197"
-	  Ports			  [1, 1]
-	  Position		  [300, 135, 305, 155]
-	  ZOrder		  35
-	  ShowName		  off
-	  OutputSignals		  "VDC (V)"
-	  Port {
-	    PortNumber		    1
-	    Name		    "<VDC (V)>"
-	    RTWStorageClass	    "Auto"
-	    DataLoggingNameMode	    "SignalName"
-	  }
-	}
-	Block {
-	  BlockType		  BusSelector
-	  Name			  "Bus Selector3"
-	  SID			  "26386:30202"
-	  Ports			  [1, 1]
-	  Position		  [300, 165, 305, 185]
-	  ZOrder		  38
-	  ShowName		  off
-	  OutputSignals		  "vdq0 (V)"
-	  Port {
-	    PortNumber		    1
-	    Name		    "<vdq0 (V)>"
-	    RTWStorageClass	    "Auto"
-	    DataLoggingNameMode	    "SignalName"
-	  }
-	}
-	Block {
-	  BlockType		  BusSelector
-	  Name			  "Bus Selector4"
-	  SID			  "26386:30207"
-	  Ports			  [1, 1]
-	  Position		  [300, 195, 305, 215]
-	  ZOrder		  41
-	  ShowName		  off
-	  OutputSignals		  "vdq0 (V)"
-	  Port {
-	    PortNumber		    1
-	    Name		    "<vdq0 (V)>"
-	    RTWStorageClass	    "Auto"
-	    DataLoggingNameMode	    "SignalName"
-	  }
-	}
-	Block {
-	  BlockType		  BusSelector
-	  Name			  "Bus Selector5"
-	  SID			  "26386:30212"
-	  Ports			  [1, 1]
-	  Position		  [300, 225, 305, 245]
-	  ZOrder		  44
-	  ShowName		  off
-	  OutputSignals		  "vdq0 (V)"
-	  Port {
-	    PortNumber		    1
-	    Name		    "<vdq0 (V)>"
-	    RTWStorageClass	    "Auto"
-	    DataLoggingNameMode	    "SignalName"
-	  }
-	}
-	Block {
-	  BlockType		  BusSelector
-	  Name			  "Bus Selector6"
-	  SID			  "26386:30217"
-	  Ports			  [1, 1]
-	  Position		  [300, 255, 305, 275]
-	  ZOrder		  47
-	  ShowName		  off
-	  OutputSignals		  "FluidMass_kg"
-	  Port {
-	    PortNumber		    1
-	    Name		    "<FluidMass_kg>"
-	    RTWStorageClass	    "Auto"
-	    DataLoggingNameMode	    "SignalName"
-	  }
-	}
-	Block {
-	  BlockType		  BusSelector
-	  Name			  "Bus Selector7"
-	  SID			  "26386:30222"
-	  Ports			  [1, 1]
-	  Position		  [300, 285, 305, 305]
-	  ZOrder		  50
-	  ShowName		  off
-	  OutputSignals		  "FluidMass_kg"
-	  Port {
-	    PortNumber		    1
-	    Name		    "<FluidMass_kg>"
-	    RTWStorageClass	    "Auto"
-	    DataLoggingNameMode	    "SignalName"
-	  }
-	}
-	Block {
-	  BlockType		  BusSelector
-	  Name			  "Bus Selector8"
-	  SID			  "26386:30227"
-	  Ports			  [1, 1]
-	  Position		  [300, 315, 305, 335]
-	  ZOrder		  53
-	  ShowName		  off
-	  OutputSignals		  "FluidMass_kg"
-	  Port {
-	    PortNumber		    1
-	    Name		    "<FluidMass_kg>"
-	    RTWStorageClass	    "Auto"
-	    DataLoggingNameMode	    "SignalName"
-	  }
-	}
-	Block {
 	  BlockType		  From
 	  Name			  "From1"
-	  SID			  "26386:30191"
+	  SID			  "26386:30144"
 	  Position		  [20, 108, 60, 122]
-	  ZOrder		  31
+	  ZOrder		  2
 	  ShowName		  off
 	  UserDataPersistent	  on
 	  UserData		  "DataTag0"
 	  GotoTag		  "gdata_Boeing737Sample_updatedCopyECSFOSCabinZonedata_sink"
+	  TagVisibility		  "global"
 	  Port {
 	    PortNumber		    1
 	    Name		    "ECS & FOS /Cabin Zone/temp_K"
@@ -49263,131 +49090,12 @@ Model {
 	  }
 	}
 	Block {
-	  BlockType		  From
-	  Name			  "From2"
-	  SID			  "26386:30196"
-	  Position		  [20, 138, 60, 152]
-	  ZOrder		  34
-	  ShowName		  off
-	  UserDataPersistent	  on
-	  UserData		  "DataTag1"
-	  GotoTag		  "gdata_Boeing737Sample_updatedCopyELECTRICALSYSBATTERY1data_sink"
-	  Port {
-	    PortNumber		    1
-	    Name		    "ELECTRICAL SYS /BATTERY 1/VDC (V)"
-	    RTWStorageClass	    "Auto"
-	    DataLoggingNameMode	    "SignalName"
-	  }
-	}
-	Block {
-	  BlockType		  From
-	  Name			  "From3"
-	  SID			  "26386:30201"
-	  Position		  [20, 168, 60, 182]
-	  ZOrder		  37
-	  ShowName		  off
-	  UserDataPersistent	  on
-	  UserData		  "DataTag2"
-	  GotoTag		  "gdata_e_updatedCopyELECTRICALSYSGenerationUnitSyncSyncdata_sink"
-	  Port {
-	    PortNumber		    1
-	    Name		    "ELECTRICAL SYS /Generation Unit Sync-Sync/vdq0 (V)"
-	    RTWStorageClass	    "Auto"
-	    DataLoggingNameMode	    "SignalName"
-	  }
-	}
-	Block {
-	  BlockType		  From
-	  Name			  "From4"
-	  SID			  "26386:30206"
-	  Position		  [20, 198, 60, 212]
-	  ZOrder		  40
-	  ShowName		  off
-	  UserDataPersistent	  on
-	  UserData		  "DataTag3"
-	  GotoTag		  "gdata__updatedCopyELECTRICALSYSGenerationUnitSyncSync1data_sink"
-	  Port {
-	    PortNumber		    1
-	    Name		    "ELECTRICAL SYS /Generation Unit Sync-Sync1/vdq0 (V)"
-	    RTWStorageClass	    "Auto"
-	    DataLoggingNameMode	    "SignalName"
-	  }
-	}
-	Block {
-	  BlockType		  From
-	  Name			  "From5"
-	  SID			  "26386:30211"
-	  Position		  [20, 228, 60, 242]
-	  ZOrder		  43
-	  ShowName		  off
-	  UserDataPersistent	  on
-	  UserData		  "DataTag4"
-	  GotoTag		  "gdata__updatedCopyELECTRICALSYSGenerationUnitSyncSync2data_sink"
-	  Port {
-	    PortNumber		    1
-	    Name		    "ELECTRICAL SYS /Generation Unit Sync-Sync2/vdq0 (V)"
-	    RTWStorageClass	    "Auto"
-	    DataLoggingNameMode	    "SignalName"
-	  }
-	}
-	Block {
-	  BlockType		  From
-	  Name			  "From6"
-	  SID			  "26386:30216"
-	  Position		  [20, 258, 60, 272]
-	  ZOrder		  46
-	  ShowName		  off
-	  UserDataPersistent	  on
-	  UserData		  "DataTag5"
-	  GotoTag		  "gdata__updatedCopyECSFOSFuelTanksPumpsLeftWingFuelTankdata_sink"
-	  Port {
-	    PortNumber		    1
-	    Name		    "ECS & FOS /Fuel Tanks//Pumps/Left Wing Fuel Tank/FluidMass_kg"
-	    RTWStorageClass	    "Auto"
-	    DataLoggingNameMode	    "SignalName"
-	  }
-	}
-	Block {
-	  BlockType		  From
-	  Name			  "From7"
-	  SID			  "26386:30221"
-	  Position		  [20, 288, 60, 302]
-	  ZOrder		  49
-	  ShowName		  off
-	  UserDataPersistent	  on
-	  UserData		  "DataTag6"
-	  GotoTag		  "gdata_le_updatedCopyECSFOSFuelTanksPumpsCenterFuelTankdata_sink"
-	  Port {
-	    PortNumber		    1
-	    Name		    "ECS & FOS /Fuel Tanks//Pumps/Center Fuel Tank/FluidMass_kg"
-	    RTWStorageClass	    "Auto"
-	    DataLoggingNameMode	    "SignalName"
-	  }
-	}
-	Block {
-	  BlockType		  From
-	  Name			  "From8"
-	  SID			  "26386:30226"
-	  Position		  [20, 318, 60, 332]
-	  ZOrder		  52
-	  ShowName		  off
-	  UserDataPersistent	  on
-	  UserData		  "DataTag7"
-	  GotoTag		  "gdata_updatedCopyECSFOSFuelTanksPumpsRightWingFuelTankdata_sink"
-	  Port {
-	    PortNumber		    1
-	    Name		    "ECS & FOS /Fuel Tanks//Pumps/Right Wing Fuel Tank/FluidMass_kg"
-	    RTWStorageClass	    "Auto"
-	    DataLoggingNameMode	    "SignalName"
-	  }
-	}
-	Block {
 	  BlockType		  SubSystem
 	  Name			  "SubSystem1"
-	  SID			  "26386:30193"
+	  SID			  "26386:30146"
 	  Ports			  [1, 1]
 	  Position		  [420, 102, 480, 128]
-	  ZOrder		  33
+	  ZOrder		  4
 	  ShowName		  off
 	  MinAlgLoopOccurrences	  off
 	  PropExecContextOutsideSubsystem off
@@ -49399,6 +49107,7 @@ Model {
 	  Port {
 	    PortNumber		    1
 	    Name		    "Cabin Zone/temp_K"
+	    PropagatedSignals	    "temp_K"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
@@ -49420,7 +49129,7 @@ Model {
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Rename"
-	      SID		      "26386:30194"
+	      SID		      "26386:30147"
 	      Position		      [15, 15, 35, 35]
 	      ZOrder		      1
 	      IconDisplay	      "Port number"
@@ -49428,434 +49137,7 @@ Model {
 	    Block {
 	      BlockType		      Outport
 	      Name		      "Bus"
-	      SID		      "26386:30195"
-	      Position		      [15, 15, 35, 35]
-	      ZOrder		      2
-	      IconDisplay	      "Port number"
-	    }
-	    Line {
-	      SrcBlock		      "Rename"
-	      SrcPort		      1
-	      Points		      [0, -15; -40, 0]
-	      DstBlock		      "Bus"
-	      DstPort		      1
-	    }
-	  }
-	}
-	Block {
-	  BlockType		  SubSystem
-	  Name			  "SubSystem2"
-	  SID			  "26386:30198"
-	  Ports			  [1, 1]
-	  Position		  [420, 132, 480, 158]
-	  ZOrder		  36
-	  ShowName		  off
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
-	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
-	  Port {
-	    PortNumber		    1
-	    Name		    "BATTERY 1/VDC (V)"
-	    RTWStorageClass	    "Auto"
-	    DataLoggingNameMode	    "SignalName"
-	  }
-	  System {
-	    Name		    "SubSystem2"
-	    Location		    [100, 100, 900, 600]
-	    Open		    off
-	    ModelBrowserVisibility  on
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "usletter"
-	    PaperUnits		    "inches"
-	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "Rename"
-	      SID		      "26386:30199"
-	      Position		      [15, 15, 35, 35]
-	      ZOrder		      1
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "Bus"
-	      SID		      "26386:30200"
-	      Position		      [15, 15, 35, 35]
-	      ZOrder		      2
-	      IconDisplay	      "Port number"
-	    }
-	    Line {
-	      SrcBlock		      "Rename"
-	      SrcPort		      1
-	      Points		      [0, -15; -40, 0]
-	      DstBlock		      "Bus"
-	      DstPort		      1
-	    }
-	  }
-	}
-	Block {
-	  BlockType		  SubSystem
-	  Name			  "SubSystem3"
-	  SID			  "26386:30203"
-	  Ports			  [1, 1]
-	  Position		  [420, 162, 480, 188]
-	  ZOrder		  39
-	  ShowName		  off
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
-	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
-	  Port {
-	    PortNumber		    1
-	    Name		    "Generation Unit Sync-Sync/vdq0 (V)"
-	    RTWStorageClass	    "Auto"
-	    DataLoggingNameMode	    "SignalName"
-	  }
-	  System {
-	    Name		    "SubSystem3"
-	    Location		    [100, 100, 900, 600]
-	    Open		    off
-	    ModelBrowserVisibility  on
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "usletter"
-	    PaperUnits		    "inches"
-	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "Rename"
-	      SID		      "26386:30204"
-	      Position		      [15, 15, 35, 35]
-	      ZOrder		      1
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "Bus"
-	      SID		      "26386:30205"
-	      Position		      [15, 15, 35, 35]
-	      ZOrder		      2
-	      IconDisplay	      "Port number"
-	    }
-	    Line {
-	      SrcBlock		      "Rename"
-	      SrcPort		      1
-	      Points		      [0, -15; -40, 0]
-	      DstBlock		      "Bus"
-	      DstPort		      1
-	    }
-	  }
-	}
-	Block {
-	  BlockType		  SubSystem
-	  Name			  "SubSystem4"
-	  SID			  "26386:30208"
-	  Ports			  [1, 1]
-	  Position		  [420, 192, 480, 218]
-	  ZOrder		  42
-	  ShowName		  off
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
-	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
-	  Port {
-	    PortNumber		    1
-	    Name		    "Generation Unit Sync-Sync1/vdq0 (V)"
-	    RTWStorageClass	    "Auto"
-	    DataLoggingNameMode	    "SignalName"
-	  }
-	  System {
-	    Name		    "SubSystem4"
-	    Location		    [100, 100, 900, 600]
-	    Open		    off
-	    ModelBrowserVisibility  on
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "usletter"
-	    PaperUnits		    "inches"
-	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "Rename"
-	      SID		      "26386:30209"
-	      Position		      [15, 15, 35, 35]
-	      ZOrder		      1
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "Bus"
-	      SID		      "26386:30210"
-	      Position		      [15, 15, 35, 35]
-	      ZOrder		      2
-	      IconDisplay	      "Port number"
-	    }
-	    Line {
-	      SrcBlock		      "Rename"
-	      SrcPort		      1
-	      Points		      [0, -15; -40, 0]
-	      DstBlock		      "Bus"
-	      DstPort		      1
-	    }
-	  }
-	}
-	Block {
-	  BlockType		  SubSystem
-	  Name			  "SubSystem5"
-	  SID			  "26386:30213"
-	  Ports			  [1, 1]
-	  Position		  [420, 222, 480, 248]
-	  ZOrder		  45
-	  ShowName		  off
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
-	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
-	  Port {
-	    PortNumber		    1
-	    Name		    "Generation Unit Sync-Sync2/vdq0 (V)"
-	    RTWStorageClass	    "Auto"
-	    DataLoggingNameMode	    "SignalName"
-	  }
-	  System {
-	    Name		    "SubSystem5"
-	    Location		    [100, 100, 900, 600]
-	    Open		    off
-	    ModelBrowserVisibility  on
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "usletter"
-	    PaperUnits		    "inches"
-	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "Rename"
-	      SID		      "26386:30214"
-	      Position		      [15, 15, 35, 35]
-	      ZOrder		      1
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "Bus"
-	      SID		      "26386:30215"
-	      Position		      [15, 15, 35, 35]
-	      ZOrder		      2
-	      IconDisplay	      "Port number"
-	    }
-	    Line {
-	      SrcBlock		      "Rename"
-	      SrcPort		      1
-	      Points		      [0, -15; -40, 0]
-	      DstBlock		      "Bus"
-	      DstPort		      1
-	    }
-	  }
-	}
-	Block {
-	  BlockType		  SubSystem
-	  Name			  "SubSystem6"
-	  SID			  "26386:30218"
-	  Ports			  [1, 1]
-	  Position		  [420, 252, 480, 278]
-	  ZOrder		  48
-	  ShowName		  off
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
-	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
-	  Port {
-	    PortNumber		    1
-	    Name		    "Left Wing Fuel Tank/FluidMass_kg"
-	    RTWStorageClass	    "Auto"
-	    DataLoggingNameMode	    "SignalName"
-	  }
-	  System {
-	    Name		    "SubSystem6"
-	    Location		    [100, 100, 900, 600]
-	    Open		    off
-	    ModelBrowserVisibility  on
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "usletter"
-	    PaperUnits		    "inches"
-	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "Rename"
-	      SID		      "26386:30219"
-	      Position		      [15, 15, 35, 35]
-	      ZOrder		      1
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "Bus"
-	      SID		      "26386:30220"
-	      Position		      [15, 15, 35, 35]
-	      ZOrder		      2
-	      IconDisplay	      "Port number"
-	    }
-	    Line {
-	      SrcBlock		      "Rename"
-	      SrcPort		      1
-	      Points		      [0, -15; -40, 0]
-	      DstBlock		      "Bus"
-	      DstPort		      1
-	    }
-	  }
-	}
-	Block {
-	  BlockType		  SubSystem
-	  Name			  "SubSystem7"
-	  SID			  "26386:30223"
-	  Ports			  [1, 1]
-	  Position		  [420, 282, 480, 308]
-	  ZOrder		  51
-	  ShowName		  off
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
-	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
-	  Port {
-	    PortNumber		    1
-	    Name		    "Center Fuel Tank/FluidMass_kg"
-	    RTWStorageClass	    "Auto"
-	    DataLoggingNameMode	    "SignalName"
-	  }
-	  System {
-	    Name		    "SubSystem7"
-	    Location		    [100, 100, 900, 600]
-	    Open		    off
-	    ModelBrowserVisibility  on
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "usletter"
-	    PaperUnits		    "inches"
-	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "Rename"
-	      SID		      "26386:30224"
-	      Position		      [15, 15, 35, 35]
-	      ZOrder		      1
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "Bus"
-	      SID		      "26386:30225"
-	      Position		      [15, 15, 35, 35]
-	      ZOrder		      2
-	      IconDisplay	      "Port number"
-	    }
-	    Line {
-	      SrcBlock		      "Rename"
-	      SrcPort		      1
-	      Points		      [0, -15; -40, 0]
-	      DstBlock		      "Bus"
-	      DstPort		      1
-	    }
-	  }
-	}
-	Block {
-	  BlockType		  SubSystem
-	  Name			  "SubSystem8"
-	  SID			  "26386:30228"
-	  Ports			  [1, 1]
-	  Position		  [420, 312, 480, 338]
-	  ZOrder		  54
-	  ShowName		  off
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
-	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
-	  Port {
-	    PortNumber		    1
-	    Name		    "Right Wing Fuel Tank/FluidMass_kg"
-	    RTWStorageClass	    "Auto"
-	    DataLoggingNameMode	    "SignalName"
-	  }
-	  System {
-	    Name		    "SubSystem8"
-	    Location		    [100, 100, 900, 600]
-	    Open		    off
-	    ModelBrowserVisibility  on
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "usletter"
-	    PaperUnits		    "inches"
-	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "Rename"
-	      SID		      "26386:30229"
-	      Position		      [15, 15, 35, 35]
-	      ZOrder		      1
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "Bus"
-	      SID		      "26386:30230"
+	      SID		      "26386:30148"
 	      Position		      [15, 15, 35, 35]
 	      ZOrder		      2
 	      IconDisplay	      "Port number"
@@ -49880,6 +49162,7 @@ Model {
 	Line {
 	  SrcBlock		  "Bus Creator"
 	  SrcPort		  1
+	  Points		  [10, 0; 0, 105]
 	  DstBlock		  "Data"
 	  DstPort		  1
 	}
@@ -49906,174 +49189,6 @@ Model {
 	  SrcPort		  1
 	  DstBlock		  "Bus Creator"
 	  DstPort		  1
-	}
-	Line {
-	  Name			  "ELECTRICAL SYS /BATTERY 1/VDC (V)"
-	  Labels		  [0, 0]
-	  SrcBlock		  "From2"
-	  SrcPort		  1
-	  DstBlock		  "Bus Selector2"
-	  DstPort		  1
-	}
-	Line {
-	  Name			  "<VDC (V)>"
-	  Labels		  [0, 0]
-	  SrcBlock		  "Bus Selector2"
-	  SrcPort		  1
-	  DstBlock		  "SubSystem2"
-	  DstPort		  1
-	}
-	Line {
-	  Name			  "BATTERY 1/VDC (V)"
-	  Labels		  [0, 0]
-	  SrcBlock		  "SubSystem2"
-	  SrcPort		  1
-	  DstBlock		  "Bus Creator"
-	  DstPort		  2
-	}
-	Line {
-	  Name			  "ELECTRICAL SYS /Generation Unit Sync-Sync/vdq0 (V)"
-	  Labels		  [0, 0]
-	  SrcBlock		  "From3"
-	  SrcPort		  1
-	  DstBlock		  "Bus Selector3"
-	  DstPort		  1
-	}
-	Line {
-	  Name			  "<vdq0 (V)>"
-	  Labels		  [0, 0]
-	  SrcBlock		  "Bus Selector3"
-	  SrcPort		  1
-	  DstBlock		  "SubSystem3"
-	  DstPort		  1
-	}
-	Line {
-	  Name			  "Generation Unit Sync-Sync/vdq0 (V)"
-	  Labels		  [0, 0]
-	  SrcBlock		  "SubSystem3"
-	  SrcPort		  1
-	  DstBlock		  "Bus Creator"
-	  DstPort		  3
-	}
-	Line {
-	  Name			  "ELECTRICAL SYS /Generation Unit Sync-Sync1/vdq0 (V)"
-	  Labels		  [0, 0]
-	  SrcBlock		  "From4"
-	  SrcPort		  1
-	  DstBlock		  "Bus Selector4"
-	  DstPort		  1
-	}
-	Line {
-	  Name			  "<vdq0 (V)>"
-	  Labels		  [0, 0]
-	  SrcBlock		  "Bus Selector4"
-	  SrcPort		  1
-	  DstBlock		  "SubSystem4"
-	  DstPort		  1
-	}
-	Line {
-	  Name			  "Generation Unit Sync-Sync1/vdq0 (V)"
-	  Labels		  [0, 0]
-	  SrcBlock		  "SubSystem4"
-	  SrcPort		  1
-	  DstBlock		  "Bus Creator"
-	  DstPort		  4
-	}
-	Line {
-	  Name			  "ELECTRICAL SYS /Generation Unit Sync-Sync2/vdq0 (V)"
-	  Labels		  [0, 0]
-	  SrcBlock		  "From5"
-	  SrcPort		  1
-	  DstBlock		  "Bus Selector5"
-	  DstPort		  1
-	}
-	Line {
-	  Name			  "<vdq0 (V)>"
-	  Labels		  [0, 0]
-	  SrcBlock		  "Bus Selector5"
-	  SrcPort		  1
-	  DstBlock		  "SubSystem5"
-	  DstPort		  1
-	}
-	Line {
-	  Name			  "Generation Unit Sync-Sync2/vdq0 (V)"
-	  Labels		  [0, 0]
-	  SrcBlock		  "SubSystem5"
-	  SrcPort		  1
-	  DstBlock		  "Bus Creator"
-	  DstPort		  5
-	}
-	Line {
-	  Name			  "ECS & FOS /Fuel Tanks//Pumps/Left Wing Fuel Tank/FluidMass_kg"
-	  Labels		  [0, 0]
-	  SrcBlock		  "From6"
-	  SrcPort		  1
-	  DstBlock		  "Bus Selector6"
-	  DstPort		  1
-	}
-	Line {
-	  Name			  "<FluidMass_kg>"
-	  Labels		  [0, 0]
-	  SrcBlock		  "Bus Selector6"
-	  SrcPort		  1
-	  DstBlock		  "SubSystem6"
-	  DstPort		  1
-	}
-	Line {
-	  Name			  "Left Wing Fuel Tank/FluidMass_kg"
-	  Labels		  [0, 0]
-	  SrcBlock		  "SubSystem6"
-	  SrcPort		  1
-	  DstBlock		  "Bus Creator"
-	  DstPort		  6
-	}
-	Line {
-	  Name			  "ECS & FOS /Fuel Tanks//Pumps/Center Fuel Tank/FluidMass_kg"
-	  Labels		  [0, 0]
-	  SrcBlock		  "From7"
-	  SrcPort		  1
-	  DstBlock		  "Bus Selector7"
-	  DstPort		  1
-	}
-	Line {
-	  Name			  "<FluidMass_kg>"
-	  Labels		  [0, 0]
-	  SrcBlock		  "Bus Selector7"
-	  SrcPort		  1
-	  DstBlock		  "SubSystem7"
-	  DstPort		  1
-	}
-	Line {
-	  Name			  "Center Fuel Tank/FluidMass_kg"
-	  Labels		  [0, 0]
-	  SrcBlock		  "SubSystem7"
-	  SrcPort		  1
-	  DstBlock		  "Bus Creator"
-	  DstPort		  7
-	}
-	Line {
-	  Name			  "ECS & FOS /Fuel Tanks//Pumps/Right Wing Fuel Tank/FluidMass_kg"
-	  Labels		  [0, 0]
-	  SrcBlock		  "From8"
-	  SrcPort		  1
-	  DstBlock		  "Bus Selector8"
-	  DstPort		  1
-	}
-	Line {
-	  Name			  "<FluidMass_kg>"
-	  Labels		  [0, 0]
-	  SrcBlock		  "Bus Selector8"
-	  SrcPort		  1
-	  DstBlock		  "SubSystem8"
-	  DstPort		  1
-	}
-	Line {
-	  Name			  "Right Wing Fuel Tank/FluidMass_kg"
-	  Labels		  [0, 0]
-	  SrcBlock		  "SubSystem8"
-	  SrcPort		  1
-	  DstBlock		  "Bus Creator"
-	  DstPort		  8
 	}
       }
     }
@@ -50116,25 +49231,18 @@ Model {
       BlockType		      Scope
       Name		      "Scope2"
       SID		      "27642"
-      Ports		      [8]
-      Position		      [850, 700, 870, 825]
+      Ports		      [1]
+      Position		      [720, 749, 750, 781]
       ZOrder		      406
       ShowName		      off
       Floating		      off
-      Location		      [3939, 57, 5020, 1031]
-      Open		      on
-      NumInputPorts	      "8"
+      Location		      [88, 278, 1169, 628]
+      Open		      off
+      NumInputPorts	      "1"
       ZoomMode		      "xonly"
       List {
 	ListType		AxesTitles
 	axes1			"%<SignalLabel>"
-	axes2			"%<SignalLabel>"
-	axes3			"%<SignalLabel>"
-	axes4			"%<SignalLabel>"
-	axes5			"%<SignalLabel>"
-	axes6			"%<SignalLabel>"
-	axes7			"%<SignalLabel>"
-	axes8			"%<SignalLabel>"
       }
       List {
 	ListType		ScopeGraphics
@@ -50146,14 +49254,13 @@ Model {
 	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
 	MarkerStyles		"none|none|none|none|none|none"
       }
-      ShowLegends	      on
-      YMin		      "294.6~-5~-5~-5~-5~-5~-5~-5"
-      YMax		      "296.2~5~5~5~5~5~5~5"
+      ShowLegends	      off
+      YMin		      "294.6"
+      YMax		      "296.2"
       SaveName		      "ScopeData10"
       DataFormat	      "StructureWithTime"
       LimitDataPoints	      off
-      SampleInput	      on
-      SampleTime	      "5"
+      SampleTime	      "0"
     }
     Line {
       SrcBlock		      "Mission Profile"
@@ -50357,6 +49464,12 @@ Model {
       DstPort		      3
     }
     Line {
+      SrcBlock		      "PowerFlow Data Manager"
+      SrcPort		      1
+      DstBlock		      "Scope2"
+      DstPort		      1
+    }
+    Line {
       SrcBlock		      "From27"
       SrcPort		      1
       DstBlock		      "ELECTRICAL SYS "
@@ -50399,128 +49512,15 @@ Model {
       DstBlock		      "Engine #1"
       DstPort		      6
     }
-    Line {
-      SrcBlock		      "PowerFlow Data Manager"
-      SrcPort		      1
-      Points		      [20, 0]
-      DstBlock		      "Bus\nSelector1"
-      DstPort		      1
-    }
-    Line {
-      Name		      "<Right Wing Fuel Tank/FluidMass_kg>"
-      Labels		      [0, 0]
-      SrcBlock		      "Bus\nSelector1"
-      SrcPort		      5
-      DstBlock		      "Scope2"
-      DstPort		      5
-    }
-    Line {
-      Name		      "<BATTERY 1/VDC (V)>"
-      Labels		      [0, 0]
-      SrcBlock		      "Bus\nSelector1"
-      SrcPort		      2
-      DstBlock		      "Scope2"
-      DstPort		      2
-    }
-    Line {
-      Name		      "<Left Wing Fuel Tank/FluidMass_kg>"
-      Labels		      [0, 0]
-      SrcBlock		      "Bus\nSelector1"
-      SrcPort		      3
-      DstBlock		      "Scope2"
-      DstPort		      3
-    }
-    Line {
-      Name		      "<Center Fuel Tank/FluidMass_kg>"
-      Labels		      [0, 0]
-      SrcBlock		      "Bus\nSelector1"
-      SrcPort		      4
-      DstBlock		      "Scope2"
-      DstPort		      4
-    }
-    Line {
-      Name		      "<Generation Unit Sync-Sync/vdq0 (V)>"
-      Labels		      [0, 0]
-      SrcBlock		      "Bus\nSelector1"
-      SrcPort		      6
-      DstBlock		      "Scope2"
-      DstPort		      6
-    }
-    Line {
-      Name		      "<Generation Unit Sync-Sync1/vdq0 (V)>"
-      Labels		      [0, 0]
-      SrcBlock		      "Bus\nSelector1"
-      SrcPort		      7
-      DstBlock		      "Scope2"
-      DstPort		      7
-    }
-    Line {
-      Name		      "<Generation Unit Sync-Sync2/vdq0 (V)>"
-      Labels		      [0, 0]
-      SrcBlock		      "Bus\nSelector1"
-      SrcPort		      8
-      DstBlock		      "Scope2"
-      DstPort		      8
-    }
-    Line {
-      Name		      "<Cabin Zone/temp_K>"
-      Labels		      [0, 0]
-      SrcBlock		      "Bus\nSelector1"
-      SrcPort		      1
-      DstBlock		      "Scope2"
-      DstPort		      1
-    }
   }
 }
 MatData {
-  NumRecords		  8
+  NumRecords		  1
   DataRecord {
     Tag			    DataTag0
     Data		    "  %)30     .    P     8    (     0         %    \"     $    \"     0         .    4     8    (    !    "
     "      %    \"     $    <     0         0    '    $5#4R F($9/4R O0V%B:6X@6F]N92]T96UP7TL     #@   #@    &    \"    "
     " 8         !0    @    !     0    $         \"0    @           #P/P"
-  }
-  DataRecord {
-    Tag			    DataTag1
-    Data		    "  %)30     .    R     8    (     0         %    \"     $    \"     0         .    6     8    (    !    "
-    "      %    \"     $    A     0         0    (0   $5,14-44DE#04P@4UE3(\"]\"051415)9(#$O5D1#(\"A6*0         .    .  "
-    "   8    (    !@         %    \"     $    !     0         )    \"           @$] "
-  }
-  DataRecord {
-    Tag			    DataTag2
-    Data		    "  %)30     .    V     8    (     0         %    \"     $    \"     0         .    :     8    (    !    "
-    "      %    \"     $    R     0         0    ,@   $5,14-44DE#04P@4UE3(\"]'96YE<F%T:6]N(%5N:70@4WEN8RU3>6YC+W9D<3 @*"
-    "%8I        #@   #@    &    \"     8         !0    @    !     0    $         \"0    @          $!10 "
-  }
-  DataRecord {
-    Tag			    DataTag3
-    Data		    "  %)30     .    V     8    (     0         %    \"     $    \"     0         .    :     8    (    !    "
-    "      %    \"     $    S     0         0    ,P   $5,14-44DE#04P@4UE3(\"]'96YE<F%T:6]N(%5N:70@4WEN8RU3>6YC,2]V9'$P("
-    "\"A6*0      #@   #@    &    \"     8         !0    @    !     0    $         \"0    @           !20 "
-  }
-  DataRecord {
-    Tag			    DataTag4
-    Data		    "  %)30     .    V     8    (     0         %    \"     $    \"     0         .    :     8    (    !    "
-    "      %    \"     $    S     0         0    ,P   $5,14-44DE#04P@4UE3(\"]'96YE<F%T:6]N(%5N:70@4WEN8RU3>6YC,B]V9'$P("
-    "\"A6*0      #@   #@    &    \"     8         !0    @    !     0    $         \"0    @          ,!20 "
-  }
-  DataRecord {
-    Tag			    DataTag5
-    Data		    "  %)30     .    X     8    (     0         %    \"     $    \"     0         .    <     8    (    !    "
-    "      %    \"     $    ]     0         0    /0   $5#4R F($9/4R O1G5E;\"!486YK<R\\O4'5M<',O3&5F=\"!7:6YG($9U96P@5&%"
-    "N:R]&;'5I9$UA<W-?:V<    .    .     8    (    !@         %    \"     $    !     0         )    \"            #E "
-  }
-  DataRecord {
-    Tag			    DataTag6
-    Data		    "  %)30     .    X     8    (     0         %    \"     $    \"     0         .    <     8    (    !    "
-    "      %    \"     $    Z     0         0    .@   $5#4R F($9/4R O1G5E;\"!486YK<R\\O4'5M<',O0V5N=&5R($9U96P@5&%N:R]&"
-    ";'5I9$UA<W-?:V<        .    .     8    (    !@         %    \"     $    !     0         )    \"            \"Q "
-  }
-  DataRecord {
-    Tag			    DataTag7
-    Data		    "  %)30     .    X     8    (     0         %    \"     $    \"     0         .    <     8    (    !    "
-    "      %    \"     $    ^     0         0    /@   $5#4R F($9/4R O1G5E;\"!486YK<R\\O4'5M<',O4FEG:'0@5VEN9R!&=65L(%1A"
-    ";FLO1FQU:61-87-S7VMG   .    .     8    (    !@         %    \"     $    !     0         )    \"            $) "
   }
 }
 # Finite State Machines

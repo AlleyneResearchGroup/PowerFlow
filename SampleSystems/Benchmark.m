@@ -3,7 +3,8 @@ sim('Boeing737Sample_updatedCopy.mdl')
 time_ex = toc
 save('Benchmark_data1.mat')
 close all
-
+%%
+%{
 load('Benchmark_data1.mat')
 %Elapsed time is 5785.585284 seconds.
 figure
@@ -65,3 +66,4 @@ xlabel('Mission Time [hrs]')
 xlim([0 5.3])
 set(findall(gcf,'-property','FontSize'),'FontSize',10)
 set(findall(gcf,'-property','Fontname'),'Fontname','Times New Roman')
+%}
