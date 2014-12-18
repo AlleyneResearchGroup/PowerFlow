@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.358"
+    ComputedModelVersion    "1.359"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -32,7 +32,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [2055.0, 240.0, 1378.0, 744.0]
+      Location		      [62.0, 189.0, 1378.0, 744.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -89,9 +89,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "mwillms4"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Dec 18 00:21:50 2014"
+  LastModifiedDate	  "Thu Dec 18 07:48:24 2014"
   RTWModifiedTimeStamp	  340762901
-  ModelVersionFormat	  "1.%<AutoIncrement:358>"
+  ModelVersionFormat	  "1.%<AutoIncrement:359>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1178,7 +1178,7 @@ Model {
   }
   System {
     Name		    "Boeing737Sample_updatedCopy"
-    Location		    [2055, 240, 3433, 984]
+    Location		    [62, 189, 1440, 933]
     Open		    on
     ModelBrowserVisibility  on
     ModelBrowserWidth	    212
@@ -5697,7 +5697,7 @@ Model {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Left PACK"
-	    Location		    [1192, 862, 2888, 1888]
+	    Location		    [2055, 240, 3433, 984]
 	    Open		    off
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    200
@@ -5709,7 +5709,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
+	    ZoomFactor		    "80"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "ENGINE"
@@ -49255,6 +49255,7 @@ Model {
 	  UserDataPersistent	  on
 	  UserData		  "DataTag0"
 	  GotoTag		  "gdata_Boeing737Sample_updatedCopyECSFOSCabinZonedata_sink"
+	  TagVisibility		  "global"
 	  Port {
 	    PortNumber		    1
 	    Name		    "ECS & FOS /Cabin Zone/temp_K"
@@ -49272,6 +49273,7 @@ Model {
 	  UserDataPersistent	  on
 	  UserData		  "DataTag1"
 	  GotoTag		  "gdata_Boeing737Sample_updatedCopyELECTRICALSYSBATTERY1data_sink"
+	  TagVisibility		  "global"
 	  Port {
 	    PortNumber		    1
 	    Name		    "ELECTRICAL SYS /BATTERY 1/VDC (V)"
@@ -49289,6 +49291,7 @@ Model {
 	  UserDataPersistent	  on
 	  UserData		  "DataTag2"
 	  GotoTag		  "gdata_e_updatedCopyELECTRICALSYSGenerationUnitSyncSyncdata_sink"
+	  TagVisibility		  "global"
 	  Port {
 	    PortNumber		    1
 	    Name		    "ELECTRICAL SYS /Generation Unit Sync-Sync/vdq0 (V)"
@@ -49306,6 +49309,7 @@ Model {
 	  UserDataPersistent	  on
 	  UserData		  "DataTag3"
 	  GotoTag		  "gdata__updatedCopyELECTRICALSYSGenerationUnitSyncSync1data_sink"
+	  TagVisibility		  "global"
 	  Port {
 	    PortNumber		    1
 	    Name		    "ELECTRICAL SYS /Generation Unit Sync-Sync1/vdq0 (V)"
@@ -49323,6 +49327,7 @@ Model {
 	  UserDataPersistent	  on
 	  UserData		  "DataTag4"
 	  GotoTag		  "gdata__updatedCopyELECTRICALSYSGenerationUnitSyncSync2data_sink"
+	  TagVisibility		  "global"
 	  Port {
 	    PortNumber		    1
 	    Name		    "ELECTRICAL SYS /Generation Unit Sync-Sync2/vdq0 (V)"
@@ -49340,6 +49345,7 @@ Model {
 	  UserDataPersistent	  on
 	  UserData		  "DataTag5"
 	  GotoTag		  "gdata__updatedCopyECSFOSFuelTanksPumpsLeftWingFuelTankdata_sink"
+	  TagVisibility		  "global"
 	  Port {
 	    PortNumber		    1
 	    Name		    "ECS & FOS /Fuel Tanks//Pumps/Left Wing Fuel Tank/FluidMass_kg"
@@ -49357,6 +49363,7 @@ Model {
 	  UserDataPersistent	  on
 	  UserData		  "DataTag6"
 	  GotoTag		  "gdata_le_updatedCopyECSFOSFuelTanksPumpsCenterFuelTankdata_sink"
+	  TagVisibility		  "global"
 	  Port {
 	    PortNumber		    1
 	    Name		    "ECS & FOS /Fuel Tanks//Pumps/Center Fuel Tank/FluidMass_kg"
@@ -49374,6 +49381,7 @@ Model {
 	  UserDataPersistent	  on
 	  UserData		  "DataTag7"
 	  GotoTag		  "gdata_updatedCopyECSFOSFuelTanksPumpsRightWingFuelTankdata_sink"
+	  TagVisibility		  "global"
 	  Port {
 	    PortNumber		    1
 	    Name		    "ECS & FOS /Fuel Tanks//Pumps/Right Wing Fuel Tank/FluidMass_kg"
@@ -49399,6 +49407,7 @@ Model {
 	  Port {
 	    PortNumber		    1
 	    Name		    "Cabin Zone/temp_K"
+	    PropagatedSignals	    "temp_K"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
@@ -49460,6 +49469,7 @@ Model {
 	  Port {
 	    PortNumber		    1
 	    Name		    "BATTERY 1/VDC (V)"
+	    PropagatedSignals	    "VDC (V)"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
@@ -49521,6 +49531,7 @@ Model {
 	  Port {
 	    PortNumber		    1
 	    Name		    "Generation Unit Sync-Sync/vdq0 (V)"
+	    PropagatedSignals	    "vdq0 (V)"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
@@ -49582,6 +49593,7 @@ Model {
 	  Port {
 	    PortNumber		    1
 	    Name		    "Generation Unit Sync-Sync1/vdq0 (V)"
+	    PropagatedSignals	    "vdq0 (V)"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
@@ -49643,6 +49655,7 @@ Model {
 	  Port {
 	    PortNumber		    1
 	    Name		    "Generation Unit Sync-Sync2/vdq0 (V)"
+	    PropagatedSignals	    "vdq0 (V)"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
@@ -49704,6 +49717,7 @@ Model {
 	  Port {
 	    PortNumber		    1
 	    Name		    "Left Wing Fuel Tank/FluidMass_kg"
+	    PropagatedSignals	    "FluidMass_kg"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
@@ -49765,6 +49779,7 @@ Model {
 	  Port {
 	    PortNumber		    1
 	    Name		    "Center Fuel Tank/FluidMass_kg"
+	    PropagatedSignals	    "FluidMass_kg"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
@@ -49826,6 +49841,7 @@ Model {
 	  Port {
 	    PortNumber		    1
 	    Name		    "Right Wing Fuel Tank/FluidMass_kg"
+	    PropagatedSignals	    "FluidMass_kg"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
@@ -50086,7 +50102,7 @@ Model {
       ZOrder		      -47
       ShowName		      off
       Floating		      off
-      Location		      [88, 278, 1169, 628]
+      Location		      [2150, 381, 3231, 731]
       Open		      off
       NumInputPorts	      "1"
       ZoomMode		      "xonly"
@@ -50105,8 +50121,8 @@ Model {
 	MarkerStyles		"none|none|none|none|none|none"
       }
       ShowLegends	      off
-      YMin		      "294.6"
-      YMax		      "296.2"
+      YMin		      "295.03"
+      YMax		      "295.17"
       SaveName		      "ScopeData36"
       DataFormat	      "StructureWithTime"
       LimitDataPoints	      off
@@ -50121,8 +50137,8 @@ Model {
       ZOrder		      406
       ShowName		      off
       Floating		      off
-      Location		      [3939, 57, 5020, 1031]
-      Open		      on
+      Location		      [298, 57, 1379, 924]
+      Open		      off
       NumInputPorts	      "8"
       ZoomMode		      "xonly"
       List {
@@ -50147,6 +50163,10 @@ Model {
 	MarkerStyles		"none|none|none|none|none|none"
       }
       ShowLegends	      on
+      LegendLocations	      "0.81807     0.93426     0.15356    0.023453\n0.81252     0.81546     0.15911    0.023453\n"
+      "0.75239     0.69781     0.21924    0.023453\n0.76627     0.58016     0.20537    0.023453\n0.74591     0.46136   "
+      "  0.22572    0.023453\n0.73851     0.30757     0.23312    0.059592\n0.73296     0.18993     0.23867    0.059592\n"
+      "0.73296    0.071126     0.23867    0.059592"
       YMin		      "294.6~-5~-5~-5~-5~-5~-5~-5"
       YMax		      "296.2~5~5~5~5~5~5~5"
       SaveName		      "ScopeData10"
