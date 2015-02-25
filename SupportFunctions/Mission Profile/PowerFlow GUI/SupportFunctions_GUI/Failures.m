@@ -37,6 +37,8 @@ if LandData == 0
         state_eng = zeros(1,length(MSSN.eng.time(t_ind+1:end)));
         eval(['MSSN.eng.Eng' num2str(k) '(t_ind+1:end)' ' = state_eng;']);
         eval(['MSSN.eng.EngThrust' num2str(k) '(t_ind+1:end)' ' = state_eng;']);
+        state_gen = zeros(1,length(MSSN.eng.time(t_ind+1:end)));
+        eval(['MSSN.eng.Gen' num2str(k) '(t_ind+1:end)' ' = state_gen;']);
     elseif fail == 2;
         k = fail_loc;
         state_gen = zeros(1,length(MSSN.eng.time(t_ind+1:end)));

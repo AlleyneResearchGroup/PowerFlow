@@ -340,8 +340,8 @@ end
 
         
                          if difference >0
-                             eval(['MSSN.eng.Eng' num2str(i) '(t_ind+1:end)' ' =[];']);
-                             eval(['MSSN.eng.EngThrust' num2str(i) '(t_ind+1:end)' ' = [];']);
+                             eval(['MSSN.eng.Eng' num2str(i) '(end-difference:end)' ' =[];']);
+                             eval(['MSSN.eng.EngThrust' num2str(i) '(end-difference:end)' ' = [];']);
                              eval(['MSSN.eng.EngThrust' num2str(i) '(end-1:end)' ' =zeros(1,2);']);
                              eval(['MSSN.eng.Eng' num2str(i) '(end-1:end)' ' =zeros(1,2);']); %For Shutdown
                              
@@ -361,11 +361,11 @@ end
             elseif i==k
       
                         if difference >0 
-                            state_gen = (zeros(1,length(MSSN.eng.time(t_ind+1:end))))
-                            s= size(MSSN.eng.Gen1(t_ind+1:end))
+                            state_gen = size(zeros(1,length(MSSN.eng.time(t_ind:end))))
+                            s= size(MSSN.eng.Gen1(t_ind:end))
                            
-                            eval(['MSSN.eng.Gen' num2str(k) '(t_ind+1:end)' ' =[];']);
-                            eval(['MSSN.eng.Gen' num2str(k) '(t_ind+1:end)' ' = zeros(1,length(MSSN.eng.time(t_ind+1:end)));']);
+                            eval(['MSSN.eng.Gen' num2str(k) '(end-difference:end)' ' =[];']);
+                            eval(['MSSN.eng.Gen' num2str(k) '(t_ind:end)' ' = zeros(1,length(MSSN.eng.time(t_ind:end)));']);
                             state_eng=zeros(1,difference);
                                         eval(['MSSN.eng.Eng' num2str(k) '(end-difference:end)' ' =[];']);
                                         eval(['MSSN.eng.EngThrust' num2str(k) '(end-difference:end)' ' = [];']); 
