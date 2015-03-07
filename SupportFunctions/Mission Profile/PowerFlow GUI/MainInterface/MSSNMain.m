@@ -22,7 +22,7 @@ function varargout = MSSNMain(varargin)
 
 % Edit the above text to modify the response to help MSSNMain
 
-% Last Modified by GUIDE v2.5 07-Oct-2014 23:29:08
+% Last Modified by GUIDE v2.5 26-Feb-2015 19:00:09
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -759,7 +759,7 @@ function Batch_Callback(hObject, eventdata, handles)
 
 %Doesnt do anything currently but can in the future to run multiple mission
 %at a time
-Main
+BatchGUI
 
 
 
@@ -2200,3 +2200,11 @@ function MSSNPLT_ButtonDownFcn(hObject, eventdata, handles)
 
         
         
+
+
+% --- If Enable == 'on', executes on mouse press in 5 pixel border.
+% --- Otherwise, executes on mouse press in 5 pixel border or over Time_Inquiry.
+function Time_Inquiry_ButtonDownFcn(hObject, eventdata, handles)
+% hObject    handle to Time_Inquiry (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
