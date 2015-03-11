@@ -84,21 +84,844 @@ clear handles.MSSN
 
 BatchArray = evalin('base','BatchArray');
 N = length(BatchArray);
+GTool.setTheme ('blue') ;
+g=GTabContainer(figure(),'top') ;
 for i = 1:N
     M=load(BatchArray{i});
    M = M.M;
    assignin('base','M',M);
    altindex(hObject,handles)
-   
     assignin('base','M',M);
+    
+    if i==1
 MSSN1 = MissionBuild(M.phaselist,M.startuparr,M.taxiarr,M.takeoffarr,M.climbarr,M.cruisearr,...
     M.descentarr,M.loiterarr,M.approacharr,M.landingarr,M.shutdownarr,M.genstrct);
- assignin('base','MSSN1',MSSN1);
+assignin('base','MSSN1',MSSN1);
+g.addTab(BatchArray{i});
+h=GAccordion (g.getComponentAt(1));
+h.addTab('Altitude');
+axes('Parent',h.getComponentAt(1));
+plot(MSSN1.cond.time,MSSN1.cond.alt)
+axis([0,MSSN1.cond.time(end),0,1.1*max(MSSN1.cond.alt)])
+ylabel('Feet')
+xlabel('Time (Sec)')
+title('Altitude')
+
+h.addTab('Mach');
+axes('Parent',h.getComponentAt(2));
+plot(MSSN1.cond.time,MSSN1.cond.mach)
+axis([0,MSSN1.cond.time(end),0,1.1*max(MSSN1.cond.mach)])
+title('Mach')
+xlabel('Time (Sec)')
+
+h.addTab('APU');
+axes('Parent',h.getComponentAt(3));
+plot(MSSN1.eng.time,MSSN1.eng.apu)
+axis([0,MSSN1.eng.time(end),0,1.1])
+xlabel('Time (Sec)')
+title('APU')
+
+h.addTab('Engine Status');
+axes('Parent',h.getComponentAt(4));
+if isfield(MSSN1.eng,'Eng3')==0;
+plot(MSSN1.eng.time,MSSN1.eng.Eng1)
+hold on
+plot(MSSN1.eng.time,MSSN1.eng.Eng2)
+elseif isfield(MSSN1.eng,'Eng3')==1;
+ plot(MSSN1.eng.time,MSSN1.eng.Eng1)
+hold on
+plot(MSSN1.eng.time,MSSN1.eng.Eng2)
+hold on
+plot(MSSN1.eng.time,MSSN1.eng.Eng3)
+hold on
+plot(MSSN1.eng.time,MSSN1.eng.Eng4)
+end
+axis([0,MSSN1.eng.time(end),0,1.1])
+xlabel('Time (Sec)')
+title('Engine')
+
+h.addTab('Engine Thrust');
+axes('Parent',h.getComponentAt(5));
+if isfield(MSSN1.eng,'Eng3')==0;
+plot(MSSN1.eng.time,MSSN1.eng.EngThrust1)
+hold on
+plot(MSSN1.eng.time,MSSN1.eng.EngThrust2)
+elseif isfield(MSSN1.eng,'Eng3')==1;
+ plot(MSSN1.eng.time,MSSN1.eng.EngThrust1)
+hold on
+plot(MSSN1.eng.time,MSSN1.eng.EngThrust2)
+hold on
+plot(MSSN1.eng.time,MSSN1.eng.EngThrust3)
+hold on
+plot(MSSN1.eng.time,MSSN1.eng.EngThrust4)
+end
+axis([0,MSSN1.eng.time(end),0,1.1*max(MSSN1.eng.EngThrust1)])
+xlabel('Time (Sec)')
+ylabel('Thrust kN')
+title('Engine Thrust')
+
+h.addTab('Generators');
+axes('Parent',h.getComponentAt(6));
+if isfield(MSSN1.eng,'Gen5')==0;
+plot(MSSN1.eng.time,MSSN1.eng.Gen1)
+hold on
+plot(MSSN1.eng.time,MSSN1.eng.Gen2)
+hold on
+plot(MSSN1.eng.time,MSSN1.eng.Gen3)
+hold on
+plot(MSSN1.eng.time,MSSN1.eng.Gen4)
+elseif isfield(MSSN1.eng,'Gen5')==1;
+plot(MSSN1.eng.time,MSSN1.eng.Gen1)
+hold on
+plot(MSSN1.eng.time,MSSN1.eng.Gen2)
+hold on
+plot(MSSN1.eng.time,MSSN1.eng.Gen3)
+hold on
+plot(MSSN1.eng.time,MSSN1.eng.Gen4)
+hold on
+plot(MSSN1.eng.time,MSSN1.eng.Gen5)
+hold on
+plot(MSSN1.eng.time,MSSN1.eng.Gen6)
+hold on
+plot(MSSN1.eng.time,MSSN1.eng.Gen7)
+hold on
+plot(MSSN1.eng.time,MSSN1.eng.Gen8)
+end
+axis([0,MSSN1.eng.time(end),0,1.1])
+xlabel('Time (Sec)')
+title('Generator Status')
+%{
+h.addTab('Pack');
+axes('Parent',h.getComponentAt(7));
+plot(MSSN1.eng.time,MSSN1.eng.pack)
+axis([0,MSSN1.eng.time(end),0,1.1])
+title('Pack')
+xlabel('Time (Sec)')
+
+h.addTab('Landing Gear');
+axes('Parent',h.getComponentAt(8));
+plot(MSSN1.hyd.time,MSSN1.hyd.lndgr)
+axis([0,MSSN1.hyd.time(end),0,1.1])
+title('Landing Gear')
+xlabel('Time (Sec)')
+
+h.addTab('Flaps');
+axes('Parent',h.getComponentAt(9));
+plot(MSSN1.el.time,MSSN1.el.flaps)
+axis([0,MSSN1.el.time(end),0,1.1*max(MSSN1.el.flaps)])
+title('Flaps')
+xlabel('Time (Sec)')
+ylabel('Angle [Deg]')
+
+h.addTab('NavCom');
+axes('Parent',h.getComponentAt(10));
+plot(MSSN1.el.time,MSSN1.el.navcom)
+axis([0,MSSN1.el.time(end),0,1.1])
+title('NavCom')
+xlabel('Time (Sec)')
+
+h.addTab('AutoPilot');
+axes('Parent',h.getComponentAt(11));
+plot(MSSN1.el.time,MSSN1.el.autop)
+axis([0,MSSN1.el.time(end),0,1.1])
+title('Autopilot')
+xlabel('Time (Sec)')
+
+h.addTab('Taxi Light');
+axes('Parent',h.getComponentAt(12));
+plot(MSSN1.el.time,MSSN1.el.taxilit)
+axis([0,MSSN1.el.time(end),0,1.1])
+title('Taxi Light')
+xlabel('Time (Sec)')
+
+h.addTab('Landing Light');
+axes('Parent',h.getComponentAt(13));
+plot(MSSN1.el.time,MSSN1.el.landinglit)
+axis([0,MSSN1.el.time(end),0,1.1])
+title('Landing Light')
+xlabel('Time (Sec)')
+
+h.addTab('Pressure');
+axes('Parent',h.getComponentAt(14));
+plot(MSSN1.pnu.time,MSSN1.pnu.pres)
+axis([0,MSSN1.pnu.time(end),0,1.1])
+title('Pressure')
+xlabel('Time (Sec)')
+
+h.addTab('State');
+axes('Parent',h.getComponentAt(15));
+plot(MSSN1.gen.time,MSSN1.gen.state)
+axis([0,MSSN1.gen.time(end),0,1.1*max(MSSN1.gen.state)])
+title('State')
+xlabel('Time (Sec)')
+%}
+    elseif i==2
+MSSN2 = MissionBuild(M.phaselist,M.startuparr,M.taxiarr,M.takeoffarr,M.climbarr,M.cruisearr,...
+    M.descentarr,M.loiterarr,M.approacharr,M.landingarr,M.shutdownarr,M.genstrct);
+assignin('base','MSSN2',MSSN2);
+MSSN2=evalin('base','MSSN2');
+
+g.addTab(BatchArray{i});
+h=GAccordion (g.getComponentAt(2));
+h.addTab('Altitude');
+axes('Parent',h.getComponentAt(1));
+plot(MSSN2.cond.time,MSSN2.cond.alt)
+axis([0,MSSN2.cond.time(end),0,1.1*max(MSSN2.cond.alt)])
+ylabel('Feet')
+xlabel('Time (Sec)')
+title('Altitude')
+
+h.addTab('Mach');
+axes('Parent',h.getComponentAt(2));
+plot(MSSN2.cond.time,MSSN2.cond.mach)
+axis([0,MSSN2.cond.time(end),0,1.1*max(MSSN2.cond.mach)])
+title('Mach')
+xlabel('Time (Sec)')
+
+h.addTab('APU');
+axes('Parent',h.getComponentAt(3));
+plot(MSSN2.eng.time,MSSN2.eng.apu)
+axis([0,MSSN2.eng.time(end),0,1.1])
+xlabel('Time (Sec)')
+title('APU')
+
+h.addTab('Engine Status');
+axes('Parent',h.getComponentAt(4));
+if isfield(MSSN2.eng,'Eng3')==0;
+plot(MSSN2.eng.time,MSSN2.eng.Eng1)
+hold on
+plot(MSSN2.eng.time,MSSN2.eng.Eng2)
+elseif isfield(MSSN2.eng,'Eng3')==1;
+ plot(MSSN2.eng.time,MSSN2.eng.Eng1)
+hold on
+plot(MSSN2.eng.time,MSSN2.eng.Eng2)
+hold on
+plot(MSSN2.eng.time,MSSN2.eng.Eng3)
+hold on
+plot(MSSN2.eng.time,MSSN2.eng.Eng4)
+end
+axis([0,MSSN2.eng.time(end),0,1.1])
+xlabel('Time (Sec)')
+title('Engine')
+
+h.addTab('Engine Thrust');
+axes('Parent',h.getComponentAt(5));
+if isfield(MSSN2.eng,'Eng3')==0;
+plot(MSSN2.eng.time,MSSN2.eng.EngThrust1)
+hold on
+plot(MSSN2.eng.time,MSSN2.eng.EngThrust2)
+elseif isfield(MSSN2.eng,'Eng3')==1;
+ plot(MSSN2.eng.time,MSSN2.eng.EngThrust1)
+hold on
+plot(MSSN2.eng.time,MSSN2.eng.EngThrust2)
+hold on
+plot(MSSN2.eng.time,MSSN2.eng.EngThrust3)
+hold on
+plot(MSSN2.eng.time,MSSN2.eng.EngThrust4)
+end
+axis([0,MSSN2.eng.time(end),0,1.1*max(MSSN2.eng.EngThrust1)])
+xlabel('Time (Sec)')
+ylabel('Thrust kN')
+title('Engine Thrust')
+
+h.addTab('Generators');
+axes('Parent',h.getComponentAt(6));
+if isfield(MSSN2.eng,'Gen5')==0;
+plot(MSSN2.eng.time,MSSN2.eng.Gen1)
+hold on
+plot(MSSN2.eng.time,MSSN2.eng.Gen2)
+hold on
+plot(MSSN2.eng.time,MSSN2.eng.Gen3)
+hold on
+plot(MSSN2.eng.time,MSSN2.eng.Gen4)
+elseif isfield(MSSN2.eng,'Gen5')==1;
+plot(MSSN2.eng.time,MSSN2.eng.Gen1)
+hold on
+plot(MSSN2.eng.time,MSSN2.eng.Gen2)
+hold on
+plot(MSSN2.eng.time,MSSN2.eng.Gen3)
+hold on
+plot(MSSN2.eng.time,MSSN2.eng.Gen4)
+hold on
+plot(MSSN2.eng.time,MSSN2.eng.Gen5)
+hold on
+plot(MSSN2.eng.time,MSSN2.eng.Gen6)
+hold on
+plot(MSSN2.eng.time,MSSN2.eng.Gen7)
+hold on
+plot(MSSN2.eng.time,MSSN2.eng.Gen8)
+end
+axis([0,MSSN2.eng.time(end),0,1.1])
+xlabel('Time (Sec)')
+title('Generator Status')
+%{
+h.addTab('Pack');
+axes('Parent',h.getComponentAt(7));
+plot(MSSN2.eng.time,MSSN2.eng.pack)
+axis([0,MSSN2.eng.time(end),0,1.1])
+title('Pack')
+xlabel('Time (Sec)')
+
+h.addTab('Landing Gear');
+axes('Parent',h.getComponentAt(8));
+plot(MSSN2.hyd.time,MSSN2.hyd.lndgr)
+axis([0,MSSN2.hyd.time(end),0,1.1])
+title('Landing Gear')
+xlabel('Time (Sec)')
+
+h.addTab('Flaps');
+axes('Parent',h.getComponentAt(9));
+plot(MSSN2.el.time,MSSN2.el.flaps)
+axis([0,MSSN2.el.time(end),0,1.1*max(MSSN2.el.flaps)])
+title('Flaps')
+xlabel('Time (Sec)')
+ylabel('Angle [Deg]')
+
+h.addTab('NavCom');
+axes('Parent',h.getComponentAt(10));
+plot(MSSN2.el.time,MSSN2.el.navcom)
+axis([0,MSSN2.el.time(end),0,1.1])
+title('NavCom')
+xlabel('Time (Sec)')
+
+h.addTab('AutoPilot');
+axes('Parent',h.getComponentAt(11));
+plot(MSSN2.el.time,MSSN2.el.autop)
+axis([0,MSSN2.el.time(end),0,1.1])
+title('Autopilot')
+xlabel('Time (Sec)')
+
+h.addTab('Taxi Light');
+axes('Parent',h.getComponentAt(12));
+plot(MSSN2.el.time,MSSN2.el.taxilit)
+axis([0,MSSN2.el.time(end),0,1.1])
+title('Taxi Light')
+xlabel('Time (Sec)')
+
+h.addTab('Landing Light');
+axes('Parent',h.getComponentAt(13));
+plot(MSSN2.el.time,MSSN2.el.landinglit)
+axis([0,MSSN2.el.time(end),0,1.1])
+title('Landing Light')
+xlabel('Time (Sec)')
+
+h.addTab('Pressure');
+axes('Parent',h.getComponentAt(14));
+plot(MSSN2.pnu.time,MSSN2.pnu.pres)
+axis([0,MSSN2.pnu.time(end),0,1.1])
+title('Pressure')
+xlabel('Time (Sec)')
+
+h.addTab('State');
+axes('Parent',h.getComponentAt(15));
+plot(MSSN2.gen.time,MSSN2.gen.state)
+axis([0,MSSN2.gen.time(end),0,1.1*max(MSSN2.gen.state)])
+title('State')
+xlabel('Time (Sec)')
+%}
+    elseif i==3;
+MSSN3 = MissionBuild(M.phaselist,M.startuparr,M.taxiarr,M.takeoffarr,M.climbarr,M.cruisearr,...
+    M.descentarr,M.loiterarr,M.approacharr,M.landingarr,M.shutdownarr,M.genstrct);
+assignin('base','MSSN3',MSSN3);
+MSSN3=evalin('base','MSSN3');
+
+g.addTab(BatchArray{i});
+h=GAccordion (g.getComponentAt(3));
+h.addTab('Altitude');
+axes('Parent',h.getComponentAt(1));
+plot(MSSN3.cond.time,MSSN3.cond.alt)
+axis([0,MSSN3.cond.time(end),0,1.1*max(MSSN3.cond.alt)])
+ylabel('Feet')
+xlabel('Time (Sec)')
+title('Altitude')
+
+h.addTab('Mach');
+axes('Parent',h.getComponentAt(2));
+plot(MSSN3.cond.time,MSSN3.cond.mach)
+axis([0,MSSN3.cond.time(end),0,1.1*max(MSSN3.cond.mach)])
+title('Mach')
+xlabel('Time (Sec)')
+
+h.addTab('APU');
+axes('Parent',h.getComponentAt(3));
+plot(MSSN3.eng.time,MSSN3.eng.apu)
+axis([0,MSSN3.eng.time(end),0,1.1])
+xlabel('Time (Sec)')
+title('APU')
+
+h.addTab('Engine Status');
+axes('Parent',h.getComponentAt(4));
+if isfield(MSSN3.eng,'Eng3')==0;
+plot(MSSN3.eng.time,MSSN3.eng.Eng1)
+hold on
+plot(MSSN3.eng.time,MSSN3.eng.Eng2)
+elseif isfield(MSSN3.eng,'Eng3')==1;
+ plot(MSSN3.eng.time,MSSN3.eng.Eng1)
+hold on
+plot(MSSN3.eng.time,MSSN3.eng.Eng2)
+hold on
+plot(MSSN3.eng.time,MSSN3.eng.Eng3)
+hold on
+plot(MSSN3.eng.time,MSSN3.eng.Eng4)
+end
+axis([0,MSSN3.eng.time(end),0,1.1])
+xlabel('Time (Sec)')
+title('Engine')
+
+h.addTab('Engine Thrust');
+axes('Parent',h.getComponentAt(5));
+if isfield(MSSN3.eng,'Eng3')==0;
+plot(MSSN3.eng.time,MSSN3.eng.EngThrust1)
+hold on
+plot(MSSN3.eng.time,MSSN3.eng.EngThrust2)
+elseif isfield(MSSN3.eng,'Eng3')==1;
+ plot(MSSN3.eng.time,MSSN3.eng.EngThrust1)
+hold on
+plot(MSSN3.eng.time,MSSN3.eng.EngThrust2)
+hold on
+plot(MSSN3.eng.time,MSSN3.eng.EngThrust3)
+hold on
+plot(MSSN3.eng.time,MSSN3.eng.EngThrust4)
+end
+axis([0,MSSN3.eng.time(end),0,1.1*max(MSSN3.eng.EngThrust1)])
+xlabel('Time (Sec)')
+ylabel('Thrust kN')
+title('Engine Thrust')
+
+h.addTab('Generators');
+axes('Parent',h.getComponentAt(6));
+if isfield(MSSN3.eng,'Gen5')==0;
+plot(MSSN3.eng.time,MSSN3.eng.Gen1)
+hold on
+plot(MSSN3.eng.time,MSSN3.eng.Gen2)
+hold on
+plot(MSSN3.eng.time,MSSN3.eng.Gen3)
+hold on
+plot(MSSN3.eng.time,MSSN3.eng.Gen4)
+elseif isfield(MSSN3.eng,'Gen5')==1;
+plot(MSSN3.eng.time,MSSN3.eng.Gen1)
+hold on
+plot(MSSN3.eng.time,MSSN3.eng.Gen2)
+hold on
+plot(MSSN3.eng.time,MSSN3.eng.Gen3)
+hold on
+plot(MSSN3.eng.time,MSSN3.eng.Gen4)
+hold on
+plot(MSSN3.eng.time,MSSN3.eng.Gen5)
+hold on
+plot(MSSN3.eng.time,MSSN3.eng.Gen6)
+hold on
+plot(MSSN3.eng.time,MSSN3.eng.Gen7)
+hold on
+plot(MSSN3.eng.time,MSSN3.eng.Gen8)
+end
+axis([0,MSSN3.eng.time(end),0,1.1])
+xlabel('Time (Sec)')
+title('Generator Status')
+%{
+h.addTab('Pack');
+axes('Parent',h.getComponentAt(7));
+plot(MSSN3.eng.time,MSSN3.eng.pack)
+axis([0,MSSN3.eng.time(end),0,1.1])
+title('Pack')
+xlabel('Time (Sec)')
+
+h.addTab('Landing Gear');
+axes('Parent',h.getComponentAt(8));
+plot(MSSN3.hyd.time,MSSN3.hyd.lndgr)
+axis([0,MSSN3.hyd.time(end),0,1.1])
+title('Landing Gear')
+xlabel('Time (Sec)')
+
+h.addTab('Flaps');
+axes('Parent',h.getComponentAt(9));
+plot(MSSN3.el.time,MSSN3.el.flaps)
+axis([0,MSSN3.el.time(end),0,1.1*max(MSSN3.el.flaps)])
+title('Flaps')
+xlabel('Time (Sec)')
+ylabel('Angle [Deg]')
+
+h.addTab('NavCom');
+axes('Parent',h.getComponentAt(10));
+plot(MSSN3.el.time,MSSN3.el.navcom)
+axis([0,MSSN3.el.time(end),0,1.1])
+title('NavCom')
+xlabel('Time (Sec)')
+
+h.addTab('AutoPilot');
+axes('Parent',h.getComponentAt(11));
+plot(MSSN3.el.time,MSSN3.el.autop)
+axis([0,MSSN3.el.time(end),0,1.1])
+title('Autopilot')
+xlabel('Time (Sec)')
+
+h.addTab('Taxi Light');
+axes('Parent',h.getComponentAt(12));
+plot(MSSN3.el.time,MSSN3.el.taxilit)
+axis([0,MSSN3.el.time(end),0,1.1])
+title('Taxi Light')
+xlabel('Time (Sec)')
+
+h.addTab('Landing Light');
+axes('Parent',h.getComponentAt(13));
+plot(MSSN3.el.time,MSSN3.el.landinglit)
+axis([0,MSSN3.el.time(end),0,1.1])
+title('Landing Light')
+xlabel('Time (Sec)')
+
+h.addTab('Pressure');
+axes('Parent',h.getComponentAt(14));
+plot(MSSN3.pnu.time,MSSN3.pnu.pres)
+axis([0,MSSN3.pnu.time(end),0,1.1])
+title('Pressure')
+xlabel('Time (Sec)')
+
+h.addTab('State');
+axes('Parent',h.getComponentAt(15));
+plot(MSSN3.gen.time,MSSN3.gen.state)
+axis([0,MSSN3.gen.time(end),0,1.1*max(MSSN3.gen.state)])
+title('State')
+xlabel('Time (Sec)')
+%}
+    elseif i==4;
+MSSN4 = MissionBuild(M.phaselist,M.startuparr,M.taxiarr,M.takeoffarr,M.climbarr,M.cruisearr,...
+    M.descentarr,M.loiterarr,M.approacharr,M.landingarr,M.shutdownarr,M.genstrct);
+assignin('base','MSSN4',MSSN4);
+MSSN4=evalin('base','MSSN4');
+
+g.addTab(BatchArray{i});
+h=GAccordion (g.getComponentAt(4));
+h.addTab('Altitude');
+axes('Parent',h.getComponentAt(1));
+plot(MSSN4.cond.time,MSSN4.cond.alt)
+axis([0,MSSN4.cond.time(end),0,1.1*max(MSSN4.cond.alt)])
+ylabel('Feet')
+xlabel('Time (Sec)')
+title('Altitude')
+
+h.addTab('Mach');
+axes('Parent',h.getComponentAt(2));
+plot(MSSN4.cond.time,MSSN4.cond.mach)
+axis([0,MSSN4.cond.time(end),0,1.1*max(MSSN4.cond.mach)])
+title('Mach')
+xlabel('Time (Sec)')
+
+h.addTab('APU');
+axes('Parent',h.getComponentAt(3));
+plot(MSSN4.eng.time,MSSN4.eng.apu)
+axis([0,MSSN4.eng.time(end),0,1.1])
+xlabel('Time (Sec)')
+title('APU')
+
+h.addTab('Engine Status');
+axes('Parent',h.getComponentAt(4));
+if isfield(MSSN4.eng,'Eng3')==0;
+plot(MSSN4.eng.time,MSSN4.eng.Eng1)
+hold on
+plot(MSSN4.eng.time,MSSN4.eng.Eng2)
+elseif isfield(MSSN4.eng,'Eng3')==1;
+ plot(MSSN4.eng.time,MSSN4.eng.Eng1)
+hold on
+plot(MSSN4.eng.time,MSSN4.eng.Eng2)
+hold on
+plot(MSSN4.eng.time,MSSN4.eng.Eng3)
+hold on
+plot(MSSN4.eng.time,MSSN4.eng.Eng4)
+end
+axis([0,MSSN4.eng.time(end),0,1.1])
+xlabel('Time (Sec)')
+title('Engine')
+
+h.addTab('Engine Thrust');
+axes('Parent',h.getComponentAt(5));
+if isfield(MSSN4.eng,'Eng3')==0;
+plot(MSSN4.eng.time,MSSN4.eng.EngThrust1)
+hold on
+plot(MSSN4.eng.time,MSSN4.eng.EngThrust2)
+elseif isfield(MSSN4.eng,'Eng3')==1;
+ plot(MSSN4.eng.time,MSSN4.eng.EngThrust1)
+hold on
+plot(MSSN4.eng.time,MSSN4.eng.EngThrust2)
+hold on
+plot(MSSN4.eng.time,MSSN4.eng.EngThrust3)
+hold on
+plot(MSSN4.eng.time,MSSN4.eng.EngThrust4)
+end
+axis([0,MSSN4.eng.time(end),0,1.1*max(MSSN4.eng.EngThrust1)])
+xlabel('Time (Sec)')
+ylabel('Thrust kN')
+title('Engine Thrust')
+
+h.addTab('Generators');
+axes('Parent',h.getComponentAt(6));
+if isfield(MSSN4.eng,'Gen5')==0;
+plot(MSSN4.eng.time,MSSN4.eng.Gen1)
+hold on
+plot(MSSN4.eng.time,MSSN4.eng.Gen2)
+hold on
+plot(MSSN4.eng.time,MSSN4.eng.Gen3)
+hold on
+plot(MSSN4.eng.time,MSSN4.eng.Gen4)
+elseif isfield(MSSN4.eng,'Gen5')==1;
+plot(MSSN4.eng.time,MSSN4.eng.Gen1)
+hold on
+plot(MSSN4.eng.time,MSSN4.eng.Gen2)
+hold on
+plot(MSSN4.eng.time,MSSN4.eng.Gen3)
+hold on
+plot(MSSN4.eng.time,MSSN4.eng.Gen4)
+hold on
+plot(MSSN4.eng.time,MSSN4.eng.Gen5)
+hold on
+plot(MSSN4.eng.time,MSSN4.eng.Gen6)
+hold on
+plot(MSSN4.eng.time,MSSN4.eng.Gen7)
+hold on
+plot(MSSN4.eng.time,MSSN4.eng.Gen8)
+end
+axis([0,MSSN4.eng.time(end),0,1.1])
+xlabel('Time (Sec)')
+title('Generator Status')
+%{
+h.addTab('Pack');
+axes('Parent',h.getComponentAt(7));
+plot(MSSN4.eng.time,MSSN4.eng.pack)
+axis([0,MSSN4.eng.time(end),0,1.1])
+title('Pack')
+xlabel('Time (Sec)')
+
+h.addTab('Landing Gear');
+axes('Parent',h.getComponentAt(8));
+plot(MSSN4.hyd.time,MSSN4.hyd.lndgr)
+axis([0,MSSN4.hyd.time(end),0,1.1])
+title('Landing Gear')
+xlabel('Time (Sec)')
+
+h.addTab('Flaps');
+axes('Parent',h.getComponentAt(9));
+plot(MSSN4.el.time,MSSN4.el.flaps)
+axis([0,MSSN4.el.time(end),0,1.1*max(MSSN4.el.flaps)])
+title('Flaps')
+xlabel('Time (Sec)')
+ylabel('Angle [Deg]')
+
+h.addTab('NavCom');
+axes('Parent',h.getComponentAt(10));
+plot(MSSN4.el.time,MSSN4.el.navcom)
+axis([0,MSSN4.el.time(end),0,1.1])
+title('NavCom')
+xlabel('Time (Sec)')
+
+h.addTab('AutoPilot');
+axes('Parent',h.getComponentAt(11));
+plot(MSSN4.el.time,MSSN4.el.autop)
+axis([0,MSSN4.el.time(end),0,1.1])
+title('Autopilot')
+xlabel('Time (Sec)')
+
+h.addTab('Taxi Light');
+axes('Parent',h.getComponentAt(12));
+plot(MSSN4.el.time,MSSN4.el.taxilit)
+axis([0,MSSN4.el.time(end),0,1.1])
+title('Taxi Light')
+xlabel('Time (Sec)')
+
+h.addTab('Landing Light');
+axes('Parent',h.getComponentAt(13));
+plot(MSSN4.el.time,MSSN4.el.landinglit)
+axis([0,MSSN4.el.time(end),0,1.1])
+title('Landing Light')
+xlabel('Time (Sec)')
+
+h.addTab('Pressure');
+axes('Parent',h.getComponentAt(14));
+plot(MSSN4.pnu.time,MSSN4.pnu.pres)
+axis([0,MSSN4.pnu.time(end),0,1.1])
+title('Pressure')
+xlabel('Time (Sec)')
+
+h.addTab('State');
+axes('Parent',h.getComponentAt(15));
+plot(MSSN4.gen.time,MSSN4.gen.state)
+axis([0,MSSN4.gen.time(end),0,1.1*max(MSSN4.gen.state)])
+title('State')
+xlabel('Time (Sec)')
+%}
+elseif i==5;
+MSSN5 = MissionBuild(M.phaselist,M.startuparr,M.taxiarr,M.takeoffarr,M.climbarr,M.cruisearr,...
+    M.descentarr,M.loiterarr,M.approacharr,M.landingarr,M.shutdownarr,M.genstrct);
+assignin('base','MSSN5',MSSN5);
+MSSN5=evalin('base','MSSN5');
+
+g.addTab(BatchArray{i});
+h=GAccordion (g.getComponentAt(5));
+h.addTab('Altitude');
+axes('Parent',h.getComponentAt(1));
+plot(MSSN5.cond.time,MSSN5.cond.alt)
+axis([0,MSSN5.cond.time(end),0,1.1*max(MSSN5.cond.alt)])
+ylabel('Feet')
+xlabel('Time (Sec)')
+title('Altitude')
+
+h.addTab('Mach');
+axes('Parent',h.getComponentAt(2));
+plot(MSSN5.cond.time,MSSN5.cond.mach)
+axis([0,MSSN5.cond.time(end),0,1.1*max(MSSN5.cond.mach)])
+title('Mach')
+xlabel('Time (Sec)')
+
+h.addTab('APU');
+axes('Parent',h.getComponentAt(3));
+plot(MSSN5.eng.time,MSSN5.eng.apu)
+axis([0,MSSN5.eng.time(end),0,1.1])
+xlabel('Time (Sec)')
+title('APU')
+
+h.addTab('Engine Status');
+axes('Parent',h.getComponentAt(4));
+if isfield(MSSN5.eng,'Eng3')==0;
+plot(MSSN5.eng.time,MSSN5.eng.Eng1)
+hold on
+plot(MSSN5.eng.time,MSSN5.eng.Eng2)
+elseif isfield(MSSN5.eng,'Eng3')==1;
+ plot(MSSN5.eng.time,MSSN5.eng.Eng1)
+hold on
+plot(MSSN5.eng.time,MSSN5.eng.Eng2)
+hold on
+plot(MSSN5.eng.time,MSSN5.eng.Eng3)
+hold on
+plot(MSSN5.eng.time,MSSN5.eng.Eng4)
+end
+axis([0,MSSN5.eng.time(end),0,1.1])
+xlabel('Time (Sec)')
+title('Engine')
+
+h.addTab('Engine Thrust');
+axes('Parent',h.getComponentAt(5));
+if isfield(MSSN5.eng,'Eng3')==0;
+plot(MSSN5.eng.time,MSSN5.eng.EngThrust1)
+hold on
+plot(MSSN5.eng.time,MSSN5.eng.EngThrust2)
+elseif isfield(MSSN5.eng,'Eng3')==1;
+ plot(MSSN5.eng.time,MSSN5.eng.EngThrust1)
+hold on
+plot(MSSN5.eng.time,MSSN5.eng.EngThrust2)
+hold on
+plot(MSSN5.eng.time,MSSN5.eng.EngThrust3)
+hold on
+plot(MSSN5.eng.time,MSSN5.eng.EngThrust4)
+end
+axis([0,MSSN5.eng.time(end),0,1.1*max(MSSN5.eng.EngThrust1)])
+xlabel('Time (Sec)')
+ylabel('Thrust kN')
+title('Engine Thrust')
+
+h.addTab('Generators');
+axes('Parent',h.getComponentAt(6));
+if isfield(MSSN5.eng,'Gen5')==0;
+plot(MSSN5.eng.time,MSSN5.eng.Gen1)
+hold on
+plot(MSSN5.eng.time,MSSN5.eng.Gen2)
+hold on
+plot(MSSN5.eng.time,MSSN5.eng.Gen3)
+hold on
+plot(MSSN5.eng.time,MSSN5.eng.Gen4)
+elseif isfield(MSSN5.eng,'Gen5')==1;
+plot(MSSN5.eng.time,MSSN5.eng.Gen1)
+hold on
+plot(MSSN5.eng.time,MSSN5.eng.Gen2)
+hold on
+plot(MSSN5.eng.time,MSSN5.eng.Gen3)
+hold on
+plot(MSSN5.eng.time,MSSN5.eng.Gen4)
+hold on
+plot(MSSN5.eng.time,MSSN5.eng.Gen5)
+hold on
+plot(MSSN5.eng.time,MSSN5.eng.Gen6)
+hold on
+plot(MSSN5.eng.time,MSSN5.eng.Gen7)
+hold on
+plot(MSSN5.eng.time,MSSN5.eng.Gen8)
+end
+axis([0,MSSN5.eng.time(end),0,1.1])
+xlabel('Time (Sec)')
+title('Generator Status')
+%{
+h.addTab('Pack');
+axes('Parent',h.getComponentAt(7));
+plot(MSSN5.eng.time,MSSN5.eng.pack)
+axis([0,MSSN5.eng.time(end),0,1.1])
+title('Pack')
+xlabel('Time (Sec)')
+
+h.addTab('Landing Gear');
+axes('Parent',h.getComponentAt(8));
+plot(MSSN5.hyd.time,MSSN5.hyd.lndgr)
+axis([0,MSSN5.hyd.time(end),0,1.1])
+title('Landing Gear')
+xlabel('Time (Sec)')
+
+h.addTab('Flaps');
+axes('Parent',h.getComponentAt(9));
+plot(MSSN5.el.time,MSSN5.el.flaps)
+axis([0,MSSN5.el.time(end),0,1.1*max(MSSN5.el.flaps)])
+title('Flaps')
+xlabel('Time (Sec)')
+ylabel('Angle [Deg]')
+
+h.addTab('NavCom');
+axes('Parent',h.getComponentAt(10));
+plot(MSSN5.el.time,MSSN5.el.navcom)
+axis([0,MSSN5.el.time(end),0,1.1])
+title('NavCom')
+xlabel('Time (Sec)')
+
+h.addTab('AutoPilot');
+axes('Parent',h.getComponentAt(11));
+plot(MSSN5.el.time,MSSN5.el.autop)
+axis([0,MSSN5.el.time(end),0,1.1])
+title('Autopilot')
+xlabel('Time (Sec)')
+
+h.addTab('Taxi Light');
+axes('Parent',h.getComponentAt(12));
+plot(MSSN5.el.time,MSSN5.el.taxilit)
+axis([0,MSSN5.el.time(end),0,1.1])
+title('Taxi Light')
+xlabel('Time (Sec)')
+
+h.addTab('Landing Light');
+axes('Parent',h.getComponentAt(13));
+plot(MSSN5.el.time,MSSN5.el.landinglit)
+axis([0,MSSN5.el.time(end),0,1.1])
+title('Landing Light')
+xlabel('Time (Sec)')
+
+h.addTab('Pressure');
+axes('Parent',h.getComponentAt(14));
+plot(MSSN5.pnu.time,MSSN5.pnu.pres)
+axis([0,MSSN5.pnu.time(end),0,1.1])
+title('Pressure')
+xlabel('Time (Sec)')
+
+h.addTab('State');
+axes('Parent',h.getComponentAt(15));
+plot(MSSN5.gen.time,MSSN5.gen.state)
+axis([0,MSSN5.gen.time(end),0,1.1*max(MSSN5.gen.state)])
+title('State')
+xlabel('Time (Sec)')
+%}
+    end
 guidata(hObject, handles);
-    axes(handles.MSSNPLT1)
-       
-        plot(MSSN1.cond.time,MSSN1.cond.alt)
-        axis([0 MSSN1.cond.time(end) -500 1.1*max(MSSN1.cond.alt)])
+
+
+
+
+
+
+
+
+        
 
 end
 

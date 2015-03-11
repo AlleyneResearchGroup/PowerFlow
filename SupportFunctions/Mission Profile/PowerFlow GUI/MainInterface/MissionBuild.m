@@ -89,7 +89,7 @@ for i = 1:N_mssnphase(1)
     elseif strcmp(phaselist(i),'Descent') == 1
         
 
-climbNo = sum(strcmp(phaselist,'Climb'))
+climbNo = sum(strcmp(phaselist,'Climb'));
 
    disp('descent')
             j = desc_i;

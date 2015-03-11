@@ -171,7 +171,7 @@ for i=1:N_GEN
     Gen(i)=eval(['[handles.MSSN.eng.Gen' num2str(i) '(eng_time_index)];']);
 end
 Variables1={'Mission Phase';'Altitude (ft)';'Mach';'Flaps (Deg)';'APU';'Pack';'Bleed';'NavCom';'Autop';...
-    'Taxilight';'Landing Light';'Landing Gear';'Pressure'}
+    'Taxilight';'Landing Light';'Landing Gear';'Pressure'};
 
 Values1_2={APU;Pack;Bleed;Navcom;Autop;Taxilit;Landinglit;...
     Landinggear;Pressure};
