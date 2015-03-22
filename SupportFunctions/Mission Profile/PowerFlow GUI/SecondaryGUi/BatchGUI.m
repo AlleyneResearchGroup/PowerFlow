@@ -945,7 +945,7 @@ for i = 1:N
     Batch(i,:) = cellstr(A);
 end
 if B == 1
- %   save(BatchFile,'Batch')
+   %save(BatchArray,'Batch')
 end
 
 assignin('base','BatchArray',Batch);
