@@ -1,8 +1,8 @@
-load('SAEmissionProfile.mat')
+load('2013_03_22_SAE_data2.mat')
 j=0;
 h=subplot(2,1,1); hold on;
 
-for i = 2:2:26
+for i = 1:2:21
     j=j+1
     if mod(j,2)==1
     patch([MSSN.gen.time(i) MSSN.gen.time(i+1) MSSN.gen.time(i+1) MSSN.gen.time(i)]/3600,[0 0 60000 60000],[.95 .95 .95], 'EdgeColor','none')
@@ -15,7 +15,7 @@ set(gca,'YTick',[0:10:50])
 set(gca, 'Layer', 'top')
 xlabel('Mission Time [Hr.]')
 ylabel('Altitude [1000 x Ft.]')
-axis([0 36960/3600 0 56000/1000])
+axis([0 36960/(2*3600) 0 56000/1000])
 r=550*MSSN.eng.EngThrust1/1000
 a=plot (MSSN.cond.time/3600, MSSN.cond.alt/1000,'linewidth',2,'color','k')
 b=plot(MSSN.eng.time/3600,r ,'k-.','linewidth',2)
