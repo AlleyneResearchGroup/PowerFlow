@@ -22,7 +22,7 @@ function varargout = Main(varargin)
 
 % Edit the above text to modify the response to help Main
 
-% Last Modified by GUIDE v2.5 06-Mar-2015 00:28:56
+% Last Modified by GUIDE v2.5 30-Mar-2015 14:58:37
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -84,6 +84,142 @@ clear handles.MSSN
 
 BatchArray = evalin('base','BatchArray');
 N = length(BatchArray);
+L=0;
+for i = 1:N
+   L=L+1; 
+   M=load(BatchArray{i});
+   M = M.M;
+   assignin('base','M',M);
+   altindex(hObject,handles)
+   assignin('base','M',M);
+    
+eval(['MSSN' num2str(i) '= MissionBuild(M.phaselist,M.startuparr,M.taxiarr,M.takeoffarr,M.climbarr,M.cruisearr, M.descentarr,M.loiterarr,M.approacharr,M.landingarr,M.shutdownarr,M.genstrct)']);
+MSSN_str=horzcat('MSSN',num2str(L));
+
+assignin('base',MSSN_str,eval(['MSSN' num2str(i)]));
+
+guidata(hObject, handles);
+end
+
+
+% --- Executes on button press in BuildBatch.
+function BuildBatch_Callback(hObject, eventdata, handles)
+% hObject    handle to BuildBatch (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+%[BatchFile] = uiputfile('Batch1.mat','Save Batch name');
+N = str2double(get(handles.NumMSSN, 'string'));
+Batch = cell(N,1);
+
+B=1;
+for i = 1:N
+    A = uigetfile('*.mat','Select the input file');
+    if strcmp(num2str(A),'0') == 1
+        B=0;
+        break
+    end
+    Batch(i,:) = cellstr(A);
+end
+if B == 1
+   %save('Batch','Batch')
+end
+
+assignin('base','BatchArray',Batch);
+
+function NumMSSN_Callback(hObject, eventdata, handles)
+% hObject    handle to NumMSSN (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of NumMSSN as text
+%        str2double(get(hObject,'String')) returns contents of NumMSSN as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function NumMSSN_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to NumMSSN (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+function altindex(hObject,handles)
+% this function indexes the altitudes so that the right altitude is used
+% for each phase.  the altitudes or simply kept in a standard array such as
+% the following [0, 10000, 35000, 3000, 0].  Each phase must know which
+% altitude or altitudes to operate at, hence each gets indices
+M=evalin('base','M');
+MSSNlist = M.phaselist
+
+j = 1;
+N_mssnphase = size(MSSNlist)
+M.genstrct.alt.ind.ST_ALT_i = []; %Startup altitude index
+M.genstrct.alt.ind.TA_ALT_i = []; %Taxi altitude index
+M.genstrct.alt.ind.TO_ALT_i = []; %Take Off altitude index
+M.genstrct.alt.ind.CL1_ALT_i = []; %Climb Starting altitude index
+M.genstrct.alt.ind.CL2_ALT_i = []; %Climb final altitude index
+M.genstrct.alt.ind.CR_ALT_i = []; %Cruise altitude index
+M.genstrct.alt.ind.DE1_ALT_i = []; %Descent Starting altitude index
+M.genstrct.alt.ind.DE2_ALT_i = []; %Descent final altitude index
+M.genstrct.alt.ind.LO_ALT_i = []; %Loiter altitude index
+M.genstrct.alt.ind.AP1_ALT_i = []; %Approach Starting altitude index
+M.genstrct.alt.ind.AP2_ALT_i = []; %Approach final altitude index (also 
+    % serves as landing altitude index
+M.genstrct.alt.ind.SD_ALT_i = []; %Shutdown altitude index
+for i = 1:N_mssnphase(1)
+    if strncmp(MSSNlist(i),'Startup',3) == 1
+        M.genstrct.alt.ind.ST_ALT_i = [M.genstrct.alt.ind.ST_ALT_i j];
+    elseif strncmp(MSSNlist(i),'Taxi',3) == 1
+        M.genstrct.alt.ind.TA_ALT_i = [M.genstrct.alt.ind.TA_ALT_i j];
+    elseif strncmp(MSSNlist(i),'Takeoff',3) == 1
+        M.genstrct.alt.ind.TO_ALT_i = [M.genstrct.alt.ind.TO_ALT_i j];
+    elseif strncmp(MSSNlist(i),'Climb',3) == 1
+        M.genstrct.alt.ind.CL1_ALT_i = [M.genstrct.alt.ind.CL1_ALT_i j];
+        M.genstrct.alt.ind.CL2_ALT_i = [M.genstrct.alt.ind.CL2_ALT_i j+1];
+        j = j+1;
+    elseif strncmp(MSSNlist(i),'Cruise',3) == 1
+        M.genstrct.alt.ind.CR_ALT_i = [M.genstrct.alt.ind.CR_ALT_i j];
+    elseif strncmp(MSSNlist(i),'Descent',3) == 1
+        M.genstrct.alt.ind.DE1_ALT_i = [M.genstrct.alt.ind.DE1_ALT_i j];
+        M.genstrct.alt.ind.DE2_ALT_i = [M.genstrct.alt.ind.DE2_ALT_i j+1];
+        j = j+1;
+    elseif strncmp(MSSNlist(i),'Loiter',3) == 1
+        M.genstrct.alt.ind.LO_ALT_i = [M.genstrct.alt.ind.LO_ALT_i j];
+    elseif strncmp(MSSNlist(i),'Approach',3) == 1
+        M.genstrct.alt.ind.AP1_ALT_i = [M.genstrct.alt.ind.AP1_ALT_i j];
+        M.genstrct.alt.ind.AP2_ALT_i = [M.genstrct.alt.ind.AP2_ALT_i j+1];
+        j = j+1;
+    elseif strncmp(MSSNlist(i),'Shutdown',3) == 1
+        M.genstrct.alt.ind.SD_ALT_i = [M.genstrct.alt.ind.SD_ALT_i j];
+    end
+   
+end
+handles.M = M;
+guidata(hObject,handles)
+
+
+
+
+% --- Executes on button press in SaveBatch.
+function SaveBatch_Callback(hObject, eventdata, handles)
+% hObject    handle to SaveBatch (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+Batch=evalin('base','BatchArray');
+uisave('Batch','Batch')
+
+
+% --- Executes on button press in View.
+function View_Callback(hObject, eventdata, handles)
+% hObject    handle to View (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+BatchArray = evalin('base','BatchArray');
+N = length(BatchArray);
 GTool.setTheme ('blue') ;
 g=GTabContainer(figure(),'top') ;
 for i = 1:N
@@ -94,9 +230,9 @@ for i = 1:N
     assignin('base','M',M);
     
     if i==1
-MSSN1 = MissionBuild(M.phaselist,M.startuparr,M.taxiarr,M.takeoffarr,M.climbarr,M.cruisearr,...
-    M.descentarr,M.loiterarr,M.approacharr,M.landingarr,M.shutdownarr,M.genstrct);
-assignin('base','MSSN1',MSSN1);
+      
+MSSN1=evalin('base','MSSN1');
+
 g.addTab(BatchArray{i});
 h=GAccordion (g.getComponentAt(1));
 h.addTab('Altitude');
@@ -256,9 +392,8 @@ title('State')
 xlabel('Time (Sec)')
 %}
     elseif i==2
-MSSN2 = MissionBuild(M.phaselist,M.startuparr,M.taxiarr,M.takeoffarr,M.climbarr,M.cruisearr,...
-    M.descentarr,M.loiterarr,M.approacharr,M.landingarr,M.shutdownarr,M.genstrct);
-assignin('base','MSSN2',MSSN2);
+
+
 MSSN2=evalin('base','MSSN2');
 
 g.addTab(BatchArray{i});
@@ -420,9 +555,7 @@ title('State')
 xlabel('Time (Sec)')
 %}
     elseif i==3;
-MSSN3 = MissionBuild(M.phaselist,M.startuparr,M.taxiarr,M.takeoffarr,M.climbarr,M.cruisearr,...
-    M.descentarr,M.loiterarr,M.approacharr,M.landingarr,M.shutdownarr,M.genstrct);
-assignin('base','MSSN3',MSSN3);
+
 MSSN3=evalin('base','MSSN3');
 
 g.addTab(BatchArray{i});
@@ -584,11 +717,7 @@ title('State')
 xlabel('Time (Sec)')
 %}
     elseif i==4;
-MSSN4 = MissionBuild(M.phaselist,M.startuparr,M.taxiarr,M.takeoffarr,M.climbarr,M.cruisearr,...
-    M.descentarr,M.loiterarr,M.approacharr,M.landingarr,M.shutdownarr,M.genstrct);
-assignin('base','MSSN4',MSSN4);
 MSSN4=evalin('base','MSSN4');
-
 g.addTab(BatchArray{i});
 h=GAccordion (g.getComponentAt(4));
 h.addTab('Altitude');
@@ -748,9 +877,6 @@ title('State')
 xlabel('Time (Sec)')
 %}
 elseif i==5;
-MSSN5 = MissionBuild(M.phaselist,M.startuparr,M.taxiarr,M.takeoffarr,M.climbarr,M.cruisearr,...
-    M.descentarr,M.loiterarr,M.approacharr,M.landingarr,M.shutdownarr,M.genstrct);
-assignin('base','MSSN5',MSSN5);
 MSSN5=evalin('base','MSSN5');
 
 g.addTab(BatchArray{i});
@@ -914,115 +1040,21 @@ xlabel('Time (Sec)')
     end
 guidata(hObject, handles);
 
-
-
-
-
-
-
-
-        
-
 end
 
-
-% --- Executes on button press in BuildBatch.
-function BuildBatch_Callback(hObject, eventdata, handles)
-% hObject    handle to BuildBatch (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-%[BatchFile] = uiputfile('Batch1.mat','Save Batch name');
-N = str2double(get(handles.NumMSSN, 'string'));
-Batch = cell(N,1);
-
-B=1;
-for i = 1:N
-    A = uigetfile('*.mat','Select the input file');
-    if strcmp(num2str(A),'0') == 1
-        B=0;
-        break
-    end
-    Batch(i,:) = cellstr(A);
-end
-if B == 1
-   %save(BatchArray,'Batch')
-end
-
-assignin('base','BatchArray',Batch);
-
-function NumMSSN_Callback(hObject, eventdata, handles)
-% hObject    handle to NumMSSN (see GCBO)
+% --- Executes on button press in radiobutton1.
+function radiobutton1_Callback(hObject, eventdata, handles)
+% hObject    handle to radiobutton1 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of NumMSSN as text
-%        str2double(get(hObject,'String')) returns contents of NumMSSN as a double
+% Hint: get(hObject,'Value') returns toggle state of radiobutton1
 
 
-% --- Executes during object creation, after setting all properties.
-function NumMSSN_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to NumMSSN (see GCBO)
+% --- Executes on button press in Load.
+function Load_Callback(hObject, eventdata, handles)
+% hObject    handle to Load (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
-% handles    empty - handles not created until after all CreateFcns called
-
-% Hint: edit controls usually have a white background on Windows.
-%       See ISPC and COMPUTER.
-if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
-    set(hObject,'BackgroundColor','white');
-end
-
-function altindex(hObject,handles)
-% this function indexes the altitudes so that the right altitude is used
-% for each phase.  the altitudes or simply kept in a standard array such as
-% the following [0, 10000, 35000, 3000, 0].  Each phase must know which
-% altitude or altitudes to operate at, hence each gets indices
-M=evalin('base','M');
-MSSNlist = M.phaselist
-
-j = 1;
-N_mssnphase = size(MSSNlist)
-M.genstrct.alt.ind.ST_ALT_i = []; %Startup altitude index
-M.genstrct.alt.ind.TA_ALT_i = []; %Taxi altitude index
-M.genstrct.alt.ind.TO_ALT_i = []; %Take Off altitude index
-M.genstrct.alt.ind.CL1_ALT_i = []; %Climb Starting altitude index
-M.genstrct.alt.ind.CL2_ALT_i = []; %Climb final altitude index
-M.genstrct.alt.ind.CR_ALT_i = []; %Cruise altitude index
-M.genstrct.alt.ind.DE1_ALT_i = []; %Descent Starting altitude index
-M.genstrct.alt.ind.DE2_ALT_i = []; %Descent final altitude index
-M.genstrct.alt.ind.LO_ALT_i = []; %Loiter altitude index
-M.genstrct.alt.ind.AP1_ALT_i = []; %Approach Starting altitude index
-M.genstrct.alt.ind.AP2_ALT_i = []; %Approach final altitude index (also 
-    % serves as landing altitude index
-M.genstrct.alt.ind.SD_ALT_i = []; %Shutdown altitude index
-for i = 1:N_mssnphase(1)
-    if strncmp(MSSNlist(i),'Startup',3) == 1
-        M.genstrct.alt.ind.ST_ALT_i = [M.genstrct.alt.ind.ST_ALT_i j];
-    elseif strncmp(MSSNlist(i),'Taxi',3) == 1
-        M.genstrct.alt.ind.TA_ALT_i = [M.genstrct.alt.ind.TA_ALT_i j];
-    elseif strncmp(MSSNlist(i),'Takeoff',3) == 1
-        M.genstrct.alt.ind.TO_ALT_i = [M.genstrct.alt.ind.TO_ALT_i j];
-    elseif strncmp(MSSNlist(i),'Climb',3) == 1
-        M.genstrct.alt.ind.CL1_ALT_i = [M.genstrct.alt.ind.CL1_ALT_i j];
-        M.genstrct.alt.ind.CL2_ALT_i = [M.genstrct.alt.ind.CL2_ALT_i j+1];
-        j = j+1;
-    elseif strncmp(MSSNlist(i),'Cruise',3) == 1
-        M.genstrct.alt.ind.CR_ALT_i = [M.genstrct.alt.ind.CR_ALT_i j];
-    elseif strncmp(MSSNlist(i),'Descent',3) == 1
-        M.genstrct.alt.ind.DE1_ALT_i = [M.genstrct.alt.ind.DE1_ALT_i j];
-        M.genstrct.alt.ind.DE2_ALT_i = [M.genstrct.alt.ind.DE2_ALT_i j+1];
-        j = j+1;
-    elseif strncmp(MSSNlist(i),'Loiter',3) == 1
-        M.genstrct.alt.ind.LO_ALT_i = [M.genstrct.alt.ind.LO_ALT_i j];
-    elseif strncmp(MSSNlist(i),'Approach',3) == 1
-        M.genstrct.alt.ind.AP1_ALT_i = [M.genstrct.alt.ind.AP1_ALT_i j];
-        M.genstrct.alt.ind.AP2_ALT_i = [M.genstrct.alt.ind.AP2_ALT_i j+1];
-        j = j+1;
-    elseif strncmp(MSSNlist(i),'Shutdown',3) == 1
-        M.genstrct.alt.ind.SD_ALT_i = [M.genstrct.alt.ind.SD_ALT_i j];
-    end
-   
-end
-handles.M = M;
-guidata(hObject,handles)
-
+% handles    structure with handles and user data (see GUIDATA)
+uiopen('load');
 
