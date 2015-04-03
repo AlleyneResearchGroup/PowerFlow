@@ -788,33 +788,19 @@ function SelectAll_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 if get(handles.SelectAll,'Value')==1
  set(handles.AltitudeButton,'Value',1)
- set(handles.MachButton,'Value',1)
- set(handles.APUButton,'Value',1)
- set(handles.EnginesButton,'Value',1)
- set(handles.EngineThrustButton,'Value',1) 
- set(handles.GenButton,'Value',1)
- set(handles.PackButton,'Value',1)  
- set(handles.LandingGearButton,'Value',1)
- set(handles.FlapButton,'Value',1) 
- set(handles.NavcomButton,'Value',1)
- set(handles.AutopilotButton,'Value',1)
- set(handles.TaxiLightButton,'Value',1)
- set(handles.LandingLightButton,'Value',1) 
- set(handles.PressureButton,'Value',1)
-elseif get(handles.SelectAll,'Value')==0
- set(handles.AltitudeButton,'Value',0)
- set(handles.MachButton,'Value',0)
- set(handles.APUButton,'Value',0)
- set(handles.EnginesButton,'Value',0)
- set(handles.EngineThrustButton,'Value',0) 
- set(handles.GenButton,'Value',0)
- set(handles.PackButton,'Value',0)  
- set(handles.LandingGearButton,'Value',0)
- set(handles.FlapButton,'Value',0) 
- set(handles.NavcomButton,'Value',0)
- set(handles.AutopilotButton,'Value',0)
- set(handles.TaxiLightButton,'Value',0)
- set(handles.LandingLightButton,'Value',0) 
- set(handles.PressureButton,'Value',0)
+ get(handles.MachButton,'Value')==0 && ...
+ get(handles.APUButton,'Value') == 0 
+ get(handles.EnginesButton,'Value')==0 && ...
+        get(handles.EngineThrustButton,'Value') == 0
+    get(handles.GenButton,'Value')==0 && ...
+        get(handles.PackButton,'Value') == 0 && 
+    get(handles.LandingGearButton,'Value')
+        get(handles.FlapButton,'Value') 
+    get(handles.NavcomButton,'Value')
+        get(handles.AutopilotButton,'Value')
+    get(handles.TaxiLightButton,'Value')
+        get(handles.LandingLightButton,'Value') 
+    get(handles.PressureButton,'Value')
+ 
 end
 % Hint: get(hObject,'Value') returns toggle state of SelectAll
