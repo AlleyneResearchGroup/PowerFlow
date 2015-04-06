@@ -387,9 +387,9 @@ if get(handles.EngineThrustButton,'Value')==1
 h.addTab('Engine Thrust');
 axes('Parent',h.getComponentAt(tab));
 if isfield(MSSN.eng,'Eng3')==0;
-plot(MSSN.eng.time,MSSN1.eng.EngThrust1)
+plot(MSSN.eng.time,MSSN.eng.EngThrust1)
 hold on
-plot(MSSN.eng.time,MSSN1.eng.EngThrust2)
+plot(MSSN.eng.time,MSSN.eng.EngThrust2)
 elseif isfield(MSSN1.eng,'Eng3')==1;
  plot(MSSN.eng.time,MSSN.eng.EngThrust1)
 hold on
