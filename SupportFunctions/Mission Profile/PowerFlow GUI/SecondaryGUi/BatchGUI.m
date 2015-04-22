@@ -102,8 +102,138 @@ MSSN_str=horzcat('MSSN',num2str(L));
 
 assignin('base',MSSN_str,eval(['MSSN' num2str(i)]));
 
-guidata(hObject, handles);
+if i==1
+MSSN.gen.time=eval(['MSSN' num2str(i) '.gen.time(1:end)']);
+MSSN.gen.state=eval(['MSSN' num2str(i) '.gen.state(1:end)']);
+MSSN.eng.time=eval(['MSSN' num2str(i) '.eng.time(1:end)']);
+MSSN.eng.apu=eval(['MSSN' num2str(i) '.eng.apu(1:end)']);
+MSSN.eng.apugen=eval(['MSSN' num2str(i) '.eng.apugen(1:end)']);
+MSSN.eng.aputh=eval(['MSSN' num2str(i) '.eng.aputh(1:end)']);
+MSSN.eng.bleed=eval(['MSSN' num2str(i) '.eng.bleed(1:end)']);
+MSSN.eng.pack=eval(['MSSN' num2str(i) '.eng.pack(1:end)']);
+
+if isfield(eval(['MSSN' num2str(i) '.eng']),'Eng3')==0
+   MSSN.eng.Eng1=eval(['MSSN' num2str(i) '.eng.Eng1(1:end)']); 
+   MSSN.eng.Eng2=eval(['MSSN' num2str(i) '.eng.Eng2(1:end)']); 
+   MSSN.eng.Eng3=zeros(1,length(eval(['MSSN' num2str(i) '.eng.time(1:end)']))); 
+   MSSN.eng.Eng4=zeros(1,length(eval(['MSSN' num2str(i) '.eng.time(1:end)']))); 
+   MSSN.eng.Gen1=eval(['MSSN' num2str(i) '.eng.Gen1(1:end)']); 
+   MSSN.eng.Gen2=eval(['MSSN' num2str(i) '.eng.Gen2(1:end)']); 
+   MSSN.eng.Gen3=eval(['MSSN' num2str(i) '.eng.Gen3(1:end)']); 
+   MSSN.eng.Gen4=eval(['MSSN' num2str(i) '.eng.Gen4(1:end)']); 
+   MSSN.eng.Gen5=zeros(1,length(eval(['MSSN' num2str(i) '.eng.time(1:end)'])));
+   MSSN.eng.Gen6=zeros(1,length(eval(['MSSN' num2str(i) '.eng.time(1:end)']))); 
+   MSSN.eng.Gen7=zeros(1,length(eval(['MSSN' num2str(i) '.eng.time(1:end)']))); 
+   MSSN.eng.Gen8=zeros(1,length(eval(['MSSN' num2str(i) '.eng.time(1:end)']))); 
+   
+elseif isfield(eval(['MSSN' num2str(i) '.eng']),'Eng3')==1;
+   MSSN.eng.Eng1=eval(['MSSN' num2str(i) '.eng.Eng1(1:end)']); 
+   MSSN.eng.Eng2=eval(['MSSN' num2str(i) '.eng.Eng2(1:end)']);
+   MSSN.eng.Eng3=eval(['MSSN' num2str(i) '.eng.Eng3(1:end)']); 
+   MSSN.eng.Eng4=eval(['MSSN' num2str(i) '.eng.Eng4(1:end)']);
+   MSSN.eng.Gen1=eval(['MSSN' num2str(i) '.eng.Gen1(1:end)']); 
+   MSSN.eng.Gen2=eval(['MSSN' num2str(i) '.eng.Gen2(1:end)']); 
+   MSSN.eng.Gen3=eval(['MSSN' num2str(i) '.eng.Gen3(1:end)']); 
+   MSSN.eng.Gen4=eval(['MSSN' num2str(i) '.eng.Gen4(1:end)']);
+   MSSN.eng.Gen5=eval(['MSSN' num2str(i) '.eng.Gen5(1:end)']); 
+   MSSN.eng.Gen6=eval(['MSSN' num2str(i) '.eng.Gen6(1:end)']); 
+   MSSN.eng.Gen7=eval(['MSSN' num2str(i) '.eng.Gen7(1:end)']); 
+   MSSN.eng.Gen8=eval(['MSSN' num2str(i) '.eng.Gen8(1:end)']);
+   
 end
+MSSN.cond.time=eval(['MSSN' num2str(i) '.cond.time(1:end)']);
+MSSN.cond.alt=eval(['MSSN' num2str(i) '.cond.alt(1:end)']);
+MSSN.cond.mach=eval(['MSSN' num2str(i) '.cond.mach(1:end)']);
+MSSN.el.time=eval(['MSSN' num2str(i) '.el.time(1:end)']);
+MSSN.el.navcom=eval(['MSSN' num2str(i) '.el.navcom(1:end)']);
+MSSN.el.autop=eval(['MSSN' num2str(i) '.el.autop(1:end)']);
+MSSN.el.taxilit=eval(['MSSN' num2str(i) '.el.taxilit(1:end)']);
+MSSN.el.landinglit=eval(['MSSN' num2str(i) '.el.landinglit(1:end)']);
+MSSN.el.flaps=eval(['MSSN' num2str(i) '.el.flaps(1:end)']);
+MSSN.hyd.time=eval(['MSSN' num2str(i) '.hyd.time(1:end)']);
+MSSN.hyd.lndgr=eval(['MSSN' num2str(i) '.hyd.lndgr(1:end)']);
+MSSN.pnu.time=eval(['MSSN' num2str(i) '.pnu.time(1:end)']);
+MSSN.pnu.pres=eval(['MSSN' num2str(i) '.pnu.pres(1:end)']);
+else
+
+for j=length(MSSN.gen.time):length(eval(['MSSN' num2str(i) '.gen.time(1:end)']))
+%%%%%% Making all the time go continuously %%%%%%%  
+    if j==1
+eval(['MSSN.gen.time(' num2str(j) ')= MSSN' num2str(i-1) '.gen.time(end)'])   
+eval(['MSSN.eng.time(' num2str(j) ')= MSSN' num2str(i-1) '.eng.time(end)']) 
+eval(['MSSN.cond.time(' num2str(j) ')= MSSN' num2str(i-1) '.cond.time(end)'])   
+eval(['MSSN.el.time(' num2str(j) ')= MSSN' num2str(i-1) '.el.time(end)']) 
+eval(['MSSN.hyd.time(' num2str(j) ')= MSSN' num2str(i-1) '.hyd.time(end)'])   
+eval(['MSSN.pnu.time(' num2str(j) ')= MSSN' num2str(i-1) '.pnu.time(end)']) 
+    else
+eval(['MSSN.gen.time(' num2str(j) ')= MSSN' num2str(i) '.gen.time(' num2str(j-1) ')+MSSN' num2str(i) '.gen.time(' num2str(j) ')'])
+eval(['MSSN.eng.time(' num2str(j) ')= MSSN' num2str(i) '.eng.time(' num2str(j-1) ')+MSSN' num2str(i) '.eng.time(' num2str(j) ')'])
+eval(['MSSN.cond.time(' num2str(j) ')= MSSN' num2str(i) '.cond.time(' num2str(j-1) ')+MSSN' num2str(i) '.cond.time(' num2str(j) ')'])
+eval(['MSSN.el.time(' num2str(j) ')= MSSN' num2str(i) '.el.time(' num2str(j-1) ')+MSSN' num2str(i) '.el.time(' num2str(j) ')'])
+eval(['MSSN.hyd.time(' num2str(j) ')= MSSN' num2str(i) '.hyd.time(' num2str(j-1) ')+MSSN' num2str(i) '.hyd.time(' num2str(j) ')'])
+eval(['MSSN.pnu.time(' num2str(j) ')= MSSN' num2str(i) '.pnu.time(' num2str(j-1) ')+MSSN' num2str(i) '.pnu.time(' num2str(j) ')'])
+
+    end
+end
+
+MSSN.gen.time=horzcat(eval(['MSSN.gen.time(1:end)']),eval(['MSSN' num2str(i) '.gen.time(1:end)']));
+MSSN.gen.state=horzcat(eval(['MSSN.gen.state(1:end)']),eval(['MSSN' num2str(i) '.gen.state(1:end)']));
+MSSN.eng.time=horzcat(eval(['MSSN.eng.time(1:end)']),eval(['MSSN' num2str(i) '.eng.time(1:end)']));
+MSSN.eng.apu=horzcat(eval(['MSSN.eng.apu(1:end)']),eval(['MSSN' num2str(i) '.eng.apu(1:end)']));
+MSSN.eng.apugen=horzcat(eval(['MSSN.eng.apugen(1:end)']),eval(['MSSN' num2str(i) '.eng.apugen(1:end)']));
+MSSN.eng.aputh=horzcat(eval(['MSSN.eng.aputh(1:end)']),eval(['MSSN' num2str(i) '.eng.aputh(1:end)']));
+MSSN.eng.bleed=horzcat(eval(['MSSN.eng.bleed(1:end)']),eval(['MSSN' num2str(i) '.eng.bleed(1:end)']));
+MSSN.eng.pack=horzcat(eval(['MSSN.eng.pack(1:end)']),eval(['MSSN' num2str(i) '.eng.pack(1:end)']));
+
+if isfield(eval(['MSSN' num2str(i) '.eng']),'Eng3')==0
+MSSN.eng.Eng1=horzcat(eval(['MSSN.eng.Eng1(1:end)']),eval(['MSSN' num2str(i) '.eng.Eng1(1:end)']));
+MSSN.eng.Eng2=horzcat(eval(['MSSN.eng.Eng2(1:end)']),eval(['MSSN' num2str(i) '.eng.Eng2(1:end)']));
+MSSN.eng.Eng3=horzcat(eval(['MSSN.eng.Eng3(1:end)']),zeros(1,length(eval(['MSSN' num2str(i) '.eng.time(1:end)']))));
+MSSN.eng.Eng4=horzcat(eval(['MSSN.eng.Eng4(1:end)']),zeros(1,length(eval(['MSSN' num2str(i) '.eng.time(1:end)']))));
+MSSN.eng.Gen1=horzcat(eval(['MSSN.eng.Gen1(1:end)']),eval(['MSSN' num2str(i) '.eng.Gen1(1:end)']));
+MSSN.eng.Gen2=horzcat(eval(['MSSN.eng.Gen2(1:end)']),eval(['MSSN' num2str(i) '.eng.Gen2(1:end)']));
+MSSN.eng.Gen3=horzcat(eval(['MSSN.eng.Gen3(1:end)']),eval(['MSSN' num2str(i) '.eng.Gen3(1:end)']));
+MSSN.eng.Gen4=horzcat(eval(['MSSN.eng.Gen4(1:end)']),eval(['MSSN' num2str(i) '.eng.Gen4(1:end)']));
+MSSN.eng.Gen5=horzcat(eval(['MSSN.eng.Gen5(1:end)']),zeros(1,length(eval(['MSSN' num2str(i) '.eng.time(1:end)']))));
+MSSN.eng.Gen6=horzcat(eval(['MSSN.eng.Gen6(1:end)']),zeros(1,length(eval(['MSSN' num2str(i) '.eng.time(1:end)']))));
+MSSN.eng.Gen7=horzcat(eval(['MSSN.eng.Gen7(1:end)']),zeros(1,length(eval(['MSSN' num2str(i) '.eng.time(1:end)']))));
+MSSN.eng.Gen8=horzcat(eval(['MSSN.eng.Gen8(1:end)']),zeros(1,length(eval(['MSSN' num2str(i) '.eng.time(1:end)']))));
+
+elseif isfield(eval(['MSSN' num2str(i) '.eng']),'Eng3')==1;  
+    MSSN.eng.Eng1=horzcat(eval(['MSSN.eng.Eng1(1:end)']),eval(['MSSN' num2str(i) '.eng.Eng1(1:end)']));
+    MSSN.eng.Eng2=horzcat(eval(['MSSN.eng.Eng2(1:end)']),eval(['MSSN' num2str(i) '.eng.Eng2(1:end)']));
+    MSSN.eng.Eng3=horzcat(eval(['MSSN.eng.Eng3(1:end)']),eval(['MSSN' num2str(i) '.eng.Eng3(1:end)']));
+    MSSN.eng.Eng4=horzcat(eval(['MSSN.eng.Eng4(1:end)']),eval(['MSSN' num2str(i) '.eng.Eng4(1:end)']));
+    MSSN.eng.Gen1=horzcat(eval(['MSSN.eng.Gen1(1:end)']),eval(['MSSN' num2str(i) '.eng.Gen1(1:end)']));
+    MSSN.eng.Gen2=horzcat(eval(['MSSN.eng.Gen2(1:end)']),eval(['MSSN' num2str(i) '.eng.Gen2(1:end)']));
+    MSSN.eng.Gen3=horzcat(eval(['MSSN.eng.Gen3(1:end)']),eval(['MSSN' num2str(i) '.eng.Gen3(1:end)']));
+    MSSN.eng.Gen4=horzcat(eval(['MSSN.eng.Gen4(1:end)']),eval(['MSSN' num2str(i) '.eng.Gen4(1:end)']));
+    MSSN.eng.Gen5=horzcat(eval(['MSSN.eng.Gen5(1:end)']),eval(['MSSN' num2str(i) '.eng.Gen5(1:end)']));
+    MSSN.eng.Gen6=horzcat(eval(['MSSN.eng.Gen6(1:end)']),eval(['MSSN' num2str(i) '.eng.Gen6(1:end)']));
+    MSSN.eng.Gen7=horzcat(eval(['MSSN.eng.Gen7(1:end)']),eval(['MSSN' num2str(i) '.eng.Gen7(1:end)']));
+    MSSN.eng.Gen8=horzcat(eval(['MSSN.eng.Gen8(1:end)']),eval(['MSSN' num2str(i) '.eng.Gen8(1:end)']));
+end
+
+MSSN.cond.time=horzcat(eval(['MSSN.cond.time(1:end)']),eval(['MSSN' num2str(i) '.cond.time(1:end)']));
+MSSN.cond.alt=horzcat(eval(['MSSN.cond.alt(1:end)']),eval(['MSSN' num2str(i) '.cond.alt(1:end)']));
+MSSN.cond.mach=horzcat(eval(['MSSN.cond.mach(1:end)']),eval(['MSSN' num2str(i) '.cond.mach(1:end)']));
+MSSN.el.time=horzcat(eval(['MSSN.el.time(1:end)']),eval(['MSSN' num2str(i) '.el.time(1:end)']));
+MSSN.el.navcom=horzcat(eval(['MSSN.el.navcom(1:end)']),eval(['MSSN' num2str(i) '.el.navcom(1:end)']));
+MSSN.el.autop=horzcat(eval(['MSSN.el.autop(1:end)']),eval(['MSSN' num2str(i) '.el.autop(1:end)']));
+MSSN.el.taxilit=horzcat(eval(['MSSN.el.taxilit(1:end)']),eval(['MSSN' num2str(i) '.el.taxilit(1:end)']));
+MSSN.el.landinglit=horzcat(eval(['MSSN.el.landinglit(1:end)']),eval(['MSSN' num2str(i) '.el.landinglit(1:end)']));
+MSSN.el.flaps=horzcat(eval(['MSSN.el.flaps(1:end)']),eval(['MSSN' num2str(i) '.el.flaps(1:end)']));
+MSSN.hyd.time=horzcat(eval(['MSSN.hyd.time(1:end)']),eval(['MSSN' num2str(i) '.hyd.time(1:end)']));
+MSSN.hyd.lndgr=horzcat(eval(['MSSN.hyd.lndgr(1:end)']),eval(['MSSN' num2str(i) '.hyd.lndgr(1:end)']));
+MSSN.pnu.time=horzcat(eval(['MSSN.pnu.time(1:end)']),eval(['MSSN' num2str(i) '.pnu.time(1:end)']));
+MSSN.pnu.pres=horzcat(eval(['MSSN.pnu.pres(1:end)']),eval(['MSSN' num2str(i) '.pnu.pres(1:end)']));
+end
+
+guidata(hObject, handles);
+assignin('base','MSSN',MSSN);
+
+end
+
 end
 
 
