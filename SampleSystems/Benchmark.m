@@ -36,7 +36,7 @@ legend('Pneumatic','Electrical','Hydraulic','Location','SouthOutside','Orientati
 %fh_ = figure;
 figure(fh_)
 datanew = [data(1,:)./datasum; data(2,:)./datasum; data(3,:)./datasum ]; %; data(4,:)./datasum; data(5,:)./datasum; data(6,:)./datasum ];
-h = area(datanew');
+h = area(100.*datanew');
 
 set(h(1),'FaceColor',[255 0 0]/255);    
 set(h(2),'FaceColor',[112 173 71]/255);
@@ -51,7 +51,7 @@ set(h(3),'FaceColor',[0 0 .0]);
 grid on;
 %setgrid('xy','yx');
 xlabel('Mission Time [min]');
-ylabel('Consumed Power [%]'); ylim([0 1]);
+ylabel('Consumed Power [%]'); ylim([0 100]);
 legend('Pneumatic','Electrical','Hydraulic','Location','SouthOutside','Orientation','Horizontal')
 
 %{
