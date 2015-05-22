@@ -20,7 +20,7 @@ Library {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-8.0, 0.0, 1378.0, 744.0]
+      Location		      [199.0, 85.0, 754.0, 744.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -44,7 +44,7 @@ Library {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[1135.0, 578.0]
+	Extents			[511.0, 577.0]
 	ZoomFactor		[1.0]
 	Offset			[0.0, 0.0]
       }
@@ -54,11 +54,11 @@ Library {
   Creator		  "mwillms4"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "srikanthan"
+  LastModifiedBy	  "mwillms4"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri May 22 10:05:32 2015"
-  RTWModifiedTimeStamp	  354189891
-  ModelVersionFormat	  "1.%<AutoIncrement:337>"
+  LastModifiedDate	  "Fri May 22 10:36:24 2015"
+  RTWModifiedTimeStamp	  354191760
+  ModelVersionFormat	  "1.%<AutoIncrement:338>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1336,7 +1336,7 @@ Library {
   }
   System {
     Name		    "PowerFlowLib"
-    Location		    [-8, 0, 1370, 744]
+    Location		    [199, 85, 953, 829]
     Open		    on
     ModelBrowserVisibility  on
     ModelBrowserWidth	    200
@@ -1373,7 +1373,7 @@ Library {
       }
       System {
 	Name			"Energy & Power Systems"
-	Location		[-8, 0, 1370, 744]
+	Location		[-8, -8, 1448, 941]
 	Open			off
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	128
@@ -50323,7 +50323,7 @@ Library {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Thermal"
-	    Location		    [222, 706, 980, 1614]
+	    Location		    [-8, 0, 1370, 744]
 	    Open		    off
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    212
@@ -72992,7 +72992,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Fuel & Oil"
-		Location		[112, 706, 1152, 1627]
+		Location		[-8, -8, 1448, 941]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -73112,7 +73112,7 @@ Library {
 		  }
 		  System {
 		    Name		    "Cold Plate"
-		    Location		    [222, 706, 980, 1614]
+		    Location		    [-8, -8, 1448, 941]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -73124,7 +73124,7 @@ Library {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "125"
+		    ZoomFactor		    "100"
 		    SIDHighWatermark	    "711"
 		    SIDPrevWatermark	    "708"
 		    Block {
@@ -73603,7 +73603,7 @@ Library {
 		    Position		    [1010, 87, 1060, 113]
 		    ZOrder		    427
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.334"
+		    LibraryVersion	    "1.337"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -75230,7 +75230,7 @@ Library {
 		  }
 		  System {
 		    Name		    "Fluid Pump"
-		    Location		    [73, 60, 1009, 653]
+		    Location		    [-8, -8, 1448, 941]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -75242,13 +75242,13 @@ Library {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "60"
-		    SIDHighWatermark	    "13572"
+		    ZoomFactor		    "80"
+		    SIDHighWatermark	    "13573"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Flow_in"
 		    SID			    "8004:8046"
-		    Position		    [75, 293, 105, 307]
+		    Position		    [75, 348, 105, 362]
 		    ZOrder		    -1
 		    IconDisplay		    "Port number"
 		    }
@@ -75256,7 +75256,7 @@ Library {
 		    BlockType		    Inport
 		    Name		    "w_rpm"
 		    SID			    "8004:8047"
-		    Position		    [565, 478, 595, 492]
+		    Position		    [565, 533, 595, 547]
 		    ZOrder		    -2
 		    Port		    "2"
 		    IconDisplay		    "Port number"
@@ -75271,7 +75271,7 @@ Library {
 		    BlockType		    Inport
 		    Name		    "P_out"
 		    SID			    "8004:8048"
-		    Position		    [825, 138, 855, 152]
+		    Position		    [825, 193, 855, 207]
 		    ZOrder		    -3
 		    Port		    "3"
 		    IconDisplay		    "Port number"
@@ -75287,7 +75287,7 @@ Library {
 		    BlockType		    Gain
 		    Name		    "(1-pf)/pf"
 		    SID			    "8004:12481"
-		    Position		    [820, 335, 845, 365]
+		    Position		    [820, 390, 845, 420]
 		    ZOrder		    -4
 		    Gain		    "(1-pf)/pf"
 		    ParamDataTypeStr	    "Inherit: Inherit via internal rule"
@@ -75305,7 +75305,7 @@ Library {
 		    Name		    "2- Lookup\nTable3"
 		    SID			    "8004:8049"
 		    Ports		    [2, 1]
-		    Position		    [820, 35, 885, 70]
+		    Position		    [820, 90, 885, 125]
 		    ZOrder		    -5
 		    ShowName		    off
 		    BreakpointsForDimension1 "F1.P"
@@ -75323,7 +75323,7 @@ Library {
 		    BlockType		    Gain
 		    Name		    "2pi"
 		    SID			    "8004:8340"
-		    Position		    [600, 420, 630, 445]
+		    Position		    [600, 475, 630, 500]
 		    ZOrder		    -6
 		    BlockRotation	    270
 		    NamePlacement	    "alternate"
@@ -75336,7 +75336,7 @@ Library {
 		    BlockType		    Gain
 		    Name		    "2pi/60"
 		    SID			    "8004:12470"
-		    Position		    [645, 390, 675, 415]
+		    Position		    [645, 445, 675, 470]
 		    ZOrder		    -7
 		    BlockRotation	    270
 		    Gain		    "2*pi()/60"
@@ -75355,7 +75355,7 @@ Library {
 		    Name		    "Add1"
 		    SID			    "8004:8051"
 		    Ports		    [2, 1]
-		    Position		    [690, 36, 705, 189]
+		    Position		    [690, 91, 705, 244]
 		    ZOrder		    -8
 		    BackgroundColor	    "darkGreen"
 		    ShowName		    off
@@ -75374,7 +75374,7 @@ Library {
 		    Name		    "Add2"
 		    SID			    "8004:8052"
 		    Ports		    [2, 1]
-		    Position		    [270, 318, 285, 387]
+		    Position		    [270, 373, 285, 442]
 		    ZOrder		    -9
 		    BackgroundColor	    "darkGreen"
 		    ShowName		    off
@@ -75394,7 +75394,7 @@ Library {
 		    Name		    "Add3"
 		    SID			    "8004:12478"
 		    Ports		    [2, 1]
-		    Position		    [466, 200, 564, 210]
+		    Position		    [466, 255, 564, 265]
 		    ZOrder		    -10
 		    BlockRotation	    270
 		    BackgroundColor	    "darkGreen"
@@ -75414,10 +75414,11 @@ Library {
 		    BlockType		    BusCreator
 		    Name		    "Bus\nCreator"
 		    SID			    "8004:8053"
-		    Ports		    [4, 1]
-		    Position		    [940, 43, 945, 157]
+		    Ports		    [3, 1]
+		    Position		    [940, 123, 945, 217]
 		    ZOrder		    -11
 		    ShowName		    off
+		    Inputs		    "3"
 		    DisplayOption	    "bar"
 		    }
 		    Block {
@@ -75425,7 +75426,7 @@ Library {
 		    Name		    "Bus\nCreator1"
 		    SID			    "8004:12479"
 		    Ports		    [3, 1]
-		    Position		    [930, 253, 935, 367]
+		    Position		    [930, 308, 935, 422]
 		    ZOrder		    -12
 		    ShowName		    off
 		    Inputs		    "3"
@@ -75442,7 +75443,7 @@ Library {
 		    Name		    "Bus\nCreator2"
 		    SID			    "8004:12525"
 		    Ports		    [4, 1]
-		    Position		    [1230, 353, 1235, 467]
+		    Position		    [1230, 408, 1235, 522]
 		    ZOrder		    -13
 		    ShowName		    off
 		    DisplayOption	    "bar"
@@ -75452,7 +75453,7 @@ Library {
 		    Name		    "Bus\nSelector"
 		    SID			    "8004:8055"
 		    Ports		    [1, 3]
-		    Position		    [135, 233, 140, 357]
+		    Position		    [135, 288, 140, 412]
 		    ZOrder		    -14
 		    ShowName		    off
 		    OutputSignals	    "temp_K,mdot_kgps,pres_kPa"
@@ -75479,7 +75480,7 @@ Library {
 		    BlockType		    Constant
 		    Name		    "Constant1"
 		    SID			    "8004:8056"
-		    Position		    [500, 288, 550, 302]
+		    Position		    [500, 343, 550, 357]
 		    ZOrder		    -15
 		    ShowName		    off
 		    Value		    "pump_eff"
@@ -75489,7 +75490,7 @@ Library {
 		    Name		    "Cp (T,P)"
 		    SID			    "8004:8058"
 		    Ports		    [2, 1]
-		    Position		    [255, 128, 320, 172]
+		    Position		    [255, 183, 320, 227]
 		    ZOrder		    -16
 		    BreakpointsForDimension1 "F1.P"
 		    BreakpointsForDimension2 "F1.T"
@@ -75501,7 +75502,7 @@ Library {
 		    Name		    "Demux"
 		    SID			    "8004:12483"
 		    Ports		    [1, 2]
-		    Position		    [780, 250, 785, 330]
+		    Position		    [780, 305, 785, 385]
 		    ZOrder		    -17
 		    ShowName		    off
 		    Outputs		    "2"
@@ -75524,7 +75525,7 @@ Library {
 		    Name		    "Divide2"
 		    SID			    "8004:8061"
 		    Ports		    [3, 1]
-		    Position		    [595, 106, 610, 194]
+		    Position		    [595, 161, 610, 249]
 		    ZOrder		    -18
 		    BackgroundColor	    "darkGreen"
 		    ShowName		    off
@@ -75539,7 +75540,7 @@ Library {
 		    Name		    "Divide3"
 		    SID			    "8004:8062"
 		    Ports		    [2, 1]
-		    Position		    [710, 493, 725, 582]
+		    Position		    [710, 548, 725, 637]
 		    ZOrder		    -19
 		    BackgroundColor	    "darkGreen"
 		    ShowName		    off
@@ -75560,7 +75561,7 @@ Library {
 		    Name		    "Divide4"
 		    SID			    "8004:8063"
 		    Ports		    [3, 1]
-		    Position		    [425, 380, 505, 395]
+		    Position		    [425, 435, 505, 450]
 		    ZOrder		    -20
 		    BlockRotation	    270
 		    BackgroundColor	    "darkGreen"
@@ -75582,7 +75583,7 @@ Library {
 		    Name		    "Divide5"
 		    SID			    "8004:12472"
 		    Ports		    [2, 1]
-		    Position		    [457, 340, 488, 355]
+		    Position		    [457, 395, 488, 410]
 		    ZOrder		    -21
 		    BlockRotation	    270
 		    BackgroundColor	    "darkGreen"
@@ -75604,7 +75605,7 @@ Library {
 		    Name		    "Divide7"
 		    SID			    "8004:12477"
 		    Ports		    [2, 1]
-		    Position		    [511, 245, 589, 260]
+		    Position		    [511, 300, 589, 315]
 		    ZOrder		    -22
 		    BlockRotation	    270
 		    BackgroundColor	    "darkGreen"
@@ -75625,7 +75626,7 @@ Library {
 		    BlockType		    From
 		    Name		    "From1"
 		    SID			    "8004:8064"
-		    Position		    [790, 77, 870, 93]
+		    Position		    [790, 132, 870, 148]
 		    ZOrder		    -23
 		    ShowName		    off
 		    CloseFcn		    "tagdialog Close"
@@ -75641,7 +75642,7 @@ Library {
 		    BlockType		    From
 		    Name		    "From2"
 		    SID			    "8004:8065"
-		    Position		    [115, 362, 195, 378]
+		    Position		    [115, 417, 195, 433]
 		    ZOrder		    -24
 		    ShowName		    off
 		    CloseFcn		    "tagdialog Close"
@@ -75658,7 +75659,7 @@ Library {
 		    BlockType		    From
 		    Name		    "From3"
 		    SID			    "8004:8066"
-		    Position		    [715, 37, 795, 53]
+		    Position		    [715, 92, 795, 108]
 		    ZOrder		    -25
 		    ShowName		    off
 		    CloseFcn		    "tagdialog Close"
@@ -75668,7 +75669,7 @@ Library {
 		    BlockType		    From
 		    Name		    "From4"
 		    SID			    "8004:12772"
-		    Position		    [1190, 312, 1270, 328]
+		    Position		    [1190, 367, 1270, 383]
 		    ZOrder		    1
 		    ShowName		    off
 		    CloseFcn		    "tagdialog Close"
@@ -75684,7 +75685,7 @@ Library {
 		    BlockType		    Goto
 		    Name		    "Goto2"
 		    SID			    "8004:8067"
-		    Position		    [940, 182, 1030, 198]
+		    Position		    [940, 237, 1030, 253]
 		    ZOrder		    -26
 		    ShowName		    off
 		    GotoTag		    "Pout"
@@ -75693,7 +75694,7 @@ Library {
 		    BlockType		    Goto
 		    Name		    "Goto3"
 		    SID			    "8004:8068"
-		    Position		    [930, 477, 1020, 493]
+		    Position		    [930, 532, 1020, 548]
 		    ZOrder		    -27
 		    ShowName		    off
 		    GotoTag		    "mdot"
@@ -75703,7 +75704,7 @@ Library {
 		    Name		    "Multiport\nSwitch"
 		    SID			    "8004:8069"
 		    Ports		    [4, 1]
-		    Position		    [420, 503, 455, 612]
+		    Position		    [420, 558, 455, 667]
 		    ZOrder		    -28
 		    InputSameDT		    off
 		    SaturateOnIntegerOverflow off
@@ -75713,7 +75714,7 @@ Library {
 		    Name		    "Mux"
 		    SID			    "8004:12485"
 		    Ports		    [2, 1]
-		    Position		    [700, 244, 705, 271]
+		    Position		    [700, 299, 705, 326]
 		    ZOrder		    -29
 		    ShowName		    off
 		    Inputs		    "2"
@@ -75724,7 +75725,7 @@ Library {
 		    Name		    "Mux1"
 		    SID			    "8004:12488"
 		    Ports		    [2, 1]
-		    Position		    [700, 319, 705, 346]
+		    Position		    [700, 374, 705, 401]
 		    ZOrder		    -30
 		    ShowName		    off
 		    Inputs		    "2"
@@ -75735,7 +75736,7 @@ Library {
 		    Name		    "Pump Vol. FlowRate"
 		    SID			    "8004:8070"
 		    Ports		    [1, 1]
-		    Position		    [480, 528, 545, 592]
+		    Position		    [480, 583, 545, 647]
 		    ZOrder		    -31
 		    NumberOfTableDimensions "1"
 		    BreakpointsForDimension1 "PumpProp.B737_mech_fuel1.pres"
@@ -75752,7 +75753,7 @@ Library {
 		    BlockType		    Switch
 		    Name		    "Switch"
 		    SID			    "8004:8071"
-		    Position		    [850, 465, 900, 505]
+		    Position		    [850, 520, 900, 560]
 		    ZOrder		    -32
 		    Criteria		    "u2 > Threshold"
 		    InputSameDT		    off
@@ -75762,7 +75763,7 @@ Library {
 		    BlockType		    Switch
 		    Name		    "Switch1"
 		    SID			    "8004:12482"
-		    Position		    [730, 269, 760, 311]
+		    Position		    [730, 324, 760, 366]
 		    ZOrder		    -33
 		    ShowName		    off
 		    Criteria		    "u2 > Threshold"
@@ -75770,10 +75771,18 @@ Library {
 		    SaturateOnIntegerOverflow off
 		    }
 		    Block {
+		    BlockType		    Terminator
+		    Name		    "Terminator"
+		    SID			    "8004:13573"
+		    Position		    [985, 20, 1005, 40]
+		    ZOrder		    2
+		    NamePlacement	    "alternate"
+		    }
+		    Block {
 		    BlockType		    Gain
 		    Name		    "W to kW"
 		    SID			    "8004:12487"
-		    Position		    [540, 165, 565, 195]
+		    Position		    [540, 220, 565, 250]
 		    ZOrder		    -34
 		    NamePlacement	    "alternate"
 		    Gain		    "1/1000"
@@ -75786,10 +75795,10 @@ Library {
 		    Name		    "data_sink"
 		    SID			    "8004:12524"
 		    Ports		    [1]
-		    Position		    [1275, 397, 1325, 423]
+		    Position		    [1275, 452, 1325, 478]
 		    ZOrder		    -35
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.332"
+		    LibraryVersion	    "1.337"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -75797,7 +75806,7 @@ Library {
 		    BlockType		    Gain
 		    Name		    "heat_switch"
 		    SID			    "8004:12490"
-		    Position		    [640, 135, 665, 165]
+		    Position		    [640, 190, 665, 220]
 		    ZOrder		    -36
 		    NamePlacement	    "alternate"
 		    ParamDataTypeStr	    "Inherit: Inherit via internal rule"
@@ -75808,7 +75817,7 @@ Library {
 		    BlockType		    Gain
 		    Name		    "kPa "
 		    SID			    "8004:8072"
-		    Position		    [325, 580, 355, 610]
+		    Position		    [325, 635, 355, 665]
 		    ZOrder		    -37
 		    ParamDataTypeStr	    "Inherit: Inherit via internal rule"
 		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
@@ -75818,7 +75827,7 @@ Library {
 		    BlockType		    Gain
 		    Name		    "kPa to Pa"
 		    SID			    "8004:12474"
-		    Position		    [385, 400, 410, 430]
+		    Position		    [385, 455, 410, 485]
 		    ZOrder		    -38
 		    Gain		    "1000"
 		    ParamDataTypeStr	    "Inherit: Inherit via internal rule"
@@ -75829,7 +75838,7 @@ Library {
 		    BlockType		    Gain
 		    Name		    "kPa to bar"
 		    SID			    "8004:8073"
-		    Position		    [325, 625, 355, 655]
+		    Position		    [325, 680, 355, 710]
 		    ZOrder		    -39
 		    Gain		    "0.01"
 		    ParamDataTypeStr	    "Inherit: Inherit via internal rule"
@@ -75840,7 +75849,7 @@ Library {
 		    BlockType		    Gain
 		    Name		    "kPa to m"
 		    SID			    "8004:8074"
-		    Position		    [325, 530, 355, 560]
+		    Position		    [325, 585, 355, 615]
 		    ZOrder		    -40
 		    Gain		    ".10197/SG"
 		    ParamDataTypeStr	    "Inherit: Inherit via internal rule"
@@ -75857,7 +75866,7 @@ Library {
 		    BlockType		    Gain
 		    Name		    "kg/s"
 		    SID			    "8004:8075"
-		    Position		    [795, 525, 825, 555]
+		    Position		    [795, 580, 825, 610]
 		    ZOrder		    -41
 		    Gain		    "1/3600"
 		    ParamDataTypeStr	    "Inherit: Inherit via internal rule"
@@ -75868,7 +75877,7 @@ Library {
 		    BlockType		    Gain
 		    Name		    "m^3/min"
 		    SID			    "8004:8076"
-		    Position		    [540, 435, 570, 465]
+		    Position		    [540, 490, 570, 520]
 		    ZOrder		    -42
 		    BlockRotation	    270
 		    NamePlacement	    "alternate"
@@ -75881,7 +75890,7 @@ Library {
 		    BlockType		    Constant
 		    Name		    "pwr_switch"
 		    SID			    "8004:12484"
-		    Position		    [660, 283, 690, 297]
+		    Position		    [660, 338, 690, 352]
 		    ZOrder		    -43
 		    Value		    "0"
 		    }
@@ -75890,7 +75899,7 @@ Library {
 		    Name		    "rho (T,P)"
 		    SID			    "8004:8077"
 		    Ports		    [2, 1]
-		    Position		    [255, 226, 320, 264]
+		    Position		    [255, 281, 320, 319]
 		    ZOrder		    -44
 		    BreakpointsForDimension1 "F1.P"
 		    BreakpointsForDimension2 "F1.T"
@@ -75907,7 +75916,7 @@ Library {
 		    BlockType		    Constant
 		    Name		    "switchcase"
 		    SID			    "8004:8078"
-		    Position		    [325, 490, 385, 510]
+		    Position		    [325, 545, 385, 565]
 		    ZOrder		    -45
 		    ShowName		    off
 		    Value		    "2"
@@ -75916,7 +75925,7 @@ Library {
 		    BlockType		    Constant
 		    Name		    "zero"
 		    SID			    "8004:12486"
-		    Position		    [660, 258, 685, 272]
+		    Position		    [660, 313, 685, 327]
 		    ZOrder		    -46
 		    ShowName		    off
 		    Value		    "0"
@@ -75925,7 +75934,7 @@ Library {
 		    BlockType		    Constant
 		    Name		    "zero1"
 		    SID			    "8004:12489"
-		    Position		    [660, 318, 685, 332]
+		    Position		    [660, 373, 685, 387]
 		    ZOrder		    -47
 		    ShowName		    off
 		    Value		    "0"
@@ -75934,7 +75943,7 @@ Library {
 		    BlockType		    Outport
 		    Name		    "Flow_Out"
 		    SID			    "8004:8079"
-		    Position		    [985, 93, 1015, 107]
+		    Position		    [1000, 163, 1030, 177]
 		    ZOrder		    -48
 		    IconDisplay		    "Port number"
 		    }
@@ -75942,7 +75951,7 @@ Library {
 		    BlockType		    Outport
 		    Name		    "Pump Power"
 		    SID			    "8004:12480"
-		    Position		    [1010, 303, 1040, 317]
+		    Position		    [1010, 358, 1040, 372]
 		    ZOrder		    -49
 		    Port		    "2"
 		    IconDisplay		    "Port number"
@@ -76026,7 +76035,7 @@ Library {
 		    SrcBlock		    "From1"
 		    SrcPort		    1
 		    DstBlock		    "Bus\nCreator"
-		    DstPort		    2
+		    DstPort		    1
 		    }
 		    Line {
 		    Name		    "shaftspeed_rpm"
@@ -76069,13 +76078,13 @@ Library {
 		    SrcPort		    1
 		    Points		    [35, 0]
 		    Branch {
-		    Labels		    [1, 1]
-		    DstBlock		    "Bus\nCreator"
-		    DstPort		    3
-		    }
-		    Branch {
 		    Points		    [0, -55]
 		    DstBlock		    "2- Lookup\nTable3"
+		    DstPort		    2
+		    }
+		    Branch {
+		    Labels		    [1, 1]
+		    DstBlock		    "Bus\nCreator"
 		    DstPort		    2
 		    }
 		    }
@@ -76209,7 +76218,8 @@ Library {
 		    Labels		    [0, 0]
 		    SrcBlock		    "2- Lookup\nTable3"
 		    SrcPort		    1
-		    DstBlock		    "Bus\nCreator"
+		    Points		    [22, 0; 0, -80]
+		    DstBlock		    "Terminator"
 		    DstPort		    1
 		    }
 		    Line {
@@ -76218,6 +76228,10 @@ Library {
 		    SrcBlock		    "P_out"
 		    SrcPort		    1
 		    Points		    [55, 0]
+		    Branch {
+		    DstBlock		    "Bus\nCreator"
+		    DstPort		    3
+		    }
 		    Branch {
 		    Points		    [0, 45; 1, 0]
 		    Branch {
@@ -76230,10 +76244,6 @@ Library {
 		    DstBlock		    "Goto2"
 		    DstPort		    1
 		    }
-		    }
-		    Branch {
-		    DstBlock		    "Bus\nCreator"
-		    DstPort		    4
 		    }
 		    }
 		    Line {
@@ -79240,7 +79250,7 @@ Library {
 		  }
 		  System {
 		    Name		    "Heat Exchanger"
-		    Location		    [-2, 0, 1372, 732]
+		    Location		    [-8, -8, 1448, 941]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -79252,7 +79262,7 @@ Library {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "60"
+		    ZoomFactor		    "80"
 		    SIDHighWatermark	    "1884"
 		    SIDPrevWatermark	    "748"
 		    Block {
@@ -79394,43 +79404,11 @@ Library {
 		    SaturateOnIntegerOverflow off
 		    }
 		    Block {
-		    BlockType		    Bias
-		    Name		    "Bias2"
-		    SID			    "30470:759"
-		    Position		    [685, 555, 725, 585]
-		    ZOrder		    433
-		    ShowName		    off
-		    Bias		    "273.15"
-		    SaturateOnIntegerOverflow off
-		    Port {
-		    PortNumber		    1
-		    Name		    "temp_K"
-		    RTWStorageClass	    "Auto"
-		    DataLoggingNameMode	    "SignalName"
-		    }
-		    }
-		    Block {
-		    BlockType		    Bias
-		    Name		    "Bias3"
-		    SID			    "30470:760"
-		    Position		    [685, 645, 725, 675]
-		    ZOrder		    434
-		    ShowName		    off
-		    Bias		    "273.15"
-		    SaturateOnIntegerOverflow off
-		    Port {
-		    PortNumber		    1
-		    Name		    "temp_K"
-		    RTWStorageClass	    "Auto"
-		    DataLoggingNameMode	    "SignalName"
-		    }
-		    }
-		    Block {
 		    BlockType		    BusCreator
 		    Name		    "Bus\nCreator1"
 		    SID			    "30470:764"
 		    Ports		    [3, 1]
-		    Position		    [900, 626, 905, 694]
+		    Position		    [890, 626, 895, 694]
 		    ZOrder		    438
 		    ShowName		    off
 		    Inputs		    "3"
@@ -79677,7 +79655,7 @@ Library {
 		    Name		    "F1_Cp"
 		    SID			    "30470:750"
 		    Ports		    [2, 1]
-		    Position		    [150, 400, 190, 455]
+		    Position		    [150, 395, 190, 450]
 		    ZOrder		    424
 		    BreakpointsForDimension1 "Fld1.P"
 		    BreakpointsForDimension2 "Fld1.T"
@@ -79691,7 +79669,7 @@ Library {
 		    Name		    "F2_Cp"
 		    SID			    "30470:749"
 		    Ports		    [2, 1]
-		    Position		    [150, 170, 190, 225]
+		    Position		    [150, 165, 190, 220]
 		    ZOrder		    423
 		    BreakpointsForDimension1 "Fld2.P"
 		    BreakpointsForDimension2 "Fld2.T"
@@ -79704,7 +79682,7 @@ Library {
 		    BlockType		    From
 		    Name		    "From1"
 		    SID			    "30470:519"
-		    Position		    [750, 542, 830, 558]
+		    Position		    [730, 542, 810, 558]
 		    ZOrder		    333
 		    BackgroundColor	    "cyan"
 		    ShowName		    off
@@ -79755,7 +79733,7 @@ Library {
 		    BlockType		    From
 		    Name		    "From13"
 		    SID			    "30470:753"
-		    Position		    [15, 407, 95, 423]
+		    Position		    [15, 402, 95, 418]
 		    ZOrder		    427
 		    BackgroundColor	    "cyan"
 		    ShowName		    off
@@ -79766,7 +79744,7 @@ Library {
 		    BlockType		    From
 		    Name		    "From14"
 		    SID			    "30470:754"
-		    Position		    [15, 177, 95, 193]
+		    Position		    [15, 172, 95, 188]
 		    ZOrder		    428
 		    BackgroundColor	    "cyan"
 		    ShowName		    off
@@ -79777,7 +79755,7 @@ Library {
 		    BlockType		    From
 		    Name		    "From15"
 		    SID			    "30470:762"
-		    Position		    [580, 597, 660, 613]
+		    Position		    [730, 582, 810, 598]
 		    ZOrder		    436
 		    BackgroundColor	    "cyan"
 		    ShowName		    off
@@ -79794,7 +79772,7 @@ Library {
 		    BlockType		    From
 		    Name		    "From16"
 		    SID			    "30470:763"
-		    Position		    [580, 702, 660, 718]
+		    Position		    [730, 672, 810, 688]
 		    ZOrder		    437
 		    BackgroundColor	    "cyan"
 		    ShowName		    off
@@ -79855,12 +79833,18 @@ Library {
 		    BlockType		    From
 		    Name		    "From6"
 		    SID			    "30470:527"
-		    Position		    [580, 562, 660, 578]
+		    Position		    [730, 562, 810, 578]
 		    ZOrder		    341
 		    BackgroundColor	    "cyan"
 		    ShowName		    off
 		    CloseFcn		    "tagdialog Close"
 		    GotoTag		    "T_out1"
+		    Port {
+		    PortNumber		    1
+		    Name		    "temp_K"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
 		    }
 		    Block {
 		    BlockType		    From
@@ -79877,7 +79861,7 @@ Library {
 		    BlockType		    From
 		    Name		    "From8"
 		    SID			    "30470:529"
-		    Position		    [750, 632, 830, 648]
+		    Position		    [730, 632, 810, 648]
 		    ZOrder		    353
 		    BackgroundColor	    "cyan"
 		    ShowName		    off
@@ -79895,7 +79879,7 @@ Library {
 		    BlockType		    From
 		    Name		    "From9"
 		    SID			    "30470:530"
-		    Position		    [580, 652, 660, 668]
+		    Position		    [730, 652, 810, 668]
 		    ZOrder		    354
 		    BackgroundColor	    "cyan"
 		    ShowName		    off
@@ -79903,7 +79887,7 @@ Library {
 		    GotoTag		    "T_out2"
 		    Port {
 		    PortNumber		    1
-		    Name		    "T_C"
+		    Name		    "temp_K"
 		    PropagatedSignals	    "T_out2"
 		    RTWStorageClass	    "Auto"
 		    DataLoggingNameMode	    "SignalName"
@@ -79981,7 +79965,7 @@ Library {
 		    BlockType		    Goto
 		    Name		    "Goto3"
 		    SID			    "30470:535"
-		    Position		    [1035, 376, 1115, 394]
+		    Position		    [995, 376, 1075, 394]
 		    ZOrder		    340
 		    BackgroundColor	    "yellow"
 		    ShowName		    off
@@ -80118,7 +80102,7 @@ Library {
 		    Ports		    [1, 1]
 		    Position		    [675, 305, 705, 335]
 		    ZOrder		    159
-		    InitialCondition	    "Tw_init"
+		    InitialCondition	    "Tw_init + 273.15"
 		    Port {
 		    PortNumber		    1
 		    Name		    "T_wall"
@@ -80134,7 +80118,7 @@ Library {
 		    Position		    [1235, 347, 1285, 373]
 		    ZOrder		    432
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.334"
+		    LibraryVersion	    "1.337"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -80142,7 +80126,7 @@ Library {
 		    BlockType		    Outport
 		    Name		    "Out1"
 		    SID			    "30470:555"
-		    Position		    [930, 553, 960, 567]
+		    Position		    [930, 563, 960, 577]
 		    ZOrder		    -2
 		    IconDisplay		    "Port number"
 		    }
@@ -80150,7 +80134,7 @@ Library {
 		    BlockType		    Outport
 		    Name		    "Out2"
 		    SID			    "30470:556"
-		    Position		    [930, 643, 960, 657]
+		    Position		    [930, 653, 960, 667]
 		    ZOrder		    351
 		    Port		    "2"
 		    IconDisplay		    "Port number"
@@ -80250,7 +80234,6 @@ Library {
 		    Line {
 		    SrcBlock		    "F2_Cp"
 		    SrcPort		    1
-		    Points		    [72, 0; 0, -5]
 		    DstBlock		    "Gain2"
 		    DstPort		    1
 		    }
@@ -80279,7 +80262,7 @@ Library {
 		    SrcPort		    1
 		    Points		    [34, 0; 0, -1]
 		    Branch {
-		    Points		    [0, -59]
+		    Points		    [0, -64]
 		    DstBlock		    "F2_Cp"
 		    DstPort		    2
 		    }
@@ -80296,14 +80279,6 @@ Library {
 		    DstPort		    2
 		    }
 		    Line {
-		    Name		    "T_C"
-		    Labels		    [1, 1]
-		    SrcBlock		    "From9"
-		    SrcPort		    1
-		    DstBlock		    "Bias3"
-		    DstPort		    1
-		    }
-		    Line {
 		    Name		    "mdot_kgps"
 		    Labels		    [1, 1]
 		    SrcBlock		    "From8"
@@ -80315,10 +80290,10 @@ Library {
 		    Name		    "Flow2 Out"
 		    SrcBlock		    "Bus\nCreator1"
 		    SrcPort		    1
-		    Points		    [5, 0; 0, -10]
+		    Points		    [15, 0]
 		    Branch {
 		    Labels		    [2, 1]
-		    Points		    [0, -56; 245, 0]
+		    Points		    [0, -20; 245, 0]
 		    DstBlock		    "Bus\nCreator2"
 		    DstPort		    3
 		    }
@@ -80393,12 +80368,6 @@ Library {
 		    DstPort		    2
 		    }
 		    Line {
-		    SrcBlock		    "From6"
-		    SrcPort		    1
-		    DstBlock		    "Bias2"
-		    DstPort		    1
-		    }
-		    Line {
 		    SrcBlock		    "From5"
 		    SrcPort		    1
 		    DstBlock		    "Add1"
@@ -80423,7 +80392,7 @@ Library {
 		    SrcPort		    1
 		    Points		    [13, 0]
 		    Branch {
-		    Points		    [0, 80]
+		    Points		    [0, 75]
 		    DstBlock		    "F1_Cp"
 		    DstPort		    2
 		    }
@@ -80461,10 +80430,10 @@ Library {
 		    Name		    "Flow1 Out"
 		    SrcBlock		    "Bus\nCreator3"
 		    SrcPort		    1
-		    Points		    [15, 0; 0, -10]
+		    Points		    [15, 0]
 		    Branch {
 		    Labels		    [2, 1]
-		    Points		    [0, -84; 230, 0; 0, -116]
+		    Points		    [0, -24; 230, 0; 0, -186]
 		    DstBlock		    "Bus\nCreator2"
 		    DstPort		    2
 		    }
@@ -80545,7 +80514,6 @@ Library {
 		    Line {
 		    SrcBlock		    "F1_Cp"
 		    SrcPort		    1
-		    Points		    [5, 0; 0, -5]
 		    DstBlock		    "Gain3"
 		    DstPort		    1
 		    }
@@ -80649,7 +80617,7 @@ Library {
 		    Line {
 		    Name		    "temp_K"
 		    Labels		    [1, 1]
-		    SrcBlock		    "Bias2"
+		    SrcBlock		    "From6"
 		    SrcPort		    1
 		    DstBlock		    "Bus\nCreator3"
 		    DstPort		    2
@@ -80657,26 +80625,24 @@ Library {
 		    Line {
 		    Name		    "temp_K"
 		    Labels		    [1, 1]
-		    SrcBlock		    "Bias3"
+		    SrcBlock		    "From9"
 		    SrcPort		    1
 		    DstBlock		    "Bus\nCreator1"
 		    DstPort		    2
 		    }
 		    Line {
 		    Name		    "pres_kPa"
-		    Labels		    [3, 1]
+		    Labels		    [1, 1]
 		    SrcBlock		    "From15"
 		    SrcPort		    1
-		    Points		    [110, 0; 0, -15]
 		    DstBlock		    "Bus\nCreator3"
 		    DstPort		    3
 		    }
 		    Line {
 		    Name		    "pres_kPa"
-		    Labels		    [3, 1]
+		    Labels		    [1, 1]
 		    SrcBlock		    "From16"
 		    SrcPort		    1
-		    Points		    [115, 0; 0, -30]
 		    DstBlock		    "Bus\nCreator1"
 		    DstPort		    3
 		    }
@@ -84791,7 +84757,7 @@ MatData {
 }
 # Finite State Machines
 #
-#    Stateflow Version 7.6 (R2013a) dated Jan 19 2013, 14:32:20
+#    Stateflow Version 7.6 (R2013a) dated Jan 19 2013, 14:32:03
 #
 #
 
@@ -84800,7 +84766,6 @@ Stateflow {
     id			    1
     name		    "PowerFlowLib"
     created		    "02-May-2013 11:19:27"
-    locked		    1
     isLibrary		    1
     firstTarget		    11
     sfVersion		    76014001.0015
@@ -84816,7 +84781,6 @@ Stateflow {
     firstJunction	    8
     viewObj		    2
     machine		    1
-    locked		    1
     ssIdHighWaterMark	    7
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
