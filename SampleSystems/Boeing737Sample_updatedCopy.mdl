@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.366"
+    ComputedModelVersion    "1.369"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -31,7 +31,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-8.0, -8.0, 1382.0, 744.0]
+      Location		      [-4.0, -4.0, 1374.0, 732.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -53,11 +53,11 @@ Model {
 	$ObjectID		5
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
-	ViewObjType		"SimulinkSubsys"
-	LoadSaveID		"25062"
-	Extents			[1139.0, 570.0]
-	ZoomFactor		[0.5]
-	Offset			[1987.0083333333284, 84.22124965786918]
+	ViewObjType		"SimulinkTopLevel"
+	LoadSaveID		"0"
+	Extents			[1135.0, 572.0]
+	ZoomFactor		[0.8]
+	Offset			[27.5, -6.9864872059752923]
       }
     }
   }
@@ -65,11 +65,11 @@ Model {
   Creator		  "mwillms4"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "srikanthan"
+  LastModifiedBy	  "cmm"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu May 21 15:13:21 2015"
-  RTWModifiedTimeStamp	  354121989
-  ModelVersionFormat	  "1.%<AutoIncrement:366>"
+  LastModifiedDate	  "Fri May 22 17:50:33 2015"
+  RTWModifiedTimeStamp	  354217803
+  ModelVersionFormat	  "1.%<AutoIncrement:369>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1156,8 +1156,8 @@ Model {
   }
   System {
     Name		    "Boeing737Sample_updatedCopy"
-    Location		    [-8, -8, 1374, 736]
-    Open		    off
+    Location		    [-4, -4, 1370, 728]
+    Open		    on
     ModelBrowserVisibility  on
     ModelBrowserWidth	    212
     ScreenColor		    "white"
@@ -1170,7 +1170,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "80"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "27859"
+    SIDHighWatermark	    "27878"
     Block {
       BlockType		      BusSelector
       Name		      "Bus\nSelector"
@@ -1413,7 +1413,7 @@ Model {
 	  ZOrder		  -17
 	  ForegroundColor	  "red"
 	  BackgroundColor	  "yellow"
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Cabin Zone"
 	  SourceType		  "Passenger Cabin"
 	  A_fuselage		  "320"
@@ -1522,7 +1522,7 @@ Model {
 	  Position		  [1040, 267, 1130, 298]
 	  ZOrder		  -22
 	  ShowName		  off
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	  SourceType		  "Electrical Sink"
 	  load_loc		  "Empennage"
@@ -1540,7 +1540,7 @@ Model {
 	  Position		  [1040, 302, 1130, 333]
 	  ZOrder		  -23
 	  ShowName		  off
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	  SourceType		  "Electrical Sink"
 	  load_loc		  "Cagobay"
@@ -1558,7 +1558,7 @@ Model {
 	  Position		  [1040, 337, 1130, 368]
 	  ZOrder		  -24
 	  ShowName		  off
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	  SourceType		  "Electrical Sink"
 	  load_loc		  "Cabin"
@@ -1576,7 +1576,7 @@ Model {
 	  Position		  [1485, 872, 1575, 908]
 	  ZOrder		  68
 	  ShowName		  off
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	  SourceType		  "Electrical Sink"
 	  load_loc		  "Cabin"
@@ -1591,7 +1591,7 @@ Model {
 	  Ports			  [1, 2]
 	  Position		  [1280, 784, 1430, 926]
 	  ZOrder		  67
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Fan"
 	  SourceType		  "Fan"
 	  N_fan			  "1725"
@@ -2067,7 +2067,7 @@ Model {
 	      Position		      [480, 467, 620, 603]
 	      ZOrder		      6
 	      BackgroundColor	      "[0.501961, 0.501961, 0.501961]"
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Fluid Pump"
 	      SourceType	      "Pump"
 	      fld		      "Fuel"
@@ -2089,7 +2089,7 @@ Model {
 	      Position		      [480, 632, 620, 768]
 	      ZOrder		      7
 	      BackgroundColor	      "[0.501961, 0.501961, 0.501961]"
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Fluid Pump"
 	      SourceType	      "Pump"
 	      fld		      "Fuel"
@@ -2110,7 +2110,7 @@ Model {
 	      Ports		      [5, 3]
 	      Position		      [130, 634, 290, 766]
 	      ZOrder		      2
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Fluid Tank"
 	      SourceType	      "Fluid Tank"
 	      fld		      "Fuel"
@@ -2140,7 +2140,7 @@ Model {
 	      Position		      [745, 182, 840, 213]
 	      ZOrder		      -29
 	      ShowName		      off
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	      SourceType	      "Electrical Sink"
 	      load_loc		      "RightWing"
@@ -2158,7 +2158,7 @@ Model {
 	      Position		      [750, 352, 845, 383]
 	      ZOrder		      -30
 	      ShowName		      off
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	      SourceType	      "Electrical Sink"
 	      load_loc		      "RightWing"
@@ -2176,7 +2176,7 @@ Model {
 	      Position		      [750, 517, 845, 548]
 	      ZOrder		      -31
 	      ShowName		      off
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	      SourceType	      "Electrical Sink"
 	      load_loc		      "RightWing"
@@ -2194,7 +2194,7 @@ Model {
 	      Position		      [740, 682, 835, 713]
 	      ZOrder		      -32
 	      ShowName		      off
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	      SourceType	      "Electrical Sink"
 	      load_loc		      "LeftWing"
@@ -2212,7 +2212,7 @@ Model {
 	      Position		      [745, 832, 840, 863]
 	      ZOrder		      -33
 	      ShowName		      off
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	      SourceType	      "Electrical Sink"
 	      load_loc		      "LeftWing"
@@ -2230,7 +2230,7 @@ Model {
 	      Position		      [745, 1002, 840, 1033]
 	      ZOrder		      -34
 	      ShowName		      off
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	      SourceType	      "Electrical Sink"
 	      load_loc		      "LeftWing"
@@ -2246,7 +2246,7 @@ Model {
 	      Ports		      [4, 1]
 	      Position		      [1195, 387, 1300, 503]
 	      ZOrder		      11
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Flow Junction"
 	      SourceType	      ""
 	      fld		      "Fuel"
@@ -2270,7 +2270,7 @@ Model {
 	      Ports		      [4, 1]
 	      Position		      [1195, 642, 1300, 758]
 	      ZOrder		      10
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Flow Junction"
 	      SourceType	      ""
 	      fld		      "Fuel"
@@ -3940,7 +3940,7 @@ Model {
 	      Position		      [480, 782, 620, 918]
 	      ZOrder		      8
 	      BackgroundColor	      "[0.501961, 0.501961, 0.501961]"
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Fluid Pump"
 	      SourceType	      "Pump"
 	      fld		      "Fuel"
@@ -3962,7 +3962,7 @@ Model {
 	      Position		      [480, 952, 620, 1088]
 	      ZOrder		      9
 	      BackgroundColor	      "[0.501961, 0.501961, 0.501961]"
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Fluid Pump"
 	      SourceType	      "Pump"
 	      fld		      "Fuel"
@@ -3983,7 +3983,7 @@ Model {
 	      Ports		      [5, 3]
 	      Position		      [130, 954, 290, 1086]
 	      ZOrder		      3
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Fluid Tank"
 	      SourceType	      "Fluid Tank"
 	      fld		      "Fuel"
@@ -4467,7 +4467,7 @@ Model {
 	      Position		      [480, 132, 620, 268]
 	      ZOrder		      4
 	      BackgroundColor	      "[0.501961, 0.501961, 0.501961]"
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Fluid Pump"
 	      SourceType	      "Pump"
 	      fld		      "Fuel"
@@ -4489,7 +4489,7 @@ Model {
 	      Position		      [480, 302, 620, 438]
 	      ZOrder		      5
 	      BackgroundColor	      "[0.501961, 0.501961, 0.501961]"
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Fluid Pump"
 	      SourceType	      "Pump"
 	      fld		      "Fuel"
@@ -4510,7 +4510,7 @@ Model {
 	      Ports		      [5, 3]
 	      Position		      [130, 304, 290, 436]
 	      ZOrder		      1
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Fluid Tank"
 	      SourceType	      "Fluid Tank"
 	      fld		      "Fuel"
@@ -5558,7 +5558,7 @@ Model {
 	  Ports			  [2, 2]
 	  Position		  [385, 178, 510, 247]
 	  ZOrder		  398
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Heat Exchanger"
 	  SourceType		  "Single-phase Fluid Heat Exchanger"
 	  fld1			  "Oil"
@@ -5585,7 +5585,7 @@ Model {
 	  Ports			  [2, 2]
 	  Position		  [415, 388, 540, 457]
 	  ZOrder		  399
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Heat Exchanger"
 	  SourceType		  "Single-phase Fluid Heat Exchanger"
 	  fld1			  "Oil"
@@ -5612,7 +5612,7 @@ Model {
 	  Ports			  [2, 2]
 	  Position		  [590, 178, 715, 247]
 	  ZOrder		  400
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Heat Exchanger"
 	  SourceType		  "Single-phase Fluid Heat Exchanger"
 	  fld1			  "Oil"
@@ -5639,7 +5639,7 @@ Model {
 	  Ports			  [2, 2]
 	  Position		  [590, 353, 715, 422]
 	  ZOrder		  401
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Heat Exchanger"
 	  SourceType		  "Single-phase Fluid Heat Exchanger"
 	  fld1			  "Fuel"
@@ -5797,7 +5797,7 @@ Model {
 	      Ports		      [2, 2]
 	      Position		      [415, 774, 575, 916]
 	      ZOrder		      -10
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Compressor"
 	      SourceType	      ""
 	    }
@@ -6591,7 +6591,7 @@ Model {
 	      Ports		      [2, 3]
 	      Position		      [335, 528, 490, 592]
 	      ZOrder		      -47
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Air-Air HX"
 	      SourceType	      "Air-Air Heat Exchanger"
 	      L_hx		      "0.2"
@@ -7015,7 +7015,7 @@ Model {
 	      Ports		      [2, 3]
 	      Position		      [685, 793, 840, 857]
 	      ZOrder		      -54
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Air-Air HX"
 	      SourceType	      "Air-Air Heat Exchanger"
 	      L_hx		      "0.2"
@@ -7504,7 +7504,7 @@ Model {
 	      Ports		      [2, 3]
 	      Position		      [915, 763, 1075, 917]
 	      ZOrder		      -66
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Turbine"
 	      SourceType	      ""
 	      press_Turbine_exit      "80"
@@ -7912,7 +7912,7 @@ Model {
 	      Ports		      [2, 1]
 	      Position		      [525, 637, 615, 713]
 	      ZOrder		      11
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/n-intlet Mixing Junction"
 	      SourceType	      "Mixing Junction"
 	      no_inlets		      "2"
@@ -7927,7 +7927,7 @@ Model {
 	      Ports		      [2, 1]
 	      Position		      [700, 542, 790, 618]
 	      ZOrder		      12
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/n-intlet Mixing Junction"
 	      SourceType	      "Mixing Junction"
 	      no_inlets		      "2"
@@ -8590,7 +8590,7 @@ Model {
 	      Position		      [750, 237, 845, 268]
 	      ZOrder		      -6
 	      ShowName		      off
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	      SourceType	      "Electrical Sink"
 	      load_loc		      "LeftWing"
@@ -8606,7 +8606,7 @@ Model {
 	      Position		      [440, 172, 580, 308]
 	      ZOrder		      2
 	      BackgroundColor	      "gray"
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Fluid Pump"
 	      SourceType	      "Pump"
 	      fld		      "Fuel"
@@ -8627,7 +8627,7 @@ Model {
 	      Ports		      [5, 3]
 	      Position		      [150, 174, 310, 306]
 	      ZOrder		      1
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Fluid Tank"
 	      SourceType	      "Fluid Tank"
 	      fld		      "Fuel"
@@ -8927,7 +8927,7 @@ Model {
 	      Position		      [750, 237, 845, 268]
 	      ZOrder		      -6
 	      ShowName		      off
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 	      SourceType	      "Electrical Sink"
 	      load_loc		      "LeftWing"
@@ -8943,7 +8943,7 @@ Model {
 	      Position		      [440, 172, 580, 308]
 	      ZOrder		      2
 	      BackgroundColor	      "gray"
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Fluid Pump"
 	      SourceType	      "Pump"
 	      fld		      "Fuel"
@@ -8964,7 +8964,7 @@ Model {
 	      Ports		      [5, 3]
 	      Position		      [150, 174, 310, 306]
 	      ZOrder		      1
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Fluid Tank"
 	      SourceType	      "Fluid Tank"
 	      fld		      "Fuel"
@@ -9284,7 +9284,7 @@ Model {
 	      Ports		      [2, 2]
 	      Position		      [425, 867, 570, 958]
 	      ZOrder		      -10
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Compressor"
 	      SourceType	      ""
 	    }
@@ -10087,7 +10087,7 @@ Model {
 	      Ports		      [2, 3]
 	      Position		      [335, 608, 490, 672]
 	      ZOrder		      -48
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Air-Air HX"
 	      SourceType	      "Air-Air Heat Exchanger"
 	      L_hx		      "0.2"
@@ -10490,7 +10490,7 @@ Model {
 	      Ports		      [2, 3]
 	      Position		      [685, 873, 840, 937]
 	      ZOrder		      -55
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Air-Air HX"
 	      SourceType	      "Air-Air Heat Exchanger"
 	      L_hx		      "0.2"
@@ -10979,7 +10979,7 @@ Model {
 	      Ports		      [2, 3]
 	      Position		      [915, 891, 1070, 979]
 	      ZOrder		      -67
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/Turbine"
 	      SourceType	      ""
 	      press_Turbine_exit      "80"
@@ -11387,7 +11387,7 @@ Model {
 	      Ports		      [2, 1]
 	      Position		      [705, 622, 795, 698]
 	      ZOrder		      9
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/n-intlet Mixing Junction"
 	      SourceType	      "Mixing Junction"
 	      no_inlets		      "2"
@@ -11402,7 +11402,7 @@ Model {
 	      Ports		      [2, 1]
 	      Position		      [525, 717, 615, 793]
 	      ZOrder		      10
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Energy & Power Systems/Thermal/ECS/n-intlet Mixing Junction"
 	      SourceType	      "Mixing Junction"
 	      no_inlets		      "2"
@@ -12420,7 +12420,7 @@ Model {
 	  Ports			  [3, 1]
 	  Position		  [725, 622, 835, 738]
 	  ZOrder		  -43
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Thermal/ECS/n-intlet Mixing Junction"
 	  SourceType		  "Mixing Junction"
 	  no_inlets		  "3"
@@ -12894,8 +12894,8 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"ELECTRICAL SYS "
-	Location		[-8, -8, 1374, 736]
-	Open			on
+	Location		[-4, -4, 1370, 728]
+	Open			off
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	212
 	ScreenColor		"white"
@@ -12906,12 +12906,12 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"50"
+	ZoomFactor		"80"
 	Block {
 	  BlockType		  Inport
 	  Name			  "Left Engine"
 	  SID			  "25063"
-	  Position		  [930, 123, 960, 137]
+	  Position		  [930, 158, 960, 172]
 	  ZOrder		  -1
 	  IconDisplay		  "Port number"
 	}
@@ -12919,7 +12919,7 @@ Model {
 	  BlockType		  Inport
 	  Name			  "Right Engine"
 	  SID			  "25064"
-	  Position		  [910, 768, 940, 782]
+	  Position		  [910, 803, 940, 817]
 	  ZOrder		  -2
 	  Port			  "2"
 	  IconDisplay		  "Port number"
@@ -12929,10 +12929,10 @@ Model {
 	  Name			  " inverter1"
 	  SID			  "25934"
 	  Ports			  [3, 3]
-	  Position		  [2925, 988, 3025, 1102]
+	  Position		  [2925, 1023, 3025, 1137]
 	  ZOrder		  -5
 	  BlockMirror		  on
-	  LibraryVersion	  "1.336"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Inverters/ inverter"
 	  SourceType		  "Average inverter model"
 	  Trise			  "4e-6"
@@ -12945,7 +12945,7 @@ Model {
 	  BlockType		  Gain
 	  Name			  "1-dim"
 	  SID			  "25110"
-	  Position		  [1055, 179, 1090, 211]
+	  Position		  [1055, 214, 1090, 246]
 	  ZOrder		  -6
 	  ShowName		  off
 	  FontName		  "Arial"
@@ -12959,7 +12959,7 @@ Model {
 	  BlockType		  Gain
 	  Name			  "1-dim1"
 	  SID			  "25111"
-	  Position		  [1065, 445, 1110, 475]
+	  Position		  [1065, 480, 1110, 510]
 	  ZOrder		  -7
 	  ShowName		  off
 	  FontName		  "Arial"
@@ -12973,7 +12973,7 @@ Model {
 	  BlockType		  Gain
 	  Name			  "1-dim2"
 	  SID			  "25114"
-	  Position		  [1065, 834, 1085, 856]
+	  Position		  [1065, 869, 1085, 891]
 	  ZOrder		  -8
 	  ShowName		  off
 	  FontName		  "Arial"
@@ -12987,7 +12987,7 @@ Model {
 	  BlockType		  Gain
 	  Name			  "1-dim3"
 	  SID			  "25115"
-	  Position		  [1090, 620, 1120, 650]
+	  Position		  [1090, 655, 1120, 685]
 	  ZOrder		  -9
 	  ShowName		  off
 	  FontName		  "Arial"
@@ -13001,7 +13001,7 @@ Model {
 	  BlockType		  Gain
 	  Name			  "1-dim4"
 	  SID			  "26513"
-	  Position		  [1665, 408, 1700, 432]
+	  Position		  [1665, 443, 1700, 467]
 	  ZOrder		  -10
 	  BlockMirror		  on
 	  ShowName		  off
@@ -13016,7 +13016,7 @@ Model {
 	  BlockType		  Gain
 	  Name			  "1-dim5"
 	  SID			  "26524"
-	  Position		  [1655, 970, 1690, 1000]
+	  Position		  [1655, 1005, 1690, 1035]
 	  ZOrder		  -11
 	  BlockMirror		  on
 	  ShowName		  off
@@ -13031,7 +13031,7 @@ Model {
 	  BlockType		  Gain
 	  Name			  "1-dim6"
 	  SID			  "26581"
-	  Position		  [3790, 139, 3810, 161]
+	  Position		  [3790, 174, 3810, 196]
 	  ZOrder		  -12
 	  BlockMirror		  on
 	  ShowName		  off
@@ -13046,7 +13046,7 @@ Model {
 	  BlockType		  Gain
 	  Name			  "1-dim7"
 	  SID			  "26588"
-	  Position		  [3725, 419, 3745, 441]
+	  Position		  [3725, 454, 3745, 476]
 	  ZOrder		  -13
 	  BlockMirror		  on
 	  ShowName		  off
@@ -13061,7 +13061,7 @@ Model {
 	  BlockType		  Gain
 	  Name			  "1-dim8"
 	  SID			  "26600"
-	  Position		  [3775, 674, 3795, 696]
+	  Position		  [3775, 709, 3795, 731]
 	  ZOrder		  -14
 	  BlockMirror		  on
 	  ShowName		  off
@@ -13077,9 +13077,9 @@ Model {
 	  Name			  "AC Transfer Bus 1"
 	  SID			  "25865"
 	  Ports			  [4, 3]
-	  Position		  [2120, 345, 2205, 490]
+	  Position		  [2120, 380, 2205, 525]
 	  ZOrder		  -15
-	  LibraryVersion	  "1.336"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Service Bus"
 	  SourceType		  ""
 	}
@@ -13088,9 +13088,9 @@ Model {
 	  Name			  "AC Transfer Bus 2"
 	  SID			  "25867"
 	  Ports			  [4, 3]
-	  Position		  [2110, 855, 2195, 1000]
+	  Position		  [2110, 890, 2195, 1035]
 	  ZOrder		  -16
-	  LibraryVersion	  "1.336"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Service Bus"
 	  SourceType		  ""
 	}
@@ -13099,10 +13099,10 @@ Model {
 	  Name			  "BATTERY 1"
 	  SID			  "26379"
 	  Ports			  [2, 2]
-	  Position		  [3605, 127, 3710, 223]
+	  Position		  [3605, 162, 3710, 258]
 	  ZOrder		  -17
 	  BlockMirror		  on
-	  LibraryVersion	  "1.336"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Battery/BATTERY"
 	  SourceType		  "Battery"
 	  NO_CELLS		  "8"
@@ -13114,10 +13114,10 @@ Model {
 	  Name			  "BATTERY 2"
 	  SID			  "26380"
 	  Ports			  [2, 2]
-	  Position		  [3600, 407, 3705, 503]
+	  Position		  [3600, 442, 3705, 538]
 	  ZOrder		  -18
 	  BlockMirror		  on
-	  LibraryVersion	  "1.336"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Battery/BATTERY"
 	  SourceType		  "Battery"
 	  NO_CELLS		  "8"
@@ -13129,10 +13129,10 @@ Model {
 	  Name			  "BATTERY 3"
 	  SID			  "26381"
 	  Ports			  [2, 2]
-	  Position		  [3610, 662, 3715, 758]
+	  Position		  [3610, 697, 3715, 793]
 	  ZOrder		  -19
 	  BlockMirror		  on
-	  LibraryVersion	  "1.336"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Battery/BATTERY"
 	  SourceType		  "Battery"
 	  NO_CELLS		  "8"
@@ -13144,7 +13144,7 @@ Model {
 	  Name			  "BATTERY MONITORING"
 	  SID			  "27435"
 	  Ports			  [1]
-	  Position		  [3665, 269, 3760, 311]
+	  Position		  [3665, 304, 3760, 346]
 	  ZOrder		  48
 	  MinAlgLoopOccurrences	  off
 	  PropExecContextOutsideSubsystem off
@@ -13301,7 +13301,7 @@ Model {
 	  Name			  "Bus\nSelector"
 	  SID			  "27675"
 	  Ports			  [1, 1]
-	  Position		  [995, 111, 1000, 149]
+	  Position		  [995, 146, 1000, 184]
 	  ZOrder		  60
 	  ShowName		  off
 	  OutputSignals		  "Spools.HPSpoolSpeed_rpm"
@@ -13317,7 +13317,7 @@ Model {
 	  Name			  "Bus\nSelector1"
 	  SID			  "25385"
 	  Ports			  [1, 1]
-	  Position		  [975, 756, 980, 794]
+	  Position		  [975, 791, 980, 829]
 	  ZOrder		  61
 	  ShowName		  off
 	  OutputSignals		  "Spools.HPSpoolSpeed_rpm"
@@ -13333,7 +13333,7 @@ Model {
 	  Name			  "Bus Controls"
 	  SID			  "26468"
 	  Ports			  [0, 8]
-	  Position		  [105, 66, 225, 484]
+	  Position		  [105, 101, 225, 519]
 	  ZOrder		  -21
 	  LibraryVersion	  "1.225"
 	  MinAlgLoopOccurrences	  off
@@ -13693,7 +13693,7 @@ Model {
 	  BlockType		  Clock
 	  Name			  "Clock"
 	  SID			  "25217"
-	  Position		  [715, 45, 735, 65]
+	  Position		  [715, 80, 735, 100]
 	  ZOrder		  -22
 	}
 	Block {
@@ -13701,7 +13701,7 @@ Model {
 	  Name			  "Compare\nTo Constant"
 	  SID			  "25218"
 	  Ports			  [1, 1]
-	  Position		  [775, 40, 805, 70]
+	  Position		  [775, 75, 805, 105]
 	  ZOrder		  -23
 	  ShowName		  off
 	  LibraryVersion	  "1.274"
@@ -13717,7 +13717,7 @@ Model {
 	  Name			  "DC Bus 1"
 	  SID			  "26609"
 	  Ports			  [4, 3]
-	  Position		  [3340, 80, 3415, 320]
+	  Position		  [3340, 115, 3415, 355]
 	  ZOrder		  -24
 	  BlockMirror		  on
 	  MinAlgLoopOccurrences	  off
@@ -13983,7 +13983,7 @@ Model {
 	  Name			  "DC Bus 2"
 	  SID			  "26624"
 	  Ports			  [4, 3]
-	  Position		  [3340, 605, 3415, 845]
+	  Position		  [3340, 640, 3415, 880]
 	  ZOrder		  -25
 	  BlockMirror		  on
 	  MinAlgLoopOccurrences	  off
@@ -14249,12 +14249,12 @@ Model {
 	  Name			  "Enabled \nDC Load1"
 	  SID			  "26579"
 	  Ports			  [2, 1, 1]
-	  Position		  [3002, 160, 3053, 225]
+	  Position		  [3002, 195, 3053, 260]
 	  ZOrder		  -26
 	  BlockRotation		  270
 	  BlockMirror		  on
 	  NamePlacement		  "alternate"
-	  LibraryVersion	  "1.336"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Loads/Enabled \nDC Load1"
 	  SourceType		  ""
 	}
@@ -14263,12 +14263,12 @@ Model {
 	  Name			  "Enabled \nDC Load2"
 	  SID			  "26580"
 	  Ports			  [2, 1, 1]
-	  Position		  [3017, 765, 3068, 830]
+	  Position		  [3017, 800, 3068, 865]
 	  ZOrder		  -27
 	  BlockRotation		  270
 	  BlockMirror		  on
 	  NamePlacement		  "alternate"
-	  LibraryVersion	  "1.336"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Loads/Enabled \nDC Load1"
 	  SourceType		  ""
 	}
@@ -14277,12 +14277,12 @@ Model {
 	  Name			  "Enabled_AC_Loadloss"
 	  SID			  "27388"
 	  Ports			  [2, 2, 1]
-	  Position		  [2355, 400, 2410, 495]
+	  Position		  [2355, 435, 2410, 530]
 	  ZOrder		  6
 	  BlockRotation		  270
 	  BlockMirror		  on
 	  NamePlacement		  "alternate"
-	  LibraryVersion	  "1.336"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Loads/Enabled_AC_Loadloss"
 	  SourceType		  ""
 	  P			  "3000"
@@ -14296,12 +14296,12 @@ Model {
 	  Name			  "Enabled_AC_Loadloss1"
 	  SID			  "27389"
 	  Ports			  [2, 2, 1]
-	  Position		  [2350, 645, 2405, 740]
+	  Position		  [2350, 680, 2405, 775]
 	  ZOrder		  7
 	  BlockRotation		  270
 	  BlockMirror		  on
 	  NamePlacement		  "alternate"
-	  LibraryVersion	  "1.336"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Loads/Enabled_AC_Loadloss"
 	  SourceType		  ""
 	  P			  "1000"
@@ -14315,12 +14315,12 @@ Model {
 	  Name			  "Enabled_AC_Loadloss2"
 	  SID			  "27390"
 	  Ports			  [2, 2, 1]
-	  Position		  [2355, 910, 2410, 1005]
+	  Position		  [2355, 945, 2410, 1040]
 	  ZOrder		  8
 	  BlockRotation		  270
 	  BlockMirror		  on
 	  NamePlacement		  "alternate"
-	  LibraryVersion	  "1.336"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Loads/Enabled_AC_Loadloss"
 	  SourceType		  ""
 	  P			  "1000"
@@ -14334,12 +14334,12 @@ Model {
 	  Name			  "Enabled_AC_Loadloss3"
 	  SID			  "27391"
 	  Ports			  [2, 2, 1]
-	  Position		  [2355, 160, 2410, 255]
+	  Position		  [2355, 195, 2410, 290]
 	  ZOrder		  9
 	  BlockRotation		  270
 	  BlockMirror		  on
 	  NamePlacement		  "alternate"
-	  LibraryVersion	  "1.336"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Loads/Enabled_AC_Loadloss"
 	  SourceType		  ""
 	  P			  "3000"
@@ -14353,7 +14353,7 @@ Model {
 	  Name			  "Engine Outputs"
 	  SID			  "25390"
 	  Ports			  [3, 1]
-	  Position		  [615, 339, 770, 451]
+	  Position		  [615, 374, 770, 486]
 	  ZOrder		  -33
 	  LibraryVersion	  "1.225"
 	  MinAlgLoopOccurrences	  off
@@ -14388,7 +14388,6 @@ Model {
 	      Port {
 		PortNumber		1
 		Name			"Left Wing Torq (Nm)"
-		PropagatedSignals	"Ploss (W)"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
@@ -14404,7 +14403,6 @@ Model {
 	      Port {
 		PortNumber		1
 		Name			"Right Wing Torq (Nm)"
-		PropagatedSignals	"Ploss (W)"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
@@ -14420,7 +14418,6 @@ Model {
 	      Port {
 		PortNumber		1
 		Name			"APU Torq (Nm)"
-		PropagatedSignals	"Ploss (W)"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
@@ -14484,7 +14481,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From1"
 	  SID			  "27392"
-	  Position		  [430, 549, 600, 571]
+	  Position		  [430, 584, 600, 606]
 	  ZOrder		  28
 	  BackgroundColor	  "orange"
 	  ShowName		  off
@@ -14494,7 +14491,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From10"
 	  SID			  "25397"
-	  Position		  [3095, 785, 3165, 805]
+	  Position		  [3095, 820, 3165, 840]
 	  ZOrder		  -35
 	  BlockMirror		  on
 	  BackgroundColor	  "[0.909804, 0.819608, 0.321569]"
@@ -14507,7 +14504,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From11"
 	  SID			  "25398"
-	  Position		  [2845, 1110, 2915, 1130]
+	  Position		  [2845, 1145, 2915, 1165]
 	  ZOrder		  -36
 	  BlockMirror		  on
 	  BackgroundColor	  "yellow"
@@ -14519,7 +14516,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From12"
 	  SID			  "25399"
-	  Position		  [1625, 825, 1695, 845]
+	  Position		  [1625, 860, 1695, 880]
 	  ZOrder		  -37
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -14530,7 +14527,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From13"
 	  SID			  "25400"
-	  Position		  [895, 429, 960, 451]
+	  Position		  [895, 464, 960, 486]
 	  ZOrder		  -38
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -14541,7 +14538,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From14"
 	  SID			  "26525"
-	  Position		  [1810, 935, 1885, 955]
+	  Position		  [1810, 970, 1885, 990]
 	  ZOrder		  -39
 	  BlockMirror		  on
 	  BackgroundColor	  "yellow"
@@ -14553,7 +14550,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From15"
 	  SID			  "26526"
-	  Position		  [1810, 961, 1885, 979]
+	  Position		  [1810, 996, 1885, 1014]
 	  ZOrder		  -40
 	  BlockMirror		  on
 	  BackgroundColor	  "yellow"
@@ -14565,7 +14562,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From16"
 	  SID			  "26527"
-	  Position		  [1810, 987, 1885, 1003]
+	  Position		  [1810, 1022, 1885, 1038]
 	  ZOrder		  -41
 	  BlockMirror		  on
 	  BackgroundColor	  "yellow"
@@ -14577,7 +14574,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From17"
 	  SID			  "26528"
-	  Position		  [1810, 1010, 1885, 1030]
+	  Position		  [1810, 1045, 1885, 1065]
 	  ZOrder		  -42
 	  BlockMirror		  on
 	  BackgroundColor	  "yellow"
@@ -14589,18 +14586,18 @@ Model {
 	  BlockType		  From
 	  Name			  "From18"
 	  SID			  "25405"
-	  Position		  [2235, 882, 2340, 908]
+	  Position		  [2235, 917, 2340, 943]
 	  ZOrder		  -43
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
 	  FontName		  "Arial"
-	  GotoTag		  "AC_Stdby2_Load_W"
+	  GotoTag		  "AC_Load4"
 	}
 	Block {
 	  BlockType		  From
 	  Name			  "From19"
 	  SID			  "27393"
-	  Position		  [430, 594, 600, 616]
+	  Position		  [430, 629, 600, 651]
 	  ZOrder		  27
 	  BackgroundColor	  "orange"
 	  ShowName		  off
@@ -14610,7 +14607,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From2"
 	  SID			  "25407"
-	  Position		  [425, 384, 590, 406]
+	  Position		  [425, 419, 590, 441]
 	  ZOrder		  -45
 	  BackgroundColor	  "lightBlue"
 	  ShowName		  off
@@ -14620,7 +14617,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From20"
 	  SID			  "27394"
-	  Position		  [430, 639, 600, 661]
+	  Position		  [430, 674, 600, 696]
 	  ZOrder		  26
 	  BackgroundColor	  "orange"
 	  ShowName		  off
@@ -14630,7 +14627,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From21"
 	  SID			  "26582"
-	  Position		  [3845, 155, 3930, 175]
+	  Position		  [3845, 190, 3930, 210]
 	  ZOrder		  -47
 	  BlockMirror		  on
 	  BackgroundColor	  "yellow"
@@ -14642,7 +14639,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From22"
 	  SID			  "26601"
-	  Position		  [3850, 656, 3925, 674]
+	  Position		  [3850, 691, 3925, 709]
 	  ZOrder		  -48
 	  BlockMirror		  on
 	  BackgroundColor	  "[0.909804, 0.819608, 0.321569]"
@@ -14654,7 +14651,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From23"
 	  SID			  "26589"
-	  Position		  [3855, 464, 3945, 486]
+	  Position		  [3855, 499, 3945, 521]
 	  ZOrder		  -49
 	  BlockMirror		  on
 	  BackgroundColor	  "[0.909804, 0.819608, 0.321569]"
@@ -14667,7 +14664,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From24"
 	  SID			  "25412"
-	  Position		  [910, 610, 1005, 630]
+	  Position		  [910, 645, 1005, 665]
 	  ZOrder		  -50
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -14678,7 +14675,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From25"
 	  SID			  "26602"
-	  Position		  [3850, 691, 3920, 709]
+	  Position		  [3850, 726, 3920, 744]
 	  ZOrder		  -51
 	  BlockMirror		  on
 	  BackgroundColor	  "[0.909804, 0.819608, 0.321569]"
@@ -14690,7 +14687,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From26"
 	  SID			  "25414"
-	  Position		  [1610, 80, 1695, 100]
+	  Position		  [1610, 115, 1695, 135]
 	  ZOrder		  -52
 	  BackgroundColor	  "cyan"
 	  ShowName		  off
@@ -14701,7 +14698,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From27"
 	  SID			  "25415"
-	  Position		  [1620, 625, 1700, 645]
+	  Position		  [1620, 660, 1700, 680]
 	  ZOrder		  -53
 	  BackgroundColor	  "cyan"
 	  ShowName		  off
@@ -14712,7 +14709,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From28"
 	  SID			  "26534"
-	  Position		  [1985, 97, 2065, 123]
+	  Position		  [1985, 132, 2065, 158]
 	  ZOrder		  -54
 	  BackgroundColor	  "cyan"
 	  ShowName		  off
@@ -14723,7 +14720,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From29"
 	  SID			  "25417"
-	  Position		  [2235, 120, 2305, 140]
+	  Position		  [2235, 155, 2305, 175]
 	  ZOrder		  -55
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -14734,7 +14731,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From3"
 	  SID			  "25418"
-	  Position		  [425, 349, 590, 371]
+	  Position		  [425, 384, 590, 406]
 	  ZOrder		  -56
 	  BackgroundColor	  "lightBlue"
 	  ShowName		  off
@@ -14744,7 +14741,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From32"
 	  SID			  "26535"
-	  Position		  [1970, 353, 2050, 377]
+	  Position		  [1970, 388, 2050, 412]
 	  ZOrder		  -59
 	  BackgroundColor	  "cyan"
 	  ShowName		  off
@@ -14755,7 +14752,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From33"
 	  SID			  "26536"
-	  Position		  [1965, 585, 2045, 615]
+	  Position		  [1965, 620, 2045, 650]
 	  ZOrder		  -60
 	  BackgroundColor	  "cyan"
 	  ShowName		  off
@@ -14766,7 +14763,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From34"
 	  SID			  "26568"
-	  Position		  [1965, 860, 2045, 890]
+	  Position		  [1965, 895, 2045, 925]
 	  ZOrder		  -61
 	  BackgroundColor	  "cyan"
 	  ShowName		  off
@@ -14777,7 +14774,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From35"
 	  SID			  "25424"
-	  Position		  [915, 836, 975, 854]
+	  Position		  [915, 871, 975, 889]
 	  ZOrder		  -62
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -14788,7 +14785,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From36"
 	  SID			  "25425"
-	  Position		  [2240, 380, 2305, 400]
+	  Position		  [2240, 415, 2305, 435]
 	  ZOrder		  -63
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -14799,7 +14796,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From37"
 	  SID			  "25426"
-	  Position		  [3450, 100, 3550, 120]
+	  Position		  [3450, 135, 3550, 155]
 	  ZOrder		  -64
 	  BlockMirror		  on
 	  BackgroundColor	  "cyan"
@@ -14811,7 +14808,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From38"
 	  SID			  "25427"
-	  Position		  [3475, 626, 3550, 644]
+	  Position		  [3475, 661, 3550, 679]
 	  ZOrder		  -65
 	  BlockMirror		  on
 	  BackgroundColor	  "[0.000000, 0.819608, 0.819608]"
@@ -14823,7 +14820,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From39"
 	  SID			  "27254"
-	  Position		  [3555, 260, 3595, 280]
+	  Position		  [3555, 295, 3595, 315]
 	  ZOrder		  -66
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -14834,7 +14831,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From4"
 	  SID			  "25429"
-	  Position		  [2320, 80, 2390, 100]
+	  Position		  [2320, 115, 2390, 135]
 	  ZOrder		  -67
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -14846,7 +14843,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From40"
 	  SID			  "27259"
-	  Position		  [3555, 279, 3595, 301]
+	  Position		  [3555, 314, 3595, 336]
 	  ZOrder		  -68
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -14857,7 +14854,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From41"
 	  SID			  "25431"
-	  Position		  [3075, 119, 3150, 141]
+	  Position		  [3075, 154, 3150, 176]
 	  ZOrder		  -69
 	  BlockMirror		  on
 	  BackgroundColor	  "yellow"
@@ -14869,7 +14866,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From42"
 	  SID			  "25432"
-	  Position		  [3075, 681, 3145, 699]
+	  Position		  [3075, 716, 3145, 734]
 	  ZOrder		  -70
 	  BlockMirror		  on
 	  BackgroundColor	  "[0.909804, 0.819608, 0.321569]"
@@ -14881,18 +14878,18 @@ Model {
 	  BlockType		  From
 	  Name			  "From44"
 	  SID			  "25434"
-	  Position		  [2230, 615, 2345, 645]
+	  Position		  [2230, 650, 2345, 680]
 	  ZOrder		  -72
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
 	  FontName		  "Arial"
-	  GotoTag		  "Right_Wing_Load_W"
+	  GotoTag		  "AC_Load3"
 	}
 	Block {
 	  BlockType		  From
 	  Name			  "From45"
 	  SID			  "25435"
-	  Position		  [895, 464, 965, 486]
+	  Position		  [895, 499, 965, 521]
 	  ZOrder		  -73
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -14903,7 +14900,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From46"
 	  SID			  "25436"
-	  Position		  [910, 641, 1005, 659]
+	  Position		  [910, 676, 1005, 694]
 	  ZOrder		  -74
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -14914,7 +14911,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From47"
 	  SID			  "26514"
-	  Position		  [1815, 370, 1890, 390]
+	  Position		  [1815, 405, 1890, 425]
 	  ZOrder		  -75
 	  BlockMirror		  on
 	  BackgroundColor	  "yellow"
@@ -14926,7 +14923,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From48"
 	  SID			  "26515"
-	  Position		  [1815, 396, 1890, 414]
+	  Position		  [1815, 431, 1890, 449]
 	  ZOrder		  -76
 	  BlockMirror		  on
 	  BackgroundColor	  "yellow"
@@ -14938,7 +14935,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From49"
 	  SID			  "26516"
-	  Position		  [1815, 422, 1890, 438]
+	  Position		  [1815, 457, 1890, 473]
 	  ZOrder		  -77
 	  BlockMirror		  on
 	  BackgroundColor	  "yellow"
@@ -14950,7 +14947,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From5"
 	  SID			  "25440"
-	  Position		  [2330, 325, 2400, 345]
+	  Position		  [2330, 360, 2400, 380]
 	  ZOrder		  -78
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -14962,7 +14959,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From50"
 	  SID			  "26517"
-	  Position		  [1815, 445, 1890, 465]
+	  Position		  [1815, 480, 1890, 500]
 	  ZOrder		  -79
 	  BlockMirror		  on
 	  BackgroundColor	  "yellow"
@@ -14974,7 +14971,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From51"
 	  SID			  "26583"
-	  Position		  [3850, 119, 3930, 141]
+	  Position		  [3850, 154, 3930, 176]
 	  ZOrder		  -80
 	  BlockMirror		  on
 	  BackgroundColor	  "yellow"
@@ -14986,7 +14983,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From52"
 	  SID			  "27395"
-	  Position		  [430, 684, 600, 706]
+	  Position		  [430, 719, 600, 741]
 	  ZOrder		  25
 	  BackgroundColor	  "orange"
 	  ShowName		  off
@@ -14996,7 +14993,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From53"
 	  SID			  "27396"
-	  Position		  [430, 729, 600, 751]
+	  Position		  [430, 764, 600, 786]
 	  ZOrder		  24
 	  BackgroundColor	  "orange"
 	  ShowName		  off
@@ -15006,7 +15003,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From54"
 	  SID			  "27397"
-	  Position		  [430, 774, 600, 796]
+	  Position		  [430, 809, 600, 831]
 	  ZOrder		  23
 	  BackgroundColor	  "orange"
 	  ShowName		  off
@@ -15016,7 +15013,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From55"
 	  SID			  "27398"
-	  Position		  [430, 819, 600, 841]
+	  Position		  [430, 854, 600, 876]
 	  ZOrder		  22
 	  BackgroundColor	  "orange"
 	  ShowName		  off
@@ -15026,7 +15023,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From56"
 	  SID			  "26584"
-	  Position		  [3845, 188, 3930, 212]
+	  Position		  [3845, 223, 3930, 247]
 	  ZOrder		  -85
 	  BlockMirror		  on
 	  BackgroundColor	  "yellow"
@@ -15038,7 +15035,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From57"
 	  SID			  "26578"
-	  Position		  [3045, 1034, 3165, 1056]
+	  Position		  [3045, 1069, 3165, 1091]
 	  ZOrder		  -86
 	  BlockMirror		  on
 	  BackgroundColor	  "[0.909804, 0.819608, 0.321569]"
@@ -15050,7 +15047,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From58"
 	  SID			  "27260"
-	  Position		  [3555, 299, 3595, 321]
+	  Position		  [3555, 334, 3595, 356]
 	  ZOrder		  -87
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -15061,7 +15058,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From59"
 	  SID			  "26603"
-	  Position		  [3820, 723, 3905, 747]
+	  Position		  [3820, 758, 3905, 782]
 	  ZOrder		  -88
 	  BlockMirror		  on
 	  BackgroundColor	  "[0.909804, 0.819608, 0.321569]"
@@ -15073,7 +15070,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From6"
 	  SID			  "25450"
-	  Position		  [425, 419, 590, 441]
+	  Position		  [425, 454, 590, 476]
 	  ZOrder		  -89
 	  BackgroundColor	  "lightBlue"
 	  ShowName		  off
@@ -15084,7 +15081,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From60"
 	  SID			  "27399"
-	  Position		  [430, 864, 600, 886]
+	  Position		  [430, 899, 600, 921]
 	  ZOrder		  29
 	  BackgroundColor	  "orange"
 	  ShowName		  off
@@ -15094,7 +15091,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From61"
 	  SID			  "27400"
-	  Position		  [490, 939, 585, 961]
+	  Position		  [490, 974, 585, 996]
 	  ZOrder		  30
 	  BackgroundColor	  "orange"
 	  ShowName		  off
@@ -15104,7 +15101,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From62"
 	  SID			  "27401"
-	  Position		  [490, 984, 585, 1006]
+	  Position		  [490, 1019, 585, 1041]
 	  ZOrder		  31
 	  BackgroundColor	  "orange"
 	  ShowName		  off
@@ -15114,7 +15111,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From63"
 	  SID			  "27402"
-	  Position		  [490, 1029, 585, 1051]
+	  Position		  [490, 1064, 585, 1086]
 	  ZOrder		  32
 	  BackgroundColor	  "orange"
 	  ShowName		  off
@@ -15124,7 +15121,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From64"
 	  SID			  "27403"
-	  Position		  [490, 1074, 585, 1096]
+	  Position		  [490, 1109, 585, 1131]
 	  ZOrder		  33
 	  BackgroundColor	  "orange"
 	  ShowName		  off
@@ -15134,7 +15131,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From7"
 	  SID			  "25451"
-	  Position		  [2330, 575, 2400, 595]
+	  Position		  [2330, 610, 2400, 630]
 	  ZOrder		  -90
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -15146,7 +15143,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From8"
 	  SID			  "25452"
-	  Position		  [2345, 845, 2415, 865]
+	  Position		  [2345, 880, 2415, 900]
 	  ZOrder		  -91
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -15158,7 +15155,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From9"
 	  SID			  "25453"
-	  Position		  [3105, 180, 3175, 200]
+	  Position		  [3105, 215, 3175, 235]
 	  ZOrder		  -92
 	  BlockMirror		  on
 	  BackgroundColor	  "yellow"
@@ -15171,7 +15168,7 @@ Model {
 	  BlockType		  From
 	  Name			  "Fromb"
 	  SID			  "25454"
-	  Position		  [905, 186, 990, 204]
+	  Position		  [905, 221, 990, 239]
 	  ZOrder		  -93
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -15182,7 +15179,7 @@ Model {
 	  BlockType		  From
 	  Name			  "Fromb1"
 	  SID			  "25455"
-	  Position		  [895, 162, 1010, 178]
+	  Position		  [895, 197, 1010, 213]
 	  ZOrder		  -94
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -15193,7 +15190,7 @@ Model {
 	  BlockType		  From
 	  Name			  "Fromb2"
 	  SID			  "25456"
-	  Position		  [895, 401, 990, 419]
+	  Position		  [895, 436, 990, 454]
 	  ZOrder		  -95
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -15204,7 +15201,7 @@ Model {
 	  BlockType		  From
 	  Name			  "Fromb3"
 	  SID			  "25457"
-	  Position		  [915, 810, 1035, 830]
+	  Position		  [915, 845, 1035, 865]
 	  ZOrder		  -96
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -15215,7 +15212,7 @@ Model {
 	  BlockType		  From
 	  Name			  "Fromb4"
 	  SID			  "26590"
-	  Position		  [3845, 375, 3945, 395]
+	  Position		  [3845, 410, 3945, 430]
 	  ZOrder		  -97
 	  BlockMirror		  on
 	  BackgroundColor	  "[0.909804, 0.819608, 0.321569]"
@@ -15227,7 +15224,7 @@ Model {
 	  BlockType		  From
 	  Name			  "Fromb5"
 	  SID			  "26591"
-	  Position		  [3845, 406, 3945, 424]
+	  Position		  [3845, 441, 3945, 459]
 	  ZOrder		  -98
 	  BlockMirror		  on
 	  BackgroundColor	  "[0.909804, 0.819608, 0.321569]"
@@ -15239,7 +15236,7 @@ Model {
 	  BlockType		  From
 	  Name			  "Fromb6"
 	  SID			  "26592"
-	  Position		  [3840, 433, 3945, 457]
+	  Position		  [3840, 468, 3945, 492]
 	  ZOrder		  -99
 	  BlockMirror		  on
 	  BackgroundColor	  "[0.909804, 0.819608, 0.321569]"
@@ -15251,7 +15248,7 @@ Model {
 	  BlockType		  From
 	  Name			  "Fromb7"
 	  SID			  "26593"
-	  Position		  [3830, 518, 3945, 542]
+	  Position		  [3830, 553, 3945, 577]
 	  ZOrder		  -100
 	  BlockMirror		  on
 	  BackgroundColor	  "[0.909804, 0.819608, 0.321569]"
@@ -15263,7 +15260,7 @@ Model {
 	  BlockType		  From
 	  Name			  "Fromb8"
 	  SID			  "25462"
-	  Position		  [2680, 461, 2815, 489]
+	  Position		  [2680, 496, 2815, 524]
 	  ZOrder		  -101
 	  BlockMirror		  on
 	  BackgroundColor	  "yellow"
@@ -15276,9 +15273,9 @@ Model {
 	  Name			  "GND Service Bus"
 	  SID			  "26639"
 	  Ports			  [1, 1]
-	  Position		  [1170, 592, 1240, 678]
+	  Position		  [1170, 627, 1240, 713]
 	  ZOrder		  -102
-	  LibraryVersion	  "1.336"
+	  LibraryVersion	  "1.346"
 	  FontSize		  8
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/GND Service Bus"
 	  SourceType		  ""
@@ -15288,25 +15285,25 @@ Model {
 	  Name			  "Generation Unit Sync-Sync"
 	  SID			  "25467"
 	  Ports			  [3, 4]
-	  Position		  [1135, 131, 1280, 209]
+	  Position		  [1135, 166, 1280, 244]
 	  ZOrder		  -103
-	  LibraryVersion	  "1.336"
+	  LibraryVersion	  "1.346"
 	  FontSize		  8
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Generation Unit\nSync-Sync"
 	  SourceType		  ""
-	  machine_mode		  "300kVA_Gen"
-	  Rs			  "0.007845"
-	  Xls			  "0.0030003"
-	  Xmd			  "0.83467"
-	  Xmq			  "0.0009001"
-	  R_fd			  "0.0024787"
-	  Xlfd			  "0.12144"
-	  R_1d			  "0.072117"
-	  Xl1d			  "0.60648"
-	  R_1q			  "0.019173"
-	  R_2q			  "0.019173"
-	  Xl1q			  "0.10831"
-	  Xl2q			  "0.10831"
+	  machine_mode		  "100kVA_Gen"
+	  Rs			  "0.0163"
+	  Xls			  "0.00054"
+	  Xmd			  "0.66176"
+	  Xmq			  "0.00099"
+	  R_fd			  "0.016"
+	  Xlfd			  "0.2092"
+	  R_1d			  "0.2047"
+	  Xl1d			  "0.6524"
+	  R_1q			  "0.0429"
+	  R_2q			  "0.0429"
+	  Xl1q			  "0.0639"
+	  Xl2q			  "0.0639"
 	  ws			  "377"
 	  RTL			  "0.001"
 	  XTL			  "0.1"
@@ -15316,13 +15313,14 @@ Model {
 	  TA			  "0.2"
 	  KE			  "1"
 	  TE			  "0.314"
-	  SB			  "300000"
+	  SB			  "100000"
 	  VBDQ			  "100"
 	  wB			  "377"
-	  P			  "2"
-	  H			  "0.17945"
+	  P			  "6"
+	  H			  "0.1777"
 	  R_conv_gen		  "0.05"
 	  mc_gen		  "10000"
+	  Vnom			  "115"
 	  fan_load		  "'init_fan_characteristics.mat'"
 	  exciter_param		  "'exciter.mat'"
 	}
@@ -15331,25 +15329,25 @@ Model {
 	  Name			  "Generation Unit Sync-Sync1"
 	  SID			  "25468"
 	  Ports			  [3, 4]
-	  Position		  [1140, 396, 1285, 474]
+	  Position		  [1140, 431, 1285, 509]
 	  ZOrder		  -104
-	  LibraryVersion	  "1.336"
+	  LibraryVersion	  "1.346"
 	  FontSize		  8
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Generation Unit\nSync-Sync"
 	  SourceType		  ""
-	  machine_mode		  "300kVA_Gen"
-	  Rs			  "0.007845"
-	  Xls			  "0.0030003"
-	  Xmd			  "0.83467"
-	  Xmq			  "0.0009001"
-	  R_fd			  "0.0024787"
-	  Xlfd			  "0.12144"
-	  R_1d			  "0.072117"
-	  Xl1d			  "0.60648"
-	  R_1q			  "0.019173"
-	  R_2q			  "0.019173"
-	  Xl1q			  "0.10831"
-	  Xl2q			  "0.10831"
+	  machine_mode		  "100kVA_Gen"
+	  Rs			  "0.0163"
+	  Xls			  "0.00054"
+	  Xmd			  "0.66176"
+	  Xmq			  "0.00099"
+	  R_fd			  "0.016"
+	  Xlfd			  "0.2092"
+	  R_1d			  "0.2047"
+	  Xl1d			  "0.6524"
+	  R_1q			  "0.0429"
+	  R_2q			  "0.0429"
+	  Xl1q			  "0.0639"
+	  Xl2q			  "0.0639"
 	  ws			  "377"
 	  RTL			  "0.001"
 	  XTL			  "0.1"
@@ -15359,13 +15357,14 @@ Model {
 	  TA			  "0.2"
 	  KE			  "1"
 	  TE			  "0.314"
-	  SB			  "300000"
+	  SB			  "100000"
 	  VBDQ			  "100"
 	  wB			  "377"
-	  P			  "2"
-	  H			  "0.17945"
+	  P			  "6"
+	  H			  "0.1777"
 	  R_conv_gen		  "0.05"
 	  mc_gen		  "10000"
+	  Vnom			  "115"
 	  fan_load		  "'init_fan_characteristics.mat'"
 	  exciter_param		  "'exciter.mat'"
 	}
@@ -15374,25 +15373,25 @@ Model {
 	  Name			  "Generation Unit Sync-Sync2"
 	  SID			  "25469"
 	  Ports			  [3, 4]
-	  Position		  [1135, 781, 1280, 859]
+	  Position		  [1135, 816, 1280, 894]
 	  ZOrder		  -105
-	  LibraryVersion	  "1.336"
+	  LibraryVersion	  "1.346"
 	  FontSize		  8
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Generation Unit\nSync-Sync"
 	  SourceType		  ""
-	  machine_mode		  "300kVA_Gen"
-	  Rs			  "0.007845"
-	  Xls			  "0.0030003"
-	  Xmd			  "0.83467"
-	  Xmq			  "0.0009001"
-	  R_fd			  "0.0024787"
-	  Xlfd			  "0.12144"
-	  R_1d			  "0.072117"
-	  Xl1d			  "0.60648"
-	  R_1q			  "0.019173"
-	  R_2q			  "0.019173"
-	  Xl1q			  "0.10831"
-	  Xl2q			  "0.10831"
+	  machine_mode		  "100kVA_Gen"
+	  Rs			  "0.0163"
+	  Xls			  "0.00054"
+	  Xmd			  "0.66176"
+	  Xmq			  "0.00099"
+	  R_fd			  "0.016"
+	  Xlfd			  "0.2092"
+	  R_1d			  "0.2047"
+	  Xl1d			  "0.6524"
+	  R_1q			  "0.0429"
+	  R_2q			  "0.0429"
+	  Xl1q			  "0.0639"
+	  Xl2q			  "0.0639"
 	  ws			  "377"
 	  RTL			  "0.001"
 	  XTL			  "0.1"
@@ -15402,13 +15401,14 @@ Model {
 	  TA			  "0.2"
 	  KE			  "1"
 	  TE			  "0.314"
-	  SB			  "300000"
+	  SB			  "100000"
 	  VBDQ			  "100"
 	  wB			  "377"
-	  P			  "2"
-	  H			  "0.17945"
+	  P			  "6"
+	  H			  "0.1777"
 	  R_conv_gen		  "0.05"
 	  mc_gen		  "10000"
+	  Vnom			  "115"
 	  fan_load		  "'init_fan_characteristics.mat'"
 	  exciter_param		  "'exciter.mat'"
 	}
@@ -15417,7 +15417,7 @@ Model {
 	  Name			  "Generator Bus"
 	  SID			  "26495"
 	  Ports			  [5, 4]
-	  Position		  [1715, 59, 1790, 321]
+	  Position		  [1715, 94, 1790, 356]
 	  ZOrder		  -106
 	  NamePlacement		  "alternate"
 	  FontName		  "Arial"
@@ -15436,7 +15436,7 @@ Model {
 	  }
 	  System {
 	    Name		    "Generator Bus"
-	    Location		    [-4, 0, 1288, 732]
+	    Location		    [-4, -4, 1370, 728]
 	    Open		    off
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    200
@@ -15448,7 +15448,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
+	    ZoomFactor		    "150"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Select"
@@ -15503,7 +15503,7 @@ Model {
 	      LibraryVersion	      "1.274"
 	      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
 	      SourceType	      "Compare To Constant"
-	      relop		      "<="
+	      relop		      "=="
 	      const		      "2"
 	      OutDataTypeStr	      "boolean"
 	      ZeroCross		      on
@@ -15518,7 +15518,7 @@ Model {
 	      LibraryVersion	      "1.274"
 	      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
 	      SourceType	      "Compare To Constant"
-	      relop		      "<="
+	      relop		      "=="
 	      const		      "1"
 	      OutDataTypeStr	      "boolean"
 	      ZeroCross		      on
@@ -15533,7 +15533,7 @@ Model {
 	      LibraryVersion	      "1.274"
 	      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
 	      SourceType	      "Compare To Constant"
-	      relop		      "<="
+	      relop		      "=="
 	      const		      "3.0"
 	      OutDataTypeStr	      "boolean"
 	      ZeroCross		      on
@@ -15764,7 +15764,7 @@ Model {
 	  Name			  "Generator Bus1"
 	  SID			  "26523"
 	  Ports			  [6, 5]
-	  Position		  [1720, 615, 1800, 905]
+	  Position		  [1720, 650, 1800, 940]
 	  ZOrder		  -107
 	  NamePlacement		  "alternate"
 	  FontName		  "Arial"
@@ -16482,7 +16482,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto"
 	  SID			  "25470"
-	  Position		  [1820, 151, 1885, 169]
+	  Position		  [1820, 186, 1885, 204]
 	  ZOrder		  -108
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -16493,7 +16493,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto1"
 	  SID			  "26537"
-	  Position		  [255, 581, 335, 599]
+	  Position		  [255, 616, 335, 634]
 	  ZOrder		  -109
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -16503,7 +16503,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto10"
 	  SID			  "25472"
-	  Position		  [1350, 802, 1485, 818]
+	  Position		  [1350, 837, 1485, 853]
 	  ZOrder		  -110
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -16514,7 +16514,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto11"
 	  SID			  "25473"
-	  Position		  [2680, 360, 2815, 380]
+	  Position		  [2680, 395, 2815, 415]
 	  ZOrder		  -111
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -16525,7 +16525,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto12"
 	  SID			  "25474"
-	  Position		  [3290, 395, 3425, 415]
+	  Position		  [3290, 430, 3425, 450]
 	  ZOrder		  -112
 	  BlockMirror		  on
 	  BackgroundColor	  "[0.909804, 0.819608, 0.321569]"
@@ -16537,7 +16537,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto13"
 	  SID			  "25475"
-	  Position		  [840, 46, 920, 64]
+	  Position		  [840, 81, 920, 99]
 	  ZOrder		  -113
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -16548,7 +16548,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto14"
 	  SID			  "26573"
-	  Position		  [2230, 649, 2295, 671]
+	  Position		  [2230, 684, 2295, 706]
 	  ZOrder		  -114
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -16559,7 +16559,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto15"
 	  SID			  "26574"
-	  Position		  [2230, 705, 2295, 725]
+	  Position		  [2230, 740, 2295, 760]
 	  ZOrder		  -115
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -16570,7 +16570,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto16"
 	  SID			  "26575"
-	  Position		  [2215, 919, 2275, 941]
+	  Position		  [2215, 954, 2275, 976]
 	  ZOrder		  -116
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -16581,7 +16581,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto17"
 	  SID			  "26576"
-	  Position		  [2215, 970, 2275, 990]
+	  Position		  [2215, 1005, 2275, 1025]
 	  ZOrder		  -117
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -16590,9 +16590,19 @@ Model {
 	}
 	Block {
 	  BlockType		  Goto
+	  Name			  "Goto18"
+	  SID			  "27866"
+	  Position		  [255, 786, 335, 804]
+	  ZOrder		  75
+	  BackgroundColor	  "yellow"
+	  ShowName		  off
+	  GotoTag		  "AC_Load3"
+	}
+	Block {
+	  BlockType		  Goto
 	  Name			  "Goto19"
 	  SID			  "25481"
-	  Position		  [3290, 470, 3425, 490]
+	  Position		  [3290, 505, 3425, 525]
 	  ZOrder		  -119
 	  BlockMirror		  on
 	  BackgroundColor	  "[0.909804, 0.819608, 0.321569]"
@@ -16604,7 +16614,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto2"
 	  SID			  "25482"
-	  Position		  [1340, 150, 1475, 170]
+	  Position		  [1340, 185, 1475, 205]
 	  ZOrder		  -120
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -16615,7 +16625,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto20"
 	  SID			  "25483"
-	  Position		  [3290, 420, 3425, 440]
+	  Position		  [3290, 455, 3425, 475]
 	  ZOrder		  -121
 	  BlockMirror		  on
 	  BackgroundColor	  "[0.909804, 0.819608, 0.321569]"
@@ -16627,7 +16637,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto23"
 	  SID			  "25486"
-	  Position		  [3225, 191, 3315, 209]
+	  Position		  [3225, 226, 3315, 244]
 	  ZOrder		  -124
 	  BlockMirror		  on
 	  BackgroundColor	  "yellow"
@@ -16639,7 +16649,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto24"
 	  SID			  "25487"
-	  Position		  [3225, 271, 3310, 289]
+	  Position		  [3225, 306, 3310, 324]
 	  ZOrder		  -125
 	  BlockMirror		  on
 	  BackgroundColor	  "yellow"
@@ -16651,7 +16661,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto25"
 	  SID			  "25488"
-	  Position		  [3240, 714, 3320, 736]
+	  Position		  [3240, 749, 3320, 771]
 	  ZOrder		  -126
 	  BlockMirror		  on
 	  BackgroundColor	  "[0.909804, 0.819608, 0.321569]"
@@ -16663,7 +16673,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto26"
 	  SID			  "25489"
-	  Position		  [3245, 794, 3315, 816]
+	  Position		  [3245, 829, 3315, 851]
 	  ZOrder		  -127
 	  BlockMirror		  on
 	  BackgroundColor	  "[0.909804, 0.819608, 0.321569]"
@@ -16676,7 +16686,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto27"
 	  SID			  "25490"
-	  Position		  [2510, 1001, 2575, 1019]
+	  Position		  [2510, 1036, 2575, 1054]
 	  ZOrder		  -128
 	  BlockMirror		  on
 	  BackgroundColor	  "yellow"
@@ -16688,7 +16698,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto28"
 	  SID			  "25491"
-	  Position		  [2800, 1068, 2885, 1092]
+	  Position		  [2800, 1103, 2885, 1127]
 	  ZOrder		  -129
 	  BlockMirror		  on
 	  BackgroundColor	  "orange"
@@ -16700,7 +16710,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto29"
 	  SID			  "25492"
-	  Position		  [1825, 281, 1885, 299]
+	  Position		  [1825, 316, 1885, 334]
 	  ZOrder		  -130
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -16711,7 +16721,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto3"
 	  SID			  "25493"
-	  Position		  [1820, 217, 1885, 233]
+	  Position		  [1820, 252, 1885, 268]
 	  ZOrder		  -131
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -16722,7 +16732,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto30"
 	  SID			  "26487"
-	  Position		  [250, 141, 350, 159]
+	  Position		  [250, 176, 350, 194]
 	  ZOrder		  -132
 	  BackgroundColor	  "cyan"
 	  ShowName		  off
@@ -16732,7 +16742,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto31"
 	  SID			  "25495"
-	  Position		  [1310, 189, 1475, 211]
+	  Position		  [1310, 224, 1475, 246]
 	  ZOrder		  -133
 	  BackgroundColor	  "orange"
 	  ShowName		  off
@@ -16743,7 +16753,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto32"
 	  SID			  "25496"
-	  Position		  [1310, 171, 1475, 189]
+	  Position		  [1310, 206, 1475, 224]
 	  ZOrder		  -134
 	  BackgroundColor	  "lightBlue"
 	  ShowName		  off
@@ -16754,7 +16764,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto33"
 	  SID			  "25497"
-	  Position		  [1315, 839, 1485, 861]
+	  Position		  [1315, 874, 1485, 896]
 	  ZOrder		  -135
 	  BackgroundColor	  "orange"
 	  ShowName		  off
@@ -16765,7 +16775,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto34"
 	  SID			  "25498"
-	  Position		  [1310, 821, 1485, 839]
+	  Position		  [1310, 856, 1485, 874]
 	  ZOrder		  -136
 	  BackgroundColor	  "lightBlue"
 	  ShowName		  off
@@ -16776,7 +16786,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto35"
 	  SID			  "25499"
-	  Position		  [1310, 437, 1440, 453]
+	  Position		  [1310, 472, 1440, 488]
 	  ZOrder		  -137
 	  BackgroundColor	  "lightBlue"
 	  ShowName		  off
@@ -16788,7 +16798,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto36"
 	  SID			  "25500"
-	  Position		  [1315, 456, 1440, 474]
+	  Position		  [1315, 491, 1440, 509]
 	  ZOrder		  -138
 	  BackgroundColor	  "orange"
 	  ShowName		  off
@@ -16799,7 +16809,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto37"
 	  SID			  "25501"
-	  Position		  [3475, 191, 3570, 209]
+	  Position		  [3475, 226, 3570, 244]
 	  ZOrder		  -139
 	  BlockMirror		  on
 	  BackgroundColor	  "orange"
@@ -16811,7 +16821,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto38"
 	  SID			  "25502"
-	  Position		  [3460, 472, 3585, 488]
+	  Position		  [3460, 507, 3585, 523]
 	  ZOrder		  -140
 	  BlockMirror		  on
 	  BackgroundColor	  "[1.000000, 0.501961, 0.000000]"
@@ -16823,7 +16833,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto39"
 	  SID			  "25503"
-	  Position		  [3485, 726, 3590, 744]
+	  Position		  [3485, 761, 3590, 779]
 	  ZOrder		  -141
 	  BlockMirror		  on
 	  BackgroundColor	  "[1.000000, 0.501961, 0.000000]"
@@ -16835,7 +16845,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto4"
 	  SID			  "26488"
-	  Position		  [250, 91, 350, 109]
+	  Position		  [250, 126, 350, 144]
 	  ZOrder		  -142
 	  BackgroundColor	  "cyan"
 	  ShowName		  off
@@ -16845,7 +16855,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto40"
 	  SID			  "25505"
-	  Position		  [1825, 690, 1880, 710]
+	  Position		  [1825, 725, 1880, 745]
 	  ZOrder		  -143
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -16856,7 +16866,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto41"
 	  SID			  "26489"
-	  Position		  [250, 191, 350, 209]
+	  Position		  [250, 226, 350, 244]
 	  ZOrder		  -144
 	  BackgroundColor	  "cyan"
 	  ShowName		  off
@@ -16866,7 +16876,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto42"
 	  SID			  "25507"
-	  Position		  [1825, 750, 1885, 770]
+	  Position		  [1825, 785, 1885, 805]
 	  ZOrder		  -145
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -16877,7 +16887,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto43"
 	  SID			  "25508"
-	  Position		  [1825, 811, 1890, 829]
+	  Position		  [1825, 846, 1890, 864]
 	  ZOrder		  -146
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -16888,7 +16898,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto44"
 	  SID			  "26569"
-	  Position		  [2225, 160, 2300, 180]
+	  Position		  [2225, 195, 2300, 215]
 	  ZOrder		  -147
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -16899,7 +16909,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto45"
 	  SID			  "26570"
-	  Position		  [2220, 215, 2295, 235]
+	  Position		  [2220, 250, 2295, 270]
 	  ZOrder		  -148
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -16910,7 +16920,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto46"
 	  SID			  "26571"
-	  Position		  [2225, 409, 2290, 431]
+	  Position		  [2225, 444, 2290, 466]
 	  ZOrder		  -149
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -16921,7 +16931,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto47"
 	  SID			  "26572"
-	  Position		  [2225, 460, 2290, 480]
+	  Position		  [2225, 495, 2290, 515]
 	  ZOrder		  -150
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -16932,7 +16942,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto48"
 	  SID			  "26490"
-	  Position		  [250, 241, 350, 259]
+	  Position		  [250, 276, 350, 294]
 	  ZOrder		  -151
 	  BackgroundColor	  "cyan"
 	  ShowName		  off
@@ -16942,7 +16952,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto49"
 	  SID			  "26491"
-	  Position		  [250, 291, 350, 309]
+	  Position		  [250, 326, 350, 344]
 	  ZOrder		  -152
 	  BackgroundColor	  "cyan"
 	  ShowName		  off
@@ -16952,7 +16962,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto5"
 	  SID			  "26538"
-	  Position		  [255, 631, 335, 649]
+	  Position		  [255, 666, 335, 684]
 	  ZOrder		  -153
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -16962,7 +16972,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto50"
 	  SID			  "26492"
-	  Position		  [250, 341, 350, 359]
+	  Position		  [250, 376, 350, 394]
 	  ZOrder		  -154
 	  BackgroundColor	  "cyan"
 	  ShowName		  off
@@ -16972,7 +16982,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto51"
 	  SID			  "26493"
-	  Position		  [255, 391, 355, 409]
+	  Position		  [255, 426, 355, 444]
 	  ZOrder		  -155
 	  BackgroundColor	  "cyan"
 	  ShowName		  off
@@ -16982,7 +16992,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto52"
 	  SID			  "26494"
-	  Position		  [255, 441, 355, 459]
+	  Position		  [255, 476, 355, 494]
 	  ZOrder		  -156
 	  BackgroundColor	  "cyan"
 	  ShowName		  off
@@ -16992,7 +17002,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto53"
 	  SID			  "26623"
-	  Position		  [3290, 495, 3425, 515]
+	  Position		  [3290, 530, 3425, 550]
 	  ZOrder		  -157
 	  BlockMirror		  on
 	  BackgroundColor	  "[0.909804, 0.819608, 0.321569]"
@@ -17004,7 +17014,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto54"
 	  SID			  "27256"
-	  Position		  [3500, 126, 3540, 144]
+	  Position		  [3500, 161, 3540, 179]
 	  ZOrder		  -158
 	  BlockMirror		  on
 	  BackgroundColor	  "yellow"
@@ -17016,7 +17026,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto55"
 	  SID			  "25521"
-	  Position		  [3290, 445, 3425, 465]
+	  Position		  [3290, 480, 3425, 500]
 	  ZOrder		  -159
 	  BlockMirror		  on
 	  BackgroundColor	  "[0.909804, 0.819608, 0.321569]"
@@ -17028,7 +17038,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto56"
 	  SID			  "25522"
-	  Position		  [1825, 871, 1890, 889]
+	  Position		  [1825, 906, 1890, 924]
 	  ZOrder		  -160
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -17039,7 +17049,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto57"
 	  SID			  "27257"
-	  Position		  [3490, 404, 3545, 426]
+	  Position		  [3490, 439, 3545, 461]
 	  ZOrder		  -161
 	  BlockMirror		  on
 	  BackgroundColor	  "[0.909804, 0.819608, 0.321569]"
@@ -17051,7 +17061,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto58"
 	  SID			  "26577"
-	  Position		  [2775, 1034, 2865, 1056]
+	  Position		  [2775, 1069, 2865, 1091]
 	  ZOrder		  -162
 	  BlockMirror		  on
 	  BackgroundColor	  "yellow"
@@ -17063,7 +17073,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto59"
 	  SID			  "26607"
-	  Position		  [2675, 113, 2770, 137]
+	  Position		  [2675, 148, 2770, 172]
 	  ZOrder		  -163
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -17074,7 +17084,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto6"
 	  SID			  "26539"
-	  Position		  [255, 681, 335, 699]
+	  Position		  [255, 696, 335, 714]
 	  ZOrder		  -164
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -17084,7 +17094,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto60"
 	  SID			  "26608"
-	  Position		  [2695, 592, 2795, 618]
+	  Position		  [2695, 627, 2795, 653]
 	  ZOrder		  -165
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -17095,7 +17105,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto61"
 	  SID			  "27258"
-	  Position		  [3500, 660, 3540, 680]
+	  Position		  [3500, 695, 3540, 715]
 	  ZOrder		  -166
 	  BlockMirror		  on
 	  BackgroundColor	  "[0.909804, 0.819608, 0.321569]"
@@ -17107,7 +17117,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto62"
 	  SID			  "27427"
-	  Position		  [2410, 268, 2500, 282]
+	  Position		  [2410, 303, 2500, 317]
 	  ZOrder		  42
 	  BackgroundColor	  "orange"
 	  ShowName		  off
@@ -17118,7 +17128,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto63"
 	  SID			  "27647"
-	  Position		  [2410, 763, 2500, 777]
+	  Position		  [2410, 798, 2500, 812]
 	  ZOrder		  58
 	  BackgroundColor	  "[1.000000, 0.501961, 0.000000]"
 	  ShowName		  off
@@ -17129,7 +17139,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto64"
 	  SID			  "27648"
-	  Position		  [2410, 1033, 2500, 1047]
+	  Position		  [2410, 1068, 2500, 1082]
 	  ZOrder		  59
 	  BackgroundColor	  "[1.000000, 0.501961, 0.000000]"
 	  ShowName		  off
@@ -17140,7 +17150,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto65"
 	  SID			  "27434"
-	  Position		  [2420, 533, 2510, 547]
+	  Position		  [2420, 568, 2510, 582]
 	  ZOrder		  47
 	  BackgroundColor	  "[1.000000, 0.501961, 0.000000]"
 	  ShowName		  off
@@ -17151,7 +17161,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto66"
 	  SID			  "27404"
-	  Position		  [635, 1011, 760, 1029]
+	  Position		  [635, 1046, 760, 1064]
 	  ZOrder		  35
 	  BackgroundColor	  "orange"
 	  ShowName		  off
@@ -17162,7 +17172,7 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto7"
 	  SID			  "26540"
-	  Position		  [255, 731, 335, 749]
+	  Position		  [255, 741, 335, 759]
 	  ZOrder		  -167
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -17172,17 +17182,17 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto8"
 	  SID			  "26541"
-	  Position		  [255, 779, 385, 801]
+	  Position		  [255, 831, 335, 849]
 	  ZOrder		  -168
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
-	  GotoTag		  "AC_Stdby2_Load_W"
+	  GotoTag		  "AC_Load4"
 	}
 	Block {
 	  BlockType		  Goto
 	  Name			  "Goto9"
 	  SID			  "25528"
-	  Position		  [1310, 417, 1440, 433]
+	  Position		  [1310, 452, 1440, 468]
 	  ZOrder		  -169
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -17194,11 +17204,11 @@ Model {
 	  Name			  "Inverter Phase\nControl"
 	  SID			  "25557"
 	  Ports			  [0, 1]
-	  Position		  [3065, 993, 3090, 1017]
+	  Position		  [3065, 1028, 3090, 1052]
 	  ZOrder		  -170
 	  BlockMirror		  on
 	  NamePlacement		  "alternate"
-	  LibraryVersion	  "1.336"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Inverter Phase\nControl"
 	  SourceType		  ""
 	}
@@ -17206,8 +17216,8 @@ Model {
 	  BlockType		  SubSystem
 	  Name			  "Loads"
 	  SID			  "26542"
-	  Ports			  [0, 5]
-	  Position		  [105, 558, 225, 822]
+	  Ports			  [0, 6]
+	  Position		  [105, 595, 225, 860]
 	  ZOrder		  -171
 	  LibraryVersion	  "1.225"
 	  MinAlgLoopOccurrences	  off
@@ -17281,7 +17291,7 @@ Model {
 	  }
 	  System {
 	    Name		    "Loads"
-	    Location		    [-11, -11, 2171, 1395]
+	    Location		    [-4, -4, 1370, 728]
 	    Open		    off
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    200
@@ -17293,7 +17303,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "125"
+	    ZoomFactor		    "150"
 	    Block {
 	      BlockType		      Sum
 	      Name		      "Add"
@@ -17342,7 +17352,7 @@ Model {
 	      Position		      [170, 300, 260, 330]
 	      ZOrder		      -5
 	      ShowName		      off
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSource"
 	      SourceType	      "Electrical Source"
 	      load_loc		      "Cabin"
@@ -17358,7 +17368,7 @@ Model {
 	      Position		      [170, 250, 260, 280]
 	      ZOrder		      -6
 	      ShowName		      off
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSource"
 	      SourceType	      "Electrical Source"
 	      load_loc		      "Cockpit"
@@ -17374,7 +17384,7 @@ Model {
 	      Position		      [170, 372, 260, 403]
 	      ZOrder		      -7
 	      ShowName		      off
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSource"
 	      SourceType	      "Electrical Source"
 	      load_loc		      "RightWing"
@@ -17390,11 +17400,39 @@ Model {
 	      Position		      [170, 482, 260, 513]
 	      ZOrder		      -8
 	      ShowName		      off
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ElectricalSource"
 	      SourceType	      "Electrical Source"
 	      load_loc		      "LeftWing"
 	      ACDC_load		      "AC"
+	    }
+	    Block {
+	      BlockType		      Ground
+	      Name		      "Ground"
+	      SID		      "27871"
+	      Position		      [180, 570, 200, 590]
+	      ZOrder		      10
+	    }
+	    Block {
+	      BlockType		      Ground
+	      Name		      "Ground1"
+	      SID		      "27872"
+	      Position		      [180, 620, 200, 640]
+	      ZOrder		      11
+	    }
+	    Block {
+	      BlockType		      Ground
+	      Name		      "Ground2"
+	      SID		      "27873"
+	      Position		      [180, 685, 200, 705]
+	      ZOrder		      12
+	    }
+	    Block {
+	      BlockType		      Ground
+	      Name		      "Ground3"
+	      SID		      "27874"
+	      Position		      [180, 735, 200, 755]
+	      ZOrder		      13
 	    }
 	    Block {
 	      BlockType		      MultiPortSwitch
@@ -17445,8 +17483,19 @@ Model {
 	      BlockType		      Gain
 	      Name		      "Reactive Power 1"
 	      SID		      "26549"
-	      Position		      [380, 615, 410, 645]
+	      Position		      [380, 730, 410, 760]
 	      ZOrder		      -13
+	      Gain		      "[0 1 0]"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Reactive Power 2"
+	      SID		      "27863"
+	      Position		      [380, 615, 410, 645]
+	      ZOrder		      5
 	      Gain		      "[0 1 0]"
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
 	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
@@ -17500,8 +17549,19 @@ Model {
 	      BlockType		      Gain
 	      Name		      "Real Power   1"
 	      SID		      "26554"
-	      Position		      [380, 565, 410, 595]
+	      Position		      [380, 680, 410, 710]
 	      ZOrder		      -18
+	      Gain		      "[1 0 0]"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Real Power   2"
+	      SID		      "27864"
+	      Position		      [380, 565, 410, 595]
+	      ZOrder		      4
 	      Gain		      "[1 0 0]"
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
 	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
@@ -17603,8 +17663,22 @@ Model {
 	      Name		      "Sum2"
 	      SID		      "26562"
 	      Ports		      [2, 1]
-	      Position		      [455, 570, 475, 590]
+	      Position		      [455, 685, 475, 705]
 	      ZOrder		      -26
+	      ShowName		      off
+	      IconShape		      "round"
+	      Inputs		      "|++"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum3"
+	      SID		      "27865"
+	      Ports		      [2, 1]
+	      Position		      [455, 570, 475, 590]
+	      ZOrder		      3
 	      ShowName		      off
 	      IconShape		      "round"
 	      Inputs		      "|++"
@@ -17649,11 +17723,20 @@ Model {
 	    }
 	    Block {
 	      BlockType		      Outport
-	      Name		      "AC_stdby2_Load_W"
-	      SID		      "26567"
+	      Name		      "AC_Load3"
+	      SID		      "27862"
 	      Position		      [530, 573, 560, 587]
-	      ZOrder		      -31
+	      ZOrder		      2
 	      Port		      "5"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "AC_Load4"
+	      SID		      "26567"
+	      Position		      [530, 688, 560, 702]
+	      ZOrder		      -31
+	      Port		      "6"
 	      IconDisplay	      "Port number"
 	    }
 	    Line {
@@ -17699,7 +17782,7 @@ Model {
 	    Line {
 	      SrcBlock		      "Sum2"
 	      SrcPort		      1
-	      DstBlock		      "AC_stdby2_Load_W"
+	      DstBlock		      "AC_Load4"
 	      DstPort		      1
 	    }
 	    Line {
@@ -17833,6 +17916,55 @@ Model {
 	      DstBlock		      "Add"
 	      DstPort		      1
 	    }
+	    Line {
+	      SrcBlock		      "Real Power   2"
+	      SrcPort		      1
+	      DstBlock		      "Sum3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Reactive Power 2"
+	      SrcPort		      1
+	      Points		      [50, 0]
+	      DstBlock		      "Sum3"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Sum3"
+	      SrcPort		      1
+	      DstBlock		      "AC_Load3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Ground"
+	      SrcPort		      1
+	      DstBlock		      "Real Power   2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Ground2"
+	      SrcPort		      1
+	      DstBlock		      "Real Power   1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Ground3"
+	      SrcPort		      1
+	      DstBlock		      "Reactive Power 1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Ground1"
+	      SrcPort		      1
+	      DstBlock		      "Reactive Power 2"
+	      DstPort		      1
+	    }
+	    Annotation {
+	      SID		      "27875"
+	      Name		      "Varying loads can be defined using lookup tables"
+	      Position		      [164, 555]
+	      BackgroundColor	      "cyan"
+	    }
 	  }
 	}
 	Block {
@@ -17840,9 +17972,9 @@ Model {
 	  Name			  "Main Bus 1"
 	  SID			  "25864"
 	  Ports			  [4, 3]
-	  Position		  [2120, 85, 2205, 255]
+	  Position		  [2120, 120, 2205, 290]
 	  ZOrder		  -172
-	  LibraryVersion	  "1.336"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Service Bus"
 	  SourceType		  ""
 	}
@@ -17851,9 +17983,9 @@ Model {
 	  Name			  "Main Bus 2"
 	  SID			  "25866"
 	  Ports			  [4, 3]
-	  Position		  [2115, 575, 2200, 745]
+	  Position		  [2115, 610, 2200, 780]
 	  ZOrder		  -173
-	  LibraryVersion	  "1.336"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Service Bus"
 	  SourceType		  ""
 	}
@@ -17861,7 +17993,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory1"
 	  SID			  "25611"
-	  Position		  [995, 837, 1010, 853]
+	  Position		  [995, 872, 1010, 888]
 	  ZOrder		  -174
 	  ShowName		  off
 	  FontName		  "Arial"
@@ -17870,7 +18002,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory10"
 	  SID			  "26518"
-	  Position		  [1780, 447, 1795, 463]
+	  Position		  [1780, 482, 1795, 498]
 	  ZOrder		  -175
 	  BlockMirror		  on
 	  ShowName		  off
@@ -17880,7 +18012,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory11"
 	  SID			  "26529"
-	  Position		  [1770, 1012, 1785, 1028]
+	  Position		  [1770, 1047, 1785, 1063]
 	  ZOrder		  -176
 	  BlockMirror		  on
 	  ShowName		  off
@@ -17890,7 +18022,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory12"
 	  SID			  "26530"
-	  Position		  [1770, 937, 1785, 953]
+	  Position		  [1770, 972, 1785, 988]
 	  ZOrder		  -177
 	  BlockMirror		  on
 	  ShowName		  off
@@ -17900,7 +18032,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory13"
 	  SID			  "26531"
-	  Position		  [1770, 962, 1785, 978]
+	  Position		  [1770, 997, 1785, 1013]
 	  ZOrder		  -178
 	  BlockMirror		  on
 	  ShowName		  off
@@ -17910,7 +18042,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory14"
 	  SID			  "26532"
-	  Position		  [1770, 987, 1785, 1003]
+	  Position		  [1770, 1022, 1785, 1038]
 	  ZOrder		  -179
 	  BlockMirror		  on
 	  ShowName		  off
@@ -17920,7 +18052,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory15"
 	  SID			  "25617"
-	  Position		  [2145, 272, 2160, 288]
+	  Position		  [2145, 307, 2160, 323]
 	  ZOrder		  -180
 	  BlockMirror		  on
 	  ShowName		  off
@@ -17930,7 +18062,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory16"
 	  SID			  "25618"
-	  Position		  [2155, 507, 2170, 523]
+	  Position		  [2155, 542, 2170, 558]
 	  ZOrder		  -181
 	  BlockMirror		  on
 	  ShowName		  off
@@ -17940,7 +18072,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory17"
 	  SID			  "25619"
-	  Position		  [2130, 1042, 2145, 1058]
+	  Position		  [2130, 1077, 2145, 1093]
 	  ZOrder		  -182
 	  BlockMirror		  on
 	  ShowName		  off
@@ -17950,7 +18082,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory19"
 	  SID			  "26594"
-	  Position		  [3815, 377, 3830, 393]
+	  Position		  [3815, 412, 3830, 428]
 	  ZOrder		  -183
 	  BlockMirror		  on
 	  ShowName		  off
@@ -17960,7 +18092,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory2"
 	  SID			  "25622"
-	  Position		  [1000, 187, 1015, 203]
+	  Position		  [1000, 222, 1015, 238]
 	  ZOrder		  -184
 	  ShowName		  off
 	  FontName		  "Arial"
@@ -17969,7 +18101,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory20"
 	  SID			  "26595"
-	  Position		  [3815, 407, 3830, 423]
+	  Position		  [3815, 442, 3830, 458]
 	  ZOrder		  -185
 	  BlockMirror		  on
 	  ShowName		  off
@@ -17979,7 +18111,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory22"
 	  SID			  "25625"
-	  Position		  [2885, 1037, 2900, 1053]
+	  Position		  [2885, 1072, 2900, 1088]
 	  ZOrder		  -186
 	  BlockMirror		  on
 	  ShowName		  off
@@ -17989,7 +18121,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory23"
 	  SID			  "26585"
-	  Position		  [3755, 192, 3770, 208]
+	  Position		  [3755, 227, 3770, 243]
 	  ZOrder		  -187
 	  BlockMirror		  on
 	  ShowName		  off
@@ -17999,7 +18131,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory24"
 	  SID			  "25627"
-	  Position		  [3370, 357, 3385, 373]
+	  Position		  [3370, 392, 3385, 408]
 	  ZOrder		  -188
 	  ShowName		  off
 	  FontSize		  8
@@ -18008,7 +18140,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory25"
 	  SID			  "25628"
-	  Position		  [3370, 892, 3385, 908]
+	  Position		  [3370, 927, 3385, 943]
 	  ZOrder		  -189
 	  ShowName		  off
 	  FontSize		  8
@@ -18017,7 +18149,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory26"
 	  SID			  "26596"
-	  Position		  [3815, 437, 3830, 453]
+	  Position		  [3815, 472, 3830, 488]
 	  ZOrder		  -190
 	  BlockMirror		  on
 	  ShowName		  off
@@ -18027,7 +18159,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory27"
 	  SID			  "25630"
-	  Position		  [2795, 1112, 2810, 1128]
+	  Position		  [2795, 1147, 2810, 1163]
 	  ZOrder		  -191
 	  BlockMirror		  on
 	  ShowName		  off
@@ -18037,7 +18169,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory28"
 	  SID			  "25631"
-	  Position		  [2845, 1147, 2860, 1163]
+	  Position		  [2845, 1182, 2860, 1198]
 	  ZOrder		  -192
 	  ShowName		  off
 	  FontSize		  8
@@ -18046,7 +18178,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory29"
 	  SID			  "26604"
-	  Position		  [3735, 727, 3750, 743]
+	  Position		  [3735, 762, 3750, 778]
 	  ZOrder		  -193
 	  BlockMirror		  on
 	  ShowName		  off
@@ -18056,7 +18188,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory3"
 	  SID			  "26519"
-	  Position		  [1780, 372, 1795, 388]
+	  Position		  [1780, 407, 1795, 423]
 	  ZOrder		  -194
 	  BlockMirror		  on
 	  ShowName		  off
@@ -18066,7 +18198,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory30"
 	  SID			  "25634"
-	  Position		  [2155, 767, 2170, 783]
+	  Position		  [2155, 802, 2170, 818]
 	  ZOrder		  -195
 	  BlockMirror		  on
 	  ShowName		  off
@@ -18076,7 +18208,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory31"
 	  SID			  "26597"
-	  Position		  [3815, 467, 3830, 483]
+	  Position		  [3815, 502, 3830, 518]
 	  ZOrder		  -196
 	  BlockMirror		  on
 	  ShowName		  off
@@ -18086,7 +18218,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory32"
 	  SID			  "26605"
-	  Position		  [3735, 677, 3750, 693]
+	  Position		  [3735, 712, 3750, 728]
 	  ZOrder		  -197
 	  BlockMirror		  on
 	  ShowName		  off
@@ -18096,7 +18228,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory33"
 	  SID			  "26586"
-	  Position		  [3755, 142, 3770, 158]
+	  Position		  [3755, 177, 3770, 193]
 	  ZOrder		  -198
 	  BlockMirror		  on
 	  ShowName		  off
@@ -18106,7 +18238,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory38"
 	  SID			  "26598"
-	  Position		  [3785, 522, 3800, 538]
+	  Position		  [3785, 557, 3800, 573]
 	  ZOrder		  -199
 	  BlockMirror		  on
 	  ShowName		  off
@@ -18116,7 +18248,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory4"
 	  SID			  "25640"
-	  Position		  [985, 432, 1000, 448]
+	  Position		  [985, 467, 1000, 483]
 	  ZOrder		  -200
 	  ShowName		  off
 	  FontName		  "Arial"
@@ -18125,7 +18257,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory5"
 	  SID			  "25641"
-	  Position		  [985, 467, 1000, 483]
+	  Position		  [985, 502, 1000, 518]
 	  ZOrder		  -201
 	  ShowName		  off
 	  FontName		  "Arial"
@@ -18134,7 +18266,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory6"
 	  SID			  "25642"
-	  Position		  [1020, 612, 1035, 628]
+	  Position		  [1020, 647, 1035, 663]
 	  ZOrder		  -202
 	  ShowName		  off
 	  FontName		  "Arial"
@@ -18143,7 +18275,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory7"
 	  SID			  "25643"
-	  Position		  [1020, 642, 1035, 658]
+	  Position		  [1020, 677, 1035, 693]
 	  ZOrder		  -203
 	  ShowName		  off
 	  FontName		  "Arial"
@@ -18152,7 +18284,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory8"
 	  SID			  "26520"
-	  Position		  [1780, 397, 1795, 413]
+	  Position		  [1780, 432, 1795, 448]
 	  ZOrder		  -204
 	  BlockMirror		  on
 	  ShowName		  off
@@ -18162,7 +18294,7 @@ Model {
 	  BlockType		  Memory
 	  Name			  "Memory9"
 	  SID			  "26521"
-	  Position		  [1780, 422, 1795, 438]
+	  Position		  [1780, 457, 1795, 473]
 	  ZOrder		  -205
 	  BlockMirror		  on
 	  ShowName		  off
@@ -18173,7 +18305,7 @@ Model {
 	  Name			  "Mux"
 	  SID			  "27252"
 	  Ports			  [3, 1]
-	  Position		  [3625, 259, 3630, 321]
+	  Position		  [3625, 294, 3630, 356]
 	  ZOrder		  -206
 	  ShowName		  off
 	  Inputs		  "3"
@@ -18184,7 +18316,7 @@ Model {
 	  Name			  "Product"
 	  SID			  "27451"
 	  Ports			  [2, 1]
-	  Position		  [1325, 57, 1355, 88]
+	  Position		  [1325, 92, 1355, 123]
 	  ZOrder		  49
 	  ShowName		  off
 	  InputSameDT		  off
@@ -18197,7 +18329,7 @@ Model {
 	  Name			  "Product1"
 	  SID			  "27454"
 	  Ports			  [2, 1]
-	  Position		  [1315, 277, 1345, 308]
+	  Position		  [1315, 312, 1345, 343]
 	  ZOrder		  52
 	  ShowName		  off
 	  InputSameDT		  off
@@ -18210,7 +18342,7 @@ Model {
 	  Name			  "Product2"
 	  SID			  "27457"
 	  Ports			  [2, 1]
-	  Position		  [1310, 717, 1340, 748]
+	  Position		  [1310, 752, 1340, 783]
 	  ZOrder		  55
 	  ShowName		  off
 	  InputSameDT		  off
@@ -18223,7 +18355,7 @@ Model {
 	  Name			  "Product3"
 	  SID			  "27850"
 	  Ports			  [2, 1]
-	  Position		  [2435, 222, 2465, 253]
+	  Position		  [2435, 257, 2465, 288]
 	  ZOrder		  63
 	  ShowName		  off
 	  InputSameDT		  off
@@ -18236,7 +18368,7 @@ Model {
 	  Name			  "Product4"
 	  SID			  "27851"
 	  Ports			  [2, 1]
-	  Position		  [2440, 482, 2470, 513]
+	  Position		  [2440, 517, 2470, 548]
 	  ZOrder		  64
 	  ShowName		  off
 	  InputSameDT		  off
@@ -18249,7 +18381,7 @@ Model {
 	  Name			  "Product5"
 	  SID			  "27852"
 	  Ports			  [2, 1]
-	  Position		  [2430, 707, 2460, 738]
+	  Position		  [2430, 742, 2460, 773]
 	  ZOrder		  65
 	  ShowName		  off
 	  InputSameDT		  off
@@ -18262,7 +18394,7 @@ Model {
 	  Name			  "Product6"
 	  SID			  "27853"
 	  Ports			  [2, 1]
-	  Position		  [2440, 972, 2470, 1003]
+	  Position		  [2440, 1007, 2470, 1038]
 	  ZOrder		  66
 	  ShowName		  off
 	  InputSameDT		  off
@@ -18275,7 +18407,7 @@ Model {
 	  Name			  "Product7"
 	  SID			  "27856"
 	  Ports			  [2, 1]
-	  Position		  [3115, 287, 3145, 318]
+	  Position		  [3115, 322, 3145, 353]
 	  ZOrder		  69
 	  ShowName		  off
 	  InputSameDT		  off
@@ -18288,7 +18420,7 @@ Model {
 	  Name			  "Product8"
 	  SID			  "27857"
 	  Ports			  [2, 1]
-	  Position		  [3125, 457, 3155, 488]
+	  Position		  [3125, 492, 3155, 523]
 	  ZOrder		  70
 	  ShowName		  off
 	  InputSameDT		  off
@@ -18300,16 +18432,83 @@ Model {
 	  BlockType		  Constant
 	  Name			  "RPM"
 	  SID			  "25386"
-	  Position		  [1005, 372, 1070, 388]
+	  Position		  [1005, 407, 1070, 423]
 	  ZOrder		  62
 	  Value			  "30000 * 0.5"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Scope"
+	  SID			  "27860"
+	  Ports			  [2]
+	  Position		  [2850, 26, 2880, 59]
+	  ZOrder		  73
+	  Floating		  off
+	  Location		  [1, 45, 1367, 723]
+	  Open			  off
+	  NumInputPorts		  "2"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	    axes2		    "%<SignalLabel>"
+	  }
+	  List {
+	    ListType		    ScopeGraphics
+	    FigureColor		    "[0.5 0.5 0.5]"
+	    AxesColor		    "[0 0 0]"
+	    AxesTickColor	    "[1 1 1]"
+	    LineColors		    "[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	    LineStyles		    "-|-|-|-|-|-"
+	    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
+	    MarkerStyles	    "none|none|none|none|none|none"
+	  }
+	  ShowLegends		  off
+	  YMin			  "31.95~0"
+	  YMax			  "32.9~120"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Scope2"
+	  SID			  "27877"
+	  Ports			  [2]
+	  Position		  [1220, 16, 1250, 49]
+	  ZOrder		  76
+	  Floating		  off
+	  Location		  [5, 45, 1371, 723]
+	  Open			  off
+	  NumInputPorts		  "2"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	    axes2		    "%<SignalLabel>"
+	  }
+	  List {
+	    ListType		    ScopeGraphics
+	    FigureColor		    "[0.5 0.5 0.5]"
+	    AxesColor		    "[0 0 0]"
+	    AxesTickColor	    "[1 1 1]"
+	    LineColors		    "[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	    LineStyles		    "-|-|-|-|-|-"
+	    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
+	    MarkerStyles	    "none|none|none|none|none|none"
+	  }
+	  ShowLegends		  off
+	  YMin			  "16860~0"
+	  YMax			  "16860~130"
+	  SaveName		  "ScopeData2"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	  SampleTime		  "0"
 	}
 	Block {
 	  BlockType		  Sum
 	  Name			  "Sum"
 	  SID			  "27405"
 	  Ports			  [4, 1]
-	  Position		  [605, 926, 615, 1109]
+	  Position		  [605, 961, 615, 1144]
 	  ZOrder		  34
 	  ShowName		  off
 	  Inputs		  "++++"
@@ -18322,7 +18521,7 @@ Model {
 	  Name			  "Sum1"
 	  SID			  "27452"
 	  Ports			  [1, 1]
-	  Position		  [1380, 65, 1400, 85]
+	  Position		  [1380, 100, 1400, 120]
 	  ZOrder		  50
 	  ShowName		  off
 	  IconShape		  "round"
@@ -18336,7 +18535,7 @@ Model {
 	  Name			  "Sum2"
 	  SID			  "27455"
 	  Ports			  [1, 1]
-	  Position		  [1370, 285, 1390, 305]
+	  Position		  [1370, 320, 1390, 340]
 	  ZOrder		  53
 	  ShowName		  off
 	  IconShape		  "round"
@@ -18350,7 +18549,7 @@ Model {
 	  Name			  "Sum3"
 	  SID			  "25691"
 	  Ports			  [2, 1]
-	  Position		  [2280, 268, 2305, 292]
+	  Position		  [2280, 303, 2305, 327]
 	  ZOrder		  -207
 	  BlockMirror		  on
 	  ShowName		  off
@@ -18363,7 +18562,7 @@ Model {
 	  Name			  "Sum4"
 	  SID			  "25692"
 	  Ports			  [2, 1]
-	  Position		  [2280, 763, 2305, 787]
+	  Position		  [2280, 798, 2305, 822]
 	  ZOrder		  -208
 	  BlockMirror		  on
 	  ShowName		  off
@@ -18376,7 +18575,7 @@ Model {
 	  Name			  "Sum5"
 	  SID			  "25693"
 	  Ports			  [2, 1]
-	  Position		  [2280, 503, 2305, 527]
+	  Position		  [2280, 538, 2305, 562]
 	  ZOrder		  -209
 	  BlockMirror		  on
 	  ShowName		  off
@@ -18389,7 +18588,7 @@ Model {
 	  Name			  "Sum6"
 	  SID			  "27458"
 	  Ports			  [1, 1]
-	  Position		  [1355, 725, 1375, 745]
+	  Position		  [1355, 760, 1375, 780]
 	  ZOrder		  56
 	  ShowName		  off
 	  IconShape		  "round"
@@ -18403,7 +18602,7 @@ Model {
 	  Name			  "Sum7"
 	  SID			  "27854"
 	  Ports			  [4, 1]
-	  Position		  [2900, 400, 2960, 640]
+	  Position		  [2900, 435, 2960, 675]
 	  ZOrder		  67
 	  ShowName		  off
 	  Inputs		  "++++"
@@ -18416,7 +18615,7 @@ Model {
 	  Name			  "Sum8"
 	  SID			  "27858"
 	  Ports			  [2, 1]
-	  Position		  [3170, 372, 3200, 443]
+	  Position		  [3170, 407, 3200, 478]
 	  ZOrder		  71
 	  ShowName		  off
 	  InputSameDT		  off
@@ -18428,7 +18627,7 @@ Model {
 	  Name			  "Thermal Interface"
 	  SID			  "27406"
 	  Ports			  [8]
-	  Position		  [615, 542, 775, 893]
+	  Position		  [615, 577, 775, 928]
 	  ZOrder		  21
 	  LibraryVersion	  "1.225"
 	  MinAlgLoopOccurrences	  off
@@ -18440,7 +18639,7 @@ Model {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Thermal Interface"
-	    Location		    [-8, 0, 1348, 744]
+	    Location		    [-4, -4, 1370, 728]
 	    Open		    off
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    200
@@ -18452,7 +18651,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "200"
+	    ZoomFactor		    "175"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Left_Wing_SCVGU_Ploss_W"
@@ -18589,7 +18788,7 @@ Model {
 	      Position		      [340, 285, 430, 315]
 	      ZOrder		      -12
 	      ShowName		      off
-	      LibraryVersion	      "1.328"
+	      LibraryVersion	      "1.346"
 	      SourceBlock	      "PowerFlowLib/Support Functions//Tools/ThermalSink"
 	      SourceType	      "Thermal Sink"
 	      load_loc		      "Cabin"
@@ -18692,7 +18891,7 @@ Model {
 	  Name			  "To Workspace"
 	  SID			  "27453"
 	  Ports			  [1]
-	  Position		  [1425, 60, 1500, 90]
+	  Position		  [1425, 95, 1500, 125]
 	  ZOrder		  51
 	  ShowName		  off
 	  VariableName		  "Gen1Power_W"
@@ -18705,7 +18904,7 @@ Model {
 	  Name			  "To Workspace1"
 	  SID			  "27456"
 	  Ports			  [1]
-	  Position		  [1415, 280, 1495, 310]
+	  Position		  [1415, 315, 1495, 345]
 	  ZOrder		  54
 	  ShowName		  off
 	  VariableName		  "APUPower_W"
@@ -18718,7 +18917,7 @@ Model {
 	  Name			  "To Workspace2"
 	  SID			  "27459"
 	  Ports			  [1]
-	  Position		  [1395, 720, 1475, 750]
+	  Position		  [1395, 755, 1475, 785]
 	  ZOrder		  57
 	  ShowName		  off
 	  VariableName		  "Gen2Power_W"
@@ -18731,7 +18930,7 @@ Model {
 	  Name			  "To Workspace3"
 	  SID			  "27855"
 	  Ports			  [1]
-	  Position		  [3060, 530, 3120, 560]
+	  Position		  [3060, 565, 3120, 595]
 	  ZOrder		  68
 	  VariableName		  "totalacload"
 	  MaxDataPoints		  "inf"
@@ -18743,7 +18942,7 @@ Model {
 	  Name			  "To Workspace4"
 	  SID			  "27859"
 	  Ports			  [1]
-	  Position		  [3225, 395, 3285, 425]
+	  Position		  [3225, 430, 3285, 460]
 	  ZOrder		  72
 	  VariableName		  "totaldcload"
 	  MaxDataPoints		  "inf"
@@ -18755,10 +18954,10 @@ Model {
 	  Name			  "Transformer"
 	  SID			  "25931"
 	  Ports			  [2, 2]
-	  Position		  [2605, 976, 2710, 1109]
+	  Position		  [2605, 1011, 2710, 1144]
 	  ZOrder		  -211
 	  BlockMirror		  on
-	  LibraryVersion	  "1.336"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Machines/Transformer"
 	  SourceType		  "Transformer"
 	  Rp			  "0.005"
@@ -18771,9 +18970,9 @@ Model {
 	  Name			  "Transformer-rectifier"
 	  SID			  "26422"
 	  Ports			  [2, 2]
-	  Position		  [2520, 105, 2645, 185]
+	  Position		  [2520, 140, 2645, 220]
 	  ZOrder		  -212
-	  LibraryVersion	  "1.336"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Transformer-rectifier"
 	  SourceType		  ""
 	  pu			  "1"
@@ -18783,9 +18982,9 @@ Model {
 	  Name			  "Transformer-rectifier1"
 	  SID			  "26404"
 	  Ports			  [2, 2]
-	  Position		  [2520, 350, 2645, 430]
+	  Position		  [2520, 385, 2645, 465]
 	  ZOrder		  -213
-	  LibraryVersion	  "1.336"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Transformer-rectifier"
 	  SourceType		  ""
 	  pu			  "1"
@@ -18795,9 +18994,9 @@ Model {
 	  Name			  "Transformer-rectifier2"
 	  SID			  "26423"
 	  Ports			  [2, 2]
-	  Position		  [2525, 585, 2650, 665]
+	  Position		  [2525, 620, 2650, 700]
 	  ZOrder		  -214
-	  LibraryVersion	  "1.336"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Transformer-rectifier"
 	  SourceType		  ""
 	  pu			  "1"
@@ -18807,7 +19006,7 @@ Model {
 	  Name			  "Vector\nConcatenate"
 	  SID			  "25841"
 	  Ports			  [1, 1]
-	  Position		  [1035, 183, 1040, 207]
+	  Position		  [1035, 218, 1040, 242]
 	  ZOrder		  -215
 	  ShowName		  off
 	  FontName		  "Arial"
@@ -18820,7 +19019,7 @@ Model {
 	  Name			  "Vector\nConcatenate1"
 	  SID			  "25842"
 	  Ports			  [2, 1]
-	  Position		  [1035, 438, 1040, 482]
+	  Position		  [1035, 473, 1040, 517]
 	  ZOrder		  -216
 	  ShowName		  off
 	  FontName		  "Arial"
@@ -18832,7 +19031,7 @@ Model {
 	  Name			  "Vector\nConcatenate10"
 	  SID			  "26599"
 	  Ports			  [4, 1]
-	  Position		  [3775, 365, 3780, 495]
+	  Position		  [3775, 400, 3780, 530]
 	  ZOrder		  -217
 	  BlockMirror		  on
 	  ShowName		  off
@@ -18846,7 +19045,7 @@ Model {
 	  Name			  "Vector\nConcatenate2"
 	  SID			  "25845"
 	  Ports			  [1, 1]
-	  Position		  [1030, 833, 1035, 857]
+	  Position		  [1030, 868, 1035, 892]
 	  ZOrder		  -218
 	  ShowName		  off
 	  FontName		  "Arial"
@@ -18859,7 +19058,7 @@ Model {
 	  Name			  "Vector\nConcatenate3"
 	  SID			  "25846"
 	  Ports			  [2, 1]
-	  Position		  [1065, 608, 1070, 657]
+	  Position		  [1065, 643, 1070, 692]
 	  ZOrder		  -219
 	  ShowName		  off
 	  FontName		  "Arial"
@@ -18871,7 +19070,7 @@ Model {
 	  Name			  "Vector\nConcatenate4"
 	  SID			  "26522"
 	  Ports			  [4, 1]
-	  Position		  [1725, 367, 1730, 468]
+	  Position		  [1725, 402, 1730, 503]
 	  ZOrder		  -220
 	  BlockMirror		  on
 	  ShowName		  off
@@ -18885,7 +19084,7 @@ Model {
 	  Name			  "Vector\nConcatenate5"
 	  SID			  "26533"
 	  Ports			  [4, 1]
-	  Position		  [1725, 928, 1730, 1037]
+	  Position		  [1725, 963, 1730, 1072]
 	  ZOrder		  -221
 	  BlockMirror		  on
 	  ShowName		  off
@@ -18899,7 +19098,7 @@ Model {
 	  Name			  "Vector\nConcatenate6"
 	  SID			  "26587"
 	  Ports			  [2, 1]
-	  Position		  [3820, 113, 3825, 182]
+	  Position		  [3820, 148, 3825, 217]
 	  ZOrder		  -222
 	  BlockMirror		  on
 	  ShowName		  off
@@ -18912,7 +19111,7 @@ Model {
 	  Name			  "Vector\nConcatenate7"
 	  SID			  "26606"
 	  Ports			  [2, 1]
-	  Position		  [3810, 648, 3815, 717]
+	  Position		  [3810, 683, 3815, 752]
 	  ZOrder		  -223
 	  BlockMirror		  on
 	  ShowName		  off
@@ -18924,7 +19123,7 @@ Model {
 	  BlockType		  Outport
 	  Name			  "Electrical"
 	  SID			  "25850"
-	  Position		  [795, 388, 825, 402]
+	  Position		  [795, 423, 825, 437]
 	  ZOrder		  -224
 	  IconDisplay		  "Port number"
 	}
@@ -19137,9 +19336,17 @@ Model {
 	  Labels		  [0, 0]
 	  SrcBlock		  "Bus\nSelector"
 	  SrcPort		  1
-	  Points		  [115, 0]
-	  DstBlock		  "Generation Unit Sync-Sync"
-	  DstPort		  1
+	  Points		  [51, 0]
+	  Branch {
+	    Points		    [0, -140]
+	    DstBlock		    "Scope2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [64, 0]
+	    DstBlock		    "Generation Unit Sync-Sync"
+	    DstPort		    1
+	  }
 	}
 	Line {
 	  SrcBlock		  "RPM"
@@ -19561,9 +19768,16 @@ Model {
 	  Branch {
 	    Points		    [0, 12]
 	    Branch {
-	      Points		      [-60, 0; 0, 90; -450, 0]
-	      DstBlock		      "Transformer-rectifier"
-	      DstPort		      2
+	      Points		      [-60, 0; 0, 90; -450, 0; 0, -60]
+	      Branch {
+		Points			[0, -73; 238, 0; 0, -92]
+		DstBlock		"Scope"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"Transformer-rectifier"
+		DstPort			2
+	      }
 	    }
 	    Branch {
 	      DstBlock		      "Enabled \nDC Load1"
@@ -20140,12 +20354,14 @@ Model {
 	Line {
 	  SrcBlock		  "Loads"
 	  SrcPort		  1
+	  Points		  [0, 10]
 	  DstBlock		  "Goto1"
 	  DstPort		  1
 	}
 	Line {
 	  SrcBlock		  "Loads"
 	  SrcPort		  2
+	  Points		  [0, 15]
 	  DstBlock		  "Goto5"
 	  DstPort		  1
 	}
@@ -20163,7 +20379,8 @@ Model {
 	}
 	Line {
 	  SrcBlock		  "Loads"
-	  SrcPort		  5
+	  SrcPort		  6
+	  Points		  [10, 0]
 	  DstBlock		  "Goto8"
 	  DstPort		  1
 	}
@@ -20323,12 +20540,6 @@ Model {
 	  SrcBlock		  "From59"
 	  SrcPort		  1
 	  DstBlock		  "Memory29"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "Transformer-rectifier"
-	  SrcPort		  1
-	  DstBlock		  "Goto59"
 	  DstPort		  1
 	}
 	Line {
@@ -20654,10 +20865,30 @@ Model {
 	  DstBlock		  "To Workspace4"
 	  DstPort		  1
 	}
+	Line {
+	  SrcBlock		  "Transformer-rectifier"
+	  SrcPort		  1
+	  Points		  [9, 0]
+	  Branch {
+	    Points		    [0, -23; 176, 0]
+	    DstBlock		    "Scope"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "Goto59"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Loads"
+	  SrcPort		  5
+	  DstBlock		  "Goto18"
+	  DstPort		  1
+	}
 	Annotation {
 	  SID			  "27286"
 	  Name			  "CONSTANTS"
-	  Position		  [584, 107]
+	  Position		  [584, 142]
 	  BackgroundColor	  "magenta"
 	  ZOrder		  -1
 	  FontName		  "Times New Roman"
@@ -20667,7 +20898,7 @@ Model {
 	Annotation {
 	  SID			  "27287"
 	  Name			  "CONTROL "
-	  Position		  [585, 137]
+	  Position		  [585, 172]
 	  BackgroundColor	  "cyan"
 	  ZOrder		  -2
 	  FontName		  "Times New Roman"
@@ -20677,7 +20908,7 @@ Model {
 	Annotation {
 	  SID			  "27288"
 	  Name			  "LOSSES"
-	  Position		  [585, 162]
+	  Position		  [585, 197]
 	  BackgroundColor	  "orange"
 	  ZOrder		  -3
 	  FontName		  "Times New Roman"
@@ -20687,7 +20918,7 @@ Model {
 	Annotation {
 	  SID			  "27289"
 	  Name			  "MECHANICAL"
-	  Position		  [589, 57]
+	  Position		  [589, 92]
 	  BackgroundColor	  "lightBlue"
 	  ZOrder		  -4
 	  FontName		  "Times New Roman"
@@ -20697,7 +20928,7 @@ Model {
 	Annotation {
 	  SID			  "27290"
 	  Name			  "ELECTRICAL "
-	  Position		  [588, 82]
+	  Position		  [588, 117]
 	  BackgroundColor	  "yellow"
 	  ZOrder		  -5
 	  FontName		  "Times New Roman"
@@ -20706,13 +20937,13 @@ Model {
 	}
 	Annotation {
 	  SID			  "27291"
-	  Position		  [2974, 240]
+	  Position		  [2974, 275]
 	  ZOrder		  -6
 	}
 	Annotation {
 	  SID			  "27292"
 	  Name			  "Generator Bus 1"
-	  Position		  [1756, 18]
+	  Position		  [1756, 53]
 	  DropShadow		  on
 	  ZOrder		  -7
 	  FontName		  "Arial Black"
@@ -20722,7 +20953,7 @@ Model {
 	Annotation {
 	  SID			  "27293"
 	  Name			  "Generator 1"
-	  Position		  [1210, 108]
+	  Position		  [1210, 143]
 	  DropShadow		  on
 	  ZOrder		  -8
 	  FontName		  "Arial Black"
@@ -20732,7 +20963,7 @@ Model {
 	Annotation {
 	  SID			  "27294"
 	  Name			  "APU"
-	  Position		  [1209, 373]
+	  Position		  [1209, 408]
 	  DropShadow		  on
 	  ZOrder		  -9
 	  FontName		  "Arial Black"
@@ -20742,7 +20973,7 @@ Model {
 	Annotation {
 	  SID			  "27295"
 	  Name			  "GROUND SUPPLY"
-	  Position		  [1209, 573]
+	  Position		  [1209, 608]
 	  DropShadow		  on
 	  ZOrder		  -10
 	  FontName		  "Arial Black"
@@ -20752,7 +20983,7 @@ Model {
 	Annotation {
 	  SID			  "27296"
 	  Name			  "Generator 2"
-	  Position		  [1205, 753]
+	  Position		  [1205, 788]
 	  DropShadow		  on
 	  ZOrder		  -11
 	  FontName		  "Arial Black"
@@ -20762,7 +20993,7 @@ Model {
 	Annotation {
 	  SID			  "27297"
 	  Name			  "Main Bus 1"
-	  Position		  [2166, 68]
+	  Position		  [2166, 103]
 	  DropShadow		  on
 	  ZOrder		  -12
 	  FontName		  "Arial Black"
@@ -20772,7 +21003,7 @@ Model {
 	Annotation {
 	  SID			  "27298"
 	  Name			  "Transfer Bus 1"
-	  Position		  [2166, 323]
+	  Position		  [2166, 358]
 	  DropShadow		  on
 	  ZOrder		  -13
 	  FontName		  "Arial Black"
@@ -20782,7 +21013,7 @@ Model {
 	Annotation {
 	  SID			  "27299"
 	  Name			  "Main Bus 2"
-	  Position		  [2161, 553]
+	  Position		  [2161, 588]
 	  DropShadow		  on
 	  ZOrder		  -14
 	  FontName		  "Arial Black"
@@ -20792,7 +21023,7 @@ Model {
 	Annotation {
 	  SID			  "27300"
 	  Name			  "Transfer Bus 2"
-	  Position		  [2156, 833]
+	  Position		  [2156, 868]
 	  DropShadow		  on
 	  ZOrder		  -15
 	  FontName		  "Arial Black"
@@ -20802,7 +21033,7 @@ Model {
 	Annotation {
 	  SID			  "27301"
 	  Name			  "AC Loads"
-	  Position		  [2388, 53]
+	  Position		  [2388, 88]
 	  DropShadow		  on
 	  ZOrder		  -16
 	  FontName		  "Arial Black"
@@ -20812,7 +21043,7 @@ Model {
 	Annotation {
 	  SID			  "27302"
 	  Name			  "Transformer-Rectifier Units"
-	  Position		  [2603, 73]
+	  Position		  [2603, 108]
 	  DropShadow		  on
 	  ZOrder		  -17
 	  FontName		  "Arial Black"
@@ -20822,7 +21053,7 @@ Model {
 	Annotation {
 	  SID			  "27303"
 	  Name			  "DC Loads"
-	  Position		  [3028, 73]
+	  Position		  [3028, 108]
 	  DropShadow		  on
 	  ZOrder		  -18
 	  FontName		  "Arial Black"
@@ -20832,7 +21063,7 @@ Model {
 	Annotation {
 	  SID			  "27304"
 	  Name			  "DC Bus 1"
-	  Position		  [3378, 53]
+	  Position		  [3378, 88]
 	  DropShadow		  on
 	  ZOrder		  -19
 	  FontName		  "Arial Black"
@@ -20842,7 +21073,7 @@ Model {
 	Annotation {
 	  SID			  "27305"
 	  Name			  "DC Bus 2"
-	  Position		  [3378, 583]
+	  Position		  [3378, 618]
 	  DropShadow		  on
 	  ZOrder		  -20
 	  FontName		  "Arial Black"
@@ -20852,7 +21083,7 @@ Model {
 	Annotation {
 	  SID			  "27306"
 	  Name			  "Battery 1"
-	  Position		  [3660, 93]
+	  Position		  [3660, 128]
 	  DropShadow		  on
 	  ZOrder		  -21
 	  FontName		  "Arial Black"
@@ -20862,7 +21093,7 @@ Model {
 	Annotation {
 	  SID			  "27307"
 	  Name			  "AUX Battery "
-	  Position		  [3656, 383]
+	  Position		  [3656, 418]
 	  DropShadow		  on
 	  ZOrder		  -22
 	  FontName		  "Arial Black"
@@ -20872,7 +21103,7 @@ Model {
 	Annotation {
 	  SID			  "27308"
 	  Name			  "Battery 2"
-	  Position		  [3655, 638]
+	  Position		  [3655, 673]
 	  DropShadow		  on
 	  ZOrder		  -23
 	  FontName		  "Arial Black"
@@ -20882,7 +21113,7 @@ Model {
 	Annotation {
 	  SID			  "27309"
 	  Name			  "Inverter as Auxiliary Supply"
-	  Position		  [2808, 943]
+	  Position		  [2808, 978]
 	  DropShadow		  on
 	  ZOrder		  -24
 	  FontName		  "Arial Black"
@@ -20892,7 +21123,7 @@ Model {
 	Annotation {
 	  SID			  "27310"
 	  Name			  "50 s WAIT before Generator Loading"
-	  Position		  [861, 18]
+	  Position		  [861, 53]
 	  DropShadow		  on
 	  ZOrder		  -25
 	  FontName		  "Arial Black"
@@ -20902,7 +21133,7 @@ Model {
 	Annotation {
 	  SID			  "27311"
 	  Name			  "Generator Bus 2"
-	  Position		  [1756, 583]
+	  Position		  [1756, 618]
 	  DropShadow		  on
 	  ZOrder		  -26
 	  FontName		  "Arial Black"
@@ -20927,7 +21158,7 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"Engine #1"
-	Location		[-8, -8, 1608, 868]
+	Location		[-4, -4, 1370, 728]
 	Open			off
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	212
@@ -20939,7 +21170,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"150"
+	ZoomFactor		"100"
 	Block {
 	  BlockType		  Inport
 	  Name			  "Electrical"
@@ -21515,7 +21746,7 @@ Model {
 	  Ports			  [2, 2]
 	  Position		  [1670, 782, 1785, 913]
 	  ZOrder		  407
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Gearbox"
 	  SourceType		  ""
 	  Gear_Ratio		  "0.5620"
@@ -21890,7 +22121,7 @@ Model {
 	  Ports			  [1, 1]
 	  Position		  [1835, 1174, 1950, 1216]
 	  ZOrder		  406
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Stochastic Heat Loads"
 	  SourceType		  "Heat Loads "
 	  noise_pwr		  ".5"
@@ -34206,7 +34437,7 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"Engine #2"
-	Location		[-8, -8, 1608, 868]
+	Location		[-4, -4, 1370, 728]
 	Open			off
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	200
@@ -34793,7 +35024,7 @@ Model {
 	  Ports			  [2, 2]
 	  Position		  [1670, 782, 1785, 913]
 	  ZOrder		  407
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Electrical/Systems/Gearbox"
 	  SourceType		  ""
 	  Gear_Ratio		  "0.5620"
@@ -35168,7 +35399,7 @@ Model {
 	  Ports			  [1, 1]
 	  Position		  [1835, 1174, 1950, 1216]
 	  ZOrder		  406
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Thermal/Fuel & Oil/Stochastic Heat Loads"
 	  SourceType		  "Heat Loads "
 	  noise_pwr		  ".5"
@@ -48145,7 +48376,7 @@ Model {
 	  Ports			  [2, 2]
 	  Position		  [885, 284, 985, 346]
 	  ZOrder		  -21
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Bypass Valve"
 	  SourceType		  "Bypass Valve"
 	}
@@ -48156,7 +48387,7 @@ Model {
 	  Ports			  [2, 2]
 	  Position		  [885, 764, 985, 826]
 	  ZOrder		  74
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Bypass Valve"
 	  SourceType		  "Bypass Valve"
 	}
@@ -48197,7 +48428,7 @@ Model {
 	  Ports			  [3, 2]
 	  Position		  [625, 268, 740, 382]
 	  ZOrder		  -25
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Engine Driven Pump"
 	  SourceType		  "Engine Driven Hydraulic Pump"
 	  RPM			  "3750"
@@ -48215,7 +48446,7 @@ Model {
 	  Ports			  [3, 2]
 	  Position		  [625, 748, 740, 862]
 	  ZOrder		  73
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Engine Driven Pump"
 	  SourceType		  "Engine Driven Hydraulic Pump"
 	  RPM			  "3750"
@@ -48233,7 +48464,7 @@ Model {
 	  Ports			  [4, 2]
 	  Position		  [405, 177, 580, 318]
 	  ZOrder		  -27
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Fluid Reservoir"
 	  SourceType		  "Fluid Reservoir"
 	  res_vol		  ".25"
@@ -48256,7 +48487,7 @@ Model {
 	  Ports			  [4, 2]
 	  Position		  [405, 657, 580, 798]
 	  ZOrder		  72
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Fluid Reservoir"
 	  SourceType		  "Fluid Reservoir"
 	  res_vol		  ".25"
@@ -48455,7 +48686,7 @@ Model {
 	  Position		  [1215, 309, 1385, 351]
 	  ZOrder		  -42
 	  ShowName		  off
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  fileslct		  off
@@ -48473,7 +48704,7 @@ Model {
 	  Position		  [1215, 369, 1385, 411]
 	  ZOrder		  -43
 	  ShowName		  off
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  fileslct		  off
@@ -48491,7 +48722,7 @@ Model {
 	  Position		  [1215, 429, 1385, 471]
 	  ZOrder		  -44
 	  ShowName		  off
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  fileslct		  off
@@ -48509,7 +48740,7 @@ Model {
 	  Position		  [1215, 489, 1385, 531]
 	  ZOrder		  -45
 	  ShowName		  off
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  fileslct		  off
@@ -48527,7 +48758,7 @@ Model {
 	  Position		  [1210, 549, 1380, 591]
 	  ZOrder		  -46
 	  ShowName		  off
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  fileslct		  off
@@ -48545,7 +48776,7 @@ Model {
 	  Position		  [1215, 789, 1385, 831]
 	  ZOrder		  65
 	  ShowName		  off
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  fileslct		  off
@@ -48563,7 +48794,7 @@ Model {
 	  Position		  [1215, 849, 1385, 891]
 	  ZOrder		  64
 	  ShowName		  off
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  fileslct		  off
@@ -48581,7 +48812,7 @@ Model {
 	  Position		  [1215, 909, 1385, 951]
 	  ZOrder		  63
 	  ShowName		  off
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  fileslct		  off
@@ -48599,7 +48830,7 @@ Model {
 	  Position		  [1215, 969, 1385, 1011]
 	  ZOrder		  62
 	  ShowName		  off
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  fileslct		  off
@@ -48617,7 +48848,7 @@ Model {
 	  Position		  [1210, 1029, 1380, 1071]
 	  ZOrder		  61
 	  ShowName		  off
-	  LibraryVersion	  "1.328"
+	  LibraryVersion	  "1.346"
 	  SourceBlock		  "PowerFlowLib/Energy & Power Systems/Hydraulic/Hydraulic Load"
 	  SourceType		  "Hydraulic Loading"
 	  fileslct		  off
@@ -49404,7 +49635,7 @@ Model {
       Ports		      [0, 1]
       Position		      [15, 48, 110, 82]
       ZOrder		      -43
-      LibraryVersion	      "1.336"
+      LibraryVersion	      "1.346"
       SourceBlock	      "PowerFlowLib/Mission Profile/Mission Profile"
       SourceType	      "MISSION PROFILE SELECT  "
       mssn_check	      off
@@ -50921,7 +51152,7 @@ MatData {
 }
 # Finite State Machines
 #
-#    Stateflow Version 7.6 (R2013a) dated Jan 19 2013, 14:32:20
+#    Stateflow Version 7.6 (R2013a) dated Jan 19 2013, 14:32:03
 #
 #
 
