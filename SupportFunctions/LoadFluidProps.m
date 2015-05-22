@@ -35,8 +35,4 @@ assignin('base','Fanmap',Fanmap)
 load(hblock.compprop);
 assignin('base','CompProp',CompProp)
 
-% load heat exchanger properties - named CompProp
-load(hblock.heatexprop);
-assignin('base','HX',HX)
-
 clear h blk hblock FuelProp OilProp 
