@@ -20,7 +20,7 @@ Library {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-8.0, 0.0, 1378.0, 744.0]
+      Location		      [-8.0, -8.0, 1382.0, 744.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -42,11 +42,11 @@ Library {
 	$ObjectID		5
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
-	ViewObjType		"SimulinkTopLevel"
-	LoadSaveID		"0"
-	Extents			[1135.0, 578.0]
+	ViewObjType		"SimulinkSubsys"
+	LoadSaveID		"30552"
+	Extents			[1139.0, 578.0]
 	ZoomFactor		[1.0]
-	Offset			[0.0, 0.0]
+	Offset			[-85.199999999999989, -45.599999999999994]
       }
     }
   }
@@ -56,9 +56,9 @@ Library {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "srikanthan"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri May 22 10:05:32 2015"
-  RTWModifiedTimeStamp	  354189891
-  ModelVersionFormat	  "1.%<AutoIncrement:337>"
+  LastModifiedDate	  "Fri May 22 10:20:47 2015"
+  RTWModifiedTimeStamp	  354190840
+  ModelVersionFormat	  "1.%<AutoIncrement:338>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1337,7 +1337,7 @@ Library {
   System {
     Name		    "PowerFlowLib"
     Location		    [-8, 0, 1370, 744]
-    Open		    on
+    Open		    off
     ModelBrowserVisibility  on
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -15193,7 +15193,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Loads"
-		Location		[-1444, -4, 4, 904]
+		Location		[-8, -8, 1374, 736]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -15205,7 +15205,7 @@ Library {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"100"
+		ZoomFactor		"125"
 		Block {
 		  BlockType		  SubSystem
 		  Name			  "Constant Current Load"
@@ -16976,7 +16976,7 @@ Library {
 		  }
 		  System {
 		    Name		    "Enabled_AC_Loadloss"
-		    Location		    [-1444, -4, 4, 904]
+		    Location		    [-8, -8, 1374, 736]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -17032,7 +17032,7 @@ Library {
 		    MaskHideContents	    off
 		    System {
 		    Name		    "Enabled\nSubsystem"
-		    Location		    [-1444, -4, 4, 904]
+		    Location		    [-8, -8, 1374, 736]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -17044,7 +17044,7 @@ Library {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "125"
+		    ZoomFactor		    "100"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Vdq0 "
@@ -17680,8 +17680,8 @@ Library {
 		    MaskHideContents	    off
 		    System {
 		    Name		    "POWER BASED LOADS"
-		    Location		    [-1444, -4, 4, 904]
-		    Open		    off
+		    Location		    [-8, -8, 1374, 736]
+		    Open		    on
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
 		    ScreenColor		    "white"
@@ -17692,7 +17692,7 @@ Library {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "125"
+		    ZoomFactor		    "100"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Vdq0"
@@ -17735,7 +17735,6 @@ Library {
 		    Position		    [405, 117, 430, 143]
 		    ZOrder		    1
 		    ShowName		    off
-		    Value		    "0"
 		    }
 		    Block {
 		    BlockType		    Constant
@@ -84800,7 +84799,6 @@ Stateflow {
     id			    1
     name		    "PowerFlowLib"
     created		    "02-May-2013 11:19:27"
-    locked		    1
     isLibrary		    1
     firstTarget		    11
     sfVersion		    76014001.0015
@@ -84816,7 +84814,6 @@ Stateflow {
     firstJunction	    8
     viewObj		    2
     machine		    1
-    locked		    1
     ssIdHighWaterMark	    7
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
