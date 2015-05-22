@@ -20,11 +20,7 @@ Library {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-<<<<<<< HEAD
-      Location		      [199.0, 85.0, 754.0, 744.0]
-=======
-      Location		      [-8.0, -8.0, 1382.0, 744.0]
->>>>>>> origin/master
+      Location		      [-8.0, 0.0, 734.0, 646.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -46,17 +42,11 @@ Library {
 	$ObjectID		5
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
-<<<<<<< HEAD
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[511.0, 577.0]
-=======
-	ViewObjType		"SimulinkSubsys"
-	LoadSaveID		"30552"
-	Extents			[1139.0, 578.0]
->>>>>>> origin/master
+	Extents			[491.0, 479.0]
 	ZoomFactor		[1.0]
-	Offset			[-85.199999999999989, -45.599999999999994]
+	Offset			[0.0, 0.0]
       }
     }
   }
@@ -66,13 +56,8 @@ Library {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "mwillms4"
   ModifiedDateFormat	  "%<Auto>"
-<<<<<<< HEAD
-  LastModifiedDate	  "Fri May 22 10:36:24 2015"
-  RTWModifiedTimeStamp	  354191760
-=======
-  LastModifiedDate	  "Fri May 22 10:20:47 2015"
+  LastModifiedDate	  "Fri May 22 10:47:04 2015"
   RTWModifiedTimeStamp	  354190840
->>>>>>> origin/master
   ModelVersionFormat	  "1.%<AutoIncrement:338>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
@@ -1351,13 +1336,8 @@ Library {
   }
   System {
     Name		    "PowerFlowLib"
-<<<<<<< HEAD
-    Location		    [199, 85, 953, 829]
+    Location		    [-8, 0, 726, 646]
     Open		    on
-=======
-    Location		    [-8, 0, 1370, 744]
-    Open		    off
->>>>>>> origin/master
     ModelBrowserVisibility  on
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -17700,8 +17680,8 @@ Library {
 		    MaskHideContents	    off
 		    System {
 		    Name		    "POWER BASED LOADS"
-		    Location		    [-8, -8, 1374, 736]
-		    Open		    on
+		    Location		    [-8, 0, 1374, 744]
+		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
 		    ScreenColor		    "white"
@@ -72335,7 +72315,7 @@ Library {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "24917"
+		    SIDHighWatermark	    "24942"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Inlet#1"
@@ -73144,7 +73124,7 @@ Library {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "711"
+		    SIDHighWatermark	    "750"
 		    SIDPrevWatermark	    "708"
 		    Block {
 		    BlockType		    Inport
@@ -75262,7 +75242,7 @@ Library {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "80"
-		    SIDHighWatermark	    "13573"
+		    SIDHighWatermark	    "13624"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Flow_in"
@@ -76726,7 +76706,7 @@ Library {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "150"
-		    SIDHighWatermark	    "22299"
+		    SIDHighWatermark	    "22398"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Flow"
@@ -79282,7 +79262,7 @@ Library {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "80"
-		    SIDHighWatermark	    "1884"
+		    SIDHighWatermark	    "1952"
 		    SIDPrevWatermark	    "748"
 		    Block {
 		    BlockType		    Inport
@@ -84785,6 +84765,7 @@ Stateflow {
     id			    1
     name		    "PowerFlowLib"
     created		    "02-May-2013 11:19:27"
+    locked		    1
     isLibrary		    1
     firstTarget		    11
     sfVersion		    76014001.0015
@@ -84800,6 +84781,7 @@ Stateflow {
     firstJunction	    8
     viewObj		    2
     machine		    1
+    locked		    1
     ssIdHighWaterMark	    7
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
