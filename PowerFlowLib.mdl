@@ -56,9 +56,9 @@ Library {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "mwillms4"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri May 22 10:50:15 2015"
-  RTWModifiedTimeStamp	  354192608
-  ModelVersionFormat	  "1.%<AutoIncrement:339>"
+  LastModifiedDate	  "Fri May 22 11:56:43 2015"
+  RTWModifiedTimeStamp	  354196599
+  ModelVersionFormat	  "1.%<AutoIncrement:340>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -3721,7 +3721,7 @@ Library {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "35337"
+		    SIDHighWatermark	    "35569"
 		    SIDPrevWatermark	    "30301"
 		    Block {
 		    BlockType		    Inport
@@ -49722,7 +49722,7 @@ Library {
 		TiledPageScale		1
 		ShowPageBoundaries	off
 		ZoomFactor		"100"
-		SIDHighWatermark	"14290"
+		SIDHighWatermark	"14311"
 		Block {
 		  BlockType		  Inport
 		  Name			  "Fluid In"
@@ -49855,7 +49855,7 @@ Library {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "191"
+		    SIDHighWatermark	    "198"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "prev_phase"
@@ -72315,7 +72315,7 @@ Library {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "24942"
+		    SIDHighWatermark	    "24967"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Inlet#1"
@@ -72991,7 +72991,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Fuel & Oil"
-		Location		[-8, -8, 1448, 941]
+		Location		[390, 228, 1124, 874]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -73985,7 +73985,7 @@ Library {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "80"
-		    SIDHighWatermark	    "8610"
+		    SIDHighWatermark	    "8658"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "mdot Out"
@@ -75229,7 +75229,7 @@ Library {
 		  }
 		  System {
 		    Name		    "Fluid Pump"
-		    Location		    [-8, -8, 1448, 941]
+		    Location		    [390, 228, 1124, 874]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -75241,8 +75241,8 @@ Library {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "80"
-		    SIDHighWatermark	    "13624"
+		    ZoomFactor		    "100"
+		    SIDHighWatermark	    "13675"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Flow_in"
@@ -75270,7 +75270,7 @@ Library {
 		    BlockType		    Inport
 		    Name		    "P_out"
 		    SID			    "8004:8048"
-		    Position		    [825, 193, 855, 207]
+		    Position		    [825, 198, 855, 212]
 		    ZOrder		    -3
 		    Port		    "3"
 		    IconDisplay		    "Port number"
@@ -75413,11 +75413,10 @@ Library {
 		    BlockType		    BusCreator
 		    Name		    "Bus\nCreator"
 		    SID			    "8004:8053"
-		    Ports		    [3, 1]
-		    Position		    [940, 123, 945, 217]
+		    Ports		    [4, 1]
+		    Position		    [950, 120, 955, 215]
 		    ZOrder		    -11
 		    ShowName		    off
-		    Inputs		    "3"
 		    DisplayOption	    "bar"
 		    }
 		    Block {
@@ -75684,7 +75683,7 @@ Library {
 		    BlockType		    Goto
 		    Name		    "Goto2"
 		    SID			    "8004:8067"
-		    Position		    [940, 237, 1030, 253]
+		    Position		    [940, 262, 1030, 278]
 		    ZOrder		    -26
 		    ShowName		    off
 		    GotoTag		    "Pout"
@@ -75770,14 +75769,6 @@ Library {
 		    SaturateOnIntegerOverflow off
 		    }
 		    Block {
-		    BlockType		    Terminator
-		    Name		    "Terminator"
-		    SID			    "8004:13573"
-		    Position		    [985, 20, 1005, 40]
-		    ZOrder		    2
-		    NamePlacement	    "alternate"
-		    }
-		    Block {
 		    BlockType		    Gain
 		    Name		    "W to kW"
 		    SID			    "8004:12487"
@@ -75797,7 +75788,7 @@ Library {
 		    Position		    [1275, 452, 1325, 478]
 		    ZOrder		    -35
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.338"
+		    LibraryVersion	    "1.339"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -76033,8 +76024,9 @@ Library {
 		    Labels		    [0, 0]
 		    SrcBlock		    "From1"
 		    SrcPort		    1
+		    Points		    [30, 0; 0, 15]
 		    DstBlock		    "Bus\nCreator"
-		    DstPort		    1
+		    DstPort		    2
 		    }
 		    Line {
 		    Name		    "shaftspeed_rpm"
@@ -76077,13 +76069,14 @@ Library {
 		    SrcPort		    1
 		    Points		    [35, 0]
 		    Branch {
-		    Points		    [0, -55]
-		    DstBlock		    "2- Lookup\nTable3"
-		    DstPort		    2
+		    Labels		    [2, 0]
+		    Points		    [0, 10]
+		    DstBlock		    "Bus\nCreator"
+		    DstPort		    3
 		    }
 		    Branch {
-		    Labels		    [1, 1]
-		    DstBlock		    "Bus\nCreator"
+		    Points		    [0, -55]
+		    DstBlock		    "2- Lookup\nTable3"
 		    DstPort		    2
 		    }
 		    }
@@ -76217,8 +76210,8 @@ Library {
 		    Labels		    [0, 0]
 		    SrcBlock		    "2- Lookup\nTable3"
 		    SrcPort		    1
-		    Points		    [22, 0; 0, -80]
-		    DstBlock		    "Terminator"
+		    Points		    [32, 0; 0, 20]
+		    DstBlock		    "Bus\nCreator"
 		    DstPort		    1
 		    }
 		    Line {
@@ -76228,21 +76221,22 @@ Library {
 		    SrcPort		    1
 		    Points		    [55, 0]
 		    Branch {
-		    DstBlock		    "Bus\nCreator"
-		    DstPort		    3
-		    }
+		    Points		    [0, 40; 4, 0]
 		    Branch {
-		    Points		    [0, 45; 1, 0]
-		    Branch {
-		    Labels		    [5, 0]
-		    Points		    [0, -20; 124, 0; 0, 20; 66, 0; 0, 205]
-		    DstBlock		    "Bus\nCreator2"
-		    DstPort		    2
-		    }
-		    Branch {
+		    Points		    [0, 25]
 		    DstBlock		    "Goto2"
 		    DstPort		    1
 		    }
+		    Branch {
+		    Labels		    [2, 0]
+		    Points		    [187, 0; 0, 205]
+		    DstBlock		    "Bus\nCreator2"
+		    DstPort		    2
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Bus\nCreator"
+		    DstPort		    4
 		    }
 		    }
 		    Line {
@@ -76706,7 +76700,7 @@ Library {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "150"
-		    SIDHighWatermark	    "22398"
+		    SIDHighWatermark	    "22497"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Flow"
@@ -79262,7 +79256,7 @@ Library {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "80"
-		    SIDHighWatermark	    "1952"
+		    SIDHighWatermark	    "2020"
 		    SIDPrevWatermark	    "748"
 		    Block {
 		    BlockType		    Inport
@@ -81060,7 +81054,7 @@ Library {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "14457"
+	    SIDHighWatermark	    "14487"
 	    Block {
 	      BlockType		      Lookup
 	      Name		      "APU"
@@ -82037,7 +82031,7 @@ Library {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "151"
+	    SIDHighWatermark	    "157"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Load In"
@@ -82282,7 +82276,7 @@ Library {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "820"
+	    SIDHighWatermark	    "822"
 	    Block {
 	      BlockType		      BusCreator
 	      Name		      "LoadBus"
@@ -82572,7 +82566,7 @@ Library {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "94"
+	    SIDHighWatermark	    "98"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Flow In"
