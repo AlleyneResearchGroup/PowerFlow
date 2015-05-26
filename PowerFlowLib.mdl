@@ -44,7 +44,7 @@ Library {
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "18409"
-	  Extents		  [482.0, 551.0]
+	  Extents		  [621.0, 551.0]
 	  ZoomFactor		  [1.25]
 	  Offset		  [395.06666666666672, -41.200000000000017]
 	}
@@ -53,7 +53,7 @@ Library {
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "29596"
-	  Extents		  [495.0, 551.0]
+	  Extents		  [621.0, 551.0]
 	  ZoomFactor		  [1.0]
 	  Offset		  [673.98397542117982, -50.563782530460429]
 	}
@@ -62,7 +62,7 @@ Library {
 	  IsActive		  [1]
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
-	  Extents		  [482.0, 551.0]
+	  Extents		  [621.0, 551.0]
 	  ZoomFactor		  [1.0]
 	  Offset		  [0.0, 0.0]
 	}
@@ -76,9 +76,9 @@ Library {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "mwillms4"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue May 26 16:32:35 2015"
-  RTWModifiedTimeStamp	  354558751
-  ModelVersionFormat	  "1.%<AutoIncrement:349>"
+  LastModifiedDate	  "Tue May 26 16:39:32 2015"
+  RTWModifiedTimeStamp	  354559025
+  ModelVersionFormat	  "1.%<AutoIncrement:350>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -37453,7 +37453,7 @@ Library {
 		  }
 		  System {
 		    Name		    "Generation Unit\nSync-Sync"
-		    Location		    [0, 0, 738, 721]
+		    Location		    [-1653, 1030, -789, 1751]
 		    Open		    on
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -44667,7 +44667,7 @@ Library {
 		    Position		    [670, 42, 720, 68]
 		    ZOrder		    -39
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.348"
+		    LibraryVersion	    "1.349"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -44678,7 +44678,7 @@ Library {
 		    Ports		    [3, 2]
 		    Position		    [835, 107, 905, 203]
 		    ZOrder		    -40
-		    LibraryVersion	    "1.348"
+		    LibraryVersion	    "1.349"
 		    SourceBlock		    "PowerFlowLib/Energy & Power Systems/Electrical/Rectifiers/three-phase \nactive\nrectifier\nVol"
 		    "tage Mode"
 		    SourceType		    ""
@@ -50375,7 +50375,7 @@ Library {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Thermal"
-	    Location		    [-1653, 1030, -212, 1751]
+	    Location		    [-1653, 1030, -789, 1751]
 	    Open		    off
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    212
@@ -73044,7 +73044,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Fuel & Oil"
-		Location		[-1653, 1030, -212, 1751]
+		Location		[-1653, 1030, -789, 1751]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -75845,7 +75845,7 @@ Library {
 		    Position		    [1275, 452, 1325, 478]
 		    ZOrder		    -35
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.347"
+		    LibraryVersion	    "1.349"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -76742,7 +76742,7 @@ Library {
 		  }
 		  System {
 		    Name		    "Fluid Tank"
-		    Location		    [-2, 0, 1372, 732]
+		    Location		    [-1653, 1030, -789, 1751]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -76754,7 +76754,7 @@ Library {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "150"
+		    ZoomFactor		    "100"
 		    SIDHighWatermark	    "22596"
 		    Block {
 		    BlockType		    Inport
@@ -77945,7 +77945,7 @@ Library {
 		    Position		    [1540, 372, 1590, 398]
 		    ZOrder		    15
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.346"
+		    LibraryVersion	    "1.349"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -78055,7 +78055,7 @@ Library {
 		    Position		    [1255, 0, 1290, 20]
 		    ZOrder		    3
 		    ShowName		    off
-		    Value		    "0"
+		    Value		    "1e-4"
 		    }
 		    Block {
 		    BlockType		    Constant
