@@ -22,7 +22,7 @@ function varargout = MSSNMain(varargin)
 
 % Edit the above text to modify the response to help MSSNMain
 
-% Last Modified by GUIDE v2.5 26-Feb-2015 19:00:09
+% Last Modified by GUIDE v2.5 12-Oct-2015 18:29:32
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -408,7 +408,7 @@ if numel(get(handles.MSSNList,'string'))>val
     set(handles.Alt,'string','Altitude');
     set(handles.ClimbRate,'string','Rate');
     set(handles.DescentRate,'string','Rate');
-    set(handles.FlapSet,'string','Flap Angle');
+    set(handles.FlapSet1,'string','Flap Angle');
     set(handles.FlapSet2,'string','Flap Angle');
 end
 
@@ -615,16 +615,16 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 
-function FlapSet_Callback(hObject, eventdata, handles)
-% hObject    handle to FlapSet (see GCBO)
+function FlapSet1_Callback(hObject, eventdata, handles)
+% hObject    handle to FlapSet1 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-% Hints: get(hObject,'String') returns contents of FlapSet as text
-%        str2double(get(hObject,'String')) returns contents of FlapSet as a double
+% Hints: get(hObject,'String') returns contents of FlapSet1 as text
+%        str2double(get(hObject,'String')) returns contents of FlapSet1 as a double
 
 % --- Executes during object creation, after setting all properties.
-function FlapSet_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to FlapSet (see GCBO)
+function FlapSet1_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to FlapSet1 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 % Hint: edit controls usually have a white background on Windows.
@@ -799,7 +799,7 @@ set(handles.Alttxt,'Visible',on_off)
 set(handles.Alt,'Visible',on_off)
 set(handles.fttxt,'Visible',on_off)
 set(handles.FlapSettxt1,'Visible',on_off)
-set(handles.FlapSet,'Visible',on_off)
+set(handles.FlapSet1,'Visible',on_off)
 set(handles.degtxt,'Visible',on_off)
 set(handles.FlapSettxt2,'Visible',on_off)
 set(handles.FlapSet2,'Visible',on_off)
@@ -849,7 +849,7 @@ elseif strncmp(list,'Takeoff',3) == 1
     set(handles.Time,'Visible',on_off)
     set(handles.Sec,'Visible',on_off)
     set(handles.FlapSettxt1,'Visible',on_off)
-    set(handles.FlapSet,'Visible',on_off)
+    set(handles.FlapSet1,'Visible',on_off)
     set(handles.degtxt,'Visible',on_off)
 elseif strncmp(list,'Climb',3) == 1
     set(handles.Thrusttxt,'Visible',on_off)
@@ -896,7 +896,7 @@ elseif strncmp(list,'Approach',3) == 1
     set(handles.Alt,'Visible',on_off)
     set(handles.fttxt,'Visible',on_off)
     set(handles.FlapSettxt1,'Visible',on_off)
-    set(handles.FlapSet,'Visible',on_off)
+    set(handles.FlapSet1,'Visible',on_off)
     set(handles.degtxt,'Visible',on_off)
     set(handles.FlapSettxt2,'Visible',on_off)
     set(handles.FlapSet2,'Visible',on_off)
@@ -906,7 +906,7 @@ elseif strncmp(list,'Landing',3) == 1
     set(handles.ThrustSet,'Visible',on_off)
     set(handles.percent,'Visible',on_off)
     set(handles.FlapSettxt1,'Visible',on_off)
-    set(handles.FlapSet,'Visible',on_off)
+    set(handles.FlapSet1,'Visible',on_off)
     set(handles.degtxt,'Visible',on_off)
 elseif strncmp(list,'Shutdown',3) == 1
     set(handles.Timetxt,'Visible',on_off)
@@ -1048,11 +1048,11 @@ elseif strncmp(list,'Takeoff',3) == 1
     nan = isnan(ident);
     if real == 0 || nan == 1 || ident == 1
         handles.M.takeoffarr(1,1) = str2double(get(handles.Time,'string'));
-        handles.M.takeoffarr(1,2) = str2double(get(handles.FlapSet,'string'));
+        handles.M.takeoffarr(1,2) = str2double(get(handles.FlapSet1,'string'));
         handles.M.takeoffarr(1,3) = str2double(get(handles.ThrustSet,'string'));
     else
         handles.M.takeoffarr(ident,1) = str2double(get(handles.Time,'string'));
-        handles.M.takeoffarr(ident,2) = str2double(get(handles.FlapSet,'string'));
+        handles.M.takeoffarr(ident,2) = str2double(get(handles.FlapSet1,'string'));
         handles.M.takeoffarr(ident,3) = str2double(get(handles.ThrustSet,'string'));
     end
 elseif strncmp(list,'Climb',3) == 1
@@ -1128,7 +1128,7 @@ elseif strncmp(list,'Approach',3) == 1
     nan = isnan(ident);
     if real == 0 || nan == 1 || ident == 1
         handles.M.approacharr(1,1) = str2double(get(handles.DescentRate,'string'));
-        handles.M.approacharr(1,2) = str2double(get(handles.FlapSet,'string'));
+        handles.M.approacharr(1,2) = str2double(get(handles.FlapSet1,'string'));
         handles.M.approacharr(1,3) = str2double(get(handles.FlapSet2,'string'));
         handles.M.approacharr(1,4) = str2double(get(handles.ThrustSet,'string'));
         ALT = str2double(get(handles.Alt,'string'));
@@ -1136,7 +1136,7 @@ elseif strncmp(list,'Approach',3) == 1
         handles.M.genstrct.alt.values(API) = ALT;
     else
         handles.M.approacharr(ident,1) = str2double(get(handles.DescentRate,'string'));
-        handles.M.approacharr(ident,2) = str2double(get(handles.FlapSet,'string'));
+        handles.M.approacharr(ident,2) = str2double(get(handles.FlapSet1,'string'));
         handles.M.approacharr(ident,3) = str2double(get(handles.FlapSet2,'string'));
         handles.M.approacharr(ident,4) = str2double(get(handles.ThrustSet,'string'));
         ALT = str2double(get(handles.Alt,'string'));
@@ -1149,10 +1149,10 @@ elseif strncmp(list,'Landing',3) == 1
     real = isreal(ident);
     nan = isnan(ident);
     if real == 0 || nan == 1 || ident == 1
-        handles.M.landingarr(1,1) = str2double(get(handles.FlapSet,'string'));
+        handles.M.landingarr(1,1) = str2double(get(handles.FlapSet1,'string'));
         handles.M.landingarr(1,2) = str2double(get(handles.ThrustSet,'string'));
     else
-        handles.M.landingarr(ident,1) = str2double(get(handles.FlapSet,'string'));
+        handles.M.landingarr(ident,1) = str2double(get(handles.FlapSet1,'string'));
         handles.M.landingarr(ident,2) = str2double(get(handles.ThrustSet,'string'));
     end
 elseif strncmp(list,'Shutdown',3) == 1
@@ -1295,7 +1295,7 @@ elseif strncmp(list,'Takeoff',3) == 1
     if real == 0 || nan == 1 || ident == 1
         if handles.index.build==1
         set(handles.Time,'string',num2str(handles.M.takeoffarr(1,1)));
-        set(handles.FlapSet,'string',num2str(handles.M.takeoffarr(1,2)));
+        set(handles.FlapSet1,'string',num2str(handles.M.takeoffarr(1,2)));
         set(handles.ThrustSet,'string',num2str(handles.M.takeoffarr(1,3)));
         else
         set(handles.Time,'string','Time');
@@ -1305,7 +1305,7 @@ elseif strncmp(list,'Takeoff',3) == 1
     else
         if handles.index.build==1
         set(handles.Time,'string',num2str(handles.M.takeoffarr(ident,1)));
-        set(handles.FlapSet,'string',num2str(handles.M.takeoffarr(ident,2)));
+        set(handles.FlapSet1,'string',num2str(handles.M.takeoffarr(ident,2)));
         set(handles.ThrustSet,'string',num2str(handles.M.takeoffarr(ident,3)));
         else
         set(handles.Time,'string','Time');
@@ -1432,12 +1432,12 @@ elseif strncmp(list,'Approach',3) == 1
           set(handles.Alt,'string',handles.M.genstrct.alt.values(API));
           set(handles.DescentRate,'string',num2str(handles.M.approacharr(1,1)));
           set(handles.ThrustSet,'string',num2str(handles.M.approacharr(1,4)));
-          set(handles.FlapSet,'string',num2str(handles.M.approacharr(1,2)));
+          set(handles.FlapSet1,'string',num2str(handles.M.approacharr(1,2)));
           set(handles.FlapSet2,'string',num2str(handles.M.approacharr(1,3)));
         else
             set(handles.Alt,'string','Altitude');
             set(handles.ThrustSet,'string','Thrust');
-            set(handles.FlapSet,'string','Flaps');
+            set(handles.FlapSet1,'string','Flaps');
             set(handles.DescentRate,'string','Rate');
         end
     else
@@ -1446,12 +1446,12 @@ elseif strncmp(list,'Approach',3) == 1
           set(handles.Alt,'string',handles.M.genstrct.alt.values(API));
           set(handles.DescentRate,'string',num2str(handles.M.approacharr(ident,1)));
           set(handles.ThrustSet,'string',num2str(handles.M.approacharr(ident,4)));
-          set(handles.FlapSet,'string',num2str(handles.M.approacharr(ident,2)));
+          set(handles.FlapSet1,'string',num2str(handles.M.approacharr(ident,2)));
           set(handles.FlapSet2,'string',num2str(handles.M.approacharr(ident,3)));
         else
             set(handles.Alt,'string','Altitude');
             set(handles.ThrustSet,'string','Thrust');
-            set(handles.FlapSet,'string','Flaps');
+            set(handles.FlapSet1,'string','Flaps');
             set(handles.DescentRate,'string','Rate');
         end
     end
@@ -1462,19 +1462,19 @@ elseif strncmp(list,'Landing',3) == 1
     nan = isnan(ident);
     if real == 0 || nan == 1 || ident == 1
         if handles.index.build==1
-        set(handles.FlapSet,'string',num2str(handles.M.landingarr(1,1)));
+        set(handles.FlapSet1,'string',num2str(handles.M.landingarr(1,1)));
         set(handles.ThrustSet,'string',num2str(handles.M.landingarr(1,2)));
         else
             set(handles.ThrustSet,'string','Thrust');
-            set(handles.FlapSet,'string','Flaps');
+            set(handles.FlapSet1,'string','Flaps');
         end
     else
          if handles.index.build==1
-        set(handles.FlapSet,'string',num2str(handles.M.landingarr(ident,1)));
+        set(handles.FlapSet1,'string',num2str(handles.M.landingarr(ident,1)));
         set(handles.ThrustSet,'string',num2str(handles.M.landingarr(ident,2)));
         else
             set(handles.ThrustSet,'string','Thrust');
-            set(handles.FlapSet,'string','Flaps');
+            set(handles.FlapSet1,'string','Flaps');
         end
     end
 elseif strncmp(list,'Shutdown',3) == 1

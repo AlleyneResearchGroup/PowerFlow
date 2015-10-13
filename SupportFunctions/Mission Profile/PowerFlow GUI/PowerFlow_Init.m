@@ -7,5 +7,6 @@ addpath(genpath('SecondaryGUI'))
 addpath(genpath('Misc'))
 addpath(genpath('MainInterface'))
 addpath(genpath('InputsAndOutputs'))
-
-MSSNMain
+addpath(genpath('ExpressOrWalkThroughGUI'))
+addpath(genpath('WalkThroughGUI'))
+OpeningGUI
