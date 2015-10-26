@@ -6,17 +6,13 @@ close all
 %%
 load('2013_03_22_SAE_data2.mat')
 
-noise1 = (rand(190*2,1)-0.5)*8;
-noise1 = [reshape(repmat(noise1,1,10/2)',1,1900) zeros(1,6)]';
-noise2 = (rand(190*2,1)-0.5)*8;
-noise2 = [ zeros(1,6) reshape(repmat(noise2,1,10/2)',1,1900)]';
 data1 = reshape(Gen1Power_W.signals.values(1,1,:)/1000,size(Gen1Power_W.signals.values(1,1,:),3),1);
 data2 = reshape(Gen2Power_W.signals.values(1,1,:)/1000,size(Gen2Power_W.signals.values(1,1,:),3),1);
 data3 = Tot_Gen_Loss_W.signals.values/1000;
 data4 = LeftPackPower_W.signals.values/1000;
 data5 = RightPackPower_W.signals.values/1000;
 data6 = smooth(sum(hydload.signals.values,2),20);
-data = [data5+data4+noise1 data3+data2+data1+noise2 data6]';
+data = [data5+data4 data3+data2+data1 data6]';
 datasum = sum(data,1);
 
 %fh = figure;
