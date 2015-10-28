@@ -19,7 +19,7 @@ Library {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-1448.0, 870.0, 1456.0, 916.0]
+      Location		      [1358.0, 0.0, 1040.0, 744.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -41,19 +41,19 @@ Library {
 	Dimension		2
 	Object {
 	  $ObjectID		  5
-	  IsActive		  [1]
+	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "7734"
-	  Extents		  [1213.0, 746.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [0.0, 0.0]
+	  LoadSaveID		  "15949"
+	  Extents		  [797.0, 574.0]
+	  ZoomFactor		  [1.25]
+	  Offset		  [0.0, -1.6999999999999886]
 	}
 	Object {
 	  $ObjectID		  6
-	  IsActive		  [0]
+	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "20"
-	  Extents		  [1213.0, 746.0]
+	  LoadSaveID		  "7781"
+	  Extents		  [797.0, 574.0]
 	  ZoomFactor		  [1.0]
 	  Offset		  [0.0, 0.0]
 	}
@@ -65,11 +65,11 @@ Library {
   Creator		  "mwillms4"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "mwillms4"
+  LastModifiedBy	  "Bradford"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sat Aug 29 16:35:25 2015"
-  RTWModifiedTimeStamp	  362766917
-  ModelVersionFormat	  "1.%<AutoIncrement:375>"
+  LastModifiedDate	  "Mon Oct 26 22:29:15 2015"
+  RTWModifiedTimeStamp	  367799352
+  ModelVersionFormat	  "1.%<AutoIncrement:392>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1372,7 +1372,7 @@ Library {
   }
   System {
     Name		    "PowerFlowLib"
-    Location		    [-1448, -8, 8, 908]
+    Location		    [1358, 0, 2398, 744]
     Open		    off
     ModelBrowserVisibility  on
     ModelBrowserWidth	    200
@@ -1409,8 +1409,8 @@ Library {
       }
       System {
 	Name			"Energy & Power Systems"
-	Location		[-1448, 870, 8, 1786]
-	Open			on
+	Location		[1358, -8, 2398, 736]
+	Open			off
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	128
 	ScreenColor		"white"
@@ -1439,7 +1439,7 @@ Library {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Additional Systems"
-	    Location		    [390, 228, 1124, 874]
+	    Location		    [1358, 0, 2398, 744]
 	    Open		    off
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    200
@@ -1972,7 +1972,7 @@ Library {
 		  Position		  [545, 56, 660, 94]
 		  ZOrder		  -24
 		  ShowName		  off
-		  LibraryVersion	  "1.374"
+		  LibraryVersion	  "1.387"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  load_loc		  "Cabin"
@@ -1990,7 +1990,7 @@ Library {
 		  Position		  [545, 136, 660, 174]
 		  ZOrder		  -25
 		  ShowName		  off
-		  LibraryVersion	  "1.374"
+		  LibraryVersion	  "1.387"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  load_loc		  "Cabin"
@@ -2008,7 +2008,7 @@ Library {
 		  Position		  [545, 271, 660, 309]
 		  ZOrder		  -26
 		  ShowName		  off
-		  LibraryVersion	  "1.374"
+		  LibraryVersion	  "1.387"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  load_loc		  "Cabin"
@@ -2026,7 +2026,7 @@ Library {
 		  Position		  [545, 461, 660, 499]
 		  ZOrder		  -27
 		  ShowName		  off
-		  LibraryVersion	  "1.374"
+		  LibraryVersion	  "1.387"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  load_loc		  "Cabin"
@@ -2044,7 +2044,7 @@ Library {
 		  Position		  [545, 531, 660, 569]
 		  ZOrder		  -28
 		  ShowName		  off
-		  LibraryVersion	  "1.374"
+		  LibraryVersion	  "1.387"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  load_loc		  "Cabin"
@@ -2152,7 +2152,7 @@ Library {
 		  Position		  [755, 15, 845, 45]
 		  ZOrder		  -34
 		  ShowName		  off
-		  LibraryVersion	  "1.374"
+		  LibraryVersion	  "1.387"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ThermalSink"
 		  SourceType		  "Thermal Sink"
 		  load_loc		  "Cabin"
@@ -2169,7 +2169,7 @@ Library {
 		  Position		  [620, 230, 710, 260]
 		  ZOrder		  -35
 		  ShowName		  off
-		  LibraryVersion	  "1.374"
+		  LibraryVersion	  "1.387"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ThermalSink"
 		  SourceType		  "Thermal Sink"
 		  load_loc		  "Cabin"
@@ -2186,7 +2186,7 @@ Library {
 		  Position		  [615, 340, 705, 370]
 		  ZOrder		  -36
 		  ShowName		  off
-		  LibraryVersion	  "1.374"
+		  LibraryVersion	  "1.387"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ThermalSink"
 		  SourceType		  "Thermal Sink"
 		  load_loc		  "Cabin"
@@ -2203,7 +2203,7 @@ Library {
 		  Position		  [615, 385, 705, 415]
 		  ZOrder		  -37
 		  ShowName		  off
-		  LibraryVersion	  "1.374"
+		  LibraryVersion	  "1.387"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ThermalSink"
 		  SourceType		  "Thermal Sink"
 		  load_loc		  "Cabin"
@@ -2218,7 +2218,7 @@ Library {
 		  Position		  [880, 307, 930, 333]
 		  ZOrder		  -38
 		  BackgroundColor	  "green"
-		  LibraryVersion	  "1.374"
+		  LibraryVersion	  "1.387"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/data_sink"
 		  SourceType		  "Data Sink"
 		}
@@ -3068,7 +3068,7 @@ Library {
 		  Position		  [545, 56, 660, 94]
 		  ZOrder		  -24
 		  ShowName		  off
-		  LibraryVersion	  "1.374"
+		  LibraryVersion	  "1.387"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  load_loc		  "Cabin"
@@ -3086,7 +3086,7 @@ Library {
 		  Position		  [545, 131, 660, 169]
 		  ZOrder		  -25
 		  ShowName		  off
-		  LibraryVersion	  "1.374"
+		  LibraryVersion	  "1.387"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  load_loc		  "Cabin"
@@ -3104,7 +3104,7 @@ Library {
 		  Position		  [545, 201, 660, 239]
 		  ZOrder		  -26
 		  ShowName		  off
-		  LibraryVersion	  "1.374"
+		  LibraryVersion	  "1.387"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  load_loc		  "Cabin"
@@ -3122,7 +3122,7 @@ Library {
 		  Position		  [545, 281, 660, 319]
 		  ZOrder		  -27
 		  ShowName		  off
-		  LibraryVersion	  "1.374"
+		  LibraryVersion	  "1.387"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  load_loc		  "Cabin"
@@ -3140,7 +3140,7 @@ Library {
 		  Position		  [545, 356, 660, 394]
 		  ZOrder		  -28
 		  ShowName		  off
-		  LibraryVersion	  "1.374"
+		  LibraryVersion	  "1.387"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  load_loc		  "Cabin"
@@ -3248,7 +3248,7 @@ Library {
 		  Position		  [545, 510, 635, 540]
 		  ZOrder		  -34
 		  ShowName		  off
-		  LibraryVersion	  "1.374"
+		  LibraryVersion	  "1.387"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ThermalSink"
 		  SourceType		  "Thermal Sink"
 		  load_loc		  "Cabin"
@@ -3265,7 +3265,7 @@ Library {
 		  Position		  [545, 560, 635, 590]
 		  ZOrder		  -35
 		  ShowName		  off
-		  LibraryVersion	  "1.374"
+		  LibraryVersion	  "1.387"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ThermalSink"
 		  SourceType		  "Thermal Sink"
 		  load_loc		  "Cabin"
@@ -3282,7 +3282,7 @@ Library {
 		  Position		  [545, 600, 635, 630]
 		  ZOrder		  -36
 		  ShowName		  off
-		  LibraryVersion	  "1.374"
+		  LibraryVersion	  "1.387"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ThermalSink"
 		  SourceType		  "Thermal Sink"
 		  load_loc		  "Cabin"
@@ -3299,7 +3299,7 @@ Library {
 		  Position		  [545, 645, 635, 675]
 		  ZOrder		  -37
 		  ShowName		  off
-		  LibraryVersion	  "1.374"
+		  LibraryVersion	  "1.387"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ThermalSink"
 		  SourceType		  "Thermal Sink"
 		  load_loc		  "Cabin"
@@ -3314,7 +3314,7 @@ Library {
 		  Position		  [880, 202, 930, 228]
 		  ZOrder		  -38
 		  BackgroundColor	  "green"
-		  LibraryVersion	  "1.374"
+		  LibraryVersion	  "1.387"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/data_sink"
 		  SourceType		  "Data Sink"
 		}
@@ -3648,7 +3648,7 @@ Library {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Electrical"
-	    Location		    [0, 0, 683, 724]
+	    Location		    [1358, 0, 2398, 744]
 	    Open		    off
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    200
@@ -3677,8 +3677,8 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Battery"
-		Location		[-4, -4, 1370, 728]
-		Open			off
+		Location		[1358, 0, 2398, 744]
+		Open			on
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -3711,6 +3711,11 @@ Library {
 		    $ObjectID		    58
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Battery"
+		    Description		    "The battery is modeled using the notion of multiple scale time constants, each at the level of"
+		    " seconds, minutes and hours.\nIn the electrical equivalent circuit, each time constant can be modeled as a resis"
+		    "tance-capacitance combination.\n\nBlock Inputs\n#1: Charging current magnitude from rectifier [A]\n#2: Dischargi"
+		    "ng current magnitude to DC loads [A]\n\nBlock Outputs\n#1: Voltage output of the battery module [V]\n#2: Power l"
+		    "ost in the battery due to its internal resistances [W]"
 		    Display		    "image(imread('Battery.png'))\n\nport_label('input',1,'{\\bf CTOUT}','TexMode','on')\nport_label('i"
 		    "nput',2,'{\\bf CTIN}','TexMode','on')\n\nport_label('output',1,'{\\bf VDC}','TexMode','on')\nport_label('output'"
 		    ",2,'{\\bf PLOSS}','TexMode','on')"
@@ -8039,7 +8044,7 @@ Library {
 		    Position		    [1075, 112, 1125, 138]
 		    ZOrder		    -11
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.374"
+		    LibraryVersion	    "1.387"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -8250,7 +8255,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Converters"
-		Location		[-4, -4, 1370, 728]
+		Location		[1358, 0, 2398, 744]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -10034,7 +10039,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Coordinate Transformation"
-		Location		[-1444, -4, 4, 904]
+		Location		[1358, 0, 2398, 744]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -10069,7 +10074,7 @@ Library {
 		  }
 		  System {
 		    Name		    "abc to qd0"
-		    Location		    [190, 52, 1048, 886]
+		    Location		    [1358, 0, 2398, 744]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -10191,13 +10196,13 @@ Library {
 		    DstPort		    1
 		    }
 		    Branch {
-		    Points		    [0, 45]
+		    Points		    [0, 55]
 		    Branch {
 		    DstBlock		    "Fcn1"
 		    DstPort		    1
 		    }
 		    Branch {
-		    Points		    [0, 95]
+		    Points		    [0, 85]
 		    DstBlock		    "Fcn2"
 		    DstPort		    1
 		    }
@@ -10611,7 +10616,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Inverters"
-		Location		[-1334, 945, 114, 1853]
+		Location		[1358, 0, 2398, 744]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -10626,7 +10631,7 @@ Library {
 		ZoomFactor		"100"
 		Block {
 		  BlockType		  SubSystem
-		  Name			  " inverter"
+		  Name			  " Inverter"
 		  SID			  "17023"
 		  Ports			  [3, 3]
 		  Position		  [300, 293, 400, 407]
@@ -10644,8 +10649,12 @@ Library {
 		    $ObjectID		    78
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Average inverter model"
-		    Description		    "Inputs\n#1: qd0 Switching signal\n#2: DC Voltage [V]\n#3: Current [A qd0]\n\nOutputs\n#1: Volt"
-		    "age [V qd0]\n#2: DC Current [A]\n#3: Power Loss [W]"
+		    Description		    "The three-phase inverter block converts the dc bus voltage supplied from the battery to ac vol"
+		    "tage, which interfaces with the rest of the AC system through a step-up transformer unit.\nSince the inverter is"
+		    " modeled in the dq0 reference frame, the inverter output voltages will also become constant values in steady sta"
+		    "te due to the abc-dq0 transformation.\n\nBlock Inputs\n#1: Switching signal to control inverter output voltage\n"
+		    "#2: DC bus voltage for the inverter [V]\n#3: Inverter AC side current [A]\n\nBlock Outputs\n#1: Output voltage i"
+		    "n dq0 frame [V]\n#2: DC link current [A]\n#3: Power loss from the conduction and switching losses [W]"
 		    Display		    "image(imread('Inverter.png'))\nport_label('input',1,'{\\bf q_q_d_0}','TexMode','on')\nport_label('"
 		    "input',2,'{\\bf V_D_C}','TexMode','on')\nport_label('input',3,'{\\bf I_q_d_0}','TexMode','on')\n\n\nport_label('"
 		    "output',1,'{\\bf V_q_d_0}','TexMode','on')\nport_label('output',2,'{\\bf I_D_C}','TexMode','on')\nport_label('ou"
@@ -10692,7 +10701,7 @@ Library {
 		    }
 		  }
 		  System {
-		    Name		    " inverter"
+		    Name		    " Inverter"
 		    Location		    [-8, -8, 1374, 736]
 		    Open		    off
 		    ModelBrowserVisibility  on
@@ -15229,7 +15238,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Loads"
-		Location		[0, 0, 683, 724]
+		Location		[1358, 0, 2398, 744]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -19193,7 +19202,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Loss Estimation"
-		Location		[0, 0, 683, 724]
+		Location		[1358, 0, 2398, 744]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -22769,7 +22778,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Machines"
-		Location		[-1139, 1019, -233, 1740]
+		Location		[1358, 0, 2398, 744]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -22864,7 +22873,7 @@ Library {
 		  }
 		  System {
 		    Name		    "DC Position Servo"
-		    Location		    [-8, -8, 1374, 736]
+		    Location		    [1358, 0, 2398, 744]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -32882,8 +32891,9 @@ Library {
 		    $ObjectID		    147
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Transformer"
-		    Description		    "Inputs \n#1: Primary voltage input [V qd0]\n#2: Secondary current input [A]\n\nOutputs\n#1: Se"
-		    "condary voltage output [V qd0]\n#2: Primary current input [A]"
+		    Description		    "The user inputs and outputs are given below. Inputs to the model are:\n\nBlock Inputs \n#1: Pr"
+		    "imary voltage input [V]\n#2: Secondary current input [A]\n\nBlock Outputs\n#1: Secondary voltage output [V]\n#2:"
+		    " Primary current input [A]"
 		    Display		    "image(imread('Transformer.png'))\n\nport_label('input',1,'{\\bf V_i_n}','TexMode','on')\nport_labe"
 		    "l('input',2,'{\\bf I_o_u_t}','TexMode','on')\n\nport_label('output',1,'{\\bf V_o_u_t}','TexMode','on')\nport_lab"
 		    "el('output',2,'{\\bf I_i_n}','TexMode','on')\n"
@@ -33165,7 +33175,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Rectifiers"
-		Location		[-1139, 1019, -233, 1740]
+		Location		[1358, 0, 2398, 744]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -33708,7 +33718,7 @@ Library {
 		  }
 		  System {
 		    Name		    "Three Phase\nFull Bridge\nPractical"
-		    Location		    [79, 52, 1357, 986]
+		    Location		    [1358, 0, 2398, 744]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -35415,6 +35425,13 @@ Library {
 		    $PropName		    "MaskObject"
 		    $ObjectID		    165
 		    $ClassName		    "Simulink.Mask"
+		    Type		    "Rectifier"
+		    Description		    "The rectifier block converts ac voltage to dc voltage, which interfaces with the rest of the D"
+		    "C system. \nThis is an active rectifier and it is modeled in the synchronous dq0 reference frame. \nThe active r"
+		    "ectifier control algorithm is omitted and a simplified model is implemented.\n\nBlock Inputs:\n\n#1: Input line "
+		    "voltage in the synchronous reference frame [V]\n#2: Converter modulation depth. It is a number between 0 and 1\n"
+		    "#3: Output dc voltage level [V]\n\nBlock Outputs:\n\n#1: Output DC current level [A]\n#2: Input line current in "
+		    "the synchronous reference frame  [A]\n"
 		    Display		    "image(imread('Rectifier.png'))\n\n% Define inputs\n\nport_label('input',1,'{\\bf V_d_q_0}','Texmod"
 		    "e','on')\nport_label('input',2,'{\\bf m}','Texmode','on')\nport_label('input',3,'{\\bf V_D_C}','Texmode','on')\n"
 		    "\n% Define outputs\n\nport_label('output',1,'{\\bf I_D_C}','Texmode','on')\nport_label('output',2,'{\\bf I_d_q_0"
@@ -35441,7 +35458,7 @@ Library {
 		  }
 		  System {
 		    Name		    "three-phase \nactive\nrectifier\nVoltage Mode"
-		    Location		    [73, 163, 1197, 1151]
+		    Location		    [1358, 0, 2398, 744]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -35825,7 +35842,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Systems"
-		Location		[-1448, 870, 8, 1786]
+		Location		[1358, 0, 2398, 744]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -37976,9 +37993,13 @@ Library {
 		    $PropName		    "MaskObject"
 		    $ObjectID		    181
 		    $ClassName		    "Simulink.Mask"
-		    Description		    "The generator size can be selected from the drop window below.\n(For advanced-users) When the "
-		    "User-defined option is selected from the drop window, the generator parameters can be manually specified in the "
-		    "tabs below."
+		    Description		    "A generator system block implements a generic power generation unit consisting of a gearbox, a"
+		    " synchronous generator, a synchronous exciter and exciter controls. \nThe generator size can be selected from th"
+		    "e drop window below.\n(For advanced-users) When the User-defined option is selected from the drop window, the ge"
+		    "nerator parameters can be manually specified in the tabs below.\n\nBlock Inputs:\n\n#1: Jet engine low pressure "
+		    "spool [RPM]\n#2: Exciter system supply voltage [V]\n#3: Synchronous reference frame line currents  [A]\n\nBlock "
+		    "Output:\n\n#1: Synchronous reference frame line voltages [V]\n#2: Exciter system supply current [A]\n#3: Electro"
+		    "magnetic torque on the low pressure spool  [N-M]\n#4: Heat rejected to the cooling system or ambient [W] "
 		    Initialization	    "\nload(fan_load);\n\n% Inductances\nXd = Xls + Xmd;\nXq = Xls + Xmq;\nXfd = Xlfd + Xmd;\nX1q"
 		    " = Xl1q + Xmq;\nXd1 = Xd - Xmd^2/Xfd;\nXq1 = Xq - Xmq^2/X1q;\nXd2 = Xls + (1/(1/Xmd + 1/Xlfd + 1/Xl1d));\nXq2 = "
 		    "Xls + (1/(1/Xmq + 1/Xl1q + 1/Xl2q));\nTdo1 = Xfd/ws/R_fd;\nTqo1 = X1q/ws/R_1q;\nTdo2 = 1/ws/R_1d*(Xl1d + 1/(1/Xm"
@@ -46337,7 +46358,7 @@ Library {
 		    Position		    [670, 42, 720, 68]
 		    ZOrder		    -39
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.374"
+		    LibraryVersion	    "1.387"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -46355,10 +46376,10 @@ Library {
 		    Ports		    [3, 2]
 		    Position		    [835, 107, 905, 203]
 		    ZOrder		    -40
-		    LibraryVersion	    "1.374"
+		    LibraryVersion	    "1.387"
 		    SourceBlock		    "PowerFlowLib/Energy & Power Systems/Electrical/Rectifiers/three-phase \nactive\nrectifier\nVol"
 		    "tage Mode"
-		    SourceType		    ""
+		    SourceType		    "Rectifier"
 		    L			    "1"
 		    C			    "1e-4"
 		    }
@@ -47833,7 +47854,7 @@ Library {
 		  }
 		  System {
 		    Name		    "Inverter Phase\nControl"
-		    Location		    [-4, -4, 1370, 728]
+		    Location		    [1358, 0, 2398, 744]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -48066,7 +48087,7 @@ Library {
 		  }
 		  System {
 		    Name		    "Service Bus"
-		    Location		    [239, 53, 1197, 1074]
+		    Location		    [1358, 0, 2398, 744]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -48345,7 +48366,7 @@ Library {
 		  }
 		  System {
 		    Name		    "Transformer-rectifier"
-		    Location		    [-4, -4, 1370, 728]
+		    Location		    [1358, 0, 2398, 744]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -48410,7 +48431,7 @@ Library {
 		    Position		    [235, 136, 340, 234]
 		    ZOrder		    -6
 		    NamePlacement	    "alternate"
-		    LibraryVersion	    "1.374"
+		    LibraryVersion	    "1.387"
 		    SourceBlock		    "PowerFlowLib/Energy & Power Systems/Electrical/Machines/Transformer"
 		    SourceType		    "Transformer"
 		    Rp			    "0.005"
@@ -48426,7 +48447,7 @@ Library {
 		    Position		    [640, 87, 690, 113]
 		    ZOrder		    -7
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.374"
+		    LibraryVersion	    "1.387"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -48437,7 +48458,7 @@ Library {
 		    Ports		    [3, 2]
 		    Position		    [455, 142, 525, 238]
 		    ZOrder		    -8
-		    LibraryVersion	    "1.374"
+		    LibraryVersion	    "1.387"
 		    SourceBlock		    "PowerFlowLib/Energy & Power Systems/Electrical/Converters/rectifier"
 		    SourceType		    ""
 		    L			    "1e-1"
@@ -49370,8 +49391,8 @@ Library {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Hydraulic"
-	    Location		    [73, 60, 1009, 653]
-	    Open		    off
+	    Location		    [1358, 0, 2398, 744]
+	    Open		    on
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -50533,9 +50554,12 @@ Library {
 		$ObjectID		258
 		$ClassName		"Simulink.Mask"
 		Type			"Fluid Reservoir"
-		Description		"Block Inputs\n#1: Bleed air properties (Bus signal)\n#2: Bypass return from bypass valve\n#3: Mass flo"
-		"w rate pumped out by hydraulic pump\n#4: Mass flow rate returned from actuators\n\nBlock Outputs\n#1: Bleed air dema"
-		"nded to maintain pressurization\n#2: Hydraulic fluid properties in the reservoir"
+		Description		"The fluid reservoir serves as a tank for storing excess hydraulic fluid.  \nThe reservoir is fed by re"
+		"turning hydraulic fluid and feeds the engine driven pump.  \nCurrently the fluid reservoir tracks the time dependent"
+		" mass and temperature of the hydraulic fluid in the tank.  \n\nBlock Inputs\n#1: Bleed air properties (Bus signal)\n"
+		"#2: Bypass return from bypass valve\n#3: Mass flow rate pumped out by hydraulic pump\n#4: Mass flow rate returned fr"
+		"om actuators\n\nBlock Outputs\n#1: Bleed air demanded to maintain pressurization\n#2: Hydraulic fluid properties in "
+		"the reservoir"
 		Initialization		"load AirProp\nload HydProp\n"
 		Display			"image(imread('hyd_res.png'))\n\nport_label('input',1,'{\\bf Bleed In}','TexMode','on')\nport_label('input"
 		"',2,'{\\bf Bypass Return}','TexMode','on')\nport_label('input',3,'{\\bf m_d_o_t Out}','TexMode','on')\nport_label('i"
@@ -52113,7 +52137,7 @@ Library {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Thermal"
-	    Location		    [-1448, 870, 8, 1786]
+	    Location		    [1358, 0, 2398, 744]
 	    Open		    off
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    212
@@ -52252,7 +52276,7 @@ Library {
 	      }
 	      System {
 		Name			"Anti-Ice"
-		Location		[57, 285, 1152, 867]
+		Location		[1358, 0, 2398, 744]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -52343,7 +52367,7 @@ Library {
 		  Position		  [450, 262, 500, 288]
 		  ZOrder		  -8
 		  BackgroundColor	  "green"
-		  LibraryVersion	  "1.374"
+		  LibraryVersion	  "1.385"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/data_sink"
 		  SourceType		  "Data Sink"
 		}
@@ -52434,7 +52458,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"ECS"
-		Location		[-1347, 944, -70, 1665]
+		Location		[1358, 0, 2398, 744]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -54544,7 +54568,7 @@ Library {
 		    Position		    [1255, 337, 1305, 363]
 		    ZOrder		    423
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.374"
+		    LibraryVersion	    "1.387"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -55195,7 +55219,7 @@ Library {
 		    Position		    [740, 197, 790, 223]
 		    ZOrder		    819
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.374"
+		    LibraryVersion	    "1.387"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -55674,6 +55698,11 @@ Library {
 		    $ObjectID		    314
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Air-Air Heat Exchanger"
+		    Description		    "In most aircraft applications, air-air heat exchangers are employed in the Air-cycle machine ("
+		    "ACM). \nFor the present implementation, a dynamic 1-D lumped parameter model is employed for characterizing the "
+		    "heat exchanger for B737 applications.\n\nBlock Inputs:\n\n#1: Ram air inflow bus [Kg/s] [K] [kPa] \n#2: Bleed ai"
+		    "r inflow bus [Kg/s] [K] [kPa] \n\nBlock Outputs:\n\n#1: Ram air outflow bus [Kg/s] [K] [kPa] \n#2: Bleed air out"
+		    "flow bus [Kg/s] [K] [kPa] \n#3: Misc. Data"
 		    Help		    "Main Assumptions:\n\n1. Rectangular offset-strip fin heat exchanger.\n2. Lumped parameter model.\n3. "
 		    "Constant user-defined efficiency.\n4. Number of passages is the same for both the cold and hot fluid passages (u"
 		    "sually\none of the flows has 1 more passage to reduce ambient losses).\n5. Similar plate and fin geometries for "
@@ -69244,6 +69273,14 @@ Library {
 		    $ObjectID		    329
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Passenger Cabin"
+		    Description		    "The passenger cabin model is a 1-D (lumped parameter) model, whereby the properties of the air"
+		    " inside the cabin are considered as uniform throughout the cabin (no spatial dependence). \nThe pressure and the"
+		    " temperature inside the cabin are derived through the conservation of mass and energy inside the control volume "
+		    "(cabin). \nThe passengers inside the cabin are considered as the source of sensible heat. \nThe heat transfer du"
+		    "e to radiation and due to kinetic heating is accounted through approximate heat transfer coefficients. \n\nBlock"
+		    " Inputs:\n\n#1: Supply air inflow bus [Kg/s][K][kPa]\n#2: Ambient temperature [K]\n#3: Mach number \n#4: Equipme"
+		    "nt thermal load [W]\n\nBlock Outputs:\n\n#1: Supply air demand [Kg/s]\n#2: Cabin conditions [K] [kPa]\n#3: Retur"
+		    "n air conditions [Kg/s][K][kPa]"
 		    Help		    "Main assumptions\n\n1. The thermal loads considered in the current release are: passengers sensible l"
 		    "oad, \nwall transmission load, kinetic heating, and electrical/electronic cooling.\n2. The actual cabin paramete"
 		    "rs (fuselage area, air volume, and number of passengers) is split in 2 halves and\neach half is connected to one"
@@ -72493,7 +72530,7 @@ Library {
 		    Position		    [1260, 422, 1310, 448]
 		    ZOrder		    -29
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.374"
+		    LibraryVersion	    "1.387"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -73471,7 +73508,7 @@ Library {
 		    Position		    [1075, 372, 1125, 398]
 		    ZOrder		    48
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.374"
+		    LibraryVersion	    "1.387"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -73713,7 +73750,11 @@ Library {
 		    $PropName		    "MaskObject"
 		    $ObjectID		    346
 		    $ClassName		    "Simulink.Mask"
-		    Description		    "COMPRESSOR (ECS)\n\n\n"
+		    Description		    "The turbocharger consists of a turbine driven by the exhaust gas and connected via a common sh"
+		    "aft to the compressor, which compresses the air in the intake. \nThe rotational speed (N) of the turbocharger sh"
+		    "aft can be derived as a power (P) balance between the turbine and the compressor side. \n\nBlock Inputs: \n\n#1:"
+		    " Engine Bleed [Kg/s] [K] [kPa]\n#2: Shaft Speed [W]\n\nBlock Outputs:\n\n#1: Engine Bleed [Kg/s] [K] [kPa]\n#2: "
+		    "Compressor Power [W]\n\n\n"
 		    Help		    "Main Assumptions\n1. The Turbine and the compressor are coupled to each other (turbocharger).\n2. Map"
 		    "s are provided to compute the efficiency of the compressor.\n3. There is no heat transfer from the compressor to"
 		    " the surrounding."
@@ -74341,6 +74382,10 @@ Library {
 		    $ObjectID		    347
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Fan"
+		    Description		    "The function of a fan in the ECS is to deliver the recirculated air from the cabin to a mixing"
+		    " junction, where the recirculated air is mixed with the conditioned air from the ECS. \nThe fan model in Simulin"
+		    "k determines the recirculated air properties and the fan power required.\n\nBlock Inputs:\n\n#1: Input flow bus "
+		    "[Kg/s] [K] [kPa]\n\nBlock Outputs:\n\n#1: From cabin to fan  [Kg/s] [K] [kPa]\n#2: Other output bus [RPM] [kW]"
 		    Help		    "Main Assumptions:\n\n1. Fan performance data based on GREENHECK-SQ 130.\n2. Volume flow rate allowabl"
 		    "e operating range: 891 to 2368 cfm based \non the chosen performance data.\n3. Constant speed operation at 1725 "
 		    "rpm (the input rpm in the mask is only intended for future\nupgrade of the fan model into a variable speed one)."
@@ -76640,7 +76685,11 @@ Library {
 		    $PropName		    "MaskObject"
 		    $ObjectID		    351
 		    $ClassName		    "Simulink.Mask"
-		    Description		    "TURBINE (ECS)\n\n"
+		    Description		    "The turbocharger consists of a turbine driven by the exhaust gas and connected via a common sh"
+		    "aft to the compressor, which compresses the air in the intake. \nThe rotational speed (N) of the turbocharger sh"
+		    "aft can be derived as a power (P) balance between the turbine and the compressor side. \n\nBlock Inputs:\n\n#1: "
+		    "Engine Bleed [Kg/s] [K] [kPa]\n#2: Compressor Power [W]\n\nBlock Outputs:\n\n#1: Engine Bleed [Kg/s] [K] [kPa]\n"
+		    "#2: Shaft Speed [RPM]\n#3; Turbine Power[W]"
 		    Help		    "Main Assumptions\n1. The Turbine and the compressor are coupled to each other (turbocharger).\n2. The"
 		    " efficiency of the turbine is constant.\n3. There is no heat transfer from the turbine to the surrounding.\n4. T"
 		    "he initial speed of the turbine should be non-zero (which simulates a starting torque)."
@@ -77989,8 +78038,8 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Fuel & Oil"
-		Location		[-1448, 870, 8, 1786]
-		Open			on
+		Location		[1358, 0, 2398, 744]
+		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -78601,7 +78650,7 @@ Library {
 		    Position		    [1010, 87, 1060, 113]
 		    ZOrder		    427
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.374"
+		    LibraryVersion	    "1.387"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -80049,8 +80098,11 @@ Library {
 		    $ObjectID		    376
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Pump"
-		    Description		    "Input 1: Input Flow Bus\nInput 2: Shaft RPM (rpm)\nInput 3: Upstream Pressure (kPa)\n\nOutput "
-		    "1: Output Flow Bus\nOutput 2: Pump Power Bus (mech or elec)\nOptional: Pump Heat Generated (kW) \n"
+		    Description		    "The fuel pump model determines a mass flow rate of fluid being pumped from a source through th"
+		    "e use of pump performance maps.  \nThe pump model does not contain internal dynamic states and is based off of s"
+		    "tatic relationships and look up tables.\n\nBlock Inputs:\n\n1: Input Flow Bus\n2: Shaft RPM [RPM]\n3: Upstream P"
+		    "ressure [kPa]\n\nBlock Outputs:\n\n1: Output Flow Bus\n2: Pump Power Bus [mech or elec]\nOptional: Pump Heat Gen"
+		    "erated [kW] \n"
 		    Initialization	    "if exist('PumpProp') == 0\n  load('PumpProp.mat')\nend\nh      = get_param(gcb,'handle');   "
 		    "% Get block handle\nblk    = gcb; \nhblock = get(h);     % Parse out handles structure\n\nif strcmp(get_param(gc"
 		    "b,'fld'),'Fuel') == 1\n    load FluidProp_JetA3638\n    eval(['F1 = FuelProp;']);\nelseif strcmp(get_param(gcb,'"
@@ -80791,7 +80843,7 @@ Library {
 		    Position		    [1275, 452, 1325, 478]
 		    ZOrder		    -35
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.374"
+		    LibraryVersion	    "1.384"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -81473,9 +81525,12 @@ Library {
 		    $ObjectID		    387
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Fluid Tank"
-		    Description		    "Input 1: Input Flow Bus\nInput 2: Flow Rate Out [kg/s]\nInput 3: Ambient Pressure [kPa]\nInput"
-		    " 4: Heat Load [W]\nInput 5: Initial Wall Temps. Vector [K]\n\nOutput 1: Output Flow Bus\nOutput 2: Tank mass [kg"
-		    "]\nOutput 3: Ullage Temp. [K]"
+		    Description		    "The fuel tank model tracks the time-varying fuel temperature, ullage temperature, and fuel mas"
+		    "s. \nMathematical modeling of the fuel tank is based upon conservation of energy and mass.  In version 1.0, time"
+		    "-dependent pressure states are not calculated.  \nHeat transfer is captured between the fuel, ullage, tank walls"
+		    ", and internal heat loads.\n\nBlock Inputs:\n\n1: Input Flow Bus\n2: Flow Rate Out [kg/s]\n3: Ambient Pressure ["
+		    "kPa]\n4: Heat Load [W]\n5: Initial Wall Temps. Vector [K]\n\nBlock Outputs:\n\n1: Output Flow Bus\n2: Tank mass "
+		    "[kg]\n3: Ullage Temp. [K]"
 		    Initialization	    "h      = get_param(gcb,'handle');   % Get block handle\nblk    = gcb; \nhblock = get(h);    "
 		    " % Parse out handles structure \n\nif strcmp(get_param(gcb,'fld'),'Fuel') == 1\n    load FluidProp_JetA3638\n   "
 		    " eval(['F1 = FuelProp;']);\nelseif strcmp(get_param(gcb,'fld'),'Oil') == 1\n    load OilProp\n    eval(['F1 = Oi"
@@ -83086,7 +83141,7 @@ Library {
 		    Position		    [1540, 462, 1590, 488]
 		    ZOrder		    15
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.374"
+		    LibraryVersion	    "1.387"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -85320,7 +85375,7 @@ Library {
 		    Position		    [1235, 347, 1285, 373]
 		    ZOrder		    432
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.374"
+		    LibraryVersion	    "1.387"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -85871,7 +85926,8 @@ Library {
 		    Type		    "Heat Loads "
 		    Description		    "Increase the flow temperature using nomally distributed white noise.  Noise power and sample t"
 		    "ime affect the magnitude of the temperature increase.  Use a fixed seed for repeatable heat loads. \n\nTemp. Out"
-		    " = Temp. In + Integral(white noise)   \n\nIntegration has a lower saturation of zero."
+		    " = Temp. In + Integral(white noise)   \n\nIntegration has a lower saturation of zero.\n\nBlock Inputs:\n\n#1: Fl"
+		    "ow In [Kg/s] [K] [kPa]\n\nBlock Outputs:\n\n#1: Flow Out [Kg/s] [K] [kPa]"
 		    Display		    "port_label('output',1,'{\\bf Flow Out}','TexMode','on')\nport_label('input',1,'{\\bf Flow In}','Te"
 		    "xMode','on')"
 		    Array {
@@ -86131,7 +86187,7 @@ Library {
       }
       System {
 	Name			"Mission Profile"
-	Location		[-8, 0, 1370, 744]
+	Location		[1358, 0, 2398, 744]
 	Open			off
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	236
@@ -87094,7 +87150,7 @@ Library {
       }
       System {
 	Name			"Support Functions/Tools"
-	Location		[390, 228, 1124, 874]
+	Location		[1358, 0, 2398, 744]
 	Open			off
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	200
@@ -89951,7 +90007,7 @@ MatData {
 }
 # Finite State Machines
 #
-#    Stateflow Version 7.6 (R2013a) dated Jan 19 2013, 14:32:03
+#    Stateflow Version 7.6 (R2013a) dated Jan 19 2013, 14:32:20
 #
 #
 
