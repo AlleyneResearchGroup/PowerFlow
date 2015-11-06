@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Battery</title>
+<link rel="stylesheet" href="../Powerflow_template_help.css" type="text/css"><meta name="chunktype" content="refpage">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="toctype" itemprop="pagetype" content="blk">
+<meta name="infotype" itemprop="infotype" content="ref/block" />
+
+<meta name="description" itemprop="description" content="The 1D Observer Form [A(v),B(v),C(v),F(v),H(v)] block implements a gain-scheduled state-space controller defined in the following observer form:" />
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery-latest.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/l10n.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/docscripts.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/docscripts.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.toc.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.imagescaling.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.imageanimation.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.breadcrumb.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/jquery.highlight.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/nanoscroller.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.tmpl.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.toggleval.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/localnav.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/suggest.js"></script>
+<script type="text/javascript">
+            var suggestionsObj;
+            $(function() {
+                var searchField = $('#docsearch');
+                suggestionsObj = new Suggestions(getSuggestions, getMore, searchField);
+            });
+        
+            function getSuggestions() {
+               var text = suggestionsObj.searchField.val();
+               document.location='docsuggestion:' + text;
+            }
+
+            function getMore(type) {
+                var text = suggestionsObj.searchField.val();
+                document.location='docsuggestion:' + type + ':' + text;
+            }
+        </script>
+
+<link href="../../includes/product/css/reset.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/960.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/site5.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center_installed.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center_print.css" rel="stylesheet" type="text/css" media="print">
+<script type="text/javascript" src="../../includes/shared/scripts/respond.min.js"></script>
+</head>
+<body>
+
+         <div class="site_container site_toc_closed">
+         <div class="toc_pane"><div xmlns:atict="http://www.arbortext.com/namespace/atict">
+<div class="toc_container_wrapper" tabindex="0" style="display:block;">
+<div class="toc_header" lang="en">
+  <div class="toc_icon" id="toc.aeroblks"> <a href="../doccentertoc.html"></a></div>
+  <div></div>
+</div>
+</div>
+         </div>
+</div><div class="page_container"><div class="content_frame"><div class="content_container" id="content_container"><div id="search_crumb_container"><div class="breadcrumb_container"><div class="breadcrumbs"></div>
+</div>
+
+</div><section id="doc_center_content">
+<a name="f1-1015099"></a><a name="oned_observer_form"></a><div itemprop="content">
+  <h1 class="r2013b" itemprop="title">Inverter</h1>
+  <p class="r2013b" itemprop="title"><a href="#Library">Library</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Description">Description</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Math">Mathematical Model </a></p>
+  <p class="r2013b" itemprop="title"><a href="#Mask">Inverter Mask</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Inputs">Component Inputs and Outputs</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Asump">Assumptions and Limitations </a></p>
+  <p class="r2013b" itemprop="title"><a href="#Ex">Examples</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Ref">References</a></p>
+  <!-- SYNCHTO: _bqqd2iy.html --><div class="doc_topic_desc"><div class="purpose_container">
+    <div class="switch"></div>
+  </div></div></div><div itemprop="content"><a name="Library" id="Library"></a>
+    <h2>Library</h2>
+  <p>Electrical Power Systems </p>
+  </div><div itemprop="content"><a name="Description" id="Description"></a>
+    <h2>Description</h2>
+<p>The three-phase inverter block converts the dc bus voltage  supplied from the battery to ac voltage, which interfaces with the rest of the  AC system through a step-up transformer unit. Since the inverter is modeled in  the <em>dq</em>0 reference frame, the inverter  output voltages will also become constant values in steady state due to the <em>abc</em>-<em>dq</em>0  transformation.</p>
+  </div><div itemprop="content"><a name="Math" id="Math"></a>
+    <div>
+      <h2>Mathematical Model </h2>
+      <p>The battery voltage serves as the dc bus input voltage (<em>Vdc</em>) to the battery. The  other input needed to control the three-phase inverter are switching (or  modulating) functions. Since the inverter is an averaged model in <em>dq</em>0 frame, the switching functions (<em>q</em>) are also steady state averaged  signals. When sinusoidal pulse width modulation method is used to control the  inverter switches, the output L-L (rms) voltage of the inverter can be given as</p>
+      <p align="center"><img src="../Inverter Help/eq 1.png" alt="5.3.23" width="100" height="44"></p>
+      <p>Because of the reference frame transformation, the switching  functions for the three-phase inverter are also constant values, instead of  sinusoidal functions, so that the output voltages are constant values. The  phase of the inverter output voltages with respect to the rest of the AC system  can be changed by modifying the constant vector passed as input into the  switching function block.</p>
+      <div align="center">
+        <p align="center">&nbsp;</p>
+      </div>
+      <p align="left">&nbsp;</p>
+    </div>
+    <h2><a name="Mask"></a></h2>
+    <h2>Inverter Mask </h2>
+    <p align="center"><img src="../Inverter Help/Inveter MAsk.png" alt="Inverter Mask" width="585" height="543"></p>
+    <p align="center">Fig. 5.55. Mask inputs to the inverter model </p>
+    <p>The battery model requires the following mask input values.</p>
+    <ul type="disc">
+      <li><strong>Rise time and fall       time</strong> – Depends on the specific type of       semiconductor switch and can be obtained from the corresponding datasheets       (Units – Second). This is useful to calculate switching losses.</li>
+      <li><strong>On state <em>Vce</em> drop</strong> - The voltage drop (ideally desired to be 0) across       the switch during conduction is used to compute the conduction losses in       the switch (Units – Volt)</li>
+      <li><strong>Switch ing       frequency</strong> – User-defined PWM frequency that       determines the number of times that each switch is turned on and off and       is required to compute switching losses (Units - Hz)</li>
+      <li><strong>Number of       switches</strong> – Refers to the number of       semiconductor switches in the inverter. Usually, a two-level inverter       configuration is used, which has six power switches.</li>
+    </ul>
+    <p align="center">&nbsp;</p>
+    <p align="center"><a name="f1-745964"></a></p>
+    </div><div itemprop="content">
+      <h2><a name="Inputs"></a></h2>
+      <h2>Component Inputs and Outputs</h2>
+      <p align="center"><img src="../Inverter Help/Inveter diagram.png" alt="Block Diagram" width="492" height="162"></p>
+      <p align="center">Fig. 5.54. High-level block diagram of the inverter  model</p>
+      <table cellspacing="0" class="body" cellpadding="4" border="2"><colgroup><col width="15%"><col width="30%"><col width="55%"></colgroup><thead><tr valign="top"><th valign="top">Input</th>
+      <th valign="top">Units</th>
+      <th valign="top">Description</th></tr>
+</thead><tbody><tr valign="top"><td><p>DC Bus Voltage </p></td>
+<td>Volt</td>
+<td>DC  link voltage for the inverter obtained from the battery output voltage   </td>
+</tr>
+  <tr valign="top">
+    <td>Inverter AC Side Current </td>
+    <td>Ampere</td>
+    <td>Inverter  output current demand in <em>dq</em>0 frame </td>
+  </tr>
+  <tr valign="top"><td><p>Switching Function </p></td>
+<td>&nbsp;</td>
+<td><p>A  1x3 vector signal with constant values passed as modulating functions to  control the inverter output voltage</p>  </td></tr>
+</tbody></table>
+      <p></p><table cellspacing="0" class="body" cellpadding="4" border="2"><colgroup><col width="16%"><col width="29%"><col width="55%"></colgroup><thead><tr valign="top"><th valign="top">Output</th>
+<th valign="top">Units</th>
+<th valign="top">Description</th></tr>
+</thead><tbody>
+  <tr valign="top">
+    <td>dq0 Output Voltage</td>
+    <td>Volt</td>
+    <td>Three-phase  inverter output voltage in <em>dq</em>0 frame  </td>
+  </tr>
+  <tr valign="top">
+    <td>DC Link Current </td>
+    <td>Ampere</td>
+    <td>Computed  based on the inverter AC output current and passed as the dc bus current demand  feedback to the battery </td>
+  </tr>
+  <tr valign="top"><td><p>Power Loss</p></td>
+    <td>Watt</td><td>Calculated  as the conduction and switching losses in the inverter </td></tr>
+</tbody></table>
+      <p></p></div><div itemprop="content"><a name="Asump" id="Asump"></a>
+        <h2>Assumptions and Limitations</h2><p>&nbsp;</p>
+      </div>
+      <div itemprop="content"><a name="Ex" id="Ex"></a>
+        <h2>Examples</h2><p>&nbsp;</p>
+</div><div itemprop="content"><a name="Ref" id="Ref"></a>
+  <h2>Reference</h2>
+  <p><a href="#f1-1015099">Back to Top </a></p>
+</div>
+<div itemprop="content"></div>
+</section>
+</div> 
+</div> 
+</div> 
+<div class="footer_container"><div class="footer"></div>
+      </div>
+   
+         </div> <!--  close_site_container -->
+         </body>
+</html>
