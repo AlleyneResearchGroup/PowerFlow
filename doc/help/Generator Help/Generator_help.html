@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Battery</title>
+<link rel="stylesheet" href="../Powerflow_template_help.css" type="text/css"><meta name="chunktype" content="refpage">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="toctype" itemprop="pagetype" content="blk">
+<meta name="infotype" itemprop="infotype" content="ref/block" />
+
+<meta name="description" itemprop="description" content="The 1D Observer Form [A(v),B(v),C(v),F(v),H(v)] block implements a gain-scheduled state-space controller defined in the following observer form:" />
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery-latest.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/l10n.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/docscripts.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/docscripts.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.toc.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.imagescaling.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.imageanimation.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.breadcrumb.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/jquery.highlight.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/nanoscroller.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.tmpl.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.toggleval.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/localnav.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/suggest.js"></script>
+<script type="text/javascript">
+            var suggestionsObj;
+            $(function() {
+                var searchField = $('#docsearch');
+                suggestionsObj = new Suggestions(getSuggestions, getMore, searchField);
+            });
+        
+            function getSuggestions() {
+               var text = suggestionsObj.searchField.val();
+               document.location='docsuggestion:' + text;
+            }
+
+            function getMore(type) {
+                var text = suggestionsObj.searchField.val();
+                document.location='docsuggestion:' + type + ':' + text;
+            }
+        </script>
+
+<link href="../../includes/product/css/reset.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/960.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/site5.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center_installed.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center_print.css" rel="stylesheet" type="text/css" media="print">
+<script type="text/javascript" src="../../includes/shared/scripts/respond.min.js"></script>
+</head>
+<body>
+
+         <div class="site_container site_toc_closed">
+         <div class="toc_pane"><div xmlns:atict="http://www.arbortext.com/namespace/atict">
+<div class="toc_container_wrapper" tabindex="0" style="display:block;">
+<div class="toc_header" lang="en">
+  <div class="toc_icon" id="toc.aeroblks"> <a href="../doccentertoc.html"></a></div>
+  <div></div>
+</div>
+</div>
+         </div>
+</div><div class="page_container"><div class="content_frame"><div class="content_container" id="content_container"><div id="search_crumb_container"><div class="breadcrumb_container"><div class="breadcrumbs"></div>
+</div>
+
+</div><section id="doc_center_content">
+<a name="f1-1015099"></a><a name="oned_observer_form"></a><div itemprop="content">
+  <h1 class="r2013b" itemprop="title">Generator</h1>
+  <p class="r2013b" itemprop="title"><a href="#Library">Library</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Description">Description</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Math">Mathematical Model </a></p>
+  <p class="r2013b" itemprop="title"><a href="#Mask">Generator Mask</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Inputs">Component Inputs and Outputs</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Asump">Assumptions and Limitations </a></p>
+  <p class="r2013b" itemprop="title"><a href="#Ex">Examples</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Ref">References</a></p>
+  <!-- SYNCHTO: _bqqd2iy.html --><div class="doc_topic_desc"><div class="purpose_container">
+    <div class="switch"></div>
+  </div></div></div><div itemprop="content"><a name="Library" id="Library"></a>
+    <h2>Library</h2>
+  <p>Electrical Power Systems </p>
+  </div><div itemprop="content"><a name="Description" id="Description"></a>
+    <h2>Description</h2>
+    <p class="inlinemediaobject">More-electric aircrafts are moving towards ac  generation systems with variable frequency operation. This section will provide  mathematical models, dynamic inputs/outputs and <em>simulink</em> model of a wound-field synchronous generator. <br>
+    </p>
+  </div><div itemprop="content"><a name="Math" id="Math"></a>
+    <div>
+      <h2>Mathematical Model </h2>
+      <p>This is a standalone generator model. Common generator  models assume either an infinite bus or a voltage supply connected to the  machine terminals (Krause et. al, 2002). However, such an implementation would  require the knowledge of line voltages and would violate the causality of the  system. Therefore, a voltage-based model is created. This way, the load  information would not be necessary while producing line voltage. An accurate  implementation of this approach would require line transients such as time rate  of change in the line inductance currents and voltage drop across the line  reactors to be monitored. However, a singular perturbation approach presented  in (Sauer and Pai, 1998) is followed to mitigate this problem and optimize the  system model details and simulation speed. To achieve faster simulations, the  models are implemented in a synchronous reference frame. Synchronous machine  dynamic model is as follows:</p>
+      <p align="center"><img src="eq 1.png" width="421" height="51"></p>
+      <p align="center"><img src="eq 2.png" width="389" height="55"></p>
+      <p align="center"><img src="eq 3.png" width="198" height="37"></p>
+      <p align="center"><img src="eq 4.png" width="198" height="41"></p>
+      <p>where                                                                        and       are the direct and  quadrature axis per-unit reactances, respectively;       and       are the direct and  quadrature axis per-unit transient reactances, respectively;       and       are the direct and  quadrature axis per-unit subtransient reactances, respectively;       and       are the direct and  quadrature axis field winding per-unit transient time constants, respectively;       and       are the direct and  quadrature axis field winding per-unit subtransient time constants,  respectively. These quantities are defines as:</p>
+      <div align="center">
+        <p><img src="eq 5.png" width="106" height="51"></p>
+        <p><img src="eq 6.png" width="88" height="45"></p>
+        <p><img src="eq 7.png" width="167" height="61"></p>
+        <p><img src="eq 8.png" width="167" height="61"></p>
+        <p><img src="eq 9.png" width="70" height="46"></p>
+        <p><img src="eq 10.png" width="67" height="46"></p>
+        <p><img src="eq 11.png" width="157" height="52"></p>
+        <p><img src="eq 12.png" width="158" height="52"></p>
+        <p align="left">and the synchronous machine terminal voltages are:</p>
+        <p align="center"><img src="eq 13.png" width="380" height="45"></p>
+        <p align="center"><img src="eq 14.png" width="380" height="47"></p>
+        <p align="left">where                                                                        and       are the transmission  line per-unit resistance and reactance, respectively;       is the per-unit  electrical frequency (typical base value is 377 rad/s),       is the synchronous  machine per-unit stator resistance. Synchronous machine per-unit  electromagnetic torque is</p>
+        <p align="center"><img src="eq 15.png" width="477" height="46"></p>
+        <p align="left">To account for the heat load of the generators, the power  losses are computed as</p>
+        <p align="center"><em><img src="eq 16.png" width="162" height="25"></em></p>
+        <p align="left">where                                                                       is the base power,      is the per-unit input torque to the generator from the  gearbox.</p>
+        <div align="left"></div>
+        <p align="center">&nbsp;</p>
+      </div>
+      <div align="center"></div>
+      </div>
+    <h2><a name="Mask"></a></h2>
+    <h2>Generator Mask</h2>
+    </div><div itemprop="content">
+      <h2><a name="Inputs"></a></h2>
+      <h2>Component Inputs and Outputs</h2>
+      <p>The synchronous generator model has two electrical inputs,  one mechanical input, one mechanical output, two electrical outputs and one  thermal output. The electrical inputs are the line currents in the synchronous  reference frame (<em>idq0</em>) and  the field current (<em>ifd</em>)  and their units are amperes. These quantities are converted into per-unit and  the base currents <em>IBDQ</em> and <em>IBFD</em> should be defined in  the MATLAB workspace. The mechanical input is the shaft speed from the gearbox  model and its unit is rad/s. The two electrical outputs are the synchronous  frame line voltages (<em>vdq0</em>)  and field winding voltage (<em>vfd</em>).  The mechanical output is the shaft torque (<em>T­em</em>)  and its unit is N-m. The thermal output is the generator power loss (<em>Ploss</em>) and it is defined in  Watts. The per-unit synchronous machine model requires the user to define the  base quantities. Model interface is summarized below and the base values are  listed in Table 5.12.</p>
+      <p align="center">&nbsp;</p>
+      <p align="center"><img src="generator image.png" width="584" height="165"></p>
+      <p align="center">Fig. 5.43. Synchronous Generator High Level Scheme </p>
+      <table cellspacing="0" class="body" cellpadding="4" border="2"><colgroup><col width="15%"><col width="30%"><col width="55%"></colgroup><thead><tr valign="top"><th valign="top">Input</th>
+      <th valign="top">Units</th>
+      <th valign="top">Description</th></tr>
+</thead><tbody><tr valign="top"><td><p>idq0</p></td>
+<td>Ampere</td>
+<td>Synchronous frame line current </td></tr>
+  <tr valign="top">
+    <td>w</td>
+    <td>rad/s</td>
+    <td>Shaft speed </td>
+  </tr>
+  <tr valign="top"><td><p>ifd</p></td>
+<td>Ampere</td>
+<td>Field Current </td>
+  </tr>
+</tbody></table>
+      <p></p><table cellspacing="0" class="body" cellpadding="4" border="2"><colgroup><col width="16%"><col width="29%"><col width="55%"></colgroup><thead><tr valign="top"><th valign="top">Output</th>
+<th valign="top">Units</th>
+<th valign="top">Description</th></tr>
+</thead><tbody>
+  <tr valign="top">
+    <td>vdq0</td>
+    <td>Volt</td>
+    <td>Synchronous machine line voltage </td>
+  </tr>
+  <tr valign="top">
+    <td>Te</td>
+    <td>N-m</td>
+    <td><p>Electromagnetic shaft torque </p>
+      </td>
+  </tr>
+  <tr valign="top">
+    <td>vfd</td>
+    <td>Volt</td>
+    <td>Field winding voltage </td>
+  </tr>
+  <tr valign="top"><td><p>PLOSS</p></td>
+    <td>Watt</td><td>Power  lost in the battery due to its internal resistances </td></tr>
+</tbody></table>
+      <p></p></div><div itemprop="content"><a name="Asump" id="Asump"></a>
+        <h2>Assumptions and Limitations</h2><p>&nbsp;</p>
+      </div>
+      <div itemprop="content"><a name="Ex" id="Ex"></a>
+        <h2>Examples</h2><p>&nbsp;</p>
+</div><div itemprop="content"><a name="Ref" id="Ref"></a>
+  <h2>Reference</h2>
+  <p><a href="#f1-1015099">Back to Top </a></p>
+</div>
+<div itemprop="content"></div>
+</section>
+</div> 
+</div> 
+</div> 
+<div class="footer_container"><div class="footer"></div>
+      </div>
+   
+         </div> <!--  close_site_container -->
+</body>
+</html>

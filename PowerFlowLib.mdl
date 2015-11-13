@@ -19,7 +19,7 @@ Library {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [1358.0, -8.0, 1040.0, 744.0]
+      Location		      [1358.0, 0.0, 1040.0, 744.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -52,10 +52,10 @@ Library {
 	  $ObjectID		  6
 	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "7781"
+	  LoadSaveID		  "17841"
 	  Extents		  [797.0, 574.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [0.0, 0.0]
+	  ZoomFactor		  [1.25]
+	  Offset		  [7.9936057773011271e-14, 0.0]
 	}
 	PropName		"EditorsInfo"
       }
@@ -67,9 +67,9 @@ Library {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Bradford"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Oct 27 22:18:03 2015"
-  RTWModifiedTimeStamp	  367885082
-  ModelVersionFormat	  "1.%<AutoIncrement:395>"
+  LastModifiedDate	  "Tue Nov 10 16:23:45 2015"
+  RTWModifiedTimeStamp	  369073115
+  ModelVersionFormat	  "1.%<AutoIncrement:396>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -19238,7 +19238,7 @@ Library {
 		  }
 		  System {
 		    Name		    "DC/DC Converter - Boost"
-		    Location		    [16, 97, 1092, 914]
+		    Location		    [1358, 0, 2398, 744]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -19480,7 +19480,7 @@ Library {
 		    SrcPort		    1
 		    Points		    [0, -10; 45, 0]
 		    Branch {
-		    Points		    [0, 0; 0, 290]
+		    Points		    [0, 290]
 		    DstBlock		    "Math\nFunction1"
 		    DstPort		    1
 		    }
@@ -22779,7 +22779,7 @@ Library {
 	      System {
 		Name			"Machines"
 		Location		[1358, 0, 2398, 744]
-		Open			off
+		Open			on
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -29147,7 +29147,7 @@ Library {
 		  }
 		  System {
 		    Name		    "Synchronous Machine P.U. dq0"
-		    Location		    [83, 141, 1353, 1175]
+		    Location		    [1358, 0, 2398, 744]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -49391,8 +49391,8 @@ Library {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Hydraulic"
-	    Location		    [1358, -8, 2398, 736]
-	    Open		    on
+	    Location		    [1358, 0, 2398, 744]
+	    Open		    off
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
