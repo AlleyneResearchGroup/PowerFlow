@@ -54,12 +54,12 @@ function DefineWalkthrough_OpeningFcn(hObject, eventdata, handles, varargin)
 
 % Choose default command line output for DefineWalkthrough
 handles.output = hObject;
-M = load('Defaults.mat');
-assignin('base','M',M)
-evalin('base','load(''Defaults.mat'')');
-handles.M = M.M;
+%M = load('Defaults.mat');
+%assignin('base','M',M)
+M=evalin('base','M');
+handles.M = M;
 handles.index.build = 0;
-evalin('base','');
+
 % Update handles structure
 guidata(hObject, handles);
 
@@ -85,7 +85,7 @@ function Back_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 close
-ChooseLegsWalkthrough
+PhysicalInputsWalkthrough
 
 % --- Executes on button press in Help.
 function Help_Callback(hObject, eventdata, handles)

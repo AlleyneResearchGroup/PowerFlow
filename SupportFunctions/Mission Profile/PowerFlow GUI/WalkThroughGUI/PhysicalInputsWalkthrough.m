@@ -1,35 +1,35 @@
-function varargout = PhysicalInputs(varargin)
-% PHYSICALINPUTS MATLAB code for PhysicalInputs.fig
-%      PHYSICALINPUTS, by itself, creates a new PHYSICALINPUTS or raises the existing
+function varargout = PhysicalInputsWalkthrough(varargin)
+% PHYSICALINPUTSWALKTHROUGH MATLAB code for PhysicalInputsWalkthrough.fig
+%      PHYSICALINPUTSWALKTHROUGH, by itself, creates a new PHYSICALINPUTSWALKTHROUGH or raises the existing
 %      singleton*.
 %
-%      H = PHYSICALINPUTS returns the handle to a new PHYSICALINPUTS or the handle to
+%      H = PHYSICALINPUTSWALKTHROUGH returns the handle to a new PHYSICALINPUTSWALKTHROUGH or the handle to
 %      the existing singleton*.
 %
-%      PHYSICALINPUTS('CALLBACK',hObject,eventData,handles,...) calls the local
-%      function named CALLBACK in PHYSICALINPUTS.M with the given input arguments.
+%      PHYSICALINPUTSWALKTHROUGH('CALLBACK',hObject,eventData,handles,...) calls the local
+%      function named CALLBACK in PHYSICALINPUTSWALKTHROUGH.M with the given input arguments.
 %
-%      PHYSICALINPUTS('Property','Value',...) creates a new PHYSICALINPUTS or raises the
+%      PHYSICALINPUTSWALKTHROUGH('Property','Value',...) creates a new PHYSICALINPUTSWALKTHROUGH or raises the
 %      existing singleton*.  Starting from the left, property value pairs are
-%      applied to the GUI before PhysicalInputs_OpeningFcn gets called.  An
+%      applied to the GUI before PhysicalInputsWalkthrough_OpeningFcn gets called.  An
 %      unrecognized property name or invalid value makes property application
-%      stop.  All inputs are passed to PhysicalInputs_OpeningFcn via varargin.
+%      stop.  All inputs are passed to PhysicalInputsWalkthrough_OpeningFcn via varargin.
 %
 %      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one
 %      instance to run (singleton)".
 %
 % See also: GUIDE, GUIDATA, GUIHANDLES
 
-% Edit the above text to modify the response to help PhysicalInputs
+% Edit the above text to modify the response to help PhysicalInputsWalkthrough
 
-% Last Modified by GUIDE v2.5 22-Nov-2015 18:18:37
+% Last Modified by GUIDE v2.5 22-Nov-2015 20:04:22
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
                    'gui_Singleton',  gui_Singleton, ...
-                   'gui_OpeningFcn', @PhysicalInputs_OpeningFcn, ...
-                   'gui_OutputFcn',  @PhysicalInputs_OutputFcn, ...
+                   'gui_OpeningFcn', @PhysicalInputsWalkthrough_OpeningFcn, ...
+                   'gui_OutputFcn',  @PhysicalInputsWalkthrough_OutputFcn, ...
                    'gui_LayoutFcn',  [] , ...
                    'gui_Callback',   []);
 if nargin && ischar(varargin{1})
@@ -44,29 +44,34 @@ end
 % End initialization code - DO NOT EDIT
 
 
-% --- Executes just before PhysicalInputs is made visible.
-function PhysicalInputs_OpeningFcn(hObject, eventdata, handles, varargin)
+% --- Executes just before PhysicalInputsWalkthrough is made visible.
+function PhysicalInputsWalkthrough_OpeningFcn(hObject, eventdata, handles, varargin)
 % This function has no output args, see OutputFcn.
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-% varargin   command line arguments to PhysicalInputs (see VARARGIN)
+% varargin   command line arguments to PhysicalInputsWalkthrough (see VARARGIN)
 
-% Choose default command line output for PhysicalInputs
+% Choose default command line output for PhysicalInputsWalkthrough
 handles.output = hObject;
+M = load('Defaults.mat');
+assignin('base','M',M)
 M=evalin('base','M');
+handles.M = M.M;
+evalin('base','');
+
+
+M=handles.M
+assignin('base','M',M)
 % Update handles structure
-
-
-handles.M = M
 guidata(hObject, handles);
 
-% UIWAIT makes PhysicalInputs wait for user response (see UIRESUME)
+% UIWAIT makes PhysicalInputsWalkthrough wait for user response (see UIRESUME)
 % uiwait(handles.figure1);
 
 
 % --- Outputs from this function are returned to the command line.
-function varargout = PhysicalInputs_OutputFcn(hObject, eventdata, handles) 
+function varargout = PhysicalInputsWalkthrough_OutputFcn(hObject, eventdata, handles) 
 % varargout  cell array for returning output args (see VARARGOUT);
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
@@ -376,18 +381,18 @@ end
 
 
 
-function edit14_Callback(hObject, eventdata, handles)
-% hObject    handle to edit14 (see GCBO)
+function cbar_Callback(hObject, eventdata, handles)
+% hObject    handle to cbar (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit14 as text
-%        str2double(get(hObject,'String')) returns contents of edit14 as a double
+% Hints: get(hObject,'String') returns contents of cbar as text
+%        str2double(get(hObject,'String')) returns contents of cbar as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit14_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit14 (see GCBO)
+function cbar_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to cbar (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -399,18 +404,18 @@ end
 
 
 
-function Heading_Callback(hObject, eventdata, handles)
-% hObject    handle to Heading (see GCBO)
+function heading_Callback(hObject, eventdata, handles)
+% hObject    handle to heading (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of Heading as text
-%        str2double(get(hObject,'String')) returns contents of Heading as a double
+% Hints: get(hObject,'String') returns contents of heading as text
+%        str2double(get(hObject,'String')) returns contents of heading as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function Heading_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to Heading (see GCBO)
+function heading_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to heading (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -421,47 +426,46 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
 end
 
 
-% --- Executes on button press in Define.
-function Define_Callback(hObject, eventdata, handles)
-% hObject    handle to Define (see GCBO)
+% --- Executes on button press in Back.
+function Back_Callback(hObject, eventdata, handles)
+% hObject    handle to Back (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-% if isnan(str2double(get(handles.latitude,'string')))==1 | ...
-% isnan(str2double(get(handles.longitude,'string')))== 1 | isnan(str2double(get(handles.heading,'string')))==1 | ...
-% isnan(str2double(get(handles.sref,'string')))== 1 | isnan(str2double(get(handles.bref,'string')))==1 | ...
-% isnan(str2double(get(handles.cbar,'string')))== 1 | isnan(str2double(get(handles.wn,'string')))==1 | ...
-% isnan(str2double(get(handles.zeta,'string')))== 1 | isnan(str2double(get(handles.MaxAileronDeflection,'string')))==1 | ...
-% isnan(str2double(get(handles.MaxElevatorDeflection,'string')))== 1 | isnan(str2double(get(handles.MaxRudderDeflection,'string')))==1 | ...
-% isnan(str2double(get(handles.MinAileronDeflection,'string')))== 1 | isnan(str2double(get(handles.MinElevatorDeflection,'string')))==1 | ...
-% isnan(str2double(get(handles.MinRudderDeflection,'string')))== 1 | isnan(str2double(get(handles.mass,'string')))==1
-% msgbox ('Please define all physical inputs');
-% 
-% else
-%  evalin('base','M');   
-% end
+ChooseLegsWalkthrough
 
+% --- Executes on button press in Next.
+function Next_Callback(hObject, eventdata, handles)
+% hObject    handle to Next (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+if isnan(str2double(get(handles.latitude,'string')))==1 | ...
+isnan(str2double(get(handles.longitude,'string')))== 1 | isnan(str2double(get(handles.heading,'string')))==1 | ...
+isnan(str2double(get(handles.sref,'string')))== 1 | isnan(str2double(get(handles.bref,'string')))==1 | ...
+isnan(str2double(get(handles.cbar,'string')))== 1 | isnan(str2double(get(handles.wn,'string')))==1 | ...
+isnan(str2double(get(handles.zeta,'string')))== 1 | isnan(str2double(get(handles.MaxAileronDeflection,'string')))==1 | ...
+isnan(str2double(get(handles.MaxElevatorDeflection,'string')))== 1 | isnan(str2double(get(handles.MaxRudderDeflection,'string')))==1 | ...
+isnan(str2double(get(handles.MinAileronDeflection,'string')))== 1 | isnan(str2double(get(handles.MinElevatorDeflection,'string')))==1 | ...
+isnan(str2double(get(handles.MinRudderDeflection,'string')))== 1 | isnan(str2double(get(handles.mass,'string')))==1
+msgbox ('Please define all physical inputs');
 
-
-
+else
 handles.M.genstrct.phys(1)=str2double(get(handles.latitude,'string'));
 handles.M.genstrct.phys(2)=str2double(get(handles.longitude,'string'));
-handles.M.genstrct.phys(3)=str2double(get(handles.heading,'string'))
-handles.M.genstrct.phys(4)=str2double(get(handles.sref,'string'))
-handles.M.genstrct.phys(5)=str2double(get(handles.bref,'string'))
-handles.M.genstrct.phys(6)=str2double(get(handles.cbar,'string'))
-handles.M.genstrct.phys(7)=str2double(get(handles.wn,'string'))
-handles.M.genstrct.phys(8)=str2double(get(handles.zeta,'string'))
-handles.M.genstrct.phys(9)=str2double(get(handles.MaxAileronDeflection,'string'))
-handles.M.genstrct.phys(10)=str2double(get(handles.Max,'string'))
-handles.M.genstrct.phys(11)=str2double(get(handles.heading,'string'))
-handles.M.genstrct.phys(12)=str2double(get(handles.heading,'string'))
-handles.M.genstrct.phys(13)=str2double(get(handles.heading,'string'))
-handles.M.genstrct.phys(14)=str2double(get(handles.heading,'string'))
-handles.M.genstrct.phys(15)=str2double(get(handles.heading,'string'))
+handles.M.genstrct.phys(3)=str2double(get(handles.heading,'string'));
+handles.M.genstrct.phys(4)=str2double(get(handles.sref,'string'));
+handles.M.genstrct.phys(5)=str2double(get(handles.bref,'string'));
+handles.M.genstrct.phys(6)=str2double(get(handles.cbar,'string'));
+handles.M.genstrct.phys(7)=str2double(get(handles.wn,'string'));
+handles.M.genstrct.phys(8)=str2double(get(handles.zeta,'string'));
+handles.M.genstrct.phys(9)=str2double(get(handles.MaxAileronDeflection,'string'));
+handles.M.genstrct.phys(10)=str2double(get(handles.MaxElevatorDeflection,'string'));
+handles.M.genstrct.phys(11)=str2double(get(handles.MaxRudderDeflection,'string'));
+handles.M.genstrct.phys(12)=str2double(get(handles.MinAileronDeflection,'string'));
+handles.M.genstrct.phys(13)=str2double(get(handles.MinElevatorDeflection,'string'));
+handles.M.genstrct.phys(14)=str2double(get(handles.MinRudderDeflection,'string'));
+handles.M.genstrct.phys(15)=str2double(get(handles.mass,'string'));
 M=handles.M
-assignin('base','M',M)
-% --- Executes on button press in Cancel.
-function Cancel_Callback(hObject, eventdata, handles)
-% hObject    handle to Cancel (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
+assignin('base','M',M)  
+end
+close
+DefineWalkthrough
