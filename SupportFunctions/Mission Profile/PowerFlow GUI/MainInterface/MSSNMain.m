@@ -22,7 +22,7 @@ function varargout = MSSNMain(varargin)
 
 % Edit the above text to modify the response to help MSSNMain
 
-% Last Modified by GUIDE v2.5 12-Oct-2015 18:29:32
+% Last Modified by GUIDE v2.5 22-Nov-2015 19:24:25
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -115,6 +115,21 @@ approach_check=size(handles.M.approacharr);
 landing_check=size(handles.M.landingarr);
 shutdown_check=size(handles.M.shutdownarr);
 
+handles.MSSN.gen.phys(1)=M.genstrct.phys(1);
+handles.MSSN.gen.phys(2)=M.genstrct.phys(2);
+handles.MSSN.gen.phys(3)=M.genstrct.phys(3);
+handles.MSSN.gen.phys(4)=M.genstrct.phys(4);
+handles.MSSN.gen.phys(5)=M.genstrct.phys(5);
+handles.MSSN.gen.phys(6)=M.genstrct.phys(6);
+handles.MSSN.gen.phys(7)=M.genstrct.phys(7);
+handles.MSSN.gen.phys(8)=M.genstrct.phys(8);
+handles.MSSN.gen.phys(9)=M.genstrct.phys(9);
+handles.MSSN.gen.phys(10)=M.genstrct.phys(10);
+handles.MSSN.gen.phys(11)=M.genstrct.phys(11);
+handles.MSSN.gen.phys(12)=M.genstrct.phys(12);
+handles.MSSN.gen.phys(13)=M.genstrct.phys(13);
+handles.MSSN.gen.phys(14)=M.genstrct.phys(14);
+handles.MSSN.gen.phys(15)=M.genstrct.phys(15);
 % Checks if the user has input values for the phases
 for i=1:startup_check(1)
     for j=1:startup_check(2)
@@ -2208,3 +2223,11 @@ function Time_Inquiry_ButtonDownFcn(hObject, eventdata, handles)
 % hObject    handle to Time_Inquiry (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on button press in PhysicalInputs.
+function PhysicalInputs_Callback(hObject, eventdata, handles)
+% hObject    handle to PhysicalInputs (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+PhysicalInputs

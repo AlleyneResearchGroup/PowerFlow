@@ -235,7 +235,7 @@ function Next_Callback(hObject, eventdata, handles)
 MissionLegs=get(handles.MSSNList,'string');
 assignin('base','MissionsLegs',MissionLegs);
 close
-DefineWalkthrough
+PhysicalInputsWalkthrough
 
 
 function str = relist(in_str)
