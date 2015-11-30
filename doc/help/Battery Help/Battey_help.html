@@ -77,8 +77,7 @@
   <p class="r2013b" itemprop="title"><a href="#Math">Mathematical Model </a></p>
   <p class="r2013b" itemprop="title"><a href="#Mask">Battery Mask</a></p>
   <p class="r2013b" itemprop="title"><a href="#Inputs">Component Inputs and Outputs</a></p>
-  <p class="r2013b" itemprop="title"><a href="#Asump">Assumptions and Limitations </a></p>
-  <p class="r2013b" itemprop="title"><a href="#Ex">Examples</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Asump">Assumptions and Limitations </a><a href="#Ex"></a></p>
   <p class="r2013b" itemprop="title"><a href="#Ref">References</a></p>
   <!-- SYNCHTO: _bqqd2iy.html --><div class="doc_topic_desc"><div class="purpose_container">
     <div class="switch"></div>
@@ -87,14 +86,14 @@
   <p>Electrical Power Systems </p>
   </div><div itemprop="content"><a name="Description" id="Description"></a>
     <h2>Description<span class="inlinemediaobject"><br>
-      <img src="../images_el/Battery_sig.png" alt="Battery Block" width="168" height="209"></span></h2>
+      <img src="Battery_sig.png" alt="Battery Block" width="168" height="209"></span></h2>
 <p>The battery is the source of DC power in the aircraft  electrical system. This section deals with the implementation of a lithium-ion  battery, its mathematical model and the component inputs and outputs. In the  following model, battery parameters are determined from laboratory tests on a  sample lithium-ion battery (Panasonic CGR18650A). The model is generic and can  be used to implement a wide range of batteries, including Li-ion, NiMH and  lead-acid batteries. However, the battery circuit model parameters have to be  estimated using a battery testing procedure (Kroeze and Krein, 2008).</p>
   </div><div itemprop="content"><a name="Math" id="Math"></a>
     <div>
       <h2>Mathematical Model </h2>
       <p>The mathematical model described in this section is used to  implement a lithium-ion battery. The battery capacity is a function of the  charging/discharging rates <em>i</em>(<em>t</em>), temperature <em>T</em>(<em>t</em>) and cycle number <em>ncycle</em> and a rate factor <em>f</em>(<em>i</em>(<em>t</em>)) which is a function of current. The  rate factor is used to account for undesired side reactions with increase in  current magnitude. The dynamic capacity of the battery represented by its state  of charge (SOC), is a function of the abovementioned factors and given by the  following expression.</p>
       <p align="center"><img src="Equation 1.png" alt="5.3.20" width="364" height="25"></p>
-      <p align="center"><img src="../images_el/battery_math.png" alt="Electrical equivalent circuit of the batter model" width="692" height="177"></p>
+      <p align="center"><img src="battery_math.png" alt="Electrical equivalent circuit of the batter model" width="692" height="177"></p>
       <p align="center">Fig. 5.50Electrical equivalent circuit of the batter model</p>
       <p>The battery is modeled using the notion of multiple scale  time constants, each at the level of seconds, minutes and hours. In the  electrical equivalent circuit, each time constant can be modeled as a  resistance-capacitance combination, as shown in Fig. 1. Measurements of the  circuit parameters are found using a battery testing apparatus and recording  the test sequences and data corresponding to open circuit voltage (<em>Voc</em>) and terminal voltage (<em>Vt</em>) versus SOC at room  temperature. Each parameter (resistance and capacitance) in the model shown in  Fig. 1, is a nonlinear function of SOC. For a practically useable model, each  parameter is represented as a polynomial function of the SOC up to sixth order  given as</p>
       <div align="center">
@@ -150,10 +149,10 @@
       <p></p></div><div itemprop="content"><a name="Asump" id="Asump"></a>
         <h2>Assumptions and Limitations</h2><p>&nbsp;</p>
       </div>
-      <div itemprop="content"><a name="Ex" id="Ex"></a>
-        <h2>Examples</h2><p>&nbsp;</p>
-</div><div itemprop="content"><a name="Ref" id="Ref"></a>
+      <div itemprop="content"></div>
+      <div itemprop="content"><a name="Ref" id="Ref"></a>
   <h2>Reference</h2>
+  <p>R. C. Kroeze and P. T. Krein, “Electrical battery  model for use in dynamic electric vehicle simulations,&quot; <em>IEEE</em> <em>Power Electronics Specialists  Conference PESC 2008, </em>pp.1336-1342, 15-19 June 2008</p>
   <p><a href="#f1-1015099">Back to Top </a></p>
 </div>
 <div itemprop="content"></div>

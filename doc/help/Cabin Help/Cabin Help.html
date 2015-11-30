@@ -1,0 +1,272 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Battery</title>
+<link rel="stylesheet" href="../Powerflow_template_help.css" type="text/css"><meta name="chunktype" content="refpage">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="toctype" itemprop="pagetype" content="blk">
+<meta name="infotype" itemprop="infotype" content="ref/block" />
+
+<meta name="description" itemprop="description" content="The 1D Observer Form [A(v),B(v),C(v),F(v),H(v)] block implements a gain-scheduled state-space controller defined in the following observer form:" />
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery-latest.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/l10n.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/docscripts.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/docscripts.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.toc.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.imagescaling.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.imageanimation.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.breadcrumb.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/jquery.highlight.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/nanoscroller.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.tmpl.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.toggleval.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/localnav.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/suggest.js"></script>
+<script type="text/javascript">
+            var suggestionsObj;
+            $(function() {
+                var searchField = $('#docsearch');
+                suggestionsObj = new Suggestions(getSuggestions, getMore, searchField);
+            });
+        
+            function getSuggestions() {
+               var text = suggestionsObj.searchField.val();
+               document.location='docsuggestion:' + text;
+            }
+
+            function getMore(type) {
+                var text = suggestionsObj.searchField.val();
+                document.location='docsuggestion:' + type + ':' + text;
+            }
+        </script>
+
+<link href="../../includes/product/css/reset.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/960.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/site5.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center_installed.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center_print.css" rel="stylesheet" type="text/css" media="print">
+<script type="text/javascript" src="../../includes/shared/scripts/respond.min.js"></script>
+</head>
+<body>
+
+         <div class="site_container site_toc_closed">
+         <div class="toc_pane"><div xmlns:atict="http://www.arbortext.com/namespace/atict">
+<div class="toc_container_wrapper" tabindex="0" style="display:block;">
+<div class="toc_header" lang="en">
+  <div class="toc_icon" id="toc.aeroblks"> <a href="../doccentertoc.html"></a></div>
+  <div></div>
+</div>
+</div>
+         </div>
+</div><div class="page_container"><div class="content_frame"><div class="content_container" id="content_container"><div id="search_crumb_container"><div class="breadcrumb_container"><div class="breadcrumbs"></div>
+</div>
+
+</div><section id="doc_center_content">
+<a name="f1-1015099"></a><a name="oned_observer_form"></a><div itemprop="content">
+  <h1 class="r2013b" itemprop="title">Cabin</h1>
+  <p class="r2013b" itemprop="title"><a href="#Library">Library</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Description">Description</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Math">Mathematical Model </a></p>
+  <p class="r2013b" itemprop="title"><a href="#Mask">Cabin  Mask</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Inputs">Component Inputs and Outputs</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Asump">Assumptions and Limitations </a></p>
+  <p class="r2013b" itemprop="title"><a href="#Ex">Examples</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Ref">References</a></p>
+  <!-- SYNCHTO: _bqqd2iy.html --><div class="doc_topic_desc"><div class="purpose_container">
+    <div class="switch"></div>
+  </div></div></div><div itemprop="content"><a name="Library" id="Library"></a>
+    <h2>Library</h2>
+  <p>Thermal Management  Systems </p>
+  </div><div itemprop="content"><a name="Description" id="Description"></a>
+    <h2>Description</h2>
+    <p>The passenger cabin model is a 1-D (lumped parameter) model, whereby the  properties of the air inside the cabin are considered as uniform throughout the  cabin (no spatial dependence). The pressure and the temperature inside the  cabin are derived through the conservation of mass and energy inside the  control volume (cabin). The passengers inside the cabin are considered as the  source of sensible heat. The heat transfer due to radiation and due to kinetic  heating is accounted through approximate heat transfer coefficients. In Figure 5.1, a typical schematic  of the control volume is presented. In most aircraft systems, conditioned air (subscript <em>SA</em>) is supplied to the cabin at  desired pressure and temperature. A fraction of the supplied air, known as the  recirculated air (<em>RA</em>) is driven out  of the cabin by fans and is mixed with the upstream supplied air. The cabin  pressurization is maintained by ejecting the rest of the cabin air (<em>EA</em>) to the environment. In Figure 5.2, the Simulink model  of the cabin is presented to illustrate the different input/output parameters.  The energy and mass balance inside the cabin is given by Eq. 5.1.1 and Eq. 5.1.2</p>
+    <p>&nbsp;</p>
+    <h2 align="center"><span class="inlinemediaobject"><img src="block.png" width="689" height="247"></span></h2>
+    <p align="center">Figure 5.1. Schematic of passenger cabin control volume </p>
+    <p align="center"><span class="inlinemediaobject"><br>
+    </span></p>
+  </div><div itemprop="content"><a name="Math" id="Math"></a>
+    <div>
+      <h2>Mathematical Model </h2>
+      <p>The energy balance inside the cabin is given by: </p>
+      <p align="center"><img src="eq 1.png" width="131" height="25"></p>
+      <p align="left">where,</p>
+      <p align="center"><img src="eq 2.png" width="339" height="116"></p>
+      <p>The  mass balance inside the cabin is similarly given by:</p>
+      <div align="center">
+        <p><img src="eq 3.png" width="142" height="37">        </p>
+        <p align="left">where,</p>
+        <p align="center"><img src="eq 34.png" width="213" height="42"> </p>
+        <p align="left">The  mass of air inside the cabin is related to the cabin pressurization through the  equation of state (assuming ideal gas):</p>
+        <p align="center"><img src="eq 5.png" width="133" height="21"></p>
+        <p align="left">Equations 5.1.1and Eq. 5.1.2 can be simplified to  the following 1-D transient differential equations:</p>
+        <p align="center"><img src="eq 6.png" width="533" height="47"></p>
+        <p align="center"><img src="eq 7.png" width="159" height="37"></p>
+        <p align="left">In Eq.5.1.4, the term containing <em>AU</em> represents the heat transfer between  the fuselage and the ambient air, <em>A </em>being  the averaged fuselage heat transfer area. <em>U </em>is the average heat transfer coefficient between the cabin shell and the  ambient. For the B-737 model, approximate values of <em>A </em>and <em>U</em> is 320 <em>m2 </em>and 2.3 <em>W/m2K. </em>An additional source  of heat generation in the aircraft is due to the kinetic friction between the  ambient and the fuselage (). The recovery temperature  <em>Trecovery</em>:</p>
+        <p align="center"><img src="eq 8.png" width="144" height="23"></p>
+        <p align="left">In general, about 50% of the cabin air is recirculated. The heat load  due to other subsystems is accounted by an increase in the recirculated air  temperature</p>
+        <div align="left"></div>
+        <div align="left"></div>
+        </div>
+      <div align="center">
+        <div align="left"></div>
+        </div>
+      </div>
+    <h2><a name="Mask"></a></h2>
+    <h2>Cabin  Mask </h2>
+    <p align="center"><img src="../AC Loads Help/mask.png" width="424" height="531"></p>
+    <p align="left">The cabin parameters such as the area, shell  thickness, sensible heat per passenger, etc., are defined through mask inputs,  as shown above. </p>
+    <p align="center">&nbsp;</p>
+    <p align="center"><a name="f1-745964"></a></p>
+    </div><div itemprop="content">
+      <h2><a name="Inputs"></a></h2>
+      <h2>Component Inputs and Outputs</h2>
+      <table border="1" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="235" rowspan="2" valign="top"><p><strong>INPUT-1</strong>:  (symbol)</p>
+              <p>Supply air inflow bus:  (mdot_kgps)<br>
+                Supply air inflow bus:  (temp_K)<br>
+                Supply air inflow bus:  (pres_kPa)</p></td>
+          <td width="72" valign="top"><p><strong>UNITS</strong></p></td>
+          <td width="331" valign="top"><p><strong>DESCRIPTION</strong></p></td>
+        </tr>
+        <tr>
+          <td width="72" valign="top"><p>&nbsp;</p>
+              <p>Kg/s<br>
+                K<br>
+                kPa</p></td>
+          <td width="331" valign="top"><p>&nbsp;</p>
+              <p>Conditioned air flow rate    upstream of the Cabin<br>
+                Conditioned air temperature<br>
+                Conditioned air pressure upstream    of the Cabin</p></td>
+        </tr>
+        <tr>
+          <td width="638" colspan="3" valign="top"><p>&nbsp;</p></td>
+        </tr>
+        <tr>
+          <td width="235" rowspan="2" valign="top"><p><strong>INPUT-2</strong>: (symbol)</p>
+              <p>Ambient temperature: ()</p></td>
+          <td width="72" valign="top"><p><strong>UNITS</strong></p></td>
+          <td width="331" valign="top"><p><strong>DESCRIPTION</strong></p></td>
+        </tr>
+        <tr>
+          <td width="72" valign="top"><p>&nbsp;</p>
+              <p>K</p></td>
+          <td width="331" valign="top"><p>&nbsp;</p>
+              <p>Air temperature outside the    aircraft </p></td>
+        </tr>
+        <tr>
+          <td width="638" colspan="3" valign="top"><p>&nbsp;</p></td>
+        </tr>
+        <tr>
+          <td width="235" rowspan="2" valign="top"><p><strong>INPUT-3</strong>:  (symbol)</p>
+              <p>Mach_no</p></td>
+          <td width="72" valign="top"><p><strong>UNITS</strong></p></td>
+          <td width="331" valign="top"><p><strong>DESCRIPTION</strong></p></td>
+        </tr>
+        <tr>
+          <td width="72" valign="top"><p>&nbsp;</p></td>
+          <td width="331" valign="top"><p>&nbsp;</p>
+              <p>Mach number </p></td>
+        </tr>
+        <tr>
+          <td width="638" colspan="3" valign="top"><p><strong>&nbsp;</strong></p></td>
+        </tr>
+        <tr>
+          <td width="235" rowspan="2" valign="top"><p><strong>INPUT-4</strong>:  (symbol)</p>
+              <p>Equipment thermal load ()</p></td>
+          <td width="72" valign="top"><p><strong>UNITS</strong></p></td>
+          <td width="331" valign="top"><p><strong>DESCRIPTION</strong></p></td>
+        </tr>
+        <tr>
+          <td width="72" valign="top"><p><strong>&nbsp;</strong></p>
+              <p>W</p></td>
+          <td width="331" valign="top"><p><strong>&nbsp;</strong></p>
+              <p>Heat load from other subsystems</p></td>
+        </tr>
+        <tr>
+          <td width="638" colspan="3" valign="top"><p><strong>&nbsp;</strong></p></td>
+        </tr>
+        <tr>
+          <td width="235" rowspan="2" valign="top"><p><strong>OUTPUT-1</strong>:  (symbol)</p>
+              <p>Supply air demand by cabin:    (mdot_kgps)</p></td>
+          <td width="72" valign="top"><p><strong>UNITS</strong></p></td>
+          <td width="331" valign="top"><p><strong>DESCRIPTION</strong></p></td>
+        </tr>
+        <tr>
+          <td width="72" valign="top"><p>&nbsp;</p>
+              <p>Kg/s</p></td>
+          <td width="331" valign="top"><p>&nbsp;</p>
+              <p>Supplied air required by the    cabin to maintain desired temperature</p></td>
+        </tr>
+        <tr>
+          <td width="638" colspan="3" valign="top"><p><strong>&nbsp;</strong></p></td>
+        </tr>
+        <tr>
+          <td width="235" rowspan="2" valign="top"><p><strong>OUTPUT-2</strong>:  (symbol)</p>
+              <p>Cabin conditions:  (temp_K)<br>
+                Cabin conditions:  (pres_kPa)</p></td>
+          <td width="72" valign="top"><p><strong>UNITS</strong></p></td>
+          <td width="331" valign="top"><p><strong>DESCRIPTION</strong></p></td>
+        </tr>
+        <tr>
+          <td width="72" valign="top"><p>&nbsp;</p>
+              <p>K<br>
+                kPa</p></td>
+          <td width="331" valign="top"><p>&nbsp;</p>
+              <p>Air temperature inside the cabin<br>
+                Air pressure inside the cabin</p></td>
+        </tr>
+        <tr>
+          <td width="638" colspan="3" valign="top"><p>&nbsp;</p></td>
+        </tr>
+        <tr>
+          <td width="235" rowspan="2" valign="top"><p><strong>OUTPUT-3</strong>:  (symbol)</p>
+              <p>From cabin to fan:  (mdot_kgps)<br>
+                From cabin to fan:  (temp_K)<br>
+                From cabin to fan:  (pres_kPa)</p></td>
+          <td width="72" valign="top"><p><strong>UNITS</strong></p></td>
+          <td width="331" valign="top"><p><strong>DESCRIPTION</strong></p></td>
+        </tr>
+        <tr>
+          <td width="72" valign="top"><p>&nbsp;</p>
+              <p>Kg/s<br>
+                K<br>
+                kPa</p></td>
+          <td width="331" valign="top"><p>&nbsp;</p>
+              <p>Recirculated air flow rate from    the cabin <br>
+                Recirculated air temperature from    the cabin <br>
+                Recirculated air pressure from    the cabin </p></td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <p align="center">.</p>
+      </div>
+    <div itemprop="content"><a name="Asump" id="Asump"></a>
+        <h2>Assumptions and Limitations</h2><p>&nbsp;</p>
+      </div>
+      <div itemprop="content"><a name="Ex" id="Ex"></a>
+        <h2>Examples</h2><p>&nbsp;</p>
+</div><div itemprop="content"><a name="Ref" id="Ref"></a>
+  <h2>Reference</h2>
+  <p><a href="#f1-1015099">Back to Top </a></p>
+</div>
+<div itemprop="content"></div>
+</section>
+</div> 
+</div> 
+</div> 
+<div class="footer_container"><div class="footer"></div>
+      </div>
+   
+         </div> <!--  close_site_container -->
+         </body>
+</html>
