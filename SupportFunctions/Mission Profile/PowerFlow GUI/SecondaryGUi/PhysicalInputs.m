@@ -454,6 +454,7 @@ handles.M.genstrct.phys(14)=str2double(get(handles.MinRudderDeflection,'string')
 handles.M.genstrct.phys(15)=str2double(get(handles.mass,'string'));
 M=handles.M
 assignin('base','M',M)  
+close
 end
 
 
