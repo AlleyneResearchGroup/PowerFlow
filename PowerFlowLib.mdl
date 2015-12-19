@@ -19,7 +19,7 @@ Library {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-1140.0, -92.0, 1040.0, 744.0]
+      Location		      [-1147.0, -8.0, 1040.0, 821.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -43,7 +43,7 @@ Library {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[797.0, 577.0]
+	Extents			[797.0, 654.0]
 	ZoomFactor		[1.0]
 	Offset			[0.0, 0.0]
       }
@@ -55,9 +55,9 @@ Library {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "mwillms4"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sat Dec 19 12:00:20 2015"
-  RTWModifiedTimeStamp	  372427212
-  ModelVersionFormat	  "1.%<AutoIncrement:402>"
+  LastModifiedDate	  "Sat Dec 19 12:32:04 2015"
+  RTWModifiedTimeStamp	  372429107
+  ModelVersionFormat	  "1.%<AutoIncrement:403>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1360,7 +1360,7 @@ Library {
   }
   System {
     Name		    "PowerFlowLib"
-    Location		    [-1140, -92, -100, 652]
+    Location		    [-1147, -8, -107, 813]
     Open		    on
     ModelBrowserVisibility  on
     ModelBrowserWidth	    200
@@ -3665,7 +3665,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Battery"
-		Location		[608, 262, 1648, 1006]
+		Location		[-1147, -8, -107, 813]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -3704,6 +3704,7 @@ Library {
 		    "tance-capacitance combination.\n\nBlock Inputs\n#1: Charging current magnitude from rectifier [A]\n#2: Dischargi"
 		    "ng current magnitude to DC loads [A]\n\nBlock Outputs\n#1: Voltage output of the battery module [V]\n#2: Power l"
 		    "ost in the battery due to its internal resistances [W]"
+		    Help		    " eval('open(''Battery_help.html'')');"
 		    Display		    "image(imread('Battery.png'))\n\nport_label('input',1,'{\\bf CTOUT}','TexMode','on')\nport_label('i"
 		    "nput',2,'{\\bf CTIN}','TexMode','on')\n\nport_label('output',1,'{\\bf VDC}','TexMode','on')\nport_label('output'"
 		    ",2,'{\\bf PLOSS}','TexMode','on')"
@@ -8243,7 +8244,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Converters"
-		Location		[1358, 0, 2398, 744]
+		Location		[-1147, -8, -107, 813]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -10027,7 +10028,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Coordinate Transformation"
-		Location		[1358, 0, 2398, 744]
+		Location		[-1147, -8, -107, 813]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -10604,7 +10605,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Inverters"
-		Location		[1358, 0, 2398, 744]
+		Location		[-1147, -8, -107, 813]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -10616,7 +10617,7 @@ Library {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"100"
+		ZoomFactor		"80"
 		Block {
 		  BlockType		  SubSystem
 		  Name			  " Inverter"
@@ -10643,6 +10644,7 @@ Library {
 		    "te due to the abc-dq0 transformation.\n\nBlock Inputs\n#1: Switching signal to control inverter output voltage\n"
 		    "#2: DC bus voltage for the inverter [V]\n#3: Inverter AC side current [A]\n\nBlock Outputs\n#1: Output voltage i"
 		    "n dq0 frame [V]\n#2: DC link current [A]\n#3: Power loss from the conduction and switching losses [W]"
+		    Help		    " eval('open(''Inverter_help.html'')');"
 		    Display		    "image(imread('Inverter.png'))\nport_label('input',1,'{\\bf q_q_d_0}','TexMode','on')\nport_label('"
 		    "input',2,'{\\bf V_D_C}','TexMode','on')\nport_label('input',3,'{\\bf I_q_d_0}','TexMode','on')\n\n\nport_label('"
 		    "output',1,'{\\bf V_q_d_0}','TexMode','on')\nport_label('output',2,'{\\bf I_D_C}','TexMode','on')\nport_label('ou"
@@ -15226,7 +15228,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Loads"
-		Location		[1358, 0, 2398, 744]
+		Location		[-1147, -8, -107, 813]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -16954,8 +16956,10 @@ Library {
 		    $PropName		    "MaskObject"
 		    $ObjectID		    113
 		    $ClassName		    "Simulink.Mask"
+		    Type		    "AC Loads"
 		    Description		    "Enabled AC Load System.\nNote:\nLoad Master Vector input is 1x3 matrix representing (P[W] Q[Va"
 		    "r] I[A])\nExtra load can be input in the boxes below and will be added with the Load Master Vector.\n"
+		    Help		    " eval('open(''AC Loads_help.html'')');"
 		    Display		    "%image(imread('ACload.png'))\n\n% port_label('input',1,'{\\bf EXT LOAD VECTOR}','TexMode','on')\n%"
 		    " port_label('input',2,'{\\bf Vdq0}','TexMode','on')\n% \n% port_label('output',1,'{\\bf Idq0}','TexMode','on')\n"
 		    "% port_label('output',2,'{\\bf PLOSS}','TexMode','on')\n\nimage(imread('ACloads.png'))\n\nport_label('input',1,'"
@@ -19190,7 +19194,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Loss Estimation"
-		Location		[1358, 0, 2398, 744]
+		Location		[-1147, -8, -107, 813]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -22766,7 +22770,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Machines"
-		Location		[1358, 870, 2398, 1614]
+		Location		[-1147, -8, -107, 813]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -22778,7 +22782,7 @@ Library {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"125"
+		ZoomFactor		"100"
 		Block {
 		  BlockType		  SubSystem
 		  Name			  "DC Position Servo"
@@ -32882,6 +32886,7 @@ Library {
 		    Description		    "The user inputs and outputs are given below. Inputs to the model are:\n\nBlock Inputs \n#1: Pr"
 		    "imary voltage input [V]\n#2: Secondary current input [A]\n\nBlock Outputs\n#1: Secondary voltage output [V]\n#2:"
 		    " Primary current input [A]"
+		    Help		    " eval('open(''Transformer Help.html'')');"
 		    Display		    "image(imread('Transformer.png'))\n\nport_label('input',1,'{\\bf V_i_n}','TexMode','on')\nport_labe"
 		    "l('input',2,'{\\bf I_o_u_t}','TexMode','on')\n\nport_label('output',1,'{\\bf V_o_u_t}','TexMode','on')\nport_lab"
 		    "el('output',2,'{\\bf I_i_n}','TexMode','on')\n"
@@ -33163,7 +33168,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Rectifiers"
-		Location		[1358, 0, 2398, 744]
+		Location		[-1147, -8, -107, 813]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -35830,7 +35835,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Systems"
-		Location		[224, 208, 1264, 952]
+		Location		[-1147, -8, -107, 813]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -38264,6 +38269,7 @@ Library {
 		    "spool [RPM]\n#2: Exciter system supply voltage [V]\n#3: Synchronous reference frame line currents  [A]\n\nBlock "
 		    "Output:\n\n#1: Synchronous reference frame line voltages [V]\n#2: Exciter system supply current [A]\n#3: Electro"
 		    "magnetic torque on the low pressure spool  [N-M]\n#4: Heat rejected to the cooling system or ambient [W] "
+		    Help		    "eval('open(''Generator System_help.html'')');"
 		    Initialization	    "\nload(fan_load);\n\n% Inductances\nXd = Xls + Xmd;\nXq = Xls + Xmq;\nXfd = Xlfd + Xmd;\nX1q"
 		    " = Xl1q + Xmq;\nXd1 = Xd - Xmd^2/Xfd;\nXq1 = Xq - Xmq^2/X1q;\nXd2 = Xls + (1/(1/Xmd + 1/Xlfd + 1/Xl1d));\nXq2 = "
 		    "Xls + (1/(1/Xmq + 1/Xl1q + 1/Xl2q));\nTdo1 = Xfd/ws/R_fd;\nTqo1 = X1q/ws/R_1q;\nTdo2 = 1/ws/R_1d*(Xl1d + 1/(1/Xm"
@@ -38627,7 +38633,7 @@ Library {
 		  }
 		  System {
 		    Name		    "Generation Unit\nSync-Sync"
-		    Location		    [-8, -8, 1374, 736]
+		    Location		    [-1147, -8, -107, 813]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -46622,7 +46628,7 @@ Library {
 		    Position		    [670, 42, 720, 68]
 		    ZOrder		    -39
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.398"
+		    LibraryVersion	    "1.402"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -46640,7 +46646,7 @@ Library {
 		    Ports		    [3, 2]
 		    Position		    [835, 107, 905, 203]
 		    ZOrder		    -40
-		    LibraryVersion	    "1.398"
+		    LibraryVersion	    "1.402"
 		    SourceBlock		    "PowerFlowLib/Energy & Power Systems/Electrical/Rectifiers/three-phase \nactive\nrectifier\nVol"
 		    "tage Mode"
 		    SourceType		    "Rectifier"
@@ -49390,7 +49396,7 @@ Library {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Hydraulic"
-	    Location		    [1358, 0, 2398, 744]
+	    Location		    [-1147, -8, -107, 813]
 	    Open		    off
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    200
@@ -52284,7 +52290,7 @@ Library {
 	      }
 	      System {
 		Name			"Anti-Ice"
-		Location		[1358, 0, 2398, 744]
+		Location		[-1140, -92, -100, 652]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -52375,7 +52381,7 @@ Library {
 		  Position		  [450, 262, 500, 288]
 		  ZOrder		  -8
 		  BackgroundColor	  "green"
-		  LibraryVersion	  "1.398"
+		  LibraryVersion	  "1.402"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/data_sink"
 		  SourceType		  "Data Sink"
 		}
@@ -52466,7 +52472,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"ECS"
-		Location		[-1140, -92, -100, 652]
+		Location		[-1147, -8, -107, 813]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -55712,12 +55718,7 @@ Library {
 		    "heat exchanger for B737 applications.\n\nBlock Inputs:\n\n#1: Ram air inflow bus [Kg/s] [K] [kPa] \n#2: Bleed ai"
 		    "r inflow bus [Kg/s] [K] [kPa] \n\nBlock Outputs:\n\n#1: Ram air outflow bus [Kg/s] [K] [kPa] \n#2: Bleed air out"
 		    "flow bus [Kg/s] [K] [kPa] \n#3: Misc. Data"
-		    Help		    "Main Assumptions:\n\n1. Rectangular offset-strip fin heat exchanger.\n2. Lumped parameter model.\n3. "
-		    "Constant user-defined efficiency.\n4. Number of passages is the same for both the cold and hot fluid passages (u"
-		    "sually\none of the flows has 1 more passage to reduce ambient losses).\n5. Similar plate and fin geometries for "
-		    "both the hot and cold fluid sides (the \nobjective is to simplify modeling and reduce the number of input parame"
-		    "ters needed).\n6. Neglect heat transfer from fin face\n7. Neglect conduction heat transfer in the fin and plate "
-		    "bases"
+		    Help		    "eval('open(''Air-Air_HX_help.html'')');"
 		    Initialization	    "load AirProp"
 		    Display		    "image(imread('plate_hx.png'))\n\nport_label('input',1,'{ \\bfFlow In (Hot)}','texmode','on')\nport"
 		    "_label('input',2,'{ \\bfFlow In (Cold)}','texmode','on');\n\nport_label('output',1,'{\\bfFlow Out (Hot)}','texmo"
@@ -69291,21 +69292,7 @@ Library {
 		    " Inputs:\n\n#1: Supply air inflow bus [Kg/s][K][kPa]\n#2: Ambient temperature [K]\n#3: Mach number \n#4: Equipme"
 		    "nt thermal load [W]\n\nBlock Outputs:\n\n#1: Supply air demand [Kg/s]\n#2: Cabin conditions [K] [kPa]\n#3: Retur"
 		    "n air conditions [Kg/s][K][kPa]"
-		    Help		    "Main assumptions\n\n1. The thermal loads considered in the current release are: passengers sensible l"
-		    "oad, \nwall transmission load, kinetic heating, and electrical/electronic cooling.\n2. The actual cabin paramete"
-		    "rs (fuselage area, air volume, and number of passengers) is split in 2 halves and\neach half is connected to one"
-		    " of the packs.\n3. The cabin model is a single zone model.\n4. The wall area is considered constant for the calc"
-		    "ulation of the overall heat transfer\ncoefficient (i.e. the thickness of the various wall layers is small compar"
-		    "ed to the\nshell diameter).\n5. The thermal mass of the cabin is considered to be that of the air inside the cab"
-		    "in\ni.e. neglecting the thermal mass of the structure, furniture, etc.\n6. Pressures of: the supply air, recircu"
-		    "lation air, exhaust air, and cabin air are\nconsidered equal.\n7. Temperatures of: exhaust air, and cabin air ar"
-		    "e considered equal.\n8. The management of the equipment thermal load is carried out by the recirculation air rat"
-		    "her\nthan the exhaust air. Equipment thermal load management is usually carried out by recirculation\nair during"
-		    " high cabin pressurization conditions, while exhaust air is used during low cabin\npressurization and on-ground "
-		    "conditions.  \n9. Temperature of the recirculation air is higher than that of the cabin air by the\ntemperature "
-		    "difference due to the equipment theraml load.\n10. The themophysical properties (density, and specific heat at c"
-		    "onstant pressure) \nof the: recirculation air, exhaust air, and cabin air are based on constant nominal\nvalues "
-		    "of air temperature and pressure (T = 298 K, and P = 80 kPa).\n   \n"
+		    Help		    "eval('open(''Cabin Help.html'')');"
 		    Initialization	    "load AirProp\n"
 		    Display		    "image(imread('cabin.png'))\nport_label('input',1,'{ \\bfFlow In}','texmode','on')\nport_label('inp"
 		    "ut',2,'{ \\bfAmbient Temp.}','texmode','on')\nport_label('input',3,'{ \\bfMach #}','texmode','on')\nport_label('"
@@ -77298,8 +77285,7 @@ Library {
 		    $ObjectID		    354
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Mixing Junction"
-		    Help		    "Main Assumptions \n1. The convergign ducts have same cross section area\n2. The outlet has twice the "
-		    "inlet area\n3. The loss coefficients in the junction is based on ASHRAE Handbook: Fundamentals, (2009)\n"
+		    Help		    "eval('open(''MixingJunction_help.html'')');"
 		    Initialization	    "load AirProp\n\nh      = get_param(gcb,'handle');   % Get block handle\nblk    = gcb; \nhblo"
 		    "ck = get(h);     % Parse out handles structure \n\n\n% set each vector concat to have n number of inputs\nset_pa"
 		    "ram([blk,'/temp_vector'],'NumInputs',hblock.no_inlets);\nset_param([blk,'/pres_vector'],'NumInputs',hblock.no_in"
