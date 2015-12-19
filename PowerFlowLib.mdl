@@ -55,9 +55,9 @@ Library {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "mwillms4"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sat Dec 19 11:36:00 2015"
-  RTWModifiedTimeStamp	  372425754
-  ModelVersionFormat	  "1.%<AutoIncrement:400>"
+  LastModifiedDate	  "Sat Dec 19 11:53:01 2015"
+  RTWModifiedTimeStamp	  372426774
+  ModelVersionFormat	  "1.%<AutoIncrement:401>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -35830,7 +35830,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Systems"
-		Location		[1358, 0, 2398, 744]
+		Location		[224, 208, 1264, 952]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -36468,12 +36468,11 @@ Library {
 		}
 		Block {
 		  BlockType		  SubSystem
-		  Name			  "DC Service Bus"
-		  SID			  "19103"
-		  Ports			  [5, 3]
-		  Position		  [15, 216, 100, 344]
-		  ZOrder		  -3
-		  BlockMirror		  on
+		  Name			  "AC Service Bus"
+		  SID			  "20073"
+		  Ports			  [4, 3]
+		  Position		  [15, 38, 160, 177]
+		  ZOrder		  -11
 		  LibraryVersion	  "1.225"
 		  MinAlgLoopOccurrences	  off
 		  PropExecContextOutsideSubsystem off
@@ -36486,12 +36485,16 @@ Library {
 		    $PropName		    "MaskObject"
 		    $ObjectID		    171
 		    $ClassName		    "Simulink.Mask"
-		    Type		    "DC Service Bus"
-		    Description		    "Service Bus"
+		    Description		    "Service Bus Structure."
+		    Display		    "image(imread('ACbus.png')) % Load image\n\n% Define inputs\n\nport_label('input',1,'{\\bf Select}'"
+		    ",'Texmode','on')\nport_label('input',2,'{\\bf Supply #1}','Texmode','on')\nport_label('input',3,'{\\bf Supply #2"
+		    "}','Texmode','on')\nport_label('input',4,'{\\bf Load}','Texmode','on')\n\n% Define outputs\n\nport_label('output"
+		    "',1,'{\\bf Bus Voltage}','Texmode','on')\nport_label('output',2,'{\\bf Supply #1 Current}','Texmode','on')\nport"
+		    "_label('output',3,'{\\bf Supply #1 Current}','Texmode','on')\n"
 		  }
 		  System {
-		    Name		    "DC Service Bus"
-		    Location		    [1358, -8, 2654, 1032]
+		    Name		    "AC Service Bus"
+		    Location		    [224, 208, 1264, 952]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -36504,6 +36507,279 @@ Library {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "Select"
+		    SID			    "20074"
+		    Position		    [145, 133, 175, 147]
+		    ZOrder		    -1
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "sup_1"
+		    SID			    "20075"
+		    Position		    [290, 223, 320, 237]
+		    ZOrder		    -2
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "sup_2"
+		    SID			    "20076"
+		    Position		    [290, 253, 320, 267]
+		    ZOrder		    -3
+		    Port		    "3"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "sup_Load"
+		    SID			    "20077"
+		    Position		    [290, 348, 320, 362]
+		    ZOrder		    -4
+		    Port		    "4"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Compare\nTo Constant"
+		    SID			    "20078"
+		    Ports		    [1, 1]
+		    Position		    [245, 380, 275, 410]
+		    ZOrder		    -5
+		    ShowName		    off
+		    LibraryVersion	    "1.274"
+		    SourceBlock		    "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+		    SourceType		    "Compare To Constant"
+		    relop		    "=="
+		    const		    "1"
+		    OutDataTypeStr	    "uint8"
+		    ZeroCross		    on
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Compare\nTo Constant1"
+		    SID			    "20079"
+		    Ports		    [1, 1]
+		    Position		    [245, 455, 275, 485]
+		    ZOrder		    -6
+		    ShowName		    off
+		    LibraryVersion	    "1.274"
+		    SourceBlock		    "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+		    SourceType		    "Compare To Constant"
+		    relop		    "=="
+		    const		    "2"
+		    OutDataTypeStr	    "uint8"
+		    ZeroCross		    on
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "Constant"
+		    SID			    "20080"
+		    Position		    [290, 535, 320, 565]
+		    ZOrder		    -7
+		    Value		    "[0 0 0]"
+		    }
+		    Block {
+		    BlockType		    MultiPortSwitch
+		    Name		    "Multiport\nSwitch"
+		    SID			    "20081"
+		    Ports		    [3, 1]
+		    Position		    [390, 185, 425, 275]
+		    ZOrder		    -8
+		    ShowName		    off
+		    Inputs		    "2"
+		    InputSameDT		    off
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Switch
+		    Name		    "Switch"
+		    SID			    "20082"
+		    Position		    [385, 375, 435, 415]
+		    ZOrder		    -9
+		    ShowName		    off
+		    Criteria		    "u2 ~= 0"
+		    InputSameDT		    off
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Switch
+		    Name		    "Switch1"
+		    SID			    "20083"
+		    Position		    [385, 450, 435, 490]
+		    ZOrder		    -10
+		    ShowName		    off
+		    Criteria		    "u2 ~= 0"
+		    InputSameDT		    off
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "Vbus"
+		    SID			    "20084"
+		    Position		    [475, 223, 505, 237]
+		    ZOrder		    -11
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "i_sup_1"
+		    SID			    "20085"
+		    Position		    [475, 388, 505, 402]
+		    ZOrder		    -12
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "i_sup_2"
+		    SID			    "20086"
+		    Position		    [475, 463, 505, 477]
+		    ZOrder		    -13
+		    Port		    "3"
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    SrcBlock		    "Switch1"
+		    SrcPort		    1
+		    DstBlock		    "i_sup_2"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Switch"
+		    SrcPort		    1
+		    DstBlock		    "i_sup_1"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Constant"
+		    SrcPort		    1
+		    Points		    [15, 0; 0, -65]
+		    Branch {
+		    DstBlock		    "Switch1"
+		    DstPort		    3
+		    }
+		    Branch {
+		    Points		    [0, -75]
+		    DstBlock		    "Switch"
+		    DstPort		    3
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "Compare\nTo Constant1"
+		    SrcPort		    1
+		    DstBlock		    "Switch1"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Compare\nTo Constant"
+		    SrcPort		    1
+		    DstBlock		    "Switch"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "sup_Load"
+		    SrcPort		    1
+		    Points		    [30, 0; 0, 25]
+		    Branch {
+		    Points		    [0, 75]
+		    DstBlock		    "Switch1"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "Switch"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "Select"
+		    SrcPort		    1
+		    Points		    [35, 0]
+		    Branch {
+		    Points		    [0, 255]
+		    Branch {
+		    Points		    [0, 75]
+		    DstBlock		    "Compare\nTo Constant1"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "Compare\nTo Constant"
+		    DstPort		    1
+		    }
+		    }
+		    Branch {
+		    Points		    [85, 0; 0, 60]
+		    DstBlock		    "Multiport\nSwitch"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "sup_2"
+		    SrcPort		    1
+		    DstBlock		    "Multiport\nSwitch"
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "sup_1"
+		    SrcPort		    1
+		    DstBlock		    "Multiport\nSwitch"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Multiport\nSwitch"
+		    SrcPort		    1
+		    DstBlock		    "Vbus"
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "DC Service Bus"
+		  SID			  "19103"
+		  Ports			  [5, 3]
+		  Position		  [5, 210, 150, 350]
+		  ZOrder		  -3
+		  BlockMirror		  on
+		  LibraryVersion	  "1.225"
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
+		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
+		  Object {
+		    $PropName		    "MaskObject"
+		    $ObjectID		    172
+		    $ClassName		    "Simulink.Mask"
+		    Type		    "DC Service Bus"
+		    Description		    "Service Bus"
+		    Display		    "image(imread('DCbus.png')) % Load image\n\n% Define inputs\n\nport_label('input',1,'{\\bf Select}'"
+		    ",'Texmode','on')\nport_label('input',2,'{\\bf Supply #1}','Texmode','on')\nport_label('input',3,'{\\bf Supply #2"
+		    "}','Texmode','on')\nport_label('input',4,'{\\bf Load}','Texmode','on')\nport_label('input',5,'{\\bf Charge}','Te"
+		    "xmode','on')\n\n% Define outputs\n\nport_label('output',1,'{\\bf Bus Voltage}','Texmode','on')\nport_label('outp"
+		    "ut',2,'{\\bf Supply #1 Current}','Texmode','on')\nport_label('output',3,'{\\bf Supply #1 Current}','Texmode','on"
+		    "')\n"
+		  }
+		  System {
+		    Name		    "DC Service Bus"
+		    Location		    [224, 208, 1264, 952]
+		    Open		    off
+		    ModelBrowserVisibility  on
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "125"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Select"
@@ -36787,7 +37063,7 @@ Library {
 		  MaskHideContents	  off
 		  Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    172
+		    $ObjectID		    173
 		    $ClassName		    "Simulink.Mask"
 		    Description		    "Ground Supply."
 		    Display		    "image(imread('GPU2.jpg')) % Load image\n\n% Define inputs\n\nport_label('input',1,'{\\bf I_d_q_0}'"
@@ -36861,7 +37137,7 @@ Library {
 		  MaskHideContents	  off
 		  Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    173
+		    $ObjectID		    174
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Gearbox"
 		    Description		    "Captures the effect of gear ratio on output shaft speed and torque.\n\nInput 1: Speed input [R"
@@ -36876,14 +37152,14 @@ Library {
 		    Type		    "Simulink.MaskParameter"
 		    Dimension		    2
 		    Object {
-		    $ObjectID		    174
+		    $ObjectID		    175
 		    Type		    "edit"
 		    Name		    "Gear_Ratio"
 		    Prompt		    "Gear Ratio"
 		    Value		    "0.5620"
 		    }
 		    Object {
-		    $ObjectID		    175
+		    $ObjectID		    176
 		    Type		    "edit"
 		    Name		    "Gear_Efficiency"
 		    Prompt		    "Efficiency [%]"
@@ -37109,28 +37385,28 @@ Library {
 		  MaskHideContents	  off
 		  Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    176
+		    $ObjectID		    177
 		    $ClassName		    "Simulink.Mask"
 		    Description		    "Generator Bus Structure."
 		    Array {
 		    Type		    "Simulink.MaskParameter"
 		    Dimension		    3
 		    Object {
-		    $ObjectID		    177
+		    $ObjectID		    178
 		    Type		    "edit"
 		    Name		    "LOWVLIMIT"
 		    Prompt		    "Low voltage limit for generator cut-off (V)"
 		    Value		    "90"
 		    }
 		    Object {
-		    $ObjectID		    178
+		    $ObjectID		    179
 		    Type		    "edit"
 		    Name		    "UPVLIMIT"
 		    Prompt		    "Upper voltage limit for generator cut-off (V)"
 		    Value		    "250"
 		    }
 		    Object {
-		    $ObjectID		    179
+		    $ObjectID		    180
 		    Type		    "edit"
 		    Name		    "bus_st"
 		    Prompt		    "Bus voltage monitoring interval (s)"
@@ -37979,7 +38255,7 @@ Library {
 		  MaskHideContents	  off
 		  Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    180
+		    $ObjectID		    181
 		    $ClassName		    "Simulink.Mask"
 		    Description		    "A generator system block implements a generic power generation unit consisting of a gearbox, a"
 		    " synchronous generator, a synchronous exciter and exciter controls. \nThe generator size can be selected from th"
@@ -38027,7 +38303,7 @@ Library {
 		    Type		    "Simulink.MaskParameter"
 		    Dimension		    32
 		    Object {
-		    $ObjectID		    181
+		    $ObjectID		    182
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -38071,7 +38347,7 @@ Library {
 		    TabName		    "General"
 		    }
 		    Object {
-		    $ObjectID		    182
+		    $ObjectID		    183
 		    Type		    "edit"
 		    Name		    "Rs"
 		    Prompt		    "Stator Resistance [ohm]"
@@ -38080,7 +38356,7 @@ Library {
 		    TabName		    "Stator"
 		    }
 		    Object {
-		    $ObjectID		    183
+		    $ObjectID		    184
 		    Type		    "edit"
 		    Name		    "Xls"
 		    Prompt		    "Stator Leakage Reactance [ohm]"
@@ -38089,7 +38365,7 @@ Library {
 		    TabName		    "Stator"
 		    }
 		    Object {
-		    $ObjectID		    184
+		    $ObjectID		    185
 		    Type		    "edit"
 		    Name		    "Xmd"
 		    Prompt		    "Magnetizing Direct Axis Reactance [ohm]"
@@ -38098,7 +38374,7 @@ Library {
 		    TabName		    "Stator"
 		    }
 		    Object {
-		    $ObjectID		    185
+		    $ObjectID		    186
 		    Type		    "edit"
 		    Name		    "Xmq"
 		    Prompt		    "Magnetizing Quadrature Axis Reactance [ohm]"
@@ -38107,7 +38383,7 @@ Library {
 		    TabName		    "Stator"
 		    }
 		    Object {
-		    $ObjectID		    186
+		    $ObjectID		    187
 		    Type		    "edit"
 		    Name		    "R_fd"
 		    Prompt		    "Field Resistance [ohm]"
@@ -38116,7 +38392,7 @@ Library {
 		    TabName		    "Field"
 		    }
 		    Object {
-		    $ObjectID		    187
+		    $ObjectID		    188
 		    Type		    "edit"
 		    Name		    "Xlfd"
 		    Prompt		    "Field Leakage Reactance [ohm]"
@@ -38125,7 +38401,7 @@ Library {
 		    TabName		    "Field"
 		    }
 		    Object {
-		    $ObjectID		    188
+		    $ObjectID		    189
 		    Type		    "edit"
 		    Name		    "R_1d"
 		    Prompt		    "Transient Direct Axis Resistance [ohm]"
@@ -38134,7 +38410,7 @@ Library {
 		    TabName		    "Damper"
 		    }
 		    Object {
-		    $ObjectID		    189
+		    $ObjectID		    190
 		    Type		    "edit"
 		    Name		    "Xl1d"
 		    Prompt		    "Transient Leakage Direct Axis Reactance [ohm]"
@@ -38143,7 +38419,7 @@ Library {
 		    TabName		    "Damper"
 		    }
 		    Object {
-		    $ObjectID		    190
+		    $ObjectID		    191
 		    Type		    "edit"
 		    Name		    "R_1q"
 		    Prompt		    "Transient Quadrature Axis Resistance [ohm]"
@@ -38152,7 +38428,7 @@ Library {
 		    TabName		    "Damper"
 		    }
 		    Object {
-		    $ObjectID		    191
+		    $ObjectID		    192
 		    Type		    "edit"
 		    Name		    "R_2q"
 		    Prompt		    "Subtransient Quadrature Axis Resistance [ohm]"
@@ -38161,7 +38437,7 @@ Library {
 		    TabName		    "Damper"
 		    }
 		    Object {
-		    $ObjectID		    192
+		    $ObjectID		    193
 		    Type		    "edit"
 		    Name		    "Xl1q"
 		    Prompt		    "Transient Leakage Quadrature Axis Reactance [ohm]"
@@ -38170,7 +38446,7 @@ Library {
 		    TabName		    "Damper"
 		    }
 		    Object {
-		    $ObjectID		    193
+		    $ObjectID		    194
 		    Type		    "edit"
 		    Name		    "Xl2q"
 		    Prompt		    "Subtransient Leakage Quadrature Axis Reactance [ohm]"
@@ -38179,7 +38455,7 @@ Library {
 		    TabName		    "Damper"
 		    }
 		    Object {
-		    $ObjectID		    194
+		    $ObjectID		    195
 		    Type		    "edit"
 		    Name		    "ws"
 		    Prompt		    "Rotational Speed [rad/s]"
@@ -38188,7 +38464,7 @@ Library {
 		    TabName		    "Rotor"
 		    }
 		    Object {
-		    $ObjectID		    195
+		    $ObjectID		    196
 		    Type		    "edit"
 		    Name		    "RTL"
 		    Prompt		    "Resistance [ohm]"
@@ -38197,7 +38473,7 @@ Library {
 		    TabName		    "Transmission Line"
 		    }
 		    Object {
-		    $ObjectID		    196
+		    $ObjectID		    197
 		    Type		    "edit"
 		    Name		    "XTL"
 		    Prompt		    "Reactance [ohm]"
@@ -38206,7 +38482,7 @@ Library {
 		    TabName		    "Transmission Line"
 		    }
 		    Object {
-		    $ObjectID		    197
+		    $ObjectID		    198
 		    Type		    "edit"
 		    Name		    "KA"
 		    Prompt		    "KA"
@@ -38215,7 +38491,7 @@ Library {
 		    TabName		    "Regulator and Governor"
 		    }
 		    Object {
-		    $ObjectID		    198
+		    $ObjectID		    199
 		    Type		    "edit"
 		    Name		    "KF"
 		    Prompt		    "KF"
@@ -38224,7 +38500,7 @@ Library {
 		    TabName		    "Regulator and Governor"
 		    }
 		    Object {
-		    $ObjectID		    199
+		    $ObjectID		    200
 		    Type		    "edit"
 		    Name		    "T_f"
 		    Prompt		    "T_f"
@@ -38233,7 +38509,7 @@ Library {
 		    TabName		    "Regulator and Governor"
 		    }
 		    Object {
-		    $ObjectID		    200
+		    $ObjectID		    201
 		    Type		    "edit"
 		    Name		    "TA"
 		    Prompt		    "TA"
@@ -38242,7 +38518,7 @@ Library {
 		    TabName		    "Regulator and Governor"
 		    }
 		    Object {
-		    $ObjectID		    201
+		    $ObjectID		    202
 		    Type		    "edit"
 		    Name		    "KE"
 		    Prompt		    "KE"
@@ -38251,7 +38527,7 @@ Library {
 		    TabName		    "Regulator and Governor"
 		    }
 		    Object {
-		    $ObjectID		    202
+		    $ObjectID		    203
 		    Type		    "edit"
 		    Name		    "TE"
 		    Prompt		    "TE"
@@ -38260,7 +38536,7 @@ Library {
 		    TabName		    "Regulator and Governor"
 		    }
 		    Object {
-		    $ObjectID		    203
+		    $ObjectID		    204
 		    Type		    "edit"
 		    Name		    "SB"
 		    Prompt		    "Baes Complex Power [VA]"
@@ -38269,7 +38545,7 @@ Library {
 		    TabName		    "Base"
 		    }
 		    Object {
-		    $ObjectID		    204
+		    $ObjectID		    205
 		    Type		    "edit"
 		    Name		    "VBDQ"
 		    Prompt		    "Base Direct and Quadrature Axis Armature Voltage [V]"
@@ -38278,7 +38554,7 @@ Library {
 		    TabName		    "Base"
 		    }
 		    Object {
-		    $ObjectID		    205
+		    $ObjectID		    206
 		    Type		    "edit"
 		    Name		    "wB"
 		    Prompt		    "Base Electrical Frequency [rad/s]"
@@ -38287,7 +38563,7 @@ Library {
 		    TabName		    "Base"
 		    }
 		    Object {
-		    $ObjectID		    206
+		    $ObjectID		    207
 		    Type		    "edit"
 		    Name		    "P"
 		    Prompt		    "Number of Pole Pairs"
@@ -38296,7 +38572,7 @@ Library {
 		    TabName		    "Base"
 		    }
 		    Object {
-		    $ObjectID		    207
+		    $ObjectID		    208
 		    Type		    "edit"
 		    Name		    "H"
 		    Prompt		    "Shaft Inertia Constant [s]"
@@ -38305,7 +38581,7 @@ Library {
 		    TabName		    "Base"
 		    }
 		    Object {
-		    $ObjectID		    208
+		    $ObjectID		    209
 		    Type		    "edit"
 		    Name		    "R_conv_gen"
 		    Prompt		    "R_conv_gen"
@@ -38314,7 +38590,7 @@ Library {
 		    TabName		    "Generator"
 		    }
 		    Object {
-		    $ObjectID		    209
+		    $ObjectID		    210
 		    Type		    "edit"
 		    Name		    "mc_gen"
 		    Prompt		    "mc_gen"
@@ -38323,7 +38599,7 @@ Library {
 		    TabName		    "Generator"
 		    }
 		    Object {
-		    $ObjectID		    210
+		    $ObjectID		    211
 		    Type		    "edit"
 		    Name		    "Vnom"
 		    Prompt		    "Nominal Voltage [V]"
@@ -38331,7 +38607,7 @@ Library {
 		    TabName		    "General"
 		    }
 		    Object {
-		    $ObjectID		    211
+		    $ObjectID		    212
 		    Type		    "edit"
 		    Name		    "fan_load"
 		    Prompt		    "Fan Load"
@@ -38339,7 +38615,7 @@ Library {
 		    TabName		    "General"
 		    }
 		    Object {
-		    $ObjectID		    212
+		    $ObjectID		    213
 		    Type		    "edit"
 		    Name		    "exciter_param"
 		    Prompt		    "Exciter Machine Parameters"
@@ -38443,7 +38719,7 @@ Library {
 		    MaskHideContents	    off
 		    Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    213
+		    $ObjectID		    214
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Chopper."
 		    Description		    "Basic chopper.  Lossless storage elements.  Switching model."
@@ -38706,7 +38982,7 @@ Library {
 		    MaskHideContents	    off
 		    Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    214
+		    $ObjectID		    215
 		    $ClassName		    "Simulink.Mask"
 		    Display		    "p = 0:0.1:(2*pi+0.1);\nplot(sin(p), cos(p));\np1 = (-pi/8-0.1-0.2):0.1:(pi/8+0.1-0.2);\nplot(0.8*s"
 		    "in(p1), 0.8*cos(p1), 0.8*sin(p1+pi), 0.8*cos(p1+pi));\np2 = sin((-pi/8-0.1-0.2+pi/8+0.1-0.2)/2);\np3 = sin((-pi/"
@@ -42456,7 +42732,7 @@ Library {
 		    MaskHideContents	    off
 		    Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    215
+		    $ObjectID		    216
 		    $ClassName		    "Simulink.Mask"
 		    Display		    "p = 0:0.1:(2*pi+0.1);\nplot(sin(p), cos(p));\np1 = (-pi/8-0.1-0.2):0.1:(pi/8+0.1-0.2);\nplot(0.8*s"
 		    "in(p1), 0.8*cos(p1), 0.8*sin(p1+pi), 0.8*cos(p1+pi));\np2 = sin((-pi/8-0.1-0.2+pi/8+0.1-0.2)/2);\np3 = sin((-pi/"
@@ -46814,7 +47090,7 @@ Library {
 		  MaskHideContents	  off
 		  Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    216
+		    $ObjectID		    217
 		    $ClassName		    "Simulink.Mask"
 		    Description		    "Generator Bus Structure."
 		  }
@@ -46903,7 +47179,7 @@ Library {
 		    MaskHideContents	    off
 		    Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    217
+		    $ObjectID		    218
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Compare To Constant"
 		    Description		    "Determine how a signal compares to a constant."
@@ -46921,7 +47197,7 @@ Library {
 		    Type		    "Simulink.MaskParameter"
 		    Dimension		    4
 		    Object {
-		    $ObjectID		    218
+		    $ObjectID		    219
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -46941,14 +47217,14 @@ Library {
 		    Tunable		    "off"
 		    }
 		    Object {
-		    $ObjectID		    219
+		    $ObjectID		    220
 		    Type		    "edit"
 		    Name		    "const"
 		    Prompt		    "Constant value:"
 		    Value		    "1"
 		    }
 		    Object {
-		    $ObjectID		    220
+		    $ObjectID		    221
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -46964,7 +47240,7 @@ Library {
 		    Tunable		    "off"
 		    }
 		    Object {
-		    $ObjectID		    221
+		    $ObjectID		    222
 		    Type		    "checkbox"
 		    Name		    "ZeroCross"
 		    Prompt		    "Enable zero-crossing detection"
@@ -47066,7 +47342,7 @@ Library {
 		    MaskHideContents	    off
 		    Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    222
+		    $ObjectID		    223
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Compare To Constant"
 		    Description		    "Determine how a signal compares to a constant."
@@ -47084,7 +47360,7 @@ Library {
 		    Type		    "Simulink.MaskParameter"
 		    Dimension		    4
 		    Object {
-		    $ObjectID		    223
+		    $ObjectID		    224
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -47104,14 +47380,14 @@ Library {
 		    Tunable		    "off"
 		    }
 		    Object {
-		    $ObjectID		    224
+		    $ObjectID		    225
 		    Type		    "edit"
 		    Name		    "const"
 		    Prompt		    "Constant value:"
 		    Value		    "2"
 		    }
 		    Object {
-		    $ObjectID		    225
+		    $ObjectID		    226
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -47127,7 +47403,7 @@ Library {
 		    Tunable		    "off"
 		    }
 		    Object {
-		    $ObjectID		    226
+		    $ObjectID		    227
 		    Type		    "checkbox"
 		    Name		    "ZeroCross"
 		    Prompt		    "Enable zero-crossing detection"
@@ -47229,7 +47505,7 @@ Library {
 		    MaskHideContents	    off
 		    Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    227
+		    $ObjectID		    228
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Compare To Constant"
 		    Description		    "Determine how a signal compares to a constant."
@@ -47247,7 +47523,7 @@ Library {
 		    Type		    "Simulink.MaskParameter"
 		    Dimension		    4
 		    Object {
-		    $ObjectID		    228
+		    $ObjectID		    229
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -47267,14 +47543,14 @@ Library {
 		    Tunable		    "off"
 		    }
 		    Object {
-		    $ObjectID		    229
+		    $ObjectID		    230
 		    Type		    "edit"
 		    Name		    "const"
 		    Prompt		    "Constant value:"
 		    Value		    "3"
 		    }
 		    Object {
-		    $ObjectID		    230
+		    $ObjectID		    231
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -47290,7 +47566,7 @@ Library {
 		    Tunable		    "off"
 		    }
 		    Object {
-		    $ObjectID		    231
+		    $ObjectID		    232
 		    Type		    "checkbox"
 		    Name		    "ZeroCross"
 		    Prompt		    "Enable zero-crossing detection"
@@ -47392,7 +47668,7 @@ Library {
 		    MaskHideContents	    off
 		    Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    232
+		    $ObjectID		    233
 		    $ClassName		    "Simulink.Mask"
 		    Type		    "Compare To Constant"
 		    Description		    "Determine how a signal compares to a constant."
@@ -47410,7 +47686,7 @@ Library {
 		    Type		    "Simulink.MaskParameter"
 		    Dimension		    4
 		    Object {
-		    $ObjectID		    233
+		    $ObjectID		    234
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -47430,14 +47706,14 @@ Library {
 		    Tunable		    "off"
 		    }
 		    Object {
-		    $ObjectID		    234
+		    $ObjectID		    235
 		    Type		    "edit"
 		    Name		    "const"
 		    Prompt		    "Constant value:"
 		    Value		    "4"
 		    }
 		    Object {
-		    $ObjectID		    235
+		    $ObjectID		    236
 		    Type		    "popup"
 		    Array {
 		    Type		    "Cell"
@@ -47453,7 +47729,7 @@ Library {
 		    Tunable		    "off"
 		    }
 		    Object {
-		    $ObjectID		    236
+		    $ObjectID		    237
 		    Type		    "checkbox"
 		    Name		    "ZeroCross"
 		    Prompt		    "Enable zero-crossing detection"
@@ -47836,7 +48112,7 @@ Library {
 		  MaskHideContents	  off
 		  Object {
 		    $PropName		    "MaskObject"
-		    $ObjectID		    237
+		    $ObjectID		    238
 		    $ClassName		    "Simulink.Mask"
 		    Description		    "Inverter PWM Current Controller."
 		  }
@@ -48048,271 +48324,6 @@ Library {
 		    SrcBlock		    "Constant5"
 		    SrcPort		    1
 		    DstBlock		    "Demux"
-		    DstPort		    1
-		    }
-		  }
-		}
-		Block {
-		  BlockType		  SubSystem
-		  Name			  "Service Bus"
-		  SID			  "20073"
-		  Ports			  [4, 3]
-		  Position		  [15, 36, 100, 164]
-		  ZOrder		  -11
-		  LibraryVersion	  "1.225"
-		  MinAlgLoopOccurrences	  off
-		  PropExecContextOutsideSubsystem off
-		  RTWSystemCode		  "Auto"
-		  FunctionWithSeparateData off
-		  Opaque		  off
-		  RequestExecContextInheritance	off
-		  MaskHideContents	  off
-		  Object {
-		    $PropName		    "MaskObject"
-		    $ObjectID		    238
-		    $ClassName		    "Simulink.Mask"
-		    Description		    "Service Bus Structure."
-		  }
-		  System {
-		    Name		    "Service Bus"
-		    Location		    [1358, 0, 2398, 744]
-		    Open		    off
-		    ModelBrowserVisibility  on
-		    ModelBrowserWidth	    200
-		    ScreenColor		    "white"
-		    PaperOrientation	    "landscape"
-		    PaperPositionMode	    "auto"
-		    PaperType		    "usletter"
-		    PaperUnits		    "inches"
-		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-		    TiledPageScale	    1
-		    ShowPageBoundaries	    off
-		    ZoomFactor		    "100"
-		    Block {
-		    BlockType		    Inport
-		    Name		    "Select"
-		    SID			    "20074"
-		    Position		    [145, 133, 175, 147]
-		    ZOrder		    -1
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Inport
-		    Name		    "sup_1"
-		    SID			    "20075"
-		    Position		    [290, 223, 320, 237]
-		    ZOrder		    -2
-		    Port		    "2"
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Inport
-		    Name		    "sup_2"
-		    SID			    "20076"
-		    Position		    [290, 253, 320, 267]
-		    ZOrder		    -3
-		    Port		    "3"
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Inport
-		    Name		    "sup_Load"
-		    SID			    "20077"
-		    Position		    [290, 348, 320, 362]
-		    ZOrder		    -4
-		    Port		    "4"
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "Compare\nTo Constant"
-		    SID			    "20078"
-		    Ports		    [1, 1]
-		    Position		    [245, 380, 275, 410]
-		    ZOrder		    -5
-		    ShowName		    off
-		    LibraryVersion	    "1.274"
-		    SourceBlock		    "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
-		    SourceType		    "Compare To Constant"
-		    relop		    "=="
-		    const		    "1"
-		    OutDataTypeStr	    "uint8"
-		    ZeroCross		    on
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "Compare\nTo Constant1"
-		    SID			    "20079"
-		    Ports		    [1, 1]
-		    Position		    [245, 455, 275, 485]
-		    ZOrder		    -6
-		    ShowName		    off
-		    LibraryVersion	    "1.274"
-		    SourceBlock		    "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
-		    SourceType		    "Compare To Constant"
-		    relop		    "=="
-		    const		    "2"
-		    OutDataTypeStr	    "uint8"
-		    ZeroCross		    on
-		    }
-		    Block {
-		    BlockType		    Constant
-		    Name		    "Constant"
-		    SID			    "20080"
-		    Position		    [290, 535, 320, 565]
-		    ZOrder		    -7
-		    Value		    "[0 0 0]"
-		    }
-		    Block {
-		    BlockType		    MultiPortSwitch
-		    Name		    "Multiport\nSwitch"
-		    SID			    "20081"
-		    Ports		    [3, 1]
-		    Position		    [390, 185, 425, 275]
-		    ZOrder		    -8
-		    ShowName		    off
-		    Inputs		    "2"
-		    InputSameDT		    off
-		    SaturateOnIntegerOverflow off
-		    }
-		    Block {
-		    BlockType		    Switch
-		    Name		    "Switch"
-		    SID			    "20082"
-		    Position		    [385, 375, 435, 415]
-		    ZOrder		    -9
-		    ShowName		    off
-		    Criteria		    "u2 ~= 0"
-		    InputSameDT		    off
-		    SaturateOnIntegerOverflow off
-		    }
-		    Block {
-		    BlockType		    Switch
-		    Name		    "Switch1"
-		    SID			    "20083"
-		    Position		    [385, 450, 435, 490]
-		    ZOrder		    -10
-		    ShowName		    off
-		    Criteria		    "u2 ~= 0"
-		    InputSameDT		    off
-		    SaturateOnIntegerOverflow off
-		    }
-		    Block {
-		    BlockType		    Outport
-		    Name		    "Vbus"
-		    SID			    "20084"
-		    Position		    [475, 223, 505, 237]
-		    ZOrder		    -11
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Outport
-		    Name		    "i_sup_1"
-		    SID			    "20085"
-		    Position		    [475, 388, 505, 402]
-		    ZOrder		    -12
-		    Port		    "2"
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Outport
-		    Name		    "i_sup_2"
-		    SID			    "20086"
-		    Position		    [475, 463, 505, 477]
-		    ZOrder		    -13
-		    Port		    "3"
-		    IconDisplay		    "Port number"
-		    }
-		    Line {
-		    SrcBlock		    "Switch1"
-		    SrcPort		    1
-		    DstBlock		    "i_sup_2"
-		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    "Switch"
-		    SrcPort		    1
-		    DstBlock		    "i_sup_1"
-		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    "Constant"
-		    SrcPort		    1
-		    Points		    [15, 0; 0, -65]
-		    Branch {
-		    DstBlock		    "Switch1"
-		    DstPort		    3
-		    }
-		    Branch {
-		    Points		    [0, -75]
-		    DstBlock		    "Switch"
-		    DstPort		    3
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "Compare\nTo Constant1"
-		    SrcPort		    1
-		    DstBlock		    "Switch1"
-		    DstPort		    2
-		    }
-		    Line {
-		    SrcBlock		    "Compare\nTo Constant"
-		    SrcPort		    1
-		    DstBlock		    "Switch"
-		    DstPort		    2
-		    }
-		    Line {
-		    SrcBlock		    "sup_Load"
-		    SrcPort		    1
-		    Points		    [30, 0; 0, 25]
-		    Branch {
-		    Points		    [0, 75]
-		    DstBlock		    "Switch1"
-		    DstPort		    1
-		    }
-		    Branch {
-		    DstBlock		    "Switch"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "Select"
-		    SrcPort		    1
-		    Points		    [35, 0]
-		    Branch {
-		    Points		    [0, 255]
-		    Branch {
-		    Points		    [0, 75]
-		    DstBlock		    "Compare\nTo Constant1"
-		    DstPort		    1
-		    }
-		    Branch {
-		    DstBlock		    "Compare\nTo Constant"
-		    DstPort		    1
-		    }
-		    }
-		    Branch {
-		    Points		    [85, 0; 0, 60]
-		    DstBlock		    "Multiport\nSwitch"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "sup_2"
-		    SrcPort		    1
-		    DstBlock		    "Multiport\nSwitch"
-		    DstPort		    3
-		    }
-		    Line {
-		    SrcBlock		    "sup_1"
-		    SrcPort		    1
-		    DstBlock		    "Multiport\nSwitch"
-		    DstPort		    2
-		    }
-		    Line {
-		    SrcBlock		    "Multiport\nSwitch"
-		    SrcPort		    1
-		    DstBlock		    "Vbus"
 		    DstPort		    1
 		    }
 		  }
