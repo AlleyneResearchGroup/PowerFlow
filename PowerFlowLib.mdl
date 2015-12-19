@@ -19,7 +19,7 @@ Library {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [224.0, 208.0, 1040.0, 744.0]
+      Location		      [-1140.0, -92.0, 1040.0, 744.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -55,9 +55,9 @@ Library {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "mwillms4"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sat Dec 19 11:53:01 2015"
-  RTWModifiedTimeStamp	  372426774
-  ModelVersionFormat	  "1.%<AutoIncrement:401>"
+  LastModifiedDate	  "Sat Dec 19 12:00:20 2015"
+  RTWModifiedTimeStamp	  372427212
+  ModelVersionFormat	  "1.%<AutoIncrement:402>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1360,7 +1360,7 @@ Library {
   }
   System {
     Name		    "PowerFlowLib"
-    Location		    [224, 208, 1264, 952]
+    Location		    [-1140, -92, -100, 652]
     Open		    on
     ModelBrowserVisibility  on
     ModelBrowserWidth	    200
@@ -1397,7 +1397,7 @@ Library {
       }
       System {
 	Name			"Energy & Power Systems"
-	Location		[1358, -8, 2398, 736]
+	Location		[-1140, -92, -100, 652]
 	Open			off
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	128
@@ -3750,7 +3750,7 @@ Library {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "36033"
+		    SIDHighWatermark	    "36265"
 		    SIDPrevWatermark	    "30301"
 		    Block {
 		    BlockType		    Inport
@@ -51545,7 +51545,7 @@ Library {
 		TiledPageScale		1
 		ShowPageBoundaries	off
 		ZoomFactor		"100"
-		SIDHighWatermark	"14353"
+		SIDHighWatermark	"14374"
 		Block {
 		  BlockType		  Inport
 		  Name			  "Fluid In"
@@ -51678,7 +51678,7 @@ Library {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "212"
+		    SIDHighWatermark	    "219"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "prev_phase"
@@ -52145,7 +52145,7 @@ Library {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Thermal"
-	    Location		    [608, 262, 1648, 1006]
+	    Location		    [-1140, -92, -100, 652]
 	    Open		    off
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    212
@@ -52466,7 +52466,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"ECS"
-		Location		[224, 208, 1264, 952]
+		Location		[-1140, -92, -100, 652]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -55719,9 +55719,10 @@ Library {
 		    "ters needed).\n6. Neglect heat transfer from fin face\n7. Neglect conduction heat transfer in the fin and plate "
 		    "bases"
 		    Initialization	    "load AirProp"
-		    Display		    "port_label('input',1,'{ \\bfFlow In (Hot)}','texmode','on')\nport_label('input',2,'{ \\bfFlow In ("
-		    "Cold)}','texmode','on');\n\nport_label('output',1,'{\\bfFlow Out (Hot)}','texmode','on')\nport_label('output',2,"
-		    "'{\\bfFlow Out (Cold)}','texmode','on')\nport_label('output',3,'{\\bfMisc. Data}','texmode','on')"
+		    Display		    "image(imread('plate_hx.png'))\n\nport_label('input',1,'{ \\bfFlow In (Hot)}','texmode','on')\nport"
+		    "_label('input',2,'{ \\bfFlow In (Cold)}','texmode','on');\n\nport_label('output',1,'{\\bfFlow Out (Hot)}','texmo"
+		    "de','on')\nport_label('output',2,'{\\bfFlow Out (Cold)}','texmode','on')\nport_label('output',3,'{\\bfMisc. Data"
+		    "}','texmode','on')"
 		    Array {
 		    Type		    "Simulink.MaskParameter"
 		    Dimension		    14
@@ -77371,7 +77372,7 @@ Library {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "25017"
+		    SIDHighWatermark	    "25042"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Inlet#1"
@@ -78047,7 +78048,7 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Fuel & Oil"
-		Location		[608, 262, 1648, 1006]
+		Location		[-1140, -92, -100, 652]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -79042,7 +79043,7 @@ Library {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "80"
-		    SIDHighWatermark	    "8754"
+		    SIDHighWatermark	    "8802"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "mdot Out"
@@ -80302,7 +80303,7 @@ Library {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "13777"
+		    SIDHighWatermark	    "13828"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Flow_in"
@@ -80852,7 +80853,7 @@ Library {
 		    Position		    [1275, 452, 1325, 478]
 		    ZOrder		    -35
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.399"
+		    LibraryVersion	    "1.401"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -81766,7 +81767,7 @@ Library {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "200"
-		    SIDHighWatermark	    "22713"
+		    SIDHighWatermark	    "22818"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Flow"
@@ -83041,7 +83042,7 @@ Library {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "27"
+		    SIDHighWatermark	    "32"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "time"
@@ -84529,7 +84530,7 @@ Library {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "80"
-		    SIDHighWatermark	    "2156"
+		    SIDHighWatermark	    "2224"
 		    SIDPrevWatermark	    "748"
 		    Block {
 		    BlockType		    Inport
@@ -86329,7 +86330,7 @@ Library {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "50"
-	    SIDHighWatermark	    "14581"
+	    SIDHighWatermark	    "14611"
 	    Block {
 	      BlockType		      Lookup
 	      Name		      "APU"
@@ -87308,7 +87309,7 @@ Library {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "169"
+	    SIDHighWatermark	    "175"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Load In"
@@ -87553,7 +87554,7 @@ Library {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "826"
+	    SIDHighWatermark	    "828"
 	    Block {
 	      BlockType		      BusCreator
 	      Name		      "LoadBus"
@@ -87843,7 +87844,7 @@ Library {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "106"
+	    SIDHighWatermark	    "110"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Flow In"
