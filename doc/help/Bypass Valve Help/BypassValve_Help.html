@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Mixing Junction</title>
+<title>Bypass Valve</title>
 <link rel="stylesheet" href="../Powerflow_template_help.css" type="text/css"><meta name="chunktype" content="refpage">
   <meta http-equiv="Content-Script-Type" content="text/javascript">
 <meta name="toctype" itemprop="pagetype" content="blk">
@@ -71,11 +71,11 @@
 
 </div><section id="doc_center_content">
 <a name="f1-1015099"></a><a name="oned_observer_form"></a><div itemprop="content">
-  <h1 class="r2013b" itemprop="title">Mixing Junction</h1>
+  <h1 class="r2013b" itemprop="title">Bypass Valve</h1>
   <p class="r2013b" itemprop="title"><a href="#Library">Library</a></p>
   <p class="r2013b" itemprop="title"><a href="#Description">Description</a></p>
   <p class="r2013b" itemprop="title"><a href="#Math">Mathematical Model </a></p>
-  <p class="r2013b" itemprop="title"><a href="#Mask">Heat Exchanger Mask</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Mask">Bypass Valve Mask</a></p>
   <p class="r2013b" itemprop="title"><a href="#Inputs">Component Inputs and Outputs</a></p>
   <p class="r2013b" itemprop="title"><a href="#Asump">Assumptions and Limitations </a></p>
   <p class="r2013b" itemprop="title"><a href="#Ex">Examples</a></p>
@@ -84,52 +84,33 @@
     <div class="switch"></div>
   </div></div></div><div itemprop="content"><a name="Library" id="Library"></a>
     <h2>Library</h2>
-  <p>Thermal Management System</p>
+  <p>Hydraulic Power System </p>
   </div><div itemprop="content"><a name="Description" id="Description"></a>
     <h2>Description</h2>
-    <p class="inlinemediaobject">The mixing junction provides the mixing of two air streams at the same pressure. The Simulink model for the mixing junction is based on the conservation of mass and enthalpy of the two incoming fluid stream. The pressure drop across the mixing junction is obtained by determining the discharge coefficient across the mixing junction. It is assumed that the incoming fluid ducts have the same area of cross-section, and the outlet duct has twice the area of cross-section as the inlet ducts. The coefficient of discharge (Cd) is determined from ASHRAE Handbook: Fundamentals (2009). In Figure 5.10, a typical schematic of the mixing junction is shown. The conservation of mass and enthalpy is given by Eq. 5.1.15 and Eq. 5.1.16
+    <p class="inlinemediaobject">The bypass valve is responsible for routing flow to the hydraulic actuators/loads or bypass the flow back to the fluid reservoir. <br>
     </p>
-    <p align="center"><img src="Figure1.png"></p>
-    <center><b>Figure 5.10 Typical high level scheme of mixing junction</b><center>
-
-
   </div><div itemprop="content"><a name="Math" id="Math"></a>
     <div>
-      <h2>Mathematical Model </h2>
-      <p>Conservation of mass: (Eq 5.1.15)</p>
-      <p align="center"><img src="Figure2.png" width="212" height="82"></p>
-      <p>Conservation of energy: (Eq 5.1.16)</p>
-      <p align="center"><img src="Figure3.png" width="396" height="77"></p>
-      <p>Pressure loss: (Eq 5.1.17)</p>
-      <p align="center"><img src="Figure4.png" width="190" height="88"></p>
+      <h2>Mathematical Model</h2>
+      <p></p>
       
-
-
-
-
-
-      
-  <h2><a name="Mask"></a></h2>
-    <h2>Mixing Junction Mask</h2>
+    <h2><a name="Mask"></a></h2>
+    <h2>Bypass Valve Mask</h2>
+      <p><center><img src="bypass valve.png"><br><b>Image of the bypass valve mask</b></center></p>
     </div><div itemprop="content">
-    <p>A screenshot of the mixing junction Simulink mask is shown below. It is a single tab mask with input fields for diameters of the ducts.</p>
-    <p align="center"><img src="Figure5.png"></p>
-    <center><b>Figure 5.11 Mask Input parameters to the mixing junction.<br> </b></center>
-  
-
-
-  <h2><a name="Inputs"></a></h2>
+      <h2><a name="Inputs"></a></h2>
       <h2>Component Inputs and Outputs</h2>
+      <p>The model requires two inputs: fluid flow in (typically from the pump) and required flow (as calculated by the hydraulic loads). The bypass valve then passes the required flow to the actuators/loads and returns the rest of the flow to the reservoir.</p>
       <table cellspacing="0" class="body" cellpadding="4" border="2"><colgroup><col width="15%"><col width="30%"><col width="55%"></colgroup><thead><tr valign="top"><th valign="top">Input</th>
       <th valign="top">Units</th>
       <th valign="top">Description</th></tr>
-</thead><tbody><tr valign="top"><td>Input 1 flow bus: <br>Input 1 flow bus: <br>Input 1 flow bus:</td>
-<td>kg/s <br>K <br> kPa</td>
-<td>Air flow from the upstream<br>Air temperature<br>Air pressure from upstream of the mixing junction</td></tr>
+</thead><tbody><tr valign="top"><td>Fluid Flow In</td>
+<td>kg/s</td>
+<td>Flow into the Bypass Valve</td></tr>
   <tr valign="top">
-    <td>Input 2 flow bus:<br>Input 2 flow bus:<br>Input 2 flow bus:</td>
-    <td>Kg/s<br>K<br>kPa</td>
-    <td>Air flow from the upstream<br>Air temperature<br>Air pressure from upstream of the mixing junction</td>
+    <td>Required Flow</td>
+    <td></td>
+    <td>Calculated by the hydraulic loads</td>
   </tr>
 </tbody></table>
       <p></p><table cellspacing="0" class="body" cellpadding="4" border="2"><colgroup><col width="16%"><col width="29%"><col width="55%"></colgroup><thead><tr valign="top"><th valign="top">Output</th>
@@ -137,20 +118,21 @@
 <th valign="top">Description</th></tr>
 </thead><tbody>
   <tr valign="top">
-    <td>Output flow bus:<br>Output flow bus:<br>Output flow bus:</td>
-    <td>kg/s<br>K<br>kPa</td>
-    <td>Airflow rate from the mixing junction<br>Air temperature<br>Air pressure from the mixing junction</td>
+    <td>Fluid Flow to Actuators</td>
+    <td>kg/s</td>
+    <td>The rate of fluid flow sent to the actuators/loads</td>
+  </tr>
+  <tr valign="top">
+    <td>Fluid Flow back to Reservoir</td>
+    <td>kg/s</td>
+    <td>The rate of fluid flow diverted back to the Fluid Reservoir</td>
   </tr>
 </tbody></table>
-      <p><b>Note:</b> The mixing junction parameters such as the diameter of the ducts are defined through a mask parameter as shown in Figure 5.11.</p>
-
       <p></p></div><div itemprop="content"><a name="Asump" id="Asump"></a>
         <h2>Assumptions and Limitations</h2><p>&nbsp;</p>
       </div>
       <div itemprop="content"><a name="Ex" id="Ex"></a>
         <h2>Examples</h2><p>&nbsp;</p>
-
-
 </div><div itemprop="content"><a name="Ref" id="Ref"></a>
   <h2>Reference</h2>
   <p><a href="#f1-1015099">Back to Top </a></p>

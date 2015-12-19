@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Mixing Junction</title>
+<title>Fluid Reservoir</title>
 <link rel="stylesheet" href="../Powerflow_template_help.css" type="text/css"><meta name="chunktype" content="refpage">
   <meta http-equiv="Content-Script-Type" content="text/javascript">
 <meta name="toctype" itemprop="pagetype" content="blk">
@@ -71,11 +71,11 @@
 
 </div><section id="doc_center_content">
 <a name="f1-1015099"></a><a name="oned_observer_form"></a><div itemprop="content">
-  <h1 class="r2013b" itemprop="title">Mixing Junction</h1>
+  <h1 class="r2013b" itemprop="title">Fluid Reservoir</h1>
   <p class="r2013b" itemprop="title"><a href="#Library">Library</a></p>
   <p class="r2013b" itemprop="title"><a href="#Description">Description</a></p>
   <p class="r2013b" itemprop="title"><a href="#Math">Mathematical Model </a></p>
-  <p class="r2013b" itemprop="title"><a href="#Mask">Heat Exchanger Mask</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Mask">Fluid Reservoir Mask</a></p>
   <p class="r2013b" itemprop="title"><a href="#Inputs">Component Inputs and Outputs</a></p>
   <p class="r2013b" itemprop="title"><a href="#Asump">Assumptions and Limitations </a></p>
   <p class="r2013b" itemprop="title"><a href="#Ex">Examples</a></p>
@@ -84,24 +84,25 @@
     <div class="switch"></div>
   </div></div></div><div itemprop="content"><a name="Library" id="Library"></a>
     <h2>Library</h2>
-  <p>Thermal Management System</p>
+  <p>Hydraulic Power System</p>
   </div><div itemprop="content"><a name="Description" id="Description"></a>
     <h2>Description</h2>
-    <p class="inlinemediaobject">The mixing junction provides the mixing of two air streams at the same pressure. The Simulink model for the mixing junction is based on the conservation of mass and enthalpy of the two incoming fluid stream. The pressure drop across the mixing junction is obtained by determining the discharge coefficient across the mixing junction. It is assumed that the incoming fluid ducts have the same area of cross-section, and the outlet duct has twice the area of cross-section as the inlet ducts. The coefficient of discharge (Cd) is determined from ASHRAE Handbook: Fundamentals (2009). In Figure 5.10, a typical schematic of the mixing junction is shown. The conservation of mass and enthalpy is given by Eq. 5.1.15 and Eq. 5.1.16
+    <p class="inlinemediaobject">The fluid reservoir serves as a tank for storing excess hydraulic fluid. The reservoir is fed by returning hydraulic fluid and feeds the engine driven pump. Currently the fluid reservoir tracks the time dependent mass and temperature of the hydraulic fluid in the tank. In version 1.0 of the PowerFlow toolset, the reservoir is pressurized with bleed air from the engine.<br>
     </p>
-    <p align="center"><img src="Figure1.png"></p>
-    <center><b>Figure 5.10 Typical high level scheme of mixing junction</b><center>
-
-
   </div><div itemprop="content"><a name="Math" id="Math"></a>
     <div>
       <h2>Mathematical Model </h2>
-      <p>Conservation of mass: (Eq 5.1.15)</p>
-      <p align="center"><img src="Figure2.png" width="212" height="82"></p>
-      <p>Conservation of energy: (Eq 5.1.16)</p>
-      <p align="center"><img src="Figure3.png" width="396" height="77"></p>
-      <p>Pressure loss: (Eq 5.1.17)</p>
-      <p align="center"><img src="Figure4.png" width="190" height="88"></p>
+      <p>The mathematical model of the fluid reservoir is based upon first principles. The mass of the fluid in the reservoir is calculated as:</p>
+      <p align="center"><img src="Figure1.png" width="210" height="88"></p>
+      <p> where<img src="Figure4.png" width="25" height="16">is the flow rate of the hydraulic fluid and the subscripts denote into and out of the reservoir.</p>
+      <p>The rate of change in the reservoir fluid temperature is determined as a function of the flow rate the temperature of the flow in and fluid mass:</p>
+      <p align="center"><img src="Figure2.png" width="300" height="76"></p>
+      <p>where the <i>T<sub>in</sub></i> is the temperature of the fluid flow into the reservoir and <i>T<sub>fluid</sub></i> is the temperature of the fluid in the tank.</p>
+      <p>The rate of change in the air pressure of the reservoir is determined using input bleed air properties and mass of the air in the tank:</p>
+      <p align="center"><img src="Figure3.png" width="183" height="78"></p>
+      <p>where<img src="Figure4.png" width="25" height="16"><sub><i>in</i></sub> &nbsp; is the flow rate of bleed air into the reservoir, R is the universal gass law constant for air, T is the temperature of the bleed air into the reservoir, Z is the compressibility factor for air, and V is the volume of the air in the reservoir. The volume of the air changes in time with respect to how much volume of hydraulic fluid is within the reservoir.</p>
+    
+
       
 
 
@@ -110,47 +111,59 @@
 
       
   <h2><a name="Mask"></a></h2>
-    <h2>Mixing Junction Mask</h2>
+    <h2>Fluid Reservoir Mask</h2>
     </div><div itemprop="content">
-    <p>A screenshot of the mixing junction Simulink mask is shown below. It is a single tab mask with input fields for diameters of the ducts.</p>
-    <p align="center"><img src="Figure5.png"></p>
-    <center><b>Figure 5.11 Mask Input parameters to the mixing junction.<br> </b></center>
+    <p>The Simulink model for the hydraulic reservoir is displayed in Figure 5.67. The GUI is shown in Figure 5.68 and Figure 5.69. A top level diagram of the Simulink model is shown in Figure 5.70.</p>
+    <p align="center"><img src="Figure5_67.png" width="162" height="125"></p>
+    <center><b>Figure 5.67 Hydraulic Fluid Reservoir Simulink Model</b></center>
+    <p align="center"><img src="Figure5_68.png" width="288" height="315"></p>
+    <center><b>Figure 5.68 Hydraulic Fluid Reservoir General GUI</b></center>
+    <p align="center"><img src="Figure5_69.png" width="287" height="315"></p>
+    <center><b>Figure 5.69 Hydraulic Fluid Reservoir Initial Conditions GUI</b></center>
   
 
 
   <h2><a name="Inputs"></a></h2>
       <h2>Component Inputs and Outputs</h2>
-      <table cellspacing="0" class="body" cellpadding="4" border="2"><colgroup><col width="15%"><col width="30%"><col width="55%"></colgroup><thead><tr valign="top"><th valign="top">Input</th>
+      <p>The first input to the hydraulic fluid reservoir is the fluid bus containing flow rate, temperature, and pressure variables of the bleed air which comes from the engine. The second input is the bypass return from the bypass or pressure release valve. This input is also a fluid bus containing the previously mentioned variables. The mass flow rate flowing out of the fluid reservoir is the third input which typically is calculated by the upstream engine driven pump. The engine driven pump provides this mass flow rate as an output. The final input is the mass flow rate of the returning hydraulic fluid from the loads. In version 1.0 of the PowerFlow toolset there is no thermal component to the hydraulic loads, so temperature changes in the hydraulic fluid flow are not captured between the pump and loads.<br><br>Output signals include a bleed air flow rate demand and output fluid flow bus. The bleed air demand is determined as a function of air pressure in the fluid reservoir and the desired set point.<br><br>The GUI of the hydraulic fluid reservoir provides the ability to input multiple parameters in order to specify the geometry and operation of the reservoir.Losses in the pump are calculated used the Hagen-Poiseuille Coefficient which require several nominal values of the fluid flow through the pump. The pump’s calculations do not have a large sensitivity to the values, but their relative magnitude should be accurate.</p>
+      <center><b>Table of Fluid Reservoir Inputs</b></center>
+      <table cellspacing="0" class="body" cellpadding="4" border="2"><colgroup><col width="10%"><col width="15%"><col width="25%"><col width="50%"></colgroup><thead><tr valign="top"><th valign="top">Tab Name</th><th valign="top">Input</th>
       <th valign="top">Units</th>
       <th valign="top">Description</th></tr>
-</thead><tbody><tr valign="top"><td>Input 1 flow bus: <br>Input 1 flow bus: <br>Input 1 flow bus:</td>
-<td>kg/s <br>K <br> kPa</td>
-<td>Air flow from the upstream<br>Air temperature<br>Air pressure from upstream of the mixing junction</td></tr>
+</thead><tbody><tr valign="top"><td>General</td>
+<td>Fixed Reservoir Volume<br><br>Max Bleed Air Supply Rate</td>
+<td>m<sup>3</sup><br><br>kg/s</td>
+<td>The volume of the reservoir. Used in the calculation of air to fluid volume ratio.<br><br>Maximum bleed air flow rate that is capable of being supplied to the reservoir.</td>
+</tr>
   <tr valign="top">
-    <td>Input 2 flow bus:<br>Input 2 flow bus:<br>Input 2 flow bus:</td>
-    <td>Kg/s<br>K<br>kPa</td>
-    <td>Air flow from the upstream<br>Air temperature<br>Air pressure from upstream of the mixing junction</td>
+    <td>Initial<br>Conditions</td>
+    <td>Initial Fluid Temperature<br><br>Initial Air Pressure<br><br>Initial Fluid Mass</td>
+    <td>K<br><br>kPa<br><br>kg</td>
+    <td>Initial fluid temperature of the hydraulic fluid in the reservoir in Kelvin.<br><br>Initial air pressure of the reservoir in kilopascals.<br><br>Initial mass of the hydraulic fluid in the reservoir. There is not check between the mass and available volume in the reservoir.</td>
   </tr>
+  <tr valign="top">
 </tbody></table>
-      <p></p><table cellspacing="0" class="body" cellpadding="4" border="2"><colgroup><col width="16%"><col width="29%"><col width="55%"></colgroup><thead><tr valign="top"><th valign="top">Output</th>
+      <center><b>Table of Fluid Reservoir Outputs</b></center>
+      <table cellspacing="0" class="body" cellpadding="4" border="2"><colgroup><col width="16%"><col width="29%"><col width="55%"></colgroup><thead><tr valign="top"><th valign="top">Output</th>
 <th valign="top">Units</th>
 <th valign="top">Description</th></tr>
 </thead><tbody>
   <tr valign="top">
-    <td>Output flow bus:<br>Output flow bus:<br>Output flow bus:</td>
-    <td>kg/s<br>K<br>kPa</td>
-    <td>Airflow rate from the mixing junction<br>Air temperature<br>Air pressure from the mixing junction</td>
+    <td>Bleed Air Flow Rate</td>
+    <td>kg/s</td>
+    <td>The flow rate of the bleed air</td>
+  </tr>
+  <tr valign="top">
+    <td>Output Fluid Flow Bus</td>
+    <td>kg/s</td>
+    <td>The rate of fluid flow from the Fluid Reservoir</td>
   </tr>
 </tbody></table>
-      <p><b>Note:</b> The mixing junction parameters such as the diameter of the ducts are defined through a mask parameter as shown in Figure 5.11.</p>
-
       <p></p></div><div itemprop="content"><a name="Asump" id="Asump"></a>
         <h2>Assumptions and Limitations</h2><p>&nbsp;</p>
       </div>
       <div itemprop="content"><a name="Ex" id="Ex"></a>
         <h2>Examples</h2><p>&nbsp;</p>
-
-
 </div><div itemprop="content"><a name="Ref" id="Ref"></a>
   <h2>Reference</h2>
   <p><a href="#f1-1015099">Back to Top </a></p>
