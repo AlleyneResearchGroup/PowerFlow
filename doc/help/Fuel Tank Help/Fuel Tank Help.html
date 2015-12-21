@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Fuel Tank</title>
+<link rel="stylesheet" href="../Powerflow_template_help.css" type="text/css"><meta name="chunktype" content="refpage">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="toctype" itemprop="pagetype" content="blk">
+<meta name="infotype" itemprop="infotype" content="ref/block" />
+
+<meta name="description" itemprop="description" content="The 1D Observer Form [A(v),B(v),C(v),F(v),H(v)] block implements a gain-scheduled state-space controller defined in the following observer form:" />
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery-latest.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/l10n.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/docscripts.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/docscripts.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.toc.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.imagescaling.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.imageanimation.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.breadcrumb.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/jquery.highlight.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/nanoscroller.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.tmpl.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.toggleval.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/localnav.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/suggest.js"></script>
+<script type="text/javascript">
+            var suggestionsObj;
+            $(function() {
+                var searchField = $('#docsearch');
+                suggestionsObj = new Suggestions(getSuggestions, getMore, searchField);
+            });
+        
+            function getSuggestions() {
+               var text = suggestionsObj.searchField.val();
+               document.location='docsuggestion:' + text;
+            }
+
+            function getMore(type) {
+                var text = suggestionsObj.searchField.val();
+                document.location='docsuggestion:' + type + ':' + text;
+            }
+        </script>
+
+<link href="../../includes/product/css/reset.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/960.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/site5.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center_installed.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center_print.css" rel="stylesheet" type="text/css" media="print">
+<script type="text/javascript" src="../../includes/shared/scripts/respond.min.js"></script>
+</head>
+<body>
+
+         <div class="site_container site_toc_closed">
+         <div class="toc_pane"><div xmlns:atict="http://www.arbortext.com/namespace/atict">
+<div class="toc_container_wrapper" tabindex="0" style="display:block;">
+<div class="toc_header" lang="en">
+  <div class="toc_icon" id="toc.aeroblks"> <a href="../doccentertoc.html"></a></div>
+  <div></div>
+</div>
+</div>
+         </div>
+</div><div class="page_container"><div class="content_frame"><div class="content_container" id="content_container"><div id="search_crumb_container"><div class="breadcrumb_container"><div class="breadcrumbs"></div>
+</div>
+
+</div><section id="doc_center_content">
+<a name="f1-1015099"></a><a name="oned_observer_form"></a><div itemprop="content">
+  <h1 class="r2013b" itemprop="title">Fuel Tank</h1>
+  <p class="r2013b" itemprop="title"><a href="#Library">Library</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Description">Description</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Math">Mathematical Model </a></p>
+  <p class="r2013b" itemprop="title"><a href="#Mask">Fuel Tank Mask</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Inputs">Component Inputs and Outputs</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Asump">Assumptions and Limitations </a></p>
+  <p class="r2013b" itemprop="title"><a href="#Ex">Examples</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Ref">References</a></p>
+  <!-- SYNCHTO: _bqqd2iy.html --><div class="doc_topic_desc"><div class="purpose_container">
+    <div class="switch"></div>
+  </div></div></div><div itemprop="content"><a name="Library" id="Library"></a>
+    <h2>Library</h2>
+  <p>Thermal Management  Systems </p>
+  </div><div itemprop="content"><a name="Description" id="Description"></a>
+    <h2>Description</h2>
+    <p>The fuel tank model tracks the time-varying fuel temperature, ullage temperature, and fuel mass. Mathematical modeling of the fuel tank is based upon conservation of energy and mass. In version 1.0, time-dependent pressure states are not calculated. Heat transfer is captured between the fuel, ullage, tank walls, and internal heat loads.<br>
+    </p>
+    <h2 align="center"><span class="inlinemediaobject"></span></h2>
+</div><div itemprop="content"><a name="Math" id="Math"></a>
+    <div>
+  <h2>Mathematical Model </h2>
+  <p>The mathematical model for the tank is based upon conservation of energy and mass. The following equations are implemented in the Simulink model of the fuel tank. Fuel mass is determined using conservation of mass:</p>
+  <p> m_f=∫m ̇_in-m ̇_out 5.2.1</p>
+  <p>The rate of change of the fuel temperature is a function of the heat transfer between the fuel and each wet section of wall, the fuel being added to the tank, heat transfer between the fuel and the ullage, and heat loads:</p>
+  <p> 〖m〗_f C_(p,f) T ̇_f=∑_(i=1)^n〖h_(w,i) A_(w,i) (T_(wall,i)-T_f )+m ̇_in C_(p,in) (T_in-T_f )+〗 h_fg A_fg (T_g-T_f )+Q ̇_load </p>
+  <p>The rate of change of the ullage temperature is a function of the heat transfer between each dry section of wall and the heat transfer between the fuel and the ullage: </p>
+  <p>ρ_g V_g C_(p,g) T ̇_g=∑_(i=1)^n▒〖h_(d,i) A_(d,i) (T_(wall,i)-T_g ) 〗+h_fg A_fg (T_f-T_g) </p>
+  <p>Where the subscripts denote the following: </p>
+  <p>f – Fuel w – Wet g – Ullage d – Dry fg – Fuel /Ullage boundary </p>
+  <p>&nbsp;</p>
+      <div align="center">
+        <div align="left"></div>
+      </div>
+    </div>
+<h2><a name="Mask"></a></h2>
+<h2>Fuel Tank Mask </h2>
+<img src="mask.png" width="699" height="583" alt=""/>
+<p align="center">&nbsp;</p>
+<p align="center"><a name="f1-745964"></a></p>
+    </div><div itemprop="content">
+      <h2><a name="Inputs"></a></h2>
+      <h2>Component Inputs and Outputs</h2>
+<table border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="53" valign="top"><br>
+      <strong>Tab Name</strong></td>
+    <td width="174" valign="top"><p><strong>Input</strong></p></td>
+    <td width="60" valign="top"><p align="center"><strong>Units</strong></p></td>
+    <td width="335" valign="top"><p><strong>Description</strong></p></td>
+  </tr>
+  <tr>
+    <td width="53" rowspan="6"><p align="center">Geometry</p></td>
+    <td width="174" valign="top"><p>Browse for area .m file</p></td>
+    <td width="60" valign="top"><p align="center">N/A</p></td>
+    <td width="335" valign="top"><p>Browse for .m file containing    wall area information for custom fuel tank </p></td>
+  </tr>
+  <tr>
+    <td width="174" valign="top"><p>Fuel tank area .m file</p></td>
+    <td width="60" valign="top"><p align="center">N/A</p></td>
+    <td width="335" valign="top"><p>Current fuel tank .m file being    used</p></td>
+  </tr>
+  <tr>
+    <td width="174" valign="top"><p>Area .m file directory</p></td>
+    <td width="60" valign="top"><p align="center">N/A</p></td>
+    <td width="335" valign="top"><p>Directory location of current    fuel tank .m file</p></td>
+  </tr>
+  <tr>
+    <td width="174" valign="top"><p>Select tank</p></td>
+    <td width="60" valign="top"><p align="center">N/A</p></td>
+    <td width="335" valign="top"><p>Left/Right wing or center fuel    tank</p></td>
+  </tr>
+  <tr>
+    <td width="174" valign="top"><p align="left">Edit    fuel tank area manually</p></td>
+    <td width="60" valign="top"><p align="center">N/A</p></td>
+    <td width="335" valign="top"><p>Check box to open 2D lookup    table block containing wall area data</p></td>
+  </tr>
+  <tr>
+    <td width="174" valign="top"><p>Maximum Tank Volume</p></td>
+    <td width="60" valign="top"><p align="center">m3</p></td>
+    <td width="335" valign="top"><p>Tank volume (must be large    enough to contain the initial condition of fluid mass)</p></td>
+  </tr>
+  <tr>
+    <td width="53" rowspan="4"><p align="center">Initial Conditions</p></td>
+    <td width="174" valign="top"><p>Initial Fluid Mass</p></td>
+    <td width="60" valign="top"><p align="center">Kg</p></td>
+    <td width="335" valign="top"><p>Initial fluid mass in tank</p></td>
+  </tr>
+  <tr>
+    <td width="174" valign="top"><p>Initial Fluid Temperature</p></td>
+    <td width="60" valign="top"><p align="center">°C</p></td>
+    <td width="335" valign="top"><p>Initial fluid temperature in    tank</p></td>
+  </tr>
+  <tr>
+    <td width="174" valign="top"><p>Initial Ullage Temperature</p></td>
+    <td width="60" valign="top"><p align="center">°C</p></td>
+    <td width="335" valign="top"><p>Initial ullage temperature in    empty space of tank</p></td>
+  </tr>
+  <tr>
+    <td width="174" valign="top"><p>Tank Pressurization </p></td>
+    <td width="60" valign="top"><p align="center">kPa</p></td>
+    <td width="335" valign="top"><p>Over pressurization added to    ambient conditions.  Currently does not    affect fluid properties.</p></td>
+  </tr>
+  <tr>
+    <td width="53" rowspan="5"><p align="center">Thermal Characteristics</p></td>
+    <td width="174" valign="top"><p>Fuel to Ullage HTC</p></td>
+    <td width="60" valign="top"><p align="center">W/m­2K</p></td>
+    <td width="335" valign="top"><p>Heat transfer coefficient    between the fluid and ullage</p></td>
+  </tr>
+  <tr>
+    <td width="174" valign="top"><p>Enable Wall Heat Transfer</p></td>
+    <td width="60" valign="top"><p align="center">N/A</p></td>
+    <td width="335" valign="top"><p>Check box to enable wall heat    transfer calculation.  Increases    computational complexity.</p></td>
+  </tr>
+  <tr>
+    <td width="174" valign="top"><p>Wall to Fluid HTC</p></td>
+    <td width="60" valign="top"><p align="center">W/m­2K</p></td>
+    <td width="335" valign="top"><p>Heat transfer coefficient    between the wall and fluid.</p></td>
+  </tr>
+  <tr>
+    <td width="174" valign="top"><p>Wall to Ullage HTC</p></td>
+    <td width="60" valign="top"><p align="center">W/m­2K</p></td>
+    <td width="335" valign="top"><p>Heat transfer coefficient    between the wall and ullage.</p></td>
+  </tr>
+  <tr>
+    <td width="174" valign="top"><p>Internal Heat Load</p></td>
+    <td width="60" valign="top"><p align="center">W</p></td>
+    <td width="335" valign="top"><p>Constant internal heat    load.  An external input provides the    ability to apply a variable internal heat load.</p></td>
+  </tr>
+</table>
+<p align="center">.</p>
+      </div>
+    <div itemprop="content"><a name="Asump" id="Asump"></a>
+        <h2>Assumptions and Limitations</h2><p>&nbsp;</p>
+      </div>
+      <div itemprop="content"><a name="Ex" id="Ex"></a>
+        <h2>Examples</h2><p>&nbsp;</p>
+</div><div itemprop="content"><a name="Ref" id="Ref"></a>
+  <h2>Reference</h2>
+  <p><a href="#f1-1015099">Back to Top </a></p>
+</div>
+<div itemprop="content"></div>
+</section>
+</div> 
+</div> 
+</div> 
+<div class="footer_container"><div class="footer"></div>
+      </div>
+   
+         </div> <!--  close_site_container -->
+         </body>
+</html>
