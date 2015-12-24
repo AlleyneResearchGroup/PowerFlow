@@ -36,6 +36,21 @@ N_ENG = genstrct.eng.num;
 N_mssnphase = size(phaselist);
 MSSN = initmssn(N_ENG);
 t = 0;
+% MSSN.gen.phys(1)=genstrct.phys(1);
+% MSSN.gen.phys(2)=genstrct.phys(2);
+% MSSN.gen.phys(3)=genstrct.phys(3);
+% MSSN.gen.phys(4)=genstrct.phys(4);
+% MSSN.gen.phys(5)=genstrct.phys(5);
+% MSSN.gen.phys(6)=genstrct.phys(6);
+% MSSN.gen.phys(7)=genstrct.phys(7);
+% MSSN.gen.phys(8)=genstrct.phys(8);
+% MSSN.gen.phys(9)=genstrct.phys(9);
+% MSSN.gen.phys(10)=genstrct.phys(10);
+% MSSN.gen.phys(11)=genstrct.phys(11);
+% MSSN.gen.phys(12)=genstrct.phys(12);
+% MSSN.gen.phys(13)=genstrct.phys(13);
+% MSSN.gen.phys(14)=genstrct.phys(14);
+% MSSN.gen.phys(15)=genstrct.phys(15);
 for i = 1:N_mssnphase(1)
     if strcmp(phaselist(i),'Startup') == 1
             disp('startup')

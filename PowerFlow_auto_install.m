@@ -46,22 +46,34 @@ else
     err(4) = false;
 end
 
-dir_path{5} = spath;
+% installing doc directory
+dir_path{5} = fullfile(spath,'doc');
 if exist(dir_path{5},'dir')
-    addpath(dir_path{5})
+    addpath(genpath(dir_path{5}))
     err(5) = true;
 else
     err(5) = false;
 end
+
+
+dir_path{6} = spath;
+if exist(dir_path{6},'dir')
+    addpath(dir_path{6})
+    err(6) = true;
+else
+    err(6) = false;
+end
+
+
 % Error checking
-if ( err(1) == false && err(2) == false && err(3) ==  false && err(4) == false && err(5) == false )
+if ( err(1) == false && err(2) == false && err(3) ==  false && err(4) == false && err(5) == false && err(6) == false )
     warning(['PowerFlow_auto_install.m failed to install the necessary '...
         'directories. Administrator privileges may be required. Check', ...
         ' necessary privileges of the installation directory.'])
-elseif ( err(1) == false || err(2) == false || err(3) ==  false || err(4) == false || err(5) == false )
+elseif ( err(1) == false || err(2) == false || err(3) ==  false || err(4) == false || err(5) == false || err(6) == false )
     warning(['One or more directories failed to install.  Manual ',...
         'installation required for the following:'])
-    for i=1:5
+    for i=1:6
         if err(i) == false
             disp(dir_path{i})
         end

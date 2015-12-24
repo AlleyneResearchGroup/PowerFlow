@@ -96,7 +96,8 @@ if strcmp(phaselist(1),'') == 1
     warndlg('You must load a mission.','Warning');
 else
 altindex(hObject,handles)
-M = handles.M;
+% M = handles.M;
+M = evalin('base','M');
 handles.MSSN = MissionBuild(phaselist,M.startuparr,M.taxiarr,M.takeoffarr,M.climbarr,M.cruisearr,...
     M.descentarr,M.loiterarr,M.approacharr,M.landingarr,M.shutdownarr,M.genstrct);
 handles.MSSN.gen.N_ENG = M.genstrct.eng.num;
@@ -130,6 +131,7 @@ handles.MSSN.gen.phys(12)=M.genstrct.phys(12);
 handles.MSSN.gen.phys(13)=M.genstrct.phys(13);
 handles.MSSN.gen.phys(14)=M.genstrct.phys(14);
 handles.MSSN.gen.phys(15)=M.genstrct.phys(15);
+%handles.MSSN.gen.phys=ones(1,15)
 % Checks if the user has input values for the phases
 for i=1:startup_check(1)
     for j=1:startup_check(2)
@@ -343,7 +345,8 @@ function Standard_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 %Loads a standard mission
-load('Input.mat')
+%load('C:\Users\ASELab1\Desktop\Craig\PowerFlow\SupportFunctions\Mission Profile\PowerFlow GUI\InputsAndOutputs\Input.mat')
+load('Defaults.mat')
 handles.M = M;
 set(handles.MSSNList,'String',M.phaselist)
 c = relist(M.phaselist);
