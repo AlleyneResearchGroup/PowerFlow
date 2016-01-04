@@ -19,7 +19,7 @@ Library {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-1147.0, -8.0, 1040.0, 821.0]
+      Location		      [-1153.0, -1.0, 1040.0, 821.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -55,9 +55,9 @@ Library {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "mwillms4"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sat Dec 19 12:32:04 2015"
-  RTWModifiedTimeStamp	  372429107
-  ModelVersionFormat	  "1.%<AutoIncrement:403>"
+  LastModifiedDate	  "Mon Jan 04 10:26:18 2016"
+  RTWModifiedTimeStamp	  373803965
+  ModelVersionFormat	  "1.%<AutoIncrement:404>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1360,7 +1360,7 @@ Library {
   }
   System {
     Name		    "PowerFlowLib"
-    Location		    [-1147, -8, -107, 813]
+    Location		    [-1153, -1, -113, 820]
     Open		    on
     ModelBrowserVisibility  on
     ModelBrowserWidth	    200
@@ -1960,7 +1960,7 @@ Library {
 		  Position		  [545, 56, 660, 94]
 		  ZOrder		  -24
 		  ShowName		  off
-		  LibraryVersion	  "1.398"
+		  LibraryVersion	  "1.403"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  load_loc		  "Cabin"
@@ -1978,7 +1978,7 @@ Library {
 		  Position		  [545, 136, 660, 174]
 		  ZOrder		  -25
 		  ShowName		  off
-		  LibraryVersion	  "1.398"
+		  LibraryVersion	  "1.403"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  load_loc		  "Cabin"
@@ -1996,7 +1996,7 @@ Library {
 		  Position		  [545, 271, 660, 309]
 		  ZOrder		  -26
 		  ShowName		  off
-		  LibraryVersion	  "1.398"
+		  LibraryVersion	  "1.403"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  load_loc		  "Cabin"
@@ -2014,7 +2014,7 @@ Library {
 		  Position		  [545, 461, 660, 499]
 		  ZOrder		  -27
 		  ShowName		  off
-		  LibraryVersion	  "1.398"
+		  LibraryVersion	  "1.403"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  load_loc		  "Cabin"
@@ -2032,7 +2032,7 @@ Library {
 		  Position		  [545, 531, 660, 569]
 		  ZOrder		  -28
 		  ShowName		  off
-		  LibraryVersion	  "1.398"
+		  LibraryVersion	  "1.403"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  load_loc		  "Cabin"
@@ -2140,7 +2140,7 @@ Library {
 		  Position		  [755, 15, 845, 45]
 		  ZOrder		  -34
 		  ShowName		  off
-		  LibraryVersion	  "1.398"
+		  LibraryVersion	  "1.403"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ThermalSink"
 		  SourceType		  "Thermal Sink"
 		  load_loc		  "Cabin"
@@ -2157,7 +2157,7 @@ Library {
 		  Position		  [620, 230, 710, 260]
 		  ZOrder		  -35
 		  ShowName		  off
-		  LibraryVersion	  "1.398"
+		  LibraryVersion	  "1.403"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ThermalSink"
 		  SourceType		  "Thermal Sink"
 		  load_loc		  "Cabin"
@@ -2174,7 +2174,7 @@ Library {
 		  Position		  [615, 340, 705, 370]
 		  ZOrder		  -36
 		  ShowName		  off
-		  LibraryVersion	  "1.398"
+		  LibraryVersion	  "1.403"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ThermalSink"
 		  SourceType		  "Thermal Sink"
 		  load_loc		  "Cabin"
@@ -2191,7 +2191,7 @@ Library {
 		  Position		  [615, 385, 705, 415]
 		  ZOrder		  -37
 		  ShowName		  off
-		  LibraryVersion	  "1.398"
+		  LibraryVersion	  "1.403"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ThermalSink"
 		  SourceType		  "Thermal Sink"
 		  load_loc		  "Cabin"
@@ -2206,7 +2206,7 @@ Library {
 		  Position		  [880, 307, 930, 333]
 		  ZOrder		  -38
 		  BackgroundColor	  "green"
-		  LibraryVersion	  "1.398"
+		  LibraryVersion	  "1.403"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/data_sink"
 		  SourceType		  "Data Sink"
 		}
@@ -3056,7 +3056,7 @@ Library {
 		  Position		  [545, 56, 660, 94]
 		  ZOrder		  -24
 		  ShowName		  off
-		  LibraryVersion	  "1.398"
+		  LibraryVersion	  "1.403"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  load_loc		  "Cabin"
@@ -3074,7 +3074,7 @@ Library {
 		  Position		  [545, 131, 660, 169]
 		  ZOrder		  -25
 		  ShowName		  off
-		  LibraryVersion	  "1.398"
+		  LibraryVersion	  "1.403"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  load_loc		  "Cabin"
@@ -3092,7 +3092,7 @@ Library {
 		  Position		  [545, 201, 660, 239]
 		  ZOrder		  -26
 		  ShowName		  off
-		  LibraryVersion	  "1.398"
+		  LibraryVersion	  "1.403"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  load_loc		  "Cabin"
@@ -3110,7 +3110,7 @@ Library {
 		  Position		  [545, 281, 660, 319]
 		  ZOrder		  -27
 		  ShowName		  off
-		  LibraryVersion	  "1.398"
+		  LibraryVersion	  "1.403"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  load_loc		  "Cabin"
@@ -3128,7 +3128,7 @@ Library {
 		  Position		  [545, 356, 660, 394]
 		  ZOrder		  -28
 		  ShowName		  off
-		  LibraryVersion	  "1.398"
+		  LibraryVersion	  "1.403"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ElectricalSink"
 		  SourceType		  "Electrical Sink"
 		  load_loc		  "Cabin"
@@ -3236,7 +3236,7 @@ Library {
 		  Position		  [545, 510, 635, 540]
 		  ZOrder		  -34
 		  ShowName		  off
-		  LibraryVersion	  "1.398"
+		  LibraryVersion	  "1.403"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ThermalSink"
 		  SourceType		  "Thermal Sink"
 		  load_loc		  "Cabin"
@@ -3253,7 +3253,7 @@ Library {
 		  Position		  [545, 560, 635, 590]
 		  ZOrder		  -35
 		  ShowName		  off
-		  LibraryVersion	  "1.398"
+		  LibraryVersion	  "1.403"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ThermalSink"
 		  SourceType		  "Thermal Sink"
 		  load_loc		  "Cabin"
@@ -3270,7 +3270,7 @@ Library {
 		  Position		  [545, 600, 635, 630]
 		  ZOrder		  -36
 		  ShowName		  off
-		  LibraryVersion	  "1.398"
+		  LibraryVersion	  "1.403"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ThermalSink"
 		  SourceType		  "Thermal Sink"
 		  load_loc		  "Cabin"
@@ -3287,7 +3287,7 @@ Library {
 		  Position		  [545, 645, 635, 675]
 		  ZOrder		  -37
 		  ShowName		  off
-		  LibraryVersion	  "1.398"
+		  LibraryVersion	  "1.403"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/ThermalSink"
 		  SourceType		  "Thermal Sink"
 		  load_loc		  "Cabin"
@@ -3302,7 +3302,7 @@ Library {
 		  Position		  [880, 202, 930, 228]
 		  ZOrder		  -38
 		  BackgroundColor	  "green"
-		  LibraryVersion	  "1.398"
+		  LibraryVersion	  "1.403"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/data_sink"
 		  SourceType		  "Data Sink"
 		}
@@ -8033,7 +8033,7 @@ Library {
 		    Position		    [1075, 112, 1125, 138]
 		    ZOrder		    -11
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.398"
+		    LibraryVersion	    "1.403"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -46628,7 +46628,7 @@ Library {
 		    Position		    [670, 42, 720, 68]
 		    ZOrder		    -39
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.402"
+		    LibraryVersion	    "1.403"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -46646,7 +46646,7 @@ Library {
 		    Ports		    [3, 2]
 		    Position		    [835, 107, 905, 203]
 		    ZOrder		    -40
-		    LibraryVersion	    "1.402"
+		    LibraryVersion	    "1.403"
 		    SourceBlock		    "PowerFlowLib/Energy & Power Systems/Electrical/Rectifiers/three-phase \nactive\nrectifier\nVol"
 		    "tage Mode"
 		    SourceType		    "Rectifier"
@@ -48436,7 +48436,7 @@ Library {
 		    Position		    [235, 136, 340, 234]
 		    ZOrder		    -6
 		    NamePlacement	    "alternate"
-		    LibraryVersion	    "1.398"
+		    LibraryVersion	    "1.403"
 		    SourceBlock		    "PowerFlowLib/Energy & Power Systems/Electrical/Machines/Transformer"
 		    SourceType		    "Transformer"
 		    Rp			    "0.005"
@@ -48452,7 +48452,7 @@ Library {
 		    Position		    [640, 87, 690, 113]
 		    ZOrder		    -7
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.398"
+		    LibraryVersion	    "1.403"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -48463,7 +48463,7 @@ Library {
 		    Ports		    [3, 2]
 		    Position		    [455, 142, 525, 238]
 		    ZOrder		    -8
-		    LibraryVersion	    "1.398"
+		    LibraryVersion	    "1.403"
 		    SourceBlock		    "PowerFlowLib/Energy & Power Systems/Electrical/Converters/rectifier"
 		    SourceType		    ""
 		    L			    "1e-1"
@@ -49396,7 +49396,7 @@ Library {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Hydraulic"
-	    Location		    [-1147, -8, -107, 813]
+	    Location		    [-1153, -1, -113, 820]
 	    Open		    off
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    200
@@ -49432,13 +49432,14 @@ Library {
 		"ack to the fluid reservoir.  \nThe bypass valve then passes the required flow to the actuators/loads and returns the"
 		" rest of the flow to the reservoir.\n\nBlock Inputs:\n\n#1: Fluid flow in\n#2: Required flow\n\nBlock Outputs:\n\n#1"
 		": Fluid flow out to the actuators\n#2: Bypass hydraulic fluid flow back to reservoir\n"
+		Help			"eval('open(''BypassValve_Help.html'')');"
 		Display			"port_label('input',1,'{\\bf Flow In}','TexMode','on')\nport_label('input',2,'{\\bf Req Flow}','TexMode','"
 		"on')\n\nport_label('output',1,'{\\bf Flow Out}','TexMode','on')\nport_label('output',2,'{\\bf Bypass}','TexMode','on"
 		"')"
 	      }
 	      System {
 		Name			"Bypass Valve"
-		Location		[73, 60, 1009, 653]
+		Location		[-976, 0, 64, 821]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -50567,6 +50568,7 @@ Library {
 		"#2: Bypass return from bypass valve\n#3: Mass flow rate pumped out by hydraulic pump\n#4: Mass flow rate returned fr"
 		"om actuators\n\nBlock Outputs\n#1: Bleed air demanded to maintain pressurization\n#2: Hydraulic fluid properties in "
 		"the reservoir"
+		Help			"eval('open(''FluidReservoir_help.html'')');"
 		Initialization		"load AirProp\nload HydProp\n"
 		Display			"image(imread('hyd_res.png'))\n\nport_label('input',1,'{\\bf Bleed In}','TexMode','on')\nport_label('input"
 		"',2,'{\\bf Bypass Return}','TexMode','on')\nport_label('input',3,'{\\bf m_d_o_t Out}','TexMode','on')\nport_label('i"
@@ -51447,6 +51449,7 @@ Library {
 		"propriately for each mission phase.\n\nBlock Inputs: \n\n#1: Fluid input bus from the bypass valve\n#2: Flight phase"
 		" from mission profile\n\nBlock Outputs:\n\n#1: Returned flow rate of hydraulic fluid flow\n#2: Power consumed by the"
 		" hydraulic load [W]"
+		Help			"eval('open(''HydraulicLoad_help.html'')');"
 		Initialization		"h      = get_param(gcb,'handle');   % Get block handle\nblk    = gcb; \nhblock = get(h);\n\n\nload "
 		"HydProp\nload(hblock.filename)\n\nset_param(blk,'fileslct','off');     % turn off manual switch\n\n[platform,loads] "
 		"= strtok(hblock.h_load,' - ');\nset_param([blk,'/m_dot'],'Table',[hblock.var_struct,'.',platform,'.',loads(4:size(lo"
@@ -52381,7 +52384,7 @@ Library {
 		  Position		  [450, 262, 500, 288]
 		  ZOrder		  -8
 		  BackgroundColor	  "green"
-		  LibraryVersion	  "1.402"
+		  LibraryVersion	  "1.403"
 		  SourceBlock		  "PowerFlowLib/Support Functions//Tools/data_sink"
 		  SourceType		  "Data Sink"
 		}
@@ -54583,7 +54586,7 @@ Library {
 		    Position		    [1255, 337, 1305, 363]
 		    ZOrder		    423
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.398"
+		    LibraryVersion	    "1.403"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -55234,7 +55237,7 @@ Library {
 		    Position		    [740, 197, 790, 223]
 		    ZOrder		    819
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.398"
+		    LibraryVersion	    "1.403"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -72527,7 +72530,7 @@ Library {
 		    Position		    [1260, 422, 1310, 448]
 		    ZOrder		    -29
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.399"
+		    LibraryVersion	    "1.403"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -73505,7 +73508,7 @@ Library {
 		    Position		    [1075, 372, 1125, 398]
 		    ZOrder		    48
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.398"
+		    LibraryVersion	    "1.403"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -78646,7 +78649,7 @@ Library {
 		    Position		    [1010, 87, 1060, 113]
 		    ZOrder		    427
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.398"
+		    LibraryVersion	    "1.403"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -80839,7 +80842,7 @@ Library {
 		    Position		    [1275, 452, 1325, 478]
 		    ZOrder		    -35
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.401"
+		    LibraryVersion	    "1.403"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -83137,7 +83140,7 @@ Library {
 		    Position		    [1540, 462, 1590, 488]
 		    ZOrder		    15
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.398"
+		    LibraryVersion	    "1.403"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
@@ -85371,7 +85374,7 @@ Library {
 		    Position		    [1235, 347, 1285, 373]
 		    ZOrder		    432
 		    BackgroundColor	    "green"
-		    LibraryVersion	    "1.398"
+		    LibraryVersion	    "1.403"
 		    SourceBlock		    "PowerFlowLib/Support Functions//Tools/data_sink"
 		    SourceType		    "Data Sink"
 		    }
