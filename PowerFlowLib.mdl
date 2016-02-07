@@ -19,7 +19,7 @@ Library {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-1153.0, -1.0, 1040.0, 821.0]
+      Location		      [160.0, 2.0, 1040.0, 780.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -41,11 +41,11 @@ Library {
 	$ObjectID		5
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
-	ViewObjType		"SimulinkTopLevel"
-	LoadSaveID		"0"
-	Extents			[797.0, 654.0]
-	ZoomFactor		[1.0]
-	Offset			[0.0, 0.0]
+	ViewObjType		"SimulinkSubsys"
+	LoadSaveID		"18409"
+	Extents			[797.0, 613.0]
+	ZoomFactor		[1.25]
+	Offset			[-11.199999999999989, 0.0]
       }
     }
   }
@@ -53,11 +53,11 @@ Library {
   Creator		  "mwillms4"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "mwillms4"
+  LastModifiedBy	  "Bradford"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Jan 04 10:26:18 2016"
-  RTWModifiedTimeStamp	  373803965
-  ModelVersionFormat	  "1.%<AutoIncrement:404>"
+  LastModifiedDate	  "Sun Feb 07 00:13:25 2016"
+  RTWModifiedTimeStamp	  376704800
+  ModelVersionFormat	  "1.%<AutoIncrement:406>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1361,7 +1361,7 @@ Library {
   System {
     Name		    "PowerFlowLib"
     Location		    [-1153, -1, -113, 820]
-    Open		    on
+    Open		    off
     ModelBrowserVisibility  on
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -35835,8 +35835,8 @@ Library {
 	      MaskHideContents	      off
 	      System {
 		Name			"Systems"
-		Location		[-1147, -8, -107, 813]
-		Open			off
+		Location		[160, 2, 1200, 782]
+		Open			on
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -36495,7 +36495,7 @@ Library {
 		    ",'Texmode','on')\nport_label('input',2,'{\\bf Supply #1}','Texmode','on')\nport_label('input',3,'{\\bf Supply #2"
 		    "}','Texmode','on')\nport_label('input',4,'{\\bf Load}','Texmode','on')\n\n% Define outputs\n\nport_label('output"
 		    "',1,'{\\bf Bus Voltage}','Texmode','on')\nport_label('output',2,'{\\bf Supply #1 Current}','Texmode','on')\nport"
-		    "_label('output',3,'{\\bf Supply #1 Current}','Texmode','on')\n"
+		    "_label('output',3,'{\\bf Supply #2 Current}','Texmode','on')\n"
 		  }
 		  System {
 		    Name		    "AC Service Bus"
@@ -36767,7 +36767,7 @@ Library {
 		    ",'Texmode','on')\nport_label('input',2,'{\\bf Supply #1}','Texmode','on')\nport_label('input',3,'{\\bf Supply #2"
 		    "}','Texmode','on')\nport_label('input',4,'{\\bf Load}','Texmode','on')\nport_label('input',5,'{\\bf Charge}','Te"
 		    "xmode','on')\n\n% Define outputs\n\nport_label('output',1,'{\\bf Bus Voltage}','Texmode','on')\nport_label('outp"
-		    "ut',2,'{\\bf Supply #1 Current}','Texmode','on')\nport_label('output',3,'{\\bf Supply #1 Current}','Texmode','on"
+		    "ut',2,'{\\bf Supply #1 Current}','Texmode','on')\nport_label('output',3,'{\\bf Supply #2 Current}','Texmode','on"
 		    "')\n"
 		  }
 		  System {
@@ -86319,7 +86319,7 @@ Library {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "50"
-	    SIDHighWatermark	    "14611"
+	    SIDHighWatermark	    "14641"
 	    Block {
 	      BlockType		      Lookup
 	      Name		      "APU"
@@ -90009,7 +90009,7 @@ MatData {
 }
 # Finite State Machines
 #
-#    Stateflow Version 7.6 (R2013a) dated Jan 19 2013, 14:32:03
+#    Stateflow Version 7.6 (R2013a) dated Jan 19 2013, 14:32:20
 #
 #
 
