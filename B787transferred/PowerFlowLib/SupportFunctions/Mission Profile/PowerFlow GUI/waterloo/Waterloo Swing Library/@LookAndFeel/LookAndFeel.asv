@@ -1,0 +1,195 @@
+classdef LookAndFeel
+    
+    methods (Static)
+    
+            %------------------------------------------------------------------
+        function installLookAndFeels()
+            m=javax.swing.UIManager();
+            m.installLookAndFeel('The JGoodies Plastic3D Look and Feel', 'com.jgoodies.looks.plastic.Plastic3DLookAndFeel');
+            m.installLookAndFeel('The JGoodies Plastic Look and Feel', 'com.jgoodies.looks.plastic.PlasticLookAndFeel');
+            m.installLookAndFeel('Synthetica', 'de.javasoft.plaf.synthetica.SyntheticaStandardLookAndFeel');
+            m.installLookAndFeel('JTattoo', 'com.jtattoo.plaf.aluminium.AluminiumLookAndFeel');
+            return
+        end
+            
+        %------------------------------------------------------------------
+        function chooseLookAndFeel()
+            % chooseLookAndFeel displays a dialog allowing you to choose
+            % from the installed Java Look and Feels
+            % This calls the open source DefaultsDisplay code from Sun
+            % Microsystems which is included in waterloo.jar:
+            % http://www.java2s.com/Code/Java/Swing-JFC/DisplaysthecontentsoftheUIDefaultshashmapforthecurrentlookandfeel.htm
+            % WARNING: With some Look and Feels you may see Java
+            % exceptions. These are L&F and Platform sensitive.
+            %
+            try
+                evalin('base', 'MATLABDefaultLookAndFeel');
+            catch
+                assignin('base', 'MATLABDefaultLookAndFeel', javax.swing.UIManager.getLookAndFeel());
+            end
+            
+            if nargin==0
+                defLF=javax.swing.UIManager.getLookAndFeel();
+            end
+            
+            fh=figure('MenuBar','none','Toolbar','none', 'Name', 'Waterloo Interface to Sun Microsystems L&F Chooser');
+            j=kcl.waterloo.MUtil.DefaultsDisplay();
+            obj=jcontrol(fh, j, 'Position', [0 0 1 1]);
+            combo=handle(obj.getComponent(0).getComponent(0).getComponent(1), 'callbackproperties');
+            apply=handle(obj.getComponent(0).getComponent(0).getComponent(2), 'callbackproperties');
+            set(combo, 'ActionPerformedCallback', {@Action, j});
+            set(apply, 'MouseClickedCallback', {@Apply, j});
+            return
+            
+
+            function Action(hObj, Ev, j) %#ok<INUSL,INUSD>
+                return
+                if isMultipleCall()
+                    return
+                end
+                drawnow();
+                set(hObj, 'ActionPerformedCallback', []);
+                LF=javax.swing.UIManager.getLookAndFeel();
+                LookAndFeel.resetLookAndFeel();
+                window=javax.swing.SwingUtilities.getRoot(hObj);
+                javax.swing.UIManager.setLookAndFeel(LF);
+                javaMethodEDT('updateComponentTreeUI', 'javax.swing.SwingUtilities',window);
+                drawnow();
+                set(hObj, 'ActionPerformedCallback', {@Action});
+                return
+            end
+            
+            
+            function Apply(hObj, Ev, j) %#ok<INUSD>
+                drawnow();
+                LF=javax.swing.UIManager.getLookAndFeel();
+                LookAndFeel.setLookAndFeel(LF);
+            end
+        end
+        
+        function LF=setLookAndFeel(LF)
+                drawnow();
+                javax.swing.UIManager.setLookAndFeel(LF);
+                javaMethodEDT('setDefaultLookAndFeelDecorated', 'javax.swing.JFrame', true);
+                javaMethodEDT('setDefaultLookAndFeelDecorated', 'javax.swing.JDialog', false);
+                javaMethodEDT('installJideExtension', 'com.jidesoft.plaf.LookAndFeelFactory');
+                dt=javaObjectEDT(com.mathworks.mde.desk.MLDesktop.getInstance.getMainFrame());
+                switch char(LF.getName())
+                    case {'The JGoodies Plastic3D Look and Feel', 'The JGoodies Plastic Look and Feel'}
+                        LF.setCurrentTheme(LF.getPlasticTheme());
+                    otherwise
+                end
+                javaMethodEDT('updateComponentTreeUI', 'javax.swing.SwingUtilities',dt);
+                drawnow();
+                disp(LF);
+        end
+        
+        function varargout=getLookAndFeelDefaults(LF)
+            MANAGER=javax.swing.UIManager();
+            if nargin==0
+                LF=MANAGER.getLookAndFeel();
+            end
+            def=LF.getDefaults();
+            keys=def.keys();
+            x={};
+            while (keys.hasMoreElements)
+                x{end+1,1}=char(keys.nextElement());
+                x{end, 2}=MANAGER.get(x{end,1});
+            end
+            [dum, idx]=sort({x{:,1}}); %#ok<CCAT1>
+            if nargout==0
+                fh=figure('MenuBar', 'none', 'ToolBar', 'none', 'Name', sprintf('LookAndFeel: L&F Defaults for %s', char(LF.getName())));
+                sz=size(x);
+                sc=jcontrol(fh, javax.swing.JScrollPane(), 'Position', [0 0 1 1]);
+                sc.setViewportView(javax.swing.JTable(sz(1), sz(2)+1));
+                t=sc.getViewport().getComponent(0);
+                for k=1:sz(2)
+                    for m=1:sz(1)
+                        if k==1
+                        t.setValueAt(int16(m), m-1, 0);
+                        end
+                        t.setValueAt(x{idx(m),k}, m-1, k);
+                    end
+                end
+            else
+                varargout{1}=x;
+            end
+        end
+            
+        function resetLookAndFeel()
+%             resetLookAndFeel restores the MATLAB default L&F for the current platform
+%             Example:
+%             resetLookAndFeel()
+%             The L&F is restored using a copy of the L&F placed in the base 
+%             workspace bt the first call to chooseLookAndFeel. This L&F contains
+%             any changes made by MATLAB to the default keys and should
+%             fully restore the default MATLAB, as opposed to just the platform,
+%             default L&F.
+            drawnow();
+            LF=evalin('base', 'MATLABDefaultLookAndFeel');
+            javax.swing.UIManager.setLookAndFeel(LF);
+            dt=com.mathworks.mde.desk.MLDesktop.getInstance.getMainFrame();
+            javaMethodEDT('updateComponentTreeUI', 'javax.swing.SwingUtilities',dt);
+            drawnow();
+            return
+        end
+        
+        function compareLookAndFeels(LF1, LF2)
+            % MATLAB defaults
+            
+            MANAGER=javax.swing.UIManager();
+            
+            if isempty(LF1)
+                LF1=MANAGER.getLookAndFeel();
+            end
+            MATLABdef=LF1.getDefaults();
+            MATLABkeys=MATLABdef.keys();
+            
+            % Defaults to compare           
+            if isempty(LF2)
+                LF2=MANAGER.getLookAndFeel();
+            end
+            def=LF2.getDefaults();
+            keys=def.keys();
+            
+            x={};
+            while (MATLABkeys.hasMoreElements)
+                x{end+1}=char(MATLABkeys.nextElement());
+            end
+            while (keys.hasMoreElements)
+                x{end+1}=char(keys.nextElement());
+            end
+            x=unique(x);
+            [dum, idx]=sort(x);
+            fh=figure('MenuBar', 'none', 'ToolBar', 'none', 'Name', sprintf('LookAndFeel: L&F Comparison for %s and %s', char(LF1.getName()), char(LF2.getName())));
+            sc=jcontrol(fh, javax.swing.JScrollPane(), 'Position', [0 0 1 1]);
+            sc.setViewportView(javax.swing.JTable(length(x), 4));
+            t=sc.getViewport().getComponent(0);
+            for m=1:length(x)
+                t.setValueAt(int16(m), m-1, 0);
+                t.setValueAt(x{idx(m)}, m-1, 1);
+                try
+                t.setValueAt(MATLABdef.get(x{idx(m)}), m-1, 2);
+                catch
+                end
+                try
+                t.setValueAt(def.get(x{idx(m)}), m-1, 3);
+                catch
+                end
+            end
+        return
+        end
+    
+        %------------------------------------------------------------------
+            function arr=getLFDefaults(thisLF)
+                if nargin==1
+                    arr=thisLF.getDefaults().toArray();
+                else
+                    MANAGER=javax.swing.UIManager();
+                    arr=MANAGER.getLookAndFeel().getDefaults().toArray;
+                end
+                return
+            end
+            
+    end
+end
