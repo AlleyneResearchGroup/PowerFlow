@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Heat Exchanger</title>
+<link rel="stylesheet" href="../Powerflow_template_help.css" type="text/css"><meta name="chunktype" content="refpage">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="toctype" itemprop="pagetype" content="blk">
+<meta name="infotype" itemprop="infotype" content="ref/block" />
+
+<meta name="description" itemprop="description" content="The 1D Observer Form [A(v),B(v),C(v),F(v),H(v)] block implements a gain-scheduled state-space controller defined in the following observer form:" />
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery-latest.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/l10n.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/docscripts.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/docscripts.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.toc.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.imagescaling.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.imageanimation.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.breadcrumb.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/jquery.highlight.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/nanoscroller.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.tmpl.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.toggleval.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/localnav.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/suggest.js"></script>
+<script type="text/javascript">
+            var suggestionsObj;
+            $(function() {
+                var searchField = $('#docsearch');
+                suggestionsObj = new Suggestions(getSuggestions, getMore, searchField);
+            });
+        
+            function getSuggestions() {
+               var text = suggestionsObj.searchField.val();
+               document.location='docsuggestion:' + text;
+            }
+
+            function getMore(type) {
+                var text = suggestionsObj.searchField.val();
+                document.location='docsuggestion:' + type + ':' + text;
+            }
+        </script>
+
+<link href="../../includes/product/css/reset.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/960.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/site5.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center_installed.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center_print.css" rel="stylesheet" type="text/css" media="print">
+<script type="text/javascript" src="../../includes/shared/scripts/respond.min.js"></script>
+</head>
+<body>
+
+         <div class="site_container site_toc_closed">
+         <div class="toc_pane"><div xmlns:atict="http://www.arbortext.com/namespace/atict">
+<div class="toc_container_wrapper" tabindex="0" style="display:block;">
+<div class="toc_header" lang="en">
+  <div class="toc_icon" id="toc.aeroblks"> <a href="../doccentertoc.html"></a></div>
+  <div></div>
+</div>
+</div>
+         </div>
+</div><div class="page_container"><div class="content_frame"><div class="content_container" id="content_container"><div id="search_crumb_container"><div class="breadcrumb_container"><div class="breadcrumbs"></div>
+</div>
+
+</div><section id="doc_center_content">
+<a name="f1-1015099"></a><a name="oned_observer_form"></a><div itemprop="content">
+  <h1 class="r2013b" itemprop="title">Heat Exchanger</h1>
+  <p class="r2013b" itemprop="title"><a href="#Library">Library</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Description">Description</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Math">Mathematical Model </a></p>
+  <p class="r2013b" itemprop="title"><a href="#Mask">Heat Exchanger Mask</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Inputs">Component Inputs and Outputs</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Asump">Assumptions and Limitations </a></p>
+  <p class="r2013b" itemprop="title"><a href="#Ex">Examples</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Ref">References</a></p>
+  <!-- SYNCHTO: _bqqd2iy.html --><div class="doc_topic_desc"><div class="purpose_container">
+    <div class="switch"></div>
+  </div></div></div><div itemprop="content"><a name="Library" id="Library"></a>
+    <h2>Library</h2>
+  <p>Thermal Management System</p>
+  </div><div itemprop="content"><a name="Description" id="Description"></a>
+    <h2>Description</h2>
+    <p class="inlinemediaobject">In most aircraft applications, air-air heat exchangers are employed in the Air-cycle machine (ACM). For the present implementation, a dynamic 1-D lumped parameter model is employed for characterizing the heat exchanger for B737 applications. The dynamic model is based on Ref. [4]<br>
+    </p>
+  </div><div itemprop="content"><a name="Math" id="Math"></a>
+    <div>
+      <h2>Mathematical Model </h2>
+      <p>There are several types of compact heat exchanger, but the offset strip-fin has been the most widely used fin geometry for industries that require lightweight high-performance exchangers, due to its high heat transfer relative to heat exchanger volume, an important characteristic when considering the often reduced space available for its positioning.</p>
+      <p align="center"><img src="Figure1.png"></p>
+      <center><b>Figure 5.5 One layer of an offset strip-fin</b></center>
+      <p align="center"><img src="Figure2.png"></p>
+      <center><b>Figure 5.6 Geometric parameters of the offset strip-fin</b></center>
+      <p><b><i>s:</i></b> Transverse spacing (free flow width).<br>
+      <b><i>h:</i></b> Free flow height.<br>
+      <b><i>t:</i></b> Fin thickness.<br>
+      <b><i>l:</i></b> Fin length.</p>
+      <p>Based on the above figure, the hydraulic diameter may be defined as:</p>
+      <p align="center"><img src="Figure3.png" width="360" height="135"></p>
+      <p>The correlation for the friction factor is in the form of a power-law of the type is given by:</p>
+      <p align="center"><img src="Figure4.png" width="303" height="42"></p>
+      <p><b><i>K1, a1, a2, a3, a4:</i></b> Power-law coefficients.<br>
+      <b><i>Re:</i></b> Reynolds number.<br> <i> alpha = s/h</i>;<i> delta = t/l</i>;<i> gamma = t/s</i>; </p>
+      <p>The mass flow rate in terms of the friction factor is given by:</p>
+      <p align="center"><img src="Figure5.png" width="203" height="97"></p>
+      <p>The mass flow rate in terms of the friction factor is given by:</p>
+      <p align="center"><img src="Figure6.png" width="265" height="102"></p>
+      <p>Where, j is the Coulburn factor, K<sub>f</sub> is the fluid thermal conductivity, cp is the fluid specific heat at constant pressure, and mu is the fluid viscosity.</p>
+      <p align="center"><img src="Figure7.png"></p>
+      <center><b>Figure 5.7 Fin thermal resistance</b></center>
+      <p>Heat transfer will occur in the fin through five different types of resistances, as presented in Figure 3. This resistances model both convection (using the heat transfer coefficient calculated previously) and conduction. After defining the equations for each resistance, a thermal circuit is built, and an equivalent thermal resistance R<sub>eq</sub> is calculated. The details of deriving the equivalent thermal resistance can be found in Ref. [4]. Until this point, the basis of the model have been developed, the mass flow can be calculated based on the heat exchanger geometry, as are the thermal resistances. The last part is the model itself involves the heat exchange between the cold and hot fluids to/from the core mass, and the dynamics of the temperature in this core. Figure 5 presents the representation of this model with three main parts: hot fluid control volume, core mass and cold fluid control volume.</p>
+      <p align="center"><img src="Figure07.png"></p>
+      <center><b>Figure 5.8 Core heat exchange model</b></center>
+      <p><img src="Figure17.png"></p>
+      <p>Representation of the heat lost by the hot fluid due to the contact with the surface of the core mass is given by: (Eq 5.1.10)</p> 
+      <p align="center"><img src="Figure8.png" width="319" height="106"></p>
+      <p>It should be noted here that all developments are based on mean temperature: (Eq 5.1.11)</b>
+      <p align="center"><img src="Figure9.png" width="319" height="90"></p>
+      <p>The use of mean temperatures is of great importance in this model, since it allows the heat transfer, and therefore the core mass temperature, to be obtained only as a function of the inlet temperatures of the fluids. It is required an expression for the mean hot temperature, which is not dependent on the fluid outlet temperature, which is to be determined. Isolating the hot outlet temperature in Eq.5.1.11 and replacing into Eq. 5.1.10 yields after some rearrangement: (Eq 5.1.12)</p>
+      <p align="center"><img src="Figure10.png" width="340" height="85"></p>
+      <p>Using the same procedure for the cold line yields: (Eq 5.1.13)</p>
+      <p align="center"><img src="Figure11.png" width="314" height="81"></p>
+      <p>Equations 5.1.12 and 5.1.13 present the mean cold and hot fluid temperatures as a function of the mean core mass temperature and known parameters, such as mass flow and equivalent thermal resistances (R<sub>h</sub> and R<sub>c</sub>).The transient response of the core energy is derived as:</p>
+      <p align="center"><img src="Figure12.png" width="609" height="86"></p>
+
+      
+
+
+
+
+
+      
+  <h2><a name="Mask"></a></h2>
+    <h2>Heat Exchanger Mask</h2>
+    </div><div itemprop="content">
+    <p>Here is a screenshot of the heat exchanger mask, it has two tabs. The first tab <b>HX Parameters</b> contains all the parameters of the heat exchange. The second tab <b>Fin Parameters</b> contains inputs for all the parameters of the fin.</p>
+    <p align="center"><img src="Figure13.png"></p>
+    <center><b>Figure 5.9 Mask Input parameters to the Heat Exchanger.<br> </b></center>
+  
+
+
+  <h2><a name="Inputs"></a></h2>
+      <h2>Component Inputs and Outputs</h2>
+      <table cellspacing="0" class="body" cellpadding="4" border="2"><colgroup><col width="15%"><col width="30%"><col width="55%"></colgroup><thead><tr valign="top"><th valign="top">Input</th>
+      <th valign="top">Units</th>
+      <th valign="top">Description</th></tr>
+</thead><tbody><tr valign="top"><td>Ram air inflow bus: <br>Ram air inflow bus: <br>Ram air inflow bus:</td>
+<td>kg/s <br>K <br> kPa</td>
+<td>Ram air required to run the ACM<br>Ram air temperature<br>Ram air pressure</td></tr>
+  <tr valign="top">
+    <td>Bleed air inflow bus:<br>Bleed air inflow bus:<br>Bleed air inflow bus:</td>
+    <td>kg/s<br>K<br>kPa</td>
+    <td>Bleed air from engine<br>Bleed air temperature upstream of heat exchange<br>Bleed air pressure upstream of heat exchange</td>
+  </tr>
+</tbody></table>
+      <p></p><table cellspacing="0" class="body" cellpadding="4" border="2"><colgroup><col width="16%"><col width="29%"><col width="55%"></colgroup><thead><tr valign="top"><th valign="top">Output</th>
+<th valign="top">Units</th>
+<th valign="top">Description</th></tr>
+</thead><tbody>
+  <tr valign="top">
+    <td>Ram air outflow bus:<br>Ram air outflow bus:<br>Ram air outflow bus:</td>
+    <td>kg/s<br>K<br>kPa</td>
+    <td>Ram air at heat exchange exit<br>Ram air temperature at heat exchange exit<br>Ram air pressure at heat exchange exit</td>
+  </tr>
+  <tr valign="top">
+    <td>Bleed air outflow bus:<br>Bleed air outflow bus:<br>Bleed air outflow bus:</td>
+    <td>kg/s<br>K<br>kPa</td>
+    <td>Bleed air at heat exchange exit<br>Bleed air temperature downstream of heat exchange<br>Bleed air pressure downstream of heat exchange</td>
+  </tr>
+  <tr valign="top">
+    <td>Misc. Data</td>
+    <td></td>
+    <td>Miscellaneous parameters such as Re, j, etc.</td>
+  </tr>
+</tbody></table>
+      <p></p></div><div itemprop="content"><a name="Asump" id="Asump"></a>
+        <h2>Assumptions and Limitations</h2><p>&nbsp;</p>
+      </div>
+      <div itemprop="content"><a name="Ex" id="Ex"></a>
+        <h2>Examples</h2><p>&nbsp;</p>
+</div><div itemprop="content"><a name="Ref" id="Ref"></a>
+  <h2>Reference</h2>
+  <p> [4] M. H. Teruel, C.Y. Nakashima and P. Paglione, " Rectangular offset strip-fin heat exchanger
+lumped parameters dynamic model,” 3<sup>rd</sup> CTA-DLR Workshop on Data Analysis & Flight
+Control. September 14-16, 2009, S. J. Campos, SP, Brazil
+  <p><a href="#f1-1015099">Back to Top </a></p>
+</div>
+<div itemprop="content"></div>
+</section>
+</div> 
+</div> 
+</div> 
+<div class="footer_container"><div class="footer"></div>
+      </div>
+   
+         </div> <!--  close_site_container -->
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Battery</title>
+<link rel="stylesheet" href="../Powerflow_template_help.css" type="text/css"><meta name="chunktype" content="refpage">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="toctype" itemprop="pagetype" content="blk">
+<meta name="infotype" itemprop="infotype" content="ref/block" />
+
+<meta name="description" itemprop="description" content="The 1D Observer Form [A(v),B(v),C(v),F(v),H(v)] block implements a gain-scheduled state-space controller defined in the following observer form:" />
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery-latest.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/l10n.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/docscripts.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/docscripts.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.toc.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.imagescaling.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.imageanimation.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.breadcrumb.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/jquery.highlight.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/nanoscroller.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.tmpl.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.toggleval.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/localnav.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/suggest.js"></script>
+<script type="text/javascript">
+            var suggestionsObj;
+            $(function() {
+                var searchField = $('#docsearch');
+                suggestionsObj = new Suggestions(getSuggestions, getMore, searchField);
+            });
+        
+            function getSuggestions() {
+               var text = suggestionsObj.searchField.val();
+               document.location='docsuggestion:' + text;
+            }
+
+            function getMore(type) {
+                var text = suggestionsObj.searchField.val();
+                document.location='docsuggestion:' + type + ':' + text;
+            }
+        </script>
+
+<link href="../../includes/product/css/reset.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/960.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/site5.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center_installed.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center_print.css" rel="stylesheet" type="text/css" media="print">
+<script type="text/javascript" src="../../includes/shared/scripts/respond.min.js"></script>
+</head>
+<body>
+
+         <div class="site_container site_toc_closed">
+         <div class="toc_pane"><div xmlns:atict="http://www.arbortext.com/namespace/atict">
+<div class="toc_container_wrapper" tabindex="0" style="display:block;">
+<div class="toc_header" lang="en">
+  <div class="toc_icon" id="toc.aeroblks"> <a href="../doccentertoc.html"></a></div>
+  <div></div>
+</div>
+</div>
+         </div>
+</div><div class="page_container"><div class="content_frame"><div class="content_container" id="content_container"><div id="search_crumb_container"><div class="breadcrumb_container"><div class="breadcrumbs"></div>
+</div>
+
+</div><section id="doc_center_content">
+<a name="f1-1015099"></a><a name="oned_observer_form"></a><div itemprop="content">
+  <h1 class="r2013b" itemprop="title">AC Loads </h1>
+  <p class="r2013b" itemprop="title"><a href="#Library">Library</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Description">Description</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Math">Mathematical Model </a></p>
+  <p class="r2013b" itemprop="title"><a href="#Mask">AC Loads  Mask</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Inputs">Component Inputs and Outputs</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Asump">Assumptions and Limitations </a></p>
+  <p class="r2013b" itemprop="title"><a href="#Ex">Examples</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Ref">References</a></p>
+  <!-- SYNCHTO: _bqqd2iy.html --><div class="doc_topic_desc"><div class="purpose_container">
+    <div class="switch"></div>
+  </div></div></div><div itemprop="content"><a name="Library" id="Library"></a>
+    <h2>Library</h2>
+  <p>Electrical Power Systems </p>
+  </div><div itemprop="content"><a name="Description" id="Description"></a>
+    <h2>Description</h2>
+    <p>The AC electrical loads are classified into constant power,  constant current and constant impedance loads, for different user requirements.  These loads are also modeled in the <em>dq</em>0  reference frame. The loads are modeled as lumped quantities. Assuming a  balanced three-phase system, the zero axis electrical quantities are generally  zero valued in steady state and therefore ignored.</p>
+    <h2><span class="inlinemediaobject"><br>
+    </span></h2>
+  </div><div itemprop="content"><a name="Math" id="Math"></a>
+    <div>
+      <h2>Mathematical Model </h2>
+      <p>Although the loads are divided as power, current and  impedance loads, the generators require the dq0 axis currents drawn by each  load, as feedback signals. In general, the complex power <em>S</em> can be expressed as</p>
+      <p align="center"><img src="eq 1.png" width="46" height="18"></p>
+      <p>where <em>V</em> and <em>I</em>* are the voltage and  complex conjugate of the current drawn.</p>
+      <p>For the power loads, the active (<em>P</em>) and reactive components (<em>Q</em>)  of the complex power can be expressed as</p>
+      <div align="center">
+        <p><img src="eq 2.png" width="164" height="25">        </p>
+        <p align="left">From the above equation, after separating the real and  imaginary parts , the active and reactive currents can be given as</p>
+        <p align="center"><img src="eq 3.png" width="93" height="46"><img src="eq 4.png" width="91" height="46"></p>
+        <p align="left">For the impedance loads, the active and reactive currents  can be given as</p>
+        <p align="center"><img src="eq 5.png" width="93" height="42"><img src="eq 6.png" width="93" height="42"></p>
+        <p align="left">The <em>dq</em> currents  drawn by the loads are computed using (5.3.23) and (5.3.24) and are passed as  feedback signals to the corresponding generator bus.</p>
+        <p align="left">&nbsp;</p>
+        <div align="left"></div>
+        </div>
+      </div>
+    <h2><a name="Mask"></a></h2>
+    <h2>AC Loads  Mask </h2>
+    <p align="center"><img src="mask.png" width="424" height="531"></p>
+    <p align="center">Fig. 5.57. Mask input for the load model </p>
+    <p>The following load parameters can be entered in the dialog  box. </p>
+    <p>1. Real Power [P] (Units –Watt)<br>
+      2. Power factor (Range: 0-1)<br>
+      3. Load efficiency (Range: 0-1)<br>
+      4. Resistance [R] (Units – Ohm)<br>
+      5. Reactance [X] (Units – Ohm)</p>
+    <p>The resistance and reactance values of the load cannot be  simultaneously ‘0’, as this would result in a short circuit. They will default  to the high impedance values shown in Fig. 5.57, when zero values are entered  for both resistance and reactance.</p>
+    <p align="center">&nbsp;</p>
+    <p align="center"><a name="f1-745964"></a></p>
+    </div><div itemprop="content">
+      <h2><a name="Inputs"></a></h2>
+      <h2>Component Inputs and Outputs</h2>
+      <p>AC loads can be inserted in two modes: <strong>Internal</strong> and <strong>External</strong>.  Loads configured through both these are combined together inside the AC load  block as shown in the block below.</p>
+      <p align="center"><img src="AC configuration.png" width="503" height="263"></p>
+      <p>The external load vector is configured as a vector of  [Active power, Reactive Power, Current]. In the current Boeing system model,  this vector is supplied through the ‘Source blocks’ from the ECS and FOS  systems. It is important to note that heavy loading of the system before the  generator voltage has built to a stable output can result in instabilities,  eventually leading to system crashing down. So ‘ENABLE’ signal has been added  to the loads, as shown in Fig. 5.56 to ensure a time delay after which the  generators can be loaded.</p>
+      </div>
+    <div itemprop="content"><a name="Asump" id="Asump"></a>
+        <h2>Assumptions and Limitations</h2><p>&nbsp;</p>
+      </div>
+      <div itemprop="content"><a name="Ex" id="Ex"></a>
+        <h2>Examples</h2><p>&nbsp;</p>
+</div><div itemprop="content"><a name="Ref" id="Ref"></a>
+  <h2>Reference</h2>
+  <p><a href="#f1-1015099">Back to Top </a></p>
+</div>
+<div itemprop="content"></div>
+</section>
+</div> 
+</div> 
+</div> 
+<div class="footer_container"><div class="footer"></div>
+      </div>
+   
+         </div> <!--  close_site_container -->
+         </body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Fan</title>
+<link rel="stylesheet" href="../Powerflow_template_help.css" type="text/css"><meta name="chunktype" content="refpage">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="toctype" itemprop="pagetype" content="blk">
+<meta name="infotype" itemprop="infotype" content="ref/block" />
+
+<meta name="description" itemprop="description" content="The 1D Observer Form [A(v),B(v),C(v),F(v),H(v)] block implements a gain-scheduled state-space controller defined in the following observer form:" />
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery-latest.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/l10n.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/docscripts.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/docscripts.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.toc.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.imagescaling.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.imageanimation.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.breadcrumb.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/jquery.highlight.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/nanoscroller.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.tmpl.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.toggleval.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/localnav.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/suggest.js"></script>
+<script type="text/javascript">
+            var suggestionsObj;
+            $(function() {
+                var searchField = $('#docsearch');
+                suggestionsObj = new Suggestions(getSuggestions, getMore, searchField);
+            });
+        
+            function getSuggestions() {
+               var text = suggestionsObj.searchField.val();
+               document.location='docsuggestion:' + text;
+            }
+
+            function getMore(type) {
+                var text = suggestionsObj.searchField.val();
+                document.location='docsuggestion:' + type + ':' + text;
+            }
+        </script>
+
+<link href="../../includes/product/css/reset.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/960.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/site5.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center_installed.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center_print.css" rel="stylesheet" type="text/css" media="print">
+<script type="text/javascript" src="../../includes/shared/scripts/respond.min.js"></script>
+</head>
+<body>
+
+         <div class="site_container site_toc_closed">
+         <div class="toc_pane"><div xmlns:atict="http://www.arbortext.com/namespace/atict">
+<div class="toc_container_wrapper" tabindex="0" style="display:block;">
+<div class="toc_header" lang="en">
+  <div class="toc_icon" id="toc.aeroblks"> <a href="../doccentertoc.html"></a></div>
+  <div></div>
+</div>
+</div>
+         </div>
+</div><div class="page_container"><div class="content_frame"><div class="content_container" id="content_container"><div id="search_crumb_container"><div class="breadcrumb_container"><div class="breadcrumbs"></div>
+</div>
+
+</div><section id="doc_center_content">
+<a name="f1-1015099"></a><a name="oned_observer_form"></a><div itemprop="content">
+  <h1 class="r2013b" itemprop="title">Fan</h1>
+  <p class="r2013b" itemprop="title"><a href="#Library">Library</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Description">Description</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Math">Mathematical Model </a></p>
+  <p class="r2013b" itemprop="title"><a href="#Mask">Fan &nbsp;Mask</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Inputs">Component Inputs and Outputs</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Asump">Assumptions and Limitations </a></p>
+  <p class="r2013b" itemprop="title"><a href="#Ex">Examples</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Ref">References</a></p>
+  <!-- SYNCHTO: _bqqd2iy.html --><div class="doc_topic_desc"><div class="purpose_container">
+    <div class="switch"></div>
+  </div></div></div><div itemprop="content"><a name="Library" id="Library"></a>
+    <h2>Library</h2>
+  <p>Thermal Management  Systems </p>
+  </div><div itemprop="content"><a name="Description" id="Description"></a>
+    <h2>Description</h2>
+    <p>The function of a fan in the ECS is to deliver the recirculated air from the cabin to a mixing junction, where the recirculated air is mixed with the conditioned air from the ECS. The fan model in Simulink determines the recirculated air properties and the fan power required. <br>
+    </p>
+<h2 align="center"><span class="inlinemediaobject"></span></h2>
+</div><div itemprop="content"><a name="Math" id="Math"></a>
+    <div>
+      <h2>Mathematical Model </h2>
+      <p>The fan model is based on two performance curves. The input to the curves is the volume flow rate in cfm, from which the static pressure and the fan power is determined. </p>
+      <div align="center">
+        <div align="left"></div>
+  </div>
+      </div>
+    <h2><a name="Mask"></a></h2>
+    <h2>Fan &nbsp;Mask </h2>
+    <img src="fan mask.png" width="441" height="427" alt=""/>
+    <p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+    <p align="center"><a name="f1-745964"></a></p>
+    </div><div itemprop="content">
+      <h2><a name="Inputs"></a></h2>
+      <h2>Component Inputs and Outputs</h2>
+      <table border="1" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="235" rowspan="2" valign="top"><p><strong>INPUT-1</strong>:  (symbol)</p>
+            <p>Input flow bus:</p>
+            <p>Input flow bus:</p>
+            <p>Inputs flow bus: </p></td>
+          <td width="72" valign="top"><p><strong>UNITS</strong></p></td>
+          <td width="331" valign="top"><p><strong>DESCRIPTION</strong></p></td>
+        </tr>
+        <tr>
+          <td width="72" valign="top"><p>Kg/s</p>
+            <p> K</p>
+            <p> kPa</p></td>
+          <td width="331" valign="top"><p>Recirculated air flow rate from cabin </p>
+            <p>Recirculated air temperature from cabin </p>
+            <p>Recirculated air pressure from cabin <br>
+            </p></td>
+        </tr>
+        <tr>
+          <td width="638" colspan="3" valign="top"><p>&nbsp;</p></td>
+        </tr>
+<tr> </tr>
+<tr> </tr>
+<tr> </tr>
+        <tr>
+          <td width="235" rowspan="2" valign="top"><p><strong>OUTPUT-1</strong>:  (symbol)</p>
+            <p>From cabin to fan:</p>
+            <p>From cabin to fan:</p>
+            <p>From cabin to fan: </p></td>
+          <td width="72" valign="top"><p><strong>UNITS</strong></p></td>
+          <td width="331" valign="top"><p><strong>DESCRIPTION</strong></p></td>
+        </tr>
+        <tr>
+          <td width="72" valign="top"><p>Kg/s</p>
+            <p> K</p>
+            <p> kPa</p></td>
+          <td width="331" valign="top"><p>Recirculated air flow rate from the cabin </p>
+            <p>Recirculated air temperature from the cabin </p>
+            <p>Recirculated air pressure from the cabin</p></td>
+        </tr>
+        <tr>
+          <td width="638" colspan="3" valign="top"><p><strong>&nbsp;</strong></p></td>
+        </tr>
+        <tr>
+          <td width="235" rowspan="2" valign="top"><p><strong>OUTPUT-2</strong>:  (symbol)</p>
+            <p>Other output bus:</p>
+            <p>Other output bus:</p>
+            <p>Other output bus </p></td>
+          <td width="72" valign="top"><p><strong>UNITS</strong></p></td>
+          <td width="331" valign="top"><p><strong>DESCRIPTION</strong></p></td>
+        </tr>
+        <tr>
+          <td width="72" valign="top"><p>r.p.m</p>
+            <p>kW</p>
+            </td>
+          <td width="331" valign="top"><p>Fan speed in r.p.m. </p>
+            <p>Fan power required </p>
+            <p>Fan efficiency </p></td>
+        </tr>
+        <tr> </tr>
+</table>
+      <p>&nbsp;</p>
+      <p align="center">.</p>
+      </div>
+    <div itemprop="content"><a name="Asump" id="Asump"></a>
+        <h2>Assumptions and Limitations</h2><p>&nbsp;</p>
+      </div>
+      <div itemprop="content"><a name="Ex" id="Ex"></a>
+        <h2>Examples</h2><p>&nbsp;</p>
+</div><div itemprop="content"><a name="Ref" id="Ref"></a>
+  <h2>Reference</h2>
+  <p><a href="#f1-1015099">Back to Top </a></p>
+</div>
+<div itemprop="content"></div>
+</section>
+</div> 
+</div> 
+</div> 
+<div class="footer_container"><div class="footer"></div>
+      </div>
+   
+         </div> <!--  close_site_container -->
+         </body>
+</html>
