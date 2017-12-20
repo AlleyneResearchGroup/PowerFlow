@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>1D Controller Blend u=(1-L).K1.y+L.K2.y</title>
+<link rel="stylesheet" href="docstyle.css" type="text/css"><meta name="chunktype" content="refpage">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="toctype" itemprop="pagetype" content="blk">
+<meta name="infotype" itemprop="infotype" content="ref/block" />
+
+<meta name="description" itemprop="description" content="The 1D Controller Blend u=(1-L).K1.y+L.K2.y block implements an array of state-space controller designs." />
+<script type="text/javascript" src="../includes/product/scripts/jquery/jquery-latest.js"></script>
+<script type="text/javascript" src="../includes/shared/scripts/l10n.js"></script>
+<script type="text/javascript" src="../includes/shared/scripts/docscripts.js"></script>
+<script type="text/javascript" src="../includes/product/scripts/docscripts.js"></script>
+<script type="text/javascript" src="../includes/shared/scripts/mw.toc.js"></script>
+<script type="text/javascript" src="../includes/shared/scripts/mw.imagescaling.js"></script>
+<script type="text/javascript" src="../includes/shared/scripts/mw.imageanimation.js"></script>
+<script type="text/javascript" src="../includes/shared/scripts/mw.breadcrumb.js"></script>
+<script type="text/javascript" src="../includes/shared/scripts/jquery.highlight.js"></script>
+<script type="text/javascript" src="../includes/shared/scripts/nanoscroller.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="../includes/product/scripts/jquery/jquery.tmpl.js"></script>
+<script type="text/javascript" src="../includes/product/scripts/jquery/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="../includes/product/scripts/jquery/jquery.toggleval.js"></script>
+<script type="text/javascript" src="../includes/product/scripts/localnav.js"></script>
+<script type="text/javascript" src="../includes/product/scripts/suggest.js"></script>
+<script type="text/javascript">
+            var suggestionsObj;
+            $(function() {
+                var searchField = $('#docsearch');
+                suggestionsObj = new Suggestions(getSuggestions, getMore, searchField);
+            });
+        
+            function getSuggestions() {
+               var text = suggestionsObj.searchField.val();
+               document.location='docsuggestion:' + text;
+            }
+
+            function getMore(type) {
+                var text = suggestionsObj.searchField.val();
+                document.location='docsuggestion:' + type + ':' + text;
+            }
+        </script>
+
+<link href="../includes/product/css/reset.css" rel="stylesheet" type="text/css">
+<link href="../includes/product/css/960.css" rel="stylesheet" type="text/css">
+<link href="../includes/product/css/site5.css" rel="stylesheet" type="text/css">
+<link href="../includes/product/css/doc_center.css" rel="stylesheet" type="text/css">
+<link href="../includes/product/css/doc_center_installed.css" rel="stylesheet" type="text/css">
+<link href="../includes/product/css/doc_center_print.css" rel="stylesheet" type="text/css" media="print">
+<script type="text/javascript" src="../includes/shared/scripts/respond.min.js"></script>
+</head>
+<body>
+
+<div class="page_container">
+	<div class="content_frame">
+		<div class="content_container" id="content_container">
+			<section id="doc_center_content">
+				<a name="f1-745881"></a>
+				<a name="oned_controller_blend"></a>
+					<div itemprop="content">
+						<h1 class="r2013b" itemprop="title">Title Here</h1><!-- SYNCHTO: _bqqd2iy.html -->
+							<div class="doc_topic_desc">
+								<div class="purpose_container">
+									<p itemprop="purpose">Purpose of System</p>
+								</div>
+							</div>
+						</div>
+					<div itemprop="content">
+						<a name="f1-745884"></a>
+						<h2>Library</h2>
+						<p>Higher Level System Here</p>
+					</div>
+						<div itemprop="content">
+							<a name="f1-1277903"></a>
+							<h2>Description<span class="inlinemediaobject"><br>
+							<img src="1dblendblk.gif" height="45" width="99" alt=""></span></h2>
+							<p>Description Here</p>
+							<p class="programlistingindent">
+							<img src="eqn1239291693.png" height="223" width="229" alt=""></p>
+							<p>Describe equations</p>
+							
+						</div>
+							<div itemprop="content">
+								<a name="f1-745897"></a>
+								<h2>GUI Description</h2><p>
+								<img src="1dblendmsk.gif" height="597" width="438" alt=""></p>
+								<p> GUI description here </p>
+							</div>
+								<div itemprop="content">
+									<a name="f1-745916"></a>
+									<h2> Block Inputs and Outputs</h2>
+									<table cellspacing="0" class="body" cellpadding="4" border="2">
+									<colgroup><col width="15%"><col width="30%"><col width="55%"></colgroup>
+									<thead><tr valign="top">
+									<th valign="top">Input</th>
+									<th valign="top">Dimension Type</th>
+									<th valign="top">Description</th></tr></thead>
+									<tbody>
+									<tr valign="top"><td>
+									<p>First</p></td>
+									<td>Any</td>
+									<td>Contains the measurements.</td></tr>
+									<tr valign="top"><td>
+									<p>Second</p></td>
+									<td>Any</td>
+									<td>Contains the scheduling variable, conforming to the dimensions of the state-space matrices.</td></tr></tbody></table>
+									<p></p>
+									<table cellspacing="0" class="body" cellpadding="4" border="2">
+									<colgroup><col width="16%"><col width="29%"><col width="55%"></colgroup>
+									<thead><tr valign="top">
+									<th valign="top">Output</th>
+									<th valign="top">Dimension Type</th>
+									<th valign="top">Description</th></tr></thead>
+									<tbody>
+									<tr valign="top">
+									<td><p>First</p></td>
+									<td>Any</td>
+									<td>Contains the actuator demands.</td></tr></tbody></table>
+									<p></p>
+								</div>
+							<div itemprop="content">
+								<a name="f1-745920"></a>
+								<h2>Mathematical and Physical Assumptions</h2>
+								<ul>
+									<a name="zmw57dd0e5342"></a>
+									<table cellspacing="0" class="note" summary="Note" cellpadding="5" border="1">
+									<tr width="90%"><td><p>
+Mathematical and Physical Assumptions Here.</p></td></tr></table></ul></div>
+</section>
+
+<!--Last updated: Tue Jul 16 19:53:49 EDT 2013-->
+
+			</div> <!-- close_content_container -->
+		</div> <!-- close_content_frame -->
+	</div> <!--  close_page_container --> 
+</div> <!--  close_site_container -->
+</body>
+</html>
