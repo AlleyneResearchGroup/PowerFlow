@@ -1,0 +1,304 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Turbocharger</title>
+<link rel="stylesheet" href="../Powerflow_template_help.css" type="text/css"><meta name="chunktype" content="refpage">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="toctype" itemprop="pagetype" content="blk">
+<meta name="infotype" itemprop="infotype" content="ref/block" />
+
+<meta name="description" itemprop="description" content="The 1D Observer Form [A(v),B(v),C(v),F(v),H(v)] block implements a gain-scheduled state-space controller defined in the following observer form:" />
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery-latest.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/l10n.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/docscripts.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/docscripts.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.toc.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.imagescaling.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.imageanimation.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.breadcrumb.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/jquery.highlight.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/nanoscroller.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.tmpl.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.toggleval.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/localnav.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/suggest.js"></script>
+<script type="text/javascript">
+            var suggestionsObj;
+            $(function() {
+                var searchField = $('#docsearch');
+                suggestionsObj = new Suggestions(getSuggestions, getMore, searchField);
+            });
+        
+            function getSuggestions() {
+               var text = suggestionsObj.searchField.val();
+               document.location='docsuggestion:' + text;
+            }
+
+            function getMore(type) {
+                var text = suggestionsObj.searchField.val();
+                document.location='docsuggestion:' + type + ':' + text;
+            }
+        </script>
+
+<link href="../../includes/product/css/reset.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/960.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/site5.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center_installed.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center_print.css" rel="stylesheet" type="text/css" media="print">
+<script type="text/javascript" src="../../includes/shared/scripts/respond.min.js"></script>
+</head>
+<body>
+
+         <div class="site_container site_toc_closed">
+         <div class="toc_pane"><div xmlns:atict="http://www.arbortext.com/namespace/atict">
+<div class="toc_container_wrapper" tabindex="0" style="display:block;">
+<div class="toc_header" lang="en">
+  <div class="toc_icon" id="toc.aeroblks"> <a href="../doccentertoc.html"></a></div>
+  <div></div>
+</div>
+</div>
+         </div>
+</div><div class="page_container"><div class="content_frame"><div class="content_container" id="content_container"><div id="search_crumb_container"><div class="breadcrumb_container"><div class="breadcrumbs"></div>
+</div>
+
+</div><section id="doc_center_content">
+<a name="f1-1015099"></a><a name="oned_observer_form"></a><div itemprop="content">
+  <h1 class="r2013b" itemprop="title">Turbocharger</h1>
+  <p class="r2013b" itemprop="title"><a href="#Library">Library</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Description">Description</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Math">Mathematical Model </a></p>
+  <p class="r2013b" itemprop="title"><a href="#Mask">Turbo Charger Mask</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Inputs">Component Inputs and Outputs</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Asump">Assumptions and Limitations </a></p>
+  <p class="r2013b" itemprop="title"><a href="#Ex">Examples</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Ref">References</a></p>
+  <!-- SYNCHTO: _bqqd2iy.html --><div class="doc_topic_desc"><div class="purpose_container">
+    <div class="switch"></div>
+  </div></div></div><div itemprop="content"><a name="Library" id="Library"></a>
+    <h2>Library</h2>
+  <p>Thermal Management  Systems </p>
+  </div><div itemprop="content"><a name="Description" id="Description"></a>
+    <h2>Description</h2>
+    <p>The turbocharger consists of a turbine driven by the exhaust gas and connected via a common shaft to the compressor, which compresses the air in the intake. The rotational speed (N) of the turbocharger shaft can be derived as a power (P) balance between the turbine and the compressor side. <br>
+    </p>
+    <h2 align="center"><span class="inlinemediaobject"></span></h2>
+</div><div itemprop="content"><a name="Math" id="Math"></a>
+    <div>
+      <h2>Mathematical Model </h2>
+      <p>The  governing equations for the turbocharger is derived from Ref. [5]. The  rotational speed (<em>N</em>) of the  turbocharger shaft is related to the power balance between the turbine (<em>Pt</em>) and the compressor (<em>Pc</em>) side through the  following first order differential equation:</p>
+      <p><img src="eq 1.png" width="116" height="49"></p>
+      <p>where the turbocharger speed is measured in rpm and Jt is the inertia of the turbocharger. Subsequently, the expressions for the compressor and turbine power are derived separately. Assuming that the process is isentropic, the following relation between the temperature and pressure at the inlet (Ti, pi) and at the outlet (To, po) of the turbine can be derived: </p>
+      <p><img src="eq 2.png" width="87" height="49"></p>
+      <p>However, due to enthalpy losses across the turbine (e.g. incidence and friction losses), the expansion process is not isentropic in reality. Therefore, the turbine isentropic efficiency ( ) is introduced. In the present Simulink model, the turbine isentropic efficiency has been modeled as a user-defined constant input. The outlet pressure po is also a user-defined constant. The turbine power (Pt) developed can be derived using Eq. 5.1.18 and Eq.5.1.19 as </p>
+      <p><img src="eq 3.png" width="149" height="61"></p>
+      <p> where is the mass flow-rate across the turbine and cp is the specific heat of the bleed air. In the Simulink model of the turbocharger, the upstream turbine conditions (Ti, pi) are essentially the outlet flow conditions from the secondary heat exchanger. The power required by the compressor is an input to the turbine model. Using Eq. 5.1.20, the power delivered by the turbine (Pt) is calculated. The rotational speed (N) of the turbine is then derived using Eq. 5.1.18. The rotational speed of the turbine is taken as an input to the compressor. Efficiency and pressure maps are used to determine the flow conditions downstream of the compressor. The compressor efficiency is two-dimensional map, and can be defined in the following functional form:</p>
+      <p><img src="eq 4.png" width="126" height="49"></p>
+      <p>It is important to note that the units for pressure, temperature and the rotational speed in Eq. 5.1.21 should be carefully selected in order to be consistent with the efficiency map. In a similar manner, the pressure ratio (ratio of outlet pressure to the inlet pressure) is expressed through a two-dimensional map obeying the functional form: </p>
+      <p><img src="eq 45.png" width="135" height="49"></p>
+      <p>From the efficiency curve and the pressure ratio determined from the two-dimensional map, the power demand for the compressor can be determined from the following equation: </p>
+      <p><img src="eq 455.png" width="155" height="59"></p>
+      <p>At  steady state the compressor power and the turbine power are equal.</p>
+<div align="center">
+  <div align="left"></div>
+</div>
+    </div>
+<h2><a name="Mask"></a></h2>
+<h2>Turbocharger &nbsp;Mask </h2>
+<img src="mask.png" width="642" height="555" alt=""/>
+<p align="center">&nbsp;</p>
+<p align="center"><a name="f1-745964"></a></p>
+    </div><div itemprop="content">
+      <h2><strong><a name="Inputs"></a></strong></h2>
+      <h2><strong>Component Inputs and Outputs</strong></h2>
+<p align="center"><strong>.</strong></p>
+      </div>
+    <p align="center"><strong>Table </strong><strong>5</strong><strong>.</strong><strong>4</strong><strong>.</strong><strong> TURBINE INPUTS/ OUTPUTS</strong></p>
+    <table border="1" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="235" rowspan="2" valign="top"><br>
+          <strong>INPUT-1</strong>:  (symbol)
+          <p>Engine bleed:  (m_dot)<br>
+            Engine bleed:  (temp_K)<br>
+            Engine bleed:  (pres_kPa)</p></td>
+        <td width="72" valign="top"><p><strong>UNITS</strong></p></td>
+        <td width="331" valign="top"><p><strong>DESCRIPTION</strong></p></td>
+      </tr>
+      <tr>
+        <td width="72" valign="top"><p>&nbsp;</p>
+          <p align="center">Kg/s<br>
+            K<br>
+            kPa</p></td>
+        <td width="331" valign="top"><p>&nbsp;</p>
+          <p>Bleed air flow rate from the    upstream<br>
+            Bleed air temperature<br>
+            Bleed air pressure upstream of    the turbine</p></td>
+      </tr>
+      <tr>
+        <td width="638" colspan="3" valign="top"><p>&nbsp;</p></td>
+      </tr>
+      <tr>
+        <td width="235" rowspan="2" valign="top"><p><strong>INPUT-2</strong>: (symbol)</p>
+          <p>Compressor power:    (W_compressor)</p></td>
+        <td width="72" valign="top"><p><strong>UNITS</strong></p></td>
+        <td width="331" valign="top"><p><strong>DESCRIPTION</strong></p></td>
+      </tr>
+      <tr>
+        <td width="72" valign="top"><p>&nbsp;</p>
+          <p align="center">W</p></td>
+        <td width="331" valign="top"><p>&nbsp;</p>
+          <p>Power demanded by the    compressor </p></td>
+      </tr>
+      <tr>
+        <td width="638" colspan="3" valign="top"><p>&nbsp;</p></td>
+      </tr>
+      <tr>
+        <td width="235" rowspan="2" valign="top"><p><strong>OUTPUT-1</strong>:  (symbol)</p>
+          <p>Engine bleed:  (m_dot)<br>
+            Engine bleed:  (temp_K)<br>
+            Engine bleed:  (pres_kPa)</p></td>
+        <td width="72" valign="top"><p><strong>UNITS</strong></p></td>
+        <td width="331" valign="top"><p><strong>DESCRIPTION</strong></p></td>
+      </tr>
+      <tr>
+        <td width="72" valign="top"><p>&nbsp;</p>
+          <p align="center">Kg/s<br>
+            K<br>
+            kPa</p></td>
+        <td width="331" valign="top"><p>&nbsp;</p>
+          <p>Bleed air flow rate at the    turbine outlet<br>
+            Bleed air temperature at the    turbine outlet<br>
+            Bleed air pressure at the    turbine outlet</p></td>
+      </tr>
+      <tr>
+        <td width="638" colspan="3" valign="top"><p><strong>&nbsp;</strong></p></td>
+      </tr>
+      <tr>
+        <td width="235" rowspan="2" valign="top"><p><strong>OUTPUT-2</strong>:  (symbol)</p>
+          <p>Shaft speed: (N)</p></td>
+        <td width="72" valign="top"><p><strong>UNITS</strong></p></td>
+        <td width="331" valign="top"><p><strong>DESCRIPTION</strong></p></td>
+      </tr>
+      <tr>
+        <td width="72" valign="top"><p><strong>&nbsp;</strong></p>
+          <p align="center">R.P.M</p></td>
+        <td width="331" valign="top"><p><strong>&nbsp;</strong></p>
+          <p>Rotational speed of the turbine</p></td>
+      </tr>
+      <tr>
+        <td width="638" colspan="3" valign="top"><p><strong>&nbsp;</strong></p></td>
+      </tr>
+      <tr>
+        <td width="235" rowspan="2" valign="top"><p><strong>OUTPUT-3</strong>:  (symbol)</p>
+          <p>Turbine power: (W_turbine)</p></td>
+        <td width="72" valign="top"><p><strong>UNITS</strong></p></td>
+        <td width="331" valign="top"><p><strong>DESCRIPTION</strong></p></td>
+      </tr>
+      <tr>
+        <td width="72" valign="top"><p align="center">&nbsp;</p>
+          <p align="center">W</p></td>
+        <td width="331" valign="top"><p>&nbsp;</p>
+          <p>Power generated by the turbine</p></td>
+      </tr>
+    </table>
+    <p><strong>&nbsp;</strong></p>
+    <p align="center"><a name="OLE_LINK10"><strong>Table </strong></a><strong>5</strong><strong>.</strong><strong>5</strong><strong>.</strong> <strong>COMPRESSOR INPUTS/ OUTPUTS</strong></p>
+    <table border="1" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="235" rowspan="2" valign="top"><br>
+          <strong>INPUT-1:  </strong>(symbol)<strong></strong>
+          <p>Engine    bleed: m_dot<br>
+            Engine    bleed: temp_K<br>
+            Engine    bleed: pres_kPa</p></td>
+        <td width="72" valign="top"><p><strong>UNITS</strong></p></td>
+        <td width="331" valign="top"><p><strong>DESCRIPTION</strong></p></td>
+      </tr>
+      <tr>
+        <td width="72" valign="top"><p>&nbsp;</p>
+          <p align="center">Kg/s<br>
+            K<br>
+            kPa</p></td>
+        <td width="331" valign="top"><p>&nbsp;</p>
+          <p>Bleed    air flow rate from the upstream<br>
+            Bleed    air temperature<br>
+            Bleed    air pressure upstream of the compressor</p></td>
+      </tr>
+      <tr>
+        <td width="638" colspan="3" valign="top"><p>&nbsp;</p></td>
+      </tr>
+      <tr>
+        <td width="235" rowspan="2" valign="top"><p><strong>INPUT-2: </strong>(symbol)<strong></strong></p>
+          <p>Shaft    speed: (N)</p></td>
+        <td width="72" valign="top"><p><strong>UNITS</strong></p></td>
+        <td width="331" valign="top"><p><strong>DESCRIPTION</strong></p></td>
+      </tr>
+      <tr>
+        <td width="72" valign="top"><p>&nbsp;</p>
+          <p align="center">W</p></td>
+        <td width="331" valign="top"><p>&nbsp;</p>
+          <p>Rotational    speed of the turbine</p></td>
+      </tr>
+      <tr>
+        <td width="638" colspan="3" valign="top"><p>&nbsp;</p></td>
+      </tr>
+      <tr>
+        <td width="235" rowspan="2" valign="top"><p><strong>OUTPUT-1: </strong> (symbol)<strong></strong></p>
+          <p>Engine bleed: m_dot<br>
+            Engine bleed: temp_K<br>
+            Engine bleed: pres_kPa</p></td>
+        <td width="72" valign="top"><p><strong>UNITS</strong></p></td>
+        <td width="331" valign="top"><p><strong>DESCRIPTION</strong></p></td>
+      </tr>
+      <tr>
+        <td width="72" valign="top"><p>&nbsp;</p>
+          <p align="center">Kg/s<br>
+            K<br>
+            kPa</p></td>
+        <td width="331" valign="top"><p>&nbsp;</p>
+          <p>Bleed air flow rate at    compressor outlet<br>
+            Bleed air temperature at    compressor outlet<strong></strong><br>
+            Bleed air pressure at    compressor outlet </p></td>
+      </tr>
+      <tr>
+        <td width="638" colspan="3" valign="top"><p>&nbsp;</p></td>
+      </tr>
+      <tr>
+        <td width="235" rowspan="2" valign="top"><p><strong>OUTPUT-2</strong>:  (symbol)</p>
+          <p>Compressor power: (W_compressor)</p></td>
+        <td width="72" valign="top"><p><strong>UNITS</strong></p></td>
+        <td width="331" valign="top"><p><strong>DESCRIPTION</strong></p></td>
+      </tr>
+      <tr>
+        <td width="72" valign="top"><p align="center">&nbsp;</p>
+          <p align="center">W</p></td>
+        <td width="331" valign="top"><p>&nbsp;</p>
+          <p>Power demanded by the    compressor</p></td>
+      </tr>
+    </table>
+<div itemprop="content"><a name="Asump" id="Asump"></a>
+  <h2>Assumptions and Limitations</h2><p>&nbsp;</p>
+</div>
+      <div itemprop="content"><a name="Ex" id="Ex"></a>
+        <h2>Examples</h2><p>&nbsp;</p>
+</div><div itemprop="content"><a name="Ref" id="Ref"></a>
+  <h2>Reference</h2>
+  <p><a href="#f1-1015099">Back to Top </a></p>
+</div>
+<div itemprop="content"></div>
+</section>
+</div> 
+</div> 
+</div> 
+<div class="footer_container"><div class="footer"></div>
+      </div>
+   
+         </div> <!--  close_site_container -->
+         </body>
+</html>

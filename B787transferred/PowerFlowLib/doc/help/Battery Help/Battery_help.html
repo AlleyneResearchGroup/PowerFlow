@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Battery</title>
+<link rel="stylesheet" href="../Powerflow_template_help.css" type="text/css"><meta name="chunktype" content="refpage">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="toctype" itemprop="pagetype" content="blk">
+<meta name="infotype" itemprop="infotype" content="ref/block" />
+
+<meta name="description" itemprop="description" content="The 1D Observer Form [A(v),B(v),C(v),F(v),H(v)] block implements a gain-scheduled state-space controller defined in the following observer form:" />
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery-latest.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/l10n.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/docscripts.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/docscripts.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.toc.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.imagescaling.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.imageanimation.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.breadcrumb.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/jquery.highlight.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/nanoscroller.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.tmpl.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.toggleval.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/localnav.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/suggest.js"></script>
+<script type="text/javascript">
+            var suggestionsObj;
+            $(function() {
+                var searchField = $('#docsearch');
+                suggestionsObj = new Suggestions(getSuggestions, getMore, searchField);
+            });
+        
+            function getSuggestions() {
+               var text = suggestionsObj.searchField.val();
+               document.location='docsuggestion:' + text;
+            }
+
+            function getMore(type) {
+                var text = suggestionsObj.searchField.val();
+                document.location='docsuggestion:' + type + ':' + text;
+            }
+        </script>
+
+<link href="../../includes/product/css/reset.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/960.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/site5.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center_installed.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center_print.css" rel="stylesheet" type="text/css" media="print">
+<script type="text/javascript" src="../../includes/shared/scripts/respond.min.js"></script>
+</head>
+<body>
+
+         <div class="site_container site_toc_closed">
+         <div class="toc_pane"><div xmlns:atict="http://www.arbortext.com/namespace/atict">
+<div class="toc_container_wrapper" tabindex="0" style="display:block;">
+<div class="toc_header" lang="en">
+  <div class="toc_icon" id="toc.aeroblks"> <a href="../doccentertoc.html"></a></div>
+  <div></div>
+</div>
+</div>
+         </div>
+</div><div class="page_container"><div class="content_frame"><div class="content_container" id="content_container"><div id="search_crumb_container"><div class="breadcrumb_container"><div class="breadcrumbs"></div>
+</div>
+
+</div><section id="doc_center_content">
+<a name="f1-1015099"></a><a name="oned_observer_form"></a><div itemprop="content">
+  <h1 class="r2013b" itemprop="title">Battery</h1>
+  <p class="r2013b" itemprop="title"><a href="#Library">Library</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Description">Description</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Math">Mathematical Model </a></p>
+  <p class="r2013b" itemprop="title"><a href="#Mask">Battery Mask</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Inputs">Component Inputs and Outputs</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Asump">Assumptions and Limitations </a><a href="#Ex"></a></p>
+  <p class="r2013b" itemprop="title"><a href="#Ref">References</a></p>
+  <!-- SYNCHTO: _bqqd2iy.html --><div class="doc_topic_desc"><div class="purpose_container">
+    <div class="switch"></div>
+  </div></div></div><div itemprop="content"><a name="Library" id="Library"></a>
+    <h2>Library</h2>
+  <p>Electrical Power Systems </p>
+  </div><div itemprop="content"><a name="Description" id="Description"></a>
+    <h2>Description<span class="inlinemediaobject"><br>
+      <img src="Battery_sig.png" alt="Battery Block" width="168" height="209"></span></h2>
+<p>The battery is the source of DC power in the aircraft  electrical system. This section deals with the implementation of a lithium-ion  battery, its mathematical model and the component inputs and outputs. In the  following model, battery parameters are determined from laboratory tests on a  sample lithium-ion battery (Panasonic CGR18650A). The model is generic and can  be used to implement a wide range of batteries, including Li-ion, NiMH and  lead-acid batteries. However, the battery circuit model parameters have to be  estimated using a battery testing procedure (Kroeze and Krein, 2008).</p>
+  </div><div itemprop="content"><a name="Math" id="Math"></a>
+    <div>
+      <h2>Mathematical Model </h2>
+      <p>The mathematical model described in this section is used to  implement a lithium-ion battery. The battery capacity is a function of the  charging/discharging rates <em>i</em>(<em>t</em>), temperature <em>T</em>(<em>t</em>) and cycle number <em>ncycle</em> and a rate factor <em>f</em>(<em>i</em>(<em>t</em>)) which is a function of current. The  rate factor is used to account for undesired side reactions with increase in  current magnitude. The dynamic capacity of the battery represented by its state  of charge (SOC), is a function of the abovementioned factors and given by the  following expression.</p>
+      <p align="center"><img src="Equation 1.png" alt="5.3.20" width="364" height="25"></p>
+      <p align="center"><img src="battery_math.png" alt="Electrical equivalent circuit of the batter model" width="692" height="177"></p>
+      <p align="center">Fig. 5.50Electrical equivalent circuit of the batter model</p>
+      <p>The battery is modeled using the notion of multiple scale  time constants, each at the level of seconds, minutes and hours. In the  electrical equivalent circuit, each time constant can be modeled as a  resistance-capacitance combination, as shown in Fig. 1. Measurements of the  circuit parameters are found using a battery testing apparatus and recording  the test sequences and data corresponding to open circuit voltage (<em>Voc</em>) and terminal voltage (<em>Vt</em>) versus SOC at room  temperature. Each parameter (resistance and capacitance) in the model shown in  Fig. 1, is a nonlinear function of SOC. For a practically useable model, each  parameter is represented as a polynomial function of the SOC up to sixth order  given as</p>
+      <div align="center">
+        <p><img src="equ 2.png" alt="5.3.21" width="285" height="25">        </p>
+        <p align="left">The coefficients <em>A</em>0-<em>A</em>6 are obtained by a best-fit  polynomial expression on the experimentally determined data points. From the  equivalent circuit, the battery terminal voltage can be calculated as follows.</p>
+        <p align="center"><img src="equ 3.png" alt="5.3.22" width="325" height="47"> </p>
+        <p align="left">where <em>I</em> refers to  the series current flowing in the circuit. The various resistance-capacitance  combinations (<em>Rs</em>-<em>Cs</em>, <em>Rm</em>-<em>Cm</em>, <em>Rh</em>-<em>Ch</em>) refer to the time constants corresponding to the  second, minute and hour time scales.</p>
+        <p align="center">&nbsp;</p>
+      </div>
+      <p align="left">&nbsp;</p>
+    </div>
+    <h2><a name="Mask"></a></h2>
+    <h2>Battery Mask </h2>
+    <p align="center"><img src="Battery Mask.png" alt="Battery Mask" width="424" height="501"></p>
+    <p align="center">Fig. 5.52. Mask inouts to the battery model </p>
+    <p>The battery model requires the following mask input values.</p>
+    <ul type="disc">
+      <li><strong>Number of cells       in each module*</strong> - Determines the series voltage       of the entire string</li>
+      <li><strong>Number of       modules</strong>* - Determines the number of       parallel battery modules, each module consisting of its string</li>
+      <li><strong>Initial State Of       Charge</strong> - Nominal initialization done       between 0.9-1.0 (Range: 0-1).</li>
+    </ul>
+    <p>*These values can be changed even during the course of  simulation</p>
+    <p align="center">&nbsp;</p>
+    <p align="center"><a name="f1-745964"></a></p>
+    </div><div itemprop="content">
+      <h2><a name="Inputs"></a></h2>
+      <h2>Component Inputs and Outputs</h2>
+      <p>A high-level block diagram with inputs  and outputs to the model are shown in Fig. 2. The internal blocks indicate the  sequence of steps executed to compute the battery dc bus voltage output. Also,  the total power loss in the battery pack is computed as the sum of power  dissipated in various resistors of the electrical equivalent circuit. The net  charge/discharge detection block determines whether the net effect is charging  or discharging, depending on the difference between the magnitudes of charging  and discharging currents. This information along with the current flowing in  the circuit is used to compute the dynamic SOC, which enables the calculation  of the terminal voltage using (5.3.19). A single cell lithium-ion  battery can provide a nominal dc voltage of 3.81 V. By connecting a number of  cells in series, a required dc bus voltage can be realized. Connection of  parallel modules enables to increase the current capacity of the battery  module.</p>
+      <p align="center"><img src="fig 5.51.png" alt="High-level block diagram of the battery model" width="466" height="161"></p>
+      <p align="center">Fig. 5.51. High-level block diagram of the battery model</p>
+      <table cellspacing="0" class="body" cellpadding="4" border="2"><colgroup><col width="15%"><col width="30%"><col width="55%"></colgroup><thead><tr valign="top"><th valign="top">Input</th>
+      <th valign="top">Units</th>
+      <th valign="top">Description</th></tr>
+</thead><tbody><tr valign="top"><td><p>CTOUT</p></td>
+<td>Ampere</td>
+<td>Discharging  current magnitude </td></tr>
+<tr valign="top"><td><p>CTIN</p></td>
+<td>Ampere</td>
+<td>Charging  current magnitude </td></tr>
+</tbody></table>
+      <p></p><table cellspacing="0" class="body" cellpadding="4" border="2"><colgroup><col width="16%"><col width="29%"><col width="55%"></colgroup><thead><tr valign="top"><th valign="top">Output</th>
+<th valign="top">Units</th>
+<th valign="top">Description</th></tr>
+</thead><tbody>
+  <tr valign="top">
+    <td>VDC</td>
+    <td>Volt</td>
+    <td>Voltage  output of the battery module consisting of series and parallel cells </td>
+  </tr>
+  <tr valign="top"><td><p>PLOSS</p></td>
+    <td>Watt</td><td>Power  lost in the battery due to its internal resistances </td></tr>
+</tbody></table>
+      <p></p></div><div itemprop="content"><a name="Asump" id="Asump"></a>
+        <h2>Assumptions and Limitations</h2><p>&nbsp;</p>
+      </div>
+      <div itemprop="content"></div>
+      <div itemprop="content"><a name="Ref" id="Ref"></a>
+  <h2>Reference</h2>
+  <p>R. C. Kroeze and P. T. Krein, “Electrical battery  model for use in dynamic electric vehicle simulations,&quot; <em>IEEE</em> <em>Power Electronics Specialists  Conference PESC 2008, </em>pp.1336-1342, 15-19 June 2008</p>
+  <p><a href="#f1-1015099">Back to Top </a></p>
+</div>
+<div itemprop="content"></div>
+</section>
+</div> 
+</div> 
+</div> 
+<div class="footer_container"><div class="footer"></div>
+      </div>
+   
+         </div> <!--  close_site_container -->
+         </body>
+</html>

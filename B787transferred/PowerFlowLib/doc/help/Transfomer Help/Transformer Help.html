@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Battery</title>
+<link rel="stylesheet" href="../Powerflow_template_help.css" type="text/css"><meta name="chunktype" content="refpage">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="toctype" itemprop="pagetype" content="blk">
+<meta name="infotype" itemprop="infotype" content="ref/block" />
+
+<meta name="description" itemprop="description" content="The 1D Observer Form [A(v),B(v),C(v),F(v),H(v)] block implements a gain-scheduled state-space controller defined in the following observer form:" />
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery-latest.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/l10n.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/docscripts.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/docscripts.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.toc.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.imagescaling.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.imageanimation.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.breadcrumb.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/jquery.highlight.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/nanoscroller.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.tmpl.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.toggleval.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/localnav.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/suggest.js"></script>
+<script type="text/javascript">
+            var suggestionsObj;
+            $(function() {
+                var searchField = $('#docsearch');
+                suggestionsObj = new Suggestions(getSuggestions, getMore, searchField);
+            });
+        
+            function getSuggestions() {
+               var text = suggestionsObj.searchField.val();
+               document.location='docsuggestion:' + text;
+            }
+
+            function getMore(type) {
+                var text = suggestionsObj.searchField.val();
+                document.location='docsuggestion:' + type + ':' + text;
+            }
+        </script>
+
+<link href="../../includes/product/css/reset.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/960.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/site5.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center_installed.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center_print.css" rel="stylesheet" type="text/css" media="print">
+<script type="text/javascript" src="../../includes/shared/scripts/respond.min.js"></script>
+</head>
+<body>
+
+         <div class="site_container site_toc_closed">
+         <div class="toc_pane"><div xmlns:atict="http://www.arbortext.com/namespace/atict">
+<div class="toc_container_wrapper" tabindex="0" style="display:block;">
+<div class="toc_header" lang="en">
+  <div class="toc_icon" id="toc.aeroblks"> <a href="../doccentertoc.html"></a></div>
+  <div></div>
+</div>
+</div>
+         </div>
+</div><div class="page_container"><div class="content_frame"><div class="content_container" id="content_container"><div id="search_crumb_container"><div class="breadcrumb_container"><div class="breadcrumbs"></div>
+</div>
+
+</div><section id="doc_center_content">
+<a name="f1-1015099"></a><a name="oned_observer_form"></a><div itemprop="content">
+  <h1 class="r2013b" itemprop="title">Transformer </h1>
+  <p class="r2013b" itemprop="title"><a href="#Library">Library</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Description">Description</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Math">Mathematical Model </a></p>
+  <p class="r2013b" itemprop="title"><a href="#Mask">Transformer Mask</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Inputs">Component Inputs and Outputs</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Asump">Assumptions and Limitations </a></p>
+  <p class="r2013b" itemprop="title"><a href="#Ex">Examples</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Ref">References</a></p>
+  <!-- SYNCHTO: _bqqd2iy.html --><div class="doc_topic_desc"><div class="purpose_container">
+    <div class="switch"></div>
+  </div></div></div><div itemprop="content"><a name="Library" id="Library"></a>
+    <h2>Library</h2>
+  <p>Electrical Power Systems </p>
+  </div><div itemprop="content"><a name="Description" id="Description"></a>
+    <h2>Description</h2>
+<p>The transformer block converts the primary winding voltage  level or provides galvanic insulation. A complete dynamic model is omitted for  faster simulations. A steady-state electrical model is implemented. Only  resistive voltage drops are included and reactances are neglected. The model is  flexible and can be used as a single-phase or multi-phase transformer  interchangeably. The inputs and outputs are in the synchronous reference frame.</p>
+  </div><div itemprop="content"><a name="Math" id="Math"></a>
+    <div>
+      <h2>Mathematical Model </h2>
+      <p>A simplified circuit diagram for the modeled transformer is  shown in Fig. 5.57.  Here the magnetic coupling is ideal and only copper losses are modeled. The  input-output electrical relation is: </p>
+      <p align="center"><img src="eq1.png" alt="5.3.28" width="97" height="49"></p>
+      <p>where <em>Vp</em> is the primary winding voltage, <em>V­s</em> is the secondary winding voltage, <em>ip</em> is the primary winding current, <em>is</em> is the secondary winding current, and <em>Np</em> and <em>Ns</em> are the primary and  secondary windings number of turns, respectively.</p>
+      <p align="center"><img src="model.png" alt="5.57" width="276" height="112"></p>
+      <p align="center">Fig. 5.57 Simplified circuit model of a transformer </p>
+      <div align="center">
+        <p align="center">&nbsp;</p>
+      </div>
+      <p align="left">&nbsp;</p>
+    </div>
+    <h2><a name="Mask"></a></h2>
+    <h2>Transformer Mask </h2>
+    <p align="center"><img src="transformer mask.png" alt="Mask" width="424" height="525"></p>
+    <p align="center">Fig. 5.55. Mask inputs to the transformer model </p>
+    <p>The battery model requires the following mask input values.</p>
+    <ul type="disc">
+      <li><strong>Primary Winding       Resistance</strong> – (Units – Ohm)</li>
+      <li><strong>Secondary       Winding Resistance</strong> - (Units – Ohm)</li>
+      <li><strong>Number of Turns       in Primary</strong> </li>
+      <li><strong>Number of Turns       in Secondary</strong>.</li>
+      </ul>
+    <p align="center">&nbsp;</p>
+    <p align="center"><a name="f1-745964"></a></p>
+    </div><div itemprop="content">
+      <h2><a name="Inputs"></a></h2>
+      <h2>Component Inputs and Outputs</h2>
+      <p align="center"><img src="diagram.png" alt="diagram" width="538" height="123"></p>
+      <p align="center">Fig. 5.58. Transformer model structural diagram </p>
+      <table width="397" border="2" cellpadding="4" cellspacing="0" class="body">
+        <colgroup><col width="15%"><col width="30%"><col width="55%"></colgroup><thead><tr valign="top"><th width="106" valign="top">Input</th>
+      <th width="49" valign="top">Units</th>
+      <th width="208" valign="top">Description</th>
+      </tr>
+</thead><tbody><tr valign="top"><td><p>Vin</p></td>
+<td>Volt</td>
+<td>Primary winding voltage input </td>
+</tr>
+  <tr valign="top">
+    <td>Iout</td>
+    <td>Ampere</td>
+    <td>Secondary winding current output </td>
+  </tr>
+</tbody></table>
+      <p></p><table width="336" border="2" cellpadding="4" cellspacing="0" class="body">
+        <colgroup><col width="16%"><col width="29%"><col width="55%"></colgroup><thead><tr valign="top"><th width="46" valign="top">Output</th>
+<th width="49" valign="top">Units</th>
+<th width="240" valign="top">Description</th>
+      </tr>
+</thead><tbody>
+  <tr valign="top">
+    <td>Vout</td>
+    <td>Volt</td>
+    <td>Secondary winding output voltage </td>
+  </tr>
+  <tr valign="top">
+    <td>Iin</td>
+    <td>Ampere</td>
+    <td>Primary winding current </td>
+  </tr>
+</tbody></table>
+      <p></p></div><div itemprop="content"><a name="Asump" id="Asump"></a>
+        <h2>Assumptions and Limitations</h2><p>&nbsp;</p>
+      </div>
+      <div itemprop="content"><a name="Ex" id="Ex"></a>
+        <h2>Examples</h2><p>&nbsp;</p>
+</div><div itemprop="content"><a name="Ref" id="Ref"></a>
+  <h2>Reference</h2>
+  <p><a href="#f1-1015099">Back to Top </a></p>
+</div>
+<div itemprop="content"></div>
+</section>
+</div> 
+</div> 
+</div> 
+<div class="footer_container"><div class="footer"></div>
+      </div>
+   
+         </div> <!--  close_site_container -->
+         </body>
+</html>

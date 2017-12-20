@@ -1,0 +1,300 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>1D Observer Form [A(v),B(v),C(v),F(v),H(v)]</title>
+<link rel="stylesheet" href="Powerflow_template_help.css" type="text/css"><meta name="chunktype" content="refpage">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="toctype" itemprop="pagetype" content="blk">
+<meta name="infotype" itemprop="infotype" content="ref/block" />
+
+<meta name="description" itemprop="description" content="The 1D Observer Form [A(v),B(v),C(v),F(v),H(v)] block implements a gain-scheduled state-space controller defined in the following observer form:" />
+<script type="text/javascript" src="../includes/product/scripts/jquery/jquery-latest.js"></script>
+<script type="text/javascript" src="../includes/shared/scripts/l10n.js"></script>
+<script type="text/javascript" src="../includes/shared/scripts/docscripts.js"></script>
+<script type="text/javascript" src="../includes/product/scripts/docscripts.js"></script>
+<script type="text/javascript" src="../includes/shared/scripts/mw.toc.js"></script>
+<script type="text/javascript" src="../includes/shared/scripts/mw.imagescaling.js"></script>
+<script type="text/javascript" src="../includes/shared/scripts/mw.imageanimation.js"></script>
+<script type="text/javascript" src="../includes/shared/scripts/mw.breadcrumb.js"></script>
+<script type="text/javascript" src="../includes/shared/scripts/jquery.highlight.js"></script>
+<script type="text/javascript" src="../includes/shared/scripts/nanoscroller.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="../includes/product/scripts/jquery/jquery.tmpl.js"></script>
+<script type="text/javascript" src="../includes/product/scripts/jquery/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="../includes/product/scripts/jquery/jquery.toggleval.js"></script>
+<script type="text/javascript" src="../includes/product/scripts/localnav.js"></script>
+<script type="text/javascript" src="../includes/product/scripts/suggest.js"></script>
+<script type="text/javascript">
+            var suggestionsObj;
+            $(function() {
+                var searchField = $('#docsearch');
+                suggestionsObj = new Suggestions(getSuggestions, getMore, searchField);
+            });
+        
+            function getSuggestions() {
+               var text = suggestionsObj.searchField.val();
+               document.location='docsuggestion:' + text;
+            }
+
+            function getMore(type) {
+                var text = suggestionsObj.searchField.val();
+                document.location='docsuggestion:' + type + ':' + text;
+            }
+        </script>
+
+<link href="../includes/product/css/reset.css" rel="stylesheet" type="text/css">
+<link href="../includes/product/css/960.css" rel="stylesheet" type="text/css">
+<link href="../includes/product/css/site5.css" rel="stylesheet" type="text/css">
+<link href="../includes/product/css/doc_center.css" rel="stylesheet" type="text/css">
+<link href="../includes/product/css/doc_center_installed.css" rel="stylesheet" type="text/css">
+<link href="../includes/product/css/doc_center_print.css" rel="stylesheet" type="text/css" media="print">
+<script type="text/javascript" src="../includes/shared/scripts/respond.min.js"></script>
+</head>
+<body>
+
+         <div class="site_container site_toc_closed">
+         <div class="toc_pane"><div xmlns:atict="http://www.arbortext.com/namespace/atict">
+<div class="toc_container_wrapper" tabindex="0" style="display:block;">
+<div class="toc_header" lang="en">
+<div class="toc_icon" id="toc.aeroblks">
+<a href="doccentertoc.html"></a>
+</div>
+<h3>Contents</h3>
+</div><!--close_toc_header-->
+<div class="toc_scroll_pane">
+<div class="toc_container">
+<!--BEGINNING OF TOC DATA-->
+<div class="toc_doc_center_home">
+<a href="../documentation-center.html">Documentation Center</a>
+</div>
+<ul>
+<li id="aeroblks.index.html" class="toc_collapsed"><div class="node_element">
+<div class="wrapper img_wrapper"></div>
+<div class="wrapper text_wrapper"><a href="index.html" class="corrected_url">Aerospace Blockset</a></div>
+</div>
+<ul>
+<li id="aeroblks.getting-started-1.html.0" class="toc_collapsed">
+<div class="node_element">
+<div class="wrapper img_wrapper"></div>
+<div class="wrapper text_wrapper"><a href="getting-started-1.html" class="corrected_url">Getting Started with Aerospace Blockset</a></div>
+</div>
+</li><li id="aeroblks.examples.index.html">
+<div class="node_element">
+<div class="wrapper img_wrapper"></div>
+<div class="wrapper text_wrapper">
+<a href="examples/index.html" class="corrected_url">Examples</a>
+</div>
+</div>
+</li>
+<li id="aeroblks.release-notes.html">
+<div class="node_element">
+<div class="wrapper img_wrapper"></div>
+<div class="wrapper text_wrapper">
+<a href="release-notes.html" class="corrected_url">Release Notes</a></div>
+</div>
+</li>
+<li id="aeroblks.blocklist.html">
+<div class="node_element">
+<div class="wrapper img_wrapper"></div>
+<div class="wrapper text_wrapper">
+<a href="blocklist.html" class="corrected_url">Blocks</a>
+</div>
+</div>
+</li>
+<li id="aeroblks.index.html.1" class="toc_collapsed">
+<div class="node_element">
+<div class="wrapper img_wrapper"></div>
+<div class="wrapper text_wrapper"><a href="index.html#coordinate-systems" class="corrected_url">Coordinate Systems</a></div>
+</div>
+</li><li id="aeroblks.unit-conversions.html.2" class="toc_collapsed">
+<div class="node_element">
+<div class="wrapper img_wrapper"></div>
+<div class="wrapper text_wrapper"><a href="unit-conversions.html" class="corrected_url">Unit Conversions</a></div>
+</div>
+</li><li id="aeroblks.index.html.3" class="toc_collapsed">
+<div class="node_element">
+<div class="wrapper img_wrapper"></div>
+<div class="wrapper text_wrapper"><a href="index.html#environment" class="corrected_url">Environment</a></div>
+</div>
+</li><li id="aeroblks.index.html.4" class="toc_collapsed">
+<div class="node_element">
+<div class="wrapper img_wrapper"></div>
+<div class="wrapper text_wrapper"><a href="index.html#btiahta" class="corrected_url">Vehicle Dynamics</a></div>
+</div>
+</li><li id="aeroblks.index.html.5" class="toc_expanded">
+<div class="node_element">
+<div class="wrapper img_wrapper"></div>
+<div class="wrapper text_wrapper"><a href="index.html#guidance-navigation-and-control-gnc" class="corrected_url">Guidance, Navigation, and Control (GNC)</a></div>
+</div>
+<ul>
+<li id="aeroblks.guidance.html.0" class="toc_collapsed">
+<div class="node_element">
+<div class="wrapper img_wrapper"></div>
+<div class="wrapper text_wrapper"><a href="guidance.html" class="corrected_url">Guidance</a></div>
+</div>
+</li><li id="aeroblks.navigation.html.1" class="toc_collapsed">
+<div class="node_element">
+<div class="wrapper img_wrapper"></div>
+<div class="wrapper text_wrapper"><a href="navigation.html" class="corrected_url">Navigation</a></div>
+</div>
+</li><li id="aeroblks.control.html.2" class="toc_expanded">
+<div class="node_element">
+<div class="wrapper img_wrapper"></div>
+<div class="wrapper text_wrapper"><a href="control.html" class="corrected_url">Control</a></div>
+</div>
+<ul>
+<li class="toc_collapsed"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper">Blocks</div></div><ul>
+<li id="aeroblks.1dcontrolleravbvcvdv.html"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="1dcontrolleravbvcvdv.html" class="corrected_url">1D Controller [A(v),B(v),C(v),D(v)]</a></div></div></li>
+<li id="aeroblks.1dcontrollerblendu1l.k1.yl.k2.y.html"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="1dcontrollerblendu1l.k1.yl.k2.y.html" class="corrected_url">1D Controller Blend u=(1-L).K1.y+L.K2.y</a></div></div></li>
+<li id="aeroblks.1dobserverformavbvcvfvhv.html" class="current_page"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="1dobserverformavbvcvfvhv.html" class="corrected_url">1D Observer Form [A(v),B(v),C(v),F(v),H(v)]</a></div></div></li>
+<li id="aeroblks.1dselfconditionedavbvcvdv.html"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="1dselfconditionedavbvcvdv.html" class="corrected_url">1D Self-Conditioned [A(v),B(v),C(v),D(v)]</a></div></div></li>
+<li id="aeroblks.2dcontrolleravbvcvdv.html"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="2dcontrolleravbvcvdv.html" class="corrected_url">2D Controller [A(v),B(v),C(v),D(v)]</a></div></div></li>
+<li id="aeroblks.2dcontrollerblend.html"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="2dcontrollerblend.html" class="corrected_url">2D Controller Blend</a></div></div></li>
+<li id="aeroblks.2dobserverformavbvcvfvhv.html"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="2dobserverformavbvcvfvhv.html" class="corrected_url">2D Observer Form [A(v),B(v),C(v),F(v),H(v)]</a></div></div></li>
+<li id="aeroblks.2dselfconditionedavbvcvdv.html"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="2dselfconditionedavbvcvdv.html" class="corrected_url">2D Self-Conditioned [A(v),B(v),C(v),D(v)]</a></div></div></li>
+<li id="aeroblks.3dcontrolleravbvcvdv.html"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="3dcontrolleravbvcvdv.html" class="corrected_url">3D Controller [A(v),B(v),C(v),D(v)]</a></div></div></li>
+<li id="aeroblks.3dobserverformavbvcvfvhv.html"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="3dobserverformavbvcvfvhv.html" class="corrected_url">3D Observer Form [A(v),B(v),C(v),F(v),H(v)]</a></div></div></li>
+<li id="aeroblks.3dselfconditionedavbvcvdv.html"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="3dselfconditionedavbvcvdv.html" class="corrected_url">3D Self-Conditioned [A(v),B(v),C(v),D(v)]</a></div></div></li>
+<li id="aeroblks.gainscheduledleadlag.html"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="gainscheduledleadlag.html" class="corrected_url">Gain Scheduled Lead-Lag</a></div></div></li>
+<li id="aeroblks.interpolatematrixx.html"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="interpolatematrixx.html" class="corrected_url">Interpolate Matrix(x)</a></div></div></li>
+<li id="aeroblks.interpolatematrixxy.html"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="interpolatematrixxy.html" class="corrected_url">Interpolate Matrix(x,y)</a></div></div></li>
+<li id="aeroblks.interpolatematrixxyz.html"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="interpolatematrixxyz.html" class="corrected_url">Interpolate Matrix(x,y,z)</a></div></div></li>
+<li id="aeroblks.selfconditionedabcd.html"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="selfconditionedabcd.html" class="corrected_url">Self-Conditioned [A,B,C,D]</a></div></div></li>
+</ul>
+</li>
+</ul>
+</li><li id="aeroblks.actuators.html.3" class="toc_collapsed">
+<div class="node_element">
+<div class="wrapper img_wrapper"></div>
+<div class="wrapper text_wrapper"><a href="actuators.html" class="corrected_url">Actuators</a></div>
+</div>
+</li><li id="aeroblks.pilot-models-1.html.4" class="toc_collapsed">
+<div class="node_element">
+<div class="wrapper img_wrapper"></div>
+<div class="wrapper text_wrapper"><a href="pilot-models-1.html" class="corrected_url">Pilot Models</a></div>
+</div>
+</li><li id="aeroblks.flight-parameters.html.5" class="toc_collapsed">
+<div class="node_element">
+<div class="wrapper img_wrapper"></div>
+<div class="wrapper text_wrapper"><a href="flight-parameters.html" class="corrected_url">Flight Parameters</a></div>
+</div>
+</li></ul>
+</li><li id="aeroblks.index.html.6" class="toc_collapsed">
+<div class="node_element">
+<div class="wrapper img_wrapper"></div>
+<div class="wrapper text_wrapper"><a href="index.html#simulation-results-visualization" class="corrected_url">Visualize Trajectory and Attitude</a></div>
+</div>
+</li></ul>
+</li>
+</ul>
+<!--END OF TOC DATA-->
+</div><!--close_toc_container-->
+</div><!--close_toc_scroll_pane-->
+</div><!--close_toc_container_wrapper-->
+</div>
+</div><!--close_toc_pane-->
+            <div class="page_container">
+               <div class="content_frame">
+                  <div class="content_container" id="content_container">
+            
+<div id="search_crumb_container"><div class="docsearch_container">
+<form id="docsearch_form" name="docsearch_form" method="get" action="../templates/searchresults.html">
+<label for="docsearch" class="hidden">Search MATLAB Documentation</label>
+<input type="text" name="qdoc" id="docsearch" class="textfield" autocomplete="off" value="Search Documentation">
+<input type="submit" name="submitsearch" id="submitsearch" value="Search" class="docsearch_submit">
+<script type="text/javascript">
+         $("input[name='qdoc']").toggleVal({
+            focusClass: "hasFocus"
+         });
+       </script>
+</form>
+</div>
+<div class="breadcrumb_container">
+<div class="breadcrumbs"><ul><li itemscope="" itemtype="http://www.data-vocabulary.org/Breadcrumb" itemprop="breadcrumb" class="breadcrumb_first"><a href="../documentation-center.html" itemprop="url"><span itemprop="title">R2013b</span></a></li><li itemscope="" itemtype="http://www.data-vocabulary.org/Breadcrumb" itemprop="breadcrumb" class="breadcrumb_product"><a href="index.html" itemprop="url"><span itemprop="title">Aerospace Blockset</span></a></li><li itemscope="" itemtype="http://www.data-vocabulary.org/Breadcrumb" itemprop="breadcrumb"><a href="index.html#guidance-navigation-and-control-gnc" itemprop="url"><span itemprop="title">Guidance, Navigation, and Control (GNC)</span></a></li><li itemscope="" itemtype="http://www.data-vocabulary.org/Breadcrumb" itemprop="breadcrumb" class="breadcrumb_last"><a href="control.html" itemprop="url"><span itemprop="title">Control</span></a></li>
+</ul>
+</div>
+</div>
+
+</div><section id="doc_center_content">
+<a name="f1-1015099"></a><a name="oned_observer_form"></a><div itemprop="content"><h1 class="r2013b" itemprop="title">1D Observer Form [A(v),B(v),C(v),F(v),H(v)]</h1><!-- SYNCHTO: _bqqd2iy.html --><div class="doc_topic_desc"><div class="purpose_container"><p itemprop="purpose">Implement gain-scheduled state-space controller in observer
+form depending on one scheduling parameter</p><div class="switch"><a href="javascript:void(0);" id="expandAllPage">expand all in page</a></div></div></div></div><div itemprop="content"><a name="f1-745931"></a><h2>Library</h2><p>GNC/Control</p></div><div itemprop="content"><a name="f1-843385"></a><h2>Description<span class="inlinemediaobject"><br>
+<img src="1dobserverblk.gif" height="53" width="111" alt=""></span></h2><p><a class="indexterm" name="zmw57dd0e5394"></a>The 1D Observer Form [A(v),B(v),C(v),F(v),H(v)]
+block implements a gain-scheduled state-space controller defined in
+the following observer form:</p><p class="programlistingindent">
+<img src="eqn1239293777.png" height="41" width="308" alt=""></p><p>The main application of this block is to implement a controller
+designed using <i>H</i>-infinity loop-shaping, one of
+the design methods supported by <a href="http://www.mathworks.com/products/robust/" target="_top">Robust Control Toolbox</a>.</p></div><div itemprop="content"><a name="f1-745945"></a><h2>Dialog Box</h2><p>
+<img src="1dobservermsk.gif" height="597" width="438" alt=""></p><dl><dt><a name="zmw57dd0e5418"></a><span class="term"><b>A-matrix(v)</b></span></dt><dd><p><i>A</i>-matrix of the state-space implementation.
+The <i>A</i>-matrix should have three dimensions, the
+last one corresponding to the scheduling variable <i>v</i>.
+Hence, for example, if the <i>A</i>-matrix corresponding
+to the first entry of <i>v</i> is the identity matrix,
+then <tt>A(:,:,1) = [1 0;0 1];</tt>.</p></dd><dt><a name="zmw57dd0e5442"></a><span class="term"><b>B-matrix(v)</b></span></dt><dd><p><i>B</i>-matrix of the state-space implementation.
+The <i>B</i>-matrix should have three dimensions, the
+last one corresponding to the scheduling variable <i>v</i>.
+Hence, for example, if the <i>B</i>-matrix corresponding
+to the first entry of <i>v</i> is the identity matrix,
+then <tt>B(:,:,1) = [1 0;0 1];</tt>.</p></dd><dt><a name="zmw57dd0e5466"></a><span class="term"><b>C-matrix(v)</b></span></dt><dd><p><i>C</i>-matrix of the state-space implementation.
+The <i>C</i>-matrix should have three dimensions, the
+last one corresponding to the scheduling variable <i>v</i>.
+Hence, for example, if the <i>C</i>-matrix corresponding
+to the first entry of <i>v</i> is the identity matrix,
+then <tt>C(:,:,1) = [1 0;0 1];</tt>.</p></dd><dt><a name="zmw57dd0e5490"></a><span class="term"><b>F-matrix(v)</b></span></dt><dd><p>State-feedback matrix. The <i>F</i>-matrix should
+have three dimensions, the last one corresponding to the scheduling
+variable <i>v</i>. Hence, for example, if the <i>F</i>-matrix
+corresponding to the first entry of <i>v</i> is the identity
+matrix, then <tt>F(:,:,1) = [1 0;0 1];</tt>.</p></dd><dt><a name="zmw57dd0e5512"></a><span class="term"><b>H-matrix(v)</b></span></dt><dd><p>Observer (output injection) matrix. The <i>H</i>-matrix
+should have three dimensions, the last one corresponding to the scheduling
+variable <i>v</i>. Hence, for example, if the <i>H</i>-matrix
+corresponding to the first entry of <i>v</i> is the identity
+matrix, then <tt>H(:,:,1) = [1 0;0 1];</tt>.</p></dd><dt><a name="zmw57dd0e5534"></a><span class="term"><b>Scheduling variable breakpoints</b></span></dt><dd><p>Vector of the breakpoints for the scheduling variable. The length
+of <i>v</i> should be same as the size of the third dimension
+of <i>A</i>, <i>B</i>, <i>C</i>, <i>F</i>,
+and <i>H</i>.</p></dd><dt><a name="zmw57dd0e5559"></a><span class="term"><b>Initial state, x_initial</b></span></dt><dd><p>Vector of initial states for the controller, i.e., initial values
+for the state vector, <i>x</i>. It should have length
+equal to the size of the first dimension of <i>A</i>.</p></dd></dl></div><div itemprop="content"><a name="f1-745964"></a><h2>Inputs and Outputs</h2><table cellspacing="0" class="body" cellpadding="4" border="2"><colgroup><col width="15%"><col width="30%"><col width="55%"></colgroup><thead><tr valign="top"><th valign="top">Input</th><th valign="top">Dimension
+Type</th><th valign="top">Description</th></tr>
+</thead><tbody><tr valign="top"><td><p>First</p></td><td>&nbsp;</td><td>Contains the set-point error.</td></tr>
+<tr valign="top"><td><p>Second</p></td><td>&nbsp;</td><td>Contains the scheduling variable.</td></tr>
+<tr valign="top"><td><p>Third</p></td><td>&nbsp;</td><td>Contains the measured actuator position.</td></tr>
+</tbody></table><p></p><table cellspacing="0" class="body" cellpadding="4" border="2"><colgroup><col width="16%"><col width="29%"><col width="55%"></colgroup><thead><tr valign="top"><th valign="top">Output</th><th valign="top">Dimension
+Type</th><th valign="top">Description</th></tr>
+</thead><tbody><tr valign="top"><td><p>First</p></td><td>&nbsp;</td><td>Contains the actuator demands.</td></tr>
+</tbody></table><p></p></div><div itemprop="content"><a name="f1-745969"></a><h2>Assumptions and Limitations</h2><p>If the scheduling parameter inputs to the block go out of range,
+then they are clipped; i.e., the state-space matrices are not interpolated
+out of range.</p></div><div itemprop="content"><a name="f1-745971"></a><h2>Examples</h2><p>See H-Infinity Controller (1 Dimensional Scheduling) in <a href="matlab:aeroblk_lib_HL20" target="_top" class="execmatlabproduct"> <tt>aeroblk_lib_HL20</tt></a><a href="rmvd_matlablink__d6b39458df95916d17332a13052e20ee.html" target="_top" class="execmatlabweb"> <tt>aeroblk_lib_HL20</tt></a> for
+an example of this block.</p></div><div itemprop="content"><a name="f1-745973"></a><h2>Reference</h2><p>Hyde, R. A., "H-infinity Aerospace Control Design - A
+VSTOL Flight Application," Springer Verlag, <span class="emphasis"><em>Advances
+in Industrial Control Series</em></span>, 1995. ISBN 3-540-19960-8.
+See Chapter 6.</p></div><div itemprop="content"><a name="f1-745975"></a><h2>See Also</h2><p><a href="1dcontrolleravbvcvdv.html">1D Controller [A(v),B(v),C(v),D(v)]</a></p><p><a href="1dcontrollerblendu1l.k1.yl.k2.y.html">1D Controller Blend u=(1-L).K1.y+L.K2.y</a></p><p><a href="1dselfconditionedavbvcvdv.html">1D Self-Conditioned [A(v),B(v),C(v),D(v)]</a></p><p><a href="2dobserverformavbvcvfvhv.html">2D Observer Form [A(v),B(v),C(v),F(v),H(v)]</a></p><p><a href="3dobserverformavbvcvfvhv.html">3D Observer Form [A(v),B(v),C(v),F(v),H(v)]</a></p></div>
+</section>
+<div class="feedbackblock">Was this topic helpful?
+<input type="button" value="Yes" onClick="openFeedbackWindow('http://www.mathworks.com/programs/bounce_hub_help.html?s_cid=Help_Topic_Survey&amp;surveyParams='+document.location.href+'-YES-R2013b');">
+<input type="button" value="No" onClick="openFeedbackWindow('http://www.mathworks.com/programs/bounce_hub_help.html?s_cid=Help_Topic_Survey&amp;surveyParams='+document.location.href+'-NO-R2013b');">
+</div>
+<!--Last updated: Tue Jul 16 19:53:49 EDT 2013-->
+
+               </div> <!-- close_content_container -->
+             </div> <!-- close_content_frame -->
+           </div> <!--  close_page_container -->
+         
+      <div class="footer_container">
+         <div class="footer">
+            <ul class="footernav">
+               <li class="footernav_trademarks"><a href="MATLAB:web([docroot '/acknowledgments.html'])">Acknowledgments</a></li>
+               <li class="footernav_trademarks"><a href="MATLAB:web([matlabroot '/trademarks.txt'])">Trademarks</a></li>
+               <li class="footernav_patents"><a href="MATLAB:web([matlabroot '/patents.txt'])">Patents</a></li>
+               <li class="footernav_help"><a href="MATLAB:web([matlabroot '/license.txt'])">Terms of Use</a></li>
+            </ul>
+            <div class="copyright">&copy; 1994-2013 The MathWorks, Inc.</div>
+         </div>
+      </div>
+   
+         </div> <!--  close_site_container -->
+         </body>
+</html>

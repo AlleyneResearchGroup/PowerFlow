@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Battery</title>
+<link rel="stylesheet" href="../Powerflow_template_help.css" type="text/css"><meta name="chunktype" content="refpage">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="toctype" itemprop="pagetype" content="blk">
+<meta name="infotype" itemprop="infotype" content="ref/block" />
+
+<meta name="description" itemprop="description" content="The 1D Observer Form [A(v),B(v),C(v),F(v),H(v)] block implements a gain-scheduled state-space controller defined in the following observer form:" />
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery-latest.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/l10n.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/docscripts.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/docscripts.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.toc.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.imagescaling.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.imageanimation.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/mw.breadcrumb.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/jquery.highlight.js"></script>
+<script type="text/javascript" src="../../includes/shared/scripts/nanoscroller.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.tmpl.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/jquery/jquery.toggleval.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/localnav.js"></script>
+<script type="text/javascript" src="../../includes/product/scripts/suggest.js"></script>
+<script type="text/javascript">
+            var suggestionsObj;
+            $(function() {
+                var searchField = $('#docsearch');
+                suggestionsObj = new Suggestions(getSuggestions, getMore, searchField);
+            });
+        
+            function getSuggestions() {
+               var text = suggestionsObj.searchField.val();
+               document.location='docsuggestion:' + text;
+            }
+
+            function getMore(type) {
+                var text = suggestionsObj.searchField.val();
+                document.location='docsuggestion:' + type + ':' + text;
+            }
+        </script>
+
+<link href="../../includes/product/css/reset.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/960.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/site5.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center_installed.css" rel="stylesheet" type="text/css">
+<link href="../../includes/product/css/doc_center_print.css" rel="stylesheet" type="text/css" media="print">
+<script type="text/javascript" src="../../includes/shared/scripts/respond.min.js"></script>
+</head>
+<body>
+
+         <div class="site_container site_toc_closed">
+         <div class="toc_pane"><div xmlns:atict="http://www.arbortext.com/namespace/atict">
+<div class="toc_container_wrapper" tabindex="0" style="display:block;">
+<div class="toc_header" lang="en">
+  <div class="toc_icon" id="toc.aeroblks"> <a href="../doccentertoc.html"></a></div>
+  <div></div>
+</div>
+</div>
+         </div>
+</div><div class="page_container"><div class="content_frame"><div class="content_container" id="content_container"><div id="search_crumb_container"><div class="breadcrumb_container"><div class="breadcrumbs"></div>
+</div>
+
+</div><section id="doc_center_content">
+<a name="f1-1015099"></a><a name="oned_observer_form"></a><div itemprop="content">
+  <h1 class="r2013b" itemprop="title">Generator System </h1>
+  <p class="r2013b" itemprop="title"><a href="#Library">Library</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Description">Description</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Math">Mathematical Model </a></p>
+  <p class="r2013b" itemprop="title"><a href="#Mask">Generator System Mask</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Inputs">Component Inputs and Outputs</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Asump">Assumptions and Limitations </a></p>
+  <p class="r2013b" itemprop="title"><a href="#Ex">Examples</a></p>
+  <p class="r2013b" itemprop="title"><a href="#Ref">References</a></p>
+  <!-- SYNCHTO: _bqqd2iy.html --><div class="doc_topic_desc"><div class="purpose_container">
+    <div class="switch"></div>
+  </div></div></div><div itemprop="content"><a name="Library" id="Library"></a>
+    <h2>Library</h2>
+  <p>Electrical Power Systems </p>
+  </div><div itemprop="content"><a name="Description" id="Description"></a>
+    <h2>Description</h2>
+    <p>A generator system block implements a generic power generation  unit consisting of a gearbox, a synchronous generator, a synchronous exciter  and exciter controls. These individual systems are as described  before and their mathematical models and details will not be repeated here. </p>
+    <h2><span class="inlinemediaobject"><br>
+    </span></h2>
+  </div><div itemprop="content"><a name="Math" id="Math"></a>
+    <div>
+      <div align="center">
+        <div align="left"></div>
+        </div>
+      </div>
+    <h2><a name="Mask"></a></h2>
+    <h2>Generator System   Mask </h2>
+    <p><img src="mask.png" width="764" height="680"></p>
+    <p align="center">&nbsp;</p>
+    <p align="center">&nbsp;</p>
+    <p>The following  parameters can be entered in the dialog  box. </p>
+    <ul type="disc">
+      <li><strong>Machine Preset</strong> – A preset main generator electrical and mechanical       parameters, base quantities and other variables based on the selected       power level. The variables are automatically loaded once a preset is       selected.</li>
+      <li><strong>Gear Box       Parameters</strong> – Gearbox parameters such as       conversion ratio, efficiency, etc. need to be stored in the workspace.       This entry requires the “.mat” file that stores gearbox parameters.</li>
+      <li><strong>Fan Load</strong> – If a cooling fan is installed on the shaft, this       entry requires its speed vs. load torque characteristics.</li>
+      <li><strong>Exciter Machine       Parameters</strong> – The exciter generator       parameters need to be stored in the workspace. This is independent of the       main generator parameters. This entry is the path to the file that the       exciter generator parameters are stored.</li>
+    </ul>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p align="center">&nbsp;</p>
+    <p align="center"><a name="f1-745964"></a></p>
+    </div><div itemprop="content">
+      <h2><a name="Inputs"></a></h2>
+      <h2>Component Inputs and Outputs</h2>
+      <table cellspacing="0" cellpadding="4" border="2">
+        <thead>
+          <tr valign="top">
+            <th valign="top">Input</th>
+            <th valign="top">Units</th>
+            <th valign="top">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr valign="top">
+            <td><p>Engine Speed </p></td>
+            <td>RPM</td>
+            <td>Jet engine low pressure spool speed </td>
+          </tr>
+          <tr valign="top">
+            <td>Battery Voltage </td>
+            <td>Volt</td>
+            <td>Exciter system supply voltage </td>
+          </tr>
+          <tr valign="top">
+            <td><p>iqd0</p></td>
+            <td>Ampere </td>
+            <td>Synchronous reference frame line currents </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>&nbsp;</p>
+      <table cellspacing="0" cellpadding="4" border="2">
+        <colgroup>
+          <col width="16%">
+          <col width="29%">
+          <col width="55%">
+          </colgroup>
+        <thead>
+          <tr valign="top">
+            <th valign="top">Output</th>
+            <th valign="top">Units</th>
+            <th valign="top">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr valign="top">
+            <td>vdq0</td>
+            <td>Volt</td>
+            <td>Synchronous  reference frame line voltages </td>
+          </tr>
+          <tr valign="top">
+            <td>Battery current </td>
+            <td><p>&nbsp;</p>
+              <p>Ampere</p></td>
+            <td>Exciter system supply current </td>
+          </tr>
+          <tr valign="top">
+            <td>Engine torque </td>
+            <td>N-m</td>
+            <td>Electromagnetic torque on the low pressure spool </td>
+          </tr>
+          <tr valign="top">
+            <td><p>PLOSS</p></td>
+            <td>Watt</td>
+            <td>Heat rejected to the cooling system or ambient </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>&nbsp;</p>
+      </div>
+    <div itemprop="content"><a name="Asump" id="Asump"></a>
+        <h2>Assumptions and Limitations</h2><p>&nbsp;</p>
+      </div>
+      <div itemprop="content"><a name="Ex" id="Ex"></a>
+        <h2>Examples</h2><p>&nbsp;</p>
+</div><div itemprop="content"><a name="Ref" id="Ref"></a>
+  <h2>Reference</h2>
+  <p><a href="#f1-1015099">Back to Top </a></p>
+</div>
+<div itemprop="content"></div>
+</section>
+</div> 
+</div> 
+</div> 
+<div class="footer_container"><div class="footer"></div>
+      </div>
+   
+         </div> <!--  close_site_container -->
+         </body>
+</html>
